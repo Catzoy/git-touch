@@ -657,7 +657,7 @@
   "@editedPages": {
     "description": "edited pages",
     "placeholders": {
-      "pageAction": {
+      "pageNames": {
         "type": "String"
       }
     }

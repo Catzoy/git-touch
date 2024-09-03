@@ -3,7 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter/widgets.dart';
 import 'package:git_touch/utils/utils.dart';
-import 'package:webview_flutter/webview_flutter.dart';
+import 'package:webview_flutter/src/webview_flutter_legacy.dart';
 
 class HtmlView extends StatefulWidget {
   HtmlView(String text, {String? cssText, List<String> cssLinks = const []})
@@ -46,8 +46,9 @@ class _HtmlViewState extends State<HtmlView> {
       encoding: Encoding.getByName('utf-8'),
     );
     return SizedBox(
-      height: height ??
-          1, // must be integer(android). 0 would return the wrong height on page finished.
+      height: height ?? 1,
+      // must be integer(android). 0 would return the wrong height on page finished.
+      // TODO: use newer webview
       child: WebView(
         initialUrl: uri.toString(),
         javascriptMode: JavascriptMode.unrestricted,

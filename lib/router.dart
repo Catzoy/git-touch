@@ -880,3 +880,8 @@ final router = GoRouter(
     ),
   ],
 );
+
+extension on GoRouterState {
+  Map<String, String> get params => pathParameters;
+  Map<String, String> get queryParams => uri.queryParameters;
+}
