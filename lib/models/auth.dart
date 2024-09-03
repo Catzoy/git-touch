@@ -57,7 +57,7 @@ class AuthModel with ChangeNotifier {
   late StreamSubscription<Uri?> _sub;
   bool loading = false;
 
-  List<Account>? get accounts => _accounts;
+  List<Account> get accounts => _accounts;
   Account? get activeAccount {
     if (activeAccountIndex == null || _accounts.isEmpty) return null;
     return _accounts[activeAccountIndex!];

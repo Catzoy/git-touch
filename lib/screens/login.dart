@@ -11,6 +11,7 @@ import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/action_button.dart';
 import 'package:git_touch/widgets/avatar.dart';
 import 'package:git_touch/widgets/loading.dart';
+import 'package:git_touch/widgets/login_add_account_tile.dart';
 import 'package:git_touch/widgets/text_field.dart';
 import 'package:provider/provider.dart';
 
@@ -65,25 +66,6 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  Widget _buildAddItem({
-    IconData? brand,
-    required String text,
-    void Function()? onTap,
-  }) {
-    return AntListItem(
-      onClick: onTap,
-      child: Row(
-        children: <Widget>[
-          const Icon(Ionicons.add),
-          const SizedBox(width: 4),
-          Icon(brand),
-          const SizedBox(width: 8),
-          Text(text, style: const TextStyle(fontSize: 15)),
-        ],
-      ),
-    );
-  }
-
   Widget _buildPopup(
     BuildContext context, {
     List<Widget>? notes,
@@ -119,7 +101,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 AntList(
                   children: [
                     ...List.generate(auth.accounts!.length, _buildAccountItem),
-                    _buildAddItem(
+                    LoginAddAccountTile(
                       text: AppLocalizations.of(context)!.githubAccount,
                       brand: Ionicons.logo_github,
                       onTap: () async {
@@ -173,7 +155,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ]);
                       },
                     ),
-                    _buildAddItem(
+                    LoginAddAccountTile(
                       text: AppLocalizations.of(context)!.gitlabAccount,
                       brand: Ionicons.git_branch_outline,
                       onTap: () async {
@@ -211,7 +193,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         }
                       },
                     ),
-                    _buildAddItem(
+                    LoginAddAccountTile(
                       text: AppLocalizations.of(context)!.bitbucketAccount,
                       brand: Ionicons.logo_bitbucket,
                       onTap: () async {
@@ -281,7 +263,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         }
                       },
                     ),
-                    _buildAddItem(
+                    LoginAddAccountTile(
                       text: AppLocalizations.of(context)!.giteaAccount,
                       brand: Ionicons.git_branch_outline, // TODO: brand icon
                       onTap: () async {
@@ -317,7 +299,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         }
                       },
                     ),
-                    _buildAddItem(
+                    LoginAddAccountTile(
                       text: '${AppLocalizations.of(context)!.giteeAccount}(码云)',
                       brand: Ionicons.git_branch_outline, // TODO: brand icon
                       onTap: () async {
@@ -335,7 +317,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         }
                       },
                     ),
-                    _buildAddItem(
+                    LoginAddAccountTile(
                       text: 'Gogs Account',
                       brand: Ionicons.git_branch_outline, // TODO: brand icon
                       onTap: () async {
