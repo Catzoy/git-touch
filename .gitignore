@@ -47,3 +47,7 @@ app.*.map.json
 /android/app/release
 
 packages/*/pubspec.lock
+
+# FVM Version Cache
+.fvm/
+/lib/generated/

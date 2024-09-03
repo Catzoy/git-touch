@@ -1,0 +1,8 @@
+# melos_managed_dependency_overrides: github_trending,gql_github,gql_gitlab
+dependency_overrides:
+  github_trending:
+    path: packages/github_trending
+  gql_github:
+    path: packages/gql_github
+  gql_gitlab:
+    path: packages/gql_gitlab
