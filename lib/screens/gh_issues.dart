@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
@@ -35,7 +36,7 @@ class GhIssuesScreen extends StatelessWidget {
         return ListPayload(
           cursor: issues.pageInfo.endCursor,
           hasMore: issues.pageInfo.hasNextPage,
-          items: issues.nodes!.toList(),
+          items: issues.nodes!.whereNotNull().toList(),
         );
       },
       itemBuilder: (p) {
@@ -49,7 +50,7 @@ class GhIssuesScreen extends StatelessWidget {
           labels: p.labels!.nodes!.isEmpty
               ? null
               : Wrap(spacing: 4, runSpacing: 4, children: [
-                  for (var label in p.labels!.nodes!)
+                  for (final label in p.labels!.nodes!.whereNotNull())
                     HexColorTag(name: label.name, color: label.color)
                 ]),
           url: '/github/$owner/$name/issues/${p.number}',

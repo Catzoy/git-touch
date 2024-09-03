@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:git_touch/models/auth.dart';
@@ -10,6 +11,7 @@ import 'package:provider/provider.dart';
 
 class GhPullsScreen extends StatelessWidget {
   const GhPullsScreen(this.owner, this.name);
+
   final String owner;
   final String name;
 
@@ -30,7 +32,7 @@ class GhPullsScreen extends StatelessWidget {
         return ListPayload(
           cursor: pulls.pageInfo.endCursor,
           hasMore: pulls.pageInfo.hasNextPage,
-          items: pulls.nodes!.toList(),
+          items: pulls.nodes!.whereNotNull().toList(),
         );
       },
       itemBuilder: (p) => IssueItem(
@@ -44,7 +46,7 @@ class GhPullsScreen extends StatelessWidget {
         labels: p.labels!.nodes!.isEmpty
             ? null
             : Wrap(spacing: 4, runSpacing: 4, children: [
-                for (var label in p.labels!.nodes!)
+                for (final label in p.labels!.nodes!.whereNotNull())
                   HexColorTag(name: label.name, color: label.color)
               ]),
         url: '/github/$owner/$name/pull/${p.number}',

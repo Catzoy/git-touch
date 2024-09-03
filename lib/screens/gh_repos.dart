@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/widgets.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
@@ -26,7 +27,7 @@ class GhRepos extends StatelessWidget {
         return ListPayload(
           cursor: p.pageInfo.endCursor,
           hasMore: p.pageInfo.hasNextPage,
-          items: p.nodes!,
+          items: p.nodes!.whereNotNull(),
         );
       },
       itemBuilder: (p) {
@@ -55,7 +56,7 @@ class GhStars extends StatelessWidget {
         return ListPayload(
           cursor: p.pageInfo.endCursor,
           hasMore: p.pageInfo.hasNextPage,
-          items: p.nodes!,
+          items: p.nodes!.whereNotNull(),
         );
       },
       itemBuilder: (p) {

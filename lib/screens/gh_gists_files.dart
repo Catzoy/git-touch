@@ -1,4 +1,5 @@
 import 'package:antd_mobile/antd_mobile.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
@@ -11,6 +12,7 @@ import 'package:provider/provider.dart';
 
 class GhGistsFilesScreen extends StatelessWidget {
   const GhGistsFilesScreen(this.login, this.id);
+
   final String id;
   final String login;
 
@@ -29,7 +31,7 @@ class GhGistsFilesScreen extends StatelessWidget {
       },
       bodyBuilder: (payload, _) {
         return AntList(
-          children: payload!.files!.map((v) {
+          children: payload!.files!.whereNotNull().map((v) {
             final uri = Uri(
               path: '/github/$login/gists/$id/${v.name}',
               queryParameters: {

@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/widgets.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
@@ -25,7 +26,7 @@ class GhFollowers extends StatelessWidget {
         return ListPayload(
           cursor: p.pageInfo.endCursor,
           hasMore: p.pageInfo.hasNextPage,
-          items: p.nodes!,
+          items: p.nodes!.whereNotNull(),
         );
       },
       itemBuilder: (p) {
@@ -54,7 +55,7 @@ class GhFollowing extends StatelessWidget {
         return ListPayload(
           cursor: p.pageInfo.endCursor,
           hasMore: p.pageInfo.hasNextPage,
-          items: p.nodes!,
+          items: p.nodes!.whereNotNull(),
         );
       },
       itemBuilder: (p) {
@@ -83,7 +84,7 @@ class GhOrgs extends StatelessWidget {
         return ListPayload(
           cursor: p.pageInfo.endCursor,
           hasMore: p.pageInfo.hasNextPage,
-          items: p.nodes!,
+          items: p.nodes!.whereNotNull(),
         );
       },
       itemBuilder: (p) {
@@ -112,7 +113,7 @@ class GhMembers extends StatelessWidget {
         return ListPayload(
           cursor: p.pageInfo.endCursor,
           hasMore: p.pageInfo.hasNextPage,
-          items: p.nodes!,
+          items: p.nodes!.whereNotNull(),
         );
       },
       itemBuilder: (p) {
@@ -143,7 +144,7 @@ class GhWatchers extends StatelessWidget {
         return ListPayload(
           cursor: p.pageInfo.endCursor,
           hasMore: p.pageInfo.hasNextPage,
-          items: p.nodes!,
+          items: p.nodes!.whereNotNull(),
         );
       },
       itemBuilder: (p) {
@@ -174,7 +175,7 @@ class GhStargazers extends StatelessWidget {
         return ListPayload(
           cursor: p.pageInfo.endCursor,
           hasMore: p.pageInfo.hasNextPage,
-          items: p.nodes!,
+          items: p.nodes!.whereNotNull(),
         );
       },
       itemBuilder: (p) {

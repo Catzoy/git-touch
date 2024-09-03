@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
@@ -10,6 +11,7 @@ import 'package:provider/provider.dart';
 
 class GhGistsScreen extends StatelessWidget {
   const GhGistsScreen(this.login);
+
   final String login;
 
   @override
@@ -25,18 +27,20 @@ class GhGistsScreen extends StatelessWidget {
         final gists = res.data!.user!.gists;
         return ListPayload(
           cursor: gists.pageInfo.endCursor,
-          items: gists.nodes ?? [],
+          items: (gists.nodes?.asList() ?? []).whereNotNull(),
           hasMore: gists.pageInfo.hasNextPage,
         );
       },
       itemBuilder: (v) {
-        final filenames = [for (var file in v.files!) file.name];
+        final filenames = [
+          for (final file in v.files!.whereNotNull()) file.name
+        ];
         // TODO: add gist comments
         return GistsItem(
           description: v.description,
           login: login,
           filenames: filenames,
-          language: v.files![0].language!.name,
+          language: v.files![0]?.language!.name,
           avatarUrl: v.owner!.avatarUrl,
           updatedAt: v.updatedAt,
           id: v.name,

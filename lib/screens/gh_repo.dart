@@ -1,4 +1,5 @@
 import 'package:antd_mobile/antd_mobile.dart';
+import 'package:collection/collection.dart';
 import 'package:filesize/filesize.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
@@ -26,6 +27,7 @@ import 'package:universal_io/io.dart';
 
 class GhRepoScreen extends StatelessWidget {
   const GhRepoScreen(this.owner, this.name, {this.branch});
+
   final String owner;
   final String name;
   final String? branch;
@@ -121,7 +123,7 @@ class GhRepoScreen extends StatelessWidget {
                       text: _buildWatchState(repo.viewerSubscription),
                       onTap: () async {
                         theme.showActions(context, [
-                          for (var v in GSubscriptionState.values)
+                          for (final v in GSubscriptionState.values)
                             ActionItem(
                               text: _buildWatchState(v),
                               onTap: (_) async {
@@ -187,7 +189,8 @@ class GhRepoScreen extends StatelessWidget {
                     spacing: 4,
                     runSpacing: 4,
                     children: [
-                      for (final node in repo.repositoryTopics.nodes!)
+                      for (final node
+                          in repo.repositoryTopics.nodes!.whereNotNull())
                         AntTag(
                           color: PrimerColors.blue500,
                           fill: AntTagFill.outline,
@@ -221,7 +224,7 @@ class GhRepoScreen extends StatelessWidget {
             if (repo.languages?.edges != null) ...[
               CommonStyle.border,
               LanguageBar([
-                for (var edge in repo.languages!.edges!)
+                for (final edge in repo.languages!.edges!.whereNotNull())
                   LanguageBarItem(
                     name: edge.node.name,
                     ratio: edge.size / repo.languages!.totalSize,
@@ -317,6 +320,7 @@ class GhRepoScreen extends StatelessWidget {
                           PickerGroupItem(
                             value: ref.name,
                             items: refs
+                                .whereNotNull()
                                 .map((b) => PickerItem(b.name, text: b.name))
                                 .toList(),
                             onClose: (ref) {

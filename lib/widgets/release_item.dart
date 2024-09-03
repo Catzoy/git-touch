@@ -18,6 +18,7 @@ class ReleaseItem extends StatefulWidget {
     required this.description,
     this.releaseAssets,
   });
+
   final String? login;
   final DateTime? publishedAt;
   final String? name;
@@ -94,21 +95,22 @@ class _ReleaseItemState extends State<ReleaseItem> {
               child: AntList(
                 children: [
                   if (widget.releaseAssets != null)
-                    for (var asset in widget.releaseAssets!.nodes!)
-                      AntListItem(
-                        arrow: const Icon(Ionicons.download_outline),
-                        child: Text(
-                          asset.name,
-                          style: TextStyle(
-                            color: AntTheme.of(context).colorPrimary,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400,
+                    for (final asset in widget.releaseAssets!.nodes!)
+                      if (asset != null)
+                        AntListItem(
+                          arrow: const Icon(Ionicons.download_outline),
+                          child: Text(
+                            asset.name,
+                            style: TextStyle(
+                              color: AntTheme.of(context).colorPrimary,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                            ),
                           ),
+                          onClick: () {
+                            context.pushUrl(asset.downloadUrl);
+                          },
                         ),
-                        onClick: () {
-                          context.pushUrl(asset.downloadUrl);
-                        },
-                      ),
                 ],
               ),
             ),

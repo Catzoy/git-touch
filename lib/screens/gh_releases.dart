@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:git_touch/models/auth.dart';
@@ -27,7 +28,7 @@ class GhReleasesScreen extends StatelessWidget {
         final releases = res.data!.repository!.releases;
         return ListPayload(
           cursor: releases.pageInfo.endCursor,
-          items: releases.nodes ?? [],
+          items: (releases.nodes?.asList() ?? []).whereNotNull(),
           hasMore: releases.pageInfo.hasNextPage,
         );
       },

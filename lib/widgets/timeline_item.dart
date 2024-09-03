@@ -22,6 +22,7 @@ class TimelineEventItem extends StatelessWidget {
     this.iconColor,
     this.textSpan,
   });
+
   final String? actor;
   final IconData iconData;
   final Color? iconColor;
@@ -55,6 +56,7 @@ class TimelineEventItem extends StatelessWidget {
 
 class TimelineItem extends StatelessWidget {
   const TimelineItem(this.node);
+
   final dynamic node;
 
   Widget _buildFallback(String? type, BuildContext context) {
@@ -318,8 +320,8 @@ class TimelineItem extends StatelessWidget {
               padding: CommonStyle.padding.copyWith(left: 50),
               child: Column(
                 children: <Widget>[
-                  for (var v in p.comments.nodes!)
-                    CommentItem.gql(v, v, (key) {}),
+                  for (final v in p.comments.nodes!)
+                    if (v != null) CommentItem.gql(v, v, (key) {}),
                 ],
               ),
             ),

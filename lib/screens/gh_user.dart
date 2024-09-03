@@ -1,4 +1,5 @@
 import 'package:antd_mobile/antd_mobile.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
@@ -29,6 +30,7 @@ class _SponsorItem extends StatelessWidget {
     required this.nodes,
     required this.sponsoring,
   });
+
   final int count;
   final String login;
   final Iterable<GSponsorConnectionParts_nodes> nodes;
@@ -96,6 +98,7 @@ class _Repos extends StatelessWidget {
 
 class _User extends StatelessWidget {
   const _User(this.p, {this.isViewer = false, this.rightWidgets = const []});
+
   final GUserParts p;
   final bool isViewer;
   final List<Widget> rightWidgets;
@@ -197,14 +200,14 @@ class _User extends StatelessWidget {
             _SponsorItem(
               count: p.sponsors.totalCount,
               login: p.login,
-              nodes: p.sponsors.nodes!,
+              nodes: p.sponsors.nodes!.whereNotNull(),
               sponsoring: false,
             ),
           if (p.sponsoring.totalCount > 0)
             _SponsorItem(
               count: p.sponsoring.totalCount,
               login: p.login,
-              nodes: p.sponsoring.nodes!,
+              nodes: p.sponsoring.nodes!.whereNotNull(),
               sponsoring: true,
             ),
           if (p.organizations.totalCount > 0)
@@ -215,7 +218,7 @@ class _User extends StatelessWidget {
                 children: [
                   Text(AppLocalizations.of(context)!.organizations),
                   const Spacer(),
-                  for (final org in p.organizations.nodes!) ...[
+                  for (final org in p.organizations.nodes!.whereNotNull()) ...[
                     const SizedBox(width: 6),
                     Avatar(
                       square: true,
@@ -269,7 +272,7 @@ class _User extends StatelessWidget {
         CommonStyle.verticalGap,
         _Repos(
           p.pinnedItems.nodes!.whereType<GRepoParts>(),
-          p.repositories.nodes,
+          p.repositories.nodes?.whereNotNull(),
         ),
         CommonStyle.verticalGap,
       ],
@@ -304,6 +307,7 @@ class GhViewerScreen extends StatelessWidget {
 
 class GhUserScreen extends StatelessWidget {
   const GhUserScreen(this.login, {super.key});
+
   final String login;
 
   @override
@@ -432,14 +436,14 @@ class GhUserScreen extends StatelessWidget {
                     _SponsorItem(
                       count: p.sponsors.totalCount,
                       login: p.login,
-                      nodes: p.sponsors.nodes!,
+                      nodes: p.sponsors.nodes!.whereNotNull(),
                       sponsoring: false,
                     ),
                   if (p.sponsoring.totalCount > 0)
                     _SponsorItem(
                       count: p.sponsoring.totalCount,
                       login: p.login,
-                      nodes: p.sponsoring.nodes!,
+                      nodes: p.sponsoring.nodes!.whereNotNull(),
                       sponsoring: true,
                     ),
                 ],

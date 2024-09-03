@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
@@ -11,6 +12,7 @@ import 'package:provider/provider.dart';
 
 class GhCommits extends StatelessWidget {
   const GhCommits(this.owner, this.name, {this.branch});
+
   final String owner;
   final String name;
   final String? branch;
@@ -48,7 +50,7 @@ class GhCommits extends StatelessWidget {
         return ListPayload(
           cursor: history.pageInfo.endCursor,
           hasMore: history.pageInfo.hasNextPage,
-          items: history.nodes ?? [],
+          items: (history.nodes?.asList() ?? []).whereNotNull(),
         );
       },
       itemBuilder: (p) {
