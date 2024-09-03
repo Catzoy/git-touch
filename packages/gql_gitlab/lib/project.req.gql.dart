@@ -19,7 +19,8 @@ abstract class GProjectReq
         _i1.OperationRequest<_i2.GProjectData, _i3.GProjectVars> {
   GProjectReq._();
 
-  factory GProjectReq([Function(GProjectReqBuilder b) updates]) = _$GProjectReq;
+  factory GProjectReq([void Function(GProjectReqBuilder b) updates]) =
+      _$GProjectReq;
 
   static void _initializeBuilder(GProjectReqBuilder b) => b
     ..operation = _i4.Operation(
@@ -27,6 +28,7 @@ abstract class GProjectReq
       operationName: 'Project',
     )
     ..executeOnListen = true;
+
   @override
   _i3.GProjectVars get vars;
   @override
@@ -35,7 +37,9 @@ abstract class GProjectReq
   _i4.Request get execRequest => _i4.Request(
         operation: operation,
         variables: vars.toJson(),
+        context: context ?? const _i4.Context(),
       );
+
   @override
   String? get requestId;
   @override
@@ -55,13 +59,30 @@ abstract class GProjectReq
   @override
   bool get executeOnListen;
   @override
+  @BuiltValueField(serialize: false)
+  _i4.Context? get context;
+  @override
   _i2.GProjectData? parseData(Map<String, dynamic> json) =>
       _i2.GProjectData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GProjectData data) => data.toJson();
+
+  @override
+  _i1.OperationRequest<_i2.GProjectData, _i3.GProjectVars> transformOperation(
+          _i4.Operation Function(_i4.Operation) transform) =>
+      this.rebuild((b) => b..operation = transform(operation));
+
   static Serializer<GProjectReq> get serializer => _$gProjectReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GProjectReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GProjectReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GProjectReq.serializer,

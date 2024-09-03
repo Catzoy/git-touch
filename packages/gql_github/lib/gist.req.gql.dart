@@ -19,7 +19,7 @@ abstract class GGistReq
         _i1.OperationRequest<_i2.GGistData, _i3.GGistVars> {
   GGistReq._();
 
-  factory GGistReq([Function(GGistReqBuilder b) updates]) = _$GGistReq;
+  factory GGistReq([void Function(GGistReqBuilder b) updates]) = _$GGistReq;
 
   static void _initializeBuilder(GGistReqBuilder b) => b
     ..operation = _i4.Operation(
@@ -27,6 +27,7 @@ abstract class GGistReq
       operationName: 'Gist',
     )
     ..executeOnListen = true;
+
   @override
   _i3.GGistVars get vars;
   @override
@@ -35,7 +36,9 @@ abstract class GGistReq
   _i4.Request get execRequest => _i4.Request(
         operation: operation,
         variables: vars.toJson(),
+        context: context ?? const _i4.Context(),
       );
+
   @override
   String? get requestId;
   @override
@@ -55,13 +58,30 @@ abstract class GGistReq
   @override
   bool get executeOnListen;
   @override
+  @BuiltValueField(serialize: false)
+  _i4.Context? get context;
+  @override
   _i2.GGistData? parseData(Map<String, dynamic> json) =>
       _i2.GGistData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GGistData data) => data.toJson();
+
+  @override
+  _i1.OperationRequest<_i2.GGistData, _i3.GGistVars> transformOperation(
+          _i4.Operation Function(_i4.Operation) transform) =>
+      this.rebuild((b) => b..operation = transform(operation));
+
   static Serializer<GGistReq> get serializer => _$gGistReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GGistReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GGistReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GGistReq.serializer,

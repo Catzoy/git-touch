@@ -12,17 +12,19 @@ abstract class GReleasesVars
     implements Built<GReleasesVars, GReleasesVarsBuilder> {
   GReleasesVars._();
 
-  factory GReleasesVars([Function(GReleasesVarsBuilder b) updates]) =
+  factory GReleasesVars([void Function(GReleasesVarsBuilder b) updates]) =
       _$GReleasesVars;
 
   String get name;
   String get owner;
   String? get cursor;
   static Serializer<GReleasesVars> get serializer => _$gReleasesVarsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GReleasesVars.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GReleasesVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GReleasesVars.serializer,

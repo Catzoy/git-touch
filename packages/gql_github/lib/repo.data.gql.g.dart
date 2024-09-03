@@ -567,7 +567,8 @@ class _$GRepoData_repository_repositoryTopicsSerializer
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(GRepoData_repository_repositoryTopics_nodes)
+              const FullType.nullable(
+                  GRepoData_repository_repositoryTopics_nodes)
             ])));
     }
     return result;
@@ -592,7 +593,8 @@ class _$GRepoData_repository_repositoryTopicsSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GRepoData_repository_repositoryTopics_nodes)
+                const FullType.nullable(
+                    GRepoData_repository_repositoryTopics_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -907,8 +909,9 @@ class _$GRepoData_repository_languagesSerializer
       result
         ..add('edges')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GRepoData_repository_languages_edges)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GRepoData_repository_languages_edges)
+            ])));
     }
     return result;
   }
@@ -936,7 +939,7 @@ class _$GRepoData_repository_languagesSerializer
         case 'edges':
           result.edges.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GRepoData_repository_languages_edges)
+                const FullType.nullable(GRepoData_repository_languages_edges)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -1987,8 +1990,9 @@ class _$GRepoData_repository_refsSerializer
       result
         ..add('nodes')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GRepoData_repository_refs_nodes)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GRepoData_repository_refs_nodes)
+            ])));
     }
     return result;
   }
@@ -2016,7 +2020,7 @@ class _$GRepoData_repository_refsSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GRepoData_repository_refs_nodes)
+                const FullType.nullable(GRepoData_repository_refs_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -2479,7 +2483,11 @@ class _$GRepoData extends GRepoData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), repository.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, repository.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -2748,44 +2756,40 @@ class _$GRepoData_repository extends GRepoData_repository {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    $jc(
-                                                                        $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, G__typename.hashCode), owner.hashCode), name.hashCode), description.hashCode), homepageUrl.hashCode), isPrivate.hashCode), isFork.hashCode), url.hashCode), viewerHasStarred.hashCode), viewerSubscription.hashCode), repositoryTopics.hashCode), watchers.hashCode),
-                                                                                stargazers.hashCode),
-                                                                            forks.hashCode),
-                                                                        languages.hashCode),
-                                                                    primaryLanguage.hashCode),
-                                                                licenseInfo.hashCode),
-                                                            diskUsage.hashCode),
-                                                        hasIssuesEnabled.hashCode),
-                                                    issues.hashCode),
-                                                issuesOpen.hashCode),
-                                            pullRequests.hashCode),
-                                        pullRequestsOpen.hashCode),
-                                    discussions.hashCode),
-                                hasProjectsEnabled.hashCode),
-                            projectsUrl.hashCode),
-                        projects.hashCode),
-                    defaultBranchRef.hashCode),
-                ref.hashCode),
-            refs.hashCode),
-        releases.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, homepageUrl.hashCode);
+    _$hash = $jc(_$hash, isPrivate.hashCode);
+    _$hash = $jc(_$hash, isFork.hashCode);
+    _$hash = $jc(_$hash, url.hashCode);
+    _$hash = $jc(_$hash, viewerHasStarred.hashCode);
+    _$hash = $jc(_$hash, viewerSubscription.hashCode);
+    _$hash = $jc(_$hash, repositoryTopics.hashCode);
+    _$hash = $jc(_$hash, watchers.hashCode);
+    _$hash = $jc(_$hash, stargazers.hashCode);
+    _$hash = $jc(_$hash, forks.hashCode);
+    _$hash = $jc(_$hash, languages.hashCode);
+    _$hash = $jc(_$hash, primaryLanguage.hashCode);
+    _$hash = $jc(_$hash, licenseInfo.hashCode);
+    _$hash = $jc(_$hash, diskUsage.hashCode);
+    _$hash = $jc(_$hash, hasIssuesEnabled.hashCode);
+    _$hash = $jc(_$hash, issues.hashCode);
+    _$hash = $jc(_$hash, issuesOpen.hashCode);
+    _$hash = $jc(_$hash, pullRequests.hashCode);
+    _$hash = $jc(_$hash, pullRequestsOpen.hashCode);
+    _$hash = $jc(_$hash, discussions.hashCode);
+    _$hash = $jc(_$hash, hasProjectsEnabled.hashCode);
+    _$hash = $jc(_$hash, projectsUrl.hashCode);
+    _$hash = $jc(_$hash, projects.hashCode);
+    _$hash = $jc(_$hash, defaultBranchRef.hashCode);
+    _$hash = $jc(_$hash, ref.hashCode);
+    _$hash = $jc(_$hash, refs.hashCode);
+    _$hash = $jc(_$hash, releases.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3196,8 +3200,12 @@ class _$GRepoData_repository_owner extends GRepoData_repository_owner {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), login.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3275,7 +3283,7 @@ class _$GRepoData_repository_repositoryTopics
   @override
   final String G__typename;
   @override
-  final BuiltList<GRepoData_repository_repositoryTopics_nodes>? nodes;
+  final BuiltList<GRepoData_repository_repositoryTopics_nodes?>? nodes;
 
   factory _$GRepoData_repository_repositoryTopics(
           [void Function(GRepoData_repository_repositoryTopicsBuilder)?
@@ -3310,7 +3318,11 @@ class _$GRepoData_repository_repositoryTopics
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3333,11 +3345,11 @@ class GRepoData_repository_repositoryTopicsBuilder
   String? get G__typename => _$this._G__typename;
   set G__typename(String? G__typename) => _$this._G__typename = G__typename;
 
-  ListBuilder<GRepoData_repository_repositoryTopics_nodes>? _nodes;
-  ListBuilder<GRepoData_repository_repositoryTopics_nodes> get nodes =>
+  ListBuilder<GRepoData_repository_repositoryTopics_nodes?>? _nodes;
+  ListBuilder<GRepoData_repository_repositoryTopics_nodes?> get nodes =>
       _$this._nodes ??=
-          new ListBuilder<GRepoData_repository_repositoryTopics_nodes>();
-  set nodes(ListBuilder<GRepoData_repository_repositoryTopics_nodes>? nodes) =>
+          new ListBuilder<GRepoData_repository_repositoryTopics_nodes?>();
+  set nodes(ListBuilder<GRepoData_repository_repositoryTopics_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GRepoData_repository_repositoryTopicsBuilder() {
@@ -3443,8 +3455,12 @@ class _$GRepoData_repository_repositoryTopics_nodes
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), url.hashCode), topic.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, url.hashCode);
+    _$hash = $jc(_$hash, topic.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3586,7 +3602,11 @@ class _$GRepoData_repository_repositoryTopics_nodes_topic
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3695,7 +3715,11 @@ class _$GRepoData_repository_watchers extends GRepoData_repository_watchers {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3800,7 +3824,11 @@ class _$GRepoData_repository_stargazers
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3904,7 +3932,11 @@ class _$GRepoData_repository_forks extends GRepoData_repository_forks {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3975,7 +4007,7 @@ class _$GRepoData_repository_languages extends GRepoData_repository_languages {
   @override
   final int totalSize;
   @override
-  final BuiltList<GRepoData_repository_languages_edges>? edges;
+  final BuiltList<GRepoData_repository_languages_edges?>? edges;
 
   factory _$GRepoData_repository_languages(
           [void Function(GRepoData_repository_languagesBuilder)? updates]) =>
@@ -4010,8 +4042,12 @@ class _$GRepoData_repository_languages extends GRepoData_repository_languages {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), totalSize.hashCode), edges.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalSize.hashCode);
+    _$hash = $jc(_$hash, edges.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4038,10 +4074,11 @@ class GRepoData_repository_languagesBuilder
   int? get totalSize => _$this._totalSize;
   set totalSize(int? totalSize) => _$this._totalSize = totalSize;
 
-  ListBuilder<GRepoData_repository_languages_edges>? _edges;
-  ListBuilder<GRepoData_repository_languages_edges> get edges =>
-      _$this._edges ??= new ListBuilder<GRepoData_repository_languages_edges>();
-  set edges(ListBuilder<GRepoData_repository_languages_edges>? edges) =>
+  ListBuilder<GRepoData_repository_languages_edges?>? _edges;
+  ListBuilder<GRepoData_repository_languages_edges?> get edges =>
+      _$this._edges ??=
+          new ListBuilder<GRepoData_repository_languages_edges?>();
+  set edges(ListBuilder<GRepoData_repository_languages_edges?>? edges) =>
       _$this._edges = edges;
 
   GRepoData_repository_languagesBuilder() {
@@ -4145,8 +4182,12 @@ class _$GRepoData_repository_languages_edges
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), size.hashCode), node.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, size.hashCode);
+    _$hash = $jc(_$hash, node.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4282,8 +4323,12 @@ class _$GRepoData_repository_languages_edges_node
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), name.hashCode), color.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4400,7 +4445,11 @@ class _$GRepoData_repository_primaryLanguage
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4509,8 +4558,12 @@ class _$GRepoData_repository_licenseInfo
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), name.hashCode), spdxId.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, spdxId.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4621,7 +4674,11 @@ class _$GRepoData_repository_issues extends GRepoData_repository_issues {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4726,7 +4783,11 @@ class _$GRepoData_repository_issuesOpen
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4832,7 +4893,11 @@ class _$GRepoData_repository_pullRequests
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4941,7 +5006,11 @@ class _$GRepoData_repository_pullRequestsOpen
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5048,7 +5117,11 @@ class _$GRepoData_repository_discussions
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5152,7 +5225,11 @@ class _$GRepoData_repository_projects extends GRepoData_repository_projects {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5263,8 +5340,12 @@ class _$GRepoData_repository_defaultBranchRef
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), name.hashCode), target.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, target.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5381,7 +5462,10 @@ class _$GRepoData_repository_defaultBranchRef_target__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5492,7 +5576,11 @@ class _$GRepoData_repository_defaultBranchRef_target__asCommit
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), history.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, history.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5637,7 +5725,11 @@ class _$GRepoData_repository_defaultBranchRef_target__asCommit_history
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5757,8 +5849,12 @@ class _$GRepoData_repository_ref extends GRepoData_repository_ref {
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), name.hashCode), target.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, target.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5867,7 +5963,10 @@ class _$GRepoData_repository_ref_target__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5969,7 +6068,11 @@ class _$GRepoData_repository_ref_target__asCommit
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), history.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, history.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6102,7 +6205,11 @@ class _$GRepoData_repository_ref_target__asCommit_history
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6181,7 +6288,7 @@ class _$GRepoData_repository_refs extends GRepoData_repository_refs {
   @override
   final int totalCount;
   @override
-  final BuiltList<GRepoData_repository_refs_nodes>? nodes;
+  final BuiltList<GRepoData_repository_refs_nodes?>? nodes;
 
   factory _$GRepoData_repository_refs(
           [void Function(GRepoData_repository_refsBuilder)? updates]) =>
@@ -6216,8 +6323,12 @@ class _$GRepoData_repository_refs extends GRepoData_repository_refs {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6243,10 +6354,10 @@ class GRepoData_repository_refsBuilder
   int? get totalCount => _$this._totalCount;
   set totalCount(int? totalCount) => _$this._totalCount = totalCount;
 
-  ListBuilder<GRepoData_repository_refs_nodes>? _nodes;
-  ListBuilder<GRepoData_repository_refs_nodes> get nodes =>
-      _$this._nodes ??= new ListBuilder<GRepoData_repository_refs_nodes>();
-  set nodes(ListBuilder<GRepoData_repository_refs_nodes>? nodes) =>
+  ListBuilder<GRepoData_repository_refs_nodes?>? _nodes;
+  ListBuilder<GRepoData_repository_refs_nodes?> get nodes =>
+      _$this._nodes ??= new ListBuilder<GRepoData_repository_refs_nodes?>();
+  set nodes(ListBuilder<GRepoData_repository_refs_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GRepoData_repository_refsBuilder() {
@@ -6343,7 +6454,11 @@ class _$GRepoData_repository_refs_nodes
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6447,7 +6562,11 @@ class _$GRepoData_repository_releases extends GRepoData_repository_releases {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6549,7 +6668,11 @@ class _$GCommitPartsData extends GCommitPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), history.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, history.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6665,7 +6788,11 @@ class _$GCommitPartsData_history extends GCommitPartsData_history {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6767,8 +6894,12 @@ class _$GRefPartsData extends GRefPartsData {
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), name.hashCode), target.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, target.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6870,7 +7001,10 @@ class _$GRefPartsData_target__base extends GRefPartsData_target__base {
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6965,7 +7099,11 @@ class _$GRefPartsData_target__asCommit extends GRefPartsData_target__asCommit {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), history.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, history.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -7087,7 +7225,11 @@ class _$GRefPartsData_target__asCommit_history
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -7155,4 +7297,4 @@ class GRefPartsData_target__asCommit_historyBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

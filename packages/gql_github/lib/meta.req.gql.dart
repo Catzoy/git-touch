@@ -19,7 +19,7 @@ abstract class GMetaReq
         _i1.OperationRequest<_i2.GMetaData, _i3.GMetaVars> {
   GMetaReq._();
 
-  factory GMetaReq([Function(GMetaReqBuilder b) updates]) = _$GMetaReq;
+  factory GMetaReq([void Function(GMetaReqBuilder b) updates]) = _$GMetaReq;
 
   static void _initializeBuilder(GMetaReqBuilder b) => b
     ..operation = _i4.Operation(
@@ -27,6 +27,7 @@ abstract class GMetaReq
       operationName: 'Meta',
     )
     ..executeOnListen = true;
+
   @override
   _i3.GMetaVars get vars;
   @override
@@ -35,7 +36,9 @@ abstract class GMetaReq
   _i4.Request get execRequest => _i4.Request(
         operation: operation,
         variables: vars.toJson(),
+        context: context ?? const _i4.Context(),
       );
+
   @override
   String? get requestId;
   @override
@@ -55,13 +58,30 @@ abstract class GMetaReq
   @override
   bool get executeOnListen;
   @override
+  @BuiltValueField(serialize: false)
+  _i4.Context? get context;
+  @override
   _i2.GMetaData? parseData(Map<String, dynamic> json) =>
       _i2.GMetaData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GMetaData data) => data.toJson();
+
+  @override
+  _i1.OperationRequest<_i2.GMetaData, _i3.GMetaVars> transformOperation(
+          _i4.Operation Function(_i4.Operation) transform) =>
+      this.rebuild((b) => b..operation = transform(operation));
+
   static Serializer<GMetaReq> get serializer => _$gMetaReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GMetaReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GMetaReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GMetaReq.serializer,

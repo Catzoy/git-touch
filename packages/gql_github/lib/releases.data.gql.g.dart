@@ -167,7 +167,7 @@ class _$GReleasesData_repository_releasesSerializer
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(GReleasesData_repository_releases_nodes)
+              const FullType.nullable(GReleasesData_repository_releases_nodes)
             ])));
     }
     return result;
@@ -198,7 +198,7 @@ class _$GReleasesData_repository_releasesSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GReleasesData_repository_releases_nodes)
+                const FullType.nullable(GReleasesData_repository_releases_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -483,7 +483,7 @@ class _$GReleasesData_repository_releases_nodes_releaseAssetsSerializer
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(
+              const FullType.nullable(
                   GReleasesData_repository_releases_nodes_releaseAssets_nodes)
             ])));
     }
@@ -510,7 +510,7 @@ class _$GReleasesData_repository_releases_nodes_releaseAssetsSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(
+                const FullType.nullable(
                     GReleasesData_repository_releases_nodes_releaseAssets_nodes)
               ]))! as BuiltList<Object?>);
           break;
@@ -622,7 +622,11 @@ class _$GReleasesData extends GReleasesData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), repository.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, repository.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -738,7 +742,11 @@ class _$GReleasesData_repository extends GReleasesData_repository {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), releases.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, releases.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -824,7 +832,7 @@ class _$GReleasesData_repository_releases
   @override
   final GReleasesData_repository_releases_pageInfo pageInfo;
   @override
-  final BuiltList<GReleasesData_repository_releases_nodes>? nodes;
+  final BuiltList<GReleasesData_repository_releases_nodes?>? nodes;
 
   factory _$GReleasesData_repository_releases(
           [void Function(GReleasesData_repository_releasesBuilder)? updates]) =>
@@ -860,8 +868,12 @@ class _$GReleasesData_repository_releases
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), pageInfo.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, pageInfo.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -891,11 +903,11 @@ class GReleasesData_repository_releasesBuilder
   set pageInfo(GReleasesData_repository_releases_pageInfoBuilder? pageInfo) =>
       _$this._pageInfo = pageInfo;
 
-  ListBuilder<GReleasesData_repository_releases_nodes>? _nodes;
-  ListBuilder<GReleasesData_repository_releases_nodes> get nodes =>
+  ListBuilder<GReleasesData_repository_releases_nodes?>? _nodes;
+  ListBuilder<GReleasesData_repository_releases_nodes?> get nodes =>
       _$this._nodes ??=
-          new ListBuilder<GReleasesData_repository_releases_nodes>();
-  set nodes(ListBuilder<GReleasesData_repository_releases_nodes>? nodes) =>
+          new ListBuilder<GReleasesData_repository_releases_nodes?>();
+  set nodes(ListBuilder<GReleasesData_repository_releases_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GReleasesData_repository_releasesBuilder() {
@@ -1000,8 +1012,12 @@ class _$GReleasesData_repository_releases_pageInfo
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), hasNextPage.hashCode),
-        endCursor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, hasNextPage.hashCode);
+    _$hash = $jc(_$hash, endCursor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -1148,18 +1164,17 @@ class _$GReleasesData_repository_releases_nodes
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc($jc($jc(0, G__typename.hashCode), tagName.hashCode),
-                            description.hashCode),
-                        name.hashCode),
-                    author.hashCode),
-                publishedAt.hashCode),
-            url.hashCode),
-        releaseAssets.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, tagName.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, author.hashCode);
+    _$hash = $jc(_$hash, publishedAt.hashCode);
+    _$hash = $jc(_$hash, url.hashCode);
+    _$hash = $jc(_$hash, releaseAssets.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -1343,8 +1358,12 @@ class _$GReleasesData_repository_releases_nodes_author
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), name.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -1429,7 +1448,7 @@ class _$GReleasesData_repository_releases_nodes_releaseAssets
   @override
   final String G__typename;
   @override
-  final BuiltList<GReleasesData_repository_releases_nodes_releaseAssets_nodes>?
+  final BuiltList<GReleasesData_repository_releases_nodes_releaseAssets_nodes?>?
       nodes;
 
   factory _$GReleasesData_repository_releases_nodes_releaseAssets(
@@ -1471,7 +1490,11 @@ class _$GReleasesData_repository_releases_nodes_releaseAssets
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -1494,14 +1517,14 @@ class GReleasesData_repository_releases_nodes_releaseAssetsBuilder
   String? get G__typename => _$this._G__typename;
   set G__typename(String? G__typename) => _$this._G__typename = G__typename;
 
-  ListBuilder<GReleasesData_repository_releases_nodes_releaseAssets_nodes>?
+  ListBuilder<GReleasesData_repository_releases_nodes_releaseAssets_nodes?>?
       _nodes;
-  ListBuilder<GReleasesData_repository_releases_nodes_releaseAssets_nodes>
+  ListBuilder<GReleasesData_repository_releases_nodes_releaseAssets_nodes?>
       get nodes => _$this._nodes ??= new ListBuilder<
-          GReleasesData_repository_releases_nodes_releaseAssets_nodes>();
+          GReleasesData_repository_releases_nodes_releaseAssets_nodes?>();
   set nodes(
           ListBuilder<
-                  GReleasesData_repository_releases_nodes_releaseAssets_nodes>?
+                  GReleasesData_repository_releases_nodes_releaseAssets_nodes?>?
               nodes) =>
       _$this._nodes = nodes;
 
@@ -1632,10 +1655,13 @@ class _$GReleasesData_repository_releases_nodes_releaseAssets_nodes
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), name.hashCode),
-            downloadUrl.hashCode),
-        downloadCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, downloadUrl.hashCode);
+    _$hash = $jc(_$hash, downloadCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -1735,4 +1761,4 @@ class GReleasesData_repository_releases_nodes_releaseAssets_nodesBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

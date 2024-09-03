@@ -225,8 +225,9 @@ class _$GFollowersData_user_followersSerializer
       result
         ..add('nodes')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GFollowersData_user_followers_nodes)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GFollowersData_user_followers_nodes)
+            ])));
     }
     return result;
   }
@@ -256,7 +257,7 @@ class _$GFollowersData_user_followersSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GFollowersData_user_followers_nodes)
+                const FullType.nullable(GFollowersData_user_followers_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -556,8 +557,9 @@ class _$GFollowingData_user_followingSerializer
       result
         ..add('nodes')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GFollowingData_user_following_nodes)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GFollowingData_user_following_nodes)
+            ])));
     }
     return result;
   }
@@ -587,7 +589,7 @@ class _$GFollowingData_user_followingSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GFollowingData_user_following_nodes)
+                const FullType.nullable(GFollowingData_user_following_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -880,8 +882,9 @@ class _$GOrgsData_user_organizationsSerializer
       result
         ..add('nodes')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GOrgsData_user_organizations_nodes)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GOrgsData_user_organizations_nodes)
+            ])));
     }
     return result;
   }
@@ -911,7 +914,7 @@ class _$GOrgsData_user_organizationsSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GOrgsData_user_organizations_nodes)
+                const FullType.nullable(GOrgsData_user_organizations_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -1213,7 +1216,8 @@ class _$GMembersData_organization_membersWithRoleSerializer
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(GMembersData_organization_membersWithRole_nodes)
+              const FullType.nullable(
+                  GMembersData_organization_membersWithRole_nodes)
             ])));
     }
     return result;
@@ -1244,7 +1248,8 @@ class _$GMembersData_organization_membersWithRoleSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GMembersData_organization_membersWithRole_nodes)
+                const FullType.nullable(
+                    GMembersData_organization_membersWithRole_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -1549,7 +1554,7 @@ class _$GWatchersData_repository_watchersSerializer
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(GWatchersData_repository_watchers_nodes)
+              const FullType.nullable(GWatchersData_repository_watchers_nodes)
             ])));
     }
     return result;
@@ -1580,7 +1585,7 @@ class _$GWatchersData_repository_watchersSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GWatchersData_repository_watchers_nodes)
+                const FullType.nullable(GWatchersData_repository_watchers_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -1883,7 +1888,8 @@ class _$GStargazersData_repository_stargazersSerializer
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(GStargazersData_repository_stargazers_nodes)
+              const FullType.nullable(
+                  GStargazersData_repository_stargazers_nodes)
             ])));
     }
     return result;
@@ -1914,7 +1920,8 @@ class _$GStargazersData_repository_stargazersSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GStargazersData_repository_stargazers_nodes)
+                const FullType.nullable(
+                    GStargazersData_repository_stargazers_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -2280,7 +2287,11 @@ class _$GFollowersData extends GFollowersData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), user.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, user.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -2394,7 +2405,11 @@ class _$GFollowersData_user extends GFollowersData_user {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), followers.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, followers.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -2478,7 +2493,7 @@ class _$GFollowersData_user_followers extends GFollowersData_user_followers {
   @override
   final GFollowersData_user_followers_pageInfo pageInfo;
   @override
-  final BuiltList<GFollowersData_user_followers_nodes>? nodes;
+  final BuiltList<GFollowersData_user_followers_nodes?>? nodes;
 
   factory _$GFollowersData_user_followers(
           [void Function(GFollowersData_user_followersBuilder)? updates]) =>
@@ -2513,8 +2528,12 @@ class _$GFollowersData_user_followers extends GFollowersData_user_followers {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), pageInfo.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, pageInfo.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -2543,10 +2562,10 @@ class GFollowersData_user_followersBuilder
   set pageInfo(GFollowersData_user_followers_pageInfoBuilder? pageInfo) =>
       _$this._pageInfo = pageInfo;
 
-  ListBuilder<GFollowersData_user_followers_nodes>? _nodes;
-  ListBuilder<GFollowersData_user_followers_nodes> get nodes =>
-      _$this._nodes ??= new ListBuilder<GFollowersData_user_followers_nodes>();
-  set nodes(ListBuilder<GFollowersData_user_followers_nodes>? nodes) =>
+  ListBuilder<GFollowersData_user_followers_nodes?>? _nodes;
+  ListBuilder<GFollowersData_user_followers_nodes?> get nodes =>
+      _$this._nodes ??= new ListBuilder<GFollowersData_user_followers_nodes?>();
+  set nodes(ListBuilder<GFollowersData_user_followers_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GFollowersData_user_followersBuilder() {
@@ -2650,8 +2669,12 @@ class _$GFollowersData_user_followers_pageInfo
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), hasNextPage.hashCode),
-        endCursor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, hasNextPage.hashCode);
+    _$hash = $jc(_$hash, endCursor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -2788,14 +2811,15 @@ class _$GFollowersData_user_followers_nodes
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc($jc($jc(0, G__typename.hashCode), login.hashCode),
-                    name.hashCode),
-                avatarUrl.hashCode),
-            location.hashCode),
-        createdAt.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jc(_$hash, location.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -2924,7 +2948,11 @@ class _$GFollowingData extends GFollowingData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), user.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, user.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3038,7 +3066,11 @@ class _$GFollowingData_user extends GFollowingData_user {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), following.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, following.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3122,7 +3154,7 @@ class _$GFollowingData_user_following extends GFollowingData_user_following {
   @override
   final GFollowingData_user_following_pageInfo pageInfo;
   @override
-  final BuiltList<GFollowingData_user_following_nodes>? nodes;
+  final BuiltList<GFollowingData_user_following_nodes?>? nodes;
 
   factory _$GFollowingData_user_following(
           [void Function(GFollowingData_user_followingBuilder)? updates]) =>
@@ -3157,8 +3189,12 @@ class _$GFollowingData_user_following extends GFollowingData_user_following {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), pageInfo.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, pageInfo.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3187,10 +3223,10 @@ class GFollowingData_user_followingBuilder
   set pageInfo(GFollowingData_user_following_pageInfoBuilder? pageInfo) =>
       _$this._pageInfo = pageInfo;
 
-  ListBuilder<GFollowingData_user_following_nodes>? _nodes;
-  ListBuilder<GFollowingData_user_following_nodes> get nodes =>
-      _$this._nodes ??= new ListBuilder<GFollowingData_user_following_nodes>();
-  set nodes(ListBuilder<GFollowingData_user_following_nodes>? nodes) =>
+  ListBuilder<GFollowingData_user_following_nodes?>? _nodes;
+  ListBuilder<GFollowingData_user_following_nodes?> get nodes =>
+      _$this._nodes ??= new ListBuilder<GFollowingData_user_following_nodes?>();
+  set nodes(ListBuilder<GFollowingData_user_following_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GFollowingData_user_followingBuilder() {
@@ -3294,8 +3330,12 @@ class _$GFollowingData_user_following_pageInfo
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), hasNextPage.hashCode),
-        endCursor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, hasNextPage.hashCode);
+    _$hash = $jc(_$hash, endCursor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3432,14 +3472,15 @@ class _$GFollowingData_user_following_nodes
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc($jc($jc(0, G__typename.hashCode), login.hashCode),
-                    name.hashCode),
-                avatarUrl.hashCode),
-            location.hashCode),
-        createdAt.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jc(_$hash, location.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3567,7 +3608,11 @@ class _$GOrgsData extends GOrgsData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), user.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, user.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3678,7 +3723,11 @@ class _$GOrgsData_user extends GOrgsData_user {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), organizations.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, organizations.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3762,7 +3811,7 @@ class _$GOrgsData_user_organizations extends GOrgsData_user_organizations {
   @override
   final GOrgsData_user_organizations_pageInfo pageInfo;
   @override
-  final BuiltList<GOrgsData_user_organizations_nodes>? nodes;
+  final BuiltList<GOrgsData_user_organizations_nodes?>? nodes;
 
   factory _$GOrgsData_user_organizations(
           [void Function(GOrgsData_user_organizationsBuilder)? updates]) =>
@@ -3797,8 +3846,12 @@ class _$GOrgsData_user_organizations extends GOrgsData_user_organizations {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), pageInfo.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, pageInfo.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3827,10 +3880,10 @@ class GOrgsData_user_organizationsBuilder
   set pageInfo(GOrgsData_user_organizations_pageInfoBuilder? pageInfo) =>
       _$this._pageInfo = pageInfo;
 
-  ListBuilder<GOrgsData_user_organizations_nodes>? _nodes;
-  ListBuilder<GOrgsData_user_organizations_nodes> get nodes =>
-      _$this._nodes ??= new ListBuilder<GOrgsData_user_organizations_nodes>();
-  set nodes(ListBuilder<GOrgsData_user_organizations_nodes>? nodes) =>
+  ListBuilder<GOrgsData_user_organizations_nodes?>? _nodes;
+  ListBuilder<GOrgsData_user_organizations_nodes?> get nodes =>
+      _$this._nodes ??= new ListBuilder<GOrgsData_user_organizations_nodes?>();
+  set nodes(ListBuilder<GOrgsData_user_organizations_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GOrgsData_user_organizationsBuilder() {
@@ -3934,8 +3987,12 @@ class _$GOrgsData_user_organizations_pageInfo
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), hasNextPage.hashCode),
-        endCursor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, hasNextPage.hashCode);
+    _$hash = $jc(_$hash, endCursor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4072,14 +4129,15 @@ class _$GOrgsData_user_organizations_nodes
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc($jc($jc(0, G__typename.hashCode), login.hashCode),
-                    name.hashCode),
-                avatarUrl.hashCode),
-            location.hashCode),
-        createdAt.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jc(_$hash, location.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4207,7 +4265,11 @@ class _$GMembersData extends GMembersData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), organization.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, organization.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4323,7 +4385,11 @@ class _$GMembersData_organization extends GMembersData_organization {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), membersWithRole.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, membersWithRole.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4411,7 +4477,7 @@ class _$GMembersData_organization_membersWithRole
   @override
   final GMembersData_organization_membersWithRole_pageInfo pageInfo;
   @override
-  final BuiltList<GMembersData_organization_membersWithRole_nodes>? nodes;
+  final BuiltList<GMembersData_organization_membersWithRole_nodes?>? nodes;
 
   factory _$GMembersData_organization_membersWithRole(
           [void Function(GMembersData_organization_membersWithRoleBuilder)?
@@ -4449,8 +4515,12 @@ class _$GMembersData_organization_membersWithRole
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), pageInfo.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, pageInfo.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4483,12 +4553,12 @@ class GMembersData_organization_membersWithRoleBuilder
               pageInfo) =>
       _$this._pageInfo = pageInfo;
 
-  ListBuilder<GMembersData_organization_membersWithRole_nodes>? _nodes;
-  ListBuilder<GMembersData_organization_membersWithRole_nodes> get nodes =>
+  ListBuilder<GMembersData_organization_membersWithRole_nodes?>? _nodes;
+  ListBuilder<GMembersData_organization_membersWithRole_nodes?> get nodes =>
       _$this._nodes ??=
-          new ListBuilder<GMembersData_organization_membersWithRole_nodes>();
+          new ListBuilder<GMembersData_organization_membersWithRole_nodes?>();
   set nodes(
-          ListBuilder<GMembersData_organization_membersWithRole_nodes>?
+          ListBuilder<GMembersData_organization_membersWithRole_nodes?>?
               nodes) =>
       _$this._nodes = nodes;
 
@@ -4601,8 +4671,12 @@ class _$GMembersData_organization_membersWithRole_pageInfo
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), hasNextPage.hashCode),
-        endCursor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, hasNextPage.hashCode);
+    _$hash = $jc(_$hash, endCursor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4748,14 +4822,15 @@ class _$GMembersData_organization_membersWithRole_nodes
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc($jc($jc(0, G__typename.hashCode), login.hashCode),
-                    name.hashCode),
-                avatarUrl.hashCode),
-            location.hashCode),
-        createdAt.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jc(_$hash, location.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4891,7 +4966,11 @@ class _$GWatchersData extends GWatchersData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), repository.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, repository.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5007,7 +5086,11 @@ class _$GWatchersData_repository extends GWatchersData_repository {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), watchers.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, watchers.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5093,7 +5176,7 @@ class _$GWatchersData_repository_watchers
   @override
   final GWatchersData_repository_watchers_pageInfo pageInfo;
   @override
-  final BuiltList<GWatchersData_repository_watchers_nodes>? nodes;
+  final BuiltList<GWatchersData_repository_watchers_nodes?>? nodes;
 
   factory _$GWatchersData_repository_watchers(
           [void Function(GWatchersData_repository_watchersBuilder)? updates]) =>
@@ -5129,8 +5212,12 @@ class _$GWatchersData_repository_watchers
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), pageInfo.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, pageInfo.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5160,11 +5247,11 @@ class GWatchersData_repository_watchersBuilder
   set pageInfo(GWatchersData_repository_watchers_pageInfoBuilder? pageInfo) =>
       _$this._pageInfo = pageInfo;
 
-  ListBuilder<GWatchersData_repository_watchers_nodes>? _nodes;
-  ListBuilder<GWatchersData_repository_watchers_nodes> get nodes =>
+  ListBuilder<GWatchersData_repository_watchers_nodes?>? _nodes;
+  ListBuilder<GWatchersData_repository_watchers_nodes?> get nodes =>
       _$this._nodes ??=
-          new ListBuilder<GWatchersData_repository_watchers_nodes>();
-  set nodes(ListBuilder<GWatchersData_repository_watchers_nodes>? nodes) =>
+          new ListBuilder<GWatchersData_repository_watchers_nodes?>();
+  set nodes(ListBuilder<GWatchersData_repository_watchers_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GWatchersData_repository_watchersBuilder() {
@@ -5269,8 +5356,12 @@ class _$GWatchersData_repository_watchers_pageInfo
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), hasNextPage.hashCode),
-        endCursor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, hasNextPage.hashCode);
+    _$hash = $jc(_$hash, endCursor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5409,14 +5500,15 @@ class _$GWatchersData_repository_watchers_nodes
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc($jc($jc(0, G__typename.hashCode), login.hashCode),
-                    name.hashCode),
-                avatarUrl.hashCode),
-            location.hashCode),
-        createdAt.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jc(_$hash, location.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5547,7 +5639,11 @@ class _$GStargazersData extends GStargazersData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), repository.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, repository.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5663,7 +5759,11 @@ class _$GStargazersData_repository extends GStargazersData_repository {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), stargazers.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, stargazers.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5749,7 +5849,7 @@ class _$GStargazersData_repository_stargazers
   @override
   final GStargazersData_repository_stargazers_pageInfo pageInfo;
   @override
-  final BuiltList<GStargazersData_repository_stargazers_nodes>? nodes;
+  final BuiltList<GStargazersData_repository_stargazers_nodes?>? nodes;
 
   factory _$GStargazersData_repository_stargazers(
           [void Function(GStargazersData_repository_stargazersBuilder)?
@@ -5787,8 +5887,12 @@ class _$GStargazersData_repository_stargazers
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), pageInfo.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, pageInfo.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5820,11 +5924,11 @@ class GStargazersData_repository_stargazersBuilder
           GStargazersData_repository_stargazers_pageInfoBuilder? pageInfo) =>
       _$this._pageInfo = pageInfo;
 
-  ListBuilder<GStargazersData_repository_stargazers_nodes>? _nodes;
-  ListBuilder<GStargazersData_repository_stargazers_nodes> get nodes =>
+  ListBuilder<GStargazersData_repository_stargazers_nodes?>? _nodes;
+  ListBuilder<GStargazersData_repository_stargazers_nodes?> get nodes =>
       _$this._nodes ??=
-          new ListBuilder<GStargazersData_repository_stargazers_nodes>();
-  set nodes(ListBuilder<GStargazersData_repository_stargazers_nodes>? nodes) =>
+          new ListBuilder<GStargazersData_repository_stargazers_nodes?>();
+  set nodes(ListBuilder<GStargazersData_repository_stargazers_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GStargazersData_repository_stargazersBuilder() {
@@ -5933,8 +6037,12 @@ class _$GStargazersData_repository_stargazers_pageInfo
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), hasNextPage.hashCode),
-        endCursor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, hasNextPage.hashCode);
+    _$hash = $jc(_$hash, endCursor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6078,14 +6186,15 @@ class _$GStargazersData_repository_stargazers_nodes
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc($jc($jc(0, G__typename.hashCode), login.hashCode),
-                    name.hashCode),
-                avatarUrl.hashCode),
-            location.hashCode),
-        createdAt.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jc(_$hash, location.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6240,14 +6349,15 @@ class _$GUserPartsData extends GUserPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc($jc($jc(0, G__typename.hashCode), login.hashCode),
-                    name.hashCode),
-                avatarUrl.hashCode),
-            location.hashCode),
-        createdAt.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jc(_$hash, location.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6396,14 +6506,15 @@ class _$GOrgPartsData extends GOrgPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc($jc($jc(0, G__typename.hashCode), login.hashCode),
-                    name.hashCode),
-                avatarUrl.hashCode),
-            location.hashCode),
-        createdAt.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jc(_$hash, location.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6497,4 +6608,4 @@ class GOrgPartsDataBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

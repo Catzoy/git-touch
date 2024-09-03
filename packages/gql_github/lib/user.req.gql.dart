@@ -20,7 +20,8 @@ abstract class GViewerReq
         _i1.OperationRequest<_i2.GViewerData, _i3.GViewerVars> {
   GViewerReq._();
 
-  factory GViewerReq([Function(GViewerReqBuilder b) updates]) = _$GViewerReq;
+  factory GViewerReq([void Function(GViewerReqBuilder b) updates]) =
+      _$GViewerReq;
 
   static void _initializeBuilder(GViewerReqBuilder b) => b
     ..operation = _i4.Operation(
@@ -28,6 +29,7 @@ abstract class GViewerReq
       operationName: 'Viewer',
     )
     ..executeOnListen = true;
+
   @override
   _i3.GViewerVars get vars;
   @override
@@ -36,7 +38,9 @@ abstract class GViewerReq
   _i4.Request get execRequest => _i4.Request(
         operation: operation,
         variables: vars.toJson(),
+        context: context ?? const _i4.Context(),
       );
+
   @override
   String? get requestId;
   @override
@@ -56,13 +60,30 @@ abstract class GViewerReq
   @override
   bool get executeOnListen;
   @override
+  @BuiltValueField(serialize: false)
+  _i4.Context? get context;
+  @override
   _i2.GViewerData? parseData(Map<String, dynamic> json) =>
       _i2.GViewerData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GViewerData data) => data.toJson();
+
+  @override
+  _i1.OperationRequest<_i2.GViewerData, _i3.GViewerVars> transformOperation(
+          _i4.Operation Function(_i4.Operation) transform) =>
+      this.rebuild((b) => b..operation = transform(operation));
+
   static Serializer<GViewerReq> get serializer => _$gViewerReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GViewerReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GViewerReq.serializer,
@@ -76,7 +97,7 @@ abstract class GUserReq
         _i1.OperationRequest<_i2.GUserData, _i3.GUserVars> {
   GUserReq._();
 
-  factory GUserReq([Function(GUserReqBuilder b) updates]) = _$GUserReq;
+  factory GUserReq([void Function(GUserReqBuilder b) updates]) = _$GUserReq;
 
   static void _initializeBuilder(GUserReqBuilder b) => b
     ..operation = _i4.Operation(
@@ -84,6 +105,7 @@ abstract class GUserReq
       operationName: 'User',
     )
     ..executeOnListen = true;
+
   @override
   _i3.GUserVars get vars;
   @override
@@ -92,7 +114,9 @@ abstract class GUserReq
   _i4.Request get execRequest => _i4.Request(
         operation: operation,
         variables: vars.toJson(),
+        context: context ?? const _i4.Context(),
       );
+
   @override
   String? get requestId;
   @override
@@ -112,13 +136,30 @@ abstract class GUserReq
   @override
   bool get executeOnListen;
   @override
+  @BuiltValueField(serialize: false)
+  _i4.Context? get context;
+  @override
   _i2.GUserData? parseData(Map<String, dynamic> json) =>
       _i2.GUserData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GUserData data) => data.toJson();
+
+  @override
+  _i1.OperationRequest<_i2.GUserData, _i3.GUserVars> transformOperation(
+          _i4.Operation Function(_i4.Operation) transform) =>
+      this.rebuild((b) => b..operation = transform(operation));
+
   static Serializer<GUserReq> get serializer => _$gUserReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GUserReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GUserReq.serializer,
@@ -132,12 +173,13 @@ abstract class GRepoPartsReq
         _i1.FragmentRequest<_i2.GRepoPartsData, _i3.GRepoPartsVars> {
   GRepoPartsReq._();
 
-  factory GRepoPartsReq([Function(GRepoPartsReqBuilder b) updates]) =
+  factory GRepoPartsReq([void Function(GRepoPartsReqBuilder b) updates]) =
       _$GRepoPartsReq;
 
   static void _initializeBuilder(GRepoPartsReqBuilder b) => b
     ..document = _i5.document
     ..fragmentName = 'RepoParts';
+
   @override
   _i3.GRepoPartsVars get vars;
   @override
@@ -149,11 +191,20 @@ abstract class GRepoPartsReq
   @override
   _i2.GRepoPartsData? parseData(Map<String, dynamic> json) =>
       _i2.GRepoPartsData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GRepoPartsData data) => data.toJson();
+
   static Serializer<GRepoPartsReq> get serializer => _$gRepoPartsReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GRepoPartsReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRepoPartsReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GRepoPartsReq.serializer,
@@ -169,12 +220,13 @@ abstract class GSponsorConnectionPartsReq
   GSponsorConnectionPartsReq._();
 
   factory GSponsorConnectionPartsReq(
-          [Function(GSponsorConnectionPartsReqBuilder b) updates]) =
+          [void Function(GSponsorConnectionPartsReqBuilder b) updates]) =
       _$GSponsorConnectionPartsReq;
 
   static void _initializeBuilder(GSponsorConnectionPartsReqBuilder b) => b
     ..document = _i5.document
     ..fragmentName = 'SponsorConnectionParts';
+
   @override
   _i3.GSponsorConnectionPartsVars get vars;
   @override
@@ -186,12 +238,22 @@ abstract class GSponsorConnectionPartsReq
   @override
   _i2.GSponsorConnectionPartsData? parseData(Map<String, dynamic> json) =>
       _i2.GSponsorConnectionPartsData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GSponsorConnectionPartsData data) =>
+      data.toJson();
+
   static Serializer<GSponsorConnectionPartsReq> get serializer =>
       _$gSponsorConnectionPartsReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GSponsorConnectionPartsReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSponsorConnectionPartsReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GSponsorConnectionPartsReq.serializer,
@@ -205,12 +267,13 @@ abstract class GUserPartsReq
         _i1.FragmentRequest<_i2.GUserPartsData, _i3.GUserPartsVars> {
   GUserPartsReq._();
 
-  factory GUserPartsReq([Function(GUserPartsReqBuilder b) updates]) =
+  factory GUserPartsReq([void Function(GUserPartsReqBuilder b) updates]) =
       _$GUserPartsReq;
 
   static void _initializeBuilder(GUserPartsReqBuilder b) => b
     ..document = _i5.document
     ..fragmentName = 'UserParts';
+
   @override
   _i3.GUserPartsVars get vars;
   @override
@@ -222,11 +285,20 @@ abstract class GUserPartsReq
   @override
   _i2.GUserPartsData? parseData(Map<String, dynamic> json) =>
       _i2.GUserPartsData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GUserPartsData data) => data.toJson();
+
   static Serializer<GUserPartsReq> get serializer => _$gUserPartsReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GUserPartsReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GUserPartsReq.serializer,

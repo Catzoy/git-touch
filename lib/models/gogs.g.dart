@@ -7,7 +7,7 @@ part of 'gogs.dart';
 // **************************************************************************
 
 GogsUser _$GogsUserFromJson(Map<String, dynamic> json) => GogsUser()
-  ..id = json['id'] as int?
+  ..id = (json['id'] as num?)?.toInt()
   ..username = json['username'] as String?
   ..fullName = json['full_name'] as String?
   ..avatarUrl = json['avatar_url'] as String?
@@ -23,7 +23,7 @@ Map<String, dynamic> _$GogsUserToJson(GogsUser instance) => <String, dynamic>{
 
 GogsRepository _$GogsRepositoryFromJson(Map<String, dynamic> json) =>
     GogsRepository()
-      ..id = json['id'] as int?
+      ..id = (json['id'] as num?)?.toInt()
       ..fullName = json['full_name'] as String?
       ..private = json['private'] as bool?
       ..owner = json['owner'] == null
@@ -38,10 +38,10 @@ GogsRepository _$GogsRepositoryFromJson(Map<String, dynamic> json) =>
       ..updatedAt = json['updated_at'] == null
           ? null
           : DateTime.parse(json['updated_at'] as String)
-      ..starsCount = json['stars_count'] as int?
-      ..forksCount = json['forks_count'] as int?
+      ..starsCount = (json['stars_count'] as num?)?.toInt()
+      ..forksCount = (json['forks_count'] as num?)?.toInt()
       ..website = json['website'] as String?
-      ..watchersCount = json['watchers_count'] as int?;
+      ..watchersCount = (json['watchers_count'] as num?)?.toInt();
 
 Map<String, dynamic> _$GogsRepositoryToJson(GogsRepository instance) =>
     <String, dynamic>{
@@ -61,7 +61,7 @@ Map<String, dynamic> _$GogsRepositoryToJson(GogsRepository instance) =>
     };
 
 GogsOrg _$GogsOrgFromJson(Map<String, dynamic> json) => GogsOrg()
-  ..id = json['id'] as int?
+  ..id = (json['id'] as num?)?.toInt()
   ..username = json['username'] as String?
   ..fullName = json['full_name'] as String?
   ..avatarUrl = json['avatar_url'] as String?
@@ -84,7 +84,7 @@ GogsTree _$GogsTreeFromJson(Map<String, dynamic> json) => GogsTree(
       name: json['name'] as String,
     )
       ..path = json['path'] as String?
-      ..size = json['size'] as int?
+      ..size = (json['size'] as num?)?.toInt()
       ..downloadUrl = json['download_url'] as String?;
 
 Map<String, dynamic> _$GogsTreeToJson(GogsTree instance) => <String, dynamic>{
@@ -100,7 +100,7 @@ GogsBlob _$GogsBlobFromJson(Map<String, dynamic> json) => GogsBlob(
       name: json['name'] as String,
     )
       ..path = json['path'] as String?
-      ..size = json['size'] as int?
+      ..size = (json['size'] as num?)?.toInt()
       ..downloadUrl = json['download_url'] as String?
       ..content = json['content'] as String?;
 
@@ -172,7 +172,7 @@ Map<String, dynamic> _$GogsCommitAuthorToJson(GogsCommitAuthor instance) =>
     };
 
 GogsIssue _$GogsIssueFromJson(Map<String, dynamic> json) => GogsIssue()
-  ..number = json['number'] as int?
+  ..number = (json['number'] as num?)?.toInt()
   ..state = json['state'] as String?
   ..title = json['title'] as String?
   ..body = json['body'] as String?
@@ -188,7 +188,7 @@ GogsIssue _$GogsIssueFromJson(Map<String, dynamic> json) => GogsIssue()
   ..updatedAt = json['updated_at'] == null
       ? null
       : DateTime.parse(json['updated_at'] as String)
-  ..comments = json['comments'] as int?;
+  ..comments = (json['comments'] as num?)?.toInt();
 
 Map<String, dynamic> _$GogsIssueToJson(GogsIssue instance) => <String, dynamic>{
       'number': instance.number,

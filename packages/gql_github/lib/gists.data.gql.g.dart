@@ -157,7 +157,7 @@ class _$GGistsData_user_gistsSerializer
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList,
-                const [const FullType(GGistsData_user_gists_nodes)])));
+                const [const FullType.nullable(GGistsData_user_gists_nodes)])));
     }
     return result;
   }
@@ -187,7 +187,7 @@ class _$GGistsData_user_gistsSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GGistsData_user_gists_nodes)
+                const FullType.nullable(GGistsData_user_gists_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -300,8 +300,9 @@ class _$GGistsData_user_gists_nodesSerializer
       result
         ..add('files')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GGistsData_user_gists_nodes_files)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GGistsData_user_gists_nodes_files)
+            ])));
     }
     value = object.owner;
     if (value != null) {
@@ -340,7 +341,7 @@ class _$GGistsData_user_gists_nodesSerializer
         case 'files':
           result.files.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GGistsData_user_gists_nodes_files)
+                const FullType.nullable(GGistsData_user_gists_nodes_files)
               ]))! as BuiltList<Object?>);
           break;
         case 'updatedAt':
@@ -583,7 +584,11 @@ class _$GGistsData extends GGistsData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), user.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, user.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -693,7 +698,11 @@ class _$GGistsData_user extends GGistsData_user {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), gists.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, gists.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -776,7 +785,7 @@ class _$GGistsData_user_gists extends GGistsData_user_gists {
   @override
   final GGistsData_user_gists_pageInfo pageInfo;
   @override
-  final BuiltList<GGistsData_user_gists_nodes>? nodes;
+  final BuiltList<GGistsData_user_gists_nodes?>? nodes;
 
   factory _$GGistsData_user_gists(
           [void Function(GGistsData_user_gistsBuilder)? updates]) =>
@@ -811,8 +820,12 @@ class _$GGistsData_user_gists extends GGistsData_user_gists {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), pageInfo.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, pageInfo.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -839,10 +852,10 @@ class GGistsData_user_gistsBuilder
   set pageInfo(GGistsData_user_gists_pageInfoBuilder? pageInfo) =>
       _$this._pageInfo = pageInfo;
 
-  ListBuilder<GGistsData_user_gists_nodes>? _nodes;
-  ListBuilder<GGistsData_user_gists_nodes> get nodes =>
-      _$this._nodes ??= new ListBuilder<GGistsData_user_gists_nodes>();
-  set nodes(ListBuilder<GGistsData_user_gists_nodes>? nodes) =>
+  ListBuilder<GGistsData_user_gists_nodes?>? _nodes;
+  ListBuilder<GGistsData_user_gists_nodes?> get nodes =>
+      _$this._nodes ??= new ListBuilder<GGistsData_user_gists_nodes?>();
+  set nodes(ListBuilder<GGistsData_user_gists_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GGistsData_user_gistsBuilder() {
@@ -942,8 +955,12 @@ class _$GGistsData_user_gists_pageInfo extends GGistsData_user_gists_pageInfo {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), hasNextPage.hashCode),
-        endCursor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, hasNextPage.hashCode);
+    _$hash = $jc(_$hash, endCursor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -1024,7 +1041,7 @@ class _$GGistsData_user_gists_nodes extends GGistsData_user_gists_nodes {
   @override
   final String? description;
   @override
-  final BuiltList<GGistsData_user_gists_nodes_files>? files;
+  final BuiltList<GGistsData_user_gists_nodes_files?>? files;
   @override
   final DateTime updatedAt;
   @override
@@ -1079,16 +1096,16 @@ class _$GGistsData_user_gists_nodes extends GGistsData_user_gists_nodes {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc($jc($jc(0, G__typename.hashCode), name.hashCode),
-                        description.hashCode),
-                    files.hashCode),
-                updatedAt.hashCode),
-            id.hashCode),
-        owner.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, files.hashCode);
+    _$hash = $jc(_$hash, updatedAt.hashCode);
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -1123,10 +1140,10 @@ class GGistsData_user_gists_nodesBuilder
   String? get description => _$this._description;
   set description(String? description) => _$this._description = description;
 
-  ListBuilder<GGistsData_user_gists_nodes_files>? _files;
-  ListBuilder<GGistsData_user_gists_nodes_files> get files =>
-      _$this._files ??= new ListBuilder<GGistsData_user_gists_nodes_files>();
-  set files(ListBuilder<GGistsData_user_gists_nodes_files>? files) =>
+  ListBuilder<GGistsData_user_gists_nodes_files?>? _files;
+  ListBuilder<GGistsData_user_gists_nodes_files?> get files =>
+      _$this._files ??= new ListBuilder<GGistsData_user_gists_nodes_files?>();
+  set files(ListBuilder<GGistsData_user_gists_nodes_files?>? files) =>
       _$this._files = files;
 
   DateTime? _updatedAt;
@@ -1255,10 +1272,13 @@ class _$GGistsData_user_gists_nodes_files
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), name.hashCode),
-            language.hashCode),
-        text.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, language.hashCode);
+    _$hash = $jc(_$hash, text.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -1396,7 +1416,11 @@ class _$GGistsData_user_gists_nodes_files_language
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -1505,7 +1529,11 @@ class _$GGistsData_user_gists_nodes_owner
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -1572,4 +1600,4 @@ class GGistsData_user_gists_nodes_ownerBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

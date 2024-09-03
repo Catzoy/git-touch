@@ -11,17 +11,19 @@ part 'repo.var.gql.g.dart';
 abstract class GRepoVars implements Built<GRepoVars, GRepoVarsBuilder> {
   GRepoVars._();
 
-  factory GRepoVars([Function(GRepoVarsBuilder b) updates]) = _$GRepoVars;
+  factory GRepoVars([void Function(GRepoVarsBuilder b) updates]) = _$GRepoVars;
 
   String get owner;
   String get name;
   bool get branchSpecified;
   String get branch;
   static Serializer<GRepoVars> get serializer => _$gRepoVarsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRepoVars.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRepoVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRepoVars.serializer,
@@ -33,15 +35,17 @@ abstract class GCommitPartsVars
     implements Built<GCommitPartsVars, GCommitPartsVarsBuilder> {
   GCommitPartsVars._();
 
-  factory GCommitPartsVars([Function(GCommitPartsVarsBuilder b) updates]) =
+  factory GCommitPartsVars([void Function(GCommitPartsVarsBuilder b) updates]) =
       _$GCommitPartsVars;
 
   static Serializer<GCommitPartsVars> get serializer =>
       _$gCommitPartsVarsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitPartsVars.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitPartsVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCommitPartsVars.serializer,
@@ -53,14 +57,16 @@ abstract class GRefPartsVars
     implements Built<GRefPartsVars, GRefPartsVarsBuilder> {
   GRefPartsVars._();
 
-  factory GRefPartsVars([Function(GRefPartsVarsBuilder b) updates]) =
+  factory GRefPartsVars([void Function(GRefPartsVarsBuilder b) updates]) =
       _$GRefPartsVars;
 
   static Serializer<GRefPartsVars> get serializer => _$gRefPartsVarsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRefPartsVars.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRefPartsVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRefPartsVars.serializer,

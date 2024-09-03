@@ -3,3 +3,13 @@ name: git_touch
 packages:
   - .
   - packages/**
+
+scripts:
+  generate:
+    description: 'Generate files from build_runner in package(s)'
+    run: flutter pub run build_runner build --delete-conflicting-outputs
+    exec:
+      concurrency: 1
+      orderDependents: true
+    packageFilters:
+      dependsOn: build_runner

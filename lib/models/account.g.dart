@@ -6,18 +6,19 @@ part of 'account.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Account _$$_AccountFromJson(Map<String, dynamic> json) => _$_Account(
+_$AccountImpl _$$AccountImplFromJson(Map<String, dynamic> json) =>
+    _$AccountImpl(
       platform: json['platform'] as String,
       domain: json['domain'] as String,
       token: json['token'] as String,
       login: json['login'] as String,
       avatarUrl: json['avatarUrl'] as String,
-      gitlabId: json['gitlabId'] as int?,
+      gitlabId: (json['gitlabId'] as num?)?.toInt(),
       appPassword: json['appPassword'] as String?,
       accountId: json['accountId'] as String?,
     );
 
-Map<String, dynamic> _$$_AccountToJson(_$_Account instance) {
+Map<String, dynamic> _$$AccountImplToJson(_$AccountImpl instance) {
   final val = <String, dynamic>{
     'platform': instance.platform,
     'domain': instance.domain,

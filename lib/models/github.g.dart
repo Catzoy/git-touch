@@ -137,11 +137,11 @@ GithubEventIssue _$GithubEventIssueFromJson(Map<String, dynamic> json) =>
       ..user = json['user'] == null
           ? null
           : GithubEventUser.fromJson(json['user'] as Map<String, dynamic>)
-      ..number = json['number'] as int?
+      ..number = (json['number'] as num?)?.toInt()
       ..body = json['body'] as String?
       ..pullRequest = json['pull_request']
       ..state = json['state'] as String?
-      ..comments = json['comments'] as int?
+      ..comments = (json['comments'] as num?)?.toInt()
       ..merged = json['merged'] as bool?
       ..createdAt = json['created_at'] == null
           ? null
@@ -255,7 +255,7 @@ GithubTreeItem _$GithubTreeItemFromJson(Map<String, dynamic> json) =>
     GithubTreeItem()
       ..name = json['name'] as String?
       ..path = json['path'] as String?
-      ..size = json['size'] as int?
+      ..size = (json['size'] as num?)?.toInt()
       ..type = json['type'] as String?
       ..downloadUrl = json['download_url'] as String?
       ..content = json['content'] as String?;
@@ -349,7 +349,7 @@ GithubInstallationRepositoriesItem _$GithubInstallationRepositoriesItemFromJson(
               GithubNotificationItemRepo.fromJson(e as Map<String, dynamic>))
           .toList()
       ..repositoriesSelection = json['repositories_selection'] as String?
-      ..id = json['id'] as int?;
+      ..id = (json['id'] as num?)?.toInt();
 
 Map<String, dynamic> _$GithubInstallationRepositoriesItemToJson(
         GithubInstallationRepositoriesItem instance) =>
@@ -364,7 +364,7 @@ GithubCheckrunItem _$GithubCheckrunItemFromJson(Map<String, dynamic> json) =>
     GithubCheckrunItem()
       ..status = json['status'] as String?
       ..name = json['name'] as String?
-      ..id = json['id'] as int?;
+      ..id = (json['id'] as num?)?.toInt();
 
 Map<String, dynamic> _$GithubCheckrunItemToJson(GithubCheckrunItem instance) =>
     <String, dynamic>{
@@ -389,7 +389,7 @@ Map<String, dynamic> _$GithubCheckSuiteItemToJson(
 GithubContentReferenceItem _$GithubContentReferenceItemFromJson(
         Map<String, dynamic> json) =>
     GithubContentReferenceItem()
-      ..id = json['id'] as int?
+      ..id = (json['id'] as num?)?.toInt()
       ..reference = json['reference'] as String?;
 
 Map<String, dynamic> _$GithubContentReferenceItemToJson(
@@ -402,11 +402,11 @@ Map<String, dynamic> _$GithubContentReferenceItemToJson(
 GithubContributorItem _$GithubContributorItemFromJson(
         Map<String, dynamic> json) =>
     GithubContributorItem()
-      ..id = json['id'] as int?
+      ..id = (json['id'] as num?)?.toInt()
       ..login = json['login'] as String?
       ..avatarUrl = json['avatar_url'] as String?
       ..htmlUrl = json['html_url'] as String?
-      ..contributions = json['contributions'] as int?;
+      ..contributions = (json['contributions'] as num?)?.toInt();
 
 Map<String, dynamic> _$GithubContributorItemToJson(
         GithubContributorItem instance) =>
@@ -421,7 +421,7 @@ Map<String, dynamic> _$GithubContributorItemToJson(
 GithubUserOrganizationItem _$GithubUserOrganizationItemFromJson(
         Map<String, dynamic> json) =>
     GithubUserOrganizationItem()
-      ..id = json['id'] as int?
+      ..id = (json['id'] as num?)?.toInt()
       ..login = json['login'] as String?
       ..avatarUrl = json['avatar_url'] as String?
       ..description = json['description'] as String?
@@ -439,7 +439,7 @@ Map<String, dynamic> _$GithubUserOrganizationItemToJson(
 
 GistFiles _$GistFilesFromJson(Map<String, dynamic> json) => GistFiles(
       filename: json['filename'] as String?,
-      size: json['size'] as int?,
+      size: (json['size'] as num?)?.toInt(),
       rawUrl: json['raw_url'] as String?,
       type: json['type'] as String?,
       language: json['language'] as String?,
@@ -490,9 +490,9 @@ GithubFilesItem _$GithubFilesItemFromJson(Map<String, dynamic> json) =>
     GithubFilesItem()
       ..filename = json['filename'] as String?
       ..status = json['status'] as String?
-      ..additions = json['additions'] as int?
-      ..deletions = json['deletions'] as int?
-      ..changes = json['changes'] as int?
+      ..additions = (json['additions'] as num?)?.toInt()
+      ..deletions = (json['deletions'] as num?)?.toInt()
+      ..changes = (json['changes'] as num?)?.toInt()
       ..patch = json['patch'] as String?;
 
 Map<String, dynamic> _$GithubFilesItemToJson(GithubFilesItem instance) =>
@@ -512,8 +512,8 @@ GithubComparisonItem _$GithubComparisonItemFromJson(
           ?.map((e) => GithubFilesItem.fromJson(e as Map<String, dynamic>))
           .toList()
       ..status = json['status'] as String?
-      ..aheadBy = json['ahead_by'] as int?
-      ..behindBy = json['behind_by'] as int?;
+      ..aheadBy = (json['ahead_by'] as num?)?.toInt()
+      ..behindBy = (json['behind_by'] as num?)?.toInt();
 
 Map<String, dynamic> _$GithubComparisonItemToJson(
         GithubComparisonItem instance) =>

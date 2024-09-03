@@ -12,18 +12,22 @@ part 'repos.data.gql.g.dart';
 abstract class GReposData implements Built<GReposData, GReposDataBuilder> {
   GReposData._();
 
-  factory GReposData([Function(GReposDataBuilder b) updates]) = _$GReposData;
+  factory GReposData([void Function(GReposDataBuilder b) updates]) =
+      _$GReposData;
 
   static void _initializeBuilder(GReposDataBuilder b) =>
       b..G__typename = 'Query';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GReposData_repositoryOwner? get repositoryOwner;
   static Serializer<GReposData> get serializer => _$gReposDataSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GReposData.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GReposData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GReposData.serializer,
@@ -37,20 +41,23 @@ abstract class GReposData_repositoryOwner
   GReposData_repositoryOwner._();
 
   factory GReposData_repositoryOwner(
-          [Function(GReposData_repositoryOwnerBuilder b) updates]) =
+          [void Function(GReposData_repositoryOwnerBuilder b) updates]) =
       _$GReposData_repositoryOwner;
 
   static void _initializeBuilder(GReposData_repositoryOwnerBuilder b) =>
       b..G__typename = 'RepositoryOwner';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GReposData_repositoryOwner_repositories get repositories;
   static Serializer<GReposData_repositoryOwner> get serializer =>
       _$gReposDataRepositoryOwnerSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GReposData_repositoryOwner.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GReposData_repositoryOwner? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GReposData_repositoryOwner.serializer,
@@ -65,22 +72,25 @@ abstract class GReposData_repositoryOwner_repositories
   GReposData_repositoryOwner_repositories._();
 
   factory GReposData_repositoryOwner_repositories(
-      [Function(GReposData_repositoryOwner_repositoriesBuilder b)
+      [void Function(GReposData_repositoryOwner_repositoriesBuilder b)
           updates]) = _$GReposData_repositoryOwner_repositories;
 
   static void _initializeBuilder(
           GReposData_repositoryOwner_repositoriesBuilder b) =>
       b..G__typename = 'RepositoryConnection';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GReposData_repositoryOwner_repositories_pageInfo get pageInfo;
-  BuiltList<GReposData_repositoryOwner_repositories_nodes>? get nodes;
+  BuiltList<GReposData_repositoryOwner_repositories_nodes?>? get nodes;
   static Serializer<GReposData_repositoryOwner_repositories> get serializer =>
       _$gReposDataRepositoryOwnerRepositoriesSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GReposData_repositoryOwner_repositories.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GReposData_repositoryOwner_repositories? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -96,12 +106,13 @@ abstract class GReposData_repositoryOwner_repositories_pageInfo
   GReposData_repositoryOwner_repositories_pageInfo._();
 
   factory GReposData_repositoryOwner_repositories_pageInfo(
-      [Function(GReposData_repositoryOwner_repositories_pageInfoBuilder b)
+      [void Function(GReposData_repositoryOwner_repositories_pageInfoBuilder b)
           updates]) = _$GReposData_repositoryOwner_repositories_pageInfo;
 
   static void _initializeBuilder(
           GReposData_repositoryOwner_repositories_pageInfoBuilder b) =>
       b..G__typename = 'PageInfo';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   bool get hasNextPage;
@@ -109,10 +120,12 @@ abstract class GReposData_repositoryOwner_repositories_pageInfo
   static Serializer<GReposData_repositoryOwner_repositories_pageInfo>
       get serializer =>
           _$gReposDataRepositoryOwnerRepositoriesPageInfoSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GReposData_repositoryOwner_repositories_pageInfo.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GReposData_repositoryOwner_repositories_pageInfo? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -129,12 +142,13 @@ abstract class GReposData_repositoryOwner_repositories_nodes
   GReposData_repositoryOwner_repositories_nodes._();
 
   factory GReposData_repositoryOwner_repositories_nodes(
-      [Function(GReposData_repositoryOwner_repositories_nodesBuilder b)
+      [void Function(GReposData_repositoryOwner_repositories_nodesBuilder b)
           updates]) = _$GReposData_repositoryOwner_repositories_nodes;
 
   static void _initializeBuilder(
           GReposData_repositoryOwner_repositories_nodesBuilder b) =>
       b..G__typename = 'Repository';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -159,11 +173,13 @@ abstract class GReposData_repositoryOwner_repositories_nodes
   DateTime get updatedAt;
   static Serializer<GReposData_repositoryOwner_repositories_nodes>
       get serializer => _$gReposDataRepositoryOwnerRepositoriesNodesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GReposData_repositoryOwner_repositories_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GReposData_repositoryOwner_repositories_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -180,12 +196,14 @@ abstract class GReposData_repositoryOwner_repositories_nodes_owner
   GReposData_repositoryOwner_repositories_nodes_owner._();
 
   factory GReposData_repositoryOwner_repositories_nodes_owner(
-      [Function(GReposData_repositoryOwner_repositories_nodes_ownerBuilder b)
+      [void Function(
+              GReposData_repositoryOwner_repositories_nodes_ownerBuilder b)
           updates]) = _$GReposData_repositoryOwner_repositories_nodes_owner;
 
   static void _initializeBuilder(
           GReposData_repositoryOwner_repositories_nodes_ownerBuilder b) =>
       b..G__typename = 'RepositoryOwner';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -196,11 +214,13 @@ abstract class GReposData_repositoryOwner_repositories_nodes_owner
   static Serializer<GReposData_repositoryOwner_repositories_nodes_owner>
       get serializer =>
           _$gReposDataRepositoryOwnerRepositoriesNodesOwnerSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GReposData_repositoryOwner_repositories_nodes_owner.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GReposData_repositoryOwner_repositories_nodes_owner? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -217,13 +237,14 @@ abstract class GReposData_repositoryOwner_repositories_nodes_stargazers
   GReposData_repositoryOwner_repositories_nodes_stargazers._();
 
   factory GReposData_repositoryOwner_repositories_nodes_stargazers(
-      [Function(
+      [void Function(
               GReposData_repositoryOwner_repositories_nodes_stargazersBuilder b)
           updates]) = _$GReposData_repositoryOwner_repositories_nodes_stargazers;
 
   static void _initializeBuilder(
           GReposData_repositoryOwner_repositories_nodes_stargazersBuilder b) =>
       b..G__typename = 'StargazerConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -232,11 +253,13 @@ abstract class GReposData_repositoryOwner_repositories_nodes_stargazers
   static Serializer<GReposData_repositoryOwner_repositories_nodes_stargazers>
       get serializer =>
           _$gReposDataRepositoryOwnerRepositoriesNodesStargazersSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GReposData_repositoryOwner_repositories_nodes_stargazers.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GReposData_repositoryOwner_repositories_nodes_stargazers? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -253,12 +276,14 @@ abstract class GReposData_repositoryOwner_repositories_nodes_forks
   GReposData_repositoryOwner_repositories_nodes_forks._();
 
   factory GReposData_repositoryOwner_repositories_nodes_forks(
-      [Function(GReposData_repositoryOwner_repositories_nodes_forksBuilder b)
+      [void Function(
+              GReposData_repositoryOwner_repositories_nodes_forksBuilder b)
           updates]) = _$GReposData_repositoryOwner_repositories_nodes_forks;
 
   static void _initializeBuilder(
           GReposData_repositoryOwner_repositories_nodes_forksBuilder b) =>
       b..G__typename = 'RepositoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -267,11 +292,13 @@ abstract class GReposData_repositoryOwner_repositories_nodes_forks
   static Serializer<GReposData_repositoryOwner_repositories_nodes_forks>
       get serializer =>
           _$gReposDataRepositoryOwnerRepositoriesNodesForksSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GReposData_repositoryOwner_repositories_nodes_forks.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GReposData_repositoryOwner_repositories_nodes_forks? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -288,7 +315,7 @@ abstract class GReposData_repositoryOwner_repositories_nodes_primaryLanguage
   GReposData_repositoryOwner_repositories_nodes_primaryLanguage._();
 
   factory GReposData_repositoryOwner_repositories_nodes_primaryLanguage(
-          [Function(
+          [void Function(
                   GReposData_repositoryOwner_repositories_nodes_primaryLanguageBuilder
                       b)
               updates]) =
@@ -298,6 +325,7 @@ abstract class GReposData_repositoryOwner_repositories_nodes_primaryLanguage
           GReposData_repositoryOwner_repositories_nodes_primaryLanguageBuilder
               b) =>
       b..G__typename = 'Language';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -309,12 +337,14 @@ abstract class GReposData_repositoryOwner_repositories_nodes_primaryLanguage
           GReposData_repositoryOwner_repositories_nodes_primaryLanguage>
       get serializer =>
           _$gReposDataRepositoryOwnerRepositoriesNodesPrimaryLanguageSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GReposData_repositoryOwner_repositories_nodes_primaryLanguage
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GReposData_repositoryOwner_repositories_nodes_primaryLanguage?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GReposData_repositoryOwner_repositories_nodes_primaryLanguage
@@ -326,18 +356,22 @@ abstract class GReposData_repositoryOwner_repositories_nodes_primaryLanguage
 abstract class GStarsData implements Built<GStarsData, GStarsDataBuilder> {
   GStarsData._();
 
-  factory GStarsData([Function(GStarsDataBuilder b) updates]) = _$GStarsData;
+  factory GStarsData([void Function(GStarsDataBuilder b) updates]) =
+      _$GStarsData;
 
   static void _initializeBuilder(GStarsDataBuilder b) =>
       b..G__typename = 'Query';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GStarsData_user? get user;
   static Serializer<GStarsData> get serializer => _$gStarsDataSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GStarsData.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GStarsData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GStarsData.serializer,
@@ -349,20 +383,23 @@ abstract class GStarsData_user
     implements Built<GStarsData_user, GStarsData_userBuilder> {
   GStarsData_user._();
 
-  factory GStarsData_user([Function(GStarsData_userBuilder b) updates]) =
+  factory GStarsData_user([void Function(GStarsData_userBuilder b) updates]) =
       _$GStarsData_user;
 
   static void _initializeBuilder(GStarsData_userBuilder b) =>
       b..G__typename = 'User';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GStarsData_user_starredRepositories get starredRepositories;
   static Serializer<GStarsData_user> get serializer =>
       _$gStarsDataUserSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GStarsData_user.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GStarsData_user? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GStarsData_user.serializer,
@@ -377,22 +414,25 @@ abstract class GStarsData_user_starredRepositories
   GStarsData_user_starredRepositories._();
 
   factory GStarsData_user_starredRepositories(
-          [Function(GStarsData_user_starredRepositoriesBuilder b) updates]) =
-      _$GStarsData_user_starredRepositories;
+      [void Function(GStarsData_user_starredRepositoriesBuilder b)
+          updates]) = _$GStarsData_user_starredRepositories;
 
   static void _initializeBuilder(
           GStarsData_user_starredRepositoriesBuilder b) =>
       b..G__typename = 'StarredRepositoryConnection';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GStarsData_user_starredRepositories_pageInfo get pageInfo;
-  BuiltList<GStarsData_user_starredRepositories_nodes>? get nodes;
+  BuiltList<GStarsData_user_starredRepositories_nodes?>? get nodes;
   static Serializer<GStarsData_user_starredRepositories> get serializer =>
       _$gStarsDataUserStarredRepositoriesSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GStarsData_user_starredRepositories.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GStarsData_user_starredRepositories? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -408,22 +448,25 @@ abstract class GStarsData_user_starredRepositories_pageInfo
   GStarsData_user_starredRepositories_pageInfo._();
 
   factory GStarsData_user_starredRepositories_pageInfo(
-      [Function(GStarsData_user_starredRepositories_pageInfoBuilder b)
+      [void Function(GStarsData_user_starredRepositories_pageInfoBuilder b)
           updates]) = _$GStarsData_user_starredRepositories_pageInfo;
 
   static void _initializeBuilder(
           GStarsData_user_starredRepositories_pageInfoBuilder b) =>
       b..G__typename = 'PageInfo';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   bool get hasNextPage;
   String? get endCursor;
   static Serializer<GStarsData_user_starredRepositories_pageInfo>
       get serializer => _$gStarsDataUserStarredRepositoriesPageInfoSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GStarsData_user_starredRepositories_pageInfo.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GStarsData_user_starredRepositories_pageInfo? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -440,12 +483,13 @@ abstract class GStarsData_user_starredRepositories_nodes
   GStarsData_user_starredRepositories_nodes._();
 
   factory GStarsData_user_starredRepositories_nodes(
-      [Function(GStarsData_user_starredRepositories_nodesBuilder b)
+      [void Function(GStarsData_user_starredRepositories_nodesBuilder b)
           updates]) = _$GStarsData_user_starredRepositories_nodes;
 
   static void _initializeBuilder(
           GStarsData_user_starredRepositories_nodesBuilder b) =>
       b..G__typename = 'Repository';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -470,11 +514,13 @@ abstract class GStarsData_user_starredRepositories_nodes
   DateTime get updatedAt;
   static Serializer<GStarsData_user_starredRepositories_nodes> get serializer =>
       _$gStarsDataUserStarredRepositoriesNodesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GStarsData_user_starredRepositories_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GStarsData_user_starredRepositories_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -491,12 +537,13 @@ abstract class GStarsData_user_starredRepositories_nodes_owner
   GStarsData_user_starredRepositories_nodes_owner._();
 
   factory GStarsData_user_starredRepositories_nodes_owner(
-      [Function(GStarsData_user_starredRepositories_nodes_ownerBuilder b)
+      [void Function(GStarsData_user_starredRepositories_nodes_ownerBuilder b)
           updates]) = _$GStarsData_user_starredRepositories_nodes_owner;
 
   static void _initializeBuilder(
           GStarsData_user_starredRepositories_nodes_ownerBuilder b) =>
       b..G__typename = 'RepositoryOwner';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -506,11 +553,13 @@ abstract class GStarsData_user_starredRepositories_nodes_owner
   String get avatarUrl;
   static Serializer<GStarsData_user_starredRepositories_nodes_owner>
       get serializer => _$gStarsDataUserStarredRepositoriesNodesOwnerSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GStarsData_user_starredRepositories_nodes_owner.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GStarsData_user_starredRepositories_nodes_owner? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -527,12 +576,14 @@ abstract class GStarsData_user_starredRepositories_nodes_stargazers
   GStarsData_user_starredRepositories_nodes_stargazers._();
 
   factory GStarsData_user_starredRepositories_nodes_stargazers(
-      [Function(GStarsData_user_starredRepositories_nodes_stargazersBuilder b)
+      [void Function(
+              GStarsData_user_starredRepositories_nodes_stargazersBuilder b)
           updates]) = _$GStarsData_user_starredRepositories_nodes_stargazers;
 
   static void _initializeBuilder(
           GStarsData_user_starredRepositories_nodes_stargazersBuilder b) =>
       b..G__typename = 'StargazerConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -541,11 +592,13 @@ abstract class GStarsData_user_starredRepositories_nodes_stargazers
   static Serializer<GStarsData_user_starredRepositories_nodes_stargazers>
       get serializer =>
           _$gStarsDataUserStarredRepositoriesNodesStargazersSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GStarsData_user_starredRepositories_nodes_stargazers.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GStarsData_user_starredRepositories_nodes_stargazers? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -562,12 +615,13 @@ abstract class GStarsData_user_starredRepositories_nodes_forks
   GStarsData_user_starredRepositories_nodes_forks._();
 
   factory GStarsData_user_starredRepositories_nodes_forks(
-      [Function(GStarsData_user_starredRepositories_nodes_forksBuilder b)
+      [void Function(GStarsData_user_starredRepositories_nodes_forksBuilder b)
           updates]) = _$GStarsData_user_starredRepositories_nodes_forks;
 
   static void _initializeBuilder(
           GStarsData_user_starredRepositories_nodes_forksBuilder b) =>
       b..G__typename = 'RepositoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -575,11 +629,13 @@ abstract class GStarsData_user_starredRepositories_nodes_forks
   int get totalCount;
   static Serializer<GStarsData_user_starredRepositories_nodes_forks>
       get serializer => _$gStarsDataUserStarredRepositoriesNodesForksSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GStarsData_user_starredRepositories_nodes_forks.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GStarsData_user_starredRepositories_nodes_forks? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -596,7 +652,7 @@ abstract class GStarsData_user_starredRepositories_nodes_primaryLanguage
   GStarsData_user_starredRepositories_nodes_primaryLanguage._();
 
   factory GStarsData_user_starredRepositories_nodes_primaryLanguage(
-      [Function(
+      [void Function(
               GStarsData_user_starredRepositories_nodes_primaryLanguageBuilder
                   b)
           updates]) = _$GStarsData_user_starredRepositories_nodes_primaryLanguage;
@@ -604,6 +660,7 @@ abstract class GStarsData_user_starredRepositories_nodes_primaryLanguage
   static void _initializeBuilder(
           GStarsData_user_starredRepositories_nodes_primaryLanguageBuilder b) =>
       b..G__typename = 'Language';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -614,11 +671,13 @@ abstract class GStarsData_user_starredRepositories_nodes_primaryLanguage
   static Serializer<GStarsData_user_starredRepositories_nodes_primaryLanguage>
       get serializer =>
           _$gStarsDataUserStarredRepositoriesNodesPrimaryLanguageSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GStarsData_user_starredRepositories_nodes_primaryLanguage.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GStarsData_user_starredRepositories_nodes_primaryLanguage? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -671,11 +730,12 @@ abstract class GRepoPartsData
     implements Built<GRepoPartsData, GRepoPartsDataBuilder>, GRepoParts {
   GRepoPartsData._();
 
-  factory GRepoPartsData([Function(GRepoPartsDataBuilder b) updates]) =
+  factory GRepoPartsData([void Function(GRepoPartsDataBuilder b) updates]) =
       _$GRepoPartsData;
 
   static void _initializeBuilder(GRepoPartsDataBuilder b) =>
       b..G__typename = 'Repository';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -699,11 +759,13 @@ abstract class GRepoPartsData
   DateTime get updatedAt;
   static Serializer<GRepoPartsData> get serializer =>
       _$gRepoPartsDataSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRepoPartsData.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRepoPartsData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRepoPartsData.serializer,
@@ -718,11 +780,12 @@ abstract class GRepoPartsData_owner
   GRepoPartsData_owner._();
 
   factory GRepoPartsData_owner(
-          [Function(GRepoPartsData_ownerBuilder b) updates]) =
+          [void Function(GRepoPartsData_ownerBuilder b) updates]) =
       _$GRepoPartsData_owner;
 
   static void _initializeBuilder(GRepoPartsData_ownerBuilder b) =>
       b..G__typename = 'RepositoryOwner';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -732,11 +795,13 @@ abstract class GRepoPartsData_owner
   String get avatarUrl;
   static Serializer<GRepoPartsData_owner> get serializer =>
       _$gRepoPartsDataOwnerSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRepoPartsData_owner.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRepoPartsData_owner? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRepoPartsData_owner.serializer,
@@ -751,11 +816,12 @@ abstract class GRepoPartsData_stargazers
   GRepoPartsData_stargazers._();
 
   factory GRepoPartsData_stargazers(
-          [Function(GRepoPartsData_stargazersBuilder b) updates]) =
+          [void Function(GRepoPartsData_stargazersBuilder b) updates]) =
       _$GRepoPartsData_stargazers;
 
   static void _initializeBuilder(GRepoPartsData_stargazersBuilder b) =>
       b..G__typename = 'StargazerConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -763,11 +829,13 @@ abstract class GRepoPartsData_stargazers
   int get totalCount;
   static Serializer<GRepoPartsData_stargazers> get serializer =>
       _$gRepoPartsDataStargazersSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRepoPartsData_stargazers.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRepoPartsData_stargazers? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRepoPartsData_stargazers.serializer,
@@ -782,11 +850,12 @@ abstract class GRepoPartsData_forks
   GRepoPartsData_forks._();
 
   factory GRepoPartsData_forks(
-          [Function(GRepoPartsData_forksBuilder b) updates]) =
+          [void Function(GRepoPartsData_forksBuilder b) updates]) =
       _$GRepoPartsData_forks;
 
   static void _initializeBuilder(GRepoPartsData_forksBuilder b) =>
       b..G__typename = 'RepositoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -794,11 +863,13 @@ abstract class GRepoPartsData_forks
   int get totalCount;
   static Serializer<GRepoPartsData_forks> get serializer =>
       _$gRepoPartsDataForksSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRepoPartsData_forks.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRepoPartsData_forks? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRepoPartsData_forks.serializer,
@@ -814,11 +885,12 @@ abstract class GRepoPartsData_primaryLanguage
   GRepoPartsData_primaryLanguage._();
 
   factory GRepoPartsData_primaryLanguage(
-          [Function(GRepoPartsData_primaryLanguageBuilder b) updates]) =
+          [void Function(GRepoPartsData_primaryLanguageBuilder b) updates]) =
       _$GRepoPartsData_primaryLanguage;
 
   static void _initializeBuilder(GRepoPartsData_primaryLanguageBuilder b) =>
       b..G__typename = 'Language';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -828,11 +900,13 @@ abstract class GRepoPartsData_primaryLanguage
   String get name;
   static Serializer<GRepoPartsData_primaryLanguage> get serializer =>
       _$gRepoPartsDataPrimaryLanguageSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRepoPartsData_primaryLanguage.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRepoPartsData_primaryLanguage? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRepoPartsData_primaryLanguage.serializer,

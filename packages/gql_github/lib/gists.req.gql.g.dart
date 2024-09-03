@@ -144,6 +144,8 @@ class _$GGistsReq extends GGistsReq {
   final _i1.FetchPolicy? fetchPolicy;
   @override
   final bool executeOnListen;
+  @override
+  final _i4.Context? context;
 
   factory _$GGistsReq([void Function(GGistsReqBuilder)? updates]) =>
       (new GGistsReqBuilder()..update(updates))._build();
@@ -157,7 +159,8 @@ class _$GGistsReq extends GGistsReq {
       this.updateCacheHandlerKey,
       this.updateCacheHandlerContext,
       this.fetchPolicy,
-      required this.executeOnListen})
+      required this.executeOnListen,
+      this.context})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(vars, r'GGistsReq', 'vars');
     BuiltValueNullFieldError.checkNotNull(operation, r'GGistsReq', 'operation');
@@ -185,25 +188,25 @@ class _$GGistsReq extends GGistsReq {
         updateCacheHandlerKey == other.updateCacheHandlerKey &&
         updateCacheHandlerContext == other.updateCacheHandlerContext &&
         fetchPolicy == other.fetchPolicy &&
-        executeOnListen == other.executeOnListen;
+        executeOnListen == other.executeOnListen &&
+        context == other.context;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc($jc($jc(0, vars.hashCode), operation.hashCode),
-                                requestId.hashCode),
-                            updateResult.hashCode),
-                        optimisticResponse.hashCode),
-                    updateCacheHandlerKey.hashCode),
-                updateCacheHandlerContext.hashCode),
-            fetchPolicy.hashCode),
-        executeOnListen.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, vars.hashCode);
+    _$hash = $jc(_$hash, operation.hashCode);
+    _$hash = $jc(_$hash, requestId.hashCode);
+    _$hash = $jc(_$hash, updateResult.hashCode);
+    _$hash = $jc(_$hash, optimisticResponse.hashCode);
+    _$hash = $jc(_$hash, updateCacheHandlerKey.hashCode);
+    _$hash = $jc(_$hash, updateCacheHandlerContext.hashCode);
+    _$hash = $jc(_$hash, fetchPolicy.hashCode);
+    _$hash = $jc(_$hash, executeOnListen.hashCode);
+    _$hash = $jc(_$hash, context.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -217,7 +220,8 @@ class _$GGistsReq extends GGistsReq {
           ..add('updateCacheHandlerKey', updateCacheHandlerKey)
           ..add('updateCacheHandlerContext', updateCacheHandlerContext)
           ..add('fetchPolicy', fetchPolicy)
-          ..add('executeOnListen', executeOnListen))
+          ..add('executeOnListen', executeOnListen)
+          ..add('context', context))
         .toString();
   }
 }
@@ -274,6 +278,10 @@ class GGistsReqBuilder implements Builder<GGistsReq, GGistsReqBuilder> {
   set executeOnListen(bool? executeOnListen) =>
       _$this._executeOnListen = executeOnListen;
 
+  _i4.Context? _context;
+  _i4.Context? get context => _$this._context;
+  set context(_i4.Context? context) => _$this._context = context;
+
   GGistsReqBuilder() {
     GGistsReq._initializeBuilder(this);
   }
@@ -290,6 +298,7 @@ class GGistsReqBuilder implements Builder<GGistsReq, GGistsReqBuilder> {
       _updateCacheHandlerContext = $v.updateCacheHandlerContext;
       _fetchPolicy = $v.fetchPolicy;
       _executeOnListen = $v.executeOnListen;
+      _context = $v.context;
       _$v = null;
     }
     return this;
@@ -324,7 +333,8 @@ class GGistsReqBuilder implements Builder<GGistsReq, GGistsReqBuilder> {
               updateCacheHandlerContext: updateCacheHandlerContext,
               fetchPolicy: fetchPolicy,
               executeOnListen: BuiltValueNullFieldError.checkNotNull(
-                  executeOnListen, r'GGistsReq', 'executeOnListen'));
+                  executeOnListen, r'GGistsReq', 'executeOnListen'),
+              context: context);
     } catch (_) {
       late String _$failedField;
       try {
@@ -344,4 +354,4 @@ class GGistsReqBuilder implements Builder<GGistsReq, GGistsReqBuilder> {
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

@@ -1048,8 +1048,9 @@ class _$GViewerData_viewer_sponsoringSerializer
       result
         ..add('nodes')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GViewerData_viewer_sponsoring_nodes)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GViewerData_viewer_sponsoring_nodes)
+            ])));
     }
     return result;
   }
@@ -1077,7 +1078,7 @@ class _$GViewerData_viewer_sponsoringSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GViewerData_viewer_sponsoring_nodes)
+                const FullType.nullable(GViewerData_viewer_sponsoring_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -1271,8 +1272,9 @@ class _$GViewerData_viewer_sponsorsSerializer
       result
         ..add('nodes')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GViewerData_viewer_sponsors_nodes)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GViewerData_viewer_sponsors_nodes)
+            ])));
     }
     return result;
   }
@@ -1300,7 +1302,7 @@ class _$GViewerData_viewer_sponsorsSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GViewerData_viewer_sponsors_nodes)
+                const FullType.nullable(GViewerData_viewer_sponsors_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -1494,7 +1496,7 @@ class _$GViewerData_viewer_organizationsSerializer
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(GViewerData_viewer_organizations_nodes)
+              const FullType.nullable(GViewerData_viewer_organizations_nodes)
             ])));
     }
     return result;
@@ -1523,7 +1525,7 @@ class _$GViewerData_viewer_organizationsSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GViewerData_viewer_organizations_nodes)
+                const FullType.nullable(GViewerData_viewer_organizations_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -1615,7 +1617,7 @@ class _$GViewerData_viewer_repositoriesSerializer
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(GViewerData_viewer_repositories_nodes)
+              const FullType.nullable(GViewerData_viewer_repositories_nodes)
             ])));
     }
     return result;
@@ -1644,7 +1646,7 @@ class _$GViewerData_viewer_repositoriesSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GViewerData_viewer_repositories_nodes)
+                const FullType.nullable(GViewerData_viewer_repositories_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -2142,8 +2144,9 @@ class _$GViewerData_viewer_pinnedItemsSerializer
       result
         ..add('nodes')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GViewerData_viewer_pinnedItems_nodes)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GViewerData_viewer_pinnedItems_nodes)
+            ])));
     }
     return result;
   }
@@ -2167,7 +2170,7 @@ class _$GViewerData_viewer_pinnedItemsSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GViewerData_viewer_pinnedItems_nodes)
+                const FullType.nullable(GViewerData_viewer_pinnedItems_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -3270,8 +3273,9 @@ class _$GUserData_user_sponsoringSerializer
       result
         ..add('nodes')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GUserData_user_sponsoring_nodes)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GUserData_user_sponsoring_nodes)
+            ])));
     }
     return result;
   }
@@ -3299,7 +3303,7 @@ class _$GUserData_user_sponsoringSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GUserData_user_sponsoring_nodes)
+                const FullType.nullable(GUserData_user_sponsoring_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -3490,8 +3494,9 @@ class _$GUserData_user_sponsorsSerializer
       result
         ..add('nodes')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GUserData_user_sponsors_nodes)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GUserData_user_sponsors_nodes)
+            ])));
     }
     return result;
   }
@@ -3519,7 +3524,7 @@ class _$GUserData_user_sponsorsSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GUserData_user_sponsors_nodes)
+                const FullType.nullable(GUserData_user_sponsors_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -3710,8 +3715,9 @@ class _$GUserData_user_organizationsSerializer
       result
         ..add('nodes')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GUserData_user_organizations_nodes)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GUserData_user_organizations_nodes)
+            ])));
     }
     return result;
   }
@@ -3739,7 +3745,7 @@ class _$GUserData_user_organizationsSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GUserData_user_organizations_nodes)
+                const FullType.nullable(GUserData_user_organizations_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -3830,8 +3836,9 @@ class _$GUserData_user_repositoriesSerializer
       result
         ..add('nodes')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GUserData_user_repositories_nodes)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GUserData_user_repositories_nodes)
+            ])));
     }
     return result;
   }
@@ -3859,7 +3866,7 @@ class _$GUserData_user_repositoriesSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GUserData_user_repositories_nodes)
+                const FullType.nullable(GUserData_user_repositories_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -4353,8 +4360,9 @@ class _$GUserData_user_pinnedItemsSerializer
       result
         ..add('nodes')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GUserData_user_pinnedItems_nodes)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GUserData_user_pinnedItems_nodes)
+            ])));
     }
     return result;
   }
@@ -4378,7 +4386,7 @@ class _$GUserData_user_pinnedItemsSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GUserData_user_pinnedItems_nodes)
+                const FullType.nullable(GUserData_user_pinnedItems_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -5074,7 +5082,7 @@ class _$GUserData_organization_sponsoringSerializer
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(GUserData_organization_sponsoring_nodes)
+              const FullType.nullable(GUserData_organization_sponsoring_nodes)
             ])));
     }
     return result;
@@ -5103,7 +5111,7 @@ class _$GUserData_organization_sponsoringSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GUserData_organization_sponsoring_nodes)
+                const FullType.nullable(GUserData_organization_sponsoring_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -5300,7 +5308,7 @@ class _$GUserData_organization_sponsorsSerializer
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(GUserData_organization_sponsors_nodes)
+              const FullType.nullable(GUserData_organization_sponsors_nodes)
             ])));
     }
     return result;
@@ -5329,7 +5337,7 @@ class _$GUserData_organization_sponsorsSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GUserData_organization_sponsors_nodes)
+                const FullType.nullable(GUserData_organization_sponsors_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -5523,7 +5531,7 @@ class _$GUserData_organization_pinnedItemsSerializer
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(GUserData_organization_pinnedItems_nodes)
+              const FullType.nullable(GUserData_organization_pinnedItems_nodes)
             ])));
     }
     return result;
@@ -5548,7 +5556,8 @@ class _$GUserData_organization_pinnedItemsSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GUserData_organization_pinnedItems_nodes)
+                const FullType.nullable(
+                    GUserData_organization_pinnedItems_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -6005,7 +6014,8 @@ class _$GUserData_organization_pinnableItemsSerializer
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(GUserData_organization_pinnableItems_nodes)
+              const FullType.nullable(
+                  GUserData_organization_pinnableItems_nodes)
             ])));
     }
     return result;
@@ -6034,7 +6044,8 @@ class _$GUserData_organization_pinnableItemsSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GUserData_organization_pinnableItems_nodes)
+                const FullType.nullable(
+                    GUserData_organization_pinnableItems_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -6831,8 +6842,9 @@ class _$GSponsorConnectionPartsDataSerializer
       result
         ..add('nodes')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GSponsorConnectionPartsData_nodes)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GSponsorConnectionPartsData_nodes)
+            ])));
     }
     return result;
   }
@@ -6860,7 +6872,7 @@ class _$GSponsorConnectionPartsDataSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GSponsorConnectionPartsData_nodes)
+                const FullType.nullable(GSponsorConnectionPartsData_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -7639,8 +7651,9 @@ class _$GUserPartsData_sponsoringSerializer
       result
         ..add('nodes')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GUserPartsData_sponsoring_nodes)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GUserPartsData_sponsoring_nodes)
+            ])));
     }
     return result;
   }
@@ -7668,7 +7681,7 @@ class _$GUserPartsData_sponsoringSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GUserPartsData_sponsoring_nodes)
+                const FullType.nullable(GUserPartsData_sponsoring_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -7859,8 +7872,9 @@ class _$GUserPartsData_sponsorsSerializer
       result
         ..add('nodes')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GUserPartsData_sponsors_nodes)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GUserPartsData_sponsors_nodes)
+            ])));
     }
     return result;
   }
@@ -7888,7 +7902,7 @@ class _$GUserPartsData_sponsorsSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GUserPartsData_sponsors_nodes)
+                const FullType.nullable(GUserPartsData_sponsors_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -8079,8 +8093,9 @@ class _$GUserPartsData_organizationsSerializer
       result
         ..add('nodes')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GUserPartsData_organizations_nodes)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GUserPartsData_organizations_nodes)
+            ])));
     }
     return result;
   }
@@ -8108,7 +8123,7 @@ class _$GUserPartsData_organizationsSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GUserPartsData_organizations_nodes)
+                const FullType.nullable(GUserPartsData_organizations_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -8199,8 +8214,9 @@ class _$GUserPartsData_repositoriesSerializer
       result
         ..add('nodes')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GUserPartsData_repositories_nodes)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GUserPartsData_repositories_nodes)
+            ])));
     }
     return result;
   }
@@ -8228,7 +8244,7 @@ class _$GUserPartsData_repositoriesSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GUserPartsData_repositories_nodes)
+                const FullType.nullable(GUserPartsData_repositories_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -8722,8 +8738,9 @@ class _$GUserPartsData_pinnedItemsSerializer
       result
         ..add('nodes')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GUserPartsData_pinnedItems_nodes)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GUserPartsData_pinnedItems_nodes)
+            ])));
     }
     return result;
   }
@@ -8747,7 +8764,7 @@ class _$GUserPartsData_pinnedItemsSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GUserPartsData_pinnedItems_nodes)
+                const FullType.nullable(GUserPartsData_pinnedItems_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -9202,7 +9219,11 @@ class _$GViewerData extends GViewerData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), viewer.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, viewer.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -9436,44 +9457,33 @@ class _$GViewerData_viewer extends GViewerData_viewer {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    $jc(
-                                                                        $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, G__typename.hashCode), login.hashCode), name.hashCode), avatarUrl.hashCode), location.hashCode),
-                                                                                createdAt.hashCode),
-                                                                            company.hashCode),
-                                                                        bio.hashCode),
-                                                                    url.hashCode),
-                                                                email.hashCode),
-                                                            websiteUrl.hashCode),
-                                                        twitterUsername.hashCode),
-                                                    viewerCanFollow.hashCode),
-                                                viewerIsFollowing.hashCode),
-                                            followers.hashCode),
-                                        following.hashCode),
-                                    contributionsCollection.hashCode),
-                                sponsoring.hashCode),
-                            sponsors.hashCode),
-                        organizations.hashCode),
-                    repositories.hashCode),
-                starredRepositories.hashCode),
-            gists.hashCode),
-        pinnedItems.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jc(_$hash, location.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, company.hashCode);
+    _$hash = $jc(_$hash, bio.hashCode);
+    _$hash = $jc(_$hash, url.hashCode);
+    _$hash = $jc(_$hash, email.hashCode);
+    _$hash = $jc(_$hash, websiteUrl.hashCode);
+    _$hash = $jc(_$hash, twitterUsername.hashCode);
+    _$hash = $jc(_$hash, viewerCanFollow.hashCode);
+    _$hash = $jc(_$hash, viewerIsFollowing.hashCode);
+    _$hash = $jc(_$hash, followers.hashCode);
+    _$hash = $jc(_$hash, following.hashCode);
+    _$hash = $jc(_$hash, contributionsCollection.hashCode);
+    _$hash = $jc(_$hash, sponsoring.hashCode);
+    _$hash = $jc(_$hash, sponsors.hashCode);
+    _$hash = $jc(_$hash, organizations.hashCode);
+    _$hash = $jc(_$hash, repositories.hashCode);
+    _$hash = $jc(_$hash, starredRepositories.hashCode);
+    _$hash = $jc(_$hash, gists.hashCode);
+    _$hash = $jc(_$hash, pinnedItems.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -9795,7 +9805,11 @@ class _$GViewerData_viewer_followers extends GViewerData_viewer_followers {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -9899,7 +9913,11 @@ class _$GViewerData_viewer_following extends GViewerData_viewer_following {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -10008,8 +10026,11 @@ class _$GViewerData_viewer_contributionsCollection
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc(0, G__typename.hashCode), contributionCalendar.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, contributionCalendar.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -10152,7 +10173,11 @@ class _$GViewerData_viewer_contributionsCollection_contributionCalendar
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), weeks.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, weeks.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -10229,7 +10254,7 @@ class GViewerData_viewer_contributionsCollection_contributionCalendarBuilder
     try {
       _$result = _$v ??
           new _$GViewerData_viewer_contributionsCollection_contributionCalendar
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GViewerData_viewer_contributionsCollection_contributionCalendar',
@@ -10307,7 +10332,11 @@ class _$GViewerData_viewer_contributionsCollection_contributionCalendar_weeks
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), contributionDays.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, contributionDays.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -10388,7 +10417,7 @@ class GViewerData_viewer_contributionsCollection_contributionCalendar_weeksBuild
     try {
       _$result = _$v ??
           new _$GViewerData_viewer_contributionsCollection_contributionCalendar_weeks
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GViewerData_viewer_contributionsCollection_contributionCalendar_weeks',
@@ -10465,7 +10494,11 @@ class _$GViewerData_viewer_contributionsCollection_contributionCalendar_weeks_co
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), color.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -10535,7 +10568,7 @@ class GViewerData_viewer_contributionsCollection_contributionCalendar_weeks_cont
       _build() {
     final _$result = _$v ??
         new _$GViewerData_viewer_contributionsCollection_contributionCalendar_weeks_contributionDays
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GViewerData_viewer_contributionsCollection_contributionCalendar_weeks_contributionDays',
@@ -10555,7 +10588,7 @@ class _$GViewerData_viewer_sponsoring extends GViewerData_viewer_sponsoring {
   @override
   final int totalCount;
   @override
-  final BuiltList<GViewerData_viewer_sponsoring_nodes>? nodes;
+  final BuiltList<GViewerData_viewer_sponsoring_nodes?>? nodes;
 
   factory _$GViewerData_viewer_sponsoring(
           [void Function(GViewerData_viewer_sponsoringBuilder)? updates]) =>
@@ -10590,8 +10623,12 @@ class _$GViewerData_viewer_sponsoring extends GViewerData_viewer_sponsoring {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -10618,10 +10655,10 @@ class GViewerData_viewer_sponsoringBuilder
   int? get totalCount => _$this._totalCount;
   set totalCount(int? totalCount) => _$this._totalCount = totalCount;
 
-  ListBuilder<GViewerData_viewer_sponsoring_nodes>? _nodes;
-  ListBuilder<GViewerData_viewer_sponsoring_nodes> get nodes =>
-      _$this._nodes ??= new ListBuilder<GViewerData_viewer_sponsoring_nodes>();
-  set nodes(ListBuilder<GViewerData_viewer_sponsoring_nodes>? nodes) =>
+  ListBuilder<GViewerData_viewer_sponsoring_nodes?>? _nodes;
+  ListBuilder<GViewerData_viewer_sponsoring_nodes?> get nodes =>
+      _$this._nodes ??= new ListBuilder<GViewerData_viewer_sponsoring_nodes?>();
+  set nodes(ListBuilder<GViewerData_viewer_sponsoring_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GViewerData_viewer_sponsoringBuilder() {
@@ -10715,7 +10752,10 @@ class _$GViewerData_viewer_sponsoring_nodes__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -10819,7 +10859,11 @@ class _$GViewerData_viewer_sponsoring_nodes__asUser
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -10934,7 +10978,11 @@ class _$GViewerData_viewer_sponsoring_nodes__asOrganization
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -11014,7 +11062,7 @@ class _$GViewerData_viewer_sponsors extends GViewerData_viewer_sponsors {
   @override
   final int totalCount;
   @override
-  final BuiltList<GViewerData_viewer_sponsors_nodes>? nodes;
+  final BuiltList<GViewerData_viewer_sponsors_nodes?>? nodes;
 
   factory _$GViewerData_viewer_sponsors(
           [void Function(GViewerData_viewer_sponsorsBuilder)? updates]) =>
@@ -11049,8 +11097,12 @@ class _$GViewerData_viewer_sponsors extends GViewerData_viewer_sponsors {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -11077,10 +11129,10 @@ class GViewerData_viewer_sponsorsBuilder
   int? get totalCount => _$this._totalCount;
   set totalCount(int? totalCount) => _$this._totalCount = totalCount;
 
-  ListBuilder<GViewerData_viewer_sponsors_nodes>? _nodes;
-  ListBuilder<GViewerData_viewer_sponsors_nodes> get nodes =>
-      _$this._nodes ??= new ListBuilder<GViewerData_viewer_sponsors_nodes>();
-  set nodes(ListBuilder<GViewerData_viewer_sponsors_nodes>? nodes) =>
+  ListBuilder<GViewerData_viewer_sponsors_nodes?>? _nodes;
+  ListBuilder<GViewerData_viewer_sponsors_nodes?> get nodes =>
+      _$this._nodes ??= new ListBuilder<GViewerData_viewer_sponsors_nodes?>();
+  set nodes(ListBuilder<GViewerData_viewer_sponsors_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GViewerData_viewer_sponsorsBuilder() {
@@ -11174,7 +11226,10 @@ class _$GViewerData_viewer_sponsors_nodes__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -11276,7 +11331,11 @@ class _$GViewerData_viewer_sponsors_nodes__asUser
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -11391,7 +11450,11 @@ class _$GViewerData_viewer_sponsors_nodes__asOrganization
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -11471,7 +11534,7 @@ class _$GViewerData_viewer_organizations
   @override
   final int totalCount;
   @override
-  final BuiltList<GViewerData_viewer_organizations_nodes>? nodes;
+  final BuiltList<GViewerData_viewer_organizations_nodes?>? nodes;
 
   factory _$GViewerData_viewer_organizations(
           [void Function(GViewerData_viewer_organizationsBuilder)? updates]) =>
@@ -11506,8 +11569,12 @@ class _$GViewerData_viewer_organizations
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -11534,11 +11601,11 @@ class GViewerData_viewer_organizationsBuilder
   int? get totalCount => _$this._totalCount;
   set totalCount(int? totalCount) => _$this._totalCount = totalCount;
 
-  ListBuilder<GViewerData_viewer_organizations_nodes>? _nodes;
-  ListBuilder<GViewerData_viewer_organizations_nodes> get nodes =>
+  ListBuilder<GViewerData_viewer_organizations_nodes?>? _nodes;
+  ListBuilder<GViewerData_viewer_organizations_nodes?> get nodes =>
       _$this._nodes ??=
-          new ListBuilder<GViewerData_viewer_organizations_nodes>();
-  set nodes(ListBuilder<GViewerData_viewer_organizations_nodes>? nodes) =>
+          new ListBuilder<GViewerData_viewer_organizations_nodes?>();
+  set nodes(ListBuilder<GViewerData_viewer_organizations_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GViewerData_viewer_organizationsBuilder() {
@@ -11638,7 +11705,11 @@ class _$GViewerData_viewer_organizations_nodes
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -11713,7 +11784,7 @@ class _$GViewerData_viewer_repositories
   @override
   final int totalCount;
   @override
-  final BuiltList<GViewerData_viewer_repositories_nodes>? nodes;
+  final BuiltList<GViewerData_viewer_repositories_nodes?>? nodes;
 
   factory _$GViewerData_viewer_repositories(
           [void Function(GViewerData_viewer_repositoriesBuilder)? updates]) =>
@@ -11748,8 +11819,12 @@ class _$GViewerData_viewer_repositories
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -11776,11 +11851,11 @@ class GViewerData_viewer_repositoriesBuilder
   int? get totalCount => _$this._totalCount;
   set totalCount(int? totalCount) => _$this._totalCount = totalCount;
 
-  ListBuilder<GViewerData_viewer_repositories_nodes>? _nodes;
-  ListBuilder<GViewerData_viewer_repositories_nodes> get nodes =>
+  ListBuilder<GViewerData_viewer_repositories_nodes?>? _nodes;
+  ListBuilder<GViewerData_viewer_repositories_nodes?> get nodes =>
       _$this._nodes ??=
-          new ListBuilder<GViewerData_viewer_repositories_nodes>();
-  set nodes(ListBuilder<GViewerData_viewer_repositories_nodes>? nodes) =>
+          new ListBuilder<GViewerData_viewer_repositories_nodes?>();
+  set nodes(ListBuilder<GViewerData_viewer_repositories_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GViewerData_viewer_repositoriesBuilder() {
@@ -11919,22 +11994,18 @@ class _$GViewerData_viewer_repositories_nodes
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc($jc(0, G__typename.hashCode),
-                                    owner.hashCode),
-                                name.hashCode),
-                            description.hashCode),
-                        isPrivate.hashCode),
-                    isFork.hashCode),
-                stargazers.hashCode),
-            forks.hashCode),
-        primaryLanguage.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, isPrivate.hashCode);
+    _$hash = $jc(_$hash, isFork.hashCode);
+    _$hash = $jc(_$hash, stargazers.hashCode);
+    _$hash = $jc(_$hash, forks.hashCode);
+    _$hash = $jc(_$hash, primaryLanguage.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -12140,8 +12211,12 @@ class _$GViewerData_viewer_repositories_nodes_owner
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), login.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -12263,7 +12338,11 @@ class _$GViewerData_viewer_repositories_nodes_stargazers
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -12379,7 +12458,11 @@ class _$GViewerData_viewer_repositories_nodes_forks
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -12499,8 +12582,12 @@ class _$GViewerData_viewer_repositories_nodes_primaryLanguage
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), color.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -12624,7 +12711,11 @@ class _$GViewerData_viewer_starredRepositories
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -12730,7 +12821,11 @@ class _$GViewerData_viewer_gists extends GViewerData_viewer_gists {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -12799,7 +12894,7 @@ class _$GViewerData_viewer_pinnedItems extends GViewerData_viewer_pinnedItems {
   @override
   final String G__typename;
   @override
-  final BuiltList<GViewerData_viewer_pinnedItems_nodes>? nodes;
+  final BuiltList<GViewerData_viewer_pinnedItems_nodes?>? nodes;
 
   factory _$GViewerData_viewer_pinnedItems(
           [void Function(GViewerData_viewer_pinnedItemsBuilder)? updates]) =>
@@ -12830,7 +12925,11 @@ class _$GViewerData_viewer_pinnedItems extends GViewerData_viewer_pinnedItems {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -12852,10 +12951,11 @@ class GViewerData_viewer_pinnedItemsBuilder
   String? get G__typename => _$this._G__typename;
   set G__typename(String? G__typename) => _$this._G__typename = G__typename;
 
-  ListBuilder<GViewerData_viewer_pinnedItems_nodes>? _nodes;
-  ListBuilder<GViewerData_viewer_pinnedItems_nodes> get nodes =>
-      _$this._nodes ??= new ListBuilder<GViewerData_viewer_pinnedItems_nodes>();
-  set nodes(ListBuilder<GViewerData_viewer_pinnedItems_nodes>? nodes) =>
+  ListBuilder<GViewerData_viewer_pinnedItems_nodes?>? _nodes;
+  ListBuilder<GViewerData_viewer_pinnedItems_nodes?> get nodes =>
+      _$this._nodes ??=
+          new ListBuilder<GViewerData_viewer_pinnedItems_nodes?>();
+  set nodes(ListBuilder<GViewerData_viewer_pinnedItems_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GViewerData_viewer_pinnedItemsBuilder() {
@@ -12946,7 +13046,10 @@ class _$GViewerData_viewer_pinnedItems_nodes__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -13094,22 +13197,18 @@ class _$GViewerData_viewer_pinnedItems_nodes__asRepository
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc($jc(0, G__typename.hashCode),
-                                    owner.hashCode),
-                                name.hashCode),
-                            description.hashCode),
-                        isPrivate.hashCode),
-                    isFork.hashCode),
-                stargazers.hashCode),
-            forks.hashCode),
-        primaryLanguage.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, isPrivate.hashCode);
+    _$hash = $jc(_$hash, isFork.hashCode);
+    _$hash = $jc(_$hash, stargazers.hashCode);
+    _$hash = $jc(_$hash, forks.hashCode);
+    _$hash = $jc(_$hash, primaryLanguage.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -13336,8 +13435,12 @@ class _$GViewerData_viewer_pinnedItems_nodes__asRepository_owner
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), login.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -13474,7 +13577,11 @@ class _$GViewerData_viewer_pinnedItems_nodes__asRepository_stargazers
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -13603,7 +13710,11 @@ class _$GViewerData_viewer_pinnedItems_nodes__asRepository_forks
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -13733,8 +13844,12 @@ class _$GViewerData_viewer_pinnedItems_nodes__asRepository_primaryLanguage
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), color.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -13809,7 +13924,7 @@ class GViewerData_viewer_pinnedItems_nodes__asRepository_primaryLanguageBuilder
       _build() {
     final _$result = _$v ??
         new _$GViewerData_viewer_pinnedItems_nodes__asRepository_primaryLanguage
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GViewerData_viewer_pinnedItems_nodes__asRepository_primaryLanguage',
@@ -13859,8 +13974,12 @@ class _$GUserData extends GUserData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), user.hashCode),
-        organization.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, user.hashCode);
+    _$hash = $jc(_$hash, organization.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -14100,44 +14219,33 @@ class _$GUserData_user extends GUserData_user {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    $jc(
-                                                                        $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, G__typename.hashCode), login.hashCode), name.hashCode), avatarUrl.hashCode), location.hashCode),
-                                                                                createdAt.hashCode),
-                                                                            company.hashCode),
-                                                                        bio.hashCode),
-                                                                    url.hashCode),
-                                                                email.hashCode),
-                                                            websiteUrl.hashCode),
-                                                        twitterUsername.hashCode),
-                                                    viewerCanFollow.hashCode),
-                                                viewerIsFollowing.hashCode),
-                                            followers.hashCode),
-                                        following.hashCode),
-                                    contributionsCollection.hashCode),
-                                sponsoring.hashCode),
-                            sponsors.hashCode),
-                        organizations.hashCode),
-                    repositories.hashCode),
-                starredRepositories.hashCode),
-            gists.hashCode),
-        pinnedItems.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jc(_$hash, location.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, company.hashCode);
+    _$hash = $jc(_$hash, bio.hashCode);
+    _$hash = $jc(_$hash, url.hashCode);
+    _$hash = $jc(_$hash, email.hashCode);
+    _$hash = $jc(_$hash, websiteUrl.hashCode);
+    _$hash = $jc(_$hash, twitterUsername.hashCode);
+    _$hash = $jc(_$hash, viewerCanFollow.hashCode);
+    _$hash = $jc(_$hash, viewerIsFollowing.hashCode);
+    _$hash = $jc(_$hash, followers.hashCode);
+    _$hash = $jc(_$hash, following.hashCode);
+    _$hash = $jc(_$hash, contributionsCollection.hashCode);
+    _$hash = $jc(_$hash, sponsoring.hashCode);
+    _$hash = $jc(_$hash, sponsors.hashCode);
+    _$hash = $jc(_$hash, organizations.hashCode);
+    _$hash = $jc(_$hash, repositories.hashCode);
+    _$hash = $jc(_$hash, starredRepositories.hashCode);
+    _$hash = $jc(_$hash, gists.hashCode);
+    _$hash = $jc(_$hash, pinnedItems.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -14457,7 +14565,11 @@ class _$GUserData_user_followers extends GUserData_user_followers {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -14560,7 +14672,11 @@ class _$GUserData_user_following extends GUserData_user_following {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -14668,8 +14784,11 @@ class _$GUserData_user_contributionsCollection
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc(0, G__typename.hashCode), contributionCalendar.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, contributionCalendar.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -14810,7 +14929,11 @@ class _$GUserData_user_contributionsCollection_contributionCalendar
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), weeks.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, weeks.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -14963,7 +15086,11 @@ class _$GUserData_user_contributionsCollection_contributionCalendar_weeks
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), contributionDays.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, contributionDays.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -15042,7 +15169,7 @@ class GUserData_user_contributionsCollection_contributionCalendar_weeksBuilder
     try {
       _$result = _$v ??
           new _$GUserData_user_contributionsCollection_contributionCalendar_weeks
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GUserData_user_contributionsCollection_contributionCalendar_weeks',
@@ -15119,7 +15246,11 @@ class _$GUserData_user_contributionsCollection_contributionCalendar_weeks_contri
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), color.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -15189,7 +15320,7 @@ class GUserData_user_contributionsCollection_contributionCalendar_weeks_contribu
       _build() {
     final _$result = _$v ??
         new _$GUserData_user_contributionsCollection_contributionCalendar_weeks_contributionDays
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GUserData_user_contributionsCollection_contributionCalendar_weeks_contributionDays',
@@ -15209,7 +15340,7 @@ class _$GUserData_user_sponsoring extends GUserData_user_sponsoring {
   @override
   final int totalCount;
   @override
-  final BuiltList<GUserData_user_sponsoring_nodes>? nodes;
+  final BuiltList<GUserData_user_sponsoring_nodes?>? nodes;
 
   factory _$GUserData_user_sponsoring(
           [void Function(GUserData_user_sponsoringBuilder)? updates]) =>
@@ -15244,8 +15375,12 @@ class _$GUserData_user_sponsoring extends GUserData_user_sponsoring {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -15271,10 +15406,10 @@ class GUserData_user_sponsoringBuilder
   int? get totalCount => _$this._totalCount;
   set totalCount(int? totalCount) => _$this._totalCount = totalCount;
 
-  ListBuilder<GUserData_user_sponsoring_nodes>? _nodes;
-  ListBuilder<GUserData_user_sponsoring_nodes> get nodes =>
-      _$this._nodes ??= new ListBuilder<GUserData_user_sponsoring_nodes>();
-  set nodes(ListBuilder<GUserData_user_sponsoring_nodes>? nodes) =>
+  ListBuilder<GUserData_user_sponsoring_nodes?>? _nodes;
+  ListBuilder<GUserData_user_sponsoring_nodes?> get nodes =>
+      _$this._nodes ??= new ListBuilder<GUserData_user_sponsoring_nodes?>();
+  set nodes(ListBuilder<GUserData_user_sponsoring_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GUserData_user_sponsoringBuilder() {
@@ -15368,7 +15503,10 @@ class _$GUserData_user_sponsoring_nodes__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -15470,7 +15608,11 @@ class _$GUserData_user_sponsoring_nodes__asUser
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -15583,7 +15725,11 @@ class _$GUserData_user_sponsoring_nodes__asOrganization
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -15662,7 +15808,7 @@ class _$GUserData_user_sponsors extends GUserData_user_sponsors {
   @override
   final int totalCount;
   @override
-  final BuiltList<GUserData_user_sponsors_nodes>? nodes;
+  final BuiltList<GUserData_user_sponsors_nodes?>? nodes;
 
   factory _$GUserData_user_sponsors(
           [void Function(GUserData_user_sponsorsBuilder)? updates]) =>
@@ -15697,8 +15843,12 @@ class _$GUserData_user_sponsors extends GUserData_user_sponsors {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -15724,10 +15874,10 @@ class GUserData_user_sponsorsBuilder
   int? get totalCount => _$this._totalCount;
   set totalCount(int? totalCount) => _$this._totalCount = totalCount;
 
-  ListBuilder<GUserData_user_sponsors_nodes>? _nodes;
-  ListBuilder<GUserData_user_sponsors_nodes> get nodes =>
-      _$this._nodes ??= new ListBuilder<GUserData_user_sponsors_nodes>();
-  set nodes(ListBuilder<GUserData_user_sponsors_nodes>? nodes) =>
+  ListBuilder<GUserData_user_sponsors_nodes?>? _nodes;
+  ListBuilder<GUserData_user_sponsors_nodes?> get nodes =>
+      _$this._nodes ??= new ListBuilder<GUserData_user_sponsors_nodes?>();
+  set nodes(ListBuilder<GUserData_user_sponsors_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GUserData_user_sponsorsBuilder() {
@@ -15820,7 +15970,10 @@ class _$GUserData_user_sponsors_nodes__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -15921,7 +16074,11 @@ class _$GUserData_user_sponsors_nodes__asUser
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -16032,7 +16189,11 @@ class _$GUserData_user_sponsors_nodes__asOrganization
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -16109,7 +16270,7 @@ class _$GUserData_user_organizations extends GUserData_user_organizations {
   @override
   final int totalCount;
   @override
-  final BuiltList<GUserData_user_organizations_nodes>? nodes;
+  final BuiltList<GUserData_user_organizations_nodes?>? nodes;
 
   factory _$GUserData_user_organizations(
           [void Function(GUserData_user_organizationsBuilder)? updates]) =>
@@ -16144,8 +16305,12 @@ class _$GUserData_user_organizations extends GUserData_user_organizations {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -16172,10 +16337,10 @@ class GUserData_user_organizationsBuilder
   int? get totalCount => _$this._totalCount;
   set totalCount(int? totalCount) => _$this._totalCount = totalCount;
 
-  ListBuilder<GUserData_user_organizations_nodes>? _nodes;
-  ListBuilder<GUserData_user_organizations_nodes> get nodes =>
-      _$this._nodes ??= new ListBuilder<GUserData_user_organizations_nodes>();
-  set nodes(ListBuilder<GUserData_user_organizations_nodes>? nodes) =>
+  ListBuilder<GUserData_user_organizations_nodes?>? _nodes;
+  ListBuilder<GUserData_user_organizations_nodes?> get nodes =>
+      _$this._nodes ??= new ListBuilder<GUserData_user_organizations_nodes?>();
+  set nodes(ListBuilder<GUserData_user_organizations_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GUserData_user_organizationsBuilder() {
@@ -16274,7 +16439,11 @@ class _$GUserData_user_organizations_nodes
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -16347,7 +16516,7 @@ class _$GUserData_user_repositories extends GUserData_user_repositories {
   @override
   final int totalCount;
   @override
-  final BuiltList<GUserData_user_repositories_nodes>? nodes;
+  final BuiltList<GUserData_user_repositories_nodes?>? nodes;
 
   factory _$GUserData_user_repositories(
           [void Function(GUserData_user_repositoriesBuilder)? updates]) =>
@@ -16382,8 +16551,12 @@ class _$GUserData_user_repositories extends GUserData_user_repositories {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -16410,10 +16583,10 @@ class GUserData_user_repositoriesBuilder
   int? get totalCount => _$this._totalCount;
   set totalCount(int? totalCount) => _$this._totalCount = totalCount;
 
-  ListBuilder<GUserData_user_repositories_nodes>? _nodes;
-  ListBuilder<GUserData_user_repositories_nodes> get nodes =>
-      _$this._nodes ??= new ListBuilder<GUserData_user_repositories_nodes>();
-  set nodes(ListBuilder<GUserData_user_repositories_nodes>? nodes) =>
+  ListBuilder<GUserData_user_repositories_nodes?>? _nodes;
+  ListBuilder<GUserData_user_repositories_nodes?> get nodes =>
+      _$this._nodes ??= new ListBuilder<GUserData_user_repositories_nodes?>();
+  set nodes(ListBuilder<GUserData_user_repositories_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GUserData_user_repositoriesBuilder() {
@@ -16550,22 +16723,18 @@ class _$GUserData_user_repositories_nodes
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc($jc(0, G__typename.hashCode),
-                                    owner.hashCode),
-                                name.hashCode),
-                            description.hashCode),
-                        isPrivate.hashCode),
-                    isFork.hashCode),
-                stargazers.hashCode),
-            forks.hashCode),
-        primaryLanguage.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, isPrivate.hashCode);
+    _$hash = $jc(_$hash, isFork.hashCode);
+    _$hash = $jc(_$hash, stargazers.hashCode);
+    _$hash = $jc(_$hash, forks.hashCode);
+    _$hash = $jc(_$hash, primaryLanguage.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -16763,8 +16932,12 @@ class _$GUserData_user_repositories_nodes_owner
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), login.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -16883,7 +17056,11 @@ class _$GUserData_user_repositories_nodes_stargazers
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -16994,7 +17171,11 @@ class _$GUserData_user_repositories_nodes_forks
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -17111,8 +17292,12 @@ class _$GUserData_user_repositories_nodes_primaryLanguage
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), color.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -17231,7 +17416,11 @@ class _$GUserData_user_starredRepositories
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -17336,7 +17525,11 @@ class _$GUserData_user_gists extends GUserData_user_gists {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -17404,7 +17597,7 @@ class _$GUserData_user_pinnedItems extends GUserData_user_pinnedItems {
   @override
   final String G__typename;
   @override
-  final BuiltList<GUserData_user_pinnedItems_nodes>? nodes;
+  final BuiltList<GUserData_user_pinnedItems_nodes?>? nodes;
 
   factory _$GUserData_user_pinnedItems(
           [void Function(GUserData_user_pinnedItemsBuilder)? updates]) =>
@@ -17435,7 +17628,11 @@ class _$GUserData_user_pinnedItems extends GUserData_user_pinnedItems {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -17456,10 +17653,10 @@ class GUserData_user_pinnedItemsBuilder
   String? get G__typename => _$this._G__typename;
   set G__typename(String? G__typename) => _$this._G__typename = G__typename;
 
-  ListBuilder<GUserData_user_pinnedItems_nodes>? _nodes;
-  ListBuilder<GUserData_user_pinnedItems_nodes> get nodes =>
-      _$this._nodes ??= new ListBuilder<GUserData_user_pinnedItems_nodes>();
-  set nodes(ListBuilder<GUserData_user_pinnedItems_nodes>? nodes) =>
+  ListBuilder<GUserData_user_pinnedItems_nodes?>? _nodes;
+  ListBuilder<GUserData_user_pinnedItems_nodes?> get nodes =>
+      _$this._nodes ??= new ListBuilder<GUserData_user_pinnedItems_nodes?>();
+  set nodes(ListBuilder<GUserData_user_pinnedItems_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GUserData_user_pinnedItemsBuilder() {
@@ -17550,7 +17747,10 @@ class _$GUserData_user_pinnedItems_nodes__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -17694,22 +17894,18 @@ class _$GUserData_user_pinnedItems_nodes__asRepository
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc($jc(0, G__typename.hashCode),
-                                    owner.hashCode),
-                                name.hashCode),
-                            description.hashCode),
-                        isPrivate.hashCode),
-                    isFork.hashCode),
-                stargazers.hashCode),
-            forks.hashCode),
-        primaryLanguage.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, isPrivate.hashCode);
+    _$hash = $jc(_$hash, isFork.hashCode);
+    _$hash = $jc(_$hash, stargazers.hashCode);
+    _$hash = $jc(_$hash, forks.hashCode);
+    _$hash = $jc(_$hash, primaryLanguage.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -17925,8 +18121,12 @@ class _$GUserData_user_pinnedItems_nodes__asRepository_owner
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), login.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -18062,7 +18262,11 @@ class _$GUserData_user_pinnedItems_nodes__asRepository_stargazers
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -18184,7 +18388,11 @@ class _$GUserData_user_pinnedItems_nodes__asRepository_forks
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -18314,8 +18522,12 @@ class _$GUserData_user_pinnedItems_nodes__asRepository_primaryLanguage
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), color.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -18518,44 +18730,26 @@ class _$GUserData_organization extends GUserData_organization {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    $jc(
-                                                                        0,
-                                                                        G__typename
-                                                                            .hashCode),
-                                                                    login
-                                                                        .hashCode),
-                                                                avatarUrl
-                                                                    .hashCode),
-                                                            name.hashCode),
-                                                        url.hashCode),
-                                                    description.hashCode),
-                                                location.hashCode),
-                                            email.hashCode),
-                                        websiteUrl.hashCode),
-                                    twitterUsername.hashCode),
-                                createdAt.hashCode),
-                            viewerIsFollowing.hashCode),
-                        membersWithRole.hashCode),
-                    sponsoring.hashCode),
-                sponsors.hashCode),
-            pinnedItems.hashCode),
-        pinnableItems.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, url.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, location.hashCode);
+    _$hash = $jc(_$hash, email.hashCode);
+    _$hash = $jc(_$hash, websiteUrl.hashCode);
+    _$hash = $jc(_$hash, twitterUsername.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, viewerIsFollowing.hashCode);
+    _$hash = $jc(_$hash, membersWithRole.hashCode);
+    _$hash = $jc(_$hash, sponsoring.hashCode);
+    _$hash = $jc(_$hash, sponsors.hashCode);
+    _$hash = $jc(_$hash, pinnedItems.hashCode);
+    _$hash = $jc(_$hash, pinnableItems.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -18809,7 +19003,11 @@ class _$GUserData_organization_membersWithRole
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -18884,7 +19082,7 @@ class _$GUserData_organization_sponsoring
   @override
   final int totalCount;
   @override
-  final BuiltList<GUserData_organization_sponsoring_nodes>? nodes;
+  final BuiltList<GUserData_organization_sponsoring_nodes?>? nodes;
 
   factory _$GUserData_organization_sponsoring(
           [void Function(GUserData_organization_sponsoringBuilder)? updates]) =>
@@ -18920,8 +19118,12 @@ class _$GUserData_organization_sponsoring
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -18948,11 +19150,11 @@ class GUserData_organization_sponsoringBuilder
   int? get totalCount => _$this._totalCount;
   set totalCount(int? totalCount) => _$this._totalCount = totalCount;
 
-  ListBuilder<GUserData_organization_sponsoring_nodes>? _nodes;
-  ListBuilder<GUserData_organization_sponsoring_nodes> get nodes =>
+  ListBuilder<GUserData_organization_sponsoring_nodes?>? _nodes;
+  ListBuilder<GUserData_organization_sponsoring_nodes?> get nodes =>
       _$this._nodes ??=
-          new ListBuilder<GUserData_organization_sponsoring_nodes>();
-  set nodes(ListBuilder<GUserData_organization_sponsoring_nodes>? nodes) =>
+          new ListBuilder<GUserData_organization_sponsoring_nodes?>();
+  set nodes(ListBuilder<GUserData_organization_sponsoring_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GUserData_organization_sponsoringBuilder() {
@@ -19048,7 +19250,10 @@ class _$GUserData_organization_sponsoring_nodes__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -19156,7 +19361,11 @@ class _$GUserData_organization_sponsoring_nodes__asUser
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -19279,7 +19488,11 @@ class _$GUserData_organization_sponsoring_nodes__asOrganization
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -19361,7 +19574,7 @@ class _$GUserData_organization_sponsors
   @override
   final int totalCount;
   @override
-  final BuiltList<GUserData_organization_sponsors_nodes>? nodes;
+  final BuiltList<GUserData_organization_sponsors_nodes?>? nodes;
 
   factory _$GUserData_organization_sponsors(
           [void Function(GUserData_organization_sponsorsBuilder)? updates]) =>
@@ -19396,8 +19609,12 @@ class _$GUserData_organization_sponsors
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -19424,11 +19641,11 @@ class GUserData_organization_sponsorsBuilder
   int? get totalCount => _$this._totalCount;
   set totalCount(int? totalCount) => _$this._totalCount = totalCount;
 
-  ListBuilder<GUserData_organization_sponsors_nodes>? _nodes;
-  ListBuilder<GUserData_organization_sponsors_nodes> get nodes =>
+  ListBuilder<GUserData_organization_sponsors_nodes?>? _nodes;
+  ListBuilder<GUserData_organization_sponsors_nodes?> get nodes =>
       _$this._nodes ??=
-          new ListBuilder<GUserData_organization_sponsors_nodes>();
-  set nodes(ListBuilder<GUserData_organization_sponsors_nodes>? nodes) =>
+          new ListBuilder<GUserData_organization_sponsors_nodes?>();
+  set nodes(ListBuilder<GUserData_organization_sponsors_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GUserData_organization_sponsorsBuilder() {
@@ -19523,7 +19740,10 @@ class _$GUserData_organization_sponsors_nodes__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -19627,7 +19847,11 @@ class _$GUserData_organization_sponsors_nodes__asUser
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -19746,7 +19970,11 @@ class _$GUserData_organization_sponsors_nodes__asOrganization
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -19826,7 +20054,7 @@ class _$GUserData_organization_pinnedItems
   @override
   final String G__typename;
   @override
-  final BuiltList<GUserData_organization_pinnedItems_nodes>? nodes;
+  final BuiltList<GUserData_organization_pinnedItems_nodes?>? nodes;
 
   factory _$GUserData_organization_pinnedItems(
           [void Function(GUserData_organization_pinnedItemsBuilder)?
@@ -19860,7 +20088,11 @@ class _$GUserData_organization_pinnedItems
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -19882,11 +20114,11 @@ class GUserData_organization_pinnedItemsBuilder
   String? get G__typename => _$this._G__typename;
   set G__typename(String? G__typename) => _$this._G__typename = G__typename;
 
-  ListBuilder<GUserData_organization_pinnedItems_nodes>? _nodes;
-  ListBuilder<GUserData_organization_pinnedItems_nodes> get nodes =>
+  ListBuilder<GUserData_organization_pinnedItems_nodes?>? _nodes;
+  ListBuilder<GUserData_organization_pinnedItems_nodes?> get nodes =>
       _$this._nodes ??=
-          new ListBuilder<GUserData_organization_pinnedItems_nodes>();
-  set nodes(ListBuilder<GUserData_organization_pinnedItems_nodes>? nodes) =>
+          new ListBuilder<GUserData_organization_pinnedItems_nodes?>();
+  set nodes(ListBuilder<GUserData_organization_pinnedItems_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GUserData_organization_pinnedItemsBuilder() {
@@ -19981,7 +20213,10 @@ class _$GUserData_organization_pinnedItems_nodes__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -20135,22 +20370,18 @@ class _$GUserData_organization_pinnedItems_nodes__asRepository
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc($jc(0, G__typename.hashCode),
-                                    owner.hashCode),
-                                name.hashCode),
-                            description.hashCode),
-                        isPrivate.hashCode),
-                    isFork.hashCode),
-                stargazers.hashCode),
-            forks.hashCode),
-        primaryLanguage.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, isPrivate.hashCode);
+    _$hash = $jc(_$hash, isFork.hashCode);
+    _$hash = $jc(_$hash, stargazers.hashCode);
+    _$hash = $jc(_$hash, forks.hashCode);
+    _$hash = $jc(_$hash, primaryLanguage.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -20385,8 +20616,12 @@ class _$GUserData_organization_pinnedItems_nodes__asRepository_owner
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), login.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -20527,7 +20762,11 @@ class _$GUserData_organization_pinnedItems_nodes__asRepository_stargazers
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -20594,7 +20833,7 @@ class GUserData_organization_pinnedItems_nodes__asRepository_stargazersBuilder
   _$GUserData_organization_pinnedItems_nodes__asRepository_stargazers _build() {
     final _$result = _$v ??
         new _$GUserData_organization_pinnedItems_nodes__asRepository_stargazers
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GUserData_organization_pinnedItems_nodes__asRepository_stargazers',
@@ -20660,7 +20899,11 @@ class _$GUserData_organization_pinnedItems_nodes__asRepository_forks
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -20794,8 +21037,12 @@ class _$GUserData_organization_pinnedItems_nodes__asRepository_primaryLanguage
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), color.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -20870,7 +21117,7 @@ class GUserData_organization_pinnedItems_nodes__asRepository_primaryLanguageBuil
       _build() {
     final _$result = _$v ??
         new _$GUserData_organization_pinnedItems_nodes__asRepository_primaryLanguage
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GUserData_organization_pinnedItems_nodes__asRepository_primaryLanguage',
@@ -20892,7 +21139,7 @@ class _$GUserData_organization_pinnableItems
   @override
   final int totalCount;
   @override
-  final BuiltList<GUserData_organization_pinnableItems_nodes>? nodes;
+  final BuiltList<GUserData_organization_pinnableItems_nodes?>? nodes;
 
   factory _$GUserData_organization_pinnableItems(
           [void Function(GUserData_organization_pinnableItemsBuilder)?
@@ -20929,8 +21176,12 @@ class _$GUserData_organization_pinnableItems
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -20957,11 +21208,11 @@ class GUserData_organization_pinnableItemsBuilder
   int? get totalCount => _$this._totalCount;
   set totalCount(int? totalCount) => _$this._totalCount = totalCount;
 
-  ListBuilder<GUserData_organization_pinnableItems_nodes>? _nodes;
-  ListBuilder<GUserData_organization_pinnableItems_nodes> get nodes =>
+  ListBuilder<GUserData_organization_pinnableItems_nodes?>? _nodes;
+  ListBuilder<GUserData_organization_pinnableItems_nodes?> get nodes =>
       _$this._nodes ??=
-          new ListBuilder<GUserData_organization_pinnableItems_nodes>();
-  set nodes(ListBuilder<GUserData_organization_pinnableItems_nodes>? nodes) =>
+          new ListBuilder<GUserData_organization_pinnableItems_nodes?>();
+  set nodes(ListBuilder<GUserData_organization_pinnableItems_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GUserData_organization_pinnableItemsBuilder() {
@@ -21062,7 +21313,10 @@ class _$GUserData_organization_pinnableItems_nodes__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -21218,22 +21472,18 @@ class _$GUserData_organization_pinnableItems_nodes__asRepository
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc($jc(0, G__typename.hashCode),
-                                    owner.hashCode),
-                                name.hashCode),
-                            description.hashCode),
-                        isPrivate.hashCode),
-                    isFork.hashCode),
-                stargazers.hashCode),
-            forks.hashCode),
-        primaryLanguage.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, isPrivate.hashCode);
+    _$hash = $jc(_$hash, isFork.hashCode);
+    _$hash = $jc(_$hash, stargazers.hashCode);
+    _$hash = $jc(_$hash, forks.hashCode);
+    _$hash = $jc(_$hash, primaryLanguage.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -21466,8 +21716,12 @@ class _$GUserData_organization_pinnableItems_nodes__asRepository_owner
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), login.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -21608,7 +21862,11 @@ class _$GUserData_organization_pinnableItems_nodes__asRepository_stargazers
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -21677,7 +21935,7 @@ class GUserData_organization_pinnableItems_nodes__asRepository_stargazersBuilder
       _build() {
     final _$result = _$v ??
         new _$GUserData_organization_pinnableItems_nodes__asRepository_stargazers
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GUserData_organization_pinnableItems_nodes__asRepository_stargazers',
@@ -21743,7 +22001,11 @@ class _$GUserData_organization_pinnableItems_nodes__asRepository_forks
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -21877,8 +22139,12 @@ class _$GUserData_organization_pinnableItems_nodes__asRepository_primaryLanguage
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), color.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -21954,7 +22220,7 @@ class GUserData_organization_pinnableItems_nodes__asRepository_primaryLanguageBu
       _build() {
     final _$result = _$v ??
         new _$GUserData_organization_pinnableItems_nodes__asRepository_primaryLanguage
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GUserData_organization_pinnableItems_nodes__asRepository_primaryLanguage',
@@ -22040,22 +22306,18 @@ class _$GRepoPartsData extends GRepoPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc($jc(0, G__typename.hashCode),
-                                    owner.hashCode),
-                                name.hashCode),
-                            description.hashCode),
-                        isPrivate.hashCode),
-                    isFork.hashCode),
-                stargazers.hashCode),
-            forks.hashCode),
-        primaryLanguage.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, isPrivate.hashCode);
+    _$hash = $jc(_$hash, isFork.hashCode);
+    _$hash = $jc(_$hash, stargazers.hashCode);
+    _$hash = $jc(_$hash, forks.hashCode);
+    _$hash = $jc(_$hash, primaryLanguage.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -22239,8 +22501,12 @@ class _$GRepoPartsData_owner extends GRepoPartsData_owner {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), login.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -22350,7 +22616,11 @@ class _$GRepoPartsData_stargazers extends GRepoPartsData_stargazers {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -22453,7 +22723,11 @@ class _$GRepoPartsData_forks extends GRepoPartsData_forks {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -22558,8 +22832,12 @@ class _$GRepoPartsData_primaryLanguage extends GRepoPartsData_primaryLanguage {
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), color.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -22638,7 +22916,7 @@ class _$GSponsorConnectionPartsData extends GSponsorConnectionPartsData {
   @override
   final int totalCount;
   @override
-  final BuiltList<GSponsorConnectionPartsData_nodes>? nodes;
+  final BuiltList<GSponsorConnectionPartsData_nodes?>? nodes;
 
   factory _$GSponsorConnectionPartsData(
           [void Function(GSponsorConnectionPartsDataBuilder)? updates]) =>
@@ -22673,8 +22951,12 @@ class _$GSponsorConnectionPartsData extends GSponsorConnectionPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -22701,10 +22983,10 @@ class GSponsorConnectionPartsDataBuilder
   int? get totalCount => _$this._totalCount;
   set totalCount(int? totalCount) => _$this._totalCount = totalCount;
 
-  ListBuilder<GSponsorConnectionPartsData_nodes>? _nodes;
-  ListBuilder<GSponsorConnectionPartsData_nodes> get nodes =>
-      _$this._nodes ??= new ListBuilder<GSponsorConnectionPartsData_nodes>();
-  set nodes(ListBuilder<GSponsorConnectionPartsData_nodes>? nodes) =>
+  ListBuilder<GSponsorConnectionPartsData_nodes?>? _nodes;
+  ListBuilder<GSponsorConnectionPartsData_nodes?> get nodes =>
+      _$this._nodes ??= new ListBuilder<GSponsorConnectionPartsData_nodes?>();
+  set nodes(ListBuilder<GSponsorConnectionPartsData_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GSponsorConnectionPartsDataBuilder() {
@@ -22798,7 +23080,10 @@ class _$GSponsorConnectionPartsData_nodes__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -22900,7 +23185,11 @@ class _$GSponsorConnectionPartsData_nodes__asUser
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -23015,7 +23304,11 @@ class _$GSponsorConnectionPartsData_nodes__asOrganization
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -23241,44 +23534,33 @@ class _$GUserPartsData extends GUserPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    $jc(
-                                                                        $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, G__typename.hashCode), login.hashCode), name.hashCode), avatarUrl.hashCode), location.hashCode),
-                                                                                createdAt.hashCode),
-                                                                            company.hashCode),
-                                                                        bio.hashCode),
-                                                                    url.hashCode),
-                                                                email.hashCode),
-                                                            websiteUrl.hashCode),
-                                                        twitterUsername.hashCode),
-                                                    viewerCanFollow.hashCode),
-                                                viewerIsFollowing.hashCode),
-                                            followers.hashCode),
-                                        following.hashCode),
-                                    contributionsCollection.hashCode),
-                                sponsoring.hashCode),
-                            sponsors.hashCode),
-                        organizations.hashCode),
-                    repositories.hashCode),
-                starredRepositories.hashCode),
-            gists.hashCode),
-        pinnedItems.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jc(_$hash, location.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, company.hashCode);
+    _$hash = $jc(_$hash, bio.hashCode);
+    _$hash = $jc(_$hash, url.hashCode);
+    _$hash = $jc(_$hash, email.hashCode);
+    _$hash = $jc(_$hash, websiteUrl.hashCode);
+    _$hash = $jc(_$hash, twitterUsername.hashCode);
+    _$hash = $jc(_$hash, viewerCanFollow.hashCode);
+    _$hash = $jc(_$hash, viewerIsFollowing.hashCode);
+    _$hash = $jc(_$hash, followers.hashCode);
+    _$hash = $jc(_$hash, following.hashCode);
+    _$hash = $jc(_$hash, contributionsCollection.hashCode);
+    _$hash = $jc(_$hash, sponsoring.hashCode);
+    _$hash = $jc(_$hash, sponsors.hashCode);
+    _$hash = $jc(_$hash, organizations.hashCode);
+    _$hash = $jc(_$hash, repositories.hashCode);
+    _$hash = $jc(_$hash, starredRepositories.hashCode);
+    _$hash = $jc(_$hash, gists.hashCode);
+    _$hash = $jc(_$hash, pinnedItems.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -23598,7 +23880,11 @@ class _$GUserPartsData_followers extends GUserPartsData_followers {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -23701,7 +23987,11 @@ class _$GUserPartsData_following extends GUserPartsData_following {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -23809,8 +24099,11 @@ class _$GUserPartsData_contributionsCollection
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc(0, G__typename.hashCode), contributionCalendar.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, contributionCalendar.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -23951,7 +24244,11 @@ class _$GUserPartsData_contributionsCollection_contributionCalendar
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), weeks.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, weeks.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -24104,7 +24401,11 @@ class _$GUserPartsData_contributionsCollection_contributionCalendar_weeks
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), contributionDays.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, contributionDays.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -24183,7 +24484,7 @@ class GUserPartsData_contributionsCollection_contributionCalendar_weeksBuilder
     try {
       _$result = _$v ??
           new _$GUserPartsData_contributionsCollection_contributionCalendar_weeks
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GUserPartsData_contributionsCollection_contributionCalendar_weeks',
@@ -24260,7 +24561,11 @@ class _$GUserPartsData_contributionsCollection_contributionCalendar_weeks_contri
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), color.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -24330,7 +24635,7 @@ class GUserPartsData_contributionsCollection_contributionCalendar_weeks_contribu
       _build() {
     final _$result = _$v ??
         new _$GUserPartsData_contributionsCollection_contributionCalendar_weeks_contributionDays
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GUserPartsData_contributionsCollection_contributionCalendar_weeks_contributionDays',
@@ -24350,7 +24655,7 @@ class _$GUserPartsData_sponsoring extends GUserPartsData_sponsoring {
   @override
   final int totalCount;
   @override
-  final BuiltList<GUserPartsData_sponsoring_nodes>? nodes;
+  final BuiltList<GUserPartsData_sponsoring_nodes?>? nodes;
 
   factory _$GUserPartsData_sponsoring(
           [void Function(GUserPartsData_sponsoringBuilder)? updates]) =>
@@ -24385,8 +24690,12 @@ class _$GUserPartsData_sponsoring extends GUserPartsData_sponsoring {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -24412,10 +24721,10 @@ class GUserPartsData_sponsoringBuilder
   int? get totalCount => _$this._totalCount;
   set totalCount(int? totalCount) => _$this._totalCount = totalCount;
 
-  ListBuilder<GUserPartsData_sponsoring_nodes>? _nodes;
-  ListBuilder<GUserPartsData_sponsoring_nodes> get nodes =>
-      _$this._nodes ??= new ListBuilder<GUserPartsData_sponsoring_nodes>();
-  set nodes(ListBuilder<GUserPartsData_sponsoring_nodes>? nodes) =>
+  ListBuilder<GUserPartsData_sponsoring_nodes?>? _nodes;
+  ListBuilder<GUserPartsData_sponsoring_nodes?> get nodes =>
+      _$this._nodes ??= new ListBuilder<GUserPartsData_sponsoring_nodes?>();
+  set nodes(ListBuilder<GUserPartsData_sponsoring_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GUserPartsData_sponsoringBuilder() {
@@ -24509,7 +24818,10 @@ class _$GUserPartsData_sponsoring_nodes__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -24611,7 +24923,11 @@ class _$GUserPartsData_sponsoring_nodes__asUser
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -24724,7 +25040,11 @@ class _$GUserPartsData_sponsoring_nodes__asOrganization
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -24803,7 +25123,7 @@ class _$GUserPartsData_sponsors extends GUserPartsData_sponsors {
   @override
   final int totalCount;
   @override
-  final BuiltList<GUserPartsData_sponsors_nodes>? nodes;
+  final BuiltList<GUserPartsData_sponsors_nodes?>? nodes;
 
   factory _$GUserPartsData_sponsors(
           [void Function(GUserPartsData_sponsorsBuilder)? updates]) =>
@@ -24838,8 +25158,12 @@ class _$GUserPartsData_sponsors extends GUserPartsData_sponsors {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -24865,10 +25189,10 @@ class GUserPartsData_sponsorsBuilder
   int? get totalCount => _$this._totalCount;
   set totalCount(int? totalCount) => _$this._totalCount = totalCount;
 
-  ListBuilder<GUserPartsData_sponsors_nodes>? _nodes;
-  ListBuilder<GUserPartsData_sponsors_nodes> get nodes =>
-      _$this._nodes ??= new ListBuilder<GUserPartsData_sponsors_nodes>();
-  set nodes(ListBuilder<GUserPartsData_sponsors_nodes>? nodes) =>
+  ListBuilder<GUserPartsData_sponsors_nodes?>? _nodes;
+  ListBuilder<GUserPartsData_sponsors_nodes?> get nodes =>
+      _$this._nodes ??= new ListBuilder<GUserPartsData_sponsors_nodes?>();
+  set nodes(ListBuilder<GUserPartsData_sponsors_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GUserPartsData_sponsorsBuilder() {
@@ -24961,7 +25285,10 @@ class _$GUserPartsData_sponsors_nodes__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -25062,7 +25389,11 @@ class _$GUserPartsData_sponsors_nodes__asUser
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -25173,7 +25504,11 @@ class _$GUserPartsData_sponsors_nodes__asOrganization
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -25250,7 +25585,7 @@ class _$GUserPartsData_organizations extends GUserPartsData_organizations {
   @override
   final int totalCount;
   @override
-  final BuiltList<GUserPartsData_organizations_nodes>? nodes;
+  final BuiltList<GUserPartsData_organizations_nodes?>? nodes;
 
   factory _$GUserPartsData_organizations(
           [void Function(GUserPartsData_organizationsBuilder)? updates]) =>
@@ -25285,8 +25620,12 @@ class _$GUserPartsData_organizations extends GUserPartsData_organizations {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -25313,10 +25652,10 @@ class GUserPartsData_organizationsBuilder
   int? get totalCount => _$this._totalCount;
   set totalCount(int? totalCount) => _$this._totalCount = totalCount;
 
-  ListBuilder<GUserPartsData_organizations_nodes>? _nodes;
-  ListBuilder<GUserPartsData_organizations_nodes> get nodes =>
-      _$this._nodes ??= new ListBuilder<GUserPartsData_organizations_nodes>();
-  set nodes(ListBuilder<GUserPartsData_organizations_nodes>? nodes) =>
+  ListBuilder<GUserPartsData_organizations_nodes?>? _nodes;
+  ListBuilder<GUserPartsData_organizations_nodes?> get nodes =>
+      _$this._nodes ??= new ListBuilder<GUserPartsData_organizations_nodes?>();
+  set nodes(ListBuilder<GUserPartsData_organizations_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GUserPartsData_organizationsBuilder() {
@@ -25415,7 +25754,11 @@ class _$GUserPartsData_organizations_nodes
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -25488,7 +25831,7 @@ class _$GUserPartsData_repositories extends GUserPartsData_repositories {
   @override
   final int totalCount;
   @override
-  final BuiltList<GUserPartsData_repositories_nodes>? nodes;
+  final BuiltList<GUserPartsData_repositories_nodes?>? nodes;
 
   factory _$GUserPartsData_repositories(
           [void Function(GUserPartsData_repositoriesBuilder)? updates]) =>
@@ -25523,8 +25866,12 @@ class _$GUserPartsData_repositories extends GUserPartsData_repositories {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -25551,10 +25898,10 @@ class GUserPartsData_repositoriesBuilder
   int? get totalCount => _$this._totalCount;
   set totalCount(int? totalCount) => _$this._totalCount = totalCount;
 
-  ListBuilder<GUserPartsData_repositories_nodes>? _nodes;
-  ListBuilder<GUserPartsData_repositories_nodes> get nodes =>
-      _$this._nodes ??= new ListBuilder<GUserPartsData_repositories_nodes>();
-  set nodes(ListBuilder<GUserPartsData_repositories_nodes>? nodes) =>
+  ListBuilder<GUserPartsData_repositories_nodes?>? _nodes;
+  ListBuilder<GUserPartsData_repositories_nodes?> get nodes =>
+      _$this._nodes ??= new ListBuilder<GUserPartsData_repositories_nodes?>();
+  set nodes(ListBuilder<GUserPartsData_repositories_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GUserPartsData_repositoriesBuilder() {
@@ -25691,22 +26038,18 @@ class _$GUserPartsData_repositories_nodes
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc($jc(0, G__typename.hashCode),
-                                    owner.hashCode),
-                                name.hashCode),
-                            description.hashCode),
-                        isPrivate.hashCode),
-                    isFork.hashCode),
-                stargazers.hashCode),
-            forks.hashCode),
-        primaryLanguage.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, isPrivate.hashCode);
+    _$hash = $jc(_$hash, isFork.hashCode);
+    _$hash = $jc(_$hash, stargazers.hashCode);
+    _$hash = $jc(_$hash, forks.hashCode);
+    _$hash = $jc(_$hash, primaryLanguage.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -25904,8 +26247,12 @@ class _$GUserPartsData_repositories_nodes_owner
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), login.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -26024,7 +26371,11 @@ class _$GUserPartsData_repositories_nodes_stargazers
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -26135,7 +26486,11 @@ class _$GUserPartsData_repositories_nodes_forks
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -26252,8 +26607,12 @@ class _$GUserPartsData_repositories_nodes_primaryLanguage
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), color.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -26372,7 +26731,11 @@ class _$GUserPartsData_starredRepositories
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -26477,7 +26840,11 @@ class _$GUserPartsData_gists extends GUserPartsData_gists {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -26545,7 +26912,7 @@ class _$GUserPartsData_pinnedItems extends GUserPartsData_pinnedItems {
   @override
   final String G__typename;
   @override
-  final BuiltList<GUserPartsData_pinnedItems_nodes>? nodes;
+  final BuiltList<GUserPartsData_pinnedItems_nodes?>? nodes;
 
   factory _$GUserPartsData_pinnedItems(
           [void Function(GUserPartsData_pinnedItemsBuilder)? updates]) =>
@@ -26576,7 +26943,11 @@ class _$GUserPartsData_pinnedItems extends GUserPartsData_pinnedItems {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -26597,10 +26968,10 @@ class GUserPartsData_pinnedItemsBuilder
   String? get G__typename => _$this._G__typename;
   set G__typename(String? G__typename) => _$this._G__typename = G__typename;
 
-  ListBuilder<GUserPartsData_pinnedItems_nodes>? _nodes;
-  ListBuilder<GUserPartsData_pinnedItems_nodes> get nodes =>
-      _$this._nodes ??= new ListBuilder<GUserPartsData_pinnedItems_nodes>();
-  set nodes(ListBuilder<GUserPartsData_pinnedItems_nodes>? nodes) =>
+  ListBuilder<GUserPartsData_pinnedItems_nodes?>? _nodes;
+  ListBuilder<GUserPartsData_pinnedItems_nodes?> get nodes =>
+      _$this._nodes ??= new ListBuilder<GUserPartsData_pinnedItems_nodes?>();
+  set nodes(ListBuilder<GUserPartsData_pinnedItems_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GUserPartsData_pinnedItemsBuilder() {
@@ -26691,7 +27062,10 @@ class _$GUserPartsData_pinnedItems_nodes__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -26835,22 +27209,18 @@ class _$GUserPartsData_pinnedItems_nodes__asRepository
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc($jc(0, G__typename.hashCode),
-                                    owner.hashCode),
-                                name.hashCode),
-                            description.hashCode),
-                        isPrivate.hashCode),
-                    isFork.hashCode),
-                stargazers.hashCode),
-            forks.hashCode),
-        primaryLanguage.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, isPrivate.hashCode);
+    _$hash = $jc(_$hash, isFork.hashCode);
+    _$hash = $jc(_$hash, stargazers.hashCode);
+    _$hash = $jc(_$hash, forks.hashCode);
+    _$hash = $jc(_$hash, primaryLanguage.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -27066,8 +27436,12 @@ class _$GUserPartsData_pinnedItems_nodes__asRepository_owner
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), login.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -27203,7 +27577,11 @@ class _$GUserPartsData_pinnedItems_nodes__asRepository_stargazers
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -27325,7 +27703,11 @@ class _$GUserPartsData_pinnedItems_nodes__asRepository_forks
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -27455,8 +27837,12 @@ class _$GUserPartsData_pinnedItems_nodes__asRepository_primaryLanguage
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), color.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -27542,4 +27928,4 @@ class GUserPartsData_pinnedItems_nodes__asRepository_primaryLanguageBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

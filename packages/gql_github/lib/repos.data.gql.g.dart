@@ -204,7 +204,8 @@ class _$GReposData_repositoryOwner_repositoriesSerializer
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(GReposData_repositoryOwner_repositories_nodes)
+              const FullType.nullable(
+                  GReposData_repositoryOwner_repositories_nodes)
             ])));
     }
     return result;
@@ -235,7 +236,8 @@ class _$GReposData_repositoryOwner_repositoriesSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GReposData_repositoryOwner_repositories_nodes)
+                const FullType.nullable(
+                    GReposData_repositoryOwner_repositories_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -815,7 +817,7 @@ class _$GStarsData_user_starredRepositoriesSerializer
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(GStarsData_user_starredRepositories_nodes)
+              const FullType.nullable(GStarsData_user_starredRepositories_nodes)
             ])));
     }
     return result;
@@ -846,7 +848,8 @@ class _$GStarsData_user_starredRepositoriesSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GStarsData_user_starredRepositories_nodes)
+                const FullType.nullable(
+                    GStarsData_user_starredRepositories_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -1664,7 +1667,11 @@ class _$GReposData extends GReposData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), repositoryOwner.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, repositoryOwner.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -1779,7 +1786,11 @@ class _$GReposData_repositoryOwner extends GReposData_repositoryOwner {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), repositories.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, repositories.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -1867,7 +1878,7 @@ class _$GReposData_repositoryOwner_repositories
   @override
   final GReposData_repositoryOwner_repositories_pageInfo pageInfo;
   @override
-  final BuiltList<GReposData_repositoryOwner_repositories_nodes>? nodes;
+  final BuiltList<GReposData_repositoryOwner_repositories_nodes?>? nodes;
 
   factory _$GReposData_repositoryOwner_repositories(
           [void Function(GReposData_repositoryOwner_repositoriesBuilder)?
@@ -1905,8 +1916,12 @@ class _$GReposData_repositoryOwner_repositories
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), pageInfo.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, pageInfo.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -1938,12 +1953,12 @@ class GReposData_repositoryOwner_repositoriesBuilder
           GReposData_repositoryOwner_repositories_pageInfoBuilder? pageInfo) =>
       _$this._pageInfo = pageInfo;
 
-  ListBuilder<GReposData_repositoryOwner_repositories_nodes>? _nodes;
-  ListBuilder<GReposData_repositoryOwner_repositories_nodes> get nodes =>
+  ListBuilder<GReposData_repositoryOwner_repositories_nodes?>? _nodes;
+  ListBuilder<GReposData_repositoryOwner_repositories_nodes?> get nodes =>
       _$this._nodes ??=
-          new ListBuilder<GReposData_repositoryOwner_repositories_nodes>();
+          new ListBuilder<GReposData_repositoryOwner_repositories_nodes?>();
   set nodes(
-          ListBuilder<GReposData_repositoryOwner_repositories_nodes>? nodes) =>
+          ListBuilder<GReposData_repositoryOwner_repositories_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GReposData_repositoryOwner_repositoriesBuilder() {
@@ -2053,8 +2068,12 @@ class _$GReposData_repositoryOwner_repositories_pageInfo
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), hasNextPage.hashCode),
-        endCursor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, hasNextPage.hashCode);
+    _$hash = $jc(_$hash, endCursor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -2223,24 +2242,19 @@ class _$GReposData_repositoryOwner_repositories_nodes
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc($jc(0, G__typename.hashCode),
-                                        owner.hashCode),
-                                    name.hashCode),
-                                description.hashCode),
-                            isPrivate.hashCode),
-                        isFork.hashCode),
-                    stargazers.hashCode),
-                forks.hashCode),
-            primaryLanguage.hashCode),
-        updatedAt.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, isPrivate.hashCode);
+    _$hash = $jc(_$hash, isFork.hashCode);
+    _$hash = $jc(_$hash, stargazers.hashCode);
+    _$hash = $jc(_$hash, forks.hashCode);
+    _$hash = $jc(_$hash, primaryLanguage.hashCode);
+    _$hash = $jc(_$hash, updatedAt.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -2466,8 +2480,12 @@ class _$GReposData_repositoryOwner_repositories_nodes_owner
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), login.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -2601,7 +2619,11 @@ class _$GReposData_repositoryOwner_repositories_nodes_stargazers
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -2722,7 +2744,11 @@ class _$GReposData_repositoryOwner_repositories_nodes_forks
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -2851,8 +2877,12 @@ class _$GReposData_repositoryOwner_repositories_nodes_primaryLanguage
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), color.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -2969,7 +2999,11 @@ class _$GStarsData extends GStarsData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), user.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, user.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3081,7 +3115,11 @@ class _$GStarsData_user extends GStarsData_user {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), starredRepositories.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, starredRepositories.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3168,7 +3206,7 @@ class _$GStarsData_user_starredRepositories
   @override
   final GStarsData_user_starredRepositories_pageInfo pageInfo;
   @override
-  final BuiltList<GStarsData_user_starredRepositories_nodes>? nodes;
+  final BuiltList<GStarsData_user_starredRepositories_nodes?>? nodes;
 
   factory _$GStarsData_user_starredRepositories(
           [void Function(GStarsData_user_starredRepositoriesBuilder)?
@@ -3205,8 +3243,12 @@ class _$GStarsData_user_starredRepositories
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), pageInfo.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, pageInfo.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3236,11 +3278,11 @@ class GStarsData_user_starredRepositoriesBuilder
   set pageInfo(GStarsData_user_starredRepositories_pageInfoBuilder? pageInfo) =>
       _$this._pageInfo = pageInfo;
 
-  ListBuilder<GStarsData_user_starredRepositories_nodes>? _nodes;
-  ListBuilder<GStarsData_user_starredRepositories_nodes> get nodes =>
+  ListBuilder<GStarsData_user_starredRepositories_nodes?>? _nodes;
+  ListBuilder<GStarsData_user_starredRepositories_nodes?> get nodes =>
       _$this._nodes ??=
-          new ListBuilder<GStarsData_user_starredRepositories_nodes>();
-  set nodes(ListBuilder<GStarsData_user_starredRepositories_nodes>? nodes) =>
+          new ListBuilder<GStarsData_user_starredRepositories_nodes?>();
+  set nodes(ListBuilder<GStarsData_user_starredRepositories_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GStarsData_user_starredRepositoriesBuilder() {
@@ -3348,8 +3390,12 @@ class _$GStarsData_user_starredRepositories_pageInfo
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), hasNextPage.hashCode),
-        endCursor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, hasNextPage.hashCode);
+    _$hash = $jc(_$hash, endCursor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3513,24 +3559,19 @@ class _$GStarsData_user_starredRepositories_nodes
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc($jc(0, G__typename.hashCode),
-                                        owner.hashCode),
-                                    name.hashCode),
-                                description.hashCode),
-                            isPrivate.hashCode),
-                        isFork.hashCode),
-                    stargazers.hashCode),
-                forks.hashCode),
-            primaryLanguage.hashCode),
-        updatedAt.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, isPrivate.hashCode);
+    _$hash = $jc(_$hash, isFork.hashCode);
+    _$hash = $jc(_$hash, stargazers.hashCode);
+    _$hash = $jc(_$hash, forks.hashCode);
+    _$hash = $jc(_$hash, primaryLanguage.hashCode);
+    _$hash = $jc(_$hash, updatedAt.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3747,8 +3788,12 @@ class _$GStarsData_user_starredRepositories_nodes_owner
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), login.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3875,7 +3920,11 @@ class _$GStarsData_user_starredRepositories_nodes_stargazers
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3995,7 +4044,11 @@ class _$GStarsData_user_starredRepositories_nodes_forks
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4120,8 +4173,12 @@ class _$GStarsData_user_starredRepositories_nodes_primaryLanguage
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), color.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4281,24 +4338,19 @@ class _$GRepoPartsData extends GRepoPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc($jc(0, G__typename.hashCode),
-                                        owner.hashCode),
-                                    name.hashCode),
-                                description.hashCode),
-                            isPrivate.hashCode),
-                        isFork.hashCode),
-                    stargazers.hashCode),
-                forks.hashCode),
-            primaryLanguage.hashCode),
-        updatedAt.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jc(_$hash, isPrivate.hashCode);
+    _$hash = $jc(_$hash, isFork.hashCode);
+    _$hash = $jc(_$hash, stargazers.hashCode);
+    _$hash = $jc(_$hash, forks.hashCode);
+    _$hash = $jc(_$hash, primaryLanguage.hashCode);
+    _$hash = $jc(_$hash, updatedAt.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4490,8 +4542,12 @@ class _$GRepoPartsData_owner extends GRepoPartsData_owner {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), login.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4601,7 +4657,11 @@ class _$GRepoPartsData_stargazers extends GRepoPartsData_stargazers {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4704,7 +4764,11 @@ class _$GRepoPartsData_forks extends GRepoPartsData_forks {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4809,8 +4873,12 @@ class _$GRepoPartsData_primaryLanguage extends GRepoPartsData_primaryLanguage {
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), color.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4883,4 +4951,4 @@ class GRepoPartsData_primaryLanguageBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

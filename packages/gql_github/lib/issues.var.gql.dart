@@ -11,16 +11,19 @@ part 'issues.var.gql.g.dart';
 abstract class GIssuesVars implements Built<GIssuesVars, GIssuesVarsBuilder> {
   GIssuesVars._();
 
-  factory GIssuesVars([Function(GIssuesVarsBuilder b) updates]) = _$GIssuesVars;
+  factory GIssuesVars([void Function(GIssuesVarsBuilder b) updates]) =
+      _$GIssuesVars;
 
   String get owner;
   String get name;
   String? get cursor;
   static Serializer<GIssuesVars> get serializer => _$gIssuesVarsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GIssuesVars.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GIssuesVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GIssuesVars.serializer,
@@ -31,16 +34,19 @@ abstract class GIssuesVars implements Built<GIssuesVars, GIssuesVarsBuilder> {
 abstract class GPullsVars implements Built<GPullsVars, GPullsVarsBuilder> {
   GPullsVars._();
 
-  factory GPullsVars([Function(GPullsVarsBuilder b) updates]) = _$GPullsVars;
+  factory GPullsVars([void Function(GPullsVarsBuilder b) updates]) =
+      _$GPullsVars;
 
   String get owner;
   String get name;
   String? get cursor;
   static Serializer<GPullsVars> get serializer => _$gPullsVarsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GPullsVars.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GPullsVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GPullsVars.serializer,

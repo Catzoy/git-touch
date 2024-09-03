@@ -884,6 +884,8 @@ class _$GFollowersReq extends GFollowersReq {
   final _i1.FetchPolicy? fetchPolicy;
   @override
   final bool executeOnListen;
+  @override
+  final _i4.Context? context;
 
   factory _$GFollowersReq([void Function(GFollowersReqBuilder)? updates]) =>
       (new GFollowersReqBuilder()..update(updates))._build();
@@ -897,7 +899,8 @@ class _$GFollowersReq extends GFollowersReq {
       this.updateCacheHandlerKey,
       this.updateCacheHandlerContext,
       this.fetchPolicy,
-      required this.executeOnListen})
+      required this.executeOnListen,
+      this.context})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(vars, r'GFollowersReq', 'vars');
     BuiltValueNullFieldError.checkNotNull(
@@ -926,25 +929,25 @@ class _$GFollowersReq extends GFollowersReq {
         updateCacheHandlerKey == other.updateCacheHandlerKey &&
         updateCacheHandlerContext == other.updateCacheHandlerContext &&
         fetchPolicy == other.fetchPolicy &&
-        executeOnListen == other.executeOnListen;
+        executeOnListen == other.executeOnListen &&
+        context == other.context;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc($jc($jc(0, vars.hashCode), operation.hashCode),
-                                requestId.hashCode),
-                            updateResult.hashCode),
-                        optimisticResponse.hashCode),
-                    updateCacheHandlerKey.hashCode),
-                updateCacheHandlerContext.hashCode),
-            fetchPolicy.hashCode),
-        executeOnListen.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, vars.hashCode);
+    _$hash = $jc(_$hash, operation.hashCode);
+    _$hash = $jc(_$hash, requestId.hashCode);
+    _$hash = $jc(_$hash, updateResult.hashCode);
+    _$hash = $jc(_$hash, optimisticResponse.hashCode);
+    _$hash = $jc(_$hash, updateCacheHandlerKey.hashCode);
+    _$hash = $jc(_$hash, updateCacheHandlerContext.hashCode);
+    _$hash = $jc(_$hash, fetchPolicy.hashCode);
+    _$hash = $jc(_$hash, executeOnListen.hashCode);
+    _$hash = $jc(_$hash, context.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -958,7 +961,8 @@ class _$GFollowersReq extends GFollowersReq {
           ..add('updateCacheHandlerKey', updateCacheHandlerKey)
           ..add('updateCacheHandlerContext', updateCacheHandlerContext)
           ..add('fetchPolicy', fetchPolicy)
-          ..add('executeOnListen', executeOnListen))
+          ..add('executeOnListen', executeOnListen)
+          ..add('context', context))
         .toString();
   }
 }
@@ -1018,6 +1022,10 @@ class GFollowersReqBuilder
   set executeOnListen(bool? executeOnListen) =>
       _$this._executeOnListen = executeOnListen;
 
+  _i4.Context? _context;
+  _i4.Context? get context => _$this._context;
+  set context(_i4.Context? context) => _$this._context = context;
+
   GFollowersReqBuilder() {
     GFollowersReq._initializeBuilder(this);
   }
@@ -1034,6 +1042,7 @@ class GFollowersReqBuilder
       _updateCacheHandlerContext = $v.updateCacheHandlerContext;
       _fetchPolicy = $v.fetchPolicy;
       _executeOnListen = $v.executeOnListen;
+      _context = $v.context;
       _$v = null;
     }
     return this;
@@ -1068,7 +1077,8 @@ class GFollowersReqBuilder
               updateCacheHandlerContext: updateCacheHandlerContext,
               fetchPolicy: fetchPolicy,
               executeOnListen: BuiltValueNullFieldError.checkNotNull(
-                  executeOnListen, r'GFollowersReq', 'executeOnListen'));
+                  executeOnListen, r'GFollowersReq', 'executeOnListen'),
+              context: context);
     } catch (_) {
       late String _$failedField;
       try {
@@ -1108,6 +1118,8 @@ class _$GFollowingReq extends GFollowingReq {
   final _i1.FetchPolicy? fetchPolicy;
   @override
   final bool executeOnListen;
+  @override
+  final _i4.Context? context;
 
   factory _$GFollowingReq([void Function(GFollowingReqBuilder)? updates]) =>
       (new GFollowingReqBuilder()..update(updates))._build();
@@ -1121,7 +1133,8 @@ class _$GFollowingReq extends GFollowingReq {
       this.updateCacheHandlerKey,
       this.updateCacheHandlerContext,
       this.fetchPolicy,
-      required this.executeOnListen})
+      required this.executeOnListen,
+      this.context})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(vars, r'GFollowingReq', 'vars');
     BuiltValueNullFieldError.checkNotNull(
@@ -1150,25 +1163,25 @@ class _$GFollowingReq extends GFollowingReq {
         updateCacheHandlerKey == other.updateCacheHandlerKey &&
         updateCacheHandlerContext == other.updateCacheHandlerContext &&
         fetchPolicy == other.fetchPolicy &&
-        executeOnListen == other.executeOnListen;
+        executeOnListen == other.executeOnListen &&
+        context == other.context;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc($jc($jc(0, vars.hashCode), operation.hashCode),
-                                requestId.hashCode),
-                            updateResult.hashCode),
-                        optimisticResponse.hashCode),
-                    updateCacheHandlerKey.hashCode),
-                updateCacheHandlerContext.hashCode),
-            fetchPolicy.hashCode),
-        executeOnListen.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, vars.hashCode);
+    _$hash = $jc(_$hash, operation.hashCode);
+    _$hash = $jc(_$hash, requestId.hashCode);
+    _$hash = $jc(_$hash, updateResult.hashCode);
+    _$hash = $jc(_$hash, optimisticResponse.hashCode);
+    _$hash = $jc(_$hash, updateCacheHandlerKey.hashCode);
+    _$hash = $jc(_$hash, updateCacheHandlerContext.hashCode);
+    _$hash = $jc(_$hash, fetchPolicy.hashCode);
+    _$hash = $jc(_$hash, executeOnListen.hashCode);
+    _$hash = $jc(_$hash, context.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -1182,7 +1195,8 @@ class _$GFollowingReq extends GFollowingReq {
           ..add('updateCacheHandlerKey', updateCacheHandlerKey)
           ..add('updateCacheHandlerContext', updateCacheHandlerContext)
           ..add('fetchPolicy', fetchPolicy)
-          ..add('executeOnListen', executeOnListen))
+          ..add('executeOnListen', executeOnListen)
+          ..add('context', context))
         .toString();
   }
 }
@@ -1242,6 +1256,10 @@ class GFollowingReqBuilder
   set executeOnListen(bool? executeOnListen) =>
       _$this._executeOnListen = executeOnListen;
 
+  _i4.Context? _context;
+  _i4.Context? get context => _$this._context;
+  set context(_i4.Context? context) => _$this._context = context;
+
   GFollowingReqBuilder() {
     GFollowingReq._initializeBuilder(this);
   }
@@ -1258,6 +1276,7 @@ class GFollowingReqBuilder
       _updateCacheHandlerContext = $v.updateCacheHandlerContext;
       _fetchPolicy = $v.fetchPolicy;
       _executeOnListen = $v.executeOnListen;
+      _context = $v.context;
       _$v = null;
     }
     return this;
@@ -1292,7 +1311,8 @@ class GFollowingReqBuilder
               updateCacheHandlerContext: updateCacheHandlerContext,
               fetchPolicy: fetchPolicy,
               executeOnListen: BuiltValueNullFieldError.checkNotNull(
-                  executeOnListen, r'GFollowingReq', 'executeOnListen'));
+                  executeOnListen, r'GFollowingReq', 'executeOnListen'),
+              context: context);
     } catch (_) {
       late String _$failedField;
       try {
@@ -1331,6 +1351,8 @@ class _$GOrgsReq extends GOrgsReq {
   final _i1.FetchPolicy? fetchPolicy;
   @override
   final bool executeOnListen;
+  @override
+  final _i4.Context? context;
 
   factory _$GOrgsReq([void Function(GOrgsReqBuilder)? updates]) =>
       (new GOrgsReqBuilder()..update(updates))._build();
@@ -1344,7 +1366,8 @@ class _$GOrgsReq extends GOrgsReq {
       this.updateCacheHandlerKey,
       this.updateCacheHandlerContext,
       this.fetchPolicy,
-      required this.executeOnListen})
+      required this.executeOnListen,
+      this.context})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(vars, r'GOrgsReq', 'vars');
     BuiltValueNullFieldError.checkNotNull(operation, r'GOrgsReq', 'operation');
@@ -1372,25 +1395,25 @@ class _$GOrgsReq extends GOrgsReq {
         updateCacheHandlerKey == other.updateCacheHandlerKey &&
         updateCacheHandlerContext == other.updateCacheHandlerContext &&
         fetchPolicy == other.fetchPolicy &&
-        executeOnListen == other.executeOnListen;
+        executeOnListen == other.executeOnListen &&
+        context == other.context;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc($jc($jc(0, vars.hashCode), operation.hashCode),
-                                requestId.hashCode),
-                            updateResult.hashCode),
-                        optimisticResponse.hashCode),
-                    updateCacheHandlerKey.hashCode),
-                updateCacheHandlerContext.hashCode),
-            fetchPolicy.hashCode),
-        executeOnListen.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, vars.hashCode);
+    _$hash = $jc(_$hash, operation.hashCode);
+    _$hash = $jc(_$hash, requestId.hashCode);
+    _$hash = $jc(_$hash, updateResult.hashCode);
+    _$hash = $jc(_$hash, optimisticResponse.hashCode);
+    _$hash = $jc(_$hash, updateCacheHandlerKey.hashCode);
+    _$hash = $jc(_$hash, updateCacheHandlerContext.hashCode);
+    _$hash = $jc(_$hash, fetchPolicy.hashCode);
+    _$hash = $jc(_$hash, executeOnListen.hashCode);
+    _$hash = $jc(_$hash, context.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -1404,7 +1427,8 @@ class _$GOrgsReq extends GOrgsReq {
           ..add('updateCacheHandlerKey', updateCacheHandlerKey)
           ..add('updateCacheHandlerContext', updateCacheHandlerContext)
           ..add('fetchPolicy', fetchPolicy)
-          ..add('executeOnListen', executeOnListen))
+          ..add('executeOnListen', executeOnListen)
+          ..add('context', context))
         .toString();
   }
 }
@@ -1460,6 +1484,10 @@ class GOrgsReqBuilder implements Builder<GOrgsReq, GOrgsReqBuilder> {
   set executeOnListen(bool? executeOnListen) =>
       _$this._executeOnListen = executeOnListen;
 
+  _i4.Context? _context;
+  _i4.Context? get context => _$this._context;
+  set context(_i4.Context? context) => _$this._context = context;
+
   GOrgsReqBuilder() {
     GOrgsReq._initializeBuilder(this);
   }
@@ -1476,6 +1504,7 @@ class GOrgsReqBuilder implements Builder<GOrgsReq, GOrgsReqBuilder> {
       _updateCacheHandlerContext = $v.updateCacheHandlerContext;
       _fetchPolicy = $v.fetchPolicy;
       _executeOnListen = $v.executeOnListen;
+      _context = $v.context;
       _$v = null;
     }
     return this;
@@ -1510,7 +1539,8 @@ class GOrgsReqBuilder implements Builder<GOrgsReq, GOrgsReqBuilder> {
               updateCacheHandlerContext: updateCacheHandlerContext,
               fetchPolicy: fetchPolicy,
               executeOnListen: BuiltValueNullFieldError.checkNotNull(
-                  executeOnListen, r'GOrgsReq', 'executeOnListen'));
+                  executeOnListen, r'GOrgsReq', 'executeOnListen'),
+              context: context);
     } catch (_) {
       late String _$failedField;
       try {
@@ -1550,6 +1580,8 @@ class _$GMembersReq extends GMembersReq {
   final _i1.FetchPolicy? fetchPolicy;
   @override
   final bool executeOnListen;
+  @override
+  final _i4.Context? context;
 
   factory _$GMembersReq([void Function(GMembersReqBuilder)? updates]) =>
       (new GMembersReqBuilder()..update(updates))._build();
@@ -1563,7 +1595,8 @@ class _$GMembersReq extends GMembersReq {
       this.updateCacheHandlerKey,
       this.updateCacheHandlerContext,
       this.fetchPolicy,
-      required this.executeOnListen})
+      required this.executeOnListen,
+      this.context})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(vars, r'GMembersReq', 'vars');
     BuiltValueNullFieldError.checkNotNull(
@@ -1592,25 +1625,25 @@ class _$GMembersReq extends GMembersReq {
         updateCacheHandlerKey == other.updateCacheHandlerKey &&
         updateCacheHandlerContext == other.updateCacheHandlerContext &&
         fetchPolicy == other.fetchPolicy &&
-        executeOnListen == other.executeOnListen;
+        executeOnListen == other.executeOnListen &&
+        context == other.context;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc($jc($jc(0, vars.hashCode), operation.hashCode),
-                                requestId.hashCode),
-                            updateResult.hashCode),
-                        optimisticResponse.hashCode),
-                    updateCacheHandlerKey.hashCode),
-                updateCacheHandlerContext.hashCode),
-            fetchPolicy.hashCode),
-        executeOnListen.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, vars.hashCode);
+    _$hash = $jc(_$hash, operation.hashCode);
+    _$hash = $jc(_$hash, requestId.hashCode);
+    _$hash = $jc(_$hash, updateResult.hashCode);
+    _$hash = $jc(_$hash, optimisticResponse.hashCode);
+    _$hash = $jc(_$hash, updateCacheHandlerKey.hashCode);
+    _$hash = $jc(_$hash, updateCacheHandlerContext.hashCode);
+    _$hash = $jc(_$hash, fetchPolicy.hashCode);
+    _$hash = $jc(_$hash, executeOnListen.hashCode);
+    _$hash = $jc(_$hash, context.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -1624,7 +1657,8 @@ class _$GMembersReq extends GMembersReq {
           ..add('updateCacheHandlerKey', updateCacheHandlerKey)
           ..add('updateCacheHandlerContext', updateCacheHandlerContext)
           ..add('fetchPolicy', fetchPolicy)
-          ..add('executeOnListen', executeOnListen))
+          ..add('executeOnListen', executeOnListen)
+          ..add('context', context))
         .toString();
   }
 }
@@ -1682,6 +1716,10 @@ class GMembersReqBuilder implements Builder<GMembersReq, GMembersReqBuilder> {
   set executeOnListen(bool? executeOnListen) =>
       _$this._executeOnListen = executeOnListen;
 
+  _i4.Context? _context;
+  _i4.Context? get context => _$this._context;
+  set context(_i4.Context? context) => _$this._context = context;
+
   GMembersReqBuilder() {
     GMembersReq._initializeBuilder(this);
   }
@@ -1698,6 +1736,7 @@ class GMembersReqBuilder implements Builder<GMembersReq, GMembersReqBuilder> {
       _updateCacheHandlerContext = $v.updateCacheHandlerContext;
       _fetchPolicy = $v.fetchPolicy;
       _executeOnListen = $v.executeOnListen;
+      _context = $v.context;
       _$v = null;
     }
     return this;
@@ -1732,7 +1771,8 @@ class GMembersReqBuilder implements Builder<GMembersReq, GMembersReqBuilder> {
               updateCacheHandlerContext: updateCacheHandlerContext,
               fetchPolicy: fetchPolicy,
               executeOnListen: BuiltValueNullFieldError.checkNotNull(
-                  executeOnListen, r'GMembersReq', 'executeOnListen'));
+                  executeOnListen, r'GMembersReq', 'executeOnListen'),
+              context: context);
     } catch (_) {
       late String _$failedField;
       try {
@@ -1772,6 +1812,8 @@ class _$GWatchersReq extends GWatchersReq {
   final _i1.FetchPolicy? fetchPolicy;
   @override
   final bool executeOnListen;
+  @override
+  final _i4.Context? context;
 
   factory _$GWatchersReq([void Function(GWatchersReqBuilder)? updates]) =>
       (new GWatchersReqBuilder()..update(updates))._build();
@@ -1785,7 +1827,8 @@ class _$GWatchersReq extends GWatchersReq {
       this.updateCacheHandlerKey,
       this.updateCacheHandlerContext,
       this.fetchPolicy,
-      required this.executeOnListen})
+      required this.executeOnListen,
+      this.context})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(vars, r'GWatchersReq', 'vars');
     BuiltValueNullFieldError.checkNotNull(
@@ -1814,25 +1857,25 @@ class _$GWatchersReq extends GWatchersReq {
         updateCacheHandlerKey == other.updateCacheHandlerKey &&
         updateCacheHandlerContext == other.updateCacheHandlerContext &&
         fetchPolicy == other.fetchPolicy &&
-        executeOnListen == other.executeOnListen;
+        executeOnListen == other.executeOnListen &&
+        context == other.context;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc($jc($jc(0, vars.hashCode), operation.hashCode),
-                                requestId.hashCode),
-                            updateResult.hashCode),
-                        optimisticResponse.hashCode),
-                    updateCacheHandlerKey.hashCode),
-                updateCacheHandlerContext.hashCode),
-            fetchPolicy.hashCode),
-        executeOnListen.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, vars.hashCode);
+    _$hash = $jc(_$hash, operation.hashCode);
+    _$hash = $jc(_$hash, requestId.hashCode);
+    _$hash = $jc(_$hash, updateResult.hashCode);
+    _$hash = $jc(_$hash, optimisticResponse.hashCode);
+    _$hash = $jc(_$hash, updateCacheHandlerKey.hashCode);
+    _$hash = $jc(_$hash, updateCacheHandlerContext.hashCode);
+    _$hash = $jc(_$hash, fetchPolicy.hashCode);
+    _$hash = $jc(_$hash, executeOnListen.hashCode);
+    _$hash = $jc(_$hash, context.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -1846,7 +1889,8 @@ class _$GWatchersReq extends GWatchersReq {
           ..add('updateCacheHandlerKey', updateCacheHandlerKey)
           ..add('updateCacheHandlerContext', updateCacheHandlerContext)
           ..add('fetchPolicy', fetchPolicy)
-          ..add('executeOnListen', executeOnListen))
+          ..add('executeOnListen', executeOnListen)
+          ..add('context', context))
         .toString();
   }
 }
@@ -1905,6 +1949,10 @@ class GWatchersReqBuilder
   set executeOnListen(bool? executeOnListen) =>
       _$this._executeOnListen = executeOnListen;
 
+  _i4.Context? _context;
+  _i4.Context? get context => _$this._context;
+  set context(_i4.Context? context) => _$this._context = context;
+
   GWatchersReqBuilder() {
     GWatchersReq._initializeBuilder(this);
   }
@@ -1921,6 +1969,7 @@ class GWatchersReqBuilder
       _updateCacheHandlerContext = $v.updateCacheHandlerContext;
       _fetchPolicy = $v.fetchPolicy;
       _executeOnListen = $v.executeOnListen;
+      _context = $v.context;
       _$v = null;
     }
     return this;
@@ -1955,7 +2004,8 @@ class GWatchersReqBuilder
               updateCacheHandlerContext: updateCacheHandlerContext,
               fetchPolicy: fetchPolicy,
               executeOnListen: BuiltValueNullFieldError.checkNotNull(
-                  executeOnListen, r'GWatchersReq', 'executeOnListen'));
+                  executeOnListen, r'GWatchersReq', 'executeOnListen'),
+              context: context);
     } catch (_) {
       late String _$failedField;
       try {
@@ -1995,6 +2045,8 @@ class _$GStargazersReq extends GStargazersReq {
   final _i1.FetchPolicy? fetchPolicy;
   @override
   final bool executeOnListen;
+  @override
+  final _i4.Context? context;
 
   factory _$GStargazersReq([void Function(GStargazersReqBuilder)? updates]) =>
       (new GStargazersReqBuilder()..update(updates))._build();
@@ -2008,7 +2060,8 @@ class _$GStargazersReq extends GStargazersReq {
       this.updateCacheHandlerKey,
       this.updateCacheHandlerContext,
       this.fetchPolicy,
-      required this.executeOnListen})
+      required this.executeOnListen,
+      this.context})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(vars, r'GStargazersReq', 'vars');
     BuiltValueNullFieldError.checkNotNull(
@@ -2038,25 +2091,25 @@ class _$GStargazersReq extends GStargazersReq {
         updateCacheHandlerKey == other.updateCacheHandlerKey &&
         updateCacheHandlerContext == other.updateCacheHandlerContext &&
         fetchPolicy == other.fetchPolicy &&
-        executeOnListen == other.executeOnListen;
+        executeOnListen == other.executeOnListen &&
+        context == other.context;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc($jc($jc(0, vars.hashCode), operation.hashCode),
-                                requestId.hashCode),
-                            updateResult.hashCode),
-                        optimisticResponse.hashCode),
-                    updateCacheHandlerKey.hashCode),
-                updateCacheHandlerContext.hashCode),
-            fetchPolicy.hashCode),
-        executeOnListen.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, vars.hashCode);
+    _$hash = $jc(_$hash, operation.hashCode);
+    _$hash = $jc(_$hash, requestId.hashCode);
+    _$hash = $jc(_$hash, updateResult.hashCode);
+    _$hash = $jc(_$hash, optimisticResponse.hashCode);
+    _$hash = $jc(_$hash, updateCacheHandlerKey.hashCode);
+    _$hash = $jc(_$hash, updateCacheHandlerContext.hashCode);
+    _$hash = $jc(_$hash, fetchPolicy.hashCode);
+    _$hash = $jc(_$hash, executeOnListen.hashCode);
+    _$hash = $jc(_$hash, context.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -2070,7 +2123,8 @@ class _$GStargazersReq extends GStargazersReq {
           ..add('updateCacheHandlerKey', updateCacheHandlerKey)
           ..add('updateCacheHandlerContext', updateCacheHandlerContext)
           ..add('fetchPolicy', fetchPolicy)
-          ..add('executeOnListen', executeOnListen))
+          ..add('executeOnListen', executeOnListen)
+          ..add('context', context))
         .toString();
   }
 }
@@ -2130,6 +2184,10 @@ class GStargazersReqBuilder
   set executeOnListen(bool? executeOnListen) =>
       _$this._executeOnListen = executeOnListen;
 
+  _i4.Context? _context;
+  _i4.Context? get context => _$this._context;
+  set context(_i4.Context? context) => _$this._context = context;
+
   GStargazersReqBuilder() {
     GStargazersReq._initializeBuilder(this);
   }
@@ -2146,6 +2204,7 @@ class GStargazersReqBuilder
       _updateCacheHandlerContext = $v.updateCacheHandlerContext;
       _fetchPolicy = $v.fetchPolicy;
       _executeOnListen = $v.executeOnListen;
+      _context = $v.context;
       _$v = null;
     }
     return this;
@@ -2180,7 +2239,8 @@ class GStargazersReqBuilder
               updateCacheHandlerContext: updateCacheHandlerContext,
               fetchPolicy: fetchPolicy,
               executeOnListen: BuiltValueNullFieldError.checkNotNull(
-                  executeOnListen, r'GStargazersReq', 'executeOnListen'));
+                  executeOnListen, r'GStargazersReq', 'executeOnListen'),
+              context: context);
     } catch (_) {
       late String _$failedField;
       try {
@@ -2245,10 +2305,13 @@ class _$GUserPartsReq extends GUserPartsReq {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, vars.hashCode), document.hashCode),
-            fragmentName.hashCode),
-        idFields.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, vars.hashCode);
+    _$hash = $jc(_$hash, document.hashCode);
+    _$hash = $jc(_$hash, fragmentName.hashCode);
+    _$hash = $jc(_$hash, idFields.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -2385,10 +2448,13 @@ class _$GOrgPartsReq extends GOrgPartsReq {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, vars.hashCode), document.hashCode),
-            fragmentName.hashCode),
-        idFields.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, vars.hashCode);
+    _$hash = $jc(_$hash, document.hashCode);
+    _$hash = $jc(_$hash, fragmentName.hashCode);
+    _$hash = $jc(_$hash, idFields.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -2480,4 +2546,4 @@ class GOrgPartsReqBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

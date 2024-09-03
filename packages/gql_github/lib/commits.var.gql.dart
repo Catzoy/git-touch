@@ -12,7 +12,7 @@ abstract class GCommitsVars
     implements Built<GCommitsVars, GCommitsVarsBuilder> {
   GCommitsVars._();
 
-  factory GCommitsVars([Function(GCommitsVarsBuilder b) updates]) =
+  factory GCommitsVars([void Function(GCommitsVarsBuilder b) updates]) =
       _$GCommitsVars;
 
   String get owner;
@@ -21,10 +21,12 @@ abstract class GCommitsVars
   bool get hasRef;
   String? get after;
   static Serializer<GCommitsVars> get serializer => _$gCommitsVarsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsVars.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCommitsVars.serializer,
@@ -37,16 +39,18 @@ abstract class GCommitsRefCommitVars
   GCommitsRefCommitVars._();
 
   factory GCommitsRefCommitVars(
-          [Function(GCommitsRefCommitVarsBuilder b) updates]) =
+          [void Function(GCommitsRefCommitVarsBuilder b) updates]) =
       _$GCommitsRefCommitVars;
 
   String? get after;
   static Serializer<GCommitsRefCommitVars> get serializer =>
       _$gCommitsRefCommitVarsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsRefCommitVars.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefCommitVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCommitsRefCommitVars.serializer,
@@ -58,16 +62,18 @@ abstract class GCommitsRefVars
     implements Built<GCommitsRefVars, GCommitsRefVarsBuilder> {
   GCommitsRefVars._();
 
-  factory GCommitsRefVars([Function(GCommitsRefVarsBuilder b) updates]) =
+  factory GCommitsRefVars([void Function(GCommitsRefVarsBuilder b) updates]) =
       _$GCommitsRefVars;
 
   String? get after;
   static Serializer<GCommitsRefVars> get serializer =>
       _$gCommitsRefVarsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsRefVars.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCommitsRefVars.serializer,

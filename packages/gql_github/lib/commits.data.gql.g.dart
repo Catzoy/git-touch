@@ -443,7 +443,7 @@ class _$GCommitsData_repository_defaultBranchRef_target__asCommit_historySeriali
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(
+              const FullType.nullable(
                   GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes)
             ])));
     }
@@ -476,7 +476,7 @@ class _$GCommitsData_repository_defaultBranchRef_target__asCommit_historySeriali
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(
+                const FullType.nullable(
                     GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes)
               ]))! as BuiltList<Object?>);
           break;
@@ -1055,7 +1055,7 @@ class _$GCommitsData_repository_ref_target__asCommit_historySerializer
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(
+              const FullType.nullable(
                   GCommitsData_repository_ref_target__asCommit_history_nodes)
             ])));
     }
@@ -1088,7 +1088,7 @@ class _$GCommitsData_repository_ref_target__asCommit_historySerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(
+                const FullType.nullable(
                     GCommitsData_repository_ref_target__asCommit_history_nodes)
               ]))! as BuiltList<Object?>);
           break;
@@ -1547,8 +1547,9 @@ class _$GCommitsRefCommitData_historySerializer
       result
         ..add('nodes')
         ..add(serializers.serialize(value,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GCommitsRefCommitData_history_nodes)])));
+            specifiedType: const FullType(BuiltList, const [
+              const FullType.nullable(GCommitsRefCommitData_history_nodes)
+            ])));
     }
     return result;
   }
@@ -1578,7 +1579,7 @@ class _$GCommitsRefCommitData_historySerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GCommitsRefCommitData_history_nodes)
+                const FullType.nullable(GCommitsRefCommitData_history_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -2120,7 +2121,8 @@ class _$GCommitsRefData_target__asCommit_historySerializer
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(GCommitsRefData_target__asCommit_history_nodes)
+              const FullType.nullable(
+                  GCommitsRefData_target__asCommit_history_nodes)
             ])));
     }
     return result;
@@ -2151,7 +2153,8 @@ class _$GCommitsRefData_target__asCommit_historySerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GCommitsRefData_target__asCommit_history_nodes)
+                const FullType.nullable(
+                    GCommitsRefData_target__asCommit_history_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -2551,7 +2554,11 @@ class _$GCommitsData extends GCommitsData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), repository.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, repository.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -2668,8 +2675,12 @@ class _$GCommitsData_repository extends GCommitsData_repository {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), defaultBranchRef.hashCode),
-        ref.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, defaultBranchRef.hashCode);
+    _$hash = $jc(_$hash, ref.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -2800,7 +2811,11 @@ class _$GCommitsData_repository_defaultBranchRef
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), target.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, target.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -2911,7 +2926,10 @@ class _$GCommitsData_repository_defaultBranchRef_target__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3028,7 +3046,11 @@ class _$GCommitsData_repository_defaultBranchRef_target__asCommit
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), history.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, history.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3131,7 +3153,7 @@ class _$GCommitsData_repository_defaultBranchRef_target__asCommit_history
       pageInfo;
   @override
   final BuiltList<
-          GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes>?
+          GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes?>?
       nodes;
 
   factory _$GCommitsData_repository_defaultBranchRef_target__asCommit_history(
@@ -3180,8 +3202,12 @@ class _$GCommitsData_repository_defaultBranchRef_target__asCommit_history
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), pageInfo.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, pageInfo.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3217,15 +3243,15 @@ class GCommitsData_repository_defaultBranchRef_target__asCommit_historyBuilder
       _$this._pageInfo = pageInfo;
 
   ListBuilder<
-          GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes>?
+          GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes?>?
       _nodes;
   ListBuilder<
-          GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes>
+          GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes?>
       get nodes => _$this._nodes ??= new ListBuilder<
-          GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes>();
+          GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes?>();
   set nodes(
           ListBuilder<
-                  GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes>?
+                  GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes?>?
               nodes) =>
       _$this._nodes = nodes;
 
@@ -3272,7 +3298,7 @@ class GCommitsData_repository_defaultBranchRef_target__asCommit_historyBuilder
     try {
       _$result = _$v ??
           new _$GCommitsData_repository_defaultBranchRef_target__asCommit_history
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GCommitsData_repository_defaultBranchRef_target__asCommit_history',
@@ -3355,8 +3381,12 @@ class _$GCommitsData_repository_defaultBranchRef_target__asCommit_history_pageIn
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), hasNextPage.hashCode),
-        endCursor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, hasNextPage.hashCode);
+    _$hash = $jc(_$hash, endCursor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3432,7 +3462,7 @@ class GCommitsData_repository_defaultBranchRef_target__asCommit_history_pageInfo
       _build() {
     final _$result = _$v ??
         new _$GCommitsData_repository_defaultBranchRef_target__asCommit_history_pageInfo
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GCommitsData_repository_defaultBranchRef_target__asCommit_history_pageInfo',
@@ -3526,14 +3556,15 @@ class _$GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc($jc($jc(0, G__typename.hashCode), oid.hashCode),
-                    messageHeadline.hashCode),
-                committedDate.hashCode),
-            author.hashCode),
-        status.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, oid.hashCode);
+    _$hash = $jc(_$hash, messageHeadline.hashCode);
+    _$hash = $jc(_$hash, committedDate.hashCode);
+    _$hash = $jc(_$hash, author.hashCode);
+    _$hash = $jc(_$hash, status.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3745,10 +3776,13 @@ class _$GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), name.hashCode),
-            avatarUrl.hashCode),
-        user.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jc(_$hash, user.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3839,7 +3873,7 @@ class GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_au
     try {
       _$result = _$v ??
           new _$GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_author
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_author',
@@ -3921,7 +3955,11 @@ class _$GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -3991,7 +4029,7 @@ class GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_au
       _build() {
     final _$result = _$v ??
         new _$GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_author_user
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_author_user',
@@ -4058,7 +4096,11 @@ class _$GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), state.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, state.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4128,7 +4170,7 @@ class GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_st
       _build() {
     final _$result = _$v ??
         new _$GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_status
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_status',
@@ -4177,7 +4219,11 @@ class _$GCommitsData_repository_ref extends GCommitsData_repository_ref {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), target.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, target.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4279,7 +4325,10 @@ class _$GCommitsData_repository_ref_target__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4382,7 +4431,11 @@ class _$GCommitsData_repository_ref_target__asCommit
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), history.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, history.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4479,7 +4532,7 @@ class _$GCommitsData_repository_ref_target__asCommit_history
   @override
   final GCommitsData_repository_ref_target__asCommit_history_pageInfo pageInfo;
   @override
-  final BuiltList<GCommitsData_repository_ref_target__asCommit_history_nodes>?
+  final BuiltList<GCommitsData_repository_ref_target__asCommit_history_nodes?>?
       nodes;
 
   factory _$GCommitsData_repository_ref_target__asCommit_history(
@@ -4522,8 +4575,12 @@ class _$GCommitsData_repository_ref_target__asCommit_history
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), pageInfo.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, pageInfo.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4557,14 +4614,14 @@ class GCommitsData_repository_ref_target__asCommit_historyBuilder
               pageInfo) =>
       _$this._pageInfo = pageInfo;
 
-  ListBuilder<GCommitsData_repository_ref_target__asCommit_history_nodes>?
+  ListBuilder<GCommitsData_repository_ref_target__asCommit_history_nodes?>?
       _nodes;
-  ListBuilder<GCommitsData_repository_ref_target__asCommit_history_nodes>
+  ListBuilder<GCommitsData_repository_ref_target__asCommit_history_nodes?>
       get nodes => _$this._nodes ??= new ListBuilder<
-          GCommitsData_repository_ref_target__asCommit_history_nodes>();
+          GCommitsData_repository_ref_target__asCommit_history_nodes?>();
   set nodes(
           ListBuilder<
-                  GCommitsData_repository_ref_target__asCommit_history_nodes>?
+                  GCommitsData_repository_ref_target__asCommit_history_nodes?>?
               nodes) =>
       _$this._nodes = nodes;
 
@@ -4687,8 +4744,12 @@ class _$GCommitsData_repository_ref_target__asCommit_history_pageInfo
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), hasNextPage.hashCode),
-        endCursor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, hasNextPage.hashCode);
+    _$hash = $jc(_$hash, endCursor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -4851,14 +4912,15 @@ class _$GCommitsData_repository_ref_target__asCommit_history_nodes
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc($jc($jc(0, G__typename.hashCode), oid.hashCode),
-                    messageHeadline.hashCode),
-                committedDate.hashCode),
-            author.hashCode),
-        status.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, oid.hashCode);
+    _$hash = $jc(_$hash, messageHeadline.hashCode);
+    _$hash = $jc(_$hash, committedDate.hashCode);
+    _$hash = $jc(_$hash, author.hashCode);
+    _$hash = $jc(_$hash, status.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5062,10 +5124,13 @@ class _$GCommitsData_repository_ref_target__asCommit_history_nodes_author
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), name.hashCode),
-            avatarUrl.hashCode),
-        user.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jc(_$hash, user.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5153,7 +5218,7 @@ class GCommitsData_repository_ref_target__asCommit_history_nodes_authorBuilder
     try {
       _$result = _$v ??
           new _$GCommitsData_repository_ref_target__asCommit_history_nodes_author
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GCommitsData_repository_ref_target__asCommit_history_nodes_author',
@@ -5234,7 +5299,11 @@ class _$GCommitsData_repository_ref_target__asCommit_history_nodes_author_user
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5303,7 +5372,7 @@ class GCommitsData_repository_ref_target__asCommit_history_nodes_author_userBuil
       _build() {
     final _$result = _$v ??
         new _$GCommitsData_repository_ref_target__asCommit_history_nodes_author_user
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GCommitsData_repository_ref_target__asCommit_history_nodes_author_user',
@@ -5369,7 +5438,11 @@ class _$GCommitsData_repository_ref_target__asCommit_history_nodes_status
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), state.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, state.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5436,7 +5509,7 @@ class GCommitsData_repository_ref_target__asCommit_history_nodes_statusBuilder
   _$GCommitsData_repository_ref_target__asCommit_history_nodes_status _build() {
     final _$result = _$v ??
         new _$GCommitsData_repository_ref_target__asCommit_history_nodes_status
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GCommitsData_repository_ref_target__asCommit_history_nodes_status',
@@ -5487,7 +5560,11 @@ class _$GCommitsRefCommitData extends GCommitsRefCommitData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), history.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, history.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5571,7 +5648,7 @@ class _$GCommitsRefCommitData_history extends GCommitsRefCommitData_history {
   @override
   final GCommitsRefCommitData_history_pageInfo pageInfo;
   @override
-  final BuiltList<GCommitsRefCommitData_history_nodes>? nodes;
+  final BuiltList<GCommitsRefCommitData_history_nodes?>? nodes;
 
   factory _$GCommitsRefCommitData_history(
           [void Function(GCommitsRefCommitData_historyBuilder)? updates]) =>
@@ -5606,8 +5683,12 @@ class _$GCommitsRefCommitData_history extends GCommitsRefCommitData_history {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), pageInfo.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, pageInfo.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5636,10 +5717,10 @@ class GCommitsRefCommitData_historyBuilder
   set pageInfo(GCommitsRefCommitData_history_pageInfoBuilder? pageInfo) =>
       _$this._pageInfo = pageInfo;
 
-  ListBuilder<GCommitsRefCommitData_history_nodes>? _nodes;
-  ListBuilder<GCommitsRefCommitData_history_nodes> get nodes =>
-      _$this._nodes ??= new ListBuilder<GCommitsRefCommitData_history_nodes>();
-  set nodes(ListBuilder<GCommitsRefCommitData_history_nodes>? nodes) =>
+  ListBuilder<GCommitsRefCommitData_history_nodes?>? _nodes;
+  ListBuilder<GCommitsRefCommitData_history_nodes?> get nodes =>
+      _$this._nodes ??= new ListBuilder<GCommitsRefCommitData_history_nodes?>();
+  set nodes(ListBuilder<GCommitsRefCommitData_history_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GCommitsRefCommitData_historyBuilder() {
@@ -5743,8 +5824,12 @@ class _$GCommitsRefCommitData_history_pageInfo
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), hasNextPage.hashCode),
-        endCursor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, hasNextPage.hashCode);
+    _$hash = $jc(_$hash, endCursor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -5881,14 +5966,15 @@ class _$GCommitsRefCommitData_history_nodes
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc($jc($jc(0, G__typename.hashCode), oid.hashCode),
-                    messageHeadline.hashCode),
-                committedDate.hashCode),
-            author.hashCode),
-        status.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, oid.hashCode);
+    _$hash = $jc(_$hash, messageHeadline.hashCode);
+    _$hash = $jc(_$hash, committedDate.hashCode);
+    _$hash = $jc(_$hash, author.hashCode);
+    _$hash = $jc(_$hash, status.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6065,10 +6151,13 @@ class _$GCommitsRefCommitData_history_nodes_author
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), name.hashCode),
-            avatarUrl.hashCode),
-        user.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jc(_$hash, user.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6214,7 +6303,11 @@ class _$GCommitsRefCommitData_history_nodes_author_user
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6327,7 +6420,11 @@ class _$GCommitsRefCommitData_history_nodes_status
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), state.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, state.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6428,7 +6525,11 @@ class _$GCommitsRefData extends GCommitsRefData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), target.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, target.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6522,7 +6623,10 @@ class _$GCommitsRefData_target__base extends GCommitsRefData_target__base {
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6619,7 +6723,11 @@ class _$GCommitsRefData_target__asCommit
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), history.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, history.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6706,7 +6814,7 @@ class _$GCommitsRefData_target__asCommit_history
   @override
   final GCommitsRefData_target__asCommit_history_pageInfo pageInfo;
   @override
-  final BuiltList<GCommitsRefData_target__asCommit_history_nodes>? nodes;
+  final BuiltList<GCommitsRefData_target__asCommit_history_nodes?>? nodes;
 
   factory _$GCommitsRefData_target__asCommit_history(
           [void Function(GCommitsRefData_target__asCommit_historyBuilder)?
@@ -6744,8 +6852,12 @@ class _$GCommitsRefData_target__asCommit_history
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), pageInfo.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, pageInfo.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -6777,12 +6889,13 @@ class GCommitsRefData_target__asCommit_historyBuilder
           GCommitsRefData_target__asCommit_history_pageInfoBuilder? pageInfo) =>
       _$this._pageInfo = pageInfo;
 
-  ListBuilder<GCommitsRefData_target__asCommit_history_nodes>? _nodes;
-  ListBuilder<GCommitsRefData_target__asCommit_history_nodes> get nodes =>
+  ListBuilder<GCommitsRefData_target__asCommit_history_nodes?>? _nodes;
+  ListBuilder<GCommitsRefData_target__asCommit_history_nodes?> get nodes =>
       _$this._nodes ??=
-          new ListBuilder<GCommitsRefData_target__asCommit_history_nodes>();
+          new ListBuilder<GCommitsRefData_target__asCommit_history_nodes?>();
   set nodes(
-          ListBuilder<GCommitsRefData_target__asCommit_history_nodes>? nodes) =>
+          ListBuilder<GCommitsRefData_target__asCommit_history_nodes?>?
+              nodes) =>
       _$this._nodes = nodes;
 
   GCommitsRefData_target__asCommit_historyBuilder() {
@@ -6893,8 +7006,12 @@ class _$GCommitsRefData_target__asCommit_history_pageInfo
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), hasNextPage.hashCode),
-        endCursor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, hasNextPage.hashCode);
+    _$hash = $jc(_$hash, endCursor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -7039,14 +7156,15 @@ class _$GCommitsRefData_target__asCommit_history_nodes
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc($jc($jc(0, G__typename.hashCode), oid.hashCode),
-                    messageHeadline.hashCode),
-                committedDate.hashCode),
-            author.hashCode),
-        status.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, oid.hashCode);
+    _$hash = $jc(_$hash, messageHeadline.hashCode);
+    _$hash = $jc(_$hash, committedDate.hashCode);
+    _$hash = $jc(_$hash, author.hashCode);
+    _$hash = $jc(_$hash, status.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -7237,10 +7355,13 @@ class _$GCommitsRefData_target__asCommit_history_nodes_author
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), name.hashCode),
-            avatarUrl.hashCode),
-        user.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jc(_$hash, user.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -7399,7 +7520,11 @@ class _$GCommitsRefData_target__asCommit_history_nodes_author_user
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -7524,7 +7649,11 @@ class _$GCommitsRefData_target__asCommit_history_nodes_status
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), state.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, state.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -7599,4 +7728,4 @@ class GCommitsRefData_target__asCommit_history_nodes_statusBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

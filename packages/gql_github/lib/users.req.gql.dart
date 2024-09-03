@@ -20,7 +20,7 @@ abstract class GFollowersReq
         _i1.OperationRequest<_i2.GFollowersData, _i3.GFollowersVars> {
   GFollowersReq._();
 
-  factory GFollowersReq([Function(GFollowersReqBuilder b) updates]) =
+  factory GFollowersReq([void Function(GFollowersReqBuilder b) updates]) =
       _$GFollowersReq;
 
   static void _initializeBuilder(GFollowersReqBuilder b) => b
@@ -29,6 +29,7 @@ abstract class GFollowersReq
       operationName: 'Followers',
     )
     ..executeOnListen = true;
+
   @override
   _i3.GFollowersVars get vars;
   @override
@@ -37,7 +38,9 @@ abstract class GFollowersReq
   _i4.Request get execRequest => _i4.Request(
         operation: operation,
         variables: vars.toJson(),
+        context: context ?? const _i4.Context(),
       );
+
   @override
   String? get requestId;
   @override
@@ -57,13 +60,30 @@ abstract class GFollowersReq
   @override
   bool get executeOnListen;
   @override
+  @BuiltValueField(serialize: false)
+  _i4.Context? get context;
+  @override
   _i2.GFollowersData? parseData(Map<String, dynamic> json) =>
       _i2.GFollowersData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GFollowersData data) => data.toJson();
+
+  @override
+  _i1.OperationRequest<_i2.GFollowersData, _i3.GFollowersVars>
+      transformOperation(_i4.Operation Function(_i4.Operation) transform) =>
+          this.rebuild((b) => b..operation = transform(operation));
+
   static Serializer<GFollowersReq> get serializer => _$gFollowersReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GFollowersReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GFollowersReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GFollowersReq.serializer,
@@ -77,7 +97,7 @@ abstract class GFollowingReq
         _i1.OperationRequest<_i2.GFollowingData, _i3.GFollowingVars> {
   GFollowingReq._();
 
-  factory GFollowingReq([Function(GFollowingReqBuilder b) updates]) =
+  factory GFollowingReq([void Function(GFollowingReqBuilder b) updates]) =
       _$GFollowingReq;
 
   static void _initializeBuilder(GFollowingReqBuilder b) => b
@@ -86,6 +106,7 @@ abstract class GFollowingReq
       operationName: 'Following',
     )
     ..executeOnListen = true;
+
   @override
   _i3.GFollowingVars get vars;
   @override
@@ -94,7 +115,9 @@ abstract class GFollowingReq
   _i4.Request get execRequest => _i4.Request(
         operation: operation,
         variables: vars.toJson(),
+        context: context ?? const _i4.Context(),
       );
+
   @override
   String? get requestId;
   @override
@@ -114,13 +137,30 @@ abstract class GFollowingReq
   @override
   bool get executeOnListen;
   @override
+  @BuiltValueField(serialize: false)
+  _i4.Context? get context;
+  @override
   _i2.GFollowingData? parseData(Map<String, dynamic> json) =>
       _i2.GFollowingData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GFollowingData data) => data.toJson();
+
+  @override
+  _i1.OperationRequest<_i2.GFollowingData, _i3.GFollowingVars>
+      transformOperation(_i4.Operation Function(_i4.Operation) transform) =>
+          this.rebuild((b) => b..operation = transform(operation));
+
   static Serializer<GFollowingReq> get serializer => _$gFollowingReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GFollowingReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GFollowingReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GFollowingReq.serializer,
@@ -134,7 +174,7 @@ abstract class GOrgsReq
         _i1.OperationRequest<_i2.GOrgsData, _i3.GOrgsVars> {
   GOrgsReq._();
 
-  factory GOrgsReq([Function(GOrgsReqBuilder b) updates]) = _$GOrgsReq;
+  factory GOrgsReq([void Function(GOrgsReqBuilder b) updates]) = _$GOrgsReq;
 
   static void _initializeBuilder(GOrgsReqBuilder b) => b
     ..operation = _i4.Operation(
@@ -142,6 +182,7 @@ abstract class GOrgsReq
       operationName: 'Orgs',
     )
     ..executeOnListen = true;
+
   @override
   _i3.GOrgsVars get vars;
   @override
@@ -150,7 +191,9 @@ abstract class GOrgsReq
   _i4.Request get execRequest => _i4.Request(
         operation: operation,
         variables: vars.toJson(),
+        context: context ?? const _i4.Context(),
       );
+
   @override
   String? get requestId;
   @override
@@ -170,13 +213,30 @@ abstract class GOrgsReq
   @override
   bool get executeOnListen;
   @override
+  @BuiltValueField(serialize: false)
+  _i4.Context? get context;
+  @override
   _i2.GOrgsData? parseData(Map<String, dynamic> json) =>
       _i2.GOrgsData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GOrgsData data) => data.toJson();
+
+  @override
+  _i1.OperationRequest<_i2.GOrgsData, _i3.GOrgsVars> transformOperation(
+          _i4.Operation Function(_i4.Operation) transform) =>
+      this.rebuild((b) => b..operation = transform(operation));
+
   static Serializer<GOrgsReq> get serializer => _$gOrgsReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GOrgsReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GOrgsReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GOrgsReq.serializer,
@@ -190,7 +250,8 @@ abstract class GMembersReq
         _i1.OperationRequest<_i2.GMembersData, _i3.GMembersVars> {
   GMembersReq._();
 
-  factory GMembersReq([Function(GMembersReqBuilder b) updates]) = _$GMembersReq;
+  factory GMembersReq([void Function(GMembersReqBuilder b) updates]) =
+      _$GMembersReq;
 
   static void _initializeBuilder(GMembersReqBuilder b) => b
     ..operation = _i4.Operation(
@@ -198,6 +259,7 @@ abstract class GMembersReq
       operationName: 'Members',
     )
     ..executeOnListen = true;
+
   @override
   _i3.GMembersVars get vars;
   @override
@@ -206,7 +268,9 @@ abstract class GMembersReq
   _i4.Request get execRequest => _i4.Request(
         operation: operation,
         variables: vars.toJson(),
+        context: context ?? const _i4.Context(),
       );
+
   @override
   String? get requestId;
   @override
@@ -226,13 +290,30 @@ abstract class GMembersReq
   @override
   bool get executeOnListen;
   @override
+  @BuiltValueField(serialize: false)
+  _i4.Context? get context;
+  @override
   _i2.GMembersData? parseData(Map<String, dynamic> json) =>
       _i2.GMembersData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GMembersData data) => data.toJson();
+
+  @override
+  _i1.OperationRequest<_i2.GMembersData, _i3.GMembersVars> transformOperation(
+          _i4.Operation Function(_i4.Operation) transform) =>
+      this.rebuild((b) => b..operation = transform(operation));
+
   static Serializer<GMembersReq> get serializer => _$gMembersReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GMembersReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GMembersReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GMembersReq.serializer,
@@ -246,7 +327,7 @@ abstract class GWatchersReq
         _i1.OperationRequest<_i2.GWatchersData, _i3.GWatchersVars> {
   GWatchersReq._();
 
-  factory GWatchersReq([Function(GWatchersReqBuilder b) updates]) =
+  factory GWatchersReq([void Function(GWatchersReqBuilder b) updates]) =
       _$GWatchersReq;
 
   static void _initializeBuilder(GWatchersReqBuilder b) => b
@@ -255,6 +336,7 @@ abstract class GWatchersReq
       operationName: 'Watchers',
     )
     ..executeOnListen = true;
+
   @override
   _i3.GWatchersVars get vars;
   @override
@@ -263,7 +345,9 @@ abstract class GWatchersReq
   _i4.Request get execRequest => _i4.Request(
         operation: operation,
         variables: vars.toJson(),
+        context: context ?? const _i4.Context(),
       );
+
   @override
   String? get requestId;
   @override
@@ -283,13 +367,30 @@ abstract class GWatchersReq
   @override
   bool get executeOnListen;
   @override
+  @BuiltValueField(serialize: false)
+  _i4.Context? get context;
+  @override
   _i2.GWatchersData? parseData(Map<String, dynamic> json) =>
       _i2.GWatchersData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GWatchersData data) => data.toJson();
+
+  @override
+  _i1.OperationRequest<_i2.GWatchersData, _i3.GWatchersVars> transformOperation(
+          _i4.Operation Function(_i4.Operation) transform) =>
+      this.rebuild((b) => b..operation = transform(operation));
+
   static Serializer<GWatchersReq> get serializer => _$gWatchersReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GWatchersReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GWatchersReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GWatchersReq.serializer,
@@ -303,7 +404,7 @@ abstract class GStargazersReq
         _i1.OperationRequest<_i2.GStargazersData, _i3.GStargazersVars> {
   GStargazersReq._();
 
-  factory GStargazersReq([Function(GStargazersReqBuilder b) updates]) =
+  factory GStargazersReq([void Function(GStargazersReqBuilder b) updates]) =
       _$GStargazersReq;
 
   static void _initializeBuilder(GStargazersReqBuilder b) => b
@@ -312,6 +413,7 @@ abstract class GStargazersReq
       operationName: 'Stargazers',
     )
     ..executeOnListen = true;
+
   @override
   _i3.GStargazersVars get vars;
   @override
@@ -320,7 +422,9 @@ abstract class GStargazersReq
   _i4.Request get execRequest => _i4.Request(
         operation: operation,
         variables: vars.toJson(),
+        context: context ?? const _i4.Context(),
       );
+
   @override
   String? get requestId;
   @override
@@ -340,14 +444,31 @@ abstract class GStargazersReq
   @override
   bool get executeOnListen;
   @override
+  @BuiltValueField(serialize: false)
+  _i4.Context? get context;
+  @override
   _i2.GStargazersData? parseData(Map<String, dynamic> json) =>
       _i2.GStargazersData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GStargazersData data) => data.toJson();
+
+  @override
+  _i1.OperationRequest<_i2.GStargazersData, _i3.GStargazersVars>
+      transformOperation(_i4.Operation Function(_i4.Operation) transform) =>
+          this.rebuild((b) => b..operation = transform(operation));
+
   static Serializer<GStargazersReq> get serializer =>
       _$gStargazersReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GStargazersReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GStargazersReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GStargazersReq.serializer,
@@ -361,12 +482,13 @@ abstract class GUserPartsReq
         _i1.FragmentRequest<_i2.GUserPartsData, _i3.GUserPartsVars> {
   GUserPartsReq._();
 
-  factory GUserPartsReq([Function(GUserPartsReqBuilder b) updates]) =
+  factory GUserPartsReq([void Function(GUserPartsReqBuilder b) updates]) =
       _$GUserPartsReq;
 
   static void _initializeBuilder(GUserPartsReqBuilder b) => b
     ..document = _i5.document
     ..fragmentName = 'UserParts';
+
   @override
   _i3.GUserPartsVars get vars;
   @override
@@ -378,11 +500,20 @@ abstract class GUserPartsReq
   @override
   _i2.GUserPartsData? parseData(Map<String, dynamic> json) =>
       _i2.GUserPartsData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GUserPartsData data) => data.toJson();
+
   static Serializer<GUserPartsReq> get serializer => _$gUserPartsReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GUserPartsReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GUserPartsReq.serializer,
@@ -396,12 +527,13 @@ abstract class GOrgPartsReq
         _i1.FragmentRequest<_i2.GOrgPartsData, _i3.GOrgPartsVars> {
   GOrgPartsReq._();
 
-  factory GOrgPartsReq([Function(GOrgPartsReqBuilder b) updates]) =
+  factory GOrgPartsReq([void Function(GOrgPartsReqBuilder b) updates]) =
       _$GOrgPartsReq;
 
   static void _initializeBuilder(GOrgPartsReqBuilder b) => b
     ..document = _i5.document
     ..fragmentName = 'OrgParts';
+
   @override
   _i3.GOrgPartsVars get vars;
   @override
@@ -413,11 +545,20 @@ abstract class GOrgPartsReq
   @override
   _i2.GOrgPartsData? parseData(Map<String, dynamic> json) =>
       _i2.GOrgPartsData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GOrgPartsData data) => data.toJson();
+
   static Serializer<GOrgPartsReq> get serializer => _$gOrgPartsReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GOrgPartsReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GOrgPartsReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GOrgPartsReq.serializer,

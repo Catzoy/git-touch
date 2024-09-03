@@ -51,9 +51,9 @@ dependencies:
   github: ^9.4.0
   gql: ^1.0.0+1
   gql_http_link: ^1.1.0
-  http: ^0.13.5
+  http: ^1.2.2
   intl: ^0.18.1
-  json_annotation: ^4.7.0
+  json_annotation: ^4.9.0
   launch_review: ^3.0.1
   nanoid: ^1.0.0
   package_info_plus: ^8.0.2

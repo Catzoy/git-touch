@@ -16,9 +16,9 @@ GithubTrendingRepository _$GithubTrendingRepositoryFromJson(
       ..description = json['description'] as String?
       ..language = json['language'] as String?
       ..languageColor = json['languageColor'] as String?
-      ..stars = json['stars'] as int?
-      ..forks = json['forks'] as int?
-      ..currentPeriodStars = json['currentPeriodStars'] as int?
+      ..stars = (json['stars'] as num?)?.toInt()
+      ..forks = (json['forks'] as num?)?.toInt()
+      ..currentPeriodStars = (json['currentPeriodStars'] as num?)?.toInt()
       ..builtBy = (json['builtBy'] as List<dynamic>?)
           ?.map((e) => GithubTrendingRepositoryBuiltBy.fromJson(
               e as Map<String, dynamic>))

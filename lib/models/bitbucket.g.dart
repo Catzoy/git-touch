@@ -60,7 +60,7 @@ BbRepo _$BbRepoFromJson(Map<String, dynamic> json) => BbRepo()
       : BbRepoOwner.fromJson(json['owner'] as Map<String, dynamic>)
   ..website = json['website'] as String?
   ..language = json['language'] as String?
-  ..size = json['size'] as int?
+  ..size = (json['size'] as num?)?.toInt()
   ..type = json['type'] as String?
   ..isPrivate = json['is_private'] as bool?
   ..createdOn = json['created_on'] == null
@@ -109,7 +109,7 @@ BbTree _$BbTreeFromJson(Map<String, dynamic> json) => BbTree(
       type: json['type'] as String,
       path: json['path'] as String,
     )
-      ..size = json['size'] as int?
+      ..size = (json['size'] as num?)?.toInt()
       ..links = json['links'] as Map<String, dynamic>?;
 
 Map<String, dynamic> _$BbTreeToJson(BbTree instance) => <String, dynamic>{

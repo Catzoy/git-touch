@@ -1766,104 +1766,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
               const [const FullType(GCheckSuiteAutoTriggerPreference)]),
           () => new ListBuilder<GCheckSuiteAutoTriggerPreference>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes)
-          ]),
-          () => new ListBuilder<
-              GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GCommitsData_repository_ref_target__asCommit_history_nodes)
-          ]),
-          () => new ListBuilder<
-              GCommitsData_repository_ref_target__asCommit_history_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GCommitsRefCommitData_history_nodes)]),
-          () => new ListBuilder<GCommitsRefCommitData_history_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GCommitsRefData_target__asCommit_history_nodes)
-          ]),
-          () =>
-              new ListBuilder<GCommitsRefData_target__asCommit_history_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GDraftPullRequestReviewComment)]),
-          () => new ListBuilder<GDraftPullRequestReviewComment>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(GDraftPullRequestReviewThread)]),
-          () => new ListBuilder<GDraftPullRequestReviewThread>())
-      ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(GFileAddition)]),
           () => new ListBuilder<GFileAddition>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(GFileDeletion)]),
           () => new ListBuilder<GFileDeletion>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GFollowersData_user_followers_nodes)]),
-          () => new ListBuilder<GFollowersData_user_followers_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GFollowingData_user_following_nodes)]),
-          () => new ListBuilder<GFollowingData_user_following_nodes>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(GGistData_user_gist_files)]),
-          () => new ListBuilder<GGistData_user_gist_files>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(GGistsData_user_gists_nodes)]),
-          () => new ListBuilder<GGistsData_user_gists_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GGistsData_user_gists_nodes_files)]),
-          () => new ListBuilder<GGistsData_user_gists_nodes_files>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes)
-          ]),
-          () => new ListBuilder<
-              GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes)
-          ]),
-          () => new ListBuilder<
-              GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes)
-          ]),
-          () => new ListBuilder<
-              GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GIssuesData_repository_issues_nodes)]),
-          () => new ListBuilder<GIssuesData_repository_issues_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GIssuesData_repository_issues_nodes_labels_nodes)
-          ]),
-          () => new ListBuilder<
-              GIssuesData_repository_issues_nodes_labels_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GMembersData_organization_membersWithRole_nodes)
-          ]),
-          () => new ListBuilder<
-              GMembersData_organization_membersWithRole_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GOrgsData_user_organizations_nodes)]),
-          () => new ListBuilder<GOrgsData_user_organizations_nodes>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(GProjectCardImport)]),
           () => new ListBuilder<GProjectCardImport>())
@@ -1872,85 +1779,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
               BuiltList, const [const FullType(GProjectColumnImport)]),
           () => new ListBuilder<GProjectColumnImport>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GPullRequestReviewPartsData_comments_nodes)
-          ]),
-          () => new ListBuilder<GPullRequestReviewPartsData_comments_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GPullsData_repository_pullRequests_nodes)]),
-          () => new ListBuilder<GPullsData_repository_pullRequests_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GPullsData_repository_pullRequests_nodes_labels_nodes)
-          ]),
-          () => new ListBuilder<
-              GPullsData_repository_pullRequests_nodes_labels_nodes>())
-      ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(GRefUpdate)]),
           () => new ListBuilder<GRefUpdate>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GReleasesData_repository_releases_nodes)]),
-          () => new ListBuilder<GReleasesData_repository_releases_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(
-                GReleasesData_repository_releases_nodes_releaseAssets_nodes)
-          ]),
-          () => new ListBuilder<
-              GReleasesData_repository_releases_nodes_releaseAssets_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GRepoData_repository_languages_edges)]),
-          () => new ListBuilder<GRepoData_repository_languages_edges>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GRepoData_repository_refs_nodes)]),
-          () => new ListBuilder<GRepoData_repository_refs_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GRepoData_repository_repositoryTopics_nodes)
-          ]),
-          () => new ListBuilder<GRepoData_repository_repositoryTopics_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GReposData_repositoryOwner_repositories_nodes)
-          ]),
-          () =>
-              new ListBuilder<GReposData_repositoryOwner_repositories_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GSponsorConnectionPartsData_nodes)]),
-          () => new ListBuilder<GSponsorConnectionPartsData_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GStargazersData_repository_stargazers_nodes)
-          ]),
-          () => new ListBuilder<GStargazersData_repository_stargazers_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GStarsData_user_starredRepositories_nodes)
-          ]),
-          () => new ListBuilder<GStarsData_user_starredRepositories_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [
-            const FullType(GUserData_organization_pinnableItems_nodes)
-          ]),
-          () => new ListBuilder<GUserData_organization_pinnableItems_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GUserData_organization_pinnedItems_nodes)]),
-          () => new ListBuilder<GUserData_organization_pinnedItems_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GUserData_organization_sponsoring_nodes)]),
-          () => new ListBuilder<GUserData_organization_sponsoring_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GUserData_organization_sponsors_nodes)]),
-          () => new ListBuilder<GUserData_organization_sponsors_nodes>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
@@ -1966,26 +1796,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           () => new ListBuilder<
               GUserData_user_contributionsCollection_contributionCalendar_weeks_contributionDays>())
       ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GUserData_user_organizations_nodes)]),
-          () => new ListBuilder<GUserData_user_organizations_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GUserData_user_pinnedItems_nodes)]),
-          () => new ListBuilder<GUserData_user_pinnedItems_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GUserData_user_repositories_nodes)]),
-          () => new ListBuilder<GUserData_user_repositories_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GUserData_user_sponsoring_nodes)]),
-          () => new ListBuilder<GUserData_user_sponsoring_nodes>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(GUserData_user_sponsors_nodes)]),
-          () => new ListBuilder<GUserData_user_sponsors_nodes>())
-      ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
                 GUserPartsData_contributionsCollection_contributionCalendar_weeks)
@@ -2000,26 +1810,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           () => new ListBuilder<
               GUserPartsData_contributionsCollection_contributionCalendar_weeks_contributionDays>())
       ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GUserPartsData_organizations_nodes)]),
-          () => new ListBuilder<GUserPartsData_organizations_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GUserPartsData_pinnedItems_nodes)]),
-          () => new ListBuilder<GUserPartsData_pinnedItems_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GUserPartsData_repositories_nodes)]),
-          () => new ListBuilder<GUserPartsData_repositories_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GUserPartsData_sponsoring_nodes)]),
-          () => new ListBuilder<GUserPartsData_sponsoring_nodes>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(GUserPartsData_sponsors_nodes)]),
-          () => new ListBuilder<GUserPartsData_sponsors_nodes>())
-      ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(
                 GViewerData_viewer_contributionsCollection_contributionCalendar_weeks)
@@ -2033,30 +1823,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           ]),
           () => new ListBuilder<
               GViewerData_viewer_contributionsCollection_contributionCalendar_weeks_contributionDays>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GViewerData_viewer_organizations_nodes)]),
-          () => new ListBuilder<GViewerData_viewer_organizations_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GViewerData_viewer_pinnedItems_nodes)]),
-          () => new ListBuilder<GViewerData_viewer_pinnedItems_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GViewerData_viewer_repositories_nodes)]),
-          () => new ListBuilder<GViewerData_viewer_repositories_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GViewerData_viewer_sponsoring_nodes)]),
-          () => new ListBuilder<GViewerData_viewer_sponsoring_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GViewerData_viewer_sponsors_nodes)]),
-          () => new ListBuilder<GViewerData_viewer_sponsors_nodes>())
-      ..addBuilderFactory(
-          const FullType(BuiltList,
-              const [const FullType(GWatchersData_repository_watchers_nodes)]),
-          () => new ListBuilder<GWatchersData_repository_watchers_nodes>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
@@ -2199,7 +1965,270 @@ Serializers _$serializers = (new Serializers().toBuilder()
           () => new ListBuilder<GRequiredStatusCheckInput>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>()))
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(
+                GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes)
+          ]),
+          () => new ListBuilder<
+              GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(
+                GCommitsData_repository_ref_target__asCommit_history_nodes)
+          ]),
+          () => new ListBuilder<
+              GCommitsData_repository_ref_target__asCommit_history_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GCommitsRefCommitData_history_nodes)
+          ]),
+          () => new ListBuilder<GCommitsRefCommitData_history_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(
+                GCommitsRefData_target__asCommit_history_nodes)
+          ]),
+          () => new ListBuilder<
+              GCommitsRefData_target__asCommit_history_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType.nullable(GDraftPullRequestReviewComment)]),
+          () => new ListBuilder<GDraftPullRequestReviewComment?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType.nullable(GDraftPullRequestReviewThread)]),
+          () => new ListBuilder<GDraftPullRequestReviewThread?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GFollowersData_user_followers_nodes)
+          ]),
+          () => new ListBuilder<GFollowersData_user_followers_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GFollowingData_user_following_nodes)
+          ]),
+          () => new ListBuilder<GFollowingData_user_following_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType.nullable(GGistData_user_gist_files)]),
+          () => new ListBuilder<GGistData_user_gist_files?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType.nullable(GGistsData_user_gists_nodes)]),
+          () => new ListBuilder<GGistsData_user_gists_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GGistsData_user_gists_nodes_files)
+          ]),
+          () => new ListBuilder<GGistsData_user_gists_nodes_files?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(
+                GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes)
+          ]),
+          () => new ListBuilder<
+              GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(
+                GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes)
+          ]),
+          () => new ListBuilder<
+              GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(
+                GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes)
+          ]),
+          () => new ListBuilder<
+              GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GIssuesData_repository_issues_nodes)
+          ]),
+          () => new ListBuilder<GIssuesData_repository_issues_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(
+                GIssuesData_repository_issues_nodes_labels_nodes)
+          ]),
+          () => new ListBuilder<
+              GIssuesData_repository_issues_nodes_labels_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(
+                GMembersData_organization_membersWithRole_nodes)
+          ]),
+          () => new ListBuilder<
+              GMembersData_organization_membersWithRole_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GOrgsData_user_organizations_nodes)
+          ]),
+          () => new ListBuilder<GOrgsData_user_organizations_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GPullRequestReviewPartsData_comments_nodes)
+          ]),
+          () => new ListBuilder<GPullRequestReviewPartsData_comments_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GPullsData_repository_pullRequests_nodes)
+          ]),
+          () => new ListBuilder<GPullsData_repository_pullRequests_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(
+                GPullsData_repository_pullRequests_nodes_labels_nodes)
+          ]),
+          () => new ListBuilder<
+              GPullsData_repository_pullRequests_nodes_labels_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GReleasesData_repository_releases_nodes)
+          ]),
+          () => new ListBuilder<GReleasesData_repository_releases_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(
+                GReleasesData_repository_releases_nodes_releaseAssets_nodes)
+          ]),
+          () => new ListBuilder<
+              GReleasesData_repository_releases_nodes_releaseAssets_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GRepoData_repository_languages_edges)
+          ]),
+          () => new ListBuilder<GRepoData_repository_languages_edges?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType.nullable(GRepoData_repository_refs_nodes)]),
+          () => new ListBuilder<GRepoData_repository_refs_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GRepoData_repository_repositoryTopics_nodes)
+          ]),
+          () => new ListBuilder<GRepoData_repository_repositoryTopics_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(
+                GReposData_repositoryOwner_repositories_nodes)
+          ]),
+          () =>
+              new ListBuilder<GReposData_repositoryOwner_repositories_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GSponsorConnectionPartsData_nodes)
+          ]),
+          () => new ListBuilder<GSponsorConnectionPartsData_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GStargazersData_repository_stargazers_nodes)
+          ]),
+          () => new ListBuilder<GStargazersData_repository_stargazers_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GStarsData_user_starredRepositories_nodes)
+          ]),
+          () => new ListBuilder<GStarsData_user_starredRepositories_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GUserData_organization_pinnableItems_nodes)
+          ]),
+          () => new ListBuilder<GUserData_organization_pinnableItems_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GUserData_organization_pinnedItems_nodes)
+          ]),
+          () => new ListBuilder<GUserData_organization_pinnedItems_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GUserData_organization_sponsoring_nodes)
+          ]),
+          () => new ListBuilder<GUserData_organization_sponsoring_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GUserData_organization_sponsors_nodes)
+          ]),
+          () => new ListBuilder<GUserData_organization_sponsors_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GUserData_user_organizations_nodes)
+          ]),
+          () => new ListBuilder<GUserData_user_organizations_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GUserData_user_pinnedItems_nodes)
+          ]),
+          () => new ListBuilder<GUserData_user_pinnedItems_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GUserData_user_repositories_nodes)
+          ]),
+          () => new ListBuilder<GUserData_user_repositories_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType.nullable(GUserData_user_sponsoring_nodes)]),
+          () => new ListBuilder<GUserData_user_sponsoring_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType.nullable(GUserData_user_sponsors_nodes)]),
+          () => new ListBuilder<GUserData_user_sponsors_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GUserPartsData_organizations_nodes)
+          ]),
+          () => new ListBuilder<GUserPartsData_organizations_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GUserPartsData_pinnedItems_nodes)
+          ]),
+          () => new ListBuilder<GUserPartsData_pinnedItems_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GUserPartsData_repositories_nodes)
+          ]),
+          () => new ListBuilder<GUserPartsData_repositories_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType.nullable(GUserPartsData_sponsoring_nodes)]),
+          () => new ListBuilder<GUserPartsData_sponsoring_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType.nullable(GUserPartsData_sponsors_nodes)]),
+          () => new ListBuilder<GUserPartsData_sponsors_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GViewerData_viewer_organizations_nodes)
+          ]),
+          () => new ListBuilder<GViewerData_viewer_organizations_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GViewerData_viewer_pinnedItems_nodes)
+          ]),
+          () => new ListBuilder<GViewerData_viewer_pinnedItems_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GViewerData_viewer_repositories_nodes)
+          ]),
+          () => new ListBuilder<GViewerData_viewer_repositories_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GViewerData_viewer_sponsoring_nodes)
+          ]),
+          () => new ListBuilder<GViewerData_viewer_sponsoring_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GViewerData_viewer_sponsors_nodes)
+          ]),
+          () => new ListBuilder<GViewerData_viewer_sponsors_nodes?>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType.nullable(GWatchersData_repository_watchers_nodes)
+          ]),
+          () => new ListBuilder<GWatchersData_repository_watchers_nodes?>()))
     .build();
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

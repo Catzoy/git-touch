@@ -2280,7 +2280,7 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItemsSerialize
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(
+              const FullType.nullable(
                   GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes)
             ])));
     }
@@ -2317,7 +2317,7 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItemsSerialize
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(
+                const FullType.nullable(
                     GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes)
               ]))! as BuiltList<Object?>);
           break;
@@ -8110,7 +8110,7 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItemsSer
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(
+              const FullType.nullable(
                   GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes)
             ])));
     }
@@ -8147,7 +8147,7 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItemsSer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(
+                const FullType.nullable(
                     GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes)
               ]))! as BuiltList<Object?>);
           break;
@@ -15763,7 +15763,7 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(
+              const FullType.nullable(
                   GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes)
             ])));
     }
@@ -15790,7 +15790,7 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(
+                const FullType.nullable(
                     GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes)
               ]))! as BuiltList<Object?>);
           break;
@@ -23865,7 +23865,8 @@ class _$GPullRequestReviewPartsData_commentsSerializer
         ..add('nodes')
         ..add(serializers.serialize(value,
             specifiedType: const FullType(BuiltList, const [
-              const FullType(GPullRequestReviewPartsData_comments_nodes)
+              const FullType.nullable(
+                  GPullRequestReviewPartsData_comments_nodes)
             ])));
     }
     return result;
@@ -23890,7 +23891,8 @@ class _$GPullRequestReviewPartsData_commentsSerializer
         case 'nodes':
           result.nodes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
-                const FullType(GPullRequestReviewPartsData_comments_nodes)
+                const FullType.nullable(
+                    GPullRequestReviewPartsData_comments_nodes)
               ]))! as BuiltList<Object?>);
           break;
       }
@@ -24978,7 +24980,11 @@ class _$GIssueData extends GIssueData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), repository.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, repository.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -25096,8 +25102,12 @@ class _$GIssueData_repository extends GIssueData_repository {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), owner.hashCode),
-        issueOrPullRequest.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, issueOrPullRequest.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -25222,7 +25232,11 @@ class _$GIssueData_repository_owner extends GIssueData_repository_owner {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -25327,7 +25341,10 @@ class _$GIssueData_repository_issueOrPullRequest__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -25541,44 +25558,28 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    $jc(
-                                                                        $jc(
-                                                                            $jc(0,
-                                                                                G__typename.hashCode),
-                                                                            id.hashCode),
-                                                                        createdAt.hashCode),
-                                                                    body.hashCode),
-                                                                author.hashCode),
-                                                            THUMBS_UP.hashCode),
-                                                        THUMBS_DOWN.hashCode),
-                                                    LAUGH.hashCode),
-                                                HOORAY.hashCode),
-                                            CONFUSED.hashCode),
-                                        HEART.hashCode),
-                                    ROCKET.hashCode),
-                                EYES.hashCode),
-                            title.hashCode),
-                        closed.hashCode),
-                    url.hashCode),
-                viewerCanReact.hashCode),
-            viewerCanUpdate.hashCode),
-        timelineItems.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, body.hashCode);
+    _$hash = $jc(_$hash, author.hashCode);
+    _$hash = $jc(_$hash, THUMBS_UP.hashCode);
+    _$hash = $jc(_$hash, THUMBS_DOWN.hashCode);
+    _$hash = $jc(_$hash, LAUGH.hashCode);
+    _$hash = $jc(_$hash, HOORAY.hashCode);
+    _$hash = $jc(_$hash, CONFUSED.hashCode);
+    _$hash = $jc(_$hash, HEART.hashCode);
+    _$hash = $jc(_$hash, ROCKET.hashCode);
+    _$hash = $jc(_$hash, EYES.hashCode);
+    _$hash = $jc(_$hash, title.hashCode);
+    _$hash = $jc(_$hash, closed.hashCode);
+    _$hash = $jc(_$hash, url.hashCode);
+    _$hash = $jc(_$hash, viewerCanReact.hashCode);
+    _$hash = $jc(_$hash, viewerCanUpdate.hashCode);
+    _$hash = $jc(_$hash, timelineItems.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -25915,8 +25916,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_author
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), login.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -26062,8 +26067,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_THUMBS_UP
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -26214,8 +26223,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_THUMBS_DOWN
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -26364,8 +26377,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_LAUGH
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -26510,8 +26527,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_HOORAY
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -26658,8 +26679,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_CONFUSED
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -26806,8 +26831,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_HEART
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -26952,8 +26981,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_ROCKET
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -27098,8 +27131,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_EYES
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -27196,7 +27233,7 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems
       pageInfo;
   @override
   final BuiltList<
-          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes>?
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes?>?
       nodes;
 
   factory _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems(
@@ -27253,10 +27290,13 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-            pageInfo.hashCode),
-        nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, pageInfo.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -27296,15 +27336,15 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItemsBuilder
       _$this._pageInfo = pageInfo;
 
   ListBuilder<
-          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes>?
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes?>?
       _nodes;
   ListBuilder<
-          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes>
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes?>
       get nodes => _$this._nodes ??= new ListBuilder<
-          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes>();
+          GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes?>();
   set nodes(
           ListBuilder<
-                  GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes>?
+                  GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes?>?
               nodes) =>
       _$this._nodes = nodes;
 
@@ -27351,7 +27391,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItemsBuilder
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems',
@@ -27437,8 +27477,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_pageInfo
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), hasNextPage.hashCode),
-        endCursor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, hasNextPage.hashCode);
+    _$hash = $jc(_$hash, endCursor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -27514,7 +27558,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_pageInfoBu
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_pageInfo
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_pageInfo',
@@ -27575,7 +27619,10 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__b
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -27639,7 +27686,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__bas
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__base
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__base',
@@ -27796,32 +27843,22 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(0,
-                                                        G__typename.hashCode),
-                                                    id.hashCode),
-                                                createdAt.hashCode),
-                                            body.hashCode),
-                                        author.hashCode),
-                                    THUMBS_UP.hashCode),
-                                THUMBS_DOWN.hashCode),
-                            LAUGH.hashCode),
-                        HOORAY.hashCode),
-                    CONFUSED.hashCode),
-                HEART.hashCode),
-            ROCKET.hashCode),
-        EYES.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, body.hashCode);
+    _$hash = $jc(_$hash, author.hashCode);
+    _$hash = $jc(_$hash, THUMBS_UP.hashCode);
+    _$hash = $jc(_$hash, THUMBS_DOWN.hashCode);
+    _$hash = $jc(_$hash, LAUGH.hashCode);
+    _$hash = $jc(_$hash, HOORAY.hashCode);
+    _$hash = $jc(_$hash, CONFUSED.hashCode);
+    _$hash = $jc(_$hash, HEART.hashCode);
+    _$hash = $jc(_$hash, ROCKET.hashCode);
+    _$hash = $jc(_$hash, EYES.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -28131,8 +28168,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), login.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -28208,7 +28249,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asI
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_author
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_author',
@@ -28288,8 +28329,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -28366,7 +28411,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asI
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_THUMBS_UP
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_THUMBS_UP',
@@ -28446,8 +28491,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -28524,7 +28573,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asI
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_THUMBS_DOWN
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_THUMBS_DOWN',
@@ -28604,8 +28653,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -28682,7 +28735,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asI
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_LAUGH
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_LAUGH',
@@ -28762,8 +28815,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -28840,7 +28897,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asI
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_HOORAY
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_HOORAY',
@@ -28920,8 +28977,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -28998,7 +29059,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asI
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_CONFUSED
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_CONFUSED',
@@ -29078,8 +29139,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -29156,7 +29221,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asI
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_HEART
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_HEART',
@@ -29236,8 +29301,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -29314,7 +29383,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asI
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_ROCKET
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_ROCKET',
@@ -29394,8 +29463,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -29472,7 +29545,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asI
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_EYES
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asIssueComment_EYES',
@@ -29571,14 +29644,15 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-                    isCrossRepository.hashCode),
-                actor.hashCode),
-            commit.hashCode),
-        commitRepository.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, isCrossRepository.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, commit.hashCode);
+    _$hash = $jc(_$hash, commitRepository.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -29784,7 +29858,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -29854,7 +29932,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asR
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReferencedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReferencedEvent_actor',
@@ -29928,8 +30006,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), oid.hashCode), url.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, oid.hashCode);
+    _$hash = $jc(_$hash, url.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -30005,7 +30087,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asR
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReferencedEvent_commit
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReferencedEvent_commit',
@@ -30084,8 +30166,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), owner.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -30170,7 +30256,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asR
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReferencedEvent_commitRepository
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReferencedEvent_commitRepository',
@@ -30251,7 +30337,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -30321,7 +30411,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asR
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReferencedEvent_commitRepository_owner
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReferencedEvent_commitRepository_owner',
@@ -30410,12 +30500,14 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-                previousTitle.hashCode),
-            currentTitle.hashCode),
-        actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, previousTitle.hashCode);
+    _$hash = $jc(_$hash, currentTitle.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -30601,7 +30693,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -30671,7 +30767,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asR
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asRenamedTitleEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asRenamedTitleEvent_actor',
@@ -30742,8 +30838,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -30828,7 +30928,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asC
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asClosedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asClosedEvent',
@@ -30909,7 +31009,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -30979,7 +31083,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asC
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asClosedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asClosedEvent_actor',
@@ -31050,8 +31154,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -31136,7 +31244,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asR
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReopenedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReopenedEvent',
@@ -31217,7 +31325,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -31287,7 +31399,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asR
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReopenedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asReopenedEvent_actor',
@@ -31369,10 +31481,13 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        source.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, source.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -31468,7 +31583,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asC
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent',
@@ -31553,7 +31668,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -31623,7 +31742,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asC
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_actor',
@@ -31683,7 +31802,10 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -31747,7 +31869,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asC
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__base
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__base',
@@ -31820,8 +31942,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), number.hashCode),
-        repository.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, number.hashCode);
+    _$hash = $jc(_$hash, repository.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -31906,7 +32032,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asC
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asIssue
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asIssue',
@@ -31995,8 +32121,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), owner.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -32081,7 +32211,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asC
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asIssue_repository
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asIssue_repository',
@@ -32162,7 +32292,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -32232,7 +32366,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asC
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asIssue_repository_owner
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asIssue_repository_owner',
@@ -32309,8 +32443,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), number.hashCode),
-        repository.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, number.hashCode);
+    _$hash = $jc(_$hash, repository.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -32395,7 +32533,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asC
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest',
@@ -32484,8 +32622,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), owner.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -32570,7 +32712,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asC
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest_repository
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest_repository',
@@ -32651,7 +32793,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -32721,7 +32867,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asC
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest_repository_owner
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest_repository_owner',
@@ -32803,10 +32949,13 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        label.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, label.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -32903,7 +33052,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asL
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asLabeledEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asLabeledEvent',
@@ -32987,7 +33136,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -33057,7 +33210,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asL
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asLabeledEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asLabeledEvent_actor',
@@ -33131,8 +33284,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), name.hashCode), color.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -33208,7 +33365,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asL
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asLabeledEvent_label
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asLabeledEvent_label',
@@ -33294,10 +33451,13 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        label.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, label.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -33394,7 +33554,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asU
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnlabeledEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnlabeledEvent',
@@ -33478,7 +33638,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -33548,7 +33712,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asU
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnlabeledEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnlabeledEvent_actor',
@@ -33622,8 +33786,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), name.hashCode), color.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -33699,7 +33867,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asU
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnlabeledEvent_label
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnlabeledEvent_label',
@@ -33784,10 +33952,13 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        milestoneTitle.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, milestoneTitle.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -33879,7 +34050,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asM
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asMilestonedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asMilestonedEvent',
@@ -33964,7 +34135,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -34034,7 +34209,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asM
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asMilestonedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asMilestonedEvent_actor',
@@ -34115,10 +34290,13 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        milestoneTitle.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, milestoneTitle.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -34210,7 +34388,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asD
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asDemilestonedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asDemilestonedEvent',
@@ -34295,7 +34473,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -34365,7 +34547,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asD
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asDemilestonedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asDemilestonedEvent_actor',
@@ -34442,10 +34624,13 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        lockReason.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, lockReason.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -34537,7 +34722,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asL
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asLockedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asLockedEvent',
@@ -34619,7 +34804,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -34689,7 +34878,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asL
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asLockedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asLockedEvent_actor',
@@ -34760,8 +34949,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -34846,7 +35039,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asU
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnlockedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnlockedEvent',
@@ -34927,7 +35120,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -34997,7 +35194,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asU
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnlockedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnlockedEvent_actor',
@@ -35075,10 +35272,13 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        assignee.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, assignee.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -35174,7 +35374,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asA
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent',
@@ -35256,7 +35456,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -35326,7 +35530,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asA
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_actor',
@@ -35386,7 +35590,10 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -35450,7 +35657,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asA
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_assignee__base
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_assignee__base',
@@ -35513,7 +35720,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -35583,7 +35794,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asA
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_assignee__asUser
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_assignee__asUser',
@@ -35650,7 +35861,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -35720,7 +35935,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asA
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_assignee__asBot
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_assignee__asBot',
@@ -35787,7 +36002,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -35857,7 +36076,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asA
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_assignee__asOrganization
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_assignee__asOrganization',
@@ -35924,7 +36143,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -35994,7 +36217,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asA
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_assignee__asMannequin
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asAssignedEvent_assignee__asMannequin',
@@ -36072,10 +36295,13 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        assignee.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, assignee.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -36171,7 +36397,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asU
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent',
@@ -36253,7 +36479,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -36323,7 +36553,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asU
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_actor',
@@ -36383,7 +36613,10 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -36447,7 +36680,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asU
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_assignee__base
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_assignee__base',
@@ -36510,7 +36743,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -36580,7 +36817,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asU
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_assignee__asUser
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_assignee__asUser',
@@ -36647,7 +36884,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -36717,7 +36958,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asU
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_assignee__asBot
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_assignee__asBot',
@@ -36784,7 +37025,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -36854,7 +37099,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asU
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_assignee__asOrganization
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_assignee__asOrganization',
@@ -36921,7 +37166,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -36991,7 +37240,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asU
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_assignee__asMannequin
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnassignedEvent_assignee__asMannequin',
@@ -37062,8 +37311,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -37148,7 +37401,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asS
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asSubscribedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asSubscribedEvent',
@@ -37229,7 +37482,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -37299,7 +37556,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asS
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asSubscribedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asSubscribedEvent_actor',
@@ -37370,8 +37627,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -37456,7 +37717,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asU
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnsubscribedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnsubscribedEvent',
@@ -37537,7 +37798,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -37607,7 +37872,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asU
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnsubscribedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asUnsubscribedEvent_actor',
@@ -37678,8 +37943,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -37764,7 +38033,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asM
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asMentionedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asMentionedEvent',
@@ -37845,7 +38114,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -37915,7 +38188,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asM
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asMentionedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asMentionedEvent_actor',
@@ -37986,8 +38259,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -38072,7 +38349,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asP
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asPinnedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asPinnedEvent',
@@ -38153,7 +38430,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -38223,7 +38504,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asP
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asPinnedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asPinnedEvent_actor',
@@ -38301,10 +38582,13 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        fromRepository.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, fromRepository.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -38401,7 +38685,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asT
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asTransferredEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asTransferredEvent',
@@ -38485,7 +38769,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -38555,7 +38843,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asT
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asTransferredEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asTransferredEvent_actor',
@@ -38630,8 +38918,12 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), owner.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -38716,7 +39008,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asT
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asTransferredEvent_fromRepository
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asTransferredEvent_fromRepository',
@@ -38797,7 +39089,11 @@ class _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__a
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -38867,7 +39163,7 @@ class GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asT
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asTransferredEvent_fromRepository_owner
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asIssue_timelineItems_nodes__asTransferredEvent_fromRepository_owner',
@@ -39082,44 +39378,33 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                $jc(
-                                                                    $jc(
-                                                                        $jc(
-                                                                            $jc($jc($jc($jc($jc($jc(0, G__typename.hashCode), id.hashCode), createdAt.hashCode), body.hashCode), author.hashCode),
-                                                                                THUMBS_UP.hashCode),
-                                                                            THUMBS_DOWN.hashCode),
-                                                                        LAUGH.hashCode),
-                                                                    HOORAY.hashCode),
-                                                                CONFUSED.hashCode),
-                                                            HEART.hashCode),
-                                                        ROCKET.hashCode),
-                                                    EYES.hashCode),
-                                                title.hashCode),
-                                            closed.hashCode),
-                                        url.hashCode),
-                                    viewerCanReact.hashCode),
-                                viewerCanUpdate.hashCode),
-                            merged.hashCode),
-                        additions.hashCode),
-                    deletions.hashCode),
-                changedFiles.hashCode),
-            commits.hashCode),
-        timelineItems.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, body.hashCode);
+    _$hash = $jc(_$hash, author.hashCode);
+    _$hash = $jc(_$hash, THUMBS_UP.hashCode);
+    _$hash = $jc(_$hash, THUMBS_DOWN.hashCode);
+    _$hash = $jc(_$hash, LAUGH.hashCode);
+    _$hash = $jc(_$hash, HOORAY.hashCode);
+    _$hash = $jc(_$hash, CONFUSED.hashCode);
+    _$hash = $jc(_$hash, HEART.hashCode);
+    _$hash = $jc(_$hash, ROCKET.hashCode);
+    _$hash = $jc(_$hash, EYES.hashCode);
+    _$hash = $jc(_$hash, title.hashCode);
+    _$hash = $jc(_$hash, closed.hashCode);
+    _$hash = $jc(_$hash, url.hashCode);
+    _$hash = $jc(_$hash, viewerCanReact.hashCode);
+    _$hash = $jc(_$hash, viewerCanUpdate.hashCode);
+    _$hash = $jc(_$hash, merged.hashCode);
+    _$hash = $jc(_$hash, additions.hashCode);
+    _$hash = $jc(_$hash, deletions.hashCode);
+    _$hash = $jc(_$hash, changedFiles.hashCode);
+    _$hash = $jc(_$hash, commits.hashCode);
+    _$hash = $jc(_$hash, timelineItems.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -39510,8 +39795,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_author
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), login.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -39661,8 +39950,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_THUMBS_UP
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -39736,7 +40029,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_THUMBS_UPBuilder
   _$GIssueData_repository_issueOrPullRequest__asPullRequest_THUMBS_UP _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_THUMBS_UP
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_THUMBS_UP',
@@ -39815,8 +40108,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_THUMBS_DOWN
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -39892,7 +40189,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_THUMBS_DOWNBuilder
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_THUMBS_DOWN
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_THUMBS_DOWN',
@@ -39971,8 +40268,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_LAUGH
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -40123,8 +40424,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_HOORAY
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -40275,8 +40580,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_CONFUSED
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -40350,7 +40659,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_CONFUSEDBuilder
   _$GIssueData_repository_issueOrPullRequest__asPullRequest_CONFUSED _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_CONFUSED
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_CONFUSED',
@@ -40429,8 +40738,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_HEART
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -40581,8 +40894,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_ROCKET
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -40733,8 +41050,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_EYES
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -40876,7 +41197,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_commits
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), totalCount.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -40966,7 +41291,7 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems
       pageInfo;
   @override
   final BuiltList<
-          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes>?
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes?>?
       nodes;
 
   factory _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems(
@@ -41023,10 +41348,13 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-            pageInfo.hashCode),
-        nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, pageInfo.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -41067,15 +41395,15 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItemsBuild
       _$this._pageInfo = pageInfo;
 
   ListBuilder<
-          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes>?
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes?>?
       _nodes;
   ListBuilder<
-          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes>
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes?>
       get nodes => _$this._nodes ??= new ListBuilder<
-          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes>();
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes?>();
   set nodes(
           ListBuilder<
-                  GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes>?
+                  GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes?>?
               nodes) =>
       _$this._nodes = nodes;
 
@@ -41125,7 +41453,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItemsBuild
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems',
@@ -41212,8 +41540,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_pa
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), hasNextPage.hashCode),
-        endCursor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, hasNextPage.hashCode);
+    _$hash = $jc(_$hash, endCursor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -41289,7 +41621,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_page
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_pageInfo
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_pageInfo',
@@ -41350,7 +41682,10 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -41414,7 +41749,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__base
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__base',
@@ -41571,32 +41906,22 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(0,
-                                                        G__typename.hashCode),
-                                                    id.hashCode),
-                                                createdAt.hashCode),
-                                            body.hashCode),
-                                        author.hashCode),
-                                    THUMBS_UP.hashCode),
-                                THUMBS_DOWN.hashCode),
-                            LAUGH.hashCode),
-                        HOORAY.hashCode),
-                    CONFUSED.hashCode),
-                HEART.hashCode),
-            ROCKET.hashCode),
-        EYES.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, body.hashCode);
+    _$hash = $jc(_$hash, author.hashCode);
+    _$hash = $jc(_$hash, THUMBS_UP.hashCode);
+    _$hash = $jc(_$hash, THUMBS_DOWN.hashCode);
+    _$hash = $jc(_$hash, LAUGH.hashCode);
+    _$hash = $jc(_$hash, HOORAY.hashCode);
+    _$hash = $jc(_$hash, CONFUSED.hashCode);
+    _$hash = $jc(_$hash, HEART.hashCode);
+    _$hash = $jc(_$hash, ROCKET.hashCode);
+    _$hash = $jc(_$hash, EYES.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -41906,8 +42231,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), login.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -41983,7 +42312,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_author
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_author',
@@ -42063,8 +42392,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -42141,7 +42474,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_THUMBS_UP
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_THUMBS_UP',
@@ -42221,8 +42554,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -42299,7 +42636,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_THUMBS_DOWN
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_THUMBS_DOWN',
@@ -42379,8 +42716,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -42457,7 +42798,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_LAUGH
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_LAUGH',
@@ -42537,8 +42878,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -42615,7 +42960,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_HOORAY
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_HOORAY',
@@ -42695,8 +43040,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -42773,7 +43122,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_CONFUSED
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_CONFUSED',
@@ -42853,8 +43202,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -42931,7 +43284,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_HEART
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_HEART',
@@ -43011,8 +43364,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -43089,7 +43446,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_ROCKET
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_ROCKET',
@@ -43169,8 +43526,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -43247,7 +43608,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_EYES
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asIssueComment_EYES',
@@ -43346,14 +43707,15 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-                    isCrossRepository.hashCode),
-                actor.hashCode),
-            commit.hashCode),
-        commitRepository.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, isCrossRepository.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, commit.hashCode);
+    _$hash = $jc(_$hash, commitRepository.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -43559,7 +43921,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -43629,7 +43995,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReferencedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReferencedEvent_actor',
@@ -43703,8 +44069,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), oid.hashCode), url.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, oid.hashCode);
+    _$hash = $jc(_$hash, url.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -43780,7 +44150,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReferencedEvent_commit
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReferencedEvent_commit',
@@ -43859,8 +44229,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), owner.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -43945,7 +44319,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReferencedEvent_commitRepository
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReferencedEvent_commitRepository',
@@ -44026,7 +44400,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -44096,7 +44474,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReferencedEvent_commitRepository_owner
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReferencedEvent_commitRepository_owner',
@@ -44185,12 +44563,14 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-                previousTitle.hashCode),
-            currentTitle.hashCode),
-        actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, previousTitle.hashCode);
+    _$hash = $jc(_$hash, currentTitle.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -44376,7 +44756,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -44446,7 +44830,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asRenamedTitleEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asRenamedTitleEvent_actor',
@@ -44517,8 +44901,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -44603,7 +44991,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asClosedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asClosedEvent',
@@ -44684,7 +45072,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -44754,7 +45146,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asClosedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asClosedEvent_actor',
@@ -44825,8 +45217,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -44911,7 +45307,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReopenedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReopenedEvent',
@@ -44992,7 +45388,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -45062,7 +45462,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReopenedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReopenedEvent_actor',
@@ -45144,10 +45544,13 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        source.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, source.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -45243,7 +45646,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent',
@@ -45328,7 +45731,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -45398,7 +45805,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_actor',
@@ -45458,7 +45865,10 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -45522,7 +45932,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__base
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__base',
@@ -45595,8 +46005,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), number.hashCode),
-        repository.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, number.hashCode);
+    _$hash = $jc(_$hash, repository.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -45681,7 +46095,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asIssue
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asIssue',
@@ -45770,8 +46184,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), owner.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -45856,7 +46274,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asIssue_repository
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asIssue_repository',
@@ -45937,7 +46355,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -46007,7 +46429,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asIssue_repository_owner
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asIssue_repository_owner',
@@ -46084,8 +46506,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), number.hashCode),
-        repository.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, number.hashCode);
+    _$hash = $jc(_$hash, repository.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -46170,7 +46596,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest',
@@ -46259,8 +46685,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), owner.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -46345,7 +46775,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest_repository
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest_repository',
@@ -46426,7 +46856,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -46496,7 +46930,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest_repository_owner
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asCrossReferencedEvent_source__asPullRequest_repository_owner',
@@ -46578,10 +47012,13 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        label.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, label.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -46678,7 +47115,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asLabeledEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asLabeledEvent',
@@ -46762,7 +47199,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -46832,7 +47273,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asLabeledEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asLabeledEvent_actor',
@@ -46906,8 +47347,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), name.hashCode), color.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -46983,7 +47428,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asLabeledEvent_label
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asLabeledEvent_label',
@@ -47069,10 +47514,13 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        label.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, label.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -47169,7 +47617,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnlabeledEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnlabeledEvent',
@@ -47253,7 +47701,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -47323,7 +47775,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnlabeledEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnlabeledEvent_actor',
@@ -47397,8 +47849,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), name.hashCode), color.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -47474,7 +47930,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnlabeledEvent_label
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnlabeledEvent_label',
@@ -47559,10 +48015,13 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        milestoneTitle.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, milestoneTitle.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -47654,7 +48113,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMilestonedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMilestonedEvent',
@@ -47739,7 +48198,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -47809,7 +48272,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMilestonedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMilestonedEvent_actor',
@@ -47890,10 +48353,13 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        milestoneTitle.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, milestoneTitle.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -47985,7 +48451,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDemilestonedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDemilestonedEvent',
@@ -48070,7 +48536,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -48140,7 +48610,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDemilestonedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDemilestonedEvent_actor',
@@ -48217,10 +48687,13 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        lockReason.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, lockReason.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -48312,7 +48785,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asLockedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asLockedEvent',
@@ -48394,7 +48867,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -48464,7 +48941,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asLockedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asLockedEvent_actor',
@@ -48535,8 +49012,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -48621,7 +49102,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnlockedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnlockedEvent',
@@ -48702,7 +49183,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -48772,7 +49257,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnlockedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnlockedEvent_actor',
@@ -48850,10 +49335,13 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        assignee.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, assignee.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -48949,7 +49437,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent',
@@ -49031,7 +49519,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -49101,7 +49593,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_actor',
@@ -49161,7 +49653,10 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -49225,7 +49720,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_assignee__base
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_assignee__base',
@@ -49288,7 +49783,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -49358,7 +49857,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_assignee__asUser
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_assignee__asUser',
@@ -49425,7 +49924,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -49495,7 +49998,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_assignee__asBot
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_assignee__asBot',
@@ -49562,7 +50065,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -49632,7 +50139,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_assignee__asOrganization
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_assignee__asOrganization',
@@ -49699,7 +50206,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -49769,7 +50280,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_assignee__asMannequin
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asAssignedEvent_assignee__asMannequin',
@@ -49847,10 +50358,13 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        assignee.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, assignee.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -49946,7 +50460,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent',
@@ -50028,7 +50542,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -50098,7 +50616,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_actor',
@@ -50158,7 +50676,10 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -50222,7 +50743,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_assignee__base
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_assignee__base',
@@ -50285,7 +50806,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -50355,7 +50880,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_assignee__asUser
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_assignee__asUser',
@@ -50422,7 +50947,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -50492,7 +51021,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_assignee__asBot
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_assignee__asBot',
@@ -50559,7 +51088,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -50629,7 +51162,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_assignee__asOrganization
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_assignee__asOrganization',
@@ -50696,7 +51229,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -50766,7 +51303,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_assignee__asMannequin
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnassignedEvent_assignee__asMannequin',
@@ -50837,8 +51374,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -50923,7 +51464,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asSubscribedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asSubscribedEvent',
@@ -51004,7 +51545,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -51074,7 +51619,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asSubscribedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asSubscribedEvent_actor',
@@ -51145,8 +51690,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -51231,7 +51780,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnsubscribedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnsubscribedEvent',
@@ -51312,7 +51861,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -51382,7 +51935,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnsubscribedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asUnsubscribedEvent_actor',
@@ -51453,8 +52006,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -51539,7 +52096,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMentionedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMentionedEvent',
@@ -51620,7 +52177,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -51690,7 +52251,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMentionedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMentionedEvent_actor',
@@ -51761,8 +52322,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -51847,7 +52412,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPinnedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPinnedEvent',
@@ -51928,7 +52493,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -51998,7 +52567,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPinnedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPinnedEvent_actor',
@@ -52076,10 +52645,13 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        fromRepository.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, fromRepository.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -52176,7 +52748,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asTransferredEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asTransferredEvent',
@@ -52260,7 +52832,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -52330,7 +52906,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asTransferredEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asTransferredEvent_actor',
@@ -52405,8 +52981,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), owner.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -52491,7 +53071,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asTransferredEvent_fromRepository
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asTransferredEvent_fromRepository',
@@ -52572,7 +53152,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -52642,7 +53226,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asTransferredEvent_fromRepository_owner
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asTransferredEvent_fromRepository_owner',
@@ -52710,7 +53294,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), commit.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, commit.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -52789,7 +53377,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestCommit
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestCommit',
@@ -52880,10 +53468,13 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), committedDate.hashCode),
-            oid.hashCode),
-        author.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, committedDate.hashCode);
+    _$hash = $jc(_$hash, oid.hashCode);
+    _$hash = $jc(_$hash, author.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -53056,7 +53647,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), user.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, user.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -53135,7 +53730,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestCommit_commit_author
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestCommit_commit_author',
@@ -53212,7 +53807,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -53282,7 +53881,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestCommit_commit_author_user
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestCommit_commit_author_user',
@@ -53364,10 +53963,13 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        pullRequest.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, pullRequest.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -53464,7 +54066,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeployedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeployedEvent',
@@ -53548,7 +54150,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -53618,7 +54224,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeployedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeployedEvent_actor',
@@ -53682,7 +54288,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), headRef.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, headRef.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -53761,7 +54371,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeployedEvent_pullRequest
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeployedEvent_pullRequest',
@@ -53838,7 +54448,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -53908,7 +54522,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeployedEvent_pullRequest_headRef
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeployedEvent_pullRequest_headRef',
@@ -53990,10 +54604,13 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        deploymentStatus.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, deploymentStatus.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -54090,7 +54707,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeploymentEnvironmentChangedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeploymentEnvironmentChangedEvent',
@@ -54174,7 +54791,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -54244,7 +54865,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeploymentEnvironmentChangedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeploymentEnvironmentChangedEvent_actor',
@@ -54315,8 +54936,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), deployment.hashCode),
-        description.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, deployment.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -54401,7 +55026,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeploymentEnvironmentChangedEvent_deploymentStatus
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeploymentEnvironmentChangedEvent_deploymentStatus',
@@ -54475,7 +55100,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), environment.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, environment.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -54545,7 +55174,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeploymentEnvironmentChangedEvent_deploymentStatus_deployment
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asDeploymentEnvironmentChangedEvent_deploymentStatus_deployment',
@@ -54624,10 +55253,13 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        pullRequest.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, pullRequest.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -54724,7 +55356,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefRestoredEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefRestoredEvent',
@@ -54808,7 +55440,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -54878,7 +55514,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefRestoredEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefRestoredEvent_actor',
@@ -54945,7 +55581,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), headRefName.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, headRefName.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -55015,7 +55655,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefRestoredEvent_pullRequest
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefRestoredEvent_pullRequest',
@@ -55107,14 +55747,15 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-                    actor.hashCode),
-                pullRequest.hashCode),
-            beforeCommit.hashCode),
-        afterCommit.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, pullRequest.hashCode);
+    _$hash = $jc(_$hash, beforeCommit.hashCode);
+    _$hash = $jc(_$hash, afterCommit.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -55235,7 +55876,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent',
@@ -55325,7 +55966,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -55395,7 +56040,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent_actor',
@@ -55459,7 +56104,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), baseRef.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, baseRef.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -55538,7 +56187,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent_pullRequest
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent_pullRequest',
@@ -55615,7 +56264,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -55685,7 +56338,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent_pullRequest_baseRef
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent_pullRequest_baseRef',
@@ -55752,7 +56405,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), oid.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, oid.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -55822,7 +56479,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent_beforeCommit
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent_beforeCommit',
@@ -55889,7 +56546,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), oid.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, oid.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -55959,7 +56620,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent_afterCommit
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asBaseRefForcePushedEvent_afterCommit',
@@ -56051,14 +56712,15 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-                    actor.hashCode),
-                pullRequest.hashCode),
-            beforeCommit.hashCode),
-        afterCommit.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, pullRequest.hashCode);
+    _$hash = $jc(_$hash, beforeCommit.hashCode);
+    _$hash = $jc(_$hash, afterCommit.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -56179,7 +56841,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefForcePushedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefForcePushedEvent',
@@ -56269,7 +56931,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -56339,7 +57005,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefForcePushedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefForcePushedEvent_actor',
@@ -56406,7 +57072,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), headRefName.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, headRefName.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -56476,7 +57146,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefForcePushedEvent_pullRequest
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefForcePushedEvent_pullRequest',
@@ -56543,7 +57213,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), oid.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, oid.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -56613,7 +57287,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefForcePushedEvent_beforeCommit
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefForcePushedEvent_beforeCommit',
@@ -56680,7 +57354,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), oid.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, oid.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -56750,7 +57428,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefForcePushedEvent_afterCommit
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefForcePushedEvent_afterCommit',
@@ -56828,10 +57506,13 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        requestedReviewer.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, requestedReviewer.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -56927,7 +57608,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestedEvent',
@@ -57009,7 +57690,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -57079,7 +57764,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestedEvent_actor',
@@ -57139,7 +57824,10 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -57203,7 +57891,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestedEvent_requestedReviewer__base
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestedEvent_requestedReviewer__base',
@@ -57266,7 +57954,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -57336,7 +58028,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestedEvent_requestedReviewer__asUser
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestedEvent_requestedReviewer__asUser',
@@ -57414,10 +58106,13 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        requestedReviewer.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, requestedReviewer.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -57513,7 +58208,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestRemovedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestRemovedEvent',
@@ -57595,7 +58290,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -57665,7 +58364,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestRemovedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestRemovedEvent_actor',
@@ -57725,7 +58424,10 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -57789,7 +58491,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestRemovedEvent_requestedReviewer__base
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestRemovedEvent_requestedReviewer__base',
@@ -57852,7 +58554,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -57922,7 +58628,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestRemovedEvent_requestedReviewer__asUser
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewRequestRemovedEvent_requestedReviewer__asUser',
@@ -58008,12 +58714,14 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-                dismissalMessage.hashCode),
-            actor.hashCode),
-        pullRequest.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, dismissalMessage.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, pullRequest.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -58117,7 +58825,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewDismissedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewDismissedEvent',
@@ -58202,7 +58910,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -58272,7 +58984,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewDismissedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewDismissedEvent_actor',
@@ -58336,7 +59048,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), author.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, author.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -58415,7 +59131,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewDismissedEvent_pullRequest
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewDismissedEvent_pullRequest',
@@ -58492,7 +59208,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -58562,7 +59282,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewDismissedEvent_pullRequest_author
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asReviewDismissedEvent_pullRequest_author',
@@ -58652,12 +59372,14 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-                state.hashCode),
-            author.hashCode),
-        comments.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, state.hashCode);
+    _$hash = $jc(_$hash, author.hashCode);
+    _$hash = $jc(_$hash, comments.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -58847,7 +59569,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -58917,7 +59643,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_author
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_author',
@@ -58937,7 +59663,7 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
   final String G__typename;
   @override
   final BuiltList<
-          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes>?
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes?>?
       nodes;
 
   factory _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments(
@@ -58982,7 +59708,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -59008,15 +59738,15 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
   set G__typename(String? G__typename) => _$this._G__typename = G__typename;
 
   ListBuilder<
-          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes>?
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes?>?
       _nodes;
   ListBuilder<
-          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes>
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes?>
       get nodes => _$this._nodes ??= new ListBuilder<
-          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes>();
+          GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes?>();
   set nodes(
           ListBuilder<
-                  GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes>?
+                  GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes?>?
               nodes) =>
       _$this._nodes = nodes;
 
@@ -59064,7 +59794,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments',
@@ -59235,32 +59965,22 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(0,
-                                                        G__typename.hashCode),
-                                                    id.hashCode),
-                                                createdAt.hashCode),
-                                            body.hashCode),
-                                        author.hashCode),
-                                    THUMBS_UP.hashCode),
-                                THUMBS_DOWN.hashCode),
-                            LAUGH.hashCode),
-                        HOORAY.hashCode),
-                    CONFUSED.hashCode),
-                HEART.hashCode),
-            ROCKET.hashCode),
-        EYES.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, body.hashCode);
+    _$hash = $jc(_$hash, author.hashCode);
+    _$hash = $jc(_$hash, THUMBS_UP.hashCode);
+    _$hash = $jc(_$hash, THUMBS_DOWN.hashCode);
+    _$hash = $jc(_$hash, LAUGH.hashCode);
+    _$hash = $jc(_$hash, HOORAY.hashCode);
+    _$hash = $jc(_$hash, CONFUSED.hashCode);
+    _$hash = $jc(_$hash, HEART.hashCode);
+    _$hash = $jc(_$hash, ROCKET.hashCode);
+    _$hash = $jc(_$hash, EYES.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -59570,8 +60290,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), login.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -59647,7 +60371,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_author
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_author',
@@ -59727,8 +60451,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -59805,7 +60533,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_THUMBS_UP
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_THUMBS_UP',
@@ -59885,8 +60613,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -59963,7 +60695,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_THUMBS_DOWN
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_THUMBS_DOWN',
@@ -60043,8 +60775,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -60121,7 +60857,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_LAUGH
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_LAUGH',
@@ -60201,8 +60937,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -60279,7 +61019,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_HOORAY
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_HOORAY',
@@ -60359,8 +61099,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -60437,7 +61181,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_CONFUSED
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_CONFUSED',
@@ -60517,8 +61261,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -60595,7 +61343,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_HEART
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_HEART',
@@ -60675,8 +61423,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -60753,7 +61505,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_ROCKET
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_ROCKET',
@@ -60833,8 +61585,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -60911,7 +61667,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_EYES
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asPullRequestReview_comments_nodes_EYES',
@@ -61001,12 +61757,14 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-                mergeRefName.hashCode),
-            actor.hashCode),
-        commit.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, mergeRefName.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, commit.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -61196,7 +61954,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -61266,7 +62028,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMergedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMergedEvent_actor',
@@ -61340,8 +62102,12 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), oid.hashCode), url.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, oid.hashCode);
+    _$hash = $jc(_$hash, url.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -61417,7 +62183,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMergedEvent_commit
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asMergedEvent_commit',
@@ -61502,10 +62268,13 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            headRefName.hashCode),
-        actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, headRefName.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -61596,7 +62365,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
     try {
       _$result = _$v ??
           new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefDeletedEvent
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefDeletedEvent',
@@ -61681,7 +62450,11 @@ class _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_no
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -61751,7 +62524,7 @@ class GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_node
       _build() {
     final _$result = _$v ??
         new _$GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefDeletedEvent_actor
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GIssueData_repository_issueOrPullRequest__asPullRequest_timelineItems_nodes__asHeadRefDeletedEvent_actor',
@@ -61817,12 +62590,14 @@ class _$GCommentPartsData extends GCommentPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc($jc($jc(0, G__typename.hashCode), id.hashCode),
-                createdAt.hashCode),
-            body.hashCode),
-        author.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, body.hashCode);
+    _$hash = $jc(_$hash, author.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -61967,8 +62742,12 @@ class _$GCommentPartsData_author extends GCommentPartsData_author {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), login.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -62086,8 +62865,12 @@ class _$GReactionConnectionPartsData extends GReactionConnectionPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -62244,22 +63027,18 @@ class _$GReactablePartsData extends GReactablePartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc($jc(0, G__typename.hashCode),
-                                    THUMBS_UP.hashCode),
-                                THUMBS_DOWN.hashCode),
-                            LAUGH.hashCode),
-                        HOORAY.hashCode),
-                    CONFUSED.hashCode),
-                HEART.hashCode),
-            ROCKET.hashCode),
-        EYES.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, THUMBS_UP.hashCode);
+    _$hash = $jc(_$hash, THUMBS_DOWN.hashCode);
+    _$hash = $jc(_$hash, LAUGH.hashCode);
+    _$hash = $jc(_$hash, HOORAY.hashCode);
+    _$hash = $jc(_$hash, CONFUSED.hashCode);
+    _$hash = $jc(_$hash, HEART.hashCode);
+    _$hash = $jc(_$hash, ROCKET.hashCode);
+    _$hash = $jc(_$hash, EYES.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -62456,8 +63235,12 @@ class _$GReactablePartsData_THUMBS_UP extends GReactablePartsData_THUMBS_UP {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -62580,8 +63363,12 @@ class _$GReactablePartsData_THUMBS_DOWN
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -62703,8 +63490,12 @@ class _$GReactablePartsData_LAUGH extends GReactablePartsData_LAUGH {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -62825,8 +63616,12 @@ class _$GReactablePartsData_HOORAY extends GReactablePartsData_HOORAY {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -62947,8 +63742,12 @@ class _$GReactablePartsData_CONFUSED extends GReactablePartsData_CONFUSED {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -63070,8 +63869,12 @@ class _$GReactablePartsData_HEART extends GReactablePartsData_HEART {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -63192,8 +63995,12 @@ class _$GReactablePartsData_ROCKET extends GReactablePartsData_ROCKET {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -63314,8 +64121,12 @@ class _$GReactablePartsData_EYES extends GReactablePartsData_EYES {
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -63450,14 +64261,15 @@ class _$GReferencedEventPartsData extends GReferencedEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-                    isCrossRepository.hashCode),
-                actor.hashCode),
-            commit.hashCode),
-        commitRepository.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, isCrossRepository.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, commit.hashCode);
+    _$hash = $jc(_$hash, commitRepository.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -63619,7 +64431,11 @@ class _$GReferencedEventPartsData_actor
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -63729,8 +64545,12 @@ class _$GReferencedEventPartsData_commit
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), oid.hashCode), url.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, oid.hashCode);
+    _$hash = $jc(_$hash, url.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -63851,8 +64671,12 @@ class _$GReferencedEventPartsData_commitRepository
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), owner.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -63991,7 +64815,11 @@ class _$GReferencedEventPartsData_commitRepository_owner
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -64117,12 +64945,14 @@ class _$GRenamedTitleEventPartsData extends GRenamedTitleEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-                previousTitle.hashCode),
-            currentTitle.hashCode),
-        actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, previousTitle.hashCode);
+    _$hash = $jc(_$hash, currentTitle.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -64269,7 +65099,11 @@ class _$GRenamedTitleEventPartsData_actor
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -64377,8 +65211,12 @@ class _$GClosedEventPartsData extends GClosedEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -64501,7 +65339,11 @@ class _$GClosedEventPartsData_actor extends GClosedEventPartsData_actor {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -64608,8 +65450,12 @@ class _$GReopenedEventPartsData extends GReopenedEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -64734,7 +65580,11 @@ class _$GReopenedEventPartsData_actor extends GReopenedEventPartsData_actor {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -64849,10 +65699,13 @@ class _$GCrossReferencedEventPartsData extends GCrossReferencedEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        source.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, source.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -64990,7 +65843,11 @@ class _$GCrossReferencedEventPartsData_actor
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -65094,7 +65951,10 @@ class _$GCrossReferencedEventPartsData_source__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -65206,8 +66066,12 @@ class _$GCrossReferencedEventPartsData_source__asIssue
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), number.hashCode),
-        repository.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, number.hashCode);
+    _$hash = $jc(_$hash, repository.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -65359,8 +66223,12 @@ class _$GCrossReferencedEventPartsData_source__asIssue_repository
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), owner.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -65516,7 +66384,11 @@ class _$GCrossReferencedEventPartsData_source__asIssue_repository_owner
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -65649,8 +66521,12 @@ class _$GCrossReferencedEventPartsData_source__asPullRequest
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), number.hashCode),
-        repository.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, number.hashCode);
+    _$hash = $jc(_$hash, repository.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -65813,8 +66689,12 @@ class _$GCrossReferencedEventPartsData_source__asPullRequest_repository
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), owner.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -65894,7 +66774,7 @@ class GCrossReferencedEventPartsData_source__asPullRequest_repositoryBuilder
     try {
       _$result = _$v ??
           new _$GCrossReferencedEventPartsData_source__asPullRequest_repository
-                  ._(
+              ._(
               G__typename: BuiltValueNullFieldError.checkNotNull(
                   G__typename,
                   r'GCrossReferencedEventPartsData_source__asPullRequest_repository',
@@ -65974,7 +66854,11 @@ class _$GCrossReferencedEventPartsData_source__asPullRequest_repository_owner
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -66043,7 +66927,7 @@ class GCrossReferencedEventPartsData_source__asPullRequest_repository_ownerBuild
       _build() {
     final _$result = _$v ??
         new _$GCrossReferencedEventPartsData_source__asPullRequest_repository_owner
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GCrossReferencedEventPartsData_source__asPullRequest_repository_owner',
@@ -66106,10 +66990,13 @@ class _$GLabeledEventPartsData extends GLabeledEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        label.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, label.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -66244,7 +67131,11 @@ class _$GLabeledEventPartsData_actor extends GLabeledEventPartsData_actor {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -66353,8 +67244,12 @@ class _$GLabeledEventPartsData_label extends GLabeledEventPartsData_label {
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), name.hashCode), color.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -66477,10 +67372,13 @@ class _$GUnlabeledEventPartsData extends GUnlabeledEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        label.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, label.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -66616,7 +67514,11 @@ class _$GUnlabeledEventPartsData_actor extends GUnlabeledEventPartsData_actor {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -66725,8 +67627,12 @@ class _$GUnlabeledEventPartsData_label extends GUnlabeledEventPartsData_label {
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), name.hashCode), color.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, color.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -66849,10 +67755,13 @@ class _$GMilestonedEventPartsData extends GMilestonedEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        milestoneTitle.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, milestoneTitle.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -66989,7 +67898,11 @@ class _$GMilestonedEventPartsData_actor
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -67104,10 +68017,13 @@ class _$GDemilestonedEventPartsData extends GDemilestonedEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        milestoneTitle.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, milestoneTitle.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -67246,7 +68162,11 @@ class _$GDemilestonedEventPartsData_actor
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -67360,10 +68280,13 @@ class _$GLockedEventPartsData extends GLockedEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        lockReason.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, lockReason.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -67494,7 +68417,11 @@ class _$GLockedEventPartsData_actor extends GLockedEventPartsData_actor {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -67601,8 +68528,12 @@ class _$GUnlockedEventPartsData extends GUnlockedEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -67727,7 +68658,11 @@ class _$GUnlockedEventPartsData_actor extends GUnlockedEventPartsData_actor {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -67840,10 +68775,13 @@ class _$GAssignedEventPartsData extends GAssignedEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        assignee.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, assignee.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -67976,7 +68914,11 @@ class _$GAssignedEventPartsData_actor extends GAssignedEventPartsData_actor {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -68078,7 +69020,10 @@ class _$GAssignedEventPartsData_assignee__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -68180,7 +69125,11 @@ class _$GAssignedEventPartsData_assignee__asUser
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -68290,7 +69239,11 @@ class _$GAssignedEventPartsData_assignee__asBot
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -68403,7 +69356,11 @@ class _$GAssignedEventPartsData_assignee__asOrganization
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -68517,7 +69474,11 @@ class _$GAssignedEventPartsData_assignee__asMannequin
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -68635,10 +69596,13 @@ class _$GUnassignedEventPartsData extends GUnassignedEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        assignee.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, assignee.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -68772,7 +69736,11 @@ class _$GUnassignedEventPartsData_actor
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -68874,7 +69842,10 @@ class _$GUnassignedEventPartsData_assignee__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -68976,7 +69947,11 @@ class _$GUnassignedEventPartsData_assignee__asUser
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -69087,7 +70062,11 @@ class _$GUnassignedEventPartsData_assignee__asBot
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -69202,7 +70181,11 @@ class _$GUnassignedEventPartsData_assignee__asOrganization
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -69320,7 +70303,11 @@ class _$GUnassignedEventPartsData_assignee__asMannequin
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -69432,8 +70419,12 @@ class _$GSubscribedEventPartsData extends GSubscribedEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -69559,7 +70550,11 @@ class _$GSubscribedEventPartsData_actor
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -69666,8 +70661,12 @@ class _$GUnsubscribedEventPartsData extends GUnsubscribedEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -69795,7 +70794,11 @@ class _$GUnsubscribedEventPartsData_actor
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -69903,8 +70906,12 @@ class _$GMentionedEventPartsData extends GMentionedEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -70029,7 +71036,11 @@ class _$GMentionedEventPartsData_actor extends GMentionedEventPartsData_actor {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -70136,8 +71147,12 @@ class _$GPinnedEventPartsData extends GPinnedEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), createdAt.hashCode), actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -70260,7 +71275,11 @@ class _$GPinnedEventPartsData_actor extends GPinnedEventPartsData_actor {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -70373,10 +71392,13 @@ class _$GTransferredEventPartsData extends GTransferredEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        fromRepository.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, fromRepository.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -70515,7 +71537,11 @@ class _$GTransferredEventPartsData_actor
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -70628,8 +71654,12 @@ class _$GTransferredEventPartsData_fromRepository
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), owner.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, owner.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -70768,7 +71798,11 @@ class _$GTransferredEventPartsData_fromRepository_owner
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -70877,7 +71911,11 @@ class _$GPullRequestCommitPartsData extends GPullRequestCommitPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), commit.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, commit.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -71009,10 +72047,13 @@ class _$GPullRequestCommitPartsData_commit
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), committedDate.hashCode),
-            oid.hashCode),
-        author.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, committedDate.hashCode);
+    _$hash = $jc(_$hash, oid.hashCode);
+    _$hash = $jc(_$hash, author.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -71152,7 +72193,11 @@ class _$GPullRequestCommitPartsData_commit_author
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), user.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, user.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -71282,7 +72327,11 @@ class _$GPullRequestCommitPartsData_commit_author_user
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -71402,10 +72451,13 @@ class _$GDeployedEventPartsData extends GDeployedEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        pullRequest.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, pullRequest.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -71541,7 +72593,11 @@ class _$GDeployedEventPartsData_actor extends GDeployedEventPartsData_actor {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -71646,7 +72702,11 @@ class _$GDeployedEventPartsData_pullRequest
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), headRef.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, headRef.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -71773,7 +72833,11 @@ class _$GDeployedEventPartsData_pullRequest_headRef
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -71897,10 +72961,13 @@ class _$GDeploymentEnvironmentChangedEventPartsData
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        deploymentStatus.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, deploymentStatus.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -72057,7 +73124,11 @@ class _$GDeploymentEnvironmentChangedEventPartsData_actor
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -72184,8 +73255,12 @@ class _$GDeploymentEnvironmentChangedEventPartsData_deploymentStatus
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), deployment.hashCode),
-        description.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, deployment.hashCode);
+    _$hash = $jc(_$hash, description.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -72337,7 +73412,11 @@ class _$GDeploymentEnvironmentChangedEventPartsData_deploymentStatus_deployment
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), environment.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, environment.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -72407,7 +73486,7 @@ class GDeploymentEnvironmentChangedEventPartsData_deploymentStatus_deploymentBui
       _build() {
     final _$result = _$v ??
         new _$GDeploymentEnvironmentChangedEventPartsData_deploymentStatus_deployment
-                ._(
+            ._(
             G__typename: BuiltValueNullFieldError.checkNotNull(
                 G__typename,
                 r'GDeploymentEnvironmentChangedEventPartsData_deploymentStatus_deployment',
@@ -72467,10 +73546,13 @@ class _$GHeadRefRestoredEventPartsData extends GHeadRefRestoredEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        pullRequest.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, pullRequest.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -72612,7 +73694,11 @@ class _$GHeadRefRestoredEventPartsData_actor
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -72721,7 +73807,11 @@ class _$GHeadRefRestoredEventPartsData_pullRequest
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), headRefName.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, headRefName.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -72849,14 +73939,15 @@ class _$GBaseRefForcePushedEventPartsData
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-                    actor.hashCode),
-                pullRequest.hashCode),
-            beforeCommit.hashCode),
-        afterCommit.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, pullRequest.hashCode);
+    _$hash = $jc(_$hash, beforeCommit.hashCode);
+    _$hash = $jc(_$hash, afterCommit.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -73027,7 +74118,11 @@ class _$GBaseRefForcePushedEventPartsData_actor
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -73136,7 +74231,11 @@ class _$GBaseRefForcePushedEventPartsData_pullRequest
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), baseRef.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, baseRef.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -73274,7 +74373,11 @@ class _$GBaseRefForcePushedEventPartsData_pullRequest_baseRef
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), name.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -73393,7 +74496,11 @@ class _$GBaseRefForcePushedEventPartsData_beforeCommit
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), oid.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, oid.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -73507,7 +74614,11 @@ class _$GBaseRefForcePushedEventPartsData_afterCommit
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), oid.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, oid.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -73637,14 +74748,15 @@ class _$GHeadRefForcePushedEventPartsData
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-                    actor.hashCode),
-                pullRequest.hashCode),
-            beforeCommit.hashCode),
-        afterCommit.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, pullRequest.hashCode);
+    _$hash = $jc(_$hash, beforeCommit.hashCode);
+    _$hash = $jc(_$hash, afterCommit.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -73815,7 +74927,11 @@ class _$GHeadRefForcePushedEventPartsData_actor
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -73926,7 +75042,11 @@ class _$GHeadRefForcePushedEventPartsData_pullRequest
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), headRefName.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, headRefName.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -74043,7 +75163,11 @@ class _$GHeadRefForcePushedEventPartsData_beforeCommit
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), oid.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, oid.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -74157,7 +75281,11 @@ class _$GHeadRefForcePushedEventPartsData_afterCommit
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), oid.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, oid.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -74275,10 +75403,13 @@ class _$GReviewRequestedEventPartsData extends GReviewRequestedEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        requestedReviewer.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, requestedReviewer.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -74418,7 +75549,11 @@ class _$GReviewRequestedEventPartsData_actor
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -74528,7 +75663,10 @@ class _$GReviewRequestedEventPartsData_requestedReviewer__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -74641,7 +75779,11 @@ class _$GReviewRequestedEventPartsData_requestedReviewer__asUser
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -74767,10 +75909,13 @@ class _$GReviewRequestRemovedEventPartsData
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            actor.hashCode),
-        requestedReviewer.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, requestedReviewer.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -74914,7 +76059,11 @@ class _$GReviewRequestRemovedEventPartsData_actor
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -75028,7 +76177,10 @@ class _$GReviewRequestRemovedEventPartsData_requestedReviewer__base
 
   @override
   int get hashCode {
-    return $jf($jc(0, G__typename.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -75149,7 +76301,11 @@ class _$GReviewRequestRemovedEventPartsData_requestedReviewer__asUser
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -75281,12 +76437,14 @@ class _$GReviewDismissedEventPartsData extends GReviewDismissedEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-                dismissalMessage.hashCode),
-            actor.hashCode),
-        pullRequest.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, dismissalMessage.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, pullRequest.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -75436,7 +76594,11 @@ class _$GReviewDismissedEventPartsData_actor
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -75543,7 +76705,11 @@ class _$GReviewDismissedEventPartsData_pullRequest
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), author.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, author.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -75676,7 +76842,11 @@ class _$GReviewDismissedEventPartsData_pullRequest_author
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -75802,12 +76972,14 @@ class _$GPullRequestReviewPartsData extends GPullRequestReviewPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-                state.hashCode),
-            author.hashCode),
-        comments.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, state.hashCode);
+    _$hash = $jc(_$hash, author.hashCode);
+    _$hash = $jc(_$hash, comments.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -75955,7 +77127,11 @@ class _$GPullRequestReviewPartsData_author
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -76027,7 +77203,7 @@ class _$GPullRequestReviewPartsData_comments
   @override
   final String G__typename;
   @override
-  final BuiltList<GPullRequestReviewPartsData_comments_nodes>? nodes;
+  final BuiltList<GPullRequestReviewPartsData_comments_nodes?>? nodes;
 
   factory _$GPullRequestReviewPartsData_comments(
           [void Function(GPullRequestReviewPartsData_commentsBuilder)?
@@ -76061,7 +77237,11 @@ class _$GPullRequestReviewPartsData_comments
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), nodes.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, nodes.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -76083,11 +77263,11 @@ class GPullRequestReviewPartsData_commentsBuilder
   String? get G__typename => _$this._G__typename;
   set G__typename(String? G__typename) => _$this._G__typename = G__typename;
 
-  ListBuilder<GPullRequestReviewPartsData_comments_nodes>? _nodes;
-  ListBuilder<GPullRequestReviewPartsData_comments_nodes> get nodes =>
+  ListBuilder<GPullRequestReviewPartsData_comments_nodes?>? _nodes;
+  ListBuilder<GPullRequestReviewPartsData_comments_nodes?> get nodes =>
       _$this._nodes ??=
-          new ListBuilder<GPullRequestReviewPartsData_comments_nodes>();
-  set nodes(ListBuilder<GPullRequestReviewPartsData_comments_nodes>? nodes) =>
+          new ListBuilder<GPullRequestReviewPartsData_comments_nodes?>();
+  set nodes(ListBuilder<GPullRequestReviewPartsData_comments_nodes?>? nodes) =>
       _$this._nodes = nodes;
 
   GPullRequestReviewPartsData_commentsBuilder() {
@@ -76252,32 +77432,22 @@ class _$GPullRequestReviewPartsData_comments_nodes
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(0,
-                                                        G__typename.hashCode),
-                                                    id.hashCode),
-                                                createdAt.hashCode),
-                                            body.hashCode),
-                                        author.hashCode),
-                                    THUMBS_UP.hashCode),
-                                THUMBS_DOWN.hashCode),
-                            LAUGH.hashCode),
-                        HOORAY.hashCode),
-                    CONFUSED.hashCode),
-                HEART.hashCode),
-            ROCKET.hashCode),
-        EYES.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, body.hashCode);
+    _$hash = $jc(_$hash, author.hashCode);
+    _$hash = $jc(_$hash, THUMBS_UP.hashCode);
+    _$hash = $jc(_$hash, THUMBS_DOWN.hashCode);
+    _$hash = $jc(_$hash, LAUGH.hashCode);
+    _$hash = $jc(_$hash, HOORAY.hashCode);
+    _$hash = $jc(_$hash, CONFUSED.hashCode);
+    _$hash = $jc(_$hash, HEART.hashCode);
+    _$hash = $jc(_$hash, ROCKET.hashCode);
+    _$hash = $jc(_$hash, EYES.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -76543,8 +77713,12 @@ class _$GPullRequestReviewPartsData_comments_nodes_author
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc(0, G__typename.hashCode), login.hashCode), avatarUrl.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jc(_$hash, avatarUrl.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -76680,8 +77854,12 @@ class _$GPullRequestReviewPartsData_comments_nodes_THUMBS_UP
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -76826,8 +78004,12 @@ class _$GPullRequestReviewPartsData_comments_nodes_THUMBS_DOWN
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -76967,8 +78149,12 @@ class _$GPullRequestReviewPartsData_comments_nodes_LAUGH
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -77107,8 +78293,12 @@ class _$GPullRequestReviewPartsData_comments_nodes_HOORAY
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -77247,8 +78437,12 @@ class _$GPullRequestReviewPartsData_comments_nodes_CONFUSED
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -77387,8 +78581,12 @@ class _$GPullRequestReviewPartsData_comments_nodes_HEART
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -77527,8 +78725,12 @@ class _$GPullRequestReviewPartsData_comments_nodes_ROCKET
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -77664,8 +78866,12 @@ class _$GPullRequestReviewPartsData_comments_nodes_EYES
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, G__typename.hashCode), totalCount.hashCode),
-        viewerHasReacted.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, totalCount.hashCode);
+    _$hash = $jc(_$hash, viewerHasReacted.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -77802,12 +79008,14 @@ class _$GMergedEventPartsData extends GMergedEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-                mergeRefName.hashCode),
-            actor.hashCode),
-        commit.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, mergeRefName.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jc(_$hash, commit.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -77949,7 +79157,11 @@ class _$GMergedEventPartsData_actor extends GMergedEventPartsData_actor {
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -78058,8 +79270,12 @@ class _$GMergedEventPartsData_commit extends GMergedEventPartsData_commit {
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, G__typename.hashCode), oid.hashCode), url.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, oid.hashCode);
+    _$hash = $jc(_$hash, url.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -78182,10 +79398,13 @@ class _$GHeadRefDeletedEventPartsData extends GHeadRefDeletedEventPartsData {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, G__typename.hashCode), createdAt.hashCode),
-            headRefName.hashCode),
-        actor.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, createdAt.hashCode);
+    _$hash = $jc(_$hash, headRefName.hashCode);
+    _$hash = $jc(_$hash, actor.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -78322,7 +79541,11 @@ class _$GHeadRefDeletedEventPartsData_actor
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, G__typename.hashCode), login.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, G__typename.hashCode);
+    _$hash = $jc(_$hash, login.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -78389,4 +79612,4 @@ class GHeadRefDeletedEventPartsData_actorBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

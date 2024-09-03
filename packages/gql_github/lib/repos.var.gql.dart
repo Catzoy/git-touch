@@ -11,15 +11,18 @@ part 'repos.var.gql.g.dart';
 abstract class GReposVars implements Built<GReposVars, GReposVarsBuilder> {
   GReposVars._();
 
-  factory GReposVars([Function(GReposVarsBuilder b) updates]) = _$GReposVars;
+  factory GReposVars([void Function(GReposVarsBuilder b) updates]) =
+      _$GReposVars;
 
   String get login;
   String? get after;
   static Serializer<GReposVars> get serializer => _$gReposVarsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GReposVars.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GReposVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GReposVars.serializer,
@@ -30,15 +33,18 @@ abstract class GReposVars implements Built<GReposVars, GReposVarsBuilder> {
 abstract class GStarsVars implements Built<GStarsVars, GStarsVarsBuilder> {
   GStarsVars._();
 
-  factory GStarsVars([Function(GStarsVarsBuilder b) updates]) = _$GStarsVars;
+  factory GStarsVars([void Function(GStarsVarsBuilder b) updates]) =
+      _$GStarsVars;
 
   String get login;
   String? get after;
   static Serializer<GStarsVars> get serializer => _$gStarsVarsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GStarsVars.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GStarsVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GStarsVars.serializer,
@@ -50,15 +56,17 @@ abstract class GRepoPartsVars
     implements Built<GRepoPartsVars, GRepoPartsVarsBuilder> {
   GRepoPartsVars._();
 
-  factory GRepoPartsVars([Function(GRepoPartsVarsBuilder b) updates]) =
+  factory GRepoPartsVars([void Function(GRepoPartsVarsBuilder b) updates]) =
       _$GRepoPartsVars;
 
   static Serializer<GRepoPartsVars> get serializer =>
       _$gRepoPartsVarsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRepoPartsVars.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRepoPartsVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRepoPartsVars.serializer,

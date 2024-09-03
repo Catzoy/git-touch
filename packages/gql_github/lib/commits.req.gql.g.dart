@@ -298,6 +298,8 @@ class _$GCommitsReq extends GCommitsReq {
   final _i1.FetchPolicy? fetchPolicy;
   @override
   final bool executeOnListen;
+  @override
+  final _i4.Context? context;
 
   factory _$GCommitsReq([void Function(GCommitsReqBuilder)? updates]) =>
       (new GCommitsReqBuilder()..update(updates))._build();
@@ -311,7 +313,8 @@ class _$GCommitsReq extends GCommitsReq {
       this.updateCacheHandlerKey,
       this.updateCacheHandlerContext,
       this.fetchPolicy,
-      required this.executeOnListen})
+      required this.executeOnListen,
+      this.context})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(vars, r'GCommitsReq', 'vars');
     BuiltValueNullFieldError.checkNotNull(
@@ -340,25 +343,25 @@ class _$GCommitsReq extends GCommitsReq {
         updateCacheHandlerKey == other.updateCacheHandlerKey &&
         updateCacheHandlerContext == other.updateCacheHandlerContext &&
         fetchPolicy == other.fetchPolicy &&
-        executeOnListen == other.executeOnListen;
+        executeOnListen == other.executeOnListen &&
+        context == other.context;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc(
-            $jc(
-                $jc(
-                    $jc(
-                        $jc(
-                            $jc($jc($jc(0, vars.hashCode), operation.hashCode),
-                                requestId.hashCode),
-                            updateResult.hashCode),
-                        optimisticResponse.hashCode),
-                    updateCacheHandlerKey.hashCode),
-                updateCacheHandlerContext.hashCode),
-            fetchPolicy.hashCode),
-        executeOnListen.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, vars.hashCode);
+    _$hash = $jc(_$hash, operation.hashCode);
+    _$hash = $jc(_$hash, requestId.hashCode);
+    _$hash = $jc(_$hash, updateResult.hashCode);
+    _$hash = $jc(_$hash, optimisticResponse.hashCode);
+    _$hash = $jc(_$hash, updateCacheHandlerKey.hashCode);
+    _$hash = $jc(_$hash, updateCacheHandlerContext.hashCode);
+    _$hash = $jc(_$hash, fetchPolicy.hashCode);
+    _$hash = $jc(_$hash, executeOnListen.hashCode);
+    _$hash = $jc(_$hash, context.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -372,7 +375,8 @@ class _$GCommitsReq extends GCommitsReq {
           ..add('updateCacheHandlerKey', updateCacheHandlerKey)
           ..add('updateCacheHandlerContext', updateCacheHandlerContext)
           ..add('fetchPolicy', fetchPolicy)
-          ..add('executeOnListen', executeOnListen))
+          ..add('executeOnListen', executeOnListen)
+          ..add('context', context))
         .toString();
   }
 }
@@ -430,6 +434,10 @@ class GCommitsReqBuilder implements Builder<GCommitsReq, GCommitsReqBuilder> {
   set executeOnListen(bool? executeOnListen) =>
       _$this._executeOnListen = executeOnListen;
 
+  _i4.Context? _context;
+  _i4.Context? get context => _$this._context;
+  set context(_i4.Context? context) => _$this._context = context;
+
   GCommitsReqBuilder() {
     GCommitsReq._initializeBuilder(this);
   }
@@ -446,6 +454,7 @@ class GCommitsReqBuilder implements Builder<GCommitsReq, GCommitsReqBuilder> {
       _updateCacheHandlerContext = $v.updateCacheHandlerContext;
       _fetchPolicy = $v.fetchPolicy;
       _executeOnListen = $v.executeOnListen;
+      _context = $v.context;
       _$v = null;
     }
     return this;
@@ -480,7 +489,8 @@ class GCommitsReqBuilder implements Builder<GCommitsReq, GCommitsReqBuilder> {
               updateCacheHandlerContext: updateCacheHandlerContext,
               fetchPolicy: fetchPolicy,
               executeOnListen: BuiltValueNullFieldError.checkNotNull(
-                  executeOnListen, r'GCommitsReq', 'executeOnListen'));
+                  executeOnListen, r'GCommitsReq', 'executeOnListen'),
+              context: context);
     } catch (_) {
       late String _$failedField;
       try {
@@ -549,10 +559,13 @@ class _$GCommitsRefCommitReq extends GCommitsRefCommitReq {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, vars.hashCode), document.hashCode),
-            fragmentName.hashCode),
-        idFields.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, vars.hashCode);
+    _$hash = $jc(_$hash, document.hashCode);
+    _$hash = $jc(_$hash, fragmentName.hashCode);
+    _$hash = $jc(_$hash, idFields.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -690,10 +703,13 @@ class _$GCommitsRefReq extends GCommitsRefReq {
 
   @override
   int get hashCode {
-    return $jf($jc(
-        $jc($jc($jc(0, vars.hashCode), document.hashCode),
-            fragmentName.hashCode),
-        idFields.hashCode));
+    var _$hash = 0;
+    _$hash = $jc(_$hash, vars.hashCode);
+    _$hash = $jc(_$hash, document.hashCode);
+    _$hash = $jc(_$hash, fragmentName.hashCode);
+    _$hash = $jc(_$hash, idFields.hashCode);
+    _$hash = $jf(_$hash);
+    return _$hash;
   }
 
   @override
@@ -785,4 +801,4 @@ class GCommitsRefReqBuilder
   }
 }
 
-// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,no_leading_underscores_for_local_identifiers,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new,unnecessary_lambdas
+// ignore_for_file: deprecated_member_use_from_same_package,type=lint

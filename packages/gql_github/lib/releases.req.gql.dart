@@ -19,7 +19,7 @@ abstract class GReleasesReq
         _i1.OperationRequest<_i2.GReleasesData, _i3.GReleasesVars> {
   GReleasesReq._();
 
-  factory GReleasesReq([Function(GReleasesReqBuilder b) updates]) =
+  factory GReleasesReq([void Function(GReleasesReqBuilder b) updates]) =
       _$GReleasesReq;
 
   static void _initializeBuilder(GReleasesReqBuilder b) => b
@@ -28,6 +28,7 @@ abstract class GReleasesReq
       operationName: 'Releases',
     )
     ..executeOnListen = true;
+
   @override
   _i3.GReleasesVars get vars;
   @override
@@ -36,7 +37,9 @@ abstract class GReleasesReq
   _i4.Request get execRequest => _i4.Request(
         operation: operation,
         variables: vars.toJson(),
+        context: context ?? const _i4.Context(),
       );
+
   @override
   String? get requestId;
   @override
@@ -56,13 +59,30 @@ abstract class GReleasesReq
   @override
   bool get executeOnListen;
   @override
+  @BuiltValueField(serialize: false)
+  _i4.Context? get context;
+  @override
   _i2.GReleasesData? parseData(Map<String, dynamic> json) =>
       _i2.GReleasesData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GReleasesData data) => data.toJson();
+
+  @override
+  _i1.OperationRequest<_i2.GReleasesData, _i3.GReleasesVars> transformOperation(
+          _i4.Operation Function(_i4.Operation) transform) =>
+      this.rebuild((b) => b..operation = transform(operation));
+
   static Serializer<GReleasesReq> get serializer => _$gReleasesReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GReleasesReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GReleasesReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GReleasesReq.serializer,

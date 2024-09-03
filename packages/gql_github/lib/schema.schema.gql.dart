@@ -5,7 +5,7 @@
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
-import 'package:gql_code_builder/src/serializers/default_scalar_serializer.dart'
+import 'package:gql_code_builder_serializers/gql_code_builder_serializers.dart'
     as _i2;
 import 'package:gql_github/serializers.gql.dart' as _i1;
 
@@ -17,17 +17,19 @@ abstract class GAbortQueuedMigrationsInput
   GAbortQueuedMigrationsInput._();
 
   factory GAbortQueuedMigrationsInput(
-          [Function(GAbortQueuedMigrationsInputBuilder b) updates]) =
+          [void Function(GAbortQueuedMigrationsInputBuilder b) updates]) =
       _$GAbortQueuedMigrationsInput;
 
   String? get clientMutationId;
   String get ownerId;
   static Serializer<GAbortQueuedMigrationsInput> get serializer =>
       _$gAbortQueuedMigrationsInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAbortQueuedMigrationsInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAbortQueuedMigrationsInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAbortQueuedMigrationsInput.serializer,
@@ -42,7 +44,7 @@ abstract class GAcceptEnterpriseAdministratorInvitationInput
   GAcceptEnterpriseAdministratorInvitationInput._();
 
   factory GAcceptEnterpriseAdministratorInvitationInput(
-      [Function(GAcceptEnterpriseAdministratorInvitationInputBuilder b)
+      [void Function(GAcceptEnterpriseAdministratorInvitationInputBuilder b)
           updates]) = _$GAcceptEnterpriseAdministratorInvitationInput;
 
   String? get clientMutationId;
@@ -50,10 +52,12 @@ abstract class GAcceptEnterpriseAdministratorInvitationInput
   static Serializer<GAcceptEnterpriseAdministratorInvitationInput>
       get serializer =>
           _$gAcceptEnterpriseAdministratorInvitationInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAcceptEnterpriseAdministratorInvitationInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAcceptEnterpriseAdministratorInvitationInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -68,7 +72,7 @@ abstract class GAcceptTopicSuggestionInput
   GAcceptTopicSuggestionInput._();
 
   factory GAcceptTopicSuggestionInput(
-          [Function(GAcceptTopicSuggestionInputBuilder b) updates]) =
+          [void Function(GAcceptTopicSuggestionInputBuilder b) updates]) =
       _$GAcceptTopicSuggestionInput;
 
   String? get clientMutationId;
@@ -76,10 +80,12 @@ abstract class GAcceptTopicSuggestionInput
   String get repositoryId;
   static Serializer<GAcceptTopicSuggestionInput> get serializer =>
       _$gAcceptTopicSuggestionInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAcceptTopicSuggestionInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAcceptTopicSuggestionInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAcceptTopicSuggestionInput.serializer,
@@ -95,7 +101,9 @@ class GActorType extends EnumClass {
   static const GActorType USER = _$gActorTypeUSER;
 
   static Serializer<GActorType> get serializer => _$gActorTypeSerializer;
+
   static BuiltSet<GActorType> get values => _$gActorTypeValues;
+
   static GActorType valueOf(String name) => _$gActorTypeValueOf(name);
 }
 
@@ -106,7 +114,7 @@ abstract class GAddAssigneesToAssignableInput
   GAddAssigneesToAssignableInput._();
 
   factory GAddAssigneesToAssignableInput(
-          [Function(GAddAssigneesToAssignableInputBuilder b) updates]) =
+          [void Function(GAddAssigneesToAssignableInputBuilder b) updates]) =
       _$GAddAssigneesToAssignableInput;
 
   String get assignableId;
@@ -114,10 +122,12 @@ abstract class GAddAssigneesToAssignableInput
   String? get clientMutationId;
   static Serializer<GAddAssigneesToAssignableInput> get serializer =>
       _$gAddAssigneesToAssignableInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAddAssigneesToAssignableInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAddAssigneesToAssignableInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAddAssigneesToAssignableInput.serializer,
@@ -129,7 +139,7 @@ abstract class GAddCommentInput
     implements Built<GAddCommentInput, GAddCommentInputBuilder> {
   GAddCommentInput._();
 
-  factory GAddCommentInput([Function(GAddCommentInputBuilder b) updates]) =
+  factory GAddCommentInput([void Function(GAddCommentInputBuilder b) updates]) =
       _$GAddCommentInput;
 
   String get body;
@@ -137,10 +147,12 @@ abstract class GAddCommentInput
   String get subjectId;
   static Serializer<GAddCommentInput> get serializer =>
       _$gAddCommentInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAddCommentInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAddCommentInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAddCommentInput.serializer,
@@ -154,7 +166,7 @@ abstract class GAddDiscussionCommentInput
   GAddDiscussionCommentInput._();
 
   factory GAddDiscussionCommentInput(
-          [Function(GAddDiscussionCommentInputBuilder b) updates]) =
+          [void Function(GAddDiscussionCommentInputBuilder b) updates]) =
       _$GAddDiscussionCommentInput;
 
   String get body;
@@ -163,10 +175,12 @@ abstract class GAddDiscussionCommentInput
   String? get replyToId;
   static Serializer<GAddDiscussionCommentInput> get serializer =>
       _$gAddDiscussionCommentInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAddDiscussionCommentInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAddDiscussionCommentInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAddDiscussionCommentInput.serializer,
@@ -180,17 +194,19 @@ abstract class GAddDiscussionPollVoteInput
   GAddDiscussionPollVoteInput._();
 
   factory GAddDiscussionPollVoteInput(
-          [Function(GAddDiscussionPollVoteInputBuilder b) updates]) =
+          [void Function(GAddDiscussionPollVoteInputBuilder b) updates]) =
       _$GAddDiscussionPollVoteInput;
 
   String? get clientMutationId;
   String get pollOptionId;
   static Serializer<GAddDiscussionPollVoteInput> get serializer =>
       _$gAddDiscussionPollVoteInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAddDiscussionPollVoteInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAddDiscussionPollVoteInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAddDiscussionPollVoteInput.serializer,
@@ -205,18 +221,20 @@ abstract class GAddEnterpriseSupportEntitlementInput
   GAddEnterpriseSupportEntitlementInput._();
 
   factory GAddEnterpriseSupportEntitlementInput(
-          [Function(GAddEnterpriseSupportEntitlementInputBuilder b) updates]) =
-      _$GAddEnterpriseSupportEntitlementInput;
+      [void Function(GAddEnterpriseSupportEntitlementInputBuilder b)
+          updates]) = _$GAddEnterpriseSupportEntitlementInput;
 
   String? get clientMutationId;
   String get enterpriseId;
   String get login;
   static Serializer<GAddEnterpriseSupportEntitlementInput> get serializer =>
       _$gAddEnterpriseSupportEntitlementInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAddEnterpriseSupportEntitlementInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAddEnterpriseSupportEntitlementInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -231,7 +249,7 @@ abstract class GAddLabelsToLabelableInput
   GAddLabelsToLabelableInput._();
 
   factory GAddLabelsToLabelableInput(
-          [Function(GAddLabelsToLabelableInputBuilder b) updates]) =
+          [void Function(GAddLabelsToLabelableInputBuilder b) updates]) =
       _$GAddLabelsToLabelableInput;
 
   String? get clientMutationId;
@@ -239,10 +257,12 @@ abstract class GAddLabelsToLabelableInput
   String get labelableId;
   static Serializer<GAddLabelsToLabelableInput> get serializer =>
       _$gAddLabelsToLabelableInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAddLabelsToLabelableInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAddLabelsToLabelableInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAddLabelsToLabelableInput.serializer,
@@ -255,7 +275,7 @@ abstract class GAddProjectCardInput
   GAddProjectCardInput._();
 
   factory GAddProjectCardInput(
-          [Function(GAddProjectCardInputBuilder b) updates]) =
+          [void Function(GAddProjectCardInputBuilder b) updates]) =
       _$GAddProjectCardInput;
 
   String? get clientMutationId;
@@ -264,10 +284,12 @@ abstract class GAddProjectCardInput
   String get projectColumnId;
   static Serializer<GAddProjectCardInput> get serializer =>
       _$gAddProjectCardInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAddProjectCardInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAddProjectCardInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAddProjectCardInput.serializer,
@@ -280,7 +302,7 @@ abstract class GAddProjectColumnInput
   GAddProjectColumnInput._();
 
   factory GAddProjectColumnInput(
-          [Function(GAddProjectColumnInputBuilder b) updates]) =
+          [void Function(GAddProjectColumnInputBuilder b) updates]) =
       _$GAddProjectColumnInput;
 
   String? get clientMutationId;
@@ -288,10 +310,12 @@ abstract class GAddProjectColumnInput
   String get projectId;
   static Serializer<GAddProjectColumnInput> get serializer =>
       _$gAddProjectColumnInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAddProjectColumnInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAddProjectColumnInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAddProjectColumnInput.serializer,
@@ -305,7 +329,7 @@ abstract class GAddProjectDraftIssueInput
   GAddProjectDraftIssueInput._();
 
   factory GAddProjectDraftIssueInput(
-          [Function(GAddProjectDraftIssueInputBuilder b) updates]) =
+          [void Function(GAddProjectDraftIssueInputBuilder b) updates]) =
       _$GAddProjectDraftIssueInput;
 
   BuiltList<String>? get assigneeIds;
@@ -315,10 +339,12 @@ abstract class GAddProjectDraftIssueInput
   String? get title;
   static Serializer<GAddProjectDraftIssueInput> get serializer =>
       _$gAddProjectDraftIssueInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAddProjectDraftIssueInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAddProjectDraftIssueInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAddProjectDraftIssueInput.serializer,
@@ -332,7 +358,7 @@ abstract class GAddProjectNextItemInput
   GAddProjectNextItemInput._();
 
   factory GAddProjectNextItemInput(
-          [Function(GAddProjectNextItemInputBuilder b) updates]) =
+          [void Function(GAddProjectNextItemInputBuilder b) updates]) =
       _$GAddProjectNextItemInput;
 
   String? get clientMutationId;
@@ -340,10 +366,12 @@ abstract class GAddProjectNextItemInput
   String? get projectId;
   static Serializer<GAddProjectNextItemInput> get serializer =>
       _$gAddProjectNextItemInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAddProjectNextItemInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAddProjectNextItemInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAddProjectNextItemInput.serializer,
@@ -358,7 +386,7 @@ abstract class GAddProjectV2DraftIssueInput
   GAddProjectV2DraftIssueInput._();
 
   factory GAddProjectV2DraftIssueInput(
-          [Function(GAddProjectV2DraftIssueInputBuilder b) updates]) =
+          [void Function(GAddProjectV2DraftIssueInputBuilder b) updates]) =
       _$GAddProjectV2DraftIssueInput;
 
   BuiltList<String>? get assigneeIds;
@@ -368,10 +396,12 @@ abstract class GAddProjectV2DraftIssueInput
   String get title;
   static Serializer<GAddProjectV2DraftIssueInput> get serializer =>
       _$gAddProjectV2DraftIssueInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAddProjectV2DraftIssueInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAddProjectV2DraftIssueInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAddProjectV2DraftIssueInput.serializer,
@@ -385,7 +415,7 @@ abstract class GAddProjectV2ItemByIdInput
   GAddProjectV2ItemByIdInput._();
 
   factory GAddProjectV2ItemByIdInput(
-          [Function(GAddProjectV2ItemByIdInputBuilder b) updates]) =
+          [void Function(GAddProjectV2ItemByIdInputBuilder b) updates]) =
       _$GAddProjectV2ItemByIdInput;
 
   String? get clientMutationId;
@@ -393,10 +423,12 @@ abstract class GAddProjectV2ItemByIdInput
   String get projectId;
   static Serializer<GAddProjectV2ItemByIdInput> get serializer =>
       _$gAddProjectV2ItemByIdInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAddProjectV2ItemByIdInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAddProjectV2ItemByIdInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAddProjectV2ItemByIdInput.serializer,
@@ -411,7 +443,7 @@ abstract class GAddPullRequestReviewCommentInput
   GAddPullRequestReviewCommentInput._();
 
   factory GAddPullRequestReviewCommentInput(
-          [Function(GAddPullRequestReviewCommentInputBuilder b) updates]) =
+          [void Function(GAddPullRequestReviewCommentInputBuilder b) updates]) =
       _$GAddPullRequestReviewCommentInput;
 
   String get body;
@@ -424,10 +456,12 @@ abstract class GAddPullRequestReviewCommentInput
   String? get pullRequestReviewId;
   static Serializer<GAddPullRequestReviewCommentInput> get serializer =>
       _$gAddPullRequestReviewCommentInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAddPullRequestReviewCommentInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAddPullRequestReviewCommentInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -442,22 +476,24 @@ abstract class GAddPullRequestReviewInput
   GAddPullRequestReviewInput._();
 
   factory GAddPullRequestReviewInput(
-          [Function(GAddPullRequestReviewInputBuilder b) updates]) =
+          [void Function(GAddPullRequestReviewInputBuilder b) updates]) =
       _$GAddPullRequestReviewInput;
 
   String? get body;
   String? get clientMutationId;
-  BuiltList<GDraftPullRequestReviewComment>? get comments;
+  BuiltList<GDraftPullRequestReviewComment?>? get comments;
   String? get commitOID;
   GPullRequestReviewEvent? get event;
   String get pullRequestId;
-  BuiltList<GDraftPullRequestReviewThread>? get threads;
+  BuiltList<GDraftPullRequestReviewThread?>? get threads;
   static Serializer<GAddPullRequestReviewInput> get serializer =>
       _$gAddPullRequestReviewInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAddPullRequestReviewInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAddPullRequestReviewInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAddPullRequestReviewInput.serializer,
@@ -472,7 +508,7 @@ abstract class GAddPullRequestReviewThreadInput
   GAddPullRequestReviewThreadInput._();
 
   factory GAddPullRequestReviewThreadInput(
-          [Function(GAddPullRequestReviewThreadInputBuilder b) updates]) =
+          [void Function(GAddPullRequestReviewThreadInputBuilder b) updates]) =
       _$GAddPullRequestReviewThreadInput;
 
   String get body;
@@ -486,10 +522,12 @@ abstract class GAddPullRequestReviewThreadInput
   GDiffSide? get startSide;
   static Serializer<GAddPullRequestReviewThreadInput> get serializer =>
       _$gAddPullRequestReviewThreadInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAddPullRequestReviewThreadInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAddPullRequestReviewThreadInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -502,7 +540,8 @@ abstract class GAddReactionInput
     implements Built<GAddReactionInput, GAddReactionInputBuilder> {
   GAddReactionInput._();
 
-  factory GAddReactionInput([Function(GAddReactionInputBuilder b) updates]) =
+  factory GAddReactionInput(
+          [void Function(GAddReactionInputBuilder b) updates]) =
       _$GAddReactionInput;
 
   String? get clientMutationId;
@@ -510,10 +549,12 @@ abstract class GAddReactionInput
   String get subjectId;
   static Serializer<GAddReactionInput> get serializer =>
       _$gAddReactionInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAddReactionInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAddReactionInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAddReactionInput.serializer,
@@ -525,16 +566,18 @@ abstract class GAddStarInput
     implements Built<GAddStarInput, GAddStarInputBuilder> {
   GAddStarInput._();
 
-  factory GAddStarInput([Function(GAddStarInputBuilder b) updates]) =
+  factory GAddStarInput([void Function(GAddStarInputBuilder b) updates]) =
       _$GAddStarInput;
 
   String? get clientMutationId;
   String get starrableId;
   static Serializer<GAddStarInput> get serializer => _$gAddStarInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAddStarInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAddStarInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAddStarInput.serializer,
@@ -546,17 +589,19 @@ abstract class GAddUpvoteInput
     implements Built<GAddUpvoteInput, GAddUpvoteInputBuilder> {
   GAddUpvoteInput._();
 
-  factory GAddUpvoteInput([Function(GAddUpvoteInputBuilder b) updates]) =
+  factory GAddUpvoteInput([void Function(GAddUpvoteInputBuilder b) updates]) =
       _$GAddUpvoteInput;
 
   String? get clientMutationId;
   String get subjectId;
   static Serializer<GAddUpvoteInput> get serializer =>
       _$gAddUpvoteInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAddUpvoteInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAddUpvoteInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAddUpvoteInput.serializer,
@@ -570,7 +615,7 @@ abstract class GAddVerifiableDomainInput
   GAddVerifiableDomainInput._();
 
   factory GAddVerifiableDomainInput(
-          [Function(GAddVerifiableDomainInputBuilder b) updates]) =
+          [void Function(GAddVerifiableDomainInputBuilder b) updates]) =
       _$GAddVerifiableDomainInput;
 
   String? get clientMutationId;
@@ -578,10 +623,12 @@ abstract class GAddVerifiableDomainInput
   String get ownerId;
   static Serializer<GAddVerifiableDomainInput> get serializer =>
       _$gAddVerifiableDomainInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAddVerifiableDomainInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAddVerifiableDomainInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAddVerifiableDomainInput.serializer,
@@ -595,7 +642,7 @@ abstract class GApproveDeploymentsInput
   GApproveDeploymentsInput._();
 
   factory GApproveDeploymentsInput(
-          [Function(GApproveDeploymentsInputBuilder b) updates]) =
+          [void Function(GApproveDeploymentsInputBuilder b) updates]) =
       _$GApproveDeploymentsInput;
 
   String? get clientMutationId;
@@ -604,10 +651,12 @@ abstract class GApproveDeploymentsInput
   String get workflowRunId;
   static Serializer<GApproveDeploymentsInput> get serializer =>
       _$gApproveDeploymentsInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GApproveDeploymentsInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GApproveDeploymentsInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GApproveDeploymentsInput.serializer,
@@ -622,17 +671,19 @@ abstract class GApproveVerifiableDomainInput
   GApproveVerifiableDomainInput._();
 
   factory GApproveVerifiableDomainInput(
-          [Function(GApproveVerifiableDomainInputBuilder b) updates]) =
+          [void Function(GApproveVerifiableDomainInputBuilder b) updates]) =
       _$GApproveVerifiableDomainInput;
 
   String? get clientMutationId;
   String get id;
   static Serializer<GApproveVerifiableDomainInput> get serializer =>
       _$gApproveVerifiableDomainInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GApproveVerifiableDomainInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GApproveVerifiableDomainInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GApproveVerifiableDomainInput.serializer,
@@ -645,17 +696,19 @@ abstract class GArchiveRepositoryInput
   GArchiveRepositoryInput._();
 
   factory GArchiveRepositoryInput(
-          [Function(GArchiveRepositoryInputBuilder b) updates]) =
+          [void Function(GArchiveRepositoryInputBuilder b) updates]) =
       _$GArchiveRepositoryInput;
 
   String? get clientMutationId;
   String get repositoryId;
   static Serializer<GArchiveRepositoryInput> get serializer =>
       _$gArchiveRepositoryInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GArchiveRepositoryInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GArchiveRepositoryInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GArchiveRepositoryInput.serializer,
@@ -667,17 +720,19 @@ abstract class GAuditLogOrder
     implements Built<GAuditLogOrder, GAuditLogOrderBuilder> {
   GAuditLogOrder._();
 
-  factory GAuditLogOrder([Function(GAuditLogOrderBuilder b) updates]) =
+  factory GAuditLogOrder([void Function(GAuditLogOrderBuilder b) updates]) =
       _$GAuditLogOrder;
 
   GOrderDirection? get direction;
   GAuditLogOrderField? get field;
   static Serializer<GAuditLogOrder> get serializer =>
       _$gAuditLogOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GAuditLogOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GAuditLogOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GAuditLogOrder.serializer,
@@ -692,8 +747,10 @@ class GAuditLogOrderField extends EnumClass {
 
   static Serializer<GAuditLogOrderField> get serializer =>
       _$gAuditLogOrderFieldSerializer;
+
   static BuiltSet<GAuditLogOrderField> get values =>
       _$gAuditLogOrderFieldValues;
+
   static GAuditLogOrderField valueOf(String name) =>
       _$gAuditLogOrderFieldValueOf(name);
 }
@@ -719,17 +776,19 @@ abstract class GCancelEnterpriseAdminInvitationInput
   GCancelEnterpriseAdminInvitationInput._();
 
   factory GCancelEnterpriseAdminInvitationInput(
-          [Function(GCancelEnterpriseAdminInvitationInputBuilder b) updates]) =
-      _$GCancelEnterpriseAdminInvitationInput;
+      [void Function(GCancelEnterpriseAdminInvitationInputBuilder b)
+          updates]) = _$GCancelEnterpriseAdminInvitationInput;
 
   String? get clientMutationId;
   String get invitationId;
   static Serializer<GCancelEnterpriseAdminInvitationInput> get serializer =>
       _$gCancelEnterpriseAdminInvitationInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCancelEnterpriseAdminInvitationInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCancelEnterpriseAdminInvitationInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -743,7 +802,7 @@ abstract class GCancelSponsorshipInput
   GCancelSponsorshipInput._();
 
   factory GCancelSponsorshipInput(
-          [Function(GCancelSponsorshipInputBuilder b) updates]) =
+          [void Function(GCancelSponsorshipInputBuilder b) updates]) =
       _$GCancelSponsorshipInput;
 
   String? get clientMutationId;
@@ -753,10 +812,12 @@ abstract class GCancelSponsorshipInput
   String? get sponsorableLogin;
   static Serializer<GCancelSponsorshipInput> get serializer =>
       _$gCancelSponsorshipInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCancelSponsorshipInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCancelSponsorshipInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCancelSponsorshipInput.serializer,
@@ -769,7 +830,7 @@ abstract class GChangeUserStatusInput
   GChangeUserStatusInput._();
 
   factory GChangeUserStatusInput(
-          [Function(GChangeUserStatusInputBuilder b) updates]) =
+          [void Function(GChangeUserStatusInputBuilder b) updates]) =
       _$GChangeUserStatusInput;
 
   String? get clientMutationId;
@@ -780,10 +841,12 @@ abstract class GChangeUserStatusInput
   String? get organizationId;
   static Serializer<GChangeUserStatusInput> get serializer =>
       _$gChangeUserStatusInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GChangeUserStatusInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GChangeUserStatusInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GChangeUserStatusInput.serializer,
@@ -796,7 +859,7 @@ abstract class GCheckAnnotationData
   GCheckAnnotationData._();
 
   factory GCheckAnnotationData(
-          [Function(GCheckAnnotationDataBuilder b) updates]) =
+          [void Function(GCheckAnnotationDataBuilder b) updates]) =
       _$GCheckAnnotationData;
 
   GCheckAnnotationLevel get annotationLevel;
@@ -807,10 +870,12 @@ abstract class GCheckAnnotationData
   String? get title;
   static Serializer<GCheckAnnotationData> get serializer =>
       _$gCheckAnnotationDataSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCheckAnnotationData.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCheckAnnotationData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCheckAnnotationData.serializer,
@@ -829,8 +894,10 @@ class GCheckAnnotationLevel extends EnumClass {
 
   static Serializer<GCheckAnnotationLevel> get serializer =>
       _$gCheckAnnotationLevelSerializer;
+
   static BuiltSet<GCheckAnnotationLevel> get values =>
       _$gCheckAnnotationLevelValues;
+
   static GCheckAnnotationLevel valueOf(String name) =>
       _$gCheckAnnotationLevelValueOf(name);
 }
@@ -840,7 +907,7 @@ abstract class GCheckAnnotationRange
   GCheckAnnotationRange._();
 
   factory GCheckAnnotationRange(
-          [Function(GCheckAnnotationRangeBuilder b) updates]) =
+          [void Function(GCheckAnnotationRangeBuilder b) updates]) =
       _$GCheckAnnotationRange;
 
   int? get endColumn;
@@ -849,10 +916,12 @@ abstract class GCheckAnnotationRange
   int get startLine;
   static Serializer<GCheckAnnotationRange> get serializer =>
       _$gCheckAnnotationRangeSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCheckAnnotationRange.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCheckAnnotationRange? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCheckAnnotationRange.serializer,
@@ -887,8 +956,10 @@ class GCheckConclusionState extends EnumClass {
 
   static Serializer<GCheckConclusionState> get serializer =>
       _$gCheckConclusionStateSerializer;
+
   static BuiltSet<GCheckConclusionState> get values =>
       _$gCheckConclusionStateValues;
+
   static GCheckConclusionState valueOf(String name) =>
       _$gCheckConclusionStateValueOf(name);
 }
@@ -897,7 +968,7 @@ abstract class GCheckRunAction
     implements Built<GCheckRunAction, GCheckRunActionBuilder> {
   GCheckRunAction._();
 
-  factory GCheckRunAction([Function(GCheckRunActionBuilder b) updates]) =
+  factory GCheckRunAction([void Function(GCheckRunActionBuilder b) updates]) =
       _$GCheckRunAction;
 
   String get description;
@@ -905,10 +976,12 @@ abstract class GCheckRunAction
   String get label;
   static Serializer<GCheckRunAction> get serializer =>
       _$gCheckRunActionSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCheckRunAction.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCheckRunAction? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCheckRunAction.serializer,
@@ -920,7 +993,7 @@ abstract class GCheckRunFilter
     implements Built<GCheckRunFilter, GCheckRunFilterBuilder> {
   GCheckRunFilter._();
 
-  factory GCheckRunFilter([Function(GCheckRunFilterBuilder b) updates]) =
+  factory GCheckRunFilter([void Function(GCheckRunFilterBuilder b) updates]) =
       _$GCheckRunFilter;
 
   int? get appId;
@@ -931,10 +1004,12 @@ abstract class GCheckRunFilter
   BuiltList<GCheckStatusState>? get statuses;
   static Serializer<GCheckRunFilter> get serializer =>
       _$gCheckRunFilterSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCheckRunFilter.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCheckRunFilter? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCheckRunFilter.serializer,
@@ -946,7 +1021,7 @@ abstract class GCheckRunOutput
     implements Built<GCheckRunOutput, GCheckRunOutputBuilder> {
   GCheckRunOutput._();
 
-  factory GCheckRunOutput([Function(GCheckRunOutputBuilder b) updates]) =
+  factory GCheckRunOutput([void Function(GCheckRunOutputBuilder b) updates]) =
       _$GCheckRunOutput;
 
   BuiltList<GCheckAnnotationData>? get annotations;
@@ -956,10 +1031,12 @@ abstract class GCheckRunOutput
   String get title;
   static Serializer<GCheckRunOutput> get serializer =>
       _$gCheckRunOutputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCheckRunOutput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCheckRunOutput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCheckRunOutput.serializer,
@@ -972,7 +1049,7 @@ abstract class GCheckRunOutputImage
   GCheckRunOutputImage._();
 
   factory GCheckRunOutputImage(
-          [Function(GCheckRunOutputImageBuilder b) updates]) =
+          [void Function(GCheckRunOutputImageBuilder b) updates]) =
       _$GCheckRunOutputImage;
 
   String get alt;
@@ -980,10 +1057,12 @@ abstract class GCheckRunOutputImage
   String get imageUrl;
   static Serializer<GCheckRunOutputImage> get serializer =>
       _$gCheckRunOutputImageSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCheckRunOutputImage.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCheckRunOutputImage? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCheckRunOutputImage.serializer,
@@ -1024,7 +1103,9 @@ class GCheckRunState extends EnumClass {
 
   static Serializer<GCheckRunState> get serializer =>
       _$gCheckRunStateSerializer;
+
   static BuiltSet<GCheckRunState> get values => _$gCheckRunStateValues;
+
   static GCheckRunState valueOf(String name) => _$gCheckRunStateValueOf(name);
 }
 
@@ -1036,7 +1117,9 @@ class GCheckRunType extends EnumClass {
   static const GCheckRunType LATEST = _$gCheckRunTypeLATEST;
 
   static Serializer<GCheckRunType> get serializer => _$gCheckRunTypeSerializer;
+
   static BuiltSet<GCheckRunType> get values => _$gCheckRunTypeValues;
+
   static GCheckRunType valueOf(String name) => _$gCheckRunTypeValueOf(name);
 }
 
@@ -1057,7 +1140,9 @@ class GCheckStatusState extends EnumClass {
 
   static Serializer<GCheckStatusState> get serializer =>
       _$gCheckStatusStateSerializer;
+
   static BuiltSet<GCheckStatusState> get values => _$gCheckStatusStateValues;
+
   static GCheckStatusState valueOf(String name) =>
       _$gCheckStatusStateValueOf(name);
 }
@@ -1069,17 +1154,19 @@ abstract class GCheckSuiteAutoTriggerPreference
   GCheckSuiteAutoTriggerPreference._();
 
   factory GCheckSuiteAutoTriggerPreference(
-          [Function(GCheckSuiteAutoTriggerPreferenceBuilder b) updates]) =
+          [void Function(GCheckSuiteAutoTriggerPreferenceBuilder b) updates]) =
       _$GCheckSuiteAutoTriggerPreference;
 
   String get appId;
   bool get setting;
   static Serializer<GCheckSuiteAutoTriggerPreference> get serializer =>
       _$gCheckSuiteAutoTriggerPreferenceSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCheckSuiteAutoTriggerPreference.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCheckSuiteAutoTriggerPreference? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1092,17 +1179,20 @@ abstract class GCheckSuiteFilter
     implements Built<GCheckSuiteFilter, GCheckSuiteFilterBuilder> {
   GCheckSuiteFilter._();
 
-  factory GCheckSuiteFilter([Function(GCheckSuiteFilterBuilder b) updates]) =
+  factory GCheckSuiteFilter(
+          [void Function(GCheckSuiteFilterBuilder b) updates]) =
       _$GCheckSuiteFilter;
 
   int? get appId;
   String? get checkName;
   static Serializer<GCheckSuiteFilter> get serializer =>
       _$gCheckSuiteFilterSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCheckSuiteFilter.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCheckSuiteFilter? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCheckSuiteFilter.serializer,
@@ -1117,17 +1207,19 @@ abstract class GClearLabelsFromLabelableInput
   GClearLabelsFromLabelableInput._();
 
   factory GClearLabelsFromLabelableInput(
-          [Function(GClearLabelsFromLabelableInputBuilder b) updates]) =
+          [void Function(GClearLabelsFromLabelableInputBuilder b) updates]) =
       _$GClearLabelsFromLabelableInput;
 
   String? get clientMutationId;
   String get labelableId;
   static Serializer<GClearLabelsFromLabelableInput> get serializer =>
       _$gClearLabelsFromLabelableInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GClearLabelsFromLabelableInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GClearLabelsFromLabelableInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GClearLabelsFromLabelableInput.serializer,
@@ -1142,8 +1234,8 @@ abstract class GClearProjectV2ItemFieldValueInput
   GClearProjectV2ItemFieldValueInput._();
 
   factory GClearProjectV2ItemFieldValueInput(
-          [Function(GClearProjectV2ItemFieldValueInputBuilder b) updates]) =
-      _$GClearProjectV2ItemFieldValueInput;
+      [void Function(GClearProjectV2ItemFieldValueInputBuilder b)
+          updates]) = _$GClearProjectV2ItemFieldValueInput;
 
   String? get clientMutationId;
   String get fieldId;
@@ -1151,10 +1243,12 @@ abstract class GClearProjectV2ItemFieldValueInput
   String get projectId;
   static Serializer<GClearProjectV2ItemFieldValueInput> get serializer =>
       _$gClearProjectV2ItemFieldValueInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GClearProjectV2ItemFieldValueInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GClearProjectV2ItemFieldValueInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1167,7 +1261,8 @@ abstract class GCloneProjectInput
     implements Built<GCloneProjectInput, GCloneProjectInputBuilder> {
   GCloneProjectInput._();
 
-  factory GCloneProjectInput([Function(GCloneProjectInputBuilder b) updates]) =
+  factory GCloneProjectInput(
+          [void Function(GCloneProjectInputBuilder b) updates]) =
       _$GCloneProjectInput;
 
   String? get body;
@@ -1179,10 +1274,12 @@ abstract class GCloneProjectInput
   String get targetOwnerId;
   static Serializer<GCloneProjectInput> get serializer =>
       _$gCloneProjectInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCloneProjectInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCloneProjectInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCloneProjectInput.serializer,
@@ -1197,7 +1294,7 @@ abstract class GCloneTemplateRepositoryInput
   GCloneTemplateRepositoryInput._();
 
   factory GCloneTemplateRepositoryInput(
-          [Function(GCloneTemplateRepositoryInputBuilder b) updates]) =
+          [void Function(GCloneTemplateRepositoryInputBuilder b) updates]) =
       _$GCloneTemplateRepositoryInput;
 
   String? get clientMutationId;
@@ -1209,10 +1306,12 @@ abstract class GCloneTemplateRepositoryInput
   GRepositoryVisibility get visibility;
   static Serializer<GCloneTemplateRepositoryInput> get serializer =>
       _$gCloneTemplateRepositoryInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCloneTemplateRepositoryInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCloneTemplateRepositoryInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCloneTemplateRepositoryInput.serializer,
@@ -1224,7 +1323,7 @@ abstract class GCloseIssueInput
     implements Built<GCloseIssueInput, GCloseIssueInputBuilder> {
   GCloseIssueInput._();
 
-  factory GCloseIssueInput([Function(GCloseIssueInputBuilder b) updates]) =
+  factory GCloseIssueInput([void Function(GCloseIssueInputBuilder b) updates]) =
       _$GCloseIssueInput;
 
   String? get clientMutationId;
@@ -1232,10 +1331,12 @@ abstract class GCloseIssueInput
   GIssueClosedStateReason? get stateReason;
   static Serializer<GCloseIssueInput> get serializer =>
       _$gCloseIssueInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCloseIssueInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCloseIssueInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCloseIssueInput.serializer,
@@ -1248,17 +1349,19 @@ abstract class GClosePullRequestInput
   GClosePullRequestInput._();
 
   factory GClosePullRequestInput(
-          [Function(GClosePullRequestInputBuilder b) updates]) =
+          [void Function(GClosePullRequestInputBuilder b) updates]) =
       _$GClosePullRequestInput;
 
   String? get clientMutationId;
   String get pullRequestId;
   static Serializer<GClosePullRequestInput> get serializer =>
       _$gClosePullRequestInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GClosePullRequestInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GClosePullRequestInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GClosePullRequestInput.serializer,
@@ -1279,8 +1382,10 @@ class GCollaboratorAffiliation extends EnumClass {
 
   static Serializer<GCollaboratorAffiliation> get serializer =>
       _$gCollaboratorAffiliationSerializer;
+
   static BuiltSet<GCollaboratorAffiliation> get values =>
       _$gCollaboratorAffiliationValues;
+
   static GCollaboratorAffiliation valueOf(String name) =>
       _$gCollaboratorAffiliationValueOf(name);
 }
@@ -1313,8 +1418,10 @@ class GCommentAuthorAssociation extends EnumClass {
 
   static Serializer<GCommentAuthorAssociation> get serializer =>
       _$gCommentAuthorAssociationSerializer;
+
   static BuiltSet<GCommentAuthorAssociation> get values =>
       _$gCommentAuthorAssociationValues;
+
   static GCommentAuthorAssociation valueOf(String name) =>
       _$gCommentAuthorAssociationValueOf(name);
 }
@@ -1345,8 +1452,10 @@ class GCommentCannotUpdateReason extends EnumClass {
 
   static Serializer<GCommentCannotUpdateReason> get serializer =>
       _$gCommentCannotUpdateReasonSerializer;
+
   static BuiltSet<GCommentCannotUpdateReason> get values =>
       _$gCommentCannotUpdateReasonValues;
+
   static GCommentCannotUpdateReason valueOf(String name) =>
       _$gCommentCannotUpdateReasonValueOf(name);
 }
@@ -1355,16 +1464,18 @@ abstract class GCommitAuthor
     implements Built<GCommitAuthor, GCommitAuthorBuilder> {
   GCommitAuthor._();
 
-  factory GCommitAuthor([Function(GCommitAuthorBuilder b) updates]) =
+  factory GCommitAuthor([void Function(GCommitAuthorBuilder b) updates]) =
       _$GCommitAuthor;
 
   BuiltList<String>? get emails;
   String? get id;
   static Serializer<GCommitAuthor> get serializer => _$gCommitAuthorSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitAuthor.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitAuthor? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCommitAuthor.serializer,
@@ -1378,17 +1489,19 @@ abstract class GCommitContributionOrder
   GCommitContributionOrder._();
 
   factory GCommitContributionOrder(
-          [Function(GCommitContributionOrderBuilder b) updates]) =
+          [void Function(GCommitContributionOrderBuilder b) updates]) =
       _$GCommitContributionOrder;
 
   GOrderDirection get direction;
   GCommitContributionOrderField get field;
   static Serializer<GCommitContributionOrder> get serializer =>
       _$gCommitContributionOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitContributionOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitContributionOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCommitContributionOrder.serializer,
@@ -1407,8 +1520,10 @@ class GCommitContributionOrderField extends EnumClass {
 
   static Serializer<GCommitContributionOrderField> get serializer =>
       _$gCommitContributionOrderFieldSerializer;
+
   static BuiltSet<GCommitContributionOrderField> get values =>
       _$gCommitContributionOrderFieldValues;
+
   static GCommitContributionOrderField valueOf(String name) =>
       _$gCommitContributionOrderFieldValueOf(name);
 }
@@ -1417,17 +1532,19 @@ abstract class GCommitMessage
     implements Built<GCommitMessage, GCommitMessageBuilder> {
   GCommitMessage._();
 
-  factory GCommitMessage([Function(GCommitMessageBuilder b) updates]) =
+  factory GCommitMessage([void Function(GCommitMessageBuilder b) updates]) =
       _$GCommitMessage;
 
   String? get body;
   String get headline;
   static Serializer<GCommitMessage> get serializer =>
       _$gCommitMessageSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitMessage.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitMessage? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCommitMessage.serializer,
@@ -1439,7 +1556,8 @@ abstract class GCommittableBranch
     implements Built<GCommittableBranch, GCommittableBranchBuilder> {
   GCommittableBranch._();
 
-  factory GCommittableBranch([Function(GCommittableBranchBuilder b) updates]) =
+  factory GCommittableBranch(
+          [void Function(GCommittableBranchBuilder b) updates]) =
       _$GCommittableBranch;
 
   String? get branchName;
@@ -1447,10 +1565,12 @@ abstract class GCommittableBranch
   String? get repositoryNameWithOwner;
   static Serializer<GCommittableBranch> get serializer =>
       _$gCommittableBranchSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommittableBranch.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommittableBranch? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCommittableBranch.serializer,
@@ -1477,7 +1597,9 @@ class GContributionLevel extends EnumClass {
 
   static Serializer<GContributionLevel> get serializer =>
       _$gContributionLevelSerializer;
+
   static BuiltSet<GContributionLevel> get values => _$gContributionLevelValues;
+
   static GContributionLevel valueOf(String name) =>
       _$gContributionLevelValueOf(name);
 }
@@ -1486,16 +1608,19 @@ abstract class GContributionOrder
     implements Built<GContributionOrder, GContributionOrderBuilder> {
   GContributionOrder._();
 
-  factory GContributionOrder([Function(GContributionOrderBuilder b) updates]) =
+  factory GContributionOrder(
+          [void Function(GContributionOrderBuilder b) updates]) =
       _$GContributionOrder;
 
   GOrderDirection get direction;
   static Serializer<GContributionOrder> get serializer =>
       _$gContributionOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GContributionOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GContributionOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GContributionOrder.serializer,
@@ -1510,8 +1635,8 @@ abstract class GConvertProjectCardNoteToIssueInput
   GConvertProjectCardNoteToIssueInput._();
 
   factory GConvertProjectCardNoteToIssueInput(
-          [Function(GConvertProjectCardNoteToIssueInputBuilder b) updates]) =
-      _$GConvertProjectCardNoteToIssueInput;
+      [void Function(GConvertProjectCardNoteToIssueInputBuilder b)
+          updates]) = _$GConvertProjectCardNoteToIssueInput;
 
   String? get body;
   String? get clientMutationId;
@@ -1520,10 +1645,12 @@ abstract class GConvertProjectCardNoteToIssueInput
   String? get title;
   static Serializer<GConvertProjectCardNoteToIssueInput> get serializer =>
       _$gConvertProjectCardNoteToIssueInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GConvertProjectCardNoteToIssueInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GConvertProjectCardNoteToIssueInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1539,17 +1666,19 @@ abstract class GConvertPullRequestToDraftInput
   GConvertPullRequestToDraftInput._();
 
   factory GConvertPullRequestToDraftInput(
-          [Function(GConvertPullRequestToDraftInputBuilder b) updates]) =
+          [void Function(GConvertPullRequestToDraftInputBuilder b) updates]) =
       _$GConvertPullRequestToDraftInput;
 
   String? get clientMutationId;
   String get pullRequestId;
   static Serializer<GConvertPullRequestToDraftInput> get serializer =>
       _$gConvertPullRequestToDraftInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GConvertPullRequestToDraftInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GConvertPullRequestToDraftInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GConvertPullRequestToDraftInput.serializer,
@@ -1564,7 +1693,7 @@ abstract class GCreateBranchProtectionRuleInput
   GCreateBranchProtectionRuleInput._();
 
   factory GCreateBranchProtectionRuleInput(
-          [Function(GCreateBranchProtectionRuleInputBuilder b) updates]) =
+          [void Function(GCreateBranchProtectionRuleInputBuilder b) updates]) =
       _$GCreateBranchProtectionRuleInput;
 
   bool? get allowsDeletions;
@@ -1593,10 +1722,12 @@ abstract class GCreateBranchProtectionRuleInput
   BuiltList<String>? get reviewDismissalActorIds;
   static Serializer<GCreateBranchProtectionRuleInput> get serializer =>
       _$gCreateBranchProtectionRuleInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateBranchProtectionRuleInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateBranchProtectionRuleInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1610,7 +1741,7 @@ abstract class GCreateCheckRunInput
   GCreateCheckRunInput._();
 
   factory GCreateCheckRunInput(
-          [Function(GCreateCheckRunInputBuilder b) updates]) =
+          [void Function(GCreateCheckRunInputBuilder b) updates]) =
       _$GCreateCheckRunInput;
 
   BuiltList<GCheckRunAction>? get actions;
@@ -1627,10 +1758,12 @@ abstract class GCreateCheckRunInput
   GRequestableCheckStatusState? get status;
   static Serializer<GCreateCheckRunInput> get serializer =>
       _$gCreateCheckRunInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateCheckRunInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateCheckRunInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreateCheckRunInput.serializer,
@@ -1643,7 +1776,7 @@ abstract class GCreateCheckSuiteInput
   GCreateCheckSuiteInput._();
 
   factory GCreateCheckSuiteInput(
-          [Function(GCreateCheckSuiteInputBuilder b) updates]) =
+          [void Function(GCreateCheckSuiteInputBuilder b) updates]) =
       _$GCreateCheckSuiteInput;
 
   String? get clientMutationId;
@@ -1651,10 +1784,12 @@ abstract class GCreateCheckSuiteInput
   String get repositoryId;
   static Serializer<GCreateCheckSuiteInput> get serializer =>
       _$gCreateCheckSuiteInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateCheckSuiteInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateCheckSuiteInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreateCheckSuiteInput.serializer,
@@ -1668,7 +1803,7 @@ abstract class GCreateCommitOnBranchInput
   GCreateCommitOnBranchInput._();
 
   factory GCreateCommitOnBranchInput(
-          [Function(GCreateCommitOnBranchInputBuilder b) updates]) =
+          [void Function(GCreateCommitOnBranchInputBuilder b) updates]) =
       _$GCreateCommitOnBranchInput;
 
   GCommittableBranch get branch;
@@ -1678,10 +1813,12 @@ abstract class GCreateCommitOnBranchInput
   GCommitMessage get message;
   static Serializer<GCreateCommitOnBranchInput> get serializer =>
       _$gCreateCommitOnBranchInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateCommitOnBranchInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateCommitOnBranchInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreateCommitOnBranchInput.serializer,
@@ -1694,7 +1831,7 @@ abstract class GCreateDeploymentInput
   GCreateDeploymentInput._();
 
   factory GCreateDeploymentInput(
-          [Function(GCreateDeploymentInputBuilder b) updates]) =
+          [void Function(GCreateDeploymentInputBuilder b) updates]) =
       _$GCreateDeploymentInput;
 
   bool? get autoMerge;
@@ -1708,10 +1845,12 @@ abstract class GCreateDeploymentInput
   String? get task;
   static Serializer<GCreateDeploymentInput> get serializer =>
       _$gCreateDeploymentInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateDeploymentInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateDeploymentInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreateDeploymentInput.serializer,
@@ -1726,7 +1865,7 @@ abstract class GCreateDeploymentStatusInput
   GCreateDeploymentStatusInput._();
 
   factory GCreateDeploymentStatusInput(
-          [Function(GCreateDeploymentStatusInputBuilder b) updates]) =
+          [void Function(GCreateDeploymentStatusInputBuilder b) updates]) =
       _$GCreateDeploymentStatusInput;
 
   bool? get autoInactive;
@@ -1739,10 +1878,12 @@ abstract class GCreateDeploymentStatusInput
   GDeploymentStatusState get state;
   static Serializer<GCreateDeploymentStatusInput> get serializer =>
       _$gCreateDeploymentStatusInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateDeploymentStatusInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateDeploymentStatusInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreateDeploymentStatusInput.serializer,
@@ -1755,7 +1896,7 @@ abstract class GCreateDiscussionInput
   GCreateDiscussionInput._();
 
   factory GCreateDiscussionInput(
-          [Function(GCreateDiscussionInputBuilder b) updates]) =
+          [void Function(GCreateDiscussionInputBuilder b) updates]) =
       _$GCreateDiscussionInput;
 
   String get body;
@@ -1765,10 +1906,12 @@ abstract class GCreateDiscussionInput
   String get title;
   static Serializer<GCreateDiscussionInput> get serializer =>
       _$gCreateDiscussionInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateDiscussionInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateDiscussionInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreateDiscussionInput.serializer,
@@ -1783,8 +1926,8 @@ abstract class GCreateEnterpriseOrganizationInput
   GCreateEnterpriseOrganizationInput._();
 
   factory GCreateEnterpriseOrganizationInput(
-          [Function(GCreateEnterpriseOrganizationInputBuilder b) updates]) =
-      _$GCreateEnterpriseOrganizationInput;
+      [void Function(GCreateEnterpriseOrganizationInputBuilder b)
+          updates]) = _$GCreateEnterpriseOrganizationInput;
 
   BuiltList<String> get adminLogins;
   String get billingEmail;
@@ -1794,10 +1937,12 @@ abstract class GCreateEnterpriseOrganizationInput
   String get profileName;
   static Serializer<GCreateEnterpriseOrganizationInput> get serializer =>
       _$gCreateEnterpriseOrganizationInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateEnterpriseOrganizationInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateEnterpriseOrganizationInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1811,7 +1956,7 @@ abstract class GCreateEnvironmentInput
   GCreateEnvironmentInput._();
 
   factory GCreateEnvironmentInput(
-          [Function(GCreateEnvironmentInputBuilder b) updates]) =
+          [void Function(GCreateEnvironmentInputBuilder b) updates]) =
       _$GCreateEnvironmentInput;
 
   String? get clientMutationId;
@@ -1819,10 +1964,12 @@ abstract class GCreateEnvironmentInput
   String get repositoryId;
   static Serializer<GCreateEnvironmentInput> get serializer =>
       _$gCreateEnvironmentInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateEnvironmentInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateEnvironmentInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreateEnvironmentInput.serializer,
@@ -1837,7 +1984,7 @@ abstract class GCreateIpAllowListEntryInput
   GCreateIpAllowListEntryInput._();
 
   factory GCreateIpAllowListEntryInput(
-          [Function(GCreateIpAllowListEntryInputBuilder b) updates]) =
+          [void Function(GCreateIpAllowListEntryInputBuilder b) updates]) =
       _$GCreateIpAllowListEntryInput;
 
   String get allowListValue;
@@ -1847,10 +1994,12 @@ abstract class GCreateIpAllowListEntryInput
   String get ownerId;
   static Serializer<GCreateIpAllowListEntryInput> get serializer =>
       _$gCreateIpAllowListEntryInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateIpAllowListEntryInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateIpAllowListEntryInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreateIpAllowListEntryInput.serializer,
@@ -1862,7 +2011,8 @@ abstract class GCreateIssueInput
     implements Built<GCreateIssueInput, GCreateIssueInputBuilder> {
   GCreateIssueInput._();
 
-  factory GCreateIssueInput([Function(GCreateIssueInputBuilder b) updates]) =
+  factory GCreateIssueInput(
+          [void Function(GCreateIssueInputBuilder b) updates]) =
       _$GCreateIssueInput;
 
   BuiltList<String>? get assigneeIds;
@@ -1876,10 +2026,12 @@ abstract class GCreateIssueInput
   String get title;
   static Serializer<GCreateIssueInput> get serializer =>
       _$gCreateIssueInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateIssueInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateIssueInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreateIssueInput.serializer,
@@ -1891,7 +2043,8 @@ abstract class GCreateLabelInput
     implements Built<GCreateLabelInput, GCreateLabelInputBuilder> {
   GCreateLabelInput._();
 
-  factory GCreateLabelInput([Function(GCreateLabelInputBuilder b) updates]) =
+  factory GCreateLabelInput(
+          [void Function(GCreateLabelInputBuilder b) updates]) =
       _$GCreateLabelInput;
 
   String? get clientMutationId;
@@ -1901,10 +2054,12 @@ abstract class GCreateLabelInput
   String get repositoryId;
   static Serializer<GCreateLabelInput> get serializer =>
       _$gCreateLabelInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateLabelInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateLabelInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreateLabelInput.serializer,
@@ -1918,7 +2073,7 @@ abstract class GCreateMigrationSourceInput
   GCreateMigrationSourceInput._();
 
   factory GCreateMigrationSourceInput(
-          [Function(GCreateMigrationSourceInputBuilder b) updates]) =
+          [void Function(GCreateMigrationSourceInputBuilder b) updates]) =
       _$GCreateMigrationSourceInput;
 
   String? get accessToken;
@@ -1930,10 +2085,12 @@ abstract class GCreateMigrationSourceInput
   String get url;
   static Serializer<GCreateMigrationSourceInput> get serializer =>
       _$gCreateMigrationSourceInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateMigrationSourceInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateMigrationSourceInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreateMigrationSourceInput.serializer,
@@ -1946,7 +2103,8 @@ abstract class GCreateProjectInput
   GCreateProjectInput._();
 
   factory GCreateProjectInput(
-      [Function(GCreateProjectInputBuilder b) updates]) = _$GCreateProjectInput;
+          [void Function(GCreateProjectInputBuilder b) updates]) =
+      _$GCreateProjectInput;
 
   String? get body;
   String? get clientMutationId;
@@ -1956,10 +2114,12 @@ abstract class GCreateProjectInput
   GProjectTemplate? get template;
   static Serializer<GCreateProjectInput> get serializer =>
       _$gCreateProjectInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateProjectInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateProjectInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreateProjectInput.serializer,
@@ -1972,7 +2132,7 @@ abstract class GCreateProjectV2Input
   GCreateProjectV2Input._();
 
   factory GCreateProjectV2Input(
-          [Function(GCreateProjectV2InputBuilder b) updates]) =
+          [void Function(GCreateProjectV2InputBuilder b) updates]) =
       _$GCreateProjectV2Input;
 
   String? get clientMutationId;
@@ -1980,10 +2140,12 @@ abstract class GCreateProjectV2Input
   String get title;
   static Serializer<GCreateProjectV2Input> get serializer =>
       _$gCreateProjectV2InputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateProjectV2Input.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateProjectV2Input? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreateProjectV2Input.serializer,
@@ -1996,7 +2158,7 @@ abstract class GCreatePullRequestInput
   GCreatePullRequestInput._();
 
   factory GCreatePullRequestInput(
-          [Function(GCreatePullRequestInputBuilder b) updates]) =
+          [void Function(GCreatePullRequestInputBuilder b) updates]) =
       _$GCreatePullRequestInput;
 
   String get baseRefName;
@@ -2009,10 +2171,12 @@ abstract class GCreatePullRequestInput
   String get title;
   static Serializer<GCreatePullRequestInput> get serializer =>
       _$gCreatePullRequestInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreatePullRequestInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreatePullRequestInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreatePullRequestInput.serializer,
@@ -2024,7 +2188,7 @@ abstract class GCreateRefInput
     implements Built<GCreateRefInput, GCreateRefInputBuilder> {
   GCreateRefInput._();
 
-  factory GCreateRefInput([Function(GCreateRefInputBuilder b) updates]) =
+  factory GCreateRefInput([void Function(GCreateRefInputBuilder b) updates]) =
       _$GCreateRefInput;
 
   String? get clientMutationId;
@@ -2033,10 +2197,12 @@ abstract class GCreateRefInput
   String get repositoryId;
   static Serializer<GCreateRefInput> get serializer =>
       _$gCreateRefInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateRefInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateRefInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreateRefInput.serializer,
@@ -2049,7 +2215,7 @@ abstract class GCreateRepositoryInput
   GCreateRepositoryInput._();
 
   factory GCreateRepositoryInput(
-          [Function(GCreateRepositoryInputBuilder b) updates]) =
+          [void Function(GCreateRepositoryInputBuilder b) updates]) =
       _$GCreateRepositoryInput;
 
   String? get clientMutationId;
@@ -2064,10 +2230,12 @@ abstract class GCreateRepositoryInput
   GRepositoryVisibility get visibility;
   static Serializer<GCreateRepositoryInput> get serializer =>
       _$gCreateRepositoryInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateRepositoryInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateRepositoryInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreateRepositoryInput.serializer,
@@ -2081,7 +2249,7 @@ abstract class GCreateSponsorsTierInput
   GCreateSponsorsTierInput._();
 
   factory GCreateSponsorsTierInput(
-          [Function(GCreateSponsorsTierInputBuilder b) updates]) =
+          [void Function(GCreateSponsorsTierInputBuilder b) updates]) =
       _$GCreateSponsorsTierInput;
 
   int get amount;
@@ -2097,10 +2265,12 @@ abstract class GCreateSponsorsTierInput
   String? get welcomeMessage;
   static Serializer<GCreateSponsorsTierInput> get serializer =>
       _$gCreateSponsorsTierInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateSponsorsTierInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateSponsorsTierInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreateSponsorsTierInput.serializer,
@@ -2113,7 +2283,7 @@ abstract class GCreateSponsorshipInput
   GCreateSponsorshipInput._();
 
   factory GCreateSponsorshipInput(
-          [Function(GCreateSponsorshipInputBuilder b) updates]) =
+          [void Function(GCreateSponsorshipInputBuilder b) updates]) =
       _$GCreateSponsorshipInput;
 
   int? get amount;
@@ -2128,10 +2298,12 @@ abstract class GCreateSponsorshipInput
   String? get tierId;
   static Serializer<GCreateSponsorshipInput> get serializer =>
       _$gCreateSponsorshipInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateSponsorshipInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateSponsorshipInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreateSponsorshipInput.serializer,
@@ -2146,7 +2318,7 @@ abstract class GCreateTeamDiscussionCommentInput
   GCreateTeamDiscussionCommentInput._();
 
   factory GCreateTeamDiscussionCommentInput(
-          [Function(GCreateTeamDiscussionCommentInputBuilder b) updates]) =
+          [void Function(GCreateTeamDiscussionCommentInputBuilder b) updates]) =
       _$GCreateTeamDiscussionCommentInput;
 
   String get body;
@@ -2154,10 +2326,12 @@ abstract class GCreateTeamDiscussionCommentInput
   String get discussionId;
   static Serializer<GCreateTeamDiscussionCommentInput> get serializer =>
       _$gCreateTeamDiscussionCommentInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateTeamDiscussionCommentInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateTeamDiscussionCommentInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2172,7 +2346,7 @@ abstract class GCreateTeamDiscussionInput
   GCreateTeamDiscussionInput._();
 
   factory GCreateTeamDiscussionInput(
-          [Function(GCreateTeamDiscussionInputBuilder b) updates]) =
+          [void Function(GCreateTeamDiscussionInputBuilder b) updates]) =
       _$GCreateTeamDiscussionInput;
 
   String get body;
@@ -2182,10 +2356,12 @@ abstract class GCreateTeamDiscussionInput
   String get title;
   static Serializer<GCreateTeamDiscussionInput> get serializer =>
       _$gCreateTeamDiscussionInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCreateTeamDiscussionInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCreateTeamDiscussionInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCreateTeamDiscussionInput.serializer,
@@ -2212,7 +2388,7 @@ abstract class GDeclineTopicSuggestionInput
   GDeclineTopicSuggestionInput._();
 
   factory GDeclineTopicSuggestionInput(
-          [Function(GDeclineTopicSuggestionInputBuilder b) updates]) =
+          [void Function(GDeclineTopicSuggestionInputBuilder b) updates]) =
       _$GDeclineTopicSuggestionInput;
 
   String? get clientMutationId;
@@ -2221,10 +2397,12 @@ abstract class GDeclineTopicSuggestionInput
   String get repositoryId;
   static Serializer<GDeclineTopicSuggestionInput> get serializer =>
       _$gDeclineTopicSuggestionInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeclineTopicSuggestionInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeclineTopicSuggestionInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDeclineTopicSuggestionInput.serializer,
@@ -2249,8 +2427,10 @@ class GDefaultRepositoryPermissionField extends EnumClass {
 
   static Serializer<GDefaultRepositoryPermissionField> get serializer =>
       _$gDefaultRepositoryPermissionFieldSerializer;
+
   static BuiltSet<GDefaultRepositoryPermissionField> get values =>
       _$gDefaultRepositoryPermissionFieldValues;
+
   static GDefaultRepositoryPermissionField valueOf(String name) =>
       _$gDefaultRepositoryPermissionFieldValueOf(name);
 }
@@ -2262,17 +2442,19 @@ abstract class GDeleteBranchProtectionRuleInput
   GDeleteBranchProtectionRuleInput._();
 
   factory GDeleteBranchProtectionRuleInput(
-          [Function(GDeleteBranchProtectionRuleInputBuilder b) updates]) =
+          [void Function(GDeleteBranchProtectionRuleInputBuilder b) updates]) =
       _$GDeleteBranchProtectionRuleInput;
 
   String get branchProtectionRuleId;
   String? get clientMutationId;
   static Serializer<GDeleteBranchProtectionRuleInput> get serializer =>
       _$gDeleteBranchProtectionRuleInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeleteBranchProtectionRuleInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeleteBranchProtectionRuleInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2286,17 +2468,19 @@ abstract class GDeleteDeploymentInput
   GDeleteDeploymentInput._();
 
   factory GDeleteDeploymentInput(
-          [Function(GDeleteDeploymentInputBuilder b) updates]) =
+          [void Function(GDeleteDeploymentInputBuilder b) updates]) =
       _$GDeleteDeploymentInput;
 
   String? get clientMutationId;
   String get id;
   static Serializer<GDeleteDeploymentInput> get serializer =>
       _$gDeleteDeploymentInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeleteDeploymentInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeleteDeploymentInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDeleteDeploymentInput.serializer,
@@ -2311,17 +2495,19 @@ abstract class GDeleteDiscussionCommentInput
   GDeleteDiscussionCommentInput._();
 
   factory GDeleteDiscussionCommentInput(
-          [Function(GDeleteDiscussionCommentInputBuilder b) updates]) =
+          [void Function(GDeleteDiscussionCommentInputBuilder b) updates]) =
       _$GDeleteDiscussionCommentInput;
 
   String? get clientMutationId;
   String get id;
   static Serializer<GDeleteDiscussionCommentInput> get serializer =>
       _$gDeleteDiscussionCommentInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeleteDiscussionCommentInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeleteDiscussionCommentInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDeleteDiscussionCommentInput.serializer,
@@ -2334,17 +2520,19 @@ abstract class GDeleteDiscussionInput
   GDeleteDiscussionInput._();
 
   factory GDeleteDiscussionInput(
-          [Function(GDeleteDiscussionInputBuilder b) updates]) =
+          [void Function(GDeleteDiscussionInputBuilder b) updates]) =
       _$GDeleteDiscussionInput;
 
   String? get clientMutationId;
   String get id;
   static Serializer<GDeleteDiscussionInput> get serializer =>
       _$gDeleteDiscussionInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeleteDiscussionInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeleteDiscussionInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDeleteDiscussionInput.serializer,
@@ -2357,17 +2545,19 @@ abstract class GDeleteEnvironmentInput
   GDeleteEnvironmentInput._();
 
   factory GDeleteEnvironmentInput(
-          [Function(GDeleteEnvironmentInputBuilder b) updates]) =
+          [void Function(GDeleteEnvironmentInputBuilder b) updates]) =
       _$GDeleteEnvironmentInput;
 
   String? get clientMutationId;
   String get id;
   static Serializer<GDeleteEnvironmentInput> get serializer =>
       _$gDeleteEnvironmentInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeleteEnvironmentInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeleteEnvironmentInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDeleteEnvironmentInput.serializer,
@@ -2382,17 +2572,19 @@ abstract class GDeleteIpAllowListEntryInput
   GDeleteIpAllowListEntryInput._();
 
   factory GDeleteIpAllowListEntryInput(
-          [Function(GDeleteIpAllowListEntryInputBuilder b) updates]) =
+          [void Function(GDeleteIpAllowListEntryInputBuilder b) updates]) =
       _$GDeleteIpAllowListEntryInput;
 
   String? get clientMutationId;
   String get ipAllowListEntryId;
   static Serializer<GDeleteIpAllowListEntryInput> get serializer =>
       _$gDeleteIpAllowListEntryInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeleteIpAllowListEntryInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeleteIpAllowListEntryInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDeleteIpAllowListEntryInput.serializer,
@@ -2406,17 +2598,19 @@ abstract class GDeleteIssueCommentInput
   GDeleteIssueCommentInput._();
 
   factory GDeleteIssueCommentInput(
-          [Function(GDeleteIssueCommentInputBuilder b) updates]) =
+          [void Function(GDeleteIssueCommentInputBuilder b) updates]) =
       _$GDeleteIssueCommentInput;
 
   String? get clientMutationId;
   String get id;
   static Serializer<GDeleteIssueCommentInput> get serializer =>
       _$gDeleteIssueCommentInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeleteIssueCommentInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeleteIssueCommentInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDeleteIssueCommentInput.serializer,
@@ -2428,17 +2622,20 @@ abstract class GDeleteIssueInput
     implements Built<GDeleteIssueInput, GDeleteIssueInputBuilder> {
   GDeleteIssueInput._();
 
-  factory GDeleteIssueInput([Function(GDeleteIssueInputBuilder b) updates]) =
+  factory GDeleteIssueInput(
+          [void Function(GDeleteIssueInputBuilder b) updates]) =
       _$GDeleteIssueInput;
 
   String? get clientMutationId;
   String get issueId;
   static Serializer<GDeleteIssueInput> get serializer =>
       _$gDeleteIssueInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeleteIssueInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeleteIssueInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDeleteIssueInput.serializer,
@@ -2450,17 +2647,20 @@ abstract class GDeleteLabelInput
     implements Built<GDeleteLabelInput, GDeleteLabelInputBuilder> {
   GDeleteLabelInput._();
 
-  factory GDeleteLabelInput([Function(GDeleteLabelInputBuilder b) updates]) =
+  factory GDeleteLabelInput(
+          [void Function(GDeleteLabelInputBuilder b) updates]) =
       _$GDeleteLabelInput;
 
   String? get clientMutationId;
   String get id;
   static Serializer<GDeleteLabelInput> get serializer =>
       _$gDeleteLabelInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeleteLabelInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeleteLabelInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDeleteLabelInput.serializer,
@@ -2474,17 +2674,19 @@ abstract class GDeletePackageVersionInput
   GDeletePackageVersionInput._();
 
   factory GDeletePackageVersionInput(
-          [Function(GDeletePackageVersionInputBuilder b) updates]) =
+          [void Function(GDeletePackageVersionInputBuilder b) updates]) =
       _$GDeletePackageVersionInput;
 
   String? get clientMutationId;
   String get packageVersionId;
   static Serializer<GDeletePackageVersionInput> get serializer =>
       _$gDeletePackageVersionInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeletePackageVersionInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeletePackageVersionInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDeletePackageVersionInput.serializer,
@@ -2497,17 +2699,19 @@ abstract class GDeleteProjectCardInput
   GDeleteProjectCardInput._();
 
   factory GDeleteProjectCardInput(
-          [Function(GDeleteProjectCardInputBuilder b) updates]) =
+          [void Function(GDeleteProjectCardInputBuilder b) updates]) =
       _$GDeleteProjectCardInput;
 
   String get cardId;
   String? get clientMutationId;
   static Serializer<GDeleteProjectCardInput> get serializer =>
       _$gDeleteProjectCardInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeleteProjectCardInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeleteProjectCardInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDeleteProjectCardInput.serializer,
@@ -2521,17 +2725,19 @@ abstract class GDeleteProjectColumnInput
   GDeleteProjectColumnInput._();
 
   factory GDeleteProjectColumnInput(
-          [Function(GDeleteProjectColumnInputBuilder b) updates]) =
+          [void Function(GDeleteProjectColumnInputBuilder b) updates]) =
       _$GDeleteProjectColumnInput;
 
   String? get clientMutationId;
   String get columnId;
   static Serializer<GDeleteProjectColumnInput> get serializer =>
       _$gDeleteProjectColumnInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeleteProjectColumnInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeleteProjectColumnInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDeleteProjectColumnInput.serializer,
@@ -2544,16 +2750,19 @@ abstract class GDeleteProjectInput
   GDeleteProjectInput._();
 
   factory GDeleteProjectInput(
-      [Function(GDeleteProjectInputBuilder b) updates]) = _$GDeleteProjectInput;
+          [void Function(GDeleteProjectInputBuilder b) updates]) =
+      _$GDeleteProjectInput;
 
   String? get clientMutationId;
   String get projectId;
   static Serializer<GDeleteProjectInput> get serializer =>
       _$gDeleteProjectInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeleteProjectInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeleteProjectInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDeleteProjectInput.serializer,
@@ -2567,7 +2776,7 @@ abstract class GDeleteProjectNextItemInput
   GDeleteProjectNextItemInput._();
 
   factory GDeleteProjectNextItemInput(
-          [Function(GDeleteProjectNextItemInputBuilder b) updates]) =
+          [void Function(GDeleteProjectNextItemInputBuilder b) updates]) =
       _$GDeleteProjectNextItemInput;
 
   String? get clientMutationId;
@@ -2575,10 +2784,12 @@ abstract class GDeleteProjectNextItemInput
   String? get projectId;
   static Serializer<GDeleteProjectNextItemInput> get serializer =>
       _$gDeleteProjectNextItemInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeleteProjectNextItemInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeleteProjectNextItemInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDeleteProjectNextItemInput.serializer,
@@ -2592,7 +2803,7 @@ abstract class GDeleteProjectV2ItemInput
   GDeleteProjectV2ItemInput._();
 
   factory GDeleteProjectV2ItemInput(
-          [Function(GDeleteProjectV2ItemInputBuilder b) updates]) =
+          [void Function(GDeleteProjectV2ItemInputBuilder b) updates]) =
       _$GDeleteProjectV2ItemInput;
 
   String? get clientMutationId;
@@ -2600,10 +2811,12 @@ abstract class GDeleteProjectV2ItemInput
   String get projectId;
   static Serializer<GDeleteProjectV2ItemInput> get serializer =>
       _$gDeleteProjectV2ItemInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeleteProjectV2ItemInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeleteProjectV2ItemInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDeleteProjectV2ItemInput.serializer,
@@ -2618,17 +2831,19 @@ abstract class GDeletePullRequestReviewCommentInput
   GDeletePullRequestReviewCommentInput._();
 
   factory GDeletePullRequestReviewCommentInput(
-          [Function(GDeletePullRequestReviewCommentInputBuilder b) updates]) =
-      _$GDeletePullRequestReviewCommentInput;
+      [void Function(GDeletePullRequestReviewCommentInputBuilder b)
+          updates]) = _$GDeletePullRequestReviewCommentInput;
 
   String? get clientMutationId;
   String get id;
   static Serializer<GDeletePullRequestReviewCommentInput> get serializer =>
       _$gDeletePullRequestReviewCommentInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeletePullRequestReviewCommentInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeletePullRequestReviewCommentInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2644,17 +2859,19 @@ abstract class GDeletePullRequestReviewInput
   GDeletePullRequestReviewInput._();
 
   factory GDeletePullRequestReviewInput(
-          [Function(GDeletePullRequestReviewInputBuilder b) updates]) =
+          [void Function(GDeletePullRequestReviewInputBuilder b) updates]) =
       _$GDeletePullRequestReviewInput;
 
   String? get clientMutationId;
   String get pullRequestReviewId;
   static Serializer<GDeletePullRequestReviewInput> get serializer =>
       _$gDeletePullRequestReviewInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeletePullRequestReviewInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeletePullRequestReviewInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDeletePullRequestReviewInput.serializer,
@@ -2666,17 +2883,19 @@ abstract class GDeleteRefInput
     implements Built<GDeleteRefInput, GDeleteRefInputBuilder> {
   GDeleteRefInput._();
 
-  factory GDeleteRefInput([Function(GDeleteRefInputBuilder b) updates]) =
+  factory GDeleteRefInput([void Function(GDeleteRefInputBuilder b) updates]) =
       _$GDeleteRefInput;
 
   String? get clientMutationId;
   String get refId;
   static Serializer<GDeleteRefInput> get serializer =>
       _$gDeleteRefInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeleteRefInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeleteRefInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDeleteRefInput.serializer,
@@ -2691,17 +2910,19 @@ abstract class GDeleteTeamDiscussionCommentInput
   GDeleteTeamDiscussionCommentInput._();
 
   factory GDeleteTeamDiscussionCommentInput(
-          [Function(GDeleteTeamDiscussionCommentInputBuilder b) updates]) =
+          [void Function(GDeleteTeamDiscussionCommentInputBuilder b) updates]) =
       _$GDeleteTeamDiscussionCommentInput;
 
   String? get clientMutationId;
   String get id;
   static Serializer<GDeleteTeamDiscussionCommentInput> get serializer =>
       _$gDeleteTeamDiscussionCommentInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeleteTeamDiscussionCommentInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeleteTeamDiscussionCommentInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2716,17 +2937,19 @@ abstract class GDeleteTeamDiscussionInput
   GDeleteTeamDiscussionInput._();
 
   factory GDeleteTeamDiscussionInput(
-          [Function(GDeleteTeamDiscussionInputBuilder b) updates]) =
+          [void Function(GDeleteTeamDiscussionInputBuilder b) updates]) =
       _$GDeleteTeamDiscussionInput;
 
   String? get clientMutationId;
   String get id;
   static Serializer<GDeleteTeamDiscussionInput> get serializer =>
       _$gDeleteTeamDiscussionInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeleteTeamDiscussionInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeleteTeamDiscussionInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDeleteTeamDiscussionInput.serializer,
@@ -2741,17 +2964,19 @@ abstract class GDeleteVerifiableDomainInput
   GDeleteVerifiableDomainInput._();
 
   factory GDeleteVerifiableDomainInput(
-          [Function(GDeleteVerifiableDomainInputBuilder b) updates]) =
+          [void Function(GDeleteVerifiableDomainInputBuilder b) updates]) =
       _$GDeleteVerifiableDomainInput;
 
   String? get clientMutationId;
   String get id;
   static Serializer<GDeleteVerifiableDomainInput> get serializer =>
       _$gDeleteVerifiableDomainInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeleteVerifiableDomainInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeleteVerifiableDomainInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDeleteVerifiableDomainInput.serializer,
@@ -2787,8 +3012,10 @@ class GDependencyGraphEcosystem extends EnumClass {
 
   static Serializer<GDependencyGraphEcosystem> get serializer =>
       _$gDependencyGraphEcosystemSerializer;
+
   static BuiltSet<GDependencyGraphEcosystem> get values =>
       _$gDependencyGraphEcosystemValues;
+
   static GDependencyGraphEcosystem valueOf(String name) =>
       _$gDependencyGraphEcosystemValueOf(name);
 }
@@ -2797,17 +3024,19 @@ abstract class GDeploymentOrder
     implements Built<GDeploymentOrder, GDeploymentOrderBuilder> {
   GDeploymentOrder._();
 
-  factory GDeploymentOrder([Function(GDeploymentOrderBuilder b) updates]) =
+  factory GDeploymentOrder([void Function(GDeploymentOrderBuilder b) updates]) =
       _$GDeploymentOrder;
 
   GOrderDirection get direction;
   GDeploymentOrderField get field;
   static Serializer<GDeploymentOrder> get serializer =>
       _$gDeploymentOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDeploymentOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDeploymentOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDeploymentOrder.serializer,
@@ -2823,8 +3052,10 @@ class GDeploymentOrderField extends EnumClass {
 
   static Serializer<GDeploymentOrderField> get serializer =>
       _$gDeploymentOrderFieldSerializer;
+
   static BuiltSet<GDeploymentOrderField> get values =>
       _$gDeploymentOrderFieldValues;
+
   static GDeploymentOrderField valueOf(String name) =>
       _$gDeploymentOrderFieldValueOf(name);
 }
@@ -2840,8 +3071,10 @@ class GDeploymentProtectionRuleType extends EnumClass {
 
   static Serializer<GDeploymentProtectionRuleType> get serializer =>
       _$gDeploymentProtectionRuleTypeSerializer;
+
   static BuiltSet<GDeploymentProtectionRuleType> get values =>
       _$gDeploymentProtectionRuleTypeValues;
+
   static GDeploymentProtectionRuleType valueOf(String name) =>
       _$gDeploymentProtectionRuleTypeValueOf(name);
 }
@@ -2857,8 +3090,10 @@ class GDeploymentReviewState extends EnumClass {
 
   static Serializer<GDeploymentReviewState> get serializer =>
       _$gDeploymentReviewStateSerializer;
+
   static BuiltSet<GDeploymentReviewState> get values =>
       _$gDeploymentReviewStateValues;
+
   static GDeploymentReviewState valueOf(String name) =>
       _$gDeploymentReviewStateValueOf(name);
 }
@@ -2888,7 +3123,9 @@ class GDeploymentState extends EnumClass {
 
   static Serializer<GDeploymentState> get serializer =>
       _$gDeploymentStateSerializer;
+
   static BuiltSet<GDeploymentState> get values => _$gDeploymentStateValues;
+
   static GDeploymentState valueOf(String name) =>
       _$gDeploymentStateValueOf(name);
 }
@@ -2916,8 +3153,10 @@ class GDeploymentStatusState extends EnumClass {
 
   static Serializer<GDeploymentStatusState> get serializer =>
       _$gDeploymentStatusStateSerializer;
+
   static BuiltSet<GDeploymentStatusState> get values =>
       _$gDeploymentStatusStateValues;
+
   static GDeploymentStatusState valueOf(String name) =>
       _$gDeploymentStatusStateValueOf(name);
 }
@@ -2930,7 +3169,9 @@ class GDiffSide extends EnumClass {
   static const GDiffSide RIGHT = _$gDiffSideRIGHT;
 
   static Serializer<GDiffSide> get serializer => _$gDiffSideSerializer;
+
   static BuiltSet<GDiffSide> get values => _$gDiffSideValues;
+
   static GDiffSide valueOf(String name) => _$gDiffSideValueOf(name);
 }
 
@@ -2941,17 +3182,19 @@ abstract class GDisablePullRequestAutoMergeInput
   GDisablePullRequestAutoMergeInput._();
 
   factory GDisablePullRequestAutoMergeInput(
-          [Function(GDisablePullRequestAutoMergeInputBuilder b) updates]) =
+          [void Function(GDisablePullRequestAutoMergeInputBuilder b) updates]) =
       _$GDisablePullRequestAutoMergeInput;
 
   String? get clientMutationId;
   String get pullRequestId;
   static Serializer<GDisablePullRequestAutoMergeInput> get serializer =>
       _$gDisablePullRequestAutoMergeInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDisablePullRequestAutoMergeInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDisablePullRequestAutoMergeInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2964,17 +3207,19 @@ abstract class GDiscussionOrder
     implements Built<GDiscussionOrder, GDiscussionOrderBuilder> {
   GDiscussionOrder._();
 
-  factory GDiscussionOrder([Function(GDiscussionOrderBuilder b) updates]) =
+  factory GDiscussionOrder([void Function(GDiscussionOrderBuilder b) updates]) =
       _$GDiscussionOrder;
 
   GOrderDirection get direction;
   GDiscussionOrderField get field;
   static Serializer<GDiscussionOrder> get serializer =>
       _$gDiscussionOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDiscussionOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDiscussionOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDiscussionOrder.serializer,
@@ -2993,8 +3238,10 @@ class GDiscussionOrderField extends EnumClass {
 
   static Serializer<GDiscussionOrderField> get serializer =>
       _$gDiscussionOrderFieldSerializer;
+
   static BuiltSet<GDiscussionOrderField> get values =>
       _$gDiscussionOrderFieldValues;
+
   static GDiscussionOrderField valueOf(String name) =>
       _$gDiscussionOrderFieldValueOf(name);
 }
@@ -3005,17 +3252,19 @@ abstract class GDiscussionPollOptionOrder
   GDiscussionPollOptionOrder._();
 
   factory GDiscussionPollOptionOrder(
-          [Function(GDiscussionPollOptionOrderBuilder b) updates]) =
+          [void Function(GDiscussionPollOptionOrderBuilder b) updates]) =
       _$GDiscussionPollOptionOrder;
 
   GOrderDirection get direction;
   GDiscussionPollOptionOrderField get field;
   static Serializer<GDiscussionPollOptionOrder> get serializer =>
       _$gDiscussionPollOptionOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDiscussionPollOptionOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDiscussionPollOptionOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDiscussionPollOptionOrder.serializer,
@@ -3034,8 +3283,10 @@ class GDiscussionPollOptionOrderField extends EnumClass {
 
   static Serializer<GDiscussionPollOptionOrderField> get serializer =>
       _$gDiscussionPollOptionOrderFieldSerializer;
+
   static BuiltSet<GDiscussionPollOptionOrderField> get values =>
       _$gDiscussionPollOptionOrderFieldValues;
+
   static GDiscussionPollOptionOrderField valueOf(String name) =>
       _$gDiscussionPollOptionOrderFieldValueOf(name);
 }
@@ -3047,7 +3298,7 @@ abstract class GDismissPullRequestReviewInput
   GDismissPullRequestReviewInput._();
 
   factory GDismissPullRequestReviewInput(
-          [Function(GDismissPullRequestReviewInputBuilder b) updates]) =
+          [void Function(GDismissPullRequestReviewInputBuilder b) updates]) =
       _$GDismissPullRequestReviewInput;
 
   String? get clientMutationId;
@@ -3055,10 +3306,12 @@ abstract class GDismissPullRequestReviewInput
   String get pullRequestReviewId;
   static Serializer<GDismissPullRequestReviewInput> get serializer =>
       _$gDismissPullRequestReviewInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDismissPullRequestReviewInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDismissPullRequestReviewInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDismissPullRequestReviewInput.serializer,
@@ -3081,7 +3334,9 @@ class GDismissReason extends EnumClass {
 
   static Serializer<GDismissReason> get serializer =>
       _$gDismissReasonSerializer;
+
   static BuiltSet<GDismissReason> get values => _$gDismissReasonValues;
+
   static GDismissReason valueOf(String name) => _$gDismissReasonValueOf(name);
 }
 
@@ -3092,7 +3347,7 @@ abstract class GDismissRepositoryVulnerabilityAlertInput
   GDismissRepositoryVulnerabilityAlertInput._();
 
   factory GDismissRepositoryVulnerabilityAlertInput(
-      [Function(GDismissRepositoryVulnerabilityAlertInputBuilder b)
+      [void Function(GDismissRepositoryVulnerabilityAlertInputBuilder b)
           updates]) = _$GDismissRepositoryVulnerabilityAlertInput;
 
   String? get clientMutationId;
@@ -3100,10 +3355,12 @@ abstract class GDismissRepositoryVulnerabilityAlertInput
   String get repositoryVulnerabilityAlertId;
   static Serializer<GDismissRepositoryVulnerabilityAlertInput> get serializer =>
       _$gDismissRepositoryVulnerabilityAlertInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDismissRepositoryVulnerabilityAlertInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDismissRepositoryVulnerabilityAlertInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -3119,7 +3376,7 @@ abstract class GDraftPullRequestReviewComment
   GDraftPullRequestReviewComment._();
 
   factory GDraftPullRequestReviewComment(
-          [Function(GDraftPullRequestReviewCommentBuilder b) updates]) =
+          [void Function(GDraftPullRequestReviewCommentBuilder b) updates]) =
       _$GDraftPullRequestReviewComment;
 
   String get body;
@@ -3127,10 +3384,12 @@ abstract class GDraftPullRequestReviewComment
   int get position;
   static Serializer<GDraftPullRequestReviewComment> get serializer =>
       _$gDraftPullRequestReviewCommentSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDraftPullRequestReviewComment.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDraftPullRequestReviewComment? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDraftPullRequestReviewComment.serializer,
@@ -3145,7 +3404,7 @@ abstract class GDraftPullRequestReviewThread
   GDraftPullRequestReviewThread._();
 
   factory GDraftPullRequestReviewThread(
-          [Function(GDraftPullRequestReviewThreadBuilder b) updates]) =
+          [void Function(GDraftPullRequestReviewThreadBuilder b) updates]) =
       _$GDraftPullRequestReviewThread;
 
   String get body;
@@ -3156,10 +3415,12 @@ abstract class GDraftPullRequestReviewThread
   GDiffSide? get startSide;
   static Serializer<GDraftPullRequestReviewThread> get serializer =>
       _$gDraftPullRequestReviewThreadSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GDraftPullRequestReviewThread.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GDraftPullRequestReviewThread? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GDraftPullRequestReviewThread.serializer,
@@ -3174,7 +3435,7 @@ abstract class GEnablePullRequestAutoMergeInput
   GEnablePullRequestAutoMergeInput._();
 
   factory GEnablePullRequestAutoMergeInput(
-          [Function(GEnablePullRequestAutoMergeInputBuilder b) updates]) =
+          [void Function(GEnablePullRequestAutoMergeInputBuilder b) updates]) =
       _$GEnablePullRequestAutoMergeInput;
 
   String? get authorEmail;
@@ -3185,10 +3446,12 @@ abstract class GEnablePullRequestAutoMergeInput
   String get pullRequestId;
   static Serializer<GEnablePullRequestAutoMergeInput> get serializer =>
       _$gEnablePullRequestAutoMergeInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GEnablePullRequestAutoMergeInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GEnablePullRequestAutoMergeInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -3204,17 +3467,19 @@ abstract class GEnterpriseAdministratorInvitationOrder
   GEnterpriseAdministratorInvitationOrder._();
 
   factory GEnterpriseAdministratorInvitationOrder(
-      [Function(GEnterpriseAdministratorInvitationOrderBuilder b)
+      [void Function(GEnterpriseAdministratorInvitationOrderBuilder b)
           updates]) = _$GEnterpriseAdministratorInvitationOrder;
 
   GOrderDirection get direction;
   GEnterpriseAdministratorInvitationOrderField get field;
   static Serializer<GEnterpriseAdministratorInvitationOrder> get serializer =>
       _$gEnterpriseAdministratorInvitationOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GEnterpriseAdministratorInvitationOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GEnterpriseAdministratorInvitationOrder? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -3233,8 +3498,10 @@ class GEnterpriseAdministratorInvitationOrderField extends EnumClass {
   static Serializer<GEnterpriseAdministratorInvitationOrderField>
       get serializer =>
           _$gEnterpriseAdministratorInvitationOrderFieldSerializer;
+
   static BuiltSet<GEnterpriseAdministratorInvitationOrderField> get values =>
       _$gEnterpriseAdministratorInvitationOrderFieldValues;
+
   static GEnterpriseAdministratorInvitationOrderField valueOf(String name) =>
       _$gEnterpriseAdministratorInvitationOrderFieldValueOf(name);
 }
@@ -3250,8 +3517,10 @@ class GEnterpriseAdministratorRole extends EnumClass {
 
   static Serializer<GEnterpriseAdministratorRole> get serializer =>
       _$gEnterpriseAdministratorRoleSerializer;
+
   static BuiltSet<GEnterpriseAdministratorRole> get values =>
       _$gEnterpriseAdministratorRoleValues;
+
   static GEnterpriseAdministratorRole valueOf(String name) =>
       _$gEnterpriseAdministratorRoleValueOf(name);
 }
@@ -3286,8 +3555,10 @@ class GEnterpriseAllowPrivateRepositoryForkingPolicyValue extends EnumClass {
   static Serializer<GEnterpriseAllowPrivateRepositoryForkingPolicyValue>
       get serializer =>
           _$gEnterpriseAllowPrivateRepositoryForkingPolicyValueSerializer;
+
   static BuiltSet<GEnterpriseAllowPrivateRepositoryForkingPolicyValue>
       get values => _$gEnterpriseAllowPrivateRepositoryForkingPolicyValueValues;
+
   static GEnterpriseAllowPrivateRepositoryForkingPolicyValue valueOf(
           String name) =>
       _$gEnterpriseAllowPrivateRepositoryForkingPolicyValueValueOf(name);
@@ -3315,8 +3586,10 @@ class GEnterpriseDefaultRepositoryPermissionSettingValue extends EnumClass {
   static Serializer<GEnterpriseDefaultRepositoryPermissionSettingValue>
       get serializer =>
           _$gEnterpriseDefaultRepositoryPermissionSettingValueSerializer;
+
   static BuiltSet<GEnterpriseDefaultRepositoryPermissionSettingValue>
       get values => _$gEnterpriseDefaultRepositoryPermissionSettingValueValues;
+
   static GEnterpriseDefaultRepositoryPermissionSettingValue valueOf(
           String name) =>
       _$gEnterpriseDefaultRepositoryPermissionSettingValueValueOf(name);
@@ -3336,8 +3609,10 @@ class GEnterpriseEnabledDisabledSettingValue extends EnumClass {
 
   static Serializer<GEnterpriseEnabledDisabledSettingValue> get serializer =>
       _$gEnterpriseEnabledDisabledSettingValueSerializer;
+
   static BuiltSet<GEnterpriseEnabledDisabledSettingValue> get values =>
       _$gEnterpriseEnabledDisabledSettingValueValues;
+
   static GEnterpriseEnabledDisabledSettingValue valueOf(String name) =>
       _$gEnterpriseEnabledDisabledSettingValueValueOf(name);
 }
@@ -3353,8 +3628,10 @@ class GEnterpriseEnabledSettingValue extends EnumClass {
 
   static Serializer<GEnterpriseEnabledSettingValue> get serializer =>
       _$gEnterpriseEnabledSettingValueSerializer;
+
   static BuiltSet<GEnterpriseEnabledSettingValue> get values =>
       _$gEnterpriseEnabledSettingValueValues;
+
   static GEnterpriseEnabledSettingValue valueOf(String name) =>
       _$gEnterpriseEnabledSettingValueValueOf(name);
 }
@@ -3364,17 +3641,19 @@ abstract class GEnterpriseMemberOrder
   GEnterpriseMemberOrder._();
 
   factory GEnterpriseMemberOrder(
-          [Function(GEnterpriseMemberOrderBuilder b) updates]) =
+          [void Function(GEnterpriseMemberOrderBuilder b) updates]) =
       _$GEnterpriseMemberOrder;
 
   GOrderDirection get direction;
   GEnterpriseMemberOrderField get field;
   static Serializer<GEnterpriseMemberOrder> get serializer =>
       _$gEnterpriseMemberOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GEnterpriseMemberOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GEnterpriseMemberOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GEnterpriseMemberOrder.serializer,
@@ -3393,8 +3672,10 @@ class GEnterpriseMemberOrderField extends EnumClass {
 
   static Serializer<GEnterpriseMemberOrderField> get serializer =>
       _$gEnterpriseMemberOrderFieldSerializer;
+
   static BuiltSet<GEnterpriseMemberOrderField> get values =>
       _$gEnterpriseMemberOrderFieldValues;
+
   static GEnterpriseMemberOrderField valueOf(String name) =>
       _$gEnterpriseMemberOrderFieldValueOf(name);
 }
@@ -3421,8 +3702,10 @@ class GEnterpriseMembersCanCreateRepositoriesSettingValue extends EnumClass {
   static Serializer<GEnterpriseMembersCanCreateRepositoriesSettingValue>
       get serializer =>
           _$gEnterpriseMembersCanCreateRepositoriesSettingValueSerializer;
+
   static BuiltSet<GEnterpriseMembersCanCreateRepositoriesSettingValue>
       get values => _$gEnterpriseMembersCanCreateRepositoriesSettingValueValues;
+
   static GEnterpriseMembersCanCreateRepositoriesSettingValue valueOf(
           String name) =>
       _$gEnterpriseMembersCanCreateRepositoriesSettingValueValueOf(name);
@@ -3441,8 +3724,10 @@ class GEnterpriseMembersCanMakePurchasesSettingValue extends EnumClass {
   static Serializer<GEnterpriseMembersCanMakePurchasesSettingValue>
       get serializer =>
           _$gEnterpriseMembersCanMakePurchasesSettingValueSerializer;
+
   static BuiltSet<GEnterpriseMembersCanMakePurchasesSettingValue> get values =>
       _$gEnterpriseMembersCanMakePurchasesSettingValueValues;
+
   static GEnterpriseMembersCanMakePurchasesSettingValue valueOf(String name) =>
       _$gEnterpriseMembersCanMakePurchasesSettingValueValueOf(name);
 }
@@ -3454,17 +3739,19 @@ abstract class GEnterpriseServerInstallationOrder
   GEnterpriseServerInstallationOrder._();
 
   factory GEnterpriseServerInstallationOrder(
-          [Function(GEnterpriseServerInstallationOrderBuilder b) updates]) =
-      _$GEnterpriseServerInstallationOrder;
+      [void Function(GEnterpriseServerInstallationOrderBuilder b)
+          updates]) = _$GEnterpriseServerInstallationOrder;
 
   GOrderDirection get direction;
   GEnterpriseServerInstallationOrderField get field;
   static Serializer<GEnterpriseServerInstallationOrder> get serializer =>
       _$gEnterpriseServerInstallationOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GEnterpriseServerInstallationOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GEnterpriseServerInstallationOrder? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -3487,8 +3774,10 @@ class GEnterpriseServerInstallationOrderField extends EnumClass {
 
   static Serializer<GEnterpriseServerInstallationOrderField> get serializer =>
       _$gEnterpriseServerInstallationOrderFieldSerializer;
+
   static BuiltSet<GEnterpriseServerInstallationOrderField> get values =>
       _$gEnterpriseServerInstallationOrderFieldValues;
+
   static GEnterpriseServerInstallationOrderField valueOf(String name) =>
       _$gEnterpriseServerInstallationOrderFieldValueOf(name);
 }
@@ -3500,17 +3789,19 @@ abstract class GEnterpriseServerUserAccountEmailOrder
   GEnterpriseServerUserAccountEmailOrder._();
 
   factory GEnterpriseServerUserAccountEmailOrder(
-          [Function(GEnterpriseServerUserAccountEmailOrderBuilder b) updates]) =
-      _$GEnterpriseServerUserAccountEmailOrder;
+      [void Function(GEnterpriseServerUserAccountEmailOrderBuilder b)
+          updates]) = _$GEnterpriseServerUserAccountEmailOrder;
 
   GOrderDirection get direction;
   GEnterpriseServerUserAccountEmailOrderField get field;
   static Serializer<GEnterpriseServerUserAccountEmailOrder> get serializer =>
       _$gEnterpriseServerUserAccountEmailOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GEnterpriseServerUserAccountEmailOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GEnterpriseServerUserAccountEmailOrder? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -3528,8 +3819,10 @@ class GEnterpriseServerUserAccountEmailOrderField extends EnumClass {
 
   static Serializer<GEnterpriseServerUserAccountEmailOrderField>
       get serializer => _$gEnterpriseServerUserAccountEmailOrderFieldSerializer;
+
   static BuiltSet<GEnterpriseServerUserAccountEmailOrderField> get values =>
       _$gEnterpriseServerUserAccountEmailOrderFieldValues;
+
   static GEnterpriseServerUserAccountEmailOrderField valueOf(String name) =>
       _$gEnterpriseServerUserAccountEmailOrderFieldValueOf(name);
 }
@@ -3541,17 +3834,19 @@ abstract class GEnterpriseServerUserAccountOrder
   GEnterpriseServerUserAccountOrder._();
 
   factory GEnterpriseServerUserAccountOrder(
-          [Function(GEnterpriseServerUserAccountOrderBuilder b) updates]) =
+          [void Function(GEnterpriseServerUserAccountOrderBuilder b) updates]) =
       _$GEnterpriseServerUserAccountOrder;
 
   GOrderDirection get direction;
   GEnterpriseServerUserAccountOrderField get field;
   static Serializer<GEnterpriseServerUserAccountOrder> get serializer =>
       _$gEnterpriseServerUserAccountOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GEnterpriseServerUserAccountOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GEnterpriseServerUserAccountOrder? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -3571,8 +3866,10 @@ class GEnterpriseServerUserAccountOrderField extends EnumClass {
 
   static Serializer<GEnterpriseServerUserAccountOrderField> get serializer =>
       _$gEnterpriseServerUserAccountOrderFieldSerializer;
+
   static BuiltSet<GEnterpriseServerUserAccountOrderField> get values =>
       _$gEnterpriseServerUserAccountOrderFieldValues;
+
   static GEnterpriseServerUserAccountOrderField valueOf(String name) =>
       _$gEnterpriseServerUserAccountOrderFieldValueOf(name);
 }
@@ -3584,17 +3881,19 @@ abstract class GEnterpriseServerUserAccountsUploadOrder
   GEnterpriseServerUserAccountsUploadOrder._();
 
   factory GEnterpriseServerUserAccountsUploadOrder(
-      [Function(GEnterpriseServerUserAccountsUploadOrderBuilder b)
+      [void Function(GEnterpriseServerUserAccountsUploadOrderBuilder b)
           updates]) = _$GEnterpriseServerUserAccountsUploadOrder;
 
   GOrderDirection get direction;
   GEnterpriseServerUserAccountsUploadOrderField get field;
   static Serializer<GEnterpriseServerUserAccountsUploadOrder> get serializer =>
       _$gEnterpriseServerUserAccountsUploadOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GEnterpriseServerUserAccountsUploadOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GEnterpriseServerUserAccountsUploadOrder? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -3613,8 +3912,10 @@ class GEnterpriseServerUserAccountsUploadOrderField extends EnumClass {
   static Serializer<GEnterpriseServerUserAccountsUploadOrderField>
       get serializer =>
           _$gEnterpriseServerUserAccountsUploadOrderFieldSerializer;
+
   static BuiltSet<GEnterpriseServerUserAccountsUploadOrderField> get values =>
       _$gEnterpriseServerUserAccountsUploadOrderFieldValues;
+
   static GEnterpriseServerUserAccountsUploadOrderField valueOf(String name) =>
       _$gEnterpriseServerUserAccountsUploadOrderFieldValueOf(name);
 }
@@ -3635,8 +3936,10 @@ class GEnterpriseServerUserAccountsUploadSyncState extends EnumClass {
   static Serializer<GEnterpriseServerUserAccountsUploadSyncState>
       get serializer =>
           _$gEnterpriseServerUserAccountsUploadSyncStateSerializer;
+
   static BuiltSet<GEnterpriseServerUserAccountsUploadSyncState> get values =>
       _$gEnterpriseServerUserAccountsUploadSyncStateValues;
+
   static GEnterpriseServerUserAccountsUploadSyncState valueOf(String name) =>
       _$gEnterpriseServerUserAccountsUploadSyncStateValueOf(name);
 }
@@ -3655,8 +3958,10 @@ class GEnterpriseUserAccountMembershipRole extends EnumClass {
 
   static Serializer<GEnterpriseUserAccountMembershipRole> get serializer =>
       _$gEnterpriseUserAccountMembershipRoleSerializer;
+
   static BuiltSet<GEnterpriseUserAccountMembershipRole> get values =>
       _$gEnterpriseUserAccountMembershipRoleValues;
+
   static GEnterpriseUserAccountMembershipRole valueOf(String name) =>
       _$gEnterpriseUserAccountMembershipRoleValueOf(name);
 }
@@ -3672,8 +3977,10 @@ class GEnterpriseUserDeployment extends EnumClass {
 
   static Serializer<GEnterpriseUserDeployment> get serializer =>
       _$gEnterpriseUserDeploymentSerializer;
+
   static BuiltSet<GEnterpriseUserDeployment> get values =>
       _$gEnterpriseUserDeploymentValues;
+
   static GEnterpriseUserDeployment valueOf(String name) =>
       _$gEnterpriseUserDeploymentValueOf(name);
 }
@@ -3682,16 +3989,18 @@ abstract class GFileAddition
     implements Built<GFileAddition, GFileAdditionBuilder> {
   GFileAddition._();
 
-  factory GFileAddition([Function(GFileAdditionBuilder b) updates]) =
+  factory GFileAddition([void Function(GFileAdditionBuilder b) updates]) =
       _$GFileAddition;
 
   GBase64String get contents;
   String get path;
   static Serializer<GFileAddition> get serializer => _$gFileAdditionSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GFileAddition.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GFileAddition? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GFileAddition.serializer,
@@ -3703,16 +4012,18 @@ abstract class GFileChanges
     implements Built<GFileChanges, GFileChangesBuilder> {
   GFileChanges._();
 
-  factory GFileChanges([Function(GFileChangesBuilder b) updates]) =
+  factory GFileChanges([void Function(GFileChangesBuilder b) updates]) =
       _$GFileChanges;
 
   BuiltList<GFileAddition>? get additions;
   BuiltList<GFileDeletion>? get deletions;
   static Serializer<GFileChanges> get serializer => _$gFileChangesSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GFileChanges.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GFileChanges? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GFileChanges.serializer,
@@ -3724,15 +4035,17 @@ abstract class GFileDeletion
     implements Built<GFileDeletion, GFileDeletionBuilder> {
   GFileDeletion._();
 
-  factory GFileDeletion([Function(GFileDeletionBuilder b) updates]) =
+  factory GFileDeletion([void Function(GFileDeletionBuilder b) updates]) =
       _$GFileDeletion;
 
   String get path;
   static Serializer<GFileDeletion> get serializer => _$gFileDeletionSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GFileDeletion.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GFileDeletion? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GFileDeletion.serializer,
@@ -3751,7 +4064,9 @@ class GFileViewedState extends EnumClass {
 
   static Serializer<GFileViewedState> get serializer =>
       _$gFileViewedStateSerializer;
+
   static BuiltSet<GFileViewedState> get values => _$gFileViewedStateValues;
+
   static GFileViewedState valueOf(String name) =>
       _$gFileViewedStateValueOf(name);
 }
@@ -3762,17 +4077,19 @@ abstract class GFollowOrganizationInput
   GFollowOrganizationInput._();
 
   factory GFollowOrganizationInput(
-          [Function(GFollowOrganizationInputBuilder b) updates]) =
+          [void Function(GFollowOrganizationInputBuilder b) updates]) =
       _$GFollowOrganizationInput;
 
   String? get clientMutationId;
   String get organizationId;
   static Serializer<GFollowOrganizationInput> get serializer =>
       _$gFollowOrganizationInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GFollowOrganizationInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GFollowOrganizationInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GFollowOrganizationInput.serializer,
@@ -3784,17 +4101,19 @@ abstract class GFollowUserInput
     implements Built<GFollowUserInput, GFollowUserInputBuilder> {
   GFollowUserInput._();
 
-  factory GFollowUserInput([Function(GFollowUserInputBuilder b) updates]) =
+  factory GFollowUserInput([void Function(GFollowUserInputBuilder b) updates]) =
       _$GFollowUserInput;
 
   String? get clientMutationId;
   String get userId;
   static Serializer<GFollowUserInput> get serializer =>
       _$gFollowUserInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GFollowUserInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GFollowUserInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GFollowUserInput.serializer,
@@ -3832,7 +4151,9 @@ class GFundingPlatform extends EnumClass {
 
   static Serializer<GFundingPlatform> get serializer =>
       _$gFundingPlatformSerializer;
+
   static BuiltSet<GFundingPlatform> get values => _$gFundingPlatformValues;
+
   static GFundingPlatform valueOf(String name) =>
       _$gFundingPlatformValueOf(name);
 }
@@ -3840,15 +4161,18 @@ class GFundingPlatform extends EnumClass {
 abstract class GGistOrder implements Built<GGistOrder, GGistOrderBuilder> {
   GGistOrder._();
 
-  factory GGistOrder([Function(GGistOrderBuilder b) updates]) = _$GGistOrder;
+  factory GGistOrder([void Function(GGistOrderBuilder b) updates]) =
+      _$GGistOrder;
 
   GOrderDirection get direction;
   GGistOrderField get field;
   static Serializer<GGistOrder> get serializer => _$gGistOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GGistOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GGistOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GGistOrder.serializer,
@@ -3867,7 +4191,9 @@ class GGistOrderField extends EnumClass {
 
   static Serializer<GGistOrderField> get serializer =>
       _$gGistOrderFieldSerializer;
+
   static BuiltSet<GGistOrderField> get values => _$gGistOrderFieldValues;
+
   static GGistOrderField valueOf(String name) => _$gGistOrderFieldValueOf(name);
 }
 
@@ -3881,7 +4207,9 @@ class GGistPrivacy extends EnumClass {
   static const GGistPrivacy SECRET = _$gGistPrivacySECRET;
 
   static Serializer<GGistPrivacy> get serializer => _$gGistPrivacySerializer;
+
   static BuiltSet<GGistPrivacy> get values => _$gGistPrivacyValues;
+
   static GGistPrivacy valueOf(String name) => _$gGistPrivacyValueOf(name);
 }
 
@@ -3959,7 +4287,9 @@ class GGitSignatureState extends EnumClass {
 
   static Serializer<GGitSignatureState> get serializer =>
       _$gGitSignatureStateSerializer;
+
   static BuiltSet<GGitSignatureState> get values => _$gGitSignatureStateValues;
+
   static GGitSignatureState valueOf(String name) =>
       _$gGitSignatureStateValueOf(name);
 }
@@ -3985,7 +4315,7 @@ abstract class GGrantEnterpriseOrganizationsMigratorRoleInput
   GGrantEnterpriseOrganizationsMigratorRoleInput._();
 
   factory GGrantEnterpriseOrganizationsMigratorRoleInput(
-      [Function(GGrantEnterpriseOrganizationsMigratorRoleInputBuilder b)
+      [void Function(GGrantEnterpriseOrganizationsMigratorRoleInputBuilder b)
           updates]) = _$GGrantEnterpriseOrganizationsMigratorRoleInput;
 
   String? get clientMutationId;
@@ -3994,10 +4324,12 @@ abstract class GGrantEnterpriseOrganizationsMigratorRoleInput
   static Serializer<GGrantEnterpriseOrganizationsMigratorRoleInput>
       get serializer =>
           _$gGrantEnterpriseOrganizationsMigratorRoleInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GGrantEnterpriseOrganizationsMigratorRoleInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GGrantEnterpriseOrganizationsMigratorRoleInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -4011,7 +4343,7 @@ abstract class GGrantMigratorRoleInput
   GGrantMigratorRoleInput._();
 
   factory GGrantMigratorRoleInput(
-          [Function(GGrantMigratorRoleInputBuilder b) updates]) =
+          [void Function(GGrantMigratorRoleInputBuilder b) updates]) =
       _$GGrantMigratorRoleInput;
 
   String get actor;
@@ -4020,10 +4352,12 @@ abstract class GGrantMigratorRoleInput
   String get organizationId;
   static Serializer<GGrantMigratorRoleInput> get serializer =>
       _$gGrantMigratorRoleInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GGrantMigratorRoleInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GGrantMigratorRoleInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GGrantMigratorRoleInput.serializer,
@@ -4057,8 +4391,10 @@ class GIdentityProviderConfigurationState extends EnumClass {
 
   static Serializer<GIdentityProviderConfigurationState> get serializer =>
       _$gIdentityProviderConfigurationStateSerializer;
+
   static BuiltSet<GIdentityProviderConfigurationState> get values =>
       _$gIdentityProviderConfigurationStateValues;
+
   static GIdentityProviderConfigurationState valueOf(String name) =>
       _$gIdentityProviderConfigurationStateValueOf(name);
 }
@@ -4068,7 +4404,8 @@ abstract class GImportProjectInput
   GImportProjectInput._();
 
   factory GImportProjectInput(
-      [Function(GImportProjectInputBuilder b) updates]) = _$GImportProjectInput;
+          [void Function(GImportProjectInputBuilder b) updates]) =
+      _$GImportProjectInput;
 
   String? get body;
   String? get clientMutationId;
@@ -4078,10 +4415,12 @@ abstract class GImportProjectInput
   bool? get public;
   static Serializer<GImportProjectInput> get serializer =>
       _$gImportProjectInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GImportProjectInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GImportProjectInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GImportProjectInput.serializer,
@@ -4095,7 +4434,7 @@ abstract class GInviteEnterpriseAdminInput
   GInviteEnterpriseAdminInput._();
 
   factory GInviteEnterpriseAdminInput(
-          [Function(GInviteEnterpriseAdminInputBuilder b) updates]) =
+          [void Function(GInviteEnterpriseAdminInputBuilder b) updates]) =
       _$GInviteEnterpriseAdminInput;
 
   String? get clientMutationId;
@@ -4105,10 +4444,12 @@ abstract class GInviteEnterpriseAdminInput
   GEnterpriseAdministratorRole? get role;
   static Serializer<GInviteEnterpriseAdminInput> get serializer =>
       _$gInviteEnterpriseAdminInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GInviteEnterpriseAdminInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GInviteEnterpriseAdminInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GInviteEnterpriseAdminInput.serializer,
@@ -4127,8 +4468,10 @@ class GIpAllowListEnabledSettingValue extends EnumClass {
 
   static Serializer<GIpAllowListEnabledSettingValue> get serializer =>
       _$gIpAllowListEnabledSettingValueSerializer;
+
   static BuiltSet<GIpAllowListEnabledSettingValue> get values =>
       _$gIpAllowListEnabledSettingValueValues;
+
   static GIpAllowListEnabledSettingValue valueOf(String name) =>
       _$gIpAllowListEnabledSettingValueValueOf(name);
 }
@@ -4138,17 +4481,19 @@ abstract class GIpAllowListEntryOrder
   GIpAllowListEntryOrder._();
 
   factory GIpAllowListEntryOrder(
-          [Function(GIpAllowListEntryOrderBuilder b) updates]) =
+          [void Function(GIpAllowListEntryOrderBuilder b) updates]) =
       _$GIpAllowListEntryOrder;
 
   GOrderDirection get direction;
   GIpAllowListEntryOrderField get field;
   static Serializer<GIpAllowListEntryOrder> get serializer =>
       _$gIpAllowListEntryOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GIpAllowListEntryOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GIpAllowListEntryOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GIpAllowListEntryOrder.serializer,
@@ -4167,8 +4512,10 @@ class GIpAllowListEntryOrderField extends EnumClass {
 
   static Serializer<GIpAllowListEntryOrderField> get serializer =>
       _$gIpAllowListEntryOrderFieldSerializer;
+
   static BuiltSet<GIpAllowListEntryOrderField> get values =>
       _$gIpAllowListEntryOrderFieldValues;
+
   static GIpAllowListEntryOrderField valueOf(String name) =>
       _$gIpAllowListEntryOrderFieldValueOf(name);
 }
@@ -4186,8 +4533,10 @@ class GIpAllowListForInstalledAppsEnabledSettingValue extends EnumClass {
   static Serializer<GIpAllowListForInstalledAppsEnabledSettingValue>
       get serializer =>
           _$gIpAllowListForInstalledAppsEnabledSettingValueSerializer;
+
   static BuiltSet<GIpAllowListForInstalledAppsEnabledSettingValue> get values =>
       _$gIpAllowListForInstalledAppsEnabledSettingValueValues;
+
   static GIpAllowListForInstalledAppsEnabledSettingValue valueOf(String name) =>
       _$gIpAllowListForInstalledAppsEnabledSettingValueValueOf(name);
 }
@@ -4203,8 +4552,10 @@ class GIssueClosedStateReason extends EnumClass {
 
   static Serializer<GIssueClosedStateReason> get serializer =>
       _$gIssueClosedStateReasonSerializer;
+
   static BuiltSet<GIssueClosedStateReason> get values =>
       _$gIssueClosedStateReasonValues;
+
   static GIssueClosedStateReason valueOf(String name) =>
       _$gIssueClosedStateReasonValueOf(name);
 }
@@ -4213,17 +4564,20 @@ abstract class GIssueCommentOrder
     implements Built<GIssueCommentOrder, GIssueCommentOrderBuilder> {
   GIssueCommentOrder._();
 
-  factory GIssueCommentOrder([Function(GIssueCommentOrderBuilder b) updates]) =
+  factory GIssueCommentOrder(
+          [void Function(GIssueCommentOrderBuilder b) updates]) =
       _$GIssueCommentOrder;
 
   GOrderDirection get direction;
   GIssueCommentOrderField get field;
   static Serializer<GIssueCommentOrder> get serializer =>
       _$gIssueCommentOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GIssueCommentOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GIssueCommentOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GIssueCommentOrder.serializer,
@@ -4239,8 +4593,10 @@ class GIssueCommentOrderField extends EnumClass {
 
   static Serializer<GIssueCommentOrderField> get serializer =>
       _$gIssueCommentOrderFieldSerializer;
+
   static BuiltSet<GIssueCommentOrderField> get values =>
       _$gIssueCommentOrderFieldValues;
+
   static GIssueCommentOrderField valueOf(String name) =>
       _$gIssueCommentOrderFieldValueOf(name);
 }
@@ -4249,7 +4605,7 @@ abstract class GIssueFilters
     implements Built<GIssueFilters, GIssueFiltersBuilder> {
   GIssueFilters._();
 
-  factory GIssueFilters([Function(GIssueFiltersBuilder b) updates]) =
+  factory GIssueFilters([void Function(GIssueFiltersBuilder b) updates]) =
       _$GIssueFilters;
 
   String? get assignee;
@@ -4262,10 +4618,12 @@ abstract class GIssueFilters
   BuiltList<GIssueState>? get states;
   bool? get viewerSubscribed;
   static Serializer<GIssueFilters> get serializer => _$gIssueFiltersSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GIssueFilters.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GIssueFilters? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GIssueFilters.serializer,
@@ -4276,15 +4634,18 @@ abstract class GIssueFilters
 abstract class GIssueOrder implements Built<GIssueOrder, GIssueOrderBuilder> {
   GIssueOrder._();
 
-  factory GIssueOrder([Function(GIssueOrderBuilder b) updates]) = _$GIssueOrder;
+  factory GIssueOrder([void Function(GIssueOrderBuilder b) updates]) =
+      _$GIssueOrder;
 
   GOrderDirection get direction;
   GIssueOrderField get field;
   static Serializer<GIssueOrder> get serializer => _$gIssueOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GIssueOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GIssueOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GIssueOrder.serializer,
@@ -4303,7 +4664,9 @@ class GIssueOrderField extends EnumClass {
 
   static Serializer<GIssueOrderField> get serializer =>
       _$gIssueOrderFieldSerializer;
+
   static BuiltSet<GIssueOrderField> get values => _$gIssueOrderFieldValues;
+
   static GIssueOrderField valueOf(String name) =>
       _$gIssueOrderFieldValueOf(name);
 }
@@ -4316,7 +4679,9 @@ class GIssueState extends EnumClass {
   static const GIssueState OPEN = _$gIssueStateOPEN;
 
   static Serializer<GIssueState> get serializer => _$gIssueStateSerializer;
+
   static BuiltSet<GIssueState> get values => _$gIssueStateValues;
+
   static GIssueState valueOf(String name) => _$gIssueStateValueOf(name);
 }
 
@@ -4331,7 +4696,9 @@ class GIssueStateReason extends EnumClass {
 
   static Serializer<GIssueStateReason> get serializer =>
       _$gIssueStateReasonSerializer;
+
   static BuiltSet<GIssueStateReason> get values => _$gIssueStateReasonValues;
+
   static GIssueStateReason valueOf(String name) =>
       _$gIssueStateReasonValueOf(name);
 }
@@ -4434,8 +4801,10 @@ class GIssueTimelineItemsItemType extends EnumClass {
 
   static Serializer<GIssueTimelineItemsItemType> get serializer =>
       _$gIssueTimelineItemsItemTypeSerializer;
+
   static BuiltSet<GIssueTimelineItemsItemType> get values =>
       _$gIssueTimelineItemsItemTypeValues;
+
   static GIssueTimelineItemsItemType valueOf(String name) =>
       _$gIssueTimelineItemsItemTypeValueOf(name);
 }
@@ -4443,15 +4812,18 @@ class GIssueTimelineItemsItemType extends EnumClass {
 abstract class GLabelOrder implements Built<GLabelOrder, GLabelOrderBuilder> {
   GLabelOrder._();
 
-  factory GLabelOrder([Function(GLabelOrderBuilder b) updates]) = _$GLabelOrder;
+  factory GLabelOrder([void Function(GLabelOrderBuilder b) updates]) =
+      _$GLabelOrder;
 
   GOrderDirection get direction;
   GLabelOrderField get field;
   static Serializer<GLabelOrder> get serializer => _$gLabelOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GLabelOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GLabelOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GLabelOrder.serializer,
@@ -4468,7 +4840,9 @@ class GLabelOrderField extends EnumClass {
 
   static Serializer<GLabelOrderField> get serializer =>
       _$gLabelOrderFieldSerializer;
+
   static BuiltSet<GLabelOrderField> get values => _$gLabelOrderFieldValues;
+
   static GLabelOrderField valueOf(String name) =>
       _$gLabelOrderFieldValueOf(name);
 }
@@ -4477,17 +4851,19 @@ abstract class GLanguageOrder
     implements Built<GLanguageOrder, GLanguageOrderBuilder> {
   GLanguageOrder._();
 
-  factory GLanguageOrder([Function(GLanguageOrderBuilder b) updates]) =
+  factory GLanguageOrder([void Function(GLanguageOrderBuilder b) updates]) =
       _$GLanguageOrder;
 
   GOrderDirection get direction;
   GLanguageOrderField get field;
   static Serializer<GLanguageOrder> get serializer =>
       _$gLanguageOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GLanguageOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GLanguageOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GLanguageOrder.serializer,
@@ -4502,8 +4878,10 @@ class GLanguageOrderField extends EnumClass {
 
   static Serializer<GLanguageOrderField> get serializer =>
       _$gLanguageOrderFieldSerializer;
+
   static BuiltSet<GLanguageOrderField> get values =>
       _$gLanguageOrderFieldValues;
+
   static GLanguageOrderField valueOf(String name) =>
       _$gLanguageOrderFieldValueOf(name);
 }
@@ -4515,7 +4893,7 @@ abstract class GLinkRepositoryToProjectInput
   GLinkRepositoryToProjectInput._();
 
   factory GLinkRepositoryToProjectInput(
-          [Function(GLinkRepositoryToProjectInputBuilder b) updates]) =
+          [void Function(GLinkRepositoryToProjectInputBuilder b) updates]) =
       _$GLinkRepositoryToProjectInput;
 
   String? get clientMutationId;
@@ -4523,10 +4901,12 @@ abstract class GLinkRepositoryToProjectInput
   String get repositoryId;
   static Serializer<GLinkRepositoryToProjectInput> get serializer =>
       _$gLinkRepositoryToProjectInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GLinkRepositoryToProjectInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GLinkRepositoryToProjectInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GLinkRepositoryToProjectInput.serializer,
@@ -4538,7 +4918,8 @@ abstract class GLockLockableInput
     implements Built<GLockLockableInput, GLockLockableInputBuilder> {
   GLockLockableInput._();
 
-  factory GLockLockableInput([Function(GLockLockableInputBuilder b) updates]) =
+  factory GLockLockableInput(
+          [void Function(GLockLockableInputBuilder b) updates]) =
       _$GLockLockableInput;
 
   String? get clientMutationId;
@@ -4546,10 +4927,12 @@ abstract class GLockLockableInput
   String get lockableId;
   static Serializer<GLockLockableInput> get serializer =>
       _$gLockLockableInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GLockLockableInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GLockLockableInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GLockLockableInput.serializer,
@@ -4569,7 +4952,9 @@ class GLockReason extends EnumClass {
   static const GLockReason TOO_HEATED = _$gLockReasonTOO_HEATED;
 
   static Serializer<GLockReason> get serializer => _$gLockReasonSerializer;
+
   static BuiltSet<GLockReason> get values => _$gLockReasonValues;
+
   static GLockReason valueOf(String name) => _$gLockReasonValueOf(name);
 }
 
@@ -4580,17 +4965,19 @@ abstract class GMarkDiscussionCommentAsAnswerInput
   GMarkDiscussionCommentAsAnswerInput._();
 
   factory GMarkDiscussionCommentAsAnswerInput(
-          [Function(GMarkDiscussionCommentAsAnswerInputBuilder b) updates]) =
-      _$GMarkDiscussionCommentAsAnswerInput;
+      [void Function(GMarkDiscussionCommentAsAnswerInputBuilder b)
+          updates]) = _$GMarkDiscussionCommentAsAnswerInput;
 
   String? get clientMutationId;
   String get id;
   static Serializer<GMarkDiscussionCommentAsAnswerInput> get serializer =>
       _$gMarkDiscussionCommentAsAnswerInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GMarkDiscussionCommentAsAnswerInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GMarkDiscussionCommentAsAnswerInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -4604,7 +4991,7 @@ abstract class GMarkFileAsViewedInput
   GMarkFileAsViewedInput._();
 
   factory GMarkFileAsViewedInput(
-          [Function(GMarkFileAsViewedInputBuilder b) updates]) =
+          [void Function(GMarkFileAsViewedInputBuilder b) updates]) =
       _$GMarkFileAsViewedInput;
 
   String? get clientMutationId;
@@ -4612,10 +4999,12 @@ abstract class GMarkFileAsViewedInput
   String get pullRequestId;
   static Serializer<GMarkFileAsViewedInput> get serializer =>
       _$gMarkFileAsViewedInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GMarkFileAsViewedInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GMarkFileAsViewedInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GMarkFileAsViewedInput.serializer,
@@ -4630,17 +5019,19 @@ abstract class GMarkPullRequestReadyForReviewInput
   GMarkPullRequestReadyForReviewInput._();
 
   factory GMarkPullRequestReadyForReviewInput(
-          [Function(GMarkPullRequestReadyForReviewInputBuilder b) updates]) =
-      _$GMarkPullRequestReadyForReviewInput;
+      [void Function(GMarkPullRequestReadyForReviewInputBuilder b)
+          updates]) = _$GMarkPullRequestReadyForReviewInput;
 
   String? get clientMutationId;
   String get pullRequestId;
   static Serializer<GMarkPullRequestReadyForReviewInput> get serializer =>
       _$gMarkPullRequestReadyForReviewInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GMarkPullRequestReadyForReviewInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GMarkPullRequestReadyForReviewInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -4653,7 +5044,8 @@ abstract class GMergeBranchInput
     implements Built<GMergeBranchInput, GMergeBranchInputBuilder> {
   GMergeBranchInput._();
 
-  factory GMergeBranchInput([Function(GMergeBranchInputBuilder b) updates]) =
+  factory GMergeBranchInput(
+          [void Function(GMergeBranchInputBuilder b) updates]) =
       _$GMergeBranchInput;
 
   String? get authorEmail;
@@ -4664,10 +5056,12 @@ abstract class GMergeBranchInput
   String get repositoryId;
   static Serializer<GMergeBranchInput> get serializer =>
       _$gMergeBranchInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GMergeBranchInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GMergeBranchInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GMergeBranchInput.serializer,
@@ -4686,8 +5080,10 @@ class GMergeCommitMessage extends EnumClass {
 
   static Serializer<GMergeCommitMessage> get serializer =>
       _$gMergeCommitMessageSerializer;
+
   static BuiltSet<GMergeCommitMessage> get values =>
       _$gMergeCommitMessageValues;
+
   static GMergeCommitMessage valueOf(String name) =>
       _$gMergeCommitMessageValueOf(name);
 }
@@ -4702,7 +5098,9 @@ class GMergeCommitTitle extends EnumClass {
 
   static Serializer<GMergeCommitTitle> get serializer =>
       _$gMergeCommitTitleSerializer;
+
   static BuiltSet<GMergeCommitTitle> get values => _$gMergeCommitTitleValues;
+
   static GMergeCommitTitle valueOf(String name) =>
       _$gMergeCommitTitleValueOf(name);
 }
@@ -4712,7 +5110,7 @@ abstract class GMergePullRequestInput
   GMergePullRequestInput._();
 
   factory GMergePullRequestInput(
-          [Function(GMergePullRequestInputBuilder b) updates]) =
+          [void Function(GMergePullRequestInputBuilder b) updates]) =
       _$GMergePullRequestInput;
 
   String? get authorEmail;
@@ -4724,10 +5122,12 @@ abstract class GMergePullRequestInput
   String get pullRequestId;
   static Serializer<GMergePullRequestInput> get serializer =>
       _$gMergePullRequestInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GMergePullRequestInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GMergePullRequestInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GMergePullRequestInput.serializer,
@@ -4756,7 +5156,9 @@ class GMergeStateStatus extends EnumClass {
 
   static Serializer<GMergeStateStatus> get serializer =>
       _$gMergeStateStatusSerializer;
+
   static BuiltSet<GMergeStateStatus> get values => _$gMergeStateStatusValues;
+
   static GMergeStateStatus valueOf(String name) =>
       _$gMergeStateStatusValueOf(name);
 }
@@ -4772,7 +5174,9 @@ class GMergeableState extends EnumClass {
 
   static Serializer<GMergeableState> get serializer =>
       _$gMergeableStateSerializer;
+
   static BuiltSet<GMergeableState> get values => _$gMergeableStateValues;
+
   static GMergeableState valueOf(String name) => _$gMergeableStateValueOf(name);
 }
 
@@ -4790,8 +5194,10 @@ class GMigrationSourceType extends EnumClass {
 
   static Serializer<GMigrationSourceType> get serializer =>
       _$gMigrationSourceTypeSerializer;
+
   static BuiltSet<GMigrationSourceType> get values =>
       _$gMigrationSourceTypeValues;
+
   static GMigrationSourceType valueOf(String name) =>
       _$gMigrationSourceTypeValueOf(name);
 }
@@ -4817,7 +5223,9 @@ class GMigrationState extends EnumClass {
 
   static Serializer<GMigrationState> get serializer =>
       _$gMigrationStateSerializer;
+
   static BuiltSet<GMigrationState> get values => _$gMigrationStateValues;
+
   static GMigrationState valueOf(String name) => _$gMigrationStateValueOf(name);
 }
 
@@ -4825,17 +5233,19 @@ abstract class GMilestoneOrder
     implements Built<GMilestoneOrder, GMilestoneOrderBuilder> {
   GMilestoneOrder._();
 
-  factory GMilestoneOrder([Function(GMilestoneOrderBuilder b) updates]) =
+  factory GMilestoneOrder([void Function(GMilestoneOrderBuilder b) updates]) =
       _$GMilestoneOrder;
 
   GOrderDirection get direction;
   GMilestoneOrderField get field;
   static Serializer<GMilestoneOrder> get serializer =>
       _$gMilestoneOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GMilestoneOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GMilestoneOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GMilestoneOrder.serializer,
@@ -4858,8 +5268,10 @@ class GMilestoneOrderField extends EnumClass {
 
   static Serializer<GMilestoneOrderField> get serializer =>
       _$gMilestoneOrderFieldSerializer;
+
   static BuiltSet<GMilestoneOrderField> get values =>
       _$gMilestoneOrderFieldValues;
+
   static GMilestoneOrderField valueOf(String name) =>
       _$gMilestoneOrderFieldValueOf(name);
 }
@@ -4873,7 +5285,9 @@ class GMilestoneState extends EnumClass {
 
   static Serializer<GMilestoneState> get serializer =>
       _$gMilestoneStateSerializer;
+
   static BuiltSet<GMilestoneState> get values => _$gMilestoneStateValues;
+
   static GMilestoneState valueOf(String name) => _$gMilestoneStateValueOf(name);
 }
 
@@ -4882,7 +5296,7 @@ abstract class GMinimizeCommentInput
   GMinimizeCommentInput._();
 
   factory GMinimizeCommentInput(
-          [Function(GMinimizeCommentInputBuilder b) updates]) =
+          [void Function(GMinimizeCommentInputBuilder b) updates]) =
       _$GMinimizeCommentInput;
 
   GReportedContentClassifiers get classifier;
@@ -4890,10 +5304,12 @@ abstract class GMinimizeCommentInput
   String get subjectId;
   static Serializer<GMinimizeCommentInput> get serializer =>
       _$gMinimizeCommentInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GMinimizeCommentInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GMinimizeCommentInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GMinimizeCommentInput.serializer,
@@ -4906,7 +5322,7 @@ abstract class GMoveProjectCardInput
   GMoveProjectCardInput._();
 
   factory GMoveProjectCardInput(
-          [Function(GMoveProjectCardInputBuilder b) updates]) =
+          [void Function(GMoveProjectCardInputBuilder b) updates]) =
       _$GMoveProjectCardInput;
 
   String? get afterCardId;
@@ -4915,10 +5331,12 @@ abstract class GMoveProjectCardInput
   String get columnId;
   static Serializer<GMoveProjectCardInput> get serializer =>
       _$gMoveProjectCardInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GMoveProjectCardInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GMoveProjectCardInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GMoveProjectCardInput.serializer,
@@ -4931,7 +5349,7 @@ abstract class GMoveProjectColumnInput
   GMoveProjectColumnInput._();
 
   factory GMoveProjectColumnInput(
-          [Function(GMoveProjectColumnInputBuilder b) updates]) =
+          [void Function(GMoveProjectColumnInputBuilder b) updates]) =
       _$GMoveProjectColumnInput;
 
   String? get afterColumnId;
@@ -4939,10 +5357,12 @@ abstract class GMoveProjectColumnInput
   String get columnId;
   static Serializer<GMoveProjectColumnInput> get serializer =>
       _$gMoveProjectColumnInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GMoveProjectColumnInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GMoveProjectColumnInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GMoveProjectColumnInput.serializer,
@@ -4961,8 +5381,10 @@ class GNotificationRestrictionSettingValue extends EnumClass {
 
   static Serializer<GNotificationRestrictionSettingValue> get serializer =>
       _$gNotificationRestrictionSettingValueSerializer;
+
   static BuiltSet<GNotificationRestrictionSettingValue> get values =>
       _$gNotificationRestrictionSettingValueValues;
+
   static GNotificationRestrictionSettingValue valueOf(String name) =>
       _$gNotificationRestrictionSettingValueValueOf(name);
 }
@@ -4974,7 +5396,9 @@ class GOIDCProviderType extends EnumClass {
 
   static Serializer<GOIDCProviderType> get serializer =>
       _$gOIDCProviderTypeSerializer;
+
   static BuiltSet<GOIDCProviderType> get values => _$gOIDCProviderTypeValues;
+
   static GOIDCProviderType valueOf(String name) =>
       _$gOIDCProviderTypeValueOf(name);
 }
@@ -4993,8 +5417,10 @@ class GOauthApplicationCreateAuditEntryState extends EnumClass {
 
   static Serializer<GOauthApplicationCreateAuditEntryState> get serializer =>
       _$gOauthApplicationCreateAuditEntryStateSerializer;
+
   static BuiltSet<GOauthApplicationCreateAuditEntryState> get values =>
       _$gOauthApplicationCreateAuditEntryStateValues;
+
   static GOauthApplicationCreateAuditEntryState valueOf(String name) =>
       _$gOauthApplicationCreateAuditEntryStateValueOf(name);
 }
@@ -5018,7 +5444,9 @@ class GOperationType extends EnumClass {
 
   static Serializer<GOperationType> get serializer =>
       _$gOperationTypeSerializer;
+
   static BuiltSet<GOperationType> get values => _$gOperationTypeValues;
+
   static GOperationType valueOf(String name) => _$gOperationTypeValueOf(name);
 }
 
@@ -5031,7 +5459,9 @@ class GOrderDirection extends EnumClass {
 
   static Serializer<GOrderDirection> get serializer =>
       _$gOrderDirectionSerializer;
+
   static BuiltSet<GOrderDirection> get values => _$gOrderDirectionValues;
+
   static GOrderDirection valueOf(String name) => _$gOrderDirectionValueOf(name);
 }
 
@@ -5046,8 +5476,10 @@ class GOrgAddMemberAuditEntryPermission extends EnumClass {
 
   static Serializer<GOrgAddMemberAuditEntryPermission> get serializer =>
       _$gOrgAddMemberAuditEntryPermissionSerializer;
+
   static BuiltSet<GOrgAddMemberAuditEntryPermission> get values =>
       _$gOrgAddMemberAuditEntryPermissionValues;
+
   static GOrgAddMemberAuditEntryPermission valueOf(String name) =>
       _$gOrgAddMemberAuditEntryPermissionValueOf(name);
 }
@@ -5072,8 +5504,10 @@ class GOrgCreateAuditEntryBillingPlan extends EnumClass {
 
   static Serializer<GOrgCreateAuditEntryBillingPlan> get serializer =>
       _$gOrgCreateAuditEntryBillingPlanSerializer;
+
   static BuiltSet<GOrgCreateAuditEntryBillingPlan> get values =>
       _$gOrgCreateAuditEntryBillingPlanValues;
+
   static GOrgCreateAuditEntryBillingPlan valueOf(String name) =>
       _$gOrgCreateAuditEntryBillingPlanValueOf(name);
 }
@@ -5084,17 +5518,19 @@ abstract class GOrgEnterpriseOwnerOrder
   GOrgEnterpriseOwnerOrder._();
 
   factory GOrgEnterpriseOwnerOrder(
-          [Function(GOrgEnterpriseOwnerOrderBuilder b) updates]) =
+          [void Function(GOrgEnterpriseOwnerOrderBuilder b) updates]) =
       _$GOrgEnterpriseOwnerOrder;
 
   GOrderDirection get direction;
   GOrgEnterpriseOwnerOrderField get field;
   static Serializer<GOrgEnterpriseOwnerOrder> get serializer =>
       _$gOrgEnterpriseOwnerOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GOrgEnterpriseOwnerOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GOrgEnterpriseOwnerOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GOrgEnterpriseOwnerOrder.serializer,
@@ -5110,8 +5546,10 @@ class GOrgEnterpriseOwnerOrderField extends EnumClass {
 
   static Serializer<GOrgEnterpriseOwnerOrderField> get serializer =>
       _$gOrgEnterpriseOwnerOrderFieldSerializer;
+
   static BuiltSet<GOrgEnterpriseOwnerOrderField> get values =>
       _$gOrgEnterpriseOwnerOrderFieldValues;
+
   static GOrgEnterpriseOwnerOrderField valueOf(String name) =>
       _$gOrgEnterpriseOwnerOrderFieldValueOf(name);
 }
@@ -5133,8 +5571,10 @@ class GOrgRemoveBillingManagerAuditEntryReason extends EnumClass {
 
   static Serializer<GOrgRemoveBillingManagerAuditEntryReason> get serializer =>
       _$gOrgRemoveBillingManagerAuditEntryReasonSerializer;
+
   static BuiltSet<GOrgRemoveBillingManagerAuditEntryReason> get values =>
       _$gOrgRemoveBillingManagerAuditEntryReasonValues;
+
   static GOrgRemoveBillingManagerAuditEntryReason valueOf(String name) =>
       _$gOrgRemoveBillingManagerAuditEntryReasonValueOf(name);
 }
@@ -5162,8 +5602,10 @@ class GOrgRemoveMemberAuditEntryMembershipType extends EnumClass {
 
   static Serializer<GOrgRemoveMemberAuditEntryMembershipType> get serializer =>
       _$gOrgRemoveMemberAuditEntryMembershipTypeSerializer;
+
   static BuiltSet<GOrgRemoveMemberAuditEntryMembershipType> get values =>
       _$gOrgRemoveMemberAuditEntryMembershipTypeValues;
+
   static GOrgRemoveMemberAuditEntryMembershipType valueOf(String name) =>
       _$gOrgRemoveMemberAuditEntryMembershipTypeValueOf(name);
 }
@@ -5190,8 +5632,10 @@ class GOrgRemoveMemberAuditEntryReason extends EnumClass {
 
   static Serializer<GOrgRemoveMemberAuditEntryReason> get serializer =>
       _$gOrgRemoveMemberAuditEntryReasonSerializer;
+
   static BuiltSet<GOrgRemoveMemberAuditEntryReason> get values =>
       _$gOrgRemoveMemberAuditEntryReasonValues;
+
   static GOrgRemoveMemberAuditEntryReason valueOf(String name) =>
       _$gOrgRemoveMemberAuditEntryReasonValueOf(name);
 }
@@ -5215,9 +5659,11 @@ class GOrgRemoveOutsideCollaboratorAuditEntryMembershipType extends EnumClass {
   static Serializer<GOrgRemoveOutsideCollaboratorAuditEntryMembershipType>
       get serializer =>
           _$gOrgRemoveOutsideCollaboratorAuditEntryMembershipTypeSerializer;
+
   static BuiltSet<GOrgRemoveOutsideCollaboratorAuditEntryMembershipType>
       get values =>
           _$gOrgRemoveOutsideCollaboratorAuditEntryMembershipTypeValues;
+
   static GOrgRemoveOutsideCollaboratorAuditEntryMembershipType valueOf(
           String name) =>
       _$gOrgRemoveOutsideCollaboratorAuditEntryMembershipTypeValueOf(name);
@@ -5238,8 +5684,10 @@ class GOrgRemoveOutsideCollaboratorAuditEntryReason extends EnumClass {
   static Serializer<GOrgRemoveOutsideCollaboratorAuditEntryReason>
       get serializer =>
           _$gOrgRemoveOutsideCollaboratorAuditEntryReasonSerializer;
+
   static BuiltSet<GOrgRemoveOutsideCollaboratorAuditEntryReason> get values =>
       _$gOrgRemoveOutsideCollaboratorAuditEntryReasonValues;
+
   static GOrgRemoveOutsideCollaboratorAuditEntryReason valueOf(String name) =>
       _$gOrgRemoveOutsideCollaboratorAuditEntryReasonValueOf(name);
 }
@@ -5264,9 +5712,11 @@ class GOrgUpdateDefaultRepositoryPermissionAuditEntryPermission
   static Serializer<GOrgUpdateDefaultRepositoryPermissionAuditEntryPermission>
       get serializer =>
           _$gOrgUpdateDefaultRepositoryPermissionAuditEntryPermissionSerializer;
+
   static BuiltSet<GOrgUpdateDefaultRepositoryPermissionAuditEntryPermission>
       get values =>
           _$gOrgUpdateDefaultRepositoryPermissionAuditEntryPermissionValues;
+
   static GOrgUpdateDefaultRepositoryPermissionAuditEntryPermission valueOf(
           String name) =>
       _$gOrgUpdateDefaultRepositoryPermissionAuditEntryPermissionValueOf(name);
@@ -5283,8 +5733,10 @@ class GOrgUpdateMemberAuditEntryPermission extends EnumClass {
 
   static Serializer<GOrgUpdateMemberAuditEntryPermission> get serializer =>
       _$gOrgUpdateMemberAuditEntryPermissionSerializer;
+
   static BuiltSet<GOrgUpdateMemberAuditEntryPermission> get values =>
       _$gOrgUpdateMemberAuditEntryPermissionValues;
+
   static GOrgUpdateMemberAuditEntryPermission valueOf(String name) =>
       _$gOrgUpdateMemberAuditEntryPermissionValueOf(name);
 }
@@ -5331,10 +5783,12 @@ class GOrgUpdateMemberRepositoryCreationPermissionAuditEntryVisibility
           GOrgUpdateMemberRepositoryCreationPermissionAuditEntryVisibility>
       get serializer =>
           _$gOrgUpdateMemberRepositoryCreationPermissionAuditEntryVisibilitySerializer;
+
   static BuiltSet<
           GOrgUpdateMemberRepositoryCreationPermissionAuditEntryVisibility>
       get values =>
           _$gOrgUpdateMemberRepositoryCreationPermissionAuditEntryVisibilityValues;
+
   static GOrgUpdateMemberRepositoryCreationPermissionAuditEntryVisibility valueOf(
           String name) =>
       _$gOrgUpdateMemberRepositoryCreationPermissionAuditEntryVisibilityValueOf(
@@ -5358,8 +5812,10 @@ class GOrganizationInvitationRole extends EnumClass {
 
   static Serializer<GOrganizationInvitationRole> get serializer =>
       _$gOrganizationInvitationRoleSerializer;
+
   static BuiltSet<GOrganizationInvitationRole> get values =>
       _$gOrganizationInvitationRoleValues;
+
   static GOrganizationInvitationRole valueOf(String name) =>
       _$gOrganizationInvitationRoleValueOf(name);
 }
@@ -5375,8 +5831,10 @@ class GOrganizationInvitationType extends EnumClass {
 
   static Serializer<GOrganizationInvitationType> get serializer =>
       _$gOrganizationInvitationTypeSerializer;
+
   static BuiltSet<GOrganizationInvitationType> get values =>
       _$gOrganizationInvitationTypeValues;
+
   static GOrganizationInvitationType valueOf(String name) =>
       _$gOrganizationInvitationTypeValueOf(name);
 }
@@ -5390,8 +5848,10 @@ class GOrganizationMemberRole extends EnumClass {
 
   static Serializer<GOrganizationMemberRole> get serializer =>
       _$gOrganizationMemberRoleSerializer;
+
   static BuiltSet<GOrganizationMemberRole> get values =>
       _$gOrganizationMemberRoleValues;
+
   static GOrganizationMemberRole valueOf(String name) =>
       _$gOrganizationMemberRoleValueOf(name);
 }
@@ -5415,9 +5875,11 @@ class GOrganizationMembersCanCreateRepositoriesSettingValue extends EnumClass {
   static Serializer<GOrganizationMembersCanCreateRepositoriesSettingValue>
       get serializer =>
           _$gOrganizationMembersCanCreateRepositoriesSettingValueSerializer;
+
   static BuiltSet<GOrganizationMembersCanCreateRepositoriesSettingValue>
       get values =>
           _$gOrganizationMembersCanCreateRepositoriesSettingValueValues;
+
   static GOrganizationMembersCanCreateRepositoriesSettingValue valueOf(
           String name) =>
       _$gOrganizationMembersCanCreateRepositoriesSettingValueValueOf(name);
@@ -5427,17 +5889,20 @@ abstract class GOrganizationOrder
     implements Built<GOrganizationOrder, GOrganizationOrderBuilder> {
   GOrganizationOrder._();
 
-  factory GOrganizationOrder([Function(GOrganizationOrderBuilder b) updates]) =
+  factory GOrganizationOrder(
+          [void Function(GOrganizationOrderBuilder b) updates]) =
       _$GOrganizationOrder;
 
   GOrderDirection get direction;
   GOrganizationOrderField get field;
   static Serializer<GOrganizationOrder> get serializer =>
       _$gOrganizationOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GOrganizationOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GOrganizationOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GOrganizationOrder.serializer,
@@ -5455,8 +5920,10 @@ class GOrganizationOrderField extends EnumClass {
 
   static Serializer<GOrganizationOrderField> get serializer =>
       _$gOrganizationOrderFieldSerializer;
+
   static BuiltSet<GOrganizationOrderField> get values =>
       _$gOrganizationOrderFieldValues;
+
   static GOrganizationOrderField valueOf(String name) =>
       _$gOrganizationOrderFieldValueOf(name);
 }
@@ -5465,17 +5932,20 @@ abstract class GPackageFileOrder
     implements Built<GPackageFileOrder, GPackageFileOrderBuilder> {
   GPackageFileOrder._();
 
-  factory GPackageFileOrder([Function(GPackageFileOrderBuilder b) updates]) =
+  factory GPackageFileOrder(
+          [void Function(GPackageFileOrderBuilder b) updates]) =
       _$GPackageFileOrder;
 
   GOrderDirection? get direction;
   GPackageFileOrderField? get field;
   static Serializer<GPackageFileOrder> get serializer =>
       _$gPackageFileOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GPackageFileOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GPackageFileOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GPackageFileOrder.serializer,
@@ -5491,8 +5961,10 @@ class GPackageFileOrderField extends EnumClass {
 
   static Serializer<GPackageFileOrderField> get serializer =>
       _$gPackageFileOrderFieldSerializer;
+
   static BuiltSet<GPackageFileOrderField> get values =>
       _$gPackageFileOrderFieldValues;
+
   static GPackageFileOrderField valueOf(String name) =>
       _$gPackageFileOrderFieldValueOf(name);
 }
@@ -5501,16 +5973,18 @@ abstract class GPackageOrder
     implements Built<GPackageOrder, GPackageOrderBuilder> {
   GPackageOrder._();
 
-  factory GPackageOrder([Function(GPackageOrderBuilder b) updates]) =
+  factory GPackageOrder([void Function(GPackageOrderBuilder b) updates]) =
       _$GPackageOrder;
 
   GOrderDirection? get direction;
   GPackageOrderField? get field;
   static Serializer<GPackageOrder> get serializer => _$gPackageOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GPackageOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GPackageOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GPackageOrder.serializer,
@@ -5525,7 +5999,9 @@ class GPackageOrderField extends EnumClass {
 
   static Serializer<GPackageOrderField> get serializer =>
       _$gPackageOrderFieldSerializer;
+
   static BuiltSet<GPackageOrderField> get values => _$gPackageOrderFieldValues;
+
   static GPackageOrderField valueOf(String name) =>
       _$gPackageOrderFieldValueOf(name);
 }
@@ -5548,7 +6024,9 @@ class GPackageType extends EnumClass {
   static const GPackageType RUBYGEMS = _$gPackageTypeRUBYGEMS;
 
   static Serializer<GPackageType> get serializer => _$gPackageTypeSerializer;
+
   static BuiltSet<GPackageType> get values => _$gPackageTypeValues;
+
   static GPackageType valueOf(String name) => _$gPackageTypeValueOf(name);
 }
 
@@ -5557,17 +6035,19 @@ abstract class GPackageVersionOrder
   GPackageVersionOrder._();
 
   factory GPackageVersionOrder(
-          [Function(GPackageVersionOrderBuilder b) updates]) =
+          [void Function(GPackageVersionOrderBuilder b) updates]) =
       _$GPackageVersionOrder;
 
   GOrderDirection? get direction;
   GPackageVersionOrderField? get field;
   static Serializer<GPackageVersionOrder> get serializer =>
       _$gPackageVersionOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GPackageVersionOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GPackageVersionOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GPackageVersionOrder.serializer,
@@ -5583,8 +6063,10 @@ class GPackageVersionOrderField extends EnumClass {
 
   static Serializer<GPackageVersionOrderField> get serializer =>
       _$gPackageVersionOrderFieldSerializer;
+
   static BuiltSet<GPackageVersionOrderField> get values =>
       _$gPackageVersionOrderFieldValues;
+
   static GPackageVersionOrderField valueOf(String name) =>
       _$gPackageVersionOrderFieldValueOf(name);
 }
@@ -5605,7 +6087,9 @@ class GPatchStatus extends EnumClass {
   static const GPatchStatus RENAMED = _$gPatchStatusRENAMED;
 
   static Serializer<GPatchStatus> get serializer => _$gPatchStatusSerializer;
+
   static BuiltSet<GPatchStatus> get values => _$gPatchStatusValues;
+
   static GPatchStatus valueOf(String name) => _$gPatchStatusValueOf(name);
 }
 
@@ -5613,17 +6097,19 @@ abstract class GPinIssueInput
     implements Built<GPinIssueInput, GPinIssueInputBuilder> {
   GPinIssueInput._();
 
-  factory GPinIssueInput([Function(GPinIssueInputBuilder b) updates]) =
+  factory GPinIssueInput([void Function(GPinIssueInputBuilder b) updates]) =
       _$GPinIssueInput;
 
   String? get clientMutationId;
   String get issueId;
   static Serializer<GPinIssueInput> get serializer =>
       _$gPinIssueInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GPinIssueInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GPinIssueInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GPinIssueInput.serializer,
@@ -5652,7 +6138,9 @@ class GPinnableItemType extends EnumClass {
 
   static Serializer<GPinnableItemType> get serializer =>
       _$gPinnableItemTypeSerializer;
+
   static BuiltSet<GPinnableItemType> get values => _$gPinnableItemTypeValues;
+
   static GPinnableItemType valueOf(String name) =>
       _$gPinnableItemTypeValueOf(name);
 }
@@ -5677,8 +6165,10 @@ class GPinnedDiscussionGradient extends EnumClass {
 
   static Serializer<GPinnedDiscussionGradient> get serializer =>
       _$gPinnedDiscussionGradientSerializer;
+
   static BuiltSet<GPinnedDiscussionGradient> get values =>
       _$gPinnedDiscussionGradientValues;
+
   static GPinnedDiscussionGradient valueOf(String name) =>
       _$gPinnedDiscussionGradientValueOf(name);
 }
@@ -5703,8 +6193,10 @@ class GPinnedDiscussionPattern extends EnumClass {
 
   static Serializer<GPinnedDiscussionPattern> get serializer =>
       _$gPinnedDiscussionPatternSerializer;
+
   static BuiltSet<GPinnedDiscussionPattern> get values =>
       _$gPinnedDiscussionPatternValues;
+
   static GPinnedDiscussionPattern valueOf(String name) =>
       _$gPinnedDiscussionPatternValueOf(name);
 }
@@ -5734,8 +6226,10 @@ class GProjectCardArchivedState extends EnumClass {
 
   static Serializer<GProjectCardArchivedState> get serializer =>
       _$gProjectCardArchivedStateSerializer;
+
   static BuiltSet<GProjectCardArchivedState> get values =>
       _$gProjectCardArchivedStateValues;
+
   static GProjectCardArchivedState valueOf(String name) =>
       _$gProjectCardArchivedStateValueOf(name);
 }
@@ -5744,17 +6238,20 @@ abstract class GProjectCardImport
     implements Built<GProjectCardImport, GProjectCardImportBuilder> {
   GProjectCardImport._();
 
-  factory GProjectCardImport([Function(GProjectCardImportBuilder b) updates]) =
+  factory GProjectCardImport(
+          [void Function(GProjectCardImportBuilder b) updates]) =
       _$GProjectCardImport;
 
   int get number;
   String get repository;
   static Serializer<GProjectCardImport> get serializer =>
       _$gProjectCardImportSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GProjectCardImport.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GProjectCardImport? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GProjectCardImport.serializer,
@@ -5773,7 +6270,9 @@ class GProjectCardState extends EnumClass {
 
   static Serializer<GProjectCardState> get serializer =>
       _$gProjectCardStateSerializer;
+
   static BuiltSet<GProjectCardState> get values => _$gProjectCardStateValues;
+
   static GProjectCardState valueOf(String name) =>
       _$gProjectCardStateValueOf(name);
 }
@@ -5783,7 +6282,7 @@ abstract class GProjectColumnImport
   GProjectColumnImport._();
 
   factory GProjectColumnImport(
-          [Function(GProjectColumnImportBuilder b) updates]) =
+          [void Function(GProjectColumnImportBuilder b) updates]) =
       _$GProjectColumnImport;
 
   String get columnName;
@@ -5791,10 +6290,12 @@ abstract class GProjectColumnImport
   int get position;
   static Serializer<GProjectColumnImport> get serializer =>
       _$gProjectColumnImportSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GProjectColumnImport.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GProjectColumnImport? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GProjectColumnImport.serializer,
@@ -5814,8 +6315,10 @@ class GProjectColumnPurpose extends EnumClass {
 
   static Serializer<GProjectColumnPurpose> get serializer =>
       _$gProjectColumnPurposeSerializer;
+
   static BuiltSet<GProjectColumnPurpose> get values =>
       _$gProjectColumnPurposeValues;
+
   static GProjectColumnPurpose valueOf(String name) =>
       _$gProjectColumnPurposeValueOf(name);
 }
@@ -5833,7 +6336,9 @@ class GProjectItemType extends EnumClass {
 
   static Serializer<GProjectItemType> get serializer =>
       _$gProjectItemTypeSerializer;
+
   static BuiltSet<GProjectItemType> get values => _$gProjectItemTypeValues;
+
   static GProjectItemType valueOf(String name) =>
       _$gProjectItemTypeValueOf(name);
 }
@@ -5876,8 +6381,10 @@ class GProjectNextFieldType extends EnumClass {
 
   static Serializer<GProjectNextFieldType> get serializer =>
       _$gProjectNextFieldTypeSerializer;
+
   static BuiltSet<GProjectNextFieldType> get values =>
       _$gProjectNextFieldTypeValues;
+
   static GProjectNextFieldType valueOf(String name) =>
       _$gProjectNextFieldTypeValueOf(name);
 }
@@ -5897,8 +6404,10 @@ class GProjectNextOrderField extends EnumClass {
 
   static Serializer<GProjectNextOrderField> get serializer =>
       _$gProjectNextOrderFieldSerializer;
+
   static BuiltSet<GProjectNextOrderField> get values =>
       _$gProjectNextOrderFieldValues;
+
   static GProjectNextOrderField valueOf(String name) =>
       _$gProjectNextOrderFieldValueOf(name);
 }
@@ -5907,16 +6416,18 @@ abstract class GProjectOrder
     implements Built<GProjectOrder, GProjectOrderBuilder> {
   GProjectOrder._();
 
-  factory GProjectOrder([Function(GProjectOrderBuilder b) updates]) =
+  factory GProjectOrder([void Function(GProjectOrderBuilder b) updates]) =
       _$GProjectOrder;
 
   GOrderDirection get direction;
   GProjectOrderField get field;
   static Serializer<GProjectOrder> get serializer => _$gProjectOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GProjectOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GProjectOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GProjectOrder.serializer,
@@ -5935,7 +6446,9 @@ class GProjectOrderField extends EnumClass {
 
   static Serializer<GProjectOrderField> get serializer =>
       _$gProjectOrderFieldSerializer;
+
   static BuiltSet<GProjectOrderField> get values => _$gProjectOrderFieldValues;
+
   static GProjectOrderField valueOf(String name) =>
       _$gProjectOrderFieldValueOf(name);
 }
@@ -5948,7 +6461,9 @@ class GProjectState extends EnumClass {
   static const GProjectState OPEN = _$gProjectStateOPEN;
 
   static Serializer<GProjectState> get serializer => _$gProjectStateSerializer;
+
   static BuiltSet<GProjectState> get values => _$gProjectStateValues;
+
   static GProjectState valueOf(String name) => _$gProjectStateValueOf(name);
 }
 
@@ -5967,7 +6482,9 @@ class GProjectTemplate extends EnumClass {
 
   static Serializer<GProjectTemplate> get serializer =>
       _$gProjectTemplateSerializer;
+
   static BuiltSet<GProjectTemplate> get values => _$gProjectTemplateValues;
+
   static GProjectTemplate valueOf(String name) =>
       _$gProjectTemplateValueOf(name);
 }
@@ -5977,17 +6494,19 @@ abstract class GProjectV2FieldOrder
   GProjectV2FieldOrder._();
 
   factory GProjectV2FieldOrder(
-          [Function(GProjectV2FieldOrderBuilder b) updates]) =
+          [void Function(GProjectV2FieldOrderBuilder b) updates]) =
       _$GProjectV2FieldOrder;
 
   GOrderDirection get direction;
   GProjectV2FieldOrderField get field;
   static Serializer<GProjectV2FieldOrder> get serializer =>
       _$gProjectV2FieldOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GProjectV2FieldOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GProjectV2FieldOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GProjectV2FieldOrder.serializer,
@@ -6008,8 +6527,10 @@ class GProjectV2FieldOrderField extends EnumClass {
 
   static Serializer<GProjectV2FieldOrderField> get serializer =>
       _$gProjectV2FieldOrderFieldSerializer;
+
   static BuiltSet<GProjectV2FieldOrderField> get values =>
       _$gProjectV2FieldOrderFieldValues;
+
   static GProjectV2FieldOrderField valueOf(String name) =>
       _$gProjectV2FieldOrderFieldValueOf(name);
 }
@@ -6047,8 +6568,10 @@ class GProjectV2FieldType extends EnumClass {
 
   static Serializer<GProjectV2FieldType> get serializer =>
       _$gProjectV2FieldTypeSerializer;
+
   static BuiltSet<GProjectV2FieldType> get values =>
       _$gProjectV2FieldTypeValues;
+
   static GProjectV2FieldType valueOf(String name) =>
       _$gProjectV2FieldTypeValueOf(name);
 }
@@ -6058,7 +6581,7 @@ abstract class GProjectV2FieldValue
   GProjectV2FieldValue._();
 
   factory GProjectV2FieldValue(
-          [Function(GProjectV2FieldValueBuilder b) updates]) =
+          [void Function(GProjectV2FieldValueBuilder b) updates]) =
       _$GProjectV2FieldValue;
 
   GDate? get date;
@@ -6068,10 +6591,12 @@ abstract class GProjectV2FieldValue
   String? get text;
   static Serializer<GProjectV2FieldValue> get serializer =>
       _$gProjectV2FieldValueSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GProjectV2FieldValue.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GProjectV2FieldValue? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GProjectV2FieldValue.serializer,
@@ -6086,17 +6611,19 @@ abstract class GProjectV2ItemFieldValueOrder
   GProjectV2ItemFieldValueOrder._();
 
   factory GProjectV2ItemFieldValueOrder(
-          [Function(GProjectV2ItemFieldValueOrderBuilder b) updates]) =
+          [void Function(GProjectV2ItemFieldValueOrderBuilder b) updates]) =
       _$GProjectV2ItemFieldValueOrder;
 
   GOrderDirection get direction;
   GProjectV2ItemFieldValueOrderField get field;
   static Serializer<GProjectV2ItemFieldValueOrder> get serializer =>
       _$gProjectV2ItemFieldValueOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GProjectV2ItemFieldValueOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GProjectV2ItemFieldValueOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GProjectV2ItemFieldValueOrder.serializer,
@@ -6112,8 +6639,10 @@ class GProjectV2ItemFieldValueOrderField extends EnumClass {
 
   static Serializer<GProjectV2ItemFieldValueOrderField> get serializer =>
       _$gProjectV2ItemFieldValueOrderFieldSerializer;
+
   static BuiltSet<GProjectV2ItemFieldValueOrderField> get values =>
       _$gProjectV2ItemFieldValueOrderFieldValues;
+
   static GProjectV2ItemFieldValueOrderField valueOf(String name) =>
       _$gProjectV2ItemFieldValueOrderFieldValueOf(name);
 }
@@ -6123,16 +6652,19 @@ abstract class GProjectV2ItemOrder
   GProjectV2ItemOrder._();
 
   factory GProjectV2ItemOrder(
-      [Function(GProjectV2ItemOrderBuilder b) updates]) = _$GProjectV2ItemOrder;
+          [void Function(GProjectV2ItemOrderBuilder b) updates]) =
+      _$GProjectV2ItemOrder;
 
   GOrderDirection get direction;
   GProjectV2ItemOrderField get field;
   static Serializer<GProjectV2ItemOrder> get serializer =>
       _$gProjectV2ItemOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GProjectV2ItemOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GProjectV2ItemOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GProjectV2ItemOrder.serializer,
@@ -6148,8 +6680,10 @@ class GProjectV2ItemOrderField extends EnumClass {
 
   static Serializer<GProjectV2ItemOrderField> get serializer =>
       _$gProjectV2ItemOrderFieldSerializer;
+
   static BuiltSet<GProjectV2ItemOrderField> get values =>
       _$gProjectV2ItemOrderFieldValues;
+
   static GProjectV2ItemOrderField valueOf(String name) =>
       _$gProjectV2ItemOrderFieldValueOf(name);
 }
@@ -6168,7 +6702,9 @@ class GProjectV2ItemType extends EnumClass {
 
   static Serializer<GProjectV2ItemType> get serializer =>
       _$gProjectV2ItemTypeSerializer;
+
   static BuiltSet<GProjectV2ItemType> get values => _$gProjectV2ItemTypeValues;
+
   static GProjectV2ItemType valueOf(String name) =>
       _$gProjectV2ItemTypeValueOf(name);
 }
@@ -6177,17 +6713,19 @@ abstract class GProjectV2Order
     implements Built<GProjectV2Order, GProjectV2OrderBuilder> {
   GProjectV2Order._();
 
-  factory GProjectV2Order([Function(GProjectV2OrderBuilder b) updates]) =
+  factory GProjectV2Order([void Function(GProjectV2OrderBuilder b) updates]) =
       _$GProjectV2Order;
 
   GOrderDirection get direction;
   GProjectV2OrderField get field;
   static Serializer<GProjectV2Order> get serializer =>
       _$gProjectV2OrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GProjectV2Order.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GProjectV2Order? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GProjectV2Order.serializer,
@@ -6210,8 +6748,10 @@ class GProjectV2OrderField extends EnumClass {
 
   static Serializer<GProjectV2OrderField> get serializer =>
       _$gProjectV2OrderFieldSerializer;
+
   static BuiltSet<GProjectV2OrderField> get values =>
       _$gProjectV2OrderFieldValues;
+
   static GProjectV2OrderField valueOf(String name) =>
       _$gProjectV2OrderFieldValueOf(name);
 }
@@ -6227,8 +6767,10 @@ class GProjectV2ViewLayout extends EnumClass {
 
   static Serializer<GProjectV2ViewLayout> get serializer =>
       _$gProjectV2ViewLayoutSerializer;
+
   static BuiltSet<GProjectV2ViewLayout> get values =>
       _$gProjectV2ViewLayoutValues;
+
   static GProjectV2ViewLayout valueOf(String name) =>
       _$gProjectV2ViewLayoutValueOf(name);
 }
@@ -6238,16 +6780,19 @@ abstract class GProjectV2ViewOrder
   GProjectV2ViewOrder._();
 
   factory GProjectV2ViewOrder(
-      [Function(GProjectV2ViewOrderBuilder b) updates]) = _$GProjectV2ViewOrder;
+          [void Function(GProjectV2ViewOrderBuilder b) updates]) =
+      _$GProjectV2ViewOrder;
 
   GOrderDirection get direction;
   GProjectV2ViewOrderField get field;
   static Serializer<GProjectV2ViewOrder> get serializer =>
       _$gProjectV2ViewOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GProjectV2ViewOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GProjectV2ViewOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GProjectV2ViewOrder.serializer,
@@ -6268,8 +6813,10 @@ class GProjectV2ViewOrderField extends EnumClass {
 
   static Serializer<GProjectV2ViewOrderField> get serializer =>
       _$gProjectV2ViewOrderFieldSerializer;
+
   static BuiltSet<GProjectV2ViewOrderField> get values =>
       _$gProjectV2ViewOrderFieldValues;
+
   static GProjectV2ViewOrderField valueOf(String name) =>
       _$gProjectV2ViewOrderFieldValueOf(name);
 }
@@ -6285,7 +6832,9 @@ class GProjectViewLayout extends EnumClass {
 
   static Serializer<GProjectViewLayout> get serializer =>
       _$gProjectViewLayoutSerializer;
+
   static BuiltSet<GProjectViewLayout> get values => _$gProjectViewLayoutValues;
+
   static GProjectViewLayout valueOf(String name) =>
       _$gProjectViewLayoutValueOf(name);
 }
@@ -6301,8 +6850,10 @@ class GPullRequestMergeMethod extends EnumClass {
 
   static Serializer<GPullRequestMergeMethod> get serializer =>
       _$gPullRequestMergeMethodSerializer;
+
   static BuiltSet<GPullRequestMergeMethod> get values =>
       _$gPullRequestMergeMethodValues;
+
   static GPullRequestMergeMethod valueOf(String name) =>
       _$gPullRequestMergeMethodValueOf(name);
 }
@@ -6311,17 +6862,20 @@ abstract class GPullRequestOrder
     implements Built<GPullRequestOrder, GPullRequestOrderBuilder> {
   GPullRequestOrder._();
 
-  factory GPullRequestOrder([Function(GPullRequestOrderBuilder b) updates]) =
+  factory GPullRequestOrder(
+          [void Function(GPullRequestOrderBuilder b) updates]) =
       _$GPullRequestOrder;
 
   GOrderDirection get direction;
   GPullRequestOrderField get field;
   static Serializer<GPullRequestOrder> get serializer =>
       _$gPullRequestOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GPullRequestOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GPullRequestOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GPullRequestOrder.serializer,
@@ -6340,8 +6894,10 @@ class GPullRequestOrderField extends EnumClass {
 
   static Serializer<GPullRequestOrderField> get serializer =>
       _$gPullRequestOrderFieldSerializer;
+
   static BuiltSet<GPullRequestOrderField> get values =>
       _$gPullRequestOrderFieldValues;
+
   static GPullRequestOrderField valueOf(String name) =>
       _$gPullRequestOrderFieldValueOf(name);
 }
@@ -6357,8 +6913,10 @@ class GPullRequestReviewCommentState extends EnumClass {
 
   static Serializer<GPullRequestReviewCommentState> get serializer =>
       _$gPullRequestReviewCommentStateSerializer;
+
   static BuiltSet<GPullRequestReviewCommentState> get values =>
       _$gPullRequestReviewCommentStateValues;
+
   static GPullRequestReviewCommentState valueOf(String name) =>
       _$gPullRequestReviewCommentStateValueOf(name);
 }
@@ -6377,8 +6935,10 @@ class GPullRequestReviewDecision extends EnumClass {
 
   static Serializer<GPullRequestReviewDecision> get serializer =>
       _$gPullRequestReviewDecisionSerializer;
+
   static BuiltSet<GPullRequestReviewDecision> get values =>
       _$gPullRequestReviewDecisionValues;
+
   static GPullRequestReviewDecision valueOf(String name) =>
       _$gPullRequestReviewDecisionValueOf(name);
 }
@@ -6400,8 +6960,10 @@ class GPullRequestReviewEvent extends EnumClass {
 
   static Serializer<GPullRequestReviewEvent> get serializer =>
       _$gPullRequestReviewEventSerializer;
+
   static BuiltSet<GPullRequestReviewEvent> get values =>
       _$gPullRequestReviewEventValues;
+
   static GPullRequestReviewEvent valueOf(String name) =>
       _$gPullRequestReviewEventValueOf(name);
 }
@@ -6426,8 +6988,10 @@ class GPullRequestReviewState extends EnumClass {
 
   static Serializer<GPullRequestReviewState> get serializer =>
       _$gPullRequestReviewStateSerializer;
+
   static BuiltSet<GPullRequestReviewState> get values =>
       _$gPullRequestReviewStateValues;
+
   static GPullRequestReviewState valueOf(String name) =>
       _$gPullRequestReviewStateValueOf(name);
 }
@@ -6443,7 +7007,9 @@ class GPullRequestState extends EnumClass {
 
   static Serializer<GPullRequestState> get serializer =>
       _$gPullRequestStateSerializer;
+
   static BuiltSet<GPullRequestState> get values => _$gPullRequestStateValues;
+
   static GPullRequestState valueOf(String name) =>
       _$gPullRequestStateValueOf(name);
 }
@@ -6633,8 +7199,10 @@ class GPullRequestTimelineItemsItemType extends EnumClass {
 
   static Serializer<GPullRequestTimelineItemsItemType> get serializer =>
       _$gPullRequestTimelineItemsItemTypeSerializer;
+
   static BuiltSet<GPullRequestTimelineItemsItemType> get values =>
       _$gPullRequestTimelineItemsItemTypeValues;
+
   static GPullRequestTimelineItemsItemType valueOf(String name) =>
       _$gPullRequestTimelineItemsItemTypeValueOf(name);
 }
@@ -6648,8 +7216,10 @@ class GPullRequestUpdateState extends EnumClass {
 
   static Serializer<GPullRequestUpdateState> get serializer =>
       _$gPullRequestUpdateStateSerializer;
+
   static BuiltSet<GPullRequestUpdateState> get values =>
       _$gPullRequestUpdateStateValues;
+
   static GPullRequestUpdateState valueOf(String name) =>
       _$gPullRequestUpdateStateValueOf(name);
 }
@@ -6675,7 +7245,9 @@ class GReactionContent extends EnumClass {
 
   static Serializer<GReactionContent> get serializer =>
       _$gReactionContentSerializer;
+
   static BuiltSet<GReactionContent> get values => _$gReactionContentValues;
+
   static GReactionContent valueOf(String name) =>
       _$gReactionContentValueOf(name);
 }
@@ -6684,17 +7256,19 @@ abstract class GReactionOrder
     implements Built<GReactionOrder, GReactionOrderBuilder> {
   GReactionOrder._();
 
-  factory GReactionOrder([Function(GReactionOrderBuilder b) updates]) =
+  factory GReactionOrder([void Function(GReactionOrderBuilder b) updates]) =
       _$GReactionOrder;
 
   GOrderDirection get direction;
   GReactionOrderField get field;
   static Serializer<GReactionOrder> get serializer =>
       _$gReactionOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GReactionOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GReactionOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GReactionOrder.serializer,
@@ -6709,8 +7283,10 @@ class GReactionOrderField extends EnumClass {
 
   static Serializer<GReactionOrderField> get serializer =>
       _$gReactionOrderFieldSerializer;
+
   static BuiltSet<GReactionOrderField> get values =>
       _$gReactionOrderFieldValues;
+
   static GReactionOrderField valueOf(String name) =>
       _$gReactionOrderFieldValueOf(name);
 }
@@ -6718,15 +7294,17 @@ class GReactionOrderField extends EnumClass {
 abstract class GRefOrder implements Built<GRefOrder, GRefOrderBuilder> {
   GRefOrder._();
 
-  factory GRefOrder([Function(GRefOrderBuilder b) updates]) = _$GRefOrder;
+  factory GRefOrder([void Function(GRefOrderBuilder b) updates]) = _$GRefOrder;
 
   GOrderDirection get direction;
   GRefOrderField get field;
   static Serializer<GRefOrder> get serializer => _$gRefOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRefOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRefOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRefOrder.serializer,
@@ -6743,24 +7321,29 @@ class GRefOrderField extends EnumClass {
 
   static Serializer<GRefOrderField> get serializer =>
       _$gRefOrderFieldSerializer;
+
   static BuiltSet<GRefOrderField> get values => _$gRefOrderFieldValues;
+
   static GRefOrderField valueOf(String name) => _$gRefOrderFieldValueOf(name);
 }
 
 abstract class GRefUpdate implements Built<GRefUpdate, GRefUpdateBuilder> {
   GRefUpdate._();
 
-  factory GRefUpdate([Function(GRefUpdateBuilder b) updates]) = _$GRefUpdate;
+  factory GRefUpdate([void Function(GRefUpdateBuilder b) updates]) =
+      _$GRefUpdate;
 
   String get afterOid;
   String? get beforeOid;
   bool? get force;
   GGitRefname get name;
   static Serializer<GRefUpdate> get serializer => _$gRefUpdateSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRefUpdate.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRefUpdate? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRefUpdate.serializer,
@@ -6775,7 +7358,7 @@ abstract class GRegenerateEnterpriseIdentityProviderRecoveryCodesInput
   GRegenerateEnterpriseIdentityProviderRecoveryCodesInput._();
 
   factory GRegenerateEnterpriseIdentityProviderRecoveryCodesInput(
-      [Function(
+      [void Function(
               GRegenerateEnterpriseIdentityProviderRecoveryCodesInputBuilder b)
           updates]) = _$GRegenerateEnterpriseIdentityProviderRecoveryCodesInput;
 
@@ -6784,10 +7367,12 @@ abstract class GRegenerateEnterpriseIdentityProviderRecoveryCodesInput
   static Serializer<GRegenerateEnterpriseIdentityProviderRecoveryCodesInput>
       get serializer =>
           _$gRegenerateEnterpriseIdentityProviderRecoveryCodesInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRegenerateEnterpriseIdentityProviderRecoveryCodesInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRegenerateEnterpriseIdentityProviderRecoveryCodesInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -6803,17 +7388,19 @@ abstract class GRegenerateVerifiableDomainTokenInput
   GRegenerateVerifiableDomainTokenInput._();
 
   factory GRegenerateVerifiableDomainTokenInput(
-          [Function(GRegenerateVerifiableDomainTokenInputBuilder b) updates]) =
-      _$GRegenerateVerifiableDomainTokenInput;
+      [void Function(GRegenerateVerifiableDomainTokenInputBuilder b)
+          updates]) = _$GRegenerateVerifiableDomainTokenInput;
 
   String? get clientMutationId;
   String get id;
   static Serializer<GRegenerateVerifiableDomainTokenInput> get serializer =>
       _$gRegenerateVerifiableDomainTokenInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRegenerateVerifiableDomainTokenInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRegenerateVerifiableDomainTokenInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -6827,7 +7414,7 @@ abstract class GRejectDeploymentsInput
   GRejectDeploymentsInput._();
 
   factory GRejectDeploymentsInput(
-          [Function(GRejectDeploymentsInputBuilder b) updates]) =
+          [void Function(GRejectDeploymentsInputBuilder b) updates]) =
       _$GRejectDeploymentsInput;
 
   String? get clientMutationId;
@@ -6836,10 +7423,12 @@ abstract class GRejectDeploymentsInput
   String get workflowRunId;
   static Serializer<GRejectDeploymentsInput> get serializer =>
       _$gRejectDeploymentsInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRejectDeploymentsInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRejectDeploymentsInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRejectDeploymentsInput.serializer,
@@ -6851,16 +7440,18 @@ abstract class GReleaseOrder
     implements Built<GReleaseOrder, GReleaseOrderBuilder> {
   GReleaseOrder._();
 
-  factory GReleaseOrder([Function(GReleaseOrderBuilder b) updates]) =
+  factory GReleaseOrder([void Function(GReleaseOrderBuilder b) updates]) =
       _$GReleaseOrder;
 
   GOrderDirection get direction;
   GReleaseOrderField get field;
   static Serializer<GReleaseOrder> get serializer => _$gReleaseOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GReleaseOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GReleaseOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GReleaseOrder.serializer,
@@ -6877,7 +7468,9 @@ class GReleaseOrderField extends EnumClass {
 
   static Serializer<GReleaseOrderField> get serializer =>
       _$gReleaseOrderFieldSerializer;
+
   static BuiltSet<GReleaseOrderField> get values => _$gReleaseOrderFieldValues;
+
   static GReleaseOrderField valueOf(String name) =>
       _$gReleaseOrderFieldValueOf(name);
 }
@@ -6889,18 +7482,20 @@ abstract class GRemoveAssigneesFromAssignableInput
   GRemoveAssigneesFromAssignableInput._();
 
   factory GRemoveAssigneesFromAssignableInput(
-          [Function(GRemoveAssigneesFromAssignableInputBuilder b) updates]) =
-      _$GRemoveAssigneesFromAssignableInput;
+      [void Function(GRemoveAssigneesFromAssignableInputBuilder b)
+          updates]) = _$GRemoveAssigneesFromAssignableInput;
 
   String get assignableId;
   BuiltList<String> get assigneeIds;
   String? get clientMutationId;
   static Serializer<GRemoveAssigneesFromAssignableInput> get serializer =>
       _$gRemoveAssigneesFromAssignableInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRemoveAssigneesFromAssignableInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRemoveAssigneesFromAssignableInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -6915,7 +7510,7 @@ abstract class GRemoveEnterpriseAdminInput
   GRemoveEnterpriseAdminInput._();
 
   factory GRemoveEnterpriseAdminInput(
-          [Function(GRemoveEnterpriseAdminInputBuilder b) updates]) =
+          [void Function(GRemoveEnterpriseAdminInputBuilder b) updates]) =
       _$GRemoveEnterpriseAdminInput;
 
   String? get clientMutationId;
@@ -6923,10 +7518,12 @@ abstract class GRemoveEnterpriseAdminInput
   String get login;
   static Serializer<GRemoveEnterpriseAdminInput> get serializer =>
       _$gRemoveEnterpriseAdminInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRemoveEnterpriseAdminInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRemoveEnterpriseAdminInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRemoveEnterpriseAdminInput.serializer,
@@ -6941,17 +7538,19 @@ abstract class GRemoveEnterpriseIdentityProviderInput
   GRemoveEnterpriseIdentityProviderInput._();
 
   factory GRemoveEnterpriseIdentityProviderInput(
-          [Function(GRemoveEnterpriseIdentityProviderInputBuilder b) updates]) =
-      _$GRemoveEnterpriseIdentityProviderInput;
+      [void Function(GRemoveEnterpriseIdentityProviderInputBuilder b)
+          updates]) = _$GRemoveEnterpriseIdentityProviderInput;
 
   String? get clientMutationId;
   String get enterpriseId;
   static Serializer<GRemoveEnterpriseIdentityProviderInput> get serializer =>
       _$gRemoveEnterpriseIdentityProviderInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRemoveEnterpriseIdentityProviderInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRemoveEnterpriseIdentityProviderInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -6967,18 +7566,20 @@ abstract class GRemoveEnterpriseOrganizationInput
   GRemoveEnterpriseOrganizationInput._();
 
   factory GRemoveEnterpriseOrganizationInput(
-          [Function(GRemoveEnterpriseOrganizationInputBuilder b) updates]) =
-      _$GRemoveEnterpriseOrganizationInput;
+      [void Function(GRemoveEnterpriseOrganizationInputBuilder b)
+          updates]) = _$GRemoveEnterpriseOrganizationInput;
 
   String? get clientMutationId;
   String get enterpriseId;
   String get organizationId;
   static Serializer<GRemoveEnterpriseOrganizationInput> get serializer =>
       _$gRemoveEnterpriseOrganizationInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRemoveEnterpriseOrganizationInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRemoveEnterpriseOrganizationInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -6994,7 +7595,7 @@ abstract class GRemoveEnterpriseSupportEntitlementInput
   GRemoveEnterpriseSupportEntitlementInput._();
 
   factory GRemoveEnterpriseSupportEntitlementInput(
-      [Function(GRemoveEnterpriseSupportEntitlementInputBuilder b)
+      [void Function(GRemoveEnterpriseSupportEntitlementInputBuilder b)
           updates]) = _$GRemoveEnterpriseSupportEntitlementInput;
 
   String? get clientMutationId;
@@ -7002,10 +7603,12 @@ abstract class GRemoveEnterpriseSupportEntitlementInput
   String get login;
   static Serializer<GRemoveEnterpriseSupportEntitlementInput> get serializer =>
       _$gRemoveEnterpriseSupportEntitlementInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRemoveEnterpriseSupportEntitlementInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRemoveEnterpriseSupportEntitlementInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -7021,7 +7624,7 @@ abstract class GRemoveLabelsFromLabelableInput
   GRemoveLabelsFromLabelableInput._();
 
   factory GRemoveLabelsFromLabelableInput(
-          [Function(GRemoveLabelsFromLabelableInputBuilder b) updates]) =
+          [void Function(GRemoveLabelsFromLabelableInputBuilder b) updates]) =
       _$GRemoveLabelsFromLabelableInput;
 
   String? get clientMutationId;
@@ -7029,10 +7632,12 @@ abstract class GRemoveLabelsFromLabelableInput
   String get labelableId;
   static Serializer<GRemoveLabelsFromLabelableInput> get serializer =>
       _$gRemoveLabelsFromLabelableInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRemoveLabelsFromLabelableInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRemoveLabelsFromLabelableInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRemoveLabelsFromLabelableInput.serializer,
@@ -7047,7 +7652,7 @@ abstract class GRemoveOutsideCollaboratorInput
   GRemoveOutsideCollaboratorInput._();
 
   factory GRemoveOutsideCollaboratorInput(
-          [Function(GRemoveOutsideCollaboratorInputBuilder b) updates]) =
+          [void Function(GRemoveOutsideCollaboratorInputBuilder b) updates]) =
       _$GRemoveOutsideCollaboratorInput;
 
   String? get clientMutationId;
@@ -7055,10 +7660,12 @@ abstract class GRemoveOutsideCollaboratorInput
   String get userId;
   static Serializer<GRemoveOutsideCollaboratorInput> get serializer =>
       _$gRemoveOutsideCollaboratorInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRemoveOutsideCollaboratorInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRemoveOutsideCollaboratorInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRemoveOutsideCollaboratorInput.serializer,
@@ -7071,7 +7678,7 @@ abstract class GRemoveReactionInput
   GRemoveReactionInput._();
 
   factory GRemoveReactionInput(
-          [Function(GRemoveReactionInputBuilder b) updates]) =
+          [void Function(GRemoveReactionInputBuilder b) updates]) =
       _$GRemoveReactionInput;
 
   String? get clientMutationId;
@@ -7079,10 +7686,12 @@ abstract class GRemoveReactionInput
   String get subjectId;
   static Serializer<GRemoveReactionInput> get serializer =>
       _$gRemoveReactionInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRemoveReactionInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRemoveReactionInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRemoveReactionInput.serializer,
@@ -7094,17 +7703,19 @@ abstract class GRemoveStarInput
     implements Built<GRemoveStarInput, GRemoveStarInputBuilder> {
   GRemoveStarInput._();
 
-  factory GRemoveStarInput([Function(GRemoveStarInputBuilder b) updates]) =
+  factory GRemoveStarInput([void Function(GRemoveStarInputBuilder b) updates]) =
       _$GRemoveStarInput;
 
   String? get clientMutationId;
   String get starrableId;
   static Serializer<GRemoveStarInput> get serializer =>
       _$gRemoveStarInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRemoveStarInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRemoveStarInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRemoveStarInput.serializer,
@@ -7116,17 +7727,20 @@ abstract class GRemoveUpvoteInput
     implements Built<GRemoveUpvoteInput, GRemoveUpvoteInputBuilder> {
   GRemoveUpvoteInput._();
 
-  factory GRemoveUpvoteInput([Function(GRemoveUpvoteInputBuilder b) updates]) =
+  factory GRemoveUpvoteInput(
+          [void Function(GRemoveUpvoteInputBuilder b) updates]) =
       _$GRemoveUpvoteInput;
 
   String? get clientMutationId;
   String get subjectId;
   static Serializer<GRemoveUpvoteInput> get serializer =>
       _$gRemoveUpvoteInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRemoveUpvoteInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRemoveUpvoteInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRemoveUpvoteInput.serializer,
@@ -7138,17 +7752,20 @@ abstract class GReopenIssueInput
     implements Built<GReopenIssueInput, GReopenIssueInputBuilder> {
   GReopenIssueInput._();
 
-  factory GReopenIssueInput([Function(GReopenIssueInputBuilder b) updates]) =
+  factory GReopenIssueInput(
+          [void Function(GReopenIssueInputBuilder b) updates]) =
       _$GReopenIssueInput;
 
   String? get clientMutationId;
   String get issueId;
   static Serializer<GReopenIssueInput> get serializer =>
       _$gReopenIssueInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GReopenIssueInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GReopenIssueInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GReopenIssueInput.serializer,
@@ -7161,17 +7778,19 @@ abstract class GReopenPullRequestInput
   GReopenPullRequestInput._();
 
   factory GReopenPullRequestInput(
-          [Function(GReopenPullRequestInputBuilder b) updates]) =
+          [void Function(GReopenPullRequestInputBuilder b) updates]) =
       _$GReopenPullRequestInput;
 
   String? get clientMutationId;
   String get pullRequestId;
   static Serializer<GReopenPullRequestInput> get serializer =>
       _$gReopenPullRequestInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GReopenPullRequestInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GReopenPullRequestInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GReopenPullRequestInput.serializer,
@@ -7193,8 +7812,10 @@ class GRepoAccessAuditEntryVisibility extends EnumClass {
 
   static Serializer<GRepoAccessAuditEntryVisibility> get serializer =>
       _$gRepoAccessAuditEntryVisibilitySerializer;
+
   static BuiltSet<GRepoAccessAuditEntryVisibility> get values =>
       _$gRepoAccessAuditEntryVisibilityValues;
+
   static GRepoAccessAuditEntryVisibility valueOf(String name) =>
       _$gRepoAccessAuditEntryVisibilityValueOf(name);
 }
@@ -7213,8 +7834,10 @@ class GRepoAddMemberAuditEntryVisibility extends EnumClass {
 
   static Serializer<GRepoAddMemberAuditEntryVisibility> get serializer =>
       _$gRepoAddMemberAuditEntryVisibilitySerializer;
+
   static BuiltSet<GRepoAddMemberAuditEntryVisibility> get values =>
       _$gRepoAddMemberAuditEntryVisibilityValues;
+
   static GRepoAddMemberAuditEntryVisibility valueOf(String name) =>
       _$gRepoAddMemberAuditEntryVisibilityValueOf(name);
 }
@@ -7233,8 +7856,10 @@ class GRepoArchivedAuditEntryVisibility extends EnumClass {
 
   static Serializer<GRepoArchivedAuditEntryVisibility> get serializer =>
       _$gRepoArchivedAuditEntryVisibilitySerializer;
+
   static BuiltSet<GRepoArchivedAuditEntryVisibility> get values =>
       _$gRepoArchivedAuditEntryVisibilityValues;
+
   static GRepoArchivedAuditEntryVisibility valueOf(String name) =>
       _$gRepoArchivedAuditEntryVisibilityValueOf(name);
 }
@@ -7253,8 +7878,10 @@ class GRepoChangeMergeSettingAuditEntryMergeType extends EnumClass {
 
   static Serializer<GRepoChangeMergeSettingAuditEntryMergeType>
       get serializer => _$gRepoChangeMergeSettingAuditEntryMergeTypeSerializer;
+
   static BuiltSet<GRepoChangeMergeSettingAuditEntryMergeType> get values =>
       _$gRepoChangeMergeSettingAuditEntryMergeTypeValues;
+
   static GRepoChangeMergeSettingAuditEntryMergeType valueOf(String name) =>
       _$gRepoChangeMergeSettingAuditEntryMergeTypeValueOf(name);
 }
@@ -7273,8 +7900,10 @@ class GRepoCreateAuditEntryVisibility extends EnumClass {
 
   static Serializer<GRepoCreateAuditEntryVisibility> get serializer =>
       _$gRepoCreateAuditEntryVisibilitySerializer;
+
   static BuiltSet<GRepoCreateAuditEntryVisibility> get values =>
       _$gRepoCreateAuditEntryVisibilityValues;
+
   static GRepoCreateAuditEntryVisibility valueOf(String name) =>
       _$gRepoCreateAuditEntryVisibilityValueOf(name);
 }
@@ -7293,8 +7922,10 @@ class GRepoDestroyAuditEntryVisibility extends EnumClass {
 
   static Serializer<GRepoDestroyAuditEntryVisibility> get serializer =>
       _$gRepoDestroyAuditEntryVisibilitySerializer;
+
   static BuiltSet<GRepoDestroyAuditEntryVisibility> get values =>
       _$gRepoDestroyAuditEntryVisibilityValues;
+
   static GRepoDestroyAuditEntryVisibility valueOf(String name) =>
       _$gRepoDestroyAuditEntryVisibilityValueOf(name);
 }
@@ -7313,8 +7944,10 @@ class GRepoRemoveMemberAuditEntryVisibility extends EnumClass {
 
   static Serializer<GRepoRemoveMemberAuditEntryVisibility> get serializer =>
       _$gRepoRemoveMemberAuditEntryVisibilitySerializer;
+
   static BuiltSet<GRepoRemoveMemberAuditEntryVisibility> get values =>
       _$gRepoRemoveMemberAuditEntryVisibilityValues;
+
   static GRepoRemoveMemberAuditEntryVisibility valueOf(String name) =>
       _$gRepoRemoveMemberAuditEntryVisibilityValueOf(name);
 }
@@ -7342,8 +7975,10 @@ class GReportedContentClassifiers extends EnumClass {
 
   static Serializer<GReportedContentClassifiers> get serializer =>
       _$gReportedContentClassifiersSerializer;
+
   static BuiltSet<GReportedContentClassifiers> get values =>
       _$gReportedContentClassifiersValues;
+
   static GReportedContentClassifiers valueOf(String name) =>
       _$gReportedContentClassifiersValueOf(name);
 }
@@ -7361,8 +7996,10 @@ class GRepositoryAffiliation extends EnumClass {
 
   static Serializer<GRepositoryAffiliation> get serializer =>
       _$gRepositoryAffiliationSerializer;
+
   static BuiltSet<GRepositoryAffiliation> get values =>
       _$gRepositoryAffiliationValues;
+
   static GRepositoryAffiliation valueOf(String name) =>
       _$gRepositoryAffiliationValueOf(name);
 }
@@ -7387,8 +8024,10 @@ class GRepositoryContributionType extends EnumClass {
 
   static Serializer<GRepositoryContributionType> get serializer =>
       _$gRepositoryContributionTypeSerializer;
+
   static BuiltSet<GRepositoryContributionType> get values =>
       _$gRepositoryContributionTypeValues;
+
   static GRepositoryContributionType valueOf(String name) =>
       _$gRepositoryContributionTypeValueOf(name);
 }
@@ -7410,8 +8049,10 @@ class GRepositoryInteractionLimit extends EnumClass {
 
   static Serializer<GRepositoryInteractionLimit> get serializer =>
       _$gRepositoryInteractionLimitSerializer;
+
   static BuiltSet<GRepositoryInteractionLimit> get values =>
       _$gRepositoryInteractionLimitValues;
+
   static GRepositoryInteractionLimit valueOf(String name) =>
       _$gRepositoryInteractionLimitValueOf(name);
 }
@@ -7436,8 +8077,10 @@ class GRepositoryInteractionLimitExpiry extends EnumClass {
 
   static Serializer<GRepositoryInteractionLimitExpiry> get serializer =>
       _$gRepositoryInteractionLimitExpirySerializer;
+
   static BuiltSet<GRepositoryInteractionLimitExpiry> get values =>
       _$gRepositoryInteractionLimitExpiryValues;
+
   static GRepositoryInteractionLimitExpiry valueOf(String name) =>
       _$gRepositoryInteractionLimitExpiryValueOf(name);
 }
@@ -7456,8 +8099,10 @@ class GRepositoryInteractionLimitOrigin extends EnumClass {
 
   static Serializer<GRepositoryInteractionLimitOrigin> get serializer =>
       _$gRepositoryInteractionLimitOriginSerializer;
+
   static BuiltSet<GRepositoryInteractionLimitOrigin> get values =>
       _$gRepositoryInteractionLimitOriginValues;
+
   static GRepositoryInteractionLimitOrigin valueOf(String name) =>
       _$gRepositoryInteractionLimitOriginValueOf(name);
 }
@@ -7468,17 +8113,19 @@ abstract class GRepositoryInvitationOrder
   GRepositoryInvitationOrder._();
 
   factory GRepositoryInvitationOrder(
-          [Function(GRepositoryInvitationOrderBuilder b) updates]) =
+          [void Function(GRepositoryInvitationOrderBuilder b) updates]) =
       _$GRepositoryInvitationOrder;
 
   GOrderDirection get direction;
   GRepositoryInvitationOrderField get field;
   static Serializer<GRepositoryInvitationOrder> get serializer =>
       _$gRepositoryInvitationOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRepositoryInvitationOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRepositoryInvitationOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRepositoryInvitationOrder.serializer,
@@ -7494,8 +8141,10 @@ class GRepositoryInvitationOrderField extends EnumClass {
 
   static Serializer<GRepositoryInvitationOrderField> get serializer =>
       _$gRepositoryInvitationOrderFieldSerializer;
+
   static BuiltSet<GRepositoryInvitationOrderField> get values =>
       _$gRepositoryInvitationOrderFieldValues;
+
   static GRepositoryInvitationOrderField valueOf(String name) =>
       _$gRepositoryInvitationOrderFieldValueOf(name);
 }
@@ -7514,8 +8163,10 @@ class GRepositoryLockReason extends EnumClass {
 
   static Serializer<GRepositoryLockReason> get serializer =>
       _$gRepositoryLockReasonSerializer;
+
   static BuiltSet<GRepositoryLockReason> get values =>
       _$gRepositoryLockReasonValues;
+
   static GRepositoryLockReason valueOf(String name) =>
       _$gRepositoryLockReasonValueOf(name);
 }
@@ -7526,17 +8177,19 @@ abstract class GRepositoryMigrationOrder
   GRepositoryMigrationOrder._();
 
   factory GRepositoryMigrationOrder(
-          [Function(GRepositoryMigrationOrderBuilder b) updates]) =
+          [void Function(GRepositoryMigrationOrderBuilder b) updates]) =
       _$GRepositoryMigrationOrder;
 
   GRepositoryMigrationOrderDirection get direction;
   GRepositoryMigrationOrderField get field;
   static Serializer<GRepositoryMigrationOrder> get serializer =>
       _$gRepositoryMigrationOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRepositoryMigrationOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRepositoryMigrationOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRepositoryMigrationOrder.serializer,
@@ -7555,8 +8208,10 @@ class GRepositoryMigrationOrderDirection extends EnumClass {
 
   static Serializer<GRepositoryMigrationOrderDirection> get serializer =>
       _$gRepositoryMigrationOrderDirectionSerializer;
+
   static BuiltSet<GRepositoryMigrationOrderDirection> get values =>
       _$gRepositoryMigrationOrderDirectionValues;
+
   static GRepositoryMigrationOrderDirection valueOf(String name) =>
       _$gRepositoryMigrationOrderDirectionValueOf(name);
 }
@@ -7569,8 +8224,10 @@ class GRepositoryMigrationOrderField extends EnumClass {
 
   static Serializer<GRepositoryMigrationOrderField> get serializer =>
       _$gRepositoryMigrationOrderFieldSerializer;
+
   static BuiltSet<GRepositoryMigrationOrderField> get values =>
       _$gRepositoryMigrationOrderFieldValues;
+
   static GRepositoryMigrationOrderField valueOf(String name) =>
       _$gRepositoryMigrationOrderFieldValueOf(name);
 }
@@ -7579,17 +8236,19 @@ abstract class GRepositoryOrder
     implements Built<GRepositoryOrder, GRepositoryOrderBuilder> {
   GRepositoryOrder._();
 
-  factory GRepositoryOrder([Function(GRepositoryOrderBuilder b) updates]) =
+  factory GRepositoryOrder([void Function(GRepositoryOrderBuilder b) updates]) =
       _$GRepositoryOrder;
 
   GOrderDirection get direction;
   GRepositoryOrderField get field;
   static Serializer<GRepositoryOrder> get serializer =>
       _$gRepositoryOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRepositoryOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRepositoryOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRepositoryOrder.serializer,
@@ -7616,8 +8275,10 @@ class GRepositoryOrderField extends EnumClass {
 
   static Serializer<GRepositoryOrderField> get serializer =>
       _$gRepositoryOrderFieldSerializer;
+
   static BuiltSet<GRepositoryOrderField> get values =>
       _$gRepositoryOrderFieldValues;
+
   static GRepositoryOrderField valueOf(String name) =>
       _$gRepositoryOrderFieldValueOf(name);
 }
@@ -7637,8 +8298,10 @@ class GRepositoryPermission extends EnumClass {
 
   static Serializer<GRepositoryPermission> get serializer =>
       _$gRepositoryPermissionSerializer;
+
   static BuiltSet<GRepositoryPermission> get values =>
       _$gRepositoryPermissionValues;
+
   static GRepositoryPermission valueOf(String name) =>
       _$gRepositoryPermissionValueOf(name);
 }
@@ -7652,7 +8315,9 @@ class GRepositoryPrivacy extends EnumClass {
 
   static Serializer<GRepositoryPrivacy> get serializer =>
       _$gRepositoryPrivacySerializer;
+
   static BuiltSet<GRepositoryPrivacy> get values => _$gRepositoryPrivacyValues;
+
   static GRepositoryPrivacy valueOf(String name) =>
       _$gRepositoryPrivacyValueOf(name);
 }
@@ -7668,8 +8333,10 @@ class GRepositoryVisibility extends EnumClass {
 
   static Serializer<GRepositoryVisibility> get serializer =>
       _$gRepositoryVisibilitySerializer;
+
   static BuiltSet<GRepositoryVisibility> get values =>
       _$gRepositoryVisibilityValues;
+
   static GRepositoryVisibility valueOf(String name) =>
       _$gRepositoryVisibilityValueOf(name);
 }
@@ -7687,8 +8354,10 @@ class GRepositoryVulnerabilityAlertDependencyScope extends EnumClass {
   static Serializer<GRepositoryVulnerabilityAlertDependencyScope>
       get serializer =>
           _$gRepositoryVulnerabilityAlertDependencyScopeSerializer;
+
   static BuiltSet<GRepositoryVulnerabilityAlertDependencyScope> get values =>
       _$gRepositoryVulnerabilityAlertDependencyScopeValues;
+
   static GRepositoryVulnerabilityAlertDependencyScope valueOf(String name) =>
       _$gRepositoryVulnerabilityAlertDependencyScopeValueOf(name);
 }
@@ -7707,8 +8376,10 @@ class GRepositoryVulnerabilityAlertState extends EnumClass {
 
   static Serializer<GRepositoryVulnerabilityAlertState> get serializer =>
       _$gRepositoryVulnerabilityAlertStateSerializer;
+
   static BuiltSet<GRepositoryVulnerabilityAlertState> get values =>
       _$gRepositoryVulnerabilityAlertStateValues;
+
   static GRepositoryVulnerabilityAlertState valueOf(String name) =>
       _$gRepositoryVulnerabilityAlertStateValueOf(name);
 }
@@ -7718,7 +8389,7 @@ abstract class GRequestReviewsInput
   GRequestReviewsInput._();
 
   factory GRequestReviewsInput(
-          [Function(GRequestReviewsInputBuilder b) updates]) =
+          [void Function(GRequestReviewsInputBuilder b) updates]) =
       _$GRequestReviewsInput;
 
   String? get clientMutationId;
@@ -7728,10 +8399,12 @@ abstract class GRequestReviewsInput
   BuiltList<String>? get userIds;
   static Serializer<GRequestReviewsInput> get serializer =>
       _$gRequestReviewsInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRequestReviewsInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRequestReviewsInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRequestReviewsInput.serializer,
@@ -7759,8 +8432,10 @@ class GRequestableCheckStatusState extends EnumClass {
 
   static Serializer<GRequestableCheckStatusState> get serializer =>
       _$gRequestableCheckStatusStateSerializer;
+
   static BuiltSet<GRequestableCheckStatusState> get values =>
       _$gRequestableCheckStatusStateValues;
+
   static GRequestableCheckStatusState valueOf(String name) =>
       _$gRequestableCheckStatusStateValueOf(name);
 }
@@ -7771,17 +8446,19 @@ abstract class GRequiredStatusCheckInput
   GRequiredStatusCheckInput._();
 
   factory GRequiredStatusCheckInput(
-          [Function(GRequiredStatusCheckInputBuilder b) updates]) =
+          [void Function(GRequiredStatusCheckInputBuilder b) updates]) =
       _$GRequiredStatusCheckInput;
 
   String? get appId;
   String get context;
   static Serializer<GRequiredStatusCheckInput> get serializer =>
       _$gRequiredStatusCheckInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRequiredStatusCheckInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRequiredStatusCheckInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRequiredStatusCheckInput.serializer,
@@ -7795,7 +8472,7 @@ abstract class GRerequestCheckSuiteInput
   GRerequestCheckSuiteInput._();
 
   factory GRerequestCheckSuiteInput(
-          [Function(GRerequestCheckSuiteInputBuilder b) updates]) =
+          [void Function(GRerequestCheckSuiteInputBuilder b) updates]) =
       _$GRerequestCheckSuiteInput;
 
   String get checkSuiteId;
@@ -7803,10 +8480,12 @@ abstract class GRerequestCheckSuiteInput
   String get repositoryId;
   static Serializer<GRerequestCheckSuiteInput> get serializer =>
       _$gRerequestCheckSuiteInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRerequestCheckSuiteInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRerequestCheckSuiteInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRerequestCheckSuiteInput.serializer,
@@ -7820,17 +8499,19 @@ abstract class GResolveReviewThreadInput
   GResolveReviewThreadInput._();
 
   factory GResolveReviewThreadInput(
-          [Function(GResolveReviewThreadInputBuilder b) updates]) =
+          [void Function(GResolveReviewThreadInputBuilder b) updates]) =
       _$GResolveReviewThreadInput;
 
   String? get clientMutationId;
   String get threadId;
   static Serializer<GResolveReviewThreadInput> get serializer =>
       _$gResolveReviewThreadInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GResolveReviewThreadInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GResolveReviewThreadInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GResolveReviewThreadInput.serializer,
@@ -7845,7 +8526,7 @@ abstract class GRevokeEnterpriseOrganizationsMigratorRoleInput
   GRevokeEnterpriseOrganizationsMigratorRoleInput._();
 
   factory GRevokeEnterpriseOrganizationsMigratorRoleInput(
-      [Function(GRevokeEnterpriseOrganizationsMigratorRoleInputBuilder b)
+      [void Function(GRevokeEnterpriseOrganizationsMigratorRoleInputBuilder b)
           updates]) = _$GRevokeEnterpriseOrganizationsMigratorRoleInput;
 
   String? get clientMutationId;
@@ -7854,10 +8535,12 @@ abstract class GRevokeEnterpriseOrganizationsMigratorRoleInput
   static Serializer<GRevokeEnterpriseOrganizationsMigratorRoleInput>
       get serializer =>
           _$gRevokeEnterpriseOrganizationsMigratorRoleInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRevokeEnterpriseOrganizationsMigratorRoleInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRevokeEnterpriseOrganizationsMigratorRoleInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -7872,7 +8555,7 @@ abstract class GRevokeMigratorRoleInput
   GRevokeMigratorRoleInput._();
 
   factory GRevokeMigratorRoleInput(
-          [Function(GRevokeMigratorRoleInputBuilder b) updates]) =
+          [void Function(GRevokeMigratorRoleInputBuilder b) updates]) =
       _$GRevokeMigratorRoleInput;
 
   String get actor;
@@ -7881,10 +8564,12 @@ abstract class GRevokeMigratorRoleInput
   String get organizationId;
   static Serializer<GRevokeMigratorRoleInput> get serializer =>
       _$gRevokeMigratorRoleInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRevokeMigratorRoleInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRevokeMigratorRoleInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRevokeMigratorRoleInput.serializer,
@@ -7905,8 +8590,10 @@ class GRoleInOrganization extends EnumClass {
 
   static Serializer<GRoleInOrganization> get serializer =>
       _$gRoleInOrganizationSerializer;
+
   static BuiltSet<GRoleInOrganization> get values =>
       _$gRoleInOrganizationValues;
+
   static GRoleInOrganization valueOf(String name) =>
       _$gRoleInOrganizationValueOf(name);
 }
@@ -7924,8 +8611,10 @@ class GSamlDigestAlgorithm extends EnumClass {
 
   static Serializer<GSamlDigestAlgorithm> get serializer =>
       _$gSamlDigestAlgorithmSerializer;
+
   static BuiltSet<GSamlDigestAlgorithm> get values =>
       _$gSamlDigestAlgorithmValues;
+
   static GSamlDigestAlgorithm valueOf(String name) =>
       _$gSamlDigestAlgorithmValueOf(name);
 }
@@ -7947,8 +8636,10 @@ class GSamlSignatureAlgorithm extends EnumClass {
 
   static Serializer<GSamlSignatureAlgorithm> get serializer =>
       _$gSamlSignatureAlgorithmSerializer;
+
   static BuiltSet<GSamlSignatureAlgorithm> get values =>
       _$gSamlSignatureAlgorithmValues;
+
   static GSamlSignatureAlgorithm valueOf(String name) =>
       _$gSamlSignatureAlgorithmValueOf(name);
 }
@@ -7957,17 +8648,19 @@ abstract class GSavedReplyOrder
     implements Built<GSavedReplyOrder, GSavedReplyOrderBuilder> {
   GSavedReplyOrder._();
 
-  factory GSavedReplyOrder([Function(GSavedReplyOrderBuilder b) updates]) =
+  factory GSavedReplyOrder([void Function(GSavedReplyOrderBuilder b) updates]) =
       _$GSavedReplyOrder;
 
   GOrderDirection get direction;
   GSavedReplyOrderField get field;
   static Serializer<GSavedReplyOrder> get serializer =>
       _$gSavedReplyOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSavedReplyOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSavedReplyOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GSavedReplyOrder.serializer,
@@ -7983,8 +8676,10 @@ class GSavedReplyOrderField extends EnumClass {
 
   static Serializer<GSavedReplyOrderField> get serializer =>
       _$gSavedReplyOrderFieldSerializer;
+
   static BuiltSet<GSavedReplyOrderField> get values =>
       _$gSavedReplyOrderFieldValues;
+
   static GSavedReplyOrderField valueOf(String name) =>
       _$gSavedReplyOrderFieldValueOf(name);
 }
@@ -8001,7 +8696,9 @@ class GSearchType extends EnumClass {
   static const GSearchType USER = _$gSearchTypeUSER;
 
   static Serializer<GSearchType> get serializer => _$gSearchTypeSerializer;
+
   static BuiltSet<GSearchType> get values => _$gSearchTypeValues;
+
   static GSearchType valueOf(String name) => _$gSearchTypeValueOf(name);
 }
 
@@ -8016,8 +8713,10 @@ class GSecurityAdvisoryClassification extends EnumClass {
 
   static Serializer<GSecurityAdvisoryClassification> get serializer =>
       _$gSecurityAdvisoryClassificationSerializer;
+
   static BuiltSet<GSecurityAdvisoryClassification> get values =>
       _$gSecurityAdvisoryClassificationValues;
+
   static GSecurityAdvisoryClassification valueOf(String name) =>
       _$gSecurityAdvisoryClassificationValueOf(name);
 }
@@ -8054,8 +8753,10 @@ class GSecurityAdvisoryEcosystem extends EnumClass {
 
   static Serializer<GSecurityAdvisoryEcosystem> get serializer =>
       _$gSecurityAdvisoryEcosystemSerializer;
+
   static BuiltSet<GSecurityAdvisoryEcosystem> get values =>
       _$gSecurityAdvisoryEcosystemValues;
+
   static GSecurityAdvisoryEcosystem valueOf(String name) =>
       _$gSecurityAdvisoryEcosystemValueOf(name);
 }
@@ -8067,17 +8768,19 @@ abstract class GSecurityAdvisoryIdentifierFilter
   GSecurityAdvisoryIdentifierFilter._();
 
   factory GSecurityAdvisoryIdentifierFilter(
-          [Function(GSecurityAdvisoryIdentifierFilterBuilder b) updates]) =
+          [void Function(GSecurityAdvisoryIdentifierFilterBuilder b) updates]) =
       _$GSecurityAdvisoryIdentifierFilter;
 
   GSecurityAdvisoryIdentifierType get type;
   String get value;
   static Serializer<GSecurityAdvisoryIdentifierFilter> get serializer =>
       _$gSecurityAdvisoryIdentifierFilterSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSecurityAdvisoryIdentifierFilter.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSecurityAdvisoryIdentifierFilter? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -8097,8 +8800,10 @@ class GSecurityAdvisoryIdentifierType extends EnumClass {
 
   static Serializer<GSecurityAdvisoryIdentifierType> get serializer =>
       _$gSecurityAdvisoryIdentifierTypeSerializer;
+
   static BuiltSet<GSecurityAdvisoryIdentifierType> get values =>
       _$gSecurityAdvisoryIdentifierTypeValues;
+
   static GSecurityAdvisoryIdentifierType valueOf(String name) =>
       _$gSecurityAdvisoryIdentifierTypeValueOf(name);
 }
@@ -8108,17 +8813,19 @@ abstract class GSecurityAdvisoryOrder
   GSecurityAdvisoryOrder._();
 
   factory GSecurityAdvisoryOrder(
-          [Function(GSecurityAdvisoryOrderBuilder b) updates]) =
+          [void Function(GSecurityAdvisoryOrderBuilder b) updates]) =
       _$GSecurityAdvisoryOrder;
 
   GOrderDirection get direction;
   GSecurityAdvisoryOrderField get field;
   static Serializer<GSecurityAdvisoryOrder> get serializer =>
       _$gSecurityAdvisoryOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSecurityAdvisoryOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSecurityAdvisoryOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GSecurityAdvisoryOrder.serializer,
@@ -8137,8 +8844,10 @@ class GSecurityAdvisoryOrderField extends EnumClass {
 
   static Serializer<GSecurityAdvisoryOrderField> get serializer =>
       _$gSecurityAdvisoryOrderFieldSerializer;
+
   static BuiltSet<GSecurityAdvisoryOrderField> get values =>
       _$gSecurityAdvisoryOrderFieldValues;
+
   static GSecurityAdvisoryOrderField valueOf(String name) =>
       _$gSecurityAdvisoryOrderFieldValueOf(name);
 }
@@ -8158,8 +8867,10 @@ class GSecurityAdvisorySeverity extends EnumClass {
 
   static Serializer<GSecurityAdvisorySeverity> get serializer =>
       _$gSecurityAdvisorySeveritySerializer;
+
   static BuiltSet<GSecurityAdvisorySeverity> get values =>
       _$gSecurityAdvisorySeverityValues;
+
   static GSecurityAdvisorySeverity valueOf(String name) =>
       _$gSecurityAdvisorySeverityValueOf(name);
 }
@@ -8170,17 +8881,19 @@ abstract class GSecurityVulnerabilityOrder
   GSecurityVulnerabilityOrder._();
 
   factory GSecurityVulnerabilityOrder(
-          [Function(GSecurityVulnerabilityOrderBuilder b) updates]) =
+          [void Function(GSecurityVulnerabilityOrderBuilder b) updates]) =
       _$GSecurityVulnerabilityOrder;
 
   GOrderDirection get direction;
   GSecurityVulnerabilityOrderField get field;
   static Serializer<GSecurityVulnerabilityOrder> get serializer =>
       _$gSecurityVulnerabilityOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSecurityVulnerabilityOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSecurityVulnerabilityOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GSecurityVulnerabilityOrder.serializer,
@@ -8196,8 +8909,10 @@ class GSecurityVulnerabilityOrderField extends EnumClass {
 
   static Serializer<GSecurityVulnerabilityOrderField> get serializer =>
       _$gSecurityVulnerabilityOrderFieldSerializer;
+
   static BuiltSet<GSecurityVulnerabilityOrderField> get values =>
       _$gSecurityVulnerabilityOrderFieldValues;
+
   static GSecurityVulnerabilityOrderField valueOf(String name) =>
       _$gSecurityVulnerabilityOrderFieldValueOf(name);
 }
@@ -8209,8 +8924,8 @@ abstract class GSetEnterpriseIdentityProviderInput
   GSetEnterpriseIdentityProviderInput._();
 
   factory GSetEnterpriseIdentityProviderInput(
-          [Function(GSetEnterpriseIdentityProviderInputBuilder b) updates]) =
-      _$GSetEnterpriseIdentityProviderInput;
+      [void Function(GSetEnterpriseIdentityProviderInputBuilder b)
+          updates]) = _$GSetEnterpriseIdentityProviderInput;
 
   String? get clientMutationId;
   GSamlDigestAlgorithm get digestMethod;
@@ -8221,10 +8936,12 @@ abstract class GSetEnterpriseIdentityProviderInput
   String get ssoUrl;
   static Serializer<GSetEnterpriseIdentityProviderInput> get serializer =>
       _$gSetEnterpriseIdentityProviderInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSetEnterpriseIdentityProviderInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSetEnterpriseIdentityProviderInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -8240,8 +8957,8 @@ abstract class GSetOrganizationInteractionLimitInput
   GSetOrganizationInteractionLimitInput._();
 
   factory GSetOrganizationInteractionLimitInput(
-          [Function(GSetOrganizationInteractionLimitInputBuilder b) updates]) =
-      _$GSetOrganizationInteractionLimitInput;
+      [void Function(GSetOrganizationInteractionLimitInputBuilder b)
+          updates]) = _$GSetOrganizationInteractionLimitInput;
 
   String? get clientMutationId;
   GRepositoryInteractionLimitExpiry? get expiry;
@@ -8249,10 +8966,12 @@ abstract class GSetOrganizationInteractionLimitInput
   String get organizationId;
   static Serializer<GSetOrganizationInteractionLimitInput> get serializer =>
       _$gSetOrganizationInteractionLimitInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSetOrganizationInteractionLimitInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSetOrganizationInteractionLimitInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -8268,8 +8987,8 @@ abstract class GSetRepositoryInteractionLimitInput
   GSetRepositoryInteractionLimitInput._();
 
   factory GSetRepositoryInteractionLimitInput(
-          [Function(GSetRepositoryInteractionLimitInputBuilder b) updates]) =
-      _$GSetRepositoryInteractionLimitInput;
+      [void Function(GSetRepositoryInteractionLimitInputBuilder b)
+          updates]) = _$GSetRepositoryInteractionLimitInput;
 
   String? get clientMutationId;
   GRepositoryInteractionLimitExpiry? get expiry;
@@ -8277,10 +8996,12 @@ abstract class GSetRepositoryInteractionLimitInput
   String get repositoryId;
   static Serializer<GSetRepositoryInteractionLimitInput> get serializer =>
       _$gSetRepositoryInteractionLimitInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSetRepositoryInteractionLimitInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSetRepositoryInteractionLimitInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -8296,7 +9017,7 @@ abstract class GSetUserInteractionLimitInput
   GSetUserInteractionLimitInput._();
 
   factory GSetUserInteractionLimitInput(
-          [Function(GSetUserInteractionLimitInputBuilder b) updates]) =
+          [void Function(GSetUserInteractionLimitInputBuilder b) updates]) =
       _$GSetUserInteractionLimitInput;
 
   String? get clientMutationId;
@@ -8305,10 +9026,12 @@ abstract class GSetUserInteractionLimitInput
   String get userId;
   static Serializer<GSetUserInteractionLimitInput> get serializer =>
       _$gSetUserInteractionLimitInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSetUserInteractionLimitInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSetUserInteractionLimitInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GSetUserInteractionLimitInput.serializer,
@@ -8320,16 +9043,18 @@ abstract class GSponsorOrder
     implements Built<GSponsorOrder, GSponsorOrderBuilder> {
   GSponsorOrder._();
 
-  factory GSponsorOrder([Function(GSponsorOrderBuilder b) updates]) =
+  factory GSponsorOrder([void Function(GSponsorOrderBuilder b) updates]) =
       _$GSponsorOrder;
 
   GOrderDirection get direction;
   GSponsorOrderField get field;
   static Serializer<GSponsorOrder> get serializer => _$gSponsorOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSponsorOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSponsorOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GSponsorOrder.serializer,
@@ -8346,7 +9071,9 @@ class GSponsorOrderField extends EnumClass {
 
   static Serializer<GSponsorOrderField> get serializer =>
       _$gSponsorOrderFieldSerializer;
+
   static BuiltSet<GSponsorOrderField> get values => _$gSponsorOrderFieldValues;
+
   static GSponsorOrderField valueOf(String name) =>
       _$gSponsorOrderFieldValueOf(name);
 }
@@ -8355,17 +9082,20 @@ abstract class GSponsorableOrder
     implements Built<GSponsorableOrder, GSponsorableOrderBuilder> {
   GSponsorableOrder._();
 
-  factory GSponsorableOrder([Function(GSponsorableOrderBuilder b) updates]) =
+  factory GSponsorableOrder(
+          [void Function(GSponsorableOrderBuilder b) updates]) =
       _$GSponsorableOrder;
 
   GOrderDirection get direction;
   GSponsorableOrderField get field;
   static Serializer<GSponsorableOrder> get serializer =>
       _$gSponsorableOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSponsorableOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSponsorableOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GSponsorableOrder.serializer,
@@ -8380,8 +9110,10 @@ class GSponsorableOrderField extends EnumClass {
 
   static Serializer<GSponsorableOrderField> get serializer =>
       _$gSponsorableOrderFieldSerializer;
+
   static BuiltSet<GSponsorableOrderField> get values =>
       _$gSponsorableOrderFieldValues;
+
   static GSponsorableOrderField valueOf(String name) =>
       _$gSponsorableOrderFieldValueOf(name);
 }
@@ -8408,8 +9140,10 @@ class GSponsorsActivityAction extends EnumClass {
 
   static Serializer<GSponsorsActivityAction> get serializer =>
       _$gSponsorsActivityActionSerializer;
+
   static BuiltSet<GSponsorsActivityAction> get values =>
       _$gSponsorsActivityActionValues;
+
   static GSponsorsActivityAction valueOf(String name) =>
       _$gSponsorsActivityActionValueOf(name);
 }
@@ -8419,17 +9153,19 @@ abstract class GSponsorsActivityOrder
   GSponsorsActivityOrder._();
 
   factory GSponsorsActivityOrder(
-          [Function(GSponsorsActivityOrderBuilder b) updates]) =
+          [void Function(GSponsorsActivityOrderBuilder b) updates]) =
       _$GSponsorsActivityOrder;
 
   GOrderDirection get direction;
   GSponsorsActivityOrderField get field;
   static Serializer<GSponsorsActivityOrder> get serializer =>
       _$gSponsorsActivityOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSponsorsActivityOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSponsorsActivityOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GSponsorsActivityOrder.serializer,
@@ -8445,8 +9181,10 @@ class GSponsorsActivityOrderField extends EnumClass {
 
   static Serializer<GSponsorsActivityOrderField> get serializer =>
       _$gSponsorsActivityOrderFieldSerializer;
+
   static BuiltSet<GSponsorsActivityOrderField> get values =>
       _$gSponsorsActivityOrderFieldValues;
+
   static GSponsorsActivityOrderField valueOf(String name) =>
       _$gSponsorsActivityOrderFieldValueOf(name);
 }
@@ -8464,8 +9202,10 @@ class GSponsorsActivityPeriod extends EnumClass {
 
   static Serializer<GSponsorsActivityPeriod> get serializer =>
       _$gSponsorsActivityPeriodSerializer;
+
   static BuiltSet<GSponsorsActivityPeriod> get values =>
       _$gSponsorsActivityPeriodValues;
+
   static GSponsorsActivityPeriod valueOf(String name) =>
       _$gSponsorsActivityPeriodValueOf(name);
 }
@@ -8481,7 +9221,9 @@ class GSponsorsGoalKind extends EnumClass {
 
   static Serializer<GSponsorsGoalKind> get serializer =>
       _$gSponsorsGoalKindSerializer;
+
   static BuiltSet<GSponsorsGoalKind> get values => _$gSponsorsGoalKindValues;
+
   static GSponsorsGoalKind valueOf(String name) =>
       _$gSponsorsGoalKindValueOf(name);
 }
@@ -8490,17 +9232,20 @@ abstract class GSponsorsTierOrder
     implements Built<GSponsorsTierOrder, GSponsorsTierOrderBuilder> {
   GSponsorsTierOrder._();
 
-  factory GSponsorsTierOrder([Function(GSponsorsTierOrderBuilder b) updates]) =
+  factory GSponsorsTierOrder(
+          [void Function(GSponsorsTierOrderBuilder b) updates]) =
       _$GSponsorsTierOrder;
 
   GOrderDirection get direction;
   GSponsorsTierOrderField get field;
   static Serializer<GSponsorsTierOrder> get serializer =>
       _$gSponsorsTierOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSponsorsTierOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSponsorsTierOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GSponsorsTierOrder.serializer,
@@ -8519,8 +9264,10 @@ class GSponsorsTierOrderField extends EnumClass {
 
   static Serializer<GSponsorsTierOrderField> get serializer =>
       _$gSponsorsTierOrderFieldSerializer;
+
   static BuiltSet<GSponsorsTierOrderField> get values =>
       _$gSponsorsTierOrderFieldValues;
+
   static GSponsorsTierOrderField valueOf(String name) =>
       _$gSponsorsTierOrderFieldValueOf(name);
 }
@@ -8531,17 +9278,19 @@ abstract class GSponsorshipNewsletterOrder
   GSponsorshipNewsletterOrder._();
 
   factory GSponsorshipNewsletterOrder(
-          [Function(GSponsorshipNewsletterOrderBuilder b) updates]) =
+          [void Function(GSponsorshipNewsletterOrderBuilder b) updates]) =
       _$GSponsorshipNewsletterOrder;
 
   GOrderDirection get direction;
   GSponsorshipNewsletterOrderField get field;
   static Serializer<GSponsorshipNewsletterOrder> get serializer =>
       _$gSponsorshipNewsletterOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSponsorshipNewsletterOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSponsorshipNewsletterOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GSponsorshipNewsletterOrder.serializer,
@@ -8557,8 +9306,10 @@ class GSponsorshipNewsletterOrderField extends EnumClass {
 
   static Serializer<GSponsorshipNewsletterOrderField> get serializer =>
       _$gSponsorshipNewsletterOrderFieldSerializer;
+
   static BuiltSet<GSponsorshipNewsletterOrderField> get values =>
       _$gSponsorshipNewsletterOrderFieldValues;
+
   static GSponsorshipNewsletterOrderField valueOf(String name) =>
       _$gSponsorshipNewsletterOrderFieldValueOf(name);
 }
@@ -8567,17 +9318,20 @@ abstract class GSponsorshipOrder
     implements Built<GSponsorshipOrder, GSponsorshipOrderBuilder> {
   GSponsorshipOrder._();
 
-  factory GSponsorshipOrder([Function(GSponsorshipOrderBuilder b) updates]) =
+  factory GSponsorshipOrder(
+          [void Function(GSponsorshipOrderBuilder b) updates]) =
       _$GSponsorshipOrder;
 
   GOrderDirection get direction;
   GSponsorshipOrderField get field;
   static Serializer<GSponsorshipOrder> get serializer =>
       _$gSponsorshipOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSponsorshipOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSponsorshipOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GSponsorshipOrder.serializer,
@@ -8593,8 +9347,10 @@ class GSponsorshipOrderField extends EnumClass {
 
   static Serializer<GSponsorshipOrderField> get serializer =>
       _$gSponsorshipOrderFieldSerializer;
+
   static BuiltSet<GSponsorshipOrderField> get values =>
       _$gSponsorshipOrderFieldValues;
+
   static GSponsorshipOrderField valueOf(String name) =>
       _$gSponsorshipOrderFieldValueOf(name);
 }
@@ -8608,8 +9364,10 @@ class GSponsorshipPrivacy extends EnumClass {
 
   static Serializer<GSponsorshipPrivacy> get serializer =>
       _$gSponsorshipPrivacySerializer;
+
   static BuiltSet<GSponsorshipPrivacy> get values =>
       _$gSponsorshipPrivacyValues;
+
   static GSponsorshipPrivacy valueOf(String name) =>
       _$gSponsorshipPrivacyValueOf(name);
 }
@@ -8628,8 +9386,10 @@ class GSquashMergeCommitMessage extends EnumClass {
 
   static Serializer<GSquashMergeCommitMessage> get serializer =>
       _$gSquashMergeCommitMessageSerializer;
+
   static BuiltSet<GSquashMergeCommitMessage> get values =>
       _$gSquashMergeCommitMessageValues;
+
   static GSquashMergeCommitMessage valueOf(String name) =>
       _$gSquashMergeCommitMessageValueOf(name);
 }
@@ -8645,8 +9405,10 @@ class GSquashMergeCommitTitle extends EnumClass {
 
   static Serializer<GSquashMergeCommitTitle> get serializer =>
       _$gSquashMergeCommitTitleSerializer;
+
   static BuiltSet<GSquashMergeCommitTitle> get values =>
       _$gSquashMergeCommitTitleValues;
+
   static GSquashMergeCommitTitle valueOf(String name) =>
       _$gSquashMergeCommitTitleValueOf(name);
 }
@@ -8654,15 +9416,18 @@ class GSquashMergeCommitTitle extends EnumClass {
 abstract class GStarOrder implements Built<GStarOrder, GStarOrderBuilder> {
   GStarOrder._();
 
-  factory GStarOrder([Function(GStarOrderBuilder b) updates]) = _$GStarOrder;
+  factory GStarOrder([void Function(GStarOrderBuilder b) updates]) =
+      _$GStarOrder;
 
   GOrderDirection get direction;
   GStarOrderField get field;
   static Serializer<GStarOrder> get serializer => _$gStarOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GStarOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GStarOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GStarOrder.serializer,
@@ -8677,7 +9442,9 @@ class GStarOrderField extends EnumClass {
 
   static Serializer<GStarOrderField> get serializer =>
       _$gStarOrderFieldSerializer;
+
   static BuiltSet<GStarOrderField> get values => _$gStarOrderFieldValues;
+
   static GStarOrderField valueOf(String name) => _$gStarOrderFieldValueOf(name);
 }
 
@@ -8688,7 +9455,7 @@ abstract class GStartRepositoryMigrationInput
   GStartRepositoryMigrationInput._();
 
   factory GStartRepositoryMigrationInput(
-          [Function(GStartRepositoryMigrationInputBuilder b) updates]) =
+          [void Function(GStartRepositoryMigrationInputBuilder b) updates]) =
       _$GStartRepositoryMigrationInput;
 
   String get accessToken;
@@ -8706,10 +9473,12 @@ abstract class GStartRepositoryMigrationInput
   String? get targetRepoVisibility;
   static Serializer<GStartRepositoryMigrationInput> get serializer =>
       _$gStartRepositoryMigrationInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GStartRepositoryMigrationInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GStartRepositoryMigrationInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GStartRepositoryMigrationInput.serializer,
@@ -8731,7 +9500,9 @@ class GStatusState extends EnumClass {
   static const GStatusState SUCCESS = _$gStatusStateSUCCESS;
 
   static Serializer<GStatusState> get serializer => _$gStatusStateSerializer;
+
   static BuiltSet<GStatusState> get values => _$gStatusStateValues;
+
   static GStatusState valueOf(String name) => _$gStatusStateValueOf(name);
 }
 
@@ -8742,7 +9513,7 @@ abstract class GSubmitPullRequestReviewInput
   GSubmitPullRequestReviewInput._();
 
   factory GSubmitPullRequestReviewInput(
-          [Function(GSubmitPullRequestReviewInputBuilder b) updates]) =
+          [void Function(GSubmitPullRequestReviewInputBuilder b) updates]) =
       _$GSubmitPullRequestReviewInput;
 
   String? get body;
@@ -8752,10 +9523,12 @@ abstract class GSubmitPullRequestReviewInput
   String? get pullRequestReviewId;
   static Serializer<GSubmitPullRequestReviewInput> get serializer =>
       _$gSubmitPullRequestReviewInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSubmitPullRequestReviewInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSubmitPullRequestReviewInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GSubmitPullRequestReviewInput.serializer,
@@ -8775,7 +9548,9 @@ class GSubscriptionState extends EnumClass {
 
   static Serializer<GSubscriptionState> get serializer =>
       _$gSubscriptionStateSerializer;
+
   static BuiltSet<GSubscriptionState> get values => _$gSubscriptionStateValues;
+
   static GSubscriptionState valueOf(String name) =>
       _$gSubscriptionStateValueOf(name);
 }
@@ -8786,17 +9561,19 @@ abstract class GTeamDiscussionCommentOrder
   GTeamDiscussionCommentOrder._();
 
   factory GTeamDiscussionCommentOrder(
-          [Function(GTeamDiscussionCommentOrderBuilder b) updates]) =
+          [void Function(GTeamDiscussionCommentOrderBuilder b) updates]) =
       _$GTeamDiscussionCommentOrder;
 
   GOrderDirection get direction;
   GTeamDiscussionCommentOrderField get field;
   static Serializer<GTeamDiscussionCommentOrder> get serializer =>
       _$gTeamDiscussionCommentOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GTeamDiscussionCommentOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GTeamDiscussionCommentOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GTeamDiscussionCommentOrder.serializer,
@@ -8812,8 +9589,10 @@ class GTeamDiscussionCommentOrderField extends EnumClass {
 
   static Serializer<GTeamDiscussionCommentOrderField> get serializer =>
       _$gTeamDiscussionCommentOrderFieldSerializer;
+
   static BuiltSet<GTeamDiscussionCommentOrderField> get values =>
       _$gTeamDiscussionCommentOrderFieldValues;
+
   static GTeamDiscussionCommentOrderField valueOf(String name) =>
       _$gTeamDiscussionCommentOrderFieldValueOf(name);
 }
@@ -8823,17 +9602,19 @@ abstract class GTeamDiscussionOrder
   GTeamDiscussionOrder._();
 
   factory GTeamDiscussionOrder(
-          [Function(GTeamDiscussionOrderBuilder b) updates]) =
+          [void Function(GTeamDiscussionOrderBuilder b) updates]) =
       _$GTeamDiscussionOrder;
 
   GOrderDirection get direction;
   GTeamDiscussionOrderField get field;
   static Serializer<GTeamDiscussionOrder> get serializer =>
       _$gTeamDiscussionOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GTeamDiscussionOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GTeamDiscussionOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GTeamDiscussionOrder.serializer,
@@ -8849,8 +9630,10 @@ class GTeamDiscussionOrderField extends EnumClass {
 
   static Serializer<GTeamDiscussionOrderField> get serializer =>
       _$gTeamDiscussionOrderFieldSerializer;
+
   static BuiltSet<GTeamDiscussionOrderField> get values =>
       _$gTeamDiscussionOrderFieldValues;
+
   static GTeamDiscussionOrderField valueOf(String name) =>
       _$gTeamDiscussionOrderFieldValueOf(name);
 }
@@ -8859,17 +9642,19 @@ abstract class GTeamMemberOrder
     implements Built<GTeamMemberOrder, GTeamMemberOrderBuilder> {
   GTeamMemberOrder._();
 
-  factory GTeamMemberOrder([Function(GTeamMemberOrderBuilder b) updates]) =
+  factory GTeamMemberOrder([void Function(GTeamMemberOrderBuilder b) updates]) =
       _$GTeamMemberOrder;
 
   GOrderDirection get direction;
   GTeamMemberOrderField get field;
   static Serializer<GTeamMemberOrder> get serializer =>
       _$gTeamMemberOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GTeamMemberOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GTeamMemberOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GTeamMemberOrder.serializer,
@@ -8887,8 +9672,10 @@ class GTeamMemberOrderField extends EnumClass {
 
   static Serializer<GTeamMemberOrderField> get serializer =>
       _$gTeamMemberOrderFieldSerializer;
+
   static BuiltSet<GTeamMemberOrderField> get values =>
       _$gTeamMemberOrderFieldValues;
+
   static GTeamMemberOrderField valueOf(String name) =>
       _$gTeamMemberOrderFieldValueOf(name);
 }
@@ -8902,7 +9689,9 @@ class GTeamMemberRole extends EnumClass {
 
   static Serializer<GTeamMemberRole> get serializer =>
       _$gTeamMemberRoleSerializer;
+
   static BuiltSet<GTeamMemberRole> get values => _$gTeamMemberRoleValues;
+
   static GTeamMemberRole valueOf(String name) => _$gTeamMemberRoleValueOf(name);
 }
 
@@ -8917,8 +9706,10 @@ class GTeamMembershipType extends EnumClass {
 
   static Serializer<GTeamMembershipType> get serializer =>
       _$gTeamMembershipTypeSerializer;
+
   static BuiltSet<GTeamMembershipType> get values =>
       _$gTeamMembershipTypeValues;
+
   static GTeamMembershipType valueOf(String name) =>
       _$gTeamMembershipTypeValueOf(name);
 }
@@ -8926,15 +9717,18 @@ class GTeamMembershipType extends EnumClass {
 abstract class GTeamOrder implements Built<GTeamOrder, GTeamOrderBuilder> {
   GTeamOrder._();
 
-  factory GTeamOrder([Function(GTeamOrderBuilder b) updates]) = _$GTeamOrder;
+  factory GTeamOrder([void Function(GTeamOrderBuilder b) updates]) =
+      _$GTeamOrder;
 
   GOrderDirection get direction;
   GTeamOrderField get field;
   static Serializer<GTeamOrder> get serializer => _$gTeamOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GTeamOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GTeamOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GTeamOrder.serializer,
@@ -8949,7 +9743,9 @@ class GTeamOrderField extends EnumClass {
 
   static Serializer<GTeamOrderField> get serializer =>
       _$gTeamOrderFieldSerializer;
+
   static BuiltSet<GTeamOrderField> get values => _$gTeamOrderFieldValues;
+
   static GTeamOrderField valueOf(String name) => _$gTeamOrderFieldValueOf(name);
 }
 
@@ -8961,7 +9757,9 @@ class GTeamPrivacy extends EnumClass {
   static const GTeamPrivacy VISIBLE = _$gTeamPrivacyVISIBLE;
 
   static Serializer<GTeamPrivacy> get serializer => _$gTeamPrivacySerializer;
+
   static BuiltSet<GTeamPrivacy> get values => _$gTeamPrivacyValues;
+
   static GTeamPrivacy valueOf(String name) => _$gTeamPrivacyValueOf(name);
 }
 
@@ -8970,17 +9768,19 @@ abstract class GTeamRepositoryOrder
   GTeamRepositoryOrder._();
 
   factory GTeamRepositoryOrder(
-          [Function(GTeamRepositoryOrderBuilder b) updates]) =
+          [void Function(GTeamRepositoryOrderBuilder b) updates]) =
       _$GTeamRepositoryOrder;
 
   GOrderDirection get direction;
   GTeamRepositoryOrderField get field;
   static Serializer<GTeamRepositoryOrder> get serializer =>
       _$gTeamRepositoryOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GTeamRepositoryOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GTeamRepositoryOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GTeamRepositoryOrder.serializer,
@@ -9010,8 +9810,10 @@ class GTeamRepositoryOrderField extends EnumClass {
 
   static Serializer<GTeamRepositoryOrderField> get serializer =>
       _$gTeamRepositoryOrderFieldSerializer;
+
   static BuiltSet<GTeamRepositoryOrderField> get values =>
       _$gTeamRepositoryOrderFieldValues;
+
   static GTeamRepositoryOrderField valueOf(String name) =>
       _$gTeamRepositoryOrderFieldValueOf(name);
 }
@@ -9027,8 +9829,10 @@ class GTeamReviewAssignmentAlgorithm extends EnumClass {
 
   static Serializer<GTeamReviewAssignmentAlgorithm> get serializer =>
       _$gTeamReviewAssignmentAlgorithmSerializer;
+
   static BuiltSet<GTeamReviewAssignmentAlgorithm> get values =>
       _$gTeamReviewAssignmentAlgorithmValues;
+
   static GTeamReviewAssignmentAlgorithm valueOf(String name) =>
       _$gTeamReviewAssignmentAlgorithmValueOf(name);
 }
@@ -9041,7 +9845,9 @@ class GTeamRole extends EnumClass {
   static const GTeamRole MEMBER = _$gTeamRoleMEMBER;
 
   static Serializer<GTeamRole> get serializer => _$gTeamRoleSerializer;
+
   static BuiltSet<GTeamRole> get values => _$gTeamRoleValues;
+
   static GTeamRole valueOf(String name) => _$gTeamRoleValueOf(name);
 }
 
@@ -9062,8 +9868,10 @@ class GTopicSuggestionDeclineReason extends EnumClass {
 
   static Serializer<GTopicSuggestionDeclineReason> get serializer =>
       _$gTopicSuggestionDeclineReasonSerializer;
+
   static BuiltSet<GTopicSuggestionDeclineReason> get values =>
       _$gTopicSuggestionDeclineReasonValues;
+
   static GTopicSuggestionDeclineReason valueOf(String name) =>
       _$gTopicSuggestionDeclineReasonValueOf(name);
 }
@@ -9077,8 +9885,10 @@ class GTrackedIssueStates extends EnumClass {
 
   static Serializer<GTrackedIssueStates> get serializer =>
       _$gTrackedIssueStatesSerializer;
+
   static BuiltSet<GTrackedIssueStates> get values =>
       _$gTrackedIssueStatesValues;
+
   static GTrackedIssueStates valueOf(String name) =>
       _$gTrackedIssueStatesValueOf(name);
 }
@@ -9088,7 +9898,8 @@ abstract class GTransferIssueInput
   GTransferIssueInput._();
 
   factory GTransferIssueInput(
-      [Function(GTransferIssueInputBuilder b) updates]) = _$GTransferIssueInput;
+          [void Function(GTransferIssueInputBuilder b) updates]) =
+      _$GTransferIssueInput;
 
   String? get clientMutationId;
   bool? get createLabelsIfMissing;
@@ -9096,10 +9907,12 @@ abstract class GTransferIssueInput
   String get repositoryId;
   static Serializer<GTransferIssueInput> get serializer =>
       _$gTransferIssueInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GTransferIssueInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GTransferIssueInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GTransferIssueInput.serializer,
@@ -9113,17 +9926,19 @@ abstract class GUnarchiveRepositoryInput
   GUnarchiveRepositoryInput._();
 
   factory GUnarchiveRepositoryInput(
-          [Function(GUnarchiveRepositoryInputBuilder b) updates]) =
+          [void Function(GUnarchiveRepositoryInputBuilder b) updates]) =
       _$GUnarchiveRepositoryInput;
 
   String? get clientMutationId;
   String get repositoryId;
   static Serializer<GUnarchiveRepositoryInput> get serializer =>
       _$gUnarchiveRepositoryInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUnarchiveRepositoryInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUnarchiveRepositoryInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUnarchiveRepositoryInput.serializer,
@@ -9137,17 +9952,19 @@ abstract class GUnfollowOrganizationInput
   GUnfollowOrganizationInput._();
 
   factory GUnfollowOrganizationInput(
-          [Function(GUnfollowOrganizationInputBuilder b) updates]) =
+          [void Function(GUnfollowOrganizationInputBuilder b) updates]) =
       _$GUnfollowOrganizationInput;
 
   String? get clientMutationId;
   String get organizationId;
   static Serializer<GUnfollowOrganizationInput> get serializer =>
       _$gUnfollowOrganizationInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUnfollowOrganizationInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUnfollowOrganizationInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUnfollowOrganizationInput.serializer,
@@ -9159,17 +9976,20 @@ abstract class GUnfollowUserInput
     implements Built<GUnfollowUserInput, GUnfollowUserInputBuilder> {
   GUnfollowUserInput._();
 
-  factory GUnfollowUserInput([Function(GUnfollowUserInputBuilder b) updates]) =
+  factory GUnfollowUserInput(
+          [void Function(GUnfollowUserInputBuilder b) updates]) =
       _$GUnfollowUserInput;
 
   String? get clientMutationId;
   String get userId;
   static Serializer<GUnfollowUserInput> get serializer =>
       _$gUnfollowUserInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUnfollowUserInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUnfollowUserInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUnfollowUserInput.serializer,
@@ -9184,7 +10004,7 @@ abstract class GUnlinkRepositoryFromProjectInput
   GUnlinkRepositoryFromProjectInput._();
 
   factory GUnlinkRepositoryFromProjectInput(
-          [Function(GUnlinkRepositoryFromProjectInputBuilder b) updates]) =
+          [void Function(GUnlinkRepositoryFromProjectInputBuilder b) updates]) =
       _$GUnlinkRepositoryFromProjectInput;
 
   String? get clientMutationId;
@@ -9192,10 +10012,12 @@ abstract class GUnlinkRepositoryFromProjectInput
   String get repositoryId;
   static Serializer<GUnlinkRepositoryFromProjectInput> get serializer =>
       _$gUnlinkRepositoryFromProjectInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUnlinkRepositoryFromProjectInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUnlinkRepositoryFromProjectInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -9209,17 +10031,19 @@ abstract class GUnlockLockableInput
   GUnlockLockableInput._();
 
   factory GUnlockLockableInput(
-          [Function(GUnlockLockableInputBuilder b) updates]) =
+          [void Function(GUnlockLockableInputBuilder b) updates]) =
       _$GUnlockLockableInput;
 
   String? get clientMutationId;
   String get lockableId;
   static Serializer<GUnlockLockableInput> get serializer =>
       _$gUnlockLockableInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUnlockLockableInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUnlockLockableInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUnlockLockableInput.serializer,
@@ -9234,17 +10058,19 @@ abstract class GUnmarkDiscussionCommentAsAnswerInput
   GUnmarkDiscussionCommentAsAnswerInput._();
 
   factory GUnmarkDiscussionCommentAsAnswerInput(
-          [Function(GUnmarkDiscussionCommentAsAnswerInputBuilder b) updates]) =
-      _$GUnmarkDiscussionCommentAsAnswerInput;
+      [void Function(GUnmarkDiscussionCommentAsAnswerInputBuilder b)
+          updates]) = _$GUnmarkDiscussionCommentAsAnswerInput;
 
   String? get clientMutationId;
   String get id;
   static Serializer<GUnmarkDiscussionCommentAsAnswerInput> get serializer =>
       _$gUnmarkDiscussionCommentAsAnswerInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUnmarkDiscussionCommentAsAnswerInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUnmarkDiscussionCommentAsAnswerInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -9259,7 +10085,7 @@ abstract class GUnmarkFileAsViewedInput
   GUnmarkFileAsViewedInput._();
 
   factory GUnmarkFileAsViewedInput(
-          [Function(GUnmarkFileAsViewedInputBuilder b) updates]) =
+          [void Function(GUnmarkFileAsViewedInputBuilder b) updates]) =
       _$GUnmarkFileAsViewedInput;
 
   String? get clientMutationId;
@@ -9267,10 +10093,12 @@ abstract class GUnmarkFileAsViewedInput
   String get pullRequestId;
   static Serializer<GUnmarkFileAsViewedInput> get serializer =>
       _$gUnmarkFileAsViewedInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUnmarkFileAsViewedInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUnmarkFileAsViewedInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUnmarkFileAsViewedInput.serializer,
@@ -9285,7 +10113,7 @@ abstract class GUnmarkIssueAsDuplicateInput
   GUnmarkIssueAsDuplicateInput._();
 
   factory GUnmarkIssueAsDuplicateInput(
-          [Function(GUnmarkIssueAsDuplicateInputBuilder b) updates]) =
+          [void Function(GUnmarkIssueAsDuplicateInputBuilder b) updates]) =
       _$GUnmarkIssueAsDuplicateInput;
 
   String get canonicalId;
@@ -9293,10 +10121,12 @@ abstract class GUnmarkIssueAsDuplicateInput
   String get duplicateId;
   static Serializer<GUnmarkIssueAsDuplicateInput> get serializer =>
       _$gUnmarkIssueAsDuplicateInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUnmarkIssueAsDuplicateInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUnmarkIssueAsDuplicateInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUnmarkIssueAsDuplicateInput.serializer,
@@ -9309,17 +10139,19 @@ abstract class GUnminimizeCommentInput
   GUnminimizeCommentInput._();
 
   factory GUnminimizeCommentInput(
-          [Function(GUnminimizeCommentInputBuilder b) updates]) =
+          [void Function(GUnminimizeCommentInputBuilder b) updates]) =
       _$GUnminimizeCommentInput;
 
   String? get clientMutationId;
   String get subjectId;
   static Serializer<GUnminimizeCommentInput> get serializer =>
       _$gUnminimizeCommentInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUnminimizeCommentInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUnminimizeCommentInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUnminimizeCommentInput.serializer,
@@ -9331,17 +10163,19 @@ abstract class GUnpinIssueInput
     implements Built<GUnpinIssueInput, GUnpinIssueInputBuilder> {
   GUnpinIssueInput._();
 
-  factory GUnpinIssueInput([Function(GUnpinIssueInputBuilder b) updates]) =
+  factory GUnpinIssueInput([void Function(GUnpinIssueInputBuilder b) updates]) =
       _$GUnpinIssueInput;
 
   String? get clientMutationId;
   String get issueId;
   static Serializer<GUnpinIssueInput> get serializer =>
       _$gUnpinIssueInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUnpinIssueInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUnpinIssueInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUnpinIssueInput.serializer,
@@ -9355,17 +10189,19 @@ abstract class GUnresolveReviewThreadInput
   GUnresolveReviewThreadInput._();
 
   factory GUnresolveReviewThreadInput(
-          [Function(GUnresolveReviewThreadInputBuilder b) updates]) =
+          [void Function(GUnresolveReviewThreadInputBuilder b) updates]) =
       _$GUnresolveReviewThreadInput;
 
   String? get clientMutationId;
   String get threadId;
   static Serializer<GUnresolveReviewThreadInput> get serializer =>
       _$gUnresolveReviewThreadInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUnresolveReviewThreadInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUnresolveReviewThreadInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUnresolveReviewThreadInput.serializer,
@@ -9380,7 +10216,7 @@ abstract class GUpdateBranchProtectionRuleInput
   GUpdateBranchProtectionRuleInput._();
 
   factory GUpdateBranchProtectionRuleInput(
-          [Function(GUpdateBranchProtectionRuleInputBuilder b) updates]) =
+          [void Function(GUpdateBranchProtectionRuleInputBuilder b) updates]) =
       _$GUpdateBranchProtectionRuleInput;
 
   bool? get allowsDeletions;
@@ -9409,10 +10245,12 @@ abstract class GUpdateBranchProtectionRuleInput
   BuiltList<String>? get reviewDismissalActorIds;
   static Serializer<GUpdateBranchProtectionRuleInput> get serializer =>
       _$gUpdateBranchProtectionRuleInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateBranchProtectionRuleInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateBranchProtectionRuleInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -9426,7 +10264,7 @@ abstract class GUpdateCheckRunInput
   GUpdateCheckRunInput._();
 
   factory GUpdateCheckRunInput(
-          [Function(GUpdateCheckRunInputBuilder b) updates]) =
+          [void Function(GUpdateCheckRunInputBuilder b) updates]) =
       _$GUpdateCheckRunInput;
 
   BuiltList<GCheckRunAction>? get actions;
@@ -9443,10 +10281,12 @@ abstract class GUpdateCheckRunInput
   GRequestableCheckStatusState? get status;
   static Serializer<GUpdateCheckRunInput> get serializer =>
       _$gUpdateCheckRunInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateCheckRunInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateCheckRunInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateCheckRunInput.serializer,
@@ -9461,7 +10301,7 @@ abstract class GUpdateCheckSuitePreferencesInput
   GUpdateCheckSuitePreferencesInput._();
 
   factory GUpdateCheckSuitePreferencesInput(
-          [Function(GUpdateCheckSuitePreferencesInputBuilder b) updates]) =
+          [void Function(GUpdateCheckSuitePreferencesInputBuilder b) updates]) =
       _$GUpdateCheckSuitePreferencesInput;
 
   BuiltList<GCheckSuiteAutoTriggerPreference> get autoTriggerPreferences;
@@ -9469,10 +10309,12 @@ abstract class GUpdateCheckSuitePreferencesInput
   String get repositoryId;
   static Serializer<GUpdateCheckSuitePreferencesInput> get serializer =>
       _$gUpdateCheckSuitePreferencesInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateCheckSuitePreferencesInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateCheckSuitePreferencesInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -9488,7 +10330,7 @@ abstract class GUpdateDiscussionCommentInput
   GUpdateDiscussionCommentInput._();
 
   factory GUpdateDiscussionCommentInput(
-          [Function(GUpdateDiscussionCommentInputBuilder b) updates]) =
+          [void Function(GUpdateDiscussionCommentInputBuilder b) updates]) =
       _$GUpdateDiscussionCommentInput;
 
   String get body;
@@ -9496,10 +10338,12 @@ abstract class GUpdateDiscussionCommentInput
   String get commentId;
   static Serializer<GUpdateDiscussionCommentInput> get serializer =>
       _$gUpdateDiscussionCommentInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateDiscussionCommentInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateDiscussionCommentInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateDiscussionCommentInput.serializer,
@@ -9512,7 +10356,7 @@ abstract class GUpdateDiscussionInput
   GUpdateDiscussionInput._();
 
   factory GUpdateDiscussionInput(
-          [Function(GUpdateDiscussionInputBuilder b) updates]) =
+          [void Function(GUpdateDiscussionInputBuilder b) updates]) =
       _$GUpdateDiscussionInput;
 
   String? get body;
@@ -9522,10 +10366,12 @@ abstract class GUpdateDiscussionInput
   String? get title;
   static Serializer<GUpdateDiscussionInput> get serializer =>
       _$gUpdateDiscussionInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateDiscussionInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateDiscussionInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateDiscussionInput.serializer,
@@ -9540,7 +10386,7 @@ abstract class GUpdateEnterpriseAdministratorRoleInput
   GUpdateEnterpriseAdministratorRoleInput._();
 
   factory GUpdateEnterpriseAdministratorRoleInput(
-      [Function(GUpdateEnterpriseAdministratorRoleInputBuilder b)
+      [void Function(GUpdateEnterpriseAdministratorRoleInputBuilder b)
           updates]) = _$GUpdateEnterpriseAdministratorRoleInput;
 
   String? get clientMutationId;
@@ -9549,10 +10395,12 @@ abstract class GUpdateEnterpriseAdministratorRoleInput
   GEnterpriseAdministratorRole get role;
   static Serializer<GUpdateEnterpriseAdministratorRoleInput> get serializer =>
       _$gUpdateEnterpriseAdministratorRoleInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateEnterpriseAdministratorRoleInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateEnterpriseAdministratorRoleInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -9568,7 +10416,7 @@ abstract class GUpdateEnterpriseAllowPrivateRepositoryForkingSettingInput
   GUpdateEnterpriseAllowPrivateRepositoryForkingSettingInput._();
 
   factory GUpdateEnterpriseAllowPrivateRepositoryForkingSettingInput(
-      [Function(
+      [void Function(
               GUpdateEnterpriseAllowPrivateRepositoryForkingSettingInputBuilder
                   b)
           updates]) = _$GUpdateEnterpriseAllowPrivateRepositoryForkingSettingInput;
@@ -9580,10 +10428,12 @@ abstract class GUpdateEnterpriseAllowPrivateRepositoryForkingSettingInput
   static Serializer<GUpdateEnterpriseAllowPrivateRepositoryForkingSettingInput>
       get serializer =>
           _$gUpdateEnterpriseAllowPrivateRepositoryForkingSettingInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateEnterpriseAllowPrivateRepositoryForkingSettingInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateEnterpriseAllowPrivateRepositoryForkingSettingInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -9599,7 +10449,7 @@ abstract class GUpdateEnterpriseDefaultRepositoryPermissionSettingInput
   GUpdateEnterpriseDefaultRepositoryPermissionSettingInput._();
 
   factory GUpdateEnterpriseDefaultRepositoryPermissionSettingInput(
-      [Function(
+      [void Function(
               GUpdateEnterpriseDefaultRepositoryPermissionSettingInputBuilder b)
           updates]) = _$GUpdateEnterpriseDefaultRepositoryPermissionSettingInput;
 
@@ -9609,10 +10459,12 @@ abstract class GUpdateEnterpriseDefaultRepositoryPermissionSettingInput
   static Serializer<GUpdateEnterpriseDefaultRepositoryPermissionSettingInput>
       get serializer =>
           _$gUpdateEnterpriseDefaultRepositoryPermissionSettingInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateEnterpriseDefaultRepositoryPermissionSettingInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateEnterpriseDefaultRepositoryPermissionSettingInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -9628,7 +10480,7 @@ abstract class GUpdateEnterpriseMembersCanChangeRepositoryVisibilitySettingInput
   GUpdateEnterpriseMembersCanChangeRepositoryVisibilitySettingInput._();
 
   factory GUpdateEnterpriseMembersCanChangeRepositoryVisibilitySettingInput(
-          [Function(
+          [void Function(
                   GUpdateEnterpriseMembersCanChangeRepositoryVisibilitySettingInputBuilder
                       b)
               updates]) =
@@ -9641,11 +10493,13 @@ abstract class GUpdateEnterpriseMembersCanChangeRepositoryVisibilitySettingInput
           GUpdateEnterpriseMembersCanChangeRepositoryVisibilitySettingInput>
       get serializer =>
           _$gUpdateEnterpriseMembersCanChangeRepositoryVisibilitySettingInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateEnterpriseMembersCanChangeRepositoryVisibilitySettingInput
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateEnterpriseMembersCanChangeRepositoryVisibilitySettingInput?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GUpdateEnterpriseMembersCanChangeRepositoryVisibilitySettingInput
@@ -9661,7 +10515,7 @@ abstract class GUpdateEnterpriseMembersCanCreateRepositoriesSettingInput
   GUpdateEnterpriseMembersCanCreateRepositoriesSettingInput._();
 
   factory GUpdateEnterpriseMembersCanCreateRepositoriesSettingInput(
-      [Function(
+      [void Function(
               GUpdateEnterpriseMembersCanCreateRepositoriesSettingInputBuilder
                   b)
           updates]) = _$GUpdateEnterpriseMembersCanCreateRepositoriesSettingInput;
@@ -9676,10 +10530,12 @@ abstract class GUpdateEnterpriseMembersCanCreateRepositoriesSettingInput
   static Serializer<GUpdateEnterpriseMembersCanCreateRepositoriesSettingInput>
       get serializer =>
           _$gUpdateEnterpriseMembersCanCreateRepositoriesSettingInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateEnterpriseMembersCanCreateRepositoriesSettingInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateEnterpriseMembersCanCreateRepositoriesSettingInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -9695,7 +10551,8 @@ abstract class GUpdateEnterpriseMembersCanDeleteIssuesSettingInput
   GUpdateEnterpriseMembersCanDeleteIssuesSettingInput._();
 
   factory GUpdateEnterpriseMembersCanDeleteIssuesSettingInput(
-      [Function(GUpdateEnterpriseMembersCanDeleteIssuesSettingInputBuilder b)
+      [void Function(
+              GUpdateEnterpriseMembersCanDeleteIssuesSettingInputBuilder b)
           updates]) = _$GUpdateEnterpriseMembersCanDeleteIssuesSettingInput;
 
   String? get clientMutationId;
@@ -9704,10 +10561,12 @@ abstract class GUpdateEnterpriseMembersCanDeleteIssuesSettingInput
   static Serializer<GUpdateEnterpriseMembersCanDeleteIssuesSettingInput>
       get serializer =>
           _$gUpdateEnterpriseMembersCanDeleteIssuesSettingInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateEnterpriseMembersCanDeleteIssuesSettingInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateEnterpriseMembersCanDeleteIssuesSettingInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -9723,7 +10582,7 @@ abstract class GUpdateEnterpriseMembersCanDeleteRepositoriesSettingInput
   GUpdateEnterpriseMembersCanDeleteRepositoriesSettingInput._();
 
   factory GUpdateEnterpriseMembersCanDeleteRepositoriesSettingInput(
-      [Function(
+      [void Function(
               GUpdateEnterpriseMembersCanDeleteRepositoriesSettingInputBuilder
                   b)
           updates]) = _$GUpdateEnterpriseMembersCanDeleteRepositoriesSettingInput;
@@ -9734,10 +10593,12 @@ abstract class GUpdateEnterpriseMembersCanDeleteRepositoriesSettingInput
   static Serializer<GUpdateEnterpriseMembersCanDeleteRepositoriesSettingInput>
       get serializer =>
           _$gUpdateEnterpriseMembersCanDeleteRepositoriesSettingInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateEnterpriseMembersCanDeleteRepositoriesSettingInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateEnterpriseMembersCanDeleteRepositoriesSettingInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -9753,7 +10614,7 @@ abstract class GUpdateEnterpriseMembersCanInviteCollaboratorsSettingInput
   GUpdateEnterpriseMembersCanInviteCollaboratorsSettingInput._();
 
   factory GUpdateEnterpriseMembersCanInviteCollaboratorsSettingInput(
-      [Function(
+      [void Function(
               GUpdateEnterpriseMembersCanInviteCollaboratorsSettingInputBuilder
                   b)
           updates]) = _$GUpdateEnterpriseMembersCanInviteCollaboratorsSettingInput;
@@ -9764,10 +10625,12 @@ abstract class GUpdateEnterpriseMembersCanInviteCollaboratorsSettingInput
   static Serializer<GUpdateEnterpriseMembersCanInviteCollaboratorsSettingInput>
       get serializer =>
           _$gUpdateEnterpriseMembersCanInviteCollaboratorsSettingInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateEnterpriseMembersCanInviteCollaboratorsSettingInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateEnterpriseMembersCanInviteCollaboratorsSettingInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -9783,7 +10646,8 @@ abstract class GUpdateEnterpriseMembersCanMakePurchasesSettingInput
   GUpdateEnterpriseMembersCanMakePurchasesSettingInput._();
 
   factory GUpdateEnterpriseMembersCanMakePurchasesSettingInput(
-      [Function(GUpdateEnterpriseMembersCanMakePurchasesSettingInputBuilder b)
+      [void Function(
+              GUpdateEnterpriseMembersCanMakePurchasesSettingInputBuilder b)
           updates]) = _$GUpdateEnterpriseMembersCanMakePurchasesSettingInput;
 
   String? get clientMutationId;
@@ -9792,10 +10656,12 @@ abstract class GUpdateEnterpriseMembersCanMakePurchasesSettingInput
   static Serializer<GUpdateEnterpriseMembersCanMakePurchasesSettingInput>
       get serializer =>
           _$gUpdateEnterpriseMembersCanMakePurchasesSettingInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateEnterpriseMembersCanMakePurchasesSettingInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateEnterpriseMembersCanMakePurchasesSettingInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -9811,7 +10677,7 @@ abstract class GUpdateEnterpriseMembersCanUpdateProtectedBranchesSettingInput
   GUpdateEnterpriseMembersCanUpdateProtectedBranchesSettingInput._();
 
   factory GUpdateEnterpriseMembersCanUpdateProtectedBranchesSettingInput(
-          [Function(
+          [void Function(
                   GUpdateEnterpriseMembersCanUpdateProtectedBranchesSettingInputBuilder
                       b)
               updates]) =
@@ -9824,11 +10690,13 @@ abstract class GUpdateEnterpriseMembersCanUpdateProtectedBranchesSettingInput
           GUpdateEnterpriseMembersCanUpdateProtectedBranchesSettingInput>
       get serializer =>
           _$gUpdateEnterpriseMembersCanUpdateProtectedBranchesSettingInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateEnterpriseMembersCanUpdateProtectedBranchesSettingInput
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateEnterpriseMembersCanUpdateProtectedBranchesSettingInput?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GUpdateEnterpriseMembersCanUpdateProtectedBranchesSettingInput
@@ -9844,7 +10712,7 @@ abstract class GUpdateEnterpriseMembersCanViewDependencyInsightsSettingInput
   GUpdateEnterpriseMembersCanViewDependencyInsightsSettingInput._();
 
   factory GUpdateEnterpriseMembersCanViewDependencyInsightsSettingInput(
-          [Function(
+          [void Function(
                   GUpdateEnterpriseMembersCanViewDependencyInsightsSettingInputBuilder
                       b)
               updates]) =
@@ -9857,11 +10725,13 @@ abstract class GUpdateEnterpriseMembersCanViewDependencyInsightsSettingInput
           GUpdateEnterpriseMembersCanViewDependencyInsightsSettingInput>
       get serializer =>
           _$gUpdateEnterpriseMembersCanViewDependencyInsightsSettingInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateEnterpriseMembersCanViewDependencyInsightsSettingInput
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateEnterpriseMembersCanViewDependencyInsightsSettingInput?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GUpdateEnterpriseMembersCanViewDependencyInsightsSettingInput
@@ -9877,7 +10747,7 @@ abstract class GUpdateEnterpriseOrganizationProjectsSettingInput
   GUpdateEnterpriseOrganizationProjectsSettingInput._();
 
   factory GUpdateEnterpriseOrganizationProjectsSettingInput(
-      [Function(GUpdateEnterpriseOrganizationProjectsSettingInputBuilder b)
+      [void Function(GUpdateEnterpriseOrganizationProjectsSettingInputBuilder b)
           updates]) = _$GUpdateEnterpriseOrganizationProjectsSettingInput;
 
   String? get clientMutationId;
@@ -9886,10 +10756,12 @@ abstract class GUpdateEnterpriseOrganizationProjectsSettingInput
   static Serializer<GUpdateEnterpriseOrganizationProjectsSettingInput>
       get serializer =>
           _$gUpdateEnterpriseOrganizationProjectsSettingInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateEnterpriseOrganizationProjectsSettingInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateEnterpriseOrganizationProjectsSettingInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -9905,7 +10777,7 @@ abstract class GUpdateEnterpriseOwnerOrganizationRoleInput
   GUpdateEnterpriseOwnerOrganizationRoleInput._();
 
   factory GUpdateEnterpriseOwnerOrganizationRoleInput(
-      [Function(GUpdateEnterpriseOwnerOrganizationRoleInputBuilder b)
+      [void Function(GUpdateEnterpriseOwnerOrganizationRoleInputBuilder b)
           updates]) = _$GUpdateEnterpriseOwnerOrganizationRoleInput;
 
   String? get clientMutationId;
@@ -9914,10 +10786,12 @@ abstract class GUpdateEnterpriseOwnerOrganizationRoleInput
   GRoleInOrganization get organizationRole;
   static Serializer<GUpdateEnterpriseOwnerOrganizationRoleInput>
       get serializer => _$gUpdateEnterpriseOwnerOrganizationRoleInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateEnterpriseOwnerOrganizationRoleInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateEnterpriseOwnerOrganizationRoleInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -9933,7 +10807,7 @@ abstract class GUpdateEnterpriseProfileInput
   GUpdateEnterpriseProfileInput._();
 
   factory GUpdateEnterpriseProfileInput(
-          [Function(GUpdateEnterpriseProfileInputBuilder b) updates]) =
+          [void Function(GUpdateEnterpriseProfileInputBuilder b) updates]) =
       _$GUpdateEnterpriseProfileInput;
 
   String? get clientMutationId;
@@ -9944,10 +10818,12 @@ abstract class GUpdateEnterpriseProfileInput
   String? get websiteUrl;
   static Serializer<GUpdateEnterpriseProfileInput> get serializer =>
       _$gUpdateEnterpriseProfileInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateEnterpriseProfileInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateEnterpriseProfileInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateEnterpriseProfileInput.serializer,
@@ -9962,7 +10838,7 @@ abstract class GUpdateEnterpriseRepositoryProjectsSettingInput
   GUpdateEnterpriseRepositoryProjectsSettingInput._();
 
   factory GUpdateEnterpriseRepositoryProjectsSettingInput(
-      [Function(GUpdateEnterpriseRepositoryProjectsSettingInputBuilder b)
+      [void Function(GUpdateEnterpriseRepositoryProjectsSettingInputBuilder b)
           updates]) = _$GUpdateEnterpriseRepositoryProjectsSettingInput;
 
   String? get clientMutationId;
@@ -9971,10 +10847,12 @@ abstract class GUpdateEnterpriseRepositoryProjectsSettingInput
   static Serializer<GUpdateEnterpriseRepositoryProjectsSettingInput>
       get serializer =>
           _$gUpdateEnterpriseRepositoryProjectsSettingInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateEnterpriseRepositoryProjectsSettingInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateEnterpriseRepositoryProjectsSettingInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -9990,7 +10868,7 @@ abstract class GUpdateEnterpriseTeamDiscussionsSettingInput
   GUpdateEnterpriseTeamDiscussionsSettingInput._();
 
   factory GUpdateEnterpriseTeamDiscussionsSettingInput(
-      [Function(GUpdateEnterpriseTeamDiscussionsSettingInputBuilder b)
+      [void Function(GUpdateEnterpriseTeamDiscussionsSettingInputBuilder b)
           updates]) = _$GUpdateEnterpriseTeamDiscussionsSettingInput;
 
   String? get clientMutationId;
@@ -9999,10 +10877,12 @@ abstract class GUpdateEnterpriseTeamDiscussionsSettingInput
   static Serializer<GUpdateEnterpriseTeamDiscussionsSettingInput>
       get serializer =>
           _$gUpdateEnterpriseTeamDiscussionsSettingInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateEnterpriseTeamDiscussionsSettingInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateEnterpriseTeamDiscussionsSettingInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -10018,7 +10898,7 @@ abstract class GUpdateEnterpriseTwoFactorAuthenticationRequiredSettingInput
   GUpdateEnterpriseTwoFactorAuthenticationRequiredSettingInput._();
 
   factory GUpdateEnterpriseTwoFactorAuthenticationRequiredSettingInput(
-          [Function(
+          [void Function(
                   GUpdateEnterpriseTwoFactorAuthenticationRequiredSettingInputBuilder
                       b)
               updates]) =
@@ -10031,10 +10911,12 @@ abstract class GUpdateEnterpriseTwoFactorAuthenticationRequiredSettingInput
           GUpdateEnterpriseTwoFactorAuthenticationRequiredSettingInput>
       get serializer =>
           _$gUpdateEnterpriseTwoFactorAuthenticationRequiredSettingInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateEnterpriseTwoFactorAuthenticationRequiredSettingInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateEnterpriseTwoFactorAuthenticationRequiredSettingInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -10048,7 +10930,7 @@ abstract class GUpdateEnvironmentInput
   GUpdateEnvironmentInput._();
 
   factory GUpdateEnvironmentInput(
-          [Function(GUpdateEnvironmentInputBuilder b) updates]) =
+          [void Function(GUpdateEnvironmentInputBuilder b) updates]) =
       _$GUpdateEnvironmentInput;
 
   String? get clientMutationId;
@@ -10057,10 +10939,12 @@ abstract class GUpdateEnvironmentInput
   int? get waitTimer;
   static Serializer<GUpdateEnvironmentInput> get serializer =>
       _$gUpdateEnvironmentInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateEnvironmentInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateEnvironmentInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateEnvironmentInput.serializer,
@@ -10075,18 +10959,20 @@ abstract class GUpdateIpAllowListEnabledSettingInput
   GUpdateIpAllowListEnabledSettingInput._();
 
   factory GUpdateIpAllowListEnabledSettingInput(
-          [Function(GUpdateIpAllowListEnabledSettingInputBuilder b) updates]) =
-      _$GUpdateIpAllowListEnabledSettingInput;
+      [void Function(GUpdateIpAllowListEnabledSettingInputBuilder b)
+          updates]) = _$GUpdateIpAllowListEnabledSettingInput;
 
   String? get clientMutationId;
   String get ownerId;
   GIpAllowListEnabledSettingValue get settingValue;
   static Serializer<GUpdateIpAllowListEnabledSettingInput> get serializer =>
       _$gUpdateIpAllowListEnabledSettingInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateIpAllowListEnabledSettingInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateIpAllowListEnabledSettingInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -10102,7 +10988,7 @@ abstract class GUpdateIpAllowListEntryInput
   GUpdateIpAllowListEntryInput._();
 
   factory GUpdateIpAllowListEntryInput(
-          [Function(GUpdateIpAllowListEntryInputBuilder b) updates]) =
+          [void Function(GUpdateIpAllowListEntryInputBuilder b) updates]) =
       _$GUpdateIpAllowListEntryInput;
 
   String get allowListValue;
@@ -10112,10 +10998,12 @@ abstract class GUpdateIpAllowListEntryInput
   String? get name;
   static Serializer<GUpdateIpAllowListEntryInput> get serializer =>
       _$gUpdateIpAllowListEntryInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateIpAllowListEntryInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateIpAllowListEntryInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateIpAllowListEntryInput.serializer,
@@ -10130,7 +11018,8 @@ abstract class GUpdateIpAllowListForInstalledAppsEnabledSettingInput
   GUpdateIpAllowListForInstalledAppsEnabledSettingInput._();
 
   factory GUpdateIpAllowListForInstalledAppsEnabledSettingInput(
-      [Function(GUpdateIpAllowListForInstalledAppsEnabledSettingInputBuilder b)
+      [void Function(
+              GUpdateIpAllowListForInstalledAppsEnabledSettingInputBuilder b)
           updates]) = _$GUpdateIpAllowListForInstalledAppsEnabledSettingInput;
 
   String? get clientMutationId;
@@ -10139,10 +11028,12 @@ abstract class GUpdateIpAllowListForInstalledAppsEnabledSettingInput
   static Serializer<GUpdateIpAllowListForInstalledAppsEnabledSettingInput>
       get serializer =>
           _$gUpdateIpAllowListForInstalledAppsEnabledSettingInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateIpAllowListForInstalledAppsEnabledSettingInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateIpAllowListForInstalledAppsEnabledSettingInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -10157,7 +11048,7 @@ abstract class GUpdateIssueCommentInput
   GUpdateIssueCommentInput._();
 
   factory GUpdateIssueCommentInput(
-          [Function(GUpdateIssueCommentInputBuilder b) updates]) =
+          [void Function(GUpdateIssueCommentInputBuilder b) updates]) =
       _$GUpdateIssueCommentInput;
 
   String get body;
@@ -10165,10 +11056,12 @@ abstract class GUpdateIssueCommentInput
   String get id;
   static Serializer<GUpdateIssueCommentInput> get serializer =>
       _$gUpdateIssueCommentInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateIssueCommentInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateIssueCommentInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateIssueCommentInput.serializer,
@@ -10180,7 +11073,8 @@ abstract class GUpdateIssueInput
     implements Built<GUpdateIssueInput, GUpdateIssueInputBuilder> {
   GUpdateIssueInput._();
 
-  factory GUpdateIssueInput([Function(GUpdateIssueInputBuilder b) updates]) =
+  factory GUpdateIssueInput(
+          [void Function(GUpdateIssueInputBuilder b) updates]) =
       _$GUpdateIssueInput;
 
   BuiltList<String>? get assigneeIds;
@@ -10194,10 +11088,12 @@ abstract class GUpdateIssueInput
   String? get title;
   static Serializer<GUpdateIssueInput> get serializer =>
       _$gUpdateIssueInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateIssueInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateIssueInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateIssueInput.serializer,
@@ -10209,7 +11105,8 @@ abstract class GUpdateLabelInput
     implements Built<GUpdateLabelInput, GUpdateLabelInputBuilder> {
   GUpdateLabelInput._();
 
-  factory GUpdateLabelInput([Function(GUpdateLabelInputBuilder b) updates]) =
+  factory GUpdateLabelInput(
+          [void Function(GUpdateLabelInputBuilder b) updates]) =
       _$GUpdateLabelInput;
 
   String? get clientMutationId;
@@ -10219,10 +11116,12 @@ abstract class GUpdateLabelInput
   String? get name;
   static Serializer<GUpdateLabelInput> get serializer =>
       _$gUpdateLabelInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateLabelInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateLabelInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateLabelInput.serializer,
@@ -10237,7 +11136,7 @@ abstract class GUpdateNotificationRestrictionSettingInput
   GUpdateNotificationRestrictionSettingInput._();
 
   factory GUpdateNotificationRestrictionSettingInput(
-      [Function(GUpdateNotificationRestrictionSettingInputBuilder b)
+      [void Function(GUpdateNotificationRestrictionSettingInputBuilder b)
           updates]) = _$GUpdateNotificationRestrictionSettingInput;
 
   String? get clientMutationId;
@@ -10245,10 +11144,12 @@ abstract class GUpdateNotificationRestrictionSettingInput
   GNotificationRestrictionSettingValue get settingValue;
   static Serializer<GUpdateNotificationRestrictionSettingInput>
       get serializer => _$gUpdateNotificationRestrictionSettingInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateNotificationRestrictionSettingInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateNotificationRestrictionSettingInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -10264,7 +11165,7 @@ abstract class GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput
   GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput._();
 
   factory GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput(
-          [Function(
+          [void Function(
                   GUpdateOrganizationAllowPrivateRepositoryForkingSettingInputBuilder
                       b)
               updates]) =
@@ -10277,10 +11178,12 @@ abstract class GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput
           GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput>
       get serializer =>
           _$gUpdateOrganizationAllowPrivateRepositoryForkingSettingInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateOrganizationAllowPrivateRepositoryForkingSettingInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -10296,7 +11199,7 @@ abstract class GUpdateOrganizationWebCommitSignoffSettingInput
   GUpdateOrganizationWebCommitSignoffSettingInput._();
 
   factory GUpdateOrganizationWebCommitSignoffSettingInput(
-      [Function(GUpdateOrganizationWebCommitSignoffSettingInputBuilder b)
+      [void Function(GUpdateOrganizationWebCommitSignoffSettingInputBuilder b)
           updates]) = _$GUpdateOrganizationWebCommitSignoffSettingInput;
 
   String? get clientMutationId;
@@ -10305,10 +11208,12 @@ abstract class GUpdateOrganizationWebCommitSignoffSettingInput
   static Serializer<GUpdateOrganizationWebCommitSignoffSettingInput>
       get serializer =>
           _$gUpdateOrganizationWebCommitSignoffSettingInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateOrganizationWebCommitSignoffSettingInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateOrganizationWebCommitSignoffSettingInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -10322,7 +11227,7 @@ abstract class GUpdateProjectCardInput
   GUpdateProjectCardInput._();
 
   factory GUpdateProjectCardInput(
-          [Function(GUpdateProjectCardInputBuilder b) updates]) =
+          [void Function(GUpdateProjectCardInputBuilder b) updates]) =
       _$GUpdateProjectCardInput;
 
   String? get clientMutationId;
@@ -10331,10 +11236,12 @@ abstract class GUpdateProjectCardInput
   String get projectCardId;
   static Serializer<GUpdateProjectCardInput> get serializer =>
       _$gUpdateProjectCardInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateProjectCardInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateProjectCardInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateProjectCardInput.serializer,
@@ -10348,7 +11255,7 @@ abstract class GUpdateProjectColumnInput
   GUpdateProjectColumnInput._();
 
   factory GUpdateProjectColumnInput(
-          [Function(GUpdateProjectColumnInputBuilder b) updates]) =
+          [void Function(GUpdateProjectColumnInputBuilder b) updates]) =
       _$GUpdateProjectColumnInput;
 
   String? get clientMutationId;
@@ -10356,10 +11263,12 @@ abstract class GUpdateProjectColumnInput
   String get projectColumnId;
   static Serializer<GUpdateProjectColumnInput> get serializer =>
       _$gUpdateProjectColumnInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateProjectColumnInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateProjectColumnInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateProjectColumnInput.serializer,
@@ -10374,7 +11283,7 @@ abstract class GUpdateProjectDraftIssueInput
   GUpdateProjectDraftIssueInput._();
 
   factory GUpdateProjectDraftIssueInput(
-          [Function(GUpdateProjectDraftIssueInputBuilder b) updates]) =
+          [void Function(GUpdateProjectDraftIssueInputBuilder b) updates]) =
       _$GUpdateProjectDraftIssueInput;
 
   BuiltList<String>? get assigneeIds;
@@ -10384,10 +11293,12 @@ abstract class GUpdateProjectDraftIssueInput
   String? get title;
   static Serializer<GUpdateProjectDraftIssueInput> get serializer =>
       _$gUpdateProjectDraftIssueInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateProjectDraftIssueInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateProjectDraftIssueInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateProjectDraftIssueInput.serializer,
@@ -10400,7 +11311,8 @@ abstract class GUpdateProjectInput
   GUpdateProjectInput._();
 
   factory GUpdateProjectInput(
-      [Function(GUpdateProjectInputBuilder b) updates]) = _$GUpdateProjectInput;
+          [void Function(GUpdateProjectInputBuilder b) updates]) =
+      _$GUpdateProjectInput;
 
   String? get body;
   String? get clientMutationId;
@@ -10410,10 +11322,12 @@ abstract class GUpdateProjectInput
   GProjectState? get state;
   static Serializer<GUpdateProjectInput> get serializer =>
       _$gUpdateProjectInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateProjectInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateProjectInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateProjectInput.serializer,
@@ -10426,7 +11340,7 @@ abstract class GUpdateProjectNextInput
   GUpdateProjectNextInput._();
 
   factory GUpdateProjectNextInput(
-          [Function(GUpdateProjectNextInputBuilder b) updates]) =
+          [void Function(GUpdateProjectNextInputBuilder b) updates]) =
       _$GUpdateProjectNextInput;
 
   String? get clientMutationId;
@@ -10438,10 +11352,12 @@ abstract class GUpdateProjectNextInput
   String? get title;
   static Serializer<GUpdateProjectNextInput> get serializer =>
       _$gUpdateProjectNextInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateProjectNextInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateProjectNextInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateProjectNextInput.serializer,
@@ -10456,7 +11372,7 @@ abstract class GUpdateProjectNextItemFieldInput
   GUpdateProjectNextItemFieldInput._();
 
   factory GUpdateProjectNextItemFieldInput(
-          [Function(GUpdateProjectNextItemFieldInputBuilder b) updates]) =
+          [void Function(GUpdateProjectNextItemFieldInputBuilder b) updates]) =
       _$GUpdateProjectNextItemFieldInput;
 
   String? get clientMutationId;
@@ -10466,10 +11382,12 @@ abstract class GUpdateProjectNextItemFieldInput
   String? get value;
   static Serializer<GUpdateProjectNextItemFieldInput> get serializer =>
       _$gUpdateProjectNextItemFieldInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateProjectNextItemFieldInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateProjectNextItemFieldInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -10485,7 +11403,7 @@ abstract class GUpdateProjectV2DraftIssueInput
   GUpdateProjectV2DraftIssueInput._();
 
   factory GUpdateProjectV2DraftIssueInput(
-          [Function(GUpdateProjectV2DraftIssueInputBuilder b) updates]) =
+          [void Function(GUpdateProjectV2DraftIssueInputBuilder b) updates]) =
       _$GUpdateProjectV2DraftIssueInput;
 
   BuiltList<String>? get assigneeIds;
@@ -10495,10 +11413,12 @@ abstract class GUpdateProjectV2DraftIssueInput
   String? get title;
   static Serializer<GUpdateProjectV2DraftIssueInput> get serializer =>
       _$gUpdateProjectV2DraftIssueInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateProjectV2DraftIssueInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateProjectV2DraftIssueInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateProjectV2DraftIssueInput.serializer,
@@ -10511,7 +11431,7 @@ abstract class GUpdateProjectV2Input
   GUpdateProjectV2Input._();
 
   factory GUpdateProjectV2Input(
-          [Function(GUpdateProjectV2InputBuilder b) updates]) =
+          [void Function(GUpdateProjectV2InputBuilder b) updates]) =
       _$GUpdateProjectV2Input;
 
   String? get clientMutationId;
@@ -10523,10 +11443,12 @@ abstract class GUpdateProjectV2Input
   String? get title;
   static Serializer<GUpdateProjectV2Input> get serializer =>
       _$gUpdateProjectV2InputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateProjectV2Input.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateProjectV2Input? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateProjectV2Input.serializer,
@@ -10541,8 +11463,8 @@ abstract class GUpdateProjectV2ItemFieldValueInput
   GUpdateProjectV2ItemFieldValueInput._();
 
   factory GUpdateProjectV2ItemFieldValueInput(
-          [Function(GUpdateProjectV2ItemFieldValueInputBuilder b) updates]) =
-      _$GUpdateProjectV2ItemFieldValueInput;
+      [void Function(GUpdateProjectV2ItemFieldValueInputBuilder b)
+          updates]) = _$GUpdateProjectV2ItemFieldValueInput;
 
   String? get clientMutationId;
   String get fieldId;
@@ -10551,10 +11473,12 @@ abstract class GUpdateProjectV2ItemFieldValueInput
   GProjectV2FieldValue get value;
   static Serializer<GUpdateProjectV2ItemFieldValueInput> get serializer =>
       _$gUpdateProjectV2ItemFieldValueInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateProjectV2ItemFieldValueInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateProjectV2ItemFieldValueInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -10570,7 +11494,7 @@ abstract class GUpdateProjectV2ItemPositionInput
   GUpdateProjectV2ItemPositionInput._();
 
   factory GUpdateProjectV2ItemPositionInput(
-          [Function(GUpdateProjectV2ItemPositionInputBuilder b) updates]) =
+          [void Function(GUpdateProjectV2ItemPositionInputBuilder b) updates]) =
       _$GUpdateProjectV2ItemPositionInput;
 
   String? get afterId;
@@ -10579,10 +11503,12 @@ abstract class GUpdateProjectV2ItemPositionInput
   String get projectId;
   static Serializer<GUpdateProjectV2ItemPositionInput> get serializer =>
       _$gUpdateProjectV2ItemPositionInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateProjectV2ItemPositionInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateProjectV2ItemPositionInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -10598,7 +11524,7 @@ abstract class GUpdatePullRequestBranchInput
   GUpdatePullRequestBranchInput._();
 
   factory GUpdatePullRequestBranchInput(
-          [Function(GUpdatePullRequestBranchInputBuilder b) updates]) =
+          [void Function(GUpdatePullRequestBranchInputBuilder b) updates]) =
       _$GUpdatePullRequestBranchInput;
 
   String? get clientMutationId;
@@ -10606,10 +11532,12 @@ abstract class GUpdatePullRequestBranchInput
   String get pullRequestId;
   static Serializer<GUpdatePullRequestBranchInput> get serializer =>
       _$gUpdatePullRequestBranchInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdatePullRequestBranchInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdatePullRequestBranchInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdatePullRequestBranchInput.serializer,
@@ -10622,7 +11550,7 @@ abstract class GUpdatePullRequestInput
   GUpdatePullRequestInput._();
 
   factory GUpdatePullRequestInput(
-          [Function(GUpdatePullRequestInputBuilder b) updates]) =
+          [void Function(GUpdatePullRequestInputBuilder b) updates]) =
       _$GUpdatePullRequestInput;
 
   BuiltList<String>? get assigneeIds;
@@ -10638,10 +11566,12 @@ abstract class GUpdatePullRequestInput
   String? get title;
   static Serializer<GUpdatePullRequestInput> get serializer =>
       _$gUpdatePullRequestInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdatePullRequestInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdatePullRequestInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdatePullRequestInput.serializer,
@@ -10656,18 +11586,20 @@ abstract class GUpdatePullRequestReviewCommentInput
   GUpdatePullRequestReviewCommentInput._();
 
   factory GUpdatePullRequestReviewCommentInput(
-          [Function(GUpdatePullRequestReviewCommentInputBuilder b) updates]) =
-      _$GUpdatePullRequestReviewCommentInput;
+      [void Function(GUpdatePullRequestReviewCommentInputBuilder b)
+          updates]) = _$GUpdatePullRequestReviewCommentInput;
 
   String get body;
   String? get clientMutationId;
   String get pullRequestReviewCommentId;
   static Serializer<GUpdatePullRequestReviewCommentInput> get serializer =>
       _$gUpdatePullRequestReviewCommentInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdatePullRequestReviewCommentInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdatePullRequestReviewCommentInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -10683,7 +11615,7 @@ abstract class GUpdatePullRequestReviewInput
   GUpdatePullRequestReviewInput._();
 
   factory GUpdatePullRequestReviewInput(
-          [Function(GUpdatePullRequestReviewInputBuilder b) updates]) =
+          [void Function(GUpdatePullRequestReviewInputBuilder b) updates]) =
       _$GUpdatePullRequestReviewInput;
 
   String get body;
@@ -10691,10 +11623,12 @@ abstract class GUpdatePullRequestReviewInput
   String get pullRequestReviewId;
   static Serializer<GUpdatePullRequestReviewInput> get serializer =>
       _$gUpdatePullRequestReviewInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdatePullRequestReviewInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdatePullRequestReviewInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdatePullRequestReviewInput.serializer,
@@ -10706,7 +11640,7 @@ abstract class GUpdateRefInput
     implements Built<GUpdateRefInput, GUpdateRefInputBuilder> {
   GUpdateRefInput._();
 
-  factory GUpdateRefInput([Function(GUpdateRefInputBuilder b) updates]) =
+  factory GUpdateRefInput([void Function(GUpdateRefInputBuilder b) updates]) =
       _$GUpdateRefInput;
 
   String? get clientMutationId;
@@ -10715,10 +11649,12 @@ abstract class GUpdateRefInput
   String get refId;
   static Serializer<GUpdateRefInput> get serializer =>
       _$gUpdateRefInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateRefInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateRefInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateRefInput.serializer,
@@ -10730,7 +11666,7 @@ abstract class GUpdateRefsInput
     implements Built<GUpdateRefsInput, GUpdateRefsInputBuilder> {
   GUpdateRefsInput._();
 
-  factory GUpdateRefsInput([Function(GUpdateRefsInputBuilder b) updates]) =
+  factory GUpdateRefsInput([void Function(GUpdateRefsInputBuilder b) updates]) =
       _$GUpdateRefsInput;
 
   String? get clientMutationId;
@@ -10738,10 +11674,12 @@ abstract class GUpdateRefsInput
   String get repositoryId;
   static Serializer<GUpdateRefsInput> get serializer =>
       _$gUpdateRefsInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateRefsInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateRefsInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateRefsInput.serializer,
@@ -10754,7 +11692,7 @@ abstract class GUpdateRepositoryInput
   GUpdateRepositoryInput._();
 
   factory GUpdateRepositoryInput(
-          [Function(GUpdateRepositoryInputBuilder b) updates]) =
+          [void Function(GUpdateRepositoryInputBuilder b) updates]) =
       _$GUpdateRepositoryInput;
 
   String? get clientMutationId;
@@ -10768,10 +11706,12 @@ abstract class GUpdateRepositoryInput
   bool? get template;
   static Serializer<GUpdateRepositoryInput> get serializer =>
       _$gUpdateRepositoryInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateRepositoryInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateRepositoryInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateRepositoryInput.serializer,
@@ -10786,7 +11726,7 @@ abstract class GUpdateRepositoryWebCommitSignoffSettingInput
   GUpdateRepositoryWebCommitSignoffSettingInput._();
 
   factory GUpdateRepositoryWebCommitSignoffSettingInput(
-      [Function(GUpdateRepositoryWebCommitSignoffSettingInputBuilder b)
+      [void Function(GUpdateRepositoryWebCommitSignoffSettingInputBuilder b)
           updates]) = _$GUpdateRepositoryWebCommitSignoffSettingInput;
 
   String? get clientMutationId;
@@ -10795,10 +11735,12 @@ abstract class GUpdateRepositoryWebCommitSignoffSettingInput
   static Serializer<GUpdateRepositoryWebCommitSignoffSettingInput>
       get serializer =>
           _$gUpdateRepositoryWebCommitSignoffSettingInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateRepositoryWebCommitSignoffSettingInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateRepositoryWebCommitSignoffSettingInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -10814,8 +11756,8 @@ abstract class GUpdateSponsorshipPreferencesInput
   GUpdateSponsorshipPreferencesInput._();
 
   factory GUpdateSponsorshipPreferencesInput(
-          [Function(GUpdateSponsorshipPreferencesInputBuilder b) updates]) =
-      _$GUpdateSponsorshipPreferencesInput;
+      [void Function(GUpdateSponsorshipPreferencesInputBuilder b)
+          updates]) = _$GUpdateSponsorshipPreferencesInput;
 
   String? get clientMutationId;
   GSponsorshipPrivacy? get privacyLevel;
@@ -10826,10 +11768,12 @@ abstract class GUpdateSponsorshipPreferencesInput
   String? get sponsorableLogin;
   static Serializer<GUpdateSponsorshipPreferencesInput> get serializer =>
       _$gUpdateSponsorshipPreferencesInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateSponsorshipPreferencesInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateSponsorshipPreferencesInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -10844,7 +11788,7 @@ abstract class GUpdateSubscriptionInput
   GUpdateSubscriptionInput._();
 
   factory GUpdateSubscriptionInput(
-          [Function(GUpdateSubscriptionInputBuilder b) updates]) =
+          [void Function(GUpdateSubscriptionInputBuilder b) updates]) =
       _$GUpdateSubscriptionInput;
 
   String? get clientMutationId;
@@ -10852,10 +11796,12 @@ abstract class GUpdateSubscriptionInput
   String get subscribableId;
   static Serializer<GUpdateSubscriptionInput> get serializer =>
       _$gUpdateSubscriptionInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateSubscriptionInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateSubscriptionInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateSubscriptionInput.serializer,
@@ -10870,7 +11816,7 @@ abstract class GUpdateTeamDiscussionCommentInput
   GUpdateTeamDiscussionCommentInput._();
 
   factory GUpdateTeamDiscussionCommentInput(
-          [Function(GUpdateTeamDiscussionCommentInputBuilder b) updates]) =
+          [void Function(GUpdateTeamDiscussionCommentInputBuilder b) updates]) =
       _$GUpdateTeamDiscussionCommentInput;
 
   String get body;
@@ -10879,10 +11825,12 @@ abstract class GUpdateTeamDiscussionCommentInput
   String get id;
   static Serializer<GUpdateTeamDiscussionCommentInput> get serializer =>
       _$gUpdateTeamDiscussionCommentInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateTeamDiscussionCommentInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateTeamDiscussionCommentInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -10897,7 +11845,7 @@ abstract class GUpdateTeamDiscussionInput
   GUpdateTeamDiscussionInput._();
 
   factory GUpdateTeamDiscussionInput(
-          [Function(GUpdateTeamDiscussionInputBuilder b) updates]) =
+          [void Function(GUpdateTeamDiscussionInputBuilder b) updates]) =
       _$GUpdateTeamDiscussionInput;
 
   String? get body;
@@ -10908,10 +11856,12 @@ abstract class GUpdateTeamDiscussionInput
   String? get title;
   static Serializer<GUpdateTeamDiscussionInput> get serializer =>
       _$gUpdateTeamDiscussionInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateTeamDiscussionInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateTeamDiscussionInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateTeamDiscussionInput.serializer,
@@ -10926,7 +11876,7 @@ abstract class GUpdateTeamReviewAssignmentInput
   GUpdateTeamReviewAssignmentInput._();
 
   factory GUpdateTeamReviewAssignmentInput(
-          [Function(GUpdateTeamReviewAssignmentInputBuilder b) updates]) =
+          [void Function(GUpdateTeamReviewAssignmentInputBuilder b) updates]) =
       _$GUpdateTeamReviewAssignmentInput;
 
   GTeamReviewAssignmentAlgorithm? get algorithm;
@@ -10938,10 +11888,12 @@ abstract class GUpdateTeamReviewAssignmentInput
   int? get teamMemberCount;
   static Serializer<GUpdateTeamReviewAssignmentInput> get serializer =>
       _$gUpdateTeamReviewAssignmentInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateTeamReviewAssignmentInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateTeamReviewAssignmentInput? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -10956,7 +11908,7 @@ abstract class GUpdateTeamsRepositoryInput
   GUpdateTeamsRepositoryInput._();
 
   factory GUpdateTeamsRepositoryInput(
-          [Function(GUpdateTeamsRepositoryInputBuilder b) updates]) =
+          [void Function(GUpdateTeamsRepositoryInputBuilder b) updates]) =
       _$GUpdateTeamsRepositoryInput;
 
   String? get clientMutationId;
@@ -10965,10 +11917,12 @@ abstract class GUpdateTeamsRepositoryInput
   BuiltList<String> get teamIds;
   static Serializer<GUpdateTeamsRepositoryInput> get serializer =>
       _$gUpdateTeamsRepositoryInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateTeamsRepositoryInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateTeamsRepositoryInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateTeamsRepositoryInput.serializer,
@@ -10980,7 +11934,8 @@ abstract class GUpdateTopicsInput
     implements Built<GUpdateTopicsInput, GUpdateTopicsInputBuilder> {
   GUpdateTopicsInput._();
 
-  factory GUpdateTopicsInput([Function(GUpdateTopicsInputBuilder b) updates]) =
+  factory GUpdateTopicsInput(
+          [void Function(GUpdateTopicsInputBuilder b) updates]) =
       _$GUpdateTopicsInput;
 
   String? get clientMutationId;
@@ -10988,10 +11943,12 @@ abstract class GUpdateTopicsInput
   BuiltList<String> get topicNames;
   static Serializer<GUpdateTopicsInput> get serializer =>
       _$gUpdateTopicsInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUpdateTopicsInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUpdateTopicsInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUpdateTopicsInput.serializer,
@@ -11014,7 +11971,9 @@ class GUserBlockDuration extends EnumClass {
 
   static Serializer<GUserBlockDuration> get serializer =>
       _$gUserBlockDurationSerializer;
+
   static BuiltSet<GUserBlockDuration> get values => _$gUserBlockDurationValues;
+
   static GUserBlockDuration valueOf(String name) =>
       _$gUserBlockDurationValueOf(name);
 }
@@ -11023,17 +11982,19 @@ abstract class GUserStatusOrder
     implements Built<GUserStatusOrder, GUserStatusOrderBuilder> {
   GUserStatusOrder._();
 
-  factory GUserStatusOrder([Function(GUserStatusOrderBuilder b) updates]) =
+  factory GUserStatusOrder([void Function(GUserStatusOrderBuilder b) updates]) =
       _$GUserStatusOrder;
 
   GOrderDirection get direction;
   GUserStatusOrderField get field;
   static Serializer<GUserStatusOrder> get serializer =>
       _$gUserStatusOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserStatusOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserStatusOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserStatusOrder.serializer,
@@ -11049,8 +12010,10 @@ class GUserStatusOrderField extends EnumClass {
 
   static Serializer<GUserStatusOrderField> get serializer =>
       _$gUserStatusOrderFieldSerializer;
+
   static BuiltSet<GUserStatusOrderField> get values =>
       _$gUserStatusOrderFieldValues;
+
   static GUserStatusOrderField valueOf(String name) =>
       _$gUserStatusOrderFieldValueOf(name);
 }
@@ -11060,17 +12023,19 @@ abstract class GVerifiableDomainOrder
   GVerifiableDomainOrder._();
 
   factory GVerifiableDomainOrder(
-          [Function(GVerifiableDomainOrderBuilder b) updates]) =
+          [void Function(GVerifiableDomainOrderBuilder b) updates]) =
       _$GVerifiableDomainOrder;
 
   GOrderDirection get direction;
   GVerifiableDomainOrderField get field;
   static Serializer<GVerifiableDomainOrder> get serializer =>
       _$gVerifiableDomainOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GVerifiableDomainOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GVerifiableDomainOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GVerifiableDomainOrder.serializer,
@@ -11089,8 +12054,10 @@ class GVerifiableDomainOrderField extends EnumClass {
 
   static Serializer<GVerifiableDomainOrderField> get serializer =>
       _$gVerifiableDomainOrderFieldSerializer;
+
   static BuiltSet<GVerifiableDomainOrderField> get values =>
       _$gVerifiableDomainOrderFieldValues;
+
   static GVerifiableDomainOrderField valueOf(String name) =>
       _$gVerifiableDomainOrderFieldValueOf(name);
 }
@@ -11102,17 +12069,19 @@ abstract class GVerifyVerifiableDomainInput
   GVerifyVerifiableDomainInput._();
 
   factory GVerifyVerifiableDomainInput(
-          [Function(GVerifyVerifiableDomainInputBuilder b) updates]) =
+          [void Function(GVerifyVerifiableDomainInputBuilder b) updates]) =
       _$GVerifyVerifiableDomainInput;
 
   String? get clientMutationId;
   String get id;
   static Serializer<GVerifyVerifiableDomainInput> get serializer =>
       _$gVerifyVerifiableDomainInputSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GVerifyVerifiableDomainInput.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GVerifyVerifiableDomainInput? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GVerifyVerifiableDomainInput.serializer,
@@ -11124,17 +12093,20 @@ abstract class GWorkflowRunOrder
     implements Built<GWorkflowRunOrder, GWorkflowRunOrderBuilder> {
   GWorkflowRunOrder._();
 
-  factory GWorkflowRunOrder([Function(GWorkflowRunOrderBuilder b) updates]) =
+  factory GWorkflowRunOrder(
+          [void Function(GWorkflowRunOrderBuilder b) updates]) =
       _$GWorkflowRunOrder;
 
   GOrderDirection get direction;
   GWorkflowRunOrderField get field;
   static Serializer<GWorkflowRunOrder> get serializer =>
       _$gWorkflowRunOrderSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GWorkflowRunOrder.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GWorkflowRunOrder? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GWorkflowRunOrder.serializer,
@@ -11150,8 +12122,10 @@ class GWorkflowRunOrderField extends EnumClass {
 
   static Serializer<GWorkflowRunOrderField> get serializer =>
       _$gWorkflowRunOrderFieldSerializer;
+
   static BuiltSet<GWorkflowRunOrderField> get values =>
       _$gWorkflowRunOrderFieldValues;
+
   static GWorkflowRunOrderField valueOf(String name) =>
       _$gWorkflowRunOrderFieldValueOf(name);
 }
@@ -11170,7 +12144,7 @@ abstract class GX509Certificate
           (Object serialized) => GX509Certificate((serialized as String?)));
 }
 
-const possibleTypesMap = {
+const Map<String, Set<String>> possibleTypesMap = {
   'Node': {
     'AddedToProjectEvent',
     'App',

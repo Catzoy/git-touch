@@ -12,15 +12,17 @@ abstract class GProjectVars
     implements Built<GProjectVars, GProjectVarsBuilder> {
   GProjectVars._();
 
-  factory GProjectVars([Function(GProjectVarsBuilder b) updates]) =
+  factory GProjectVars([void Function(GProjectVarsBuilder b) updates]) =
       _$GProjectVars;
 
   String get fullPath;
   static Serializer<GProjectVars> get serializer => _$gProjectVarsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GProjectVars.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GProjectVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GProjectVars.serializer,

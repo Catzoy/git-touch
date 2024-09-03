@@ -11,15 +11,18 @@ part 'gists.var.gql.g.dart';
 abstract class GGistsVars implements Built<GGistsVars, GGistsVarsBuilder> {
   GGistsVars._();
 
-  factory GGistsVars([Function(GGistsVarsBuilder b) updates]) = _$GGistsVars;
+  factory GGistsVars([void Function(GGistsVarsBuilder b) updates]) =
+      _$GGistsVars;
 
   String get login;
   String? get after;
   static Serializer<GGistsVars> get serializer => _$gGistsVarsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GGistsVars.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GGistsVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GGistsVars.serializer,

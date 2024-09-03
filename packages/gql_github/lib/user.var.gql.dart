@@ -11,13 +11,16 @@ part 'user.var.gql.g.dart';
 abstract class GViewerVars implements Built<GViewerVars, GViewerVarsBuilder> {
   GViewerVars._();
 
-  factory GViewerVars([Function(GViewerVarsBuilder b) updates]) = _$GViewerVars;
+  factory GViewerVars([void Function(GViewerVarsBuilder b) updates]) =
+      _$GViewerVars;
 
   static Serializer<GViewerVars> get serializer => _$gViewerVarsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerVars.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GViewerVars.serializer,
@@ -28,14 +31,16 @@ abstract class GViewerVars implements Built<GViewerVars, GViewerVarsBuilder> {
 abstract class GUserVars implements Built<GUserVars, GUserVarsBuilder> {
   GUserVars._();
 
-  factory GUserVars([Function(GUserVarsBuilder b) updates]) = _$GUserVars;
+  factory GUserVars([void Function(GUserVarsBuilder b) updates]) = _$GUserVars;
 
   String get login;
   static Serializer<GUserVars> get serializer => _$gUserVarsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserVars.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserVars.serializer,
@@ -47,15 +52,17 @@ abstract class GRepoPartsVars
     implements Built<GRepoPartsVars, GRepoPartsVarsBuilder> {
   GRepoPartsVars._();
 
-  factory GRepoPartsVars([Function(GRepoPartsVarsBuilder b) updates]) =
+  factory GRepoPartsVars([void Function(GRepoPartsVarsBuilder b) updates]) =
       _$GRepoPartsVars;
 
   static Serializer<GRepoPartsVars> get serializer =>
       _$gRepoPartsVarsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRepoPartsVars.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRepoPartsVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRepoPartsVars.serializer,
@@ -69,15 +76,17 @@ abstract class GSponsorConnectionPartsVars
   GSponsorConnectionPartsVars._();
 
   factory GSponsorConnectionPartsVars(
-          [Function(GSponsorConnectionPartsVarsBuilder b) updates]) =
+          [void Function(GSponsorConnectionPartsVarsBuilder b) updates]) =
       _$GSponsorConnectionPartsVars;
 
   static Serializer<GSponsorConnectionPartsVars> get serializer =>
       _$gSponsorConnectionPartsVarsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSponsorConnectionPartsVars.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSponsorConnectionPartsVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GSponsorConnectionPartsVars.serializer,
@@ -89,15 +98,17 @@ abstract class GUserPartsVars
     implements Built<GUserPartsVars, GUserPartsVarsBuilder> {
   GUserPartsVars._();
 
-  factory GUserPartsVars([Function(GUserPartsVarsBuilder b) updates]) =
+  factory GUserPartsVars([void Function(GUserPartsVarsBuilder b) updates]) =
       _$GUserPartsVars;
 
   static Serializer<GUserPartsVars> get serializer =>
       _$gUserPartsVarsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsVars.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserPartsVars.serializer,

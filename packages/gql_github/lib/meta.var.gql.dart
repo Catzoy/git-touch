@@ -11,13 +11,15 @@ part 'meta.var.gql.g.dart';
 abstract class GMetaVars implements Built<GMetaVars, GMetaVarsBuilder> {
   GMetaVars._();
 
-  factory GMetaVars([Function(GMetaVarsBuilder b) updates]) = _$GMetaVars;
+  factory GMetaVars([void Function(GMetaVarsBuilder b) updates]) = _$GMetaVars;
 
   static Serializer<GMetaVars> get serializer => _$gMetaVarsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GMetaVars.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GMetaVars? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GMetaVars.serializer,

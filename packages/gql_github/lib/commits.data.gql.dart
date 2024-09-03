@@ -5,7 +5,7 @@
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
-import 'package:gql_code_builder/src/serializers/inline_fragment_serializer.dart'
+import 'package:gql_code_builder_serializers/gql_code_builder_serializers.dart'
     as _i2;
 import 'package:gql_github/schema.schema.gql.dart' as _i3;
 import 'package:gql_github/serializers.gql.dart' as _i1;
@@ -16,19 +16,22 @@ abstract class GCommitsData
     implements Built<GCommitsData, GCommitsDataBuilder> {
   GCommitsData._();
 
-  factory GCommitsData([Function(GCommitsDataBuilder b) updates]) =
+  factory GCommitsData([void Function(GCommitsDataBuilder b) updates]) =
       _$GCommitsData;
 
   static void _initializeBuilder(GCommitsDataBuilder b) =>
       b..G__typename = 'Query';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GCommitsData_repository? get repository;
   static Serializer<GCommitsData> get serializer => _$gCommitsDataSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCommitsData.serializer,
@@ -41,21 +44,24 @@ abstract class GCommitsData_repository
   GCommitsData_repository._();
 
   factory GCommitsData_repository(
-          [Function(GCommitsData_repositoryBuilder b) updates]) =
+          [void Function(GCommitsData_repositoryBuilder b) updates]) =
       _$GCommitsData_repository;
 
   static void _initializeBuilder(GCommitsData_repositoryBuilder b) =>
       b..G__typename = 'Repository';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GCommitsData_repository_defaultBranchRef? get defaultBranchRef;
   GCommitsData_repository_ref? get ref;
   static Serializer<GCommitsData_repository> get serializer =>
       _$gCommitsDataRepositorySerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCommitsData_repository.serializer,
@@ -71,12 +77,13 @@ abstract class GCommitsData_repository_defaultBranchRef
   GCommitsData_repository_defaultBranchRef._();
 
   factory GCommitsData_repository_defaultBranchRef(
-      [Function(GCommitsData_repository_defaultBranchRefBuilder b)
+      [void Function(GCommitsData_repository_defaultBranchRefBuilder b)
           updates]) = _$GCommitsData_repository_defaultBranchRef;
 
   static void _initializeBuilder(
           GCommitsData_repository_defaultBranchRefBuilder b) =>
       b..G__typename = 'Ref';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -84,11 +91,13 @@ abstract class GCommitsData_repository_defaultBranchRef
   GCommitsData_repository_defaultBranchRef_target? get target;
   static Serializer<GCommitsData_repository_defaultBranchRef> get serializer =>
       _$gCommitsDataRepositoryDefaultBranchRefSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository_defaultBranchRef.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository_defaultBranchRef? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -112,10 +121,12 @@ abstract class GCommitsData_repository_defaultBranchRef_target
                   GCommitsData_repository_defaultBranchRef_target__asCommit
             },
           );
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository_defaultBranchRef_target.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository_defaultBranchRef_target? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -132,23 +143,27 @@ abstract class GCommitsData_repository_defaultBranchRef_target__base
   GCommitsData_repository_defaultBranchRef_target__base._();
 
   factory GCommitsData_repository_defaultBranchRef_target__base(
-      [Function(GCommitsData_repository_defaultBranchRef_target__baseBuilder b)
+      [void Function(
+              GCommitsData_repository_defaultBranchRef_target__baseBuilder b)
           updates]) = _$GCommitsData_repository_defaultBranchRef_target__base;
 
   static void _initializeBuilder(
           GCommitsData_repository_defaultBranchRef_target__baseBuilder b) =>
       b..G__typename = 'GitObject';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   static Serializer<GCommitsData_repository_defaultBranchRef_target__base>
       get serializer =>
           _$gCommitsDataRepositoryDefaultBranchRefTargetBaseSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository_defaultBranchRef_target__base.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository_defaultBranchRef_target__base? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -166,7 +181,7 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit
   GCommitsData_repository_defaultBranchRef_target__asCommit._();
 
   factory GCommitsData_repository_defaultBranchRef_target__asCommit(
-      [Function(
+      [void Function(
               GCommitsData_repository_defaultBranchRef_target__asCommitBuilder
                   b)
           updates]) = _$GCommitsData_repository_defaultBranchRef_target__asCommit;
@@ -174,6 +189,7 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit
   static void _initializeBuilder(
           GCommitsData_repository_defaultBranchRef_target__asCommitBuilder b) =>
       b..G__typename = 'Commit';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -182,11 +198,13 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit
   static Serializer<GCommitsData_repository_defaultBranchRef_target__asCommit>
       get serializer =>
           _$gCommitsDataRepositoryDefaultBranchRefTargetAsCommitSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository_defaultBranchRef_target__asCommit.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository_defaultBranchRef_target__asCommit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -203,7 +221,7 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit_history
   GCommitsData_repository_defaultBranchRef_target__asCommit_history._();
 
   factory GCommitsData_repository_defaultBranchRef_target__asCommit_history(
-          [Function(
+          [void Function(
                   GCommitsData_repository_defaultBranchRef_target__asCommit_historyBuilder
                       b)
               updates]) =
@@ -213,6 +231,7 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit_history
           GCommitsData_repository_defaultBranchRef_target__asCommit_historyBuilder
               b) =>
       b..G__typename = 'CommitHistoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -221,18 +240,20 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit_history
       get pageInfo;
   @override
   BuiltList<
-          GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes>?
+          GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes?>?
       get nodes;
   static Serializer<
           GCommitsData_repository_defaultBranchRef_target__asCommit_history>
       get serializer =>
           _$gCommitsDataRepositoryDefaultBranchRefTargetAsCommitHistorySerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository_defaultBranchRef_target__asCommit_history
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository_defaultBranchRef_target__asCommit_history?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GCommitsData_repository_defaultBranchRef_target__asCommit_history
@@ -250,7 +271,7 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit_history
   GCommitsData_repository_defaultBranchRef_target__asCommit_history_pageInfo._();
 
   factory GCommitsData_repository_defaultBranchRef_target__asCommit_history_pageInfo(
-          [Function(
+          [void Function(
                   GCommitsData_repository_defaultBranchRef_target__asCommit_history_pageInfoBuilder
                       b)
               updates]) =
@@ -260,6 +281,7 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit_history
           GCommitsData_repository_defaultBranchRef_target__asCommit_history_pageInfoBuilder
               b) =>
       b..G__typename = 'PageInfo';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -271,12 +293,14 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit_history
           GCommitsData_repository_defaultBranchRef_target__asCommit_history_pageInfo>
       get serializer =>
           _$gCommitsDataRepositoryDefaultBranchRefTargetAsCommitHistoryPageInfoSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository_defaultBranchRef_target__asCommit_history_pageInfo
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository_defaultBranchRef_target__asCommit_history_pageInfo?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GCommitsData_repository_defaultBranchRef_target__asCommit_history_pageInfo
@@ -294,7 +318,7 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit_history
   GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes._();
 
   factory GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes(
-          [Function(
+          [void Function(
                   GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodesBuilder
                       b)
               updates]) =
@@ -304,6 +328,7 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit_history
           GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodesBuilder
               b) =>
       b..G__typename = 'Commit';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -323,12 +348,14 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit_history
           GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes>
       get serializer =>
           _$gCommitsDataRepositoryDefaultBranchRefTargetAsCommitHistoryNodesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes
@@ -346,7 +373,7 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit_history
   GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_author._();
 
   factory GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_author(
-          [Function(
+          [void Function(
                   GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_authorBuilder
                       b)
               updates]) =
@@ -356,6 +383,7 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit_history
           GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_authorBuilder
               b) =>
       b..G__typename = 'GitActor';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -370,12 +398,14 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit_history
           GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_author>
       get serializer =>
           _$gCommitsDataRepositoryDefaultBranchRefTargetAsCommitHistoryNodesAuthorSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_author
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_author?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_author
@@ -393,7 +423,7 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit_history
   GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_author_user._();
 
   factory GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_author_user(
-          [Function(
+          [void Function(
                   GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_author_userBuilder
                       b)
               updates]) =
@@ -403,6 +433,7 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit_history
           GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_author_userBuilder
               b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -412,12 +443,14 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit_history
           GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_author_user>
       get serializer =>
           _$gCommitsDataRepositoryDefaultBranchRefTargetAsCommitHistoryNodesAuthorUserSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_author_user
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_author_user?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_author_user
@@ -435,7 +468,7 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit_history
   GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_status._();
 
   factory GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_status(
-          [Function(
+          [void Function(
                   GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_statusBuilder
                       b)
               updates]) =
@@ -445,6 +478,7 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit_history
           GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_statusBuilder
               b) =>
       b..G__typename = 'Status';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -454,12 +488,14 @@ abstract class GCommitsData_repository_defaultBranchRef_target__asCommit_history
           GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_status>
       get serializer =>
           _$gCommitsDataRepositoryDefaultBranchRefTargetAsCommitHistoryNodesStatusSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_status
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_status?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GCommitsData_repository_defaultBranchRef_target__asCommit_history_nodes_status
@@ -475,11 +511,12 @@ abstract class GCommitsData_repository_ref
   GCommitsData_repository_ref._();
 
   factory GCommitsData_repository_ref(
-          [Function(GCommitsData_repository_refBuilder b) updates]) =
+          [void Function(GCommitsData_repository_refBuilder b) updates]) =
       _$GCommitsData_repository_ref;
 
   static void _initializeBuilder(GCommitsData_repository_refBuilder b) =>
       b..G__typename = 'Ref';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -487,11 +524,13 @@ abstract class GCommitsData_repository_ref
   GCommitsData_repository_ref_target? get target;
   static Serializer<GCommitsData_repository_ref> get serializer =>
       _$gCommitsDataRepositoryRefSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository_ref.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository_ref? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCommitsData_repository_ref.serializer,
@@ -510,10 +549,12 @@ abstract class GCommitsData_repository_ref_target
         GCommitsData_repository_ref_target__base,
         {'Commit': GCommitsData_repository_ref_target__asCommit},
       );
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository_ref_target.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository_ref_target? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -530,22 +571,25 @@ abstract class GCommitsData_repository_ref_target__base
   GCommitsData_repository_ref_target__base._();
 
   factory GCommitsData_repository_ref_target__base(
-      [Function(GCommitsData_repository_ref_target__baseBuilder b)
+      [void Function(GCommitsData_repository_ref_target__baseBuilder b)
           updates]) = _$GCommitsData_repository_ref_target__base;
 
   static void _initializeBuilder(
           GCommitsData_repository_ref_target__baseBuilder b) =>
       b..G__typename = 'GitObject';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   static Serializer<GCommitsData_repository_ref_target__base> get serializer =>
       _$gCommitsDataRepositoryRefTargetBaseSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository_ref_target__base.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository_ref_target__base? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -563,12 +607,13 @@ abstract class GCommitsData_repository_ref_target__asCommit
   GCommitsData_repository_ref_target__asCommit._();
 
   factory GCommitsData_repository_ref_target__asCommit(
-      [Function(GCommitsData_repository_ref_target__asCommitBuilder b)
+      [void Function(GCommitsData_repository_ref_target__asCommitBuilder b)
           updates]) = _$GCommitsData_repository_ref_target__asCommit;
 
   static void _initializeBuilder(
           GCommitsData_repository_ref_target__asCommitBuilder b) =>
       b..G__typename = 'Commit';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -576,11 +621,13 @@ abstract class GCommitsData_repository_ref_target__asCommit
   GCommitsData_repository_ref_target__asCommit_history get history;
   static Serializer<GCommitsData_repository_ref_target__asCommit>
       get serializer => _$gCommitsDataRepositoryRefTargetAsCommitSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository_ref_target__asCommit.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository_ref_target__asCommit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -597,28 +644,32 @@ abstract class GCommitsData_repository_ref_target__asCommit_history
   GCommitsData_repository_ref_target__asCommit_history._();
 
   factory GCommitsData_repository_ref_target__asCommit_history(
-      [Function(GCommitsData_repository_ref_target__asCommit_historyBuilder b)
+      [void Function(
+              GCommitsData_repository_ref_target__asCommit_historyBuilder b)
           updates]) = _$GCommitsData_repository_ref_target__asCommit_history;
 
   static void _initializeBuilder(
           GCommitsData_repository_ref_target__asCommit_historyBuilder b) =>
       b..G__typename = 'CommitHistoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
   GCommitsData_repository_ref_target__asCommit_history_pageInfo get pageInfo;
   @override
-  BuiltList<GCommitsData_repository_ref_target__asCommit_history_nodes>?
+  BuiltList<GCommitsData_repository_ref_target__asCommit_history_nodes?>?
       get nodes;
   static Serializer<GCommitsData_repository_ref_target__asCommit_history>
       get serializer =>
           _$gCommitsDataRepositoryRefTargetAsCommitHistorySerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository_ref_target__asCommit_history.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository_ref_target__asCommit_history? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -635,7 +686,7 @@ abstract class GCommitsData_repository_ref_target__asCommit_history_pageInfo
   GCommitsData_repository_ref_target__asCommit_history_pageInfo._();
 
   factory GCommitsData_repository_ref_target__asCommit_history_pageInfo(
-          [Function(
+          [void Function(
                   GCommitsData_repository_ref_target__asCommit_history_pageInfoBuilder
                       b)
               updates]) =
@@ -645,6 +696,7 @@ abstract class GCommitsData_repository_ref_target__asCommit_history_pageInfo
           GCommitsData_repository_ref_target__asCommit_history_pageInfoBuilder
               b) =>
       b..G__typename = 'PageInfo';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -656,12 +708,14 @@ abstract class GCommitsData_repository_ref_target__asCommit_history_pageInfo
           GCommitsData_repository_ref_target__asCommit_history_pageInfo>
       get serializer =>
           _$gCommitsDataRepositoryRefTargetAsCommitHistoryPageInfoSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository_ref_target__asCommit_history_pageInfo
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository_ref_target__asCommit_history_pageInfo?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GCommitsData_repository_ref_target__asCommit_history_pageInfo
@@ -678,7 +732,7 @@ abstract class GCommitsData_repository_ref_target__asCommit_history_nodes
   GCommitsData_repository_ref_target__asCommit_history_nodes._();
 
   factory GCommitsData_repository_ref_target__asCommit_history_nodes(
-      [Function(
+      [void Function(
               GCommitsData_repository_ref_target__asCommit_history_nodesBuilder
                   b)
           updates]) = _$GCommitsData_repository_ref_target__asCommit_history_nodes;
@@ -687,6 +741,7 @@ abstract class GCommitsData_repository_ref_target__asCommit_history_nodes
           GCommitsData_repository_ref_target__asCommit_history_nodesBuilder
               b) =>
       b..G__typename = 'Commit';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -703,11 +758,13 @@ abstract class GCommitsData_repository_ref_target__asCommit_history_nodes
   static Serializer<GCommitsData_repository_ref_target__asCommit_history_nodes>
       get serializer =>
           _$gCommitsDataRepositoryRefTargetAsCommitHistoryNodesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository_ref_target__asCommit_history_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository_ref_target__asCommit_history_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -724,7 +781,7 @@ abstract class GCommitsData_repository_ref_target__asCommit_history_nodes_author
   GCommitsData_repository_ref_target__asCommit_history_nodes_author._();
 
   factory GCommitsData_repository_ref_target__asCommit_history_nodes_author(
-          [Function(
+          [void Function(
                   GCommitsData_repository_ref_target__asCommit_history_nodes_authorBuilder
                       b)
               updates]) =
@@ -734,6 +791,7 @@ abstract class GCommitsData_repository_ref_target__asCommit_history_nodes_author
           GCommitsData_repository_ref_target__asCommit_history_nodes_authorBuilder
               b) =>
       b..G__typename = 'GitActor';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -748,12 +806,14 @@ abstract class GCommitsData_repository_ref_target__asCommit_history_nodes_author
           GCommitsData_repository_ref_target__asCommit_history_nodes_author>
       get serializer =>
           _$gCommitsDataRepositoryRefTargetAsCommitHistoryNodesAuthorSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository_ref_target__asCommit_history_nodes_author
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository_ref_target__asCommit_history_nodes_author?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GCommitsData_repository_ref_target__asCommit_history_nodes_author
@@ -771,7 +831,7 @@ abstract class GCommitsData_repository_ref_target__asCommit_history_nodes_author
   GCommitsData_repository_ref_target__asCommit_history_nodes_author_user._();
 
   factory GCommitsData_repository_ref_target__asCommit_history_nodes_author_user(
-          [Function(
+          [void Function(
                   GCommitsData_repository_ref_target__asCommit_history_nodes_author_userBuilder
                       b)
               updates]) =
@@ -781,6 +841,7 @@ abstract class GCommitsData_repository_ref_target__asCommit_history_nodes_author
           GCommitsData_repository_ref_target__asCommit_history_nodes_author_userBuilder
               b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -790,12 +851,14 @@ abstract class GCommitsData_repository_ref_target__asCommit_history_nodes_author
           GCommitsData_repository_ref_target__asCommit_history_nodes_author_user>
       get serializer =>
           _$gCommitsDataRepositoryRefTargetAsCommitHistoryNodesAuthorUserSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository_ref_target__asCommit_history_nodes_author_user
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository_ref_target__asCommit_history_nodes_author_user?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GCommitsData_repository_ref_target__asCommit_history_nodes_author_user
@@ -812,7 +875,7 @@ abstract class GCommitsData_repository_ref_target__asCommit_history_nodes_status
   GCommitsData_repository_ref_target__asCommit_history_nodes_status._();
 
   factory GCommitsData_repository_ref_target__asCommit_history_nodes_status(
-          [Function(
+          [void Function(
                   GCommitsData_repository_ref_target__asCommit_history_nodes_statusBuilder
                       b)
               updates]) =
@@ -822,6 +885,7 @@ abstract class GCommitsData_repository_ref_target__asCommit_history_nodes_status
           GCommitsData_repository_ref_target__asCommit_history_nodes_statusBuilder
               b) =>
       b..G__typename = 'Status';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -831,12 +895,14 @@ abstract class GCommitsData_repository_ref_target__asCommit_history_nodes_status
           GCommitsData_repository_ref_target__asCommit_history_nodes_status>
       get serializer =>
           _$gCommitsDataRepositoryRefTargetAsCommitHistoryNodesStatusSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsData_repository_ref_target__asCommit_history_nodes_status
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsData_repository_ref_target__asCommit_history_nodes_status?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GCommitsData_repository_ref_target__asCommit_history_nodes_status
@@ -854,7 +920,7 @@ abstract class GCommitsRefCommit {
 abstract class GCommitsRefCommit_history {
   String get G__typename;
   GCommitsRefCommit_history_pageInfo get pageInfo;
-  BuiltList<GCommitsRefCommit_history_nodes>? get nodes;
+  BuiltList<GCommitsRefCommit_history_nodes?>? get nodes;
   Map<String, dynamic> toJson();
 }
 
@@ -902,11 +968,12 @@ abstract class GCommitsRefCommitData
   GCommitsRefCommitData._();
 
   factory GCommitsRefCommitData(
-          [Function(GCommitsRefCommitDataBuilder b) updates]) =
+          [void Function(GCommitsRefCommitDataBuilder b) updates]) =
       _$GCommitsRefCommitData;
 
   static void _initializeBuilder(GCommitsRefCommitDataBuilder b) =>
       b..G__typename = 'Commit';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -914,11 +981,13 @@ abstract class GCommitsRefCommitData
   GCommitsRefCommitData_history get history;
   static Serializer<GCommitsRefCommitData> get serializer =>
       _$gCommitsRefCommitDataSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsRefCommitData.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefCommitData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCommitsRefCommitData.serializer,
@@ -934,25 +1003,28 @@ abstract class GCommitsRefCommitData_history
   GCommitsRefCommitData_history._();
 
   factory GCommitsRefCommitData_history(
-          [Function(GCommitsRefCommitData_historyBuilder b) updates]) =
+          [void Function(GCommitsRefCommitData_historyBuilder b) updates]) =
       _$GCommitsRefCommitData_history;
 
   static void _initializeBuilder(GCommitsRefCommitData_historyBuilder b) =>
       b..G__typename = 'CommitHistoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
   GCommitsRefCommitData_history_pageInfo get pageInfo;
   @override
-  BuiltList<GCommitsRefCommitData_history_nodes>? get nodes;
+  BuiltList<GCommitsRefCommitData_history_nodes?>? get nodes;
   static Serializer<GCommitsRefCommitData_history> get serializer =>
       _$gCommitsRefCommitDataHistorySerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsRefCommitData_history.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefCommitData_history? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCommitsRefCommitData_history.serializer,
@@ -968,12 +1040,13 @@ abstract class GCommitsRefCommitData_history_pageInfo
   GCommitsRefCommitData_history_pageInfo._();
 
   factory GCommitsRefCommitData_history_pageInfo(
-          [Function(GCommitsRefCommitData_history_pageInfoBuilder b) updates]) =
-      _$GCommitsRefCommitData_history_pageInfo;
+      [void Function(GCommitsRefCommitData_history_pageInfoBuilder b)
+          updates]) = _$GCommitsRefCommitData_history_pageInfo;
 
   static void _initializeBuilder(
           GCommitsRefCommitData_history_pageInfoBuilder b) =>
       b..G__typename = 'PageInfo';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -983,11 +1056,13 @@ abstract class GCommitsRefCommitData_history_pageInfo
   String? get endCursor;
   static Serializer<GCommitsRefCommitData_history_pageInfo> get serializer =>
       _$gCommitsRefCommitDataHistoryPageInfoSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsRefCommitData_history_pageInfo.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefCommitData_history_pageInfo? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1004,12 +1079,13 @@ abstract class GCommitsRefCommitData_history_nodes
   GCommitsRefCommitData_history_nodes._();
 
   factory GCommitsRefCommitData_history_nodes(
-          [Function(GCommitsRefCommitData_history_nodesBuilder b) updates]) =
-      _$GCommitsRefCommitData_history_nodes;
+      [void Function(GCommitsRefCommitData_history_nodesBuilder b)
+          updates]) = _$GCommitsRefCommitData_history_nodes;
 
   static void _initializeBuilder(
           GCommitsRefCommitData_history_nodesBuilder b) =>
       b..G__typename = 'Commit';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1025,11 +1101,13 @@ abstract class GCommitsRefCommitData_history_nodes
   GCommitsRefCommitData_history_nodes_status? get status;
   static Serializer<GCommitsRefCommitData_history_nodes> get serializer =>
       _$gCommitsRefCommitDataHistoryNodesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsRefCommitData_history_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefCommitData_history_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1046,12 +1124,13 @@ abstract class GCommitsRefCommitData_history_nodes_author
   GCommitsRefCommitData_history_nodes_author._();
 
   factory GCommitsRefCommitData_history_nodes_author(
-      [Function(GCommitsRefCommitData_history_nodes_authorBuilder b)
+      [void Function(GCommitsRefCommitData_history_nodes_authorBuilder b)
           updates]) = _$GCommitsRefCommitData_history_nodes_author;
 
   static void _initializeBuilder(
           GCommitsRefCommitData_history_nodes_authorBuilder b) =>
       b..G__typename = 'GitActor';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1063,11 +1142,13 @@ abstract class GCommitsRefCommitData_history_nodes_author
   GCommitsRefCommitData_history_nodes_author_user? get user;
   static Serializer<GCommitsRefCommitData_history_nodes_author>
       get serializer => _$gCommitsRefCommitDataHistoryNodesAuthorSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsRefCommitData_history_nodes_author.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefCommitData_history_nodes_author? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1084,12 +1165,13 @@ abstract class GCommitsRefCommitData_history_nodes_author_user
   GCommitsRefCommitData_history_nodes_author_user._();
 
   factory GCommitsRefCommitData_history_nodes_author_user(
-      [Function(GCommitsRefCommitData_history_nodes_author_userBuilder b)
+      [void Function(GCommitsRefCommitData_history_nodes_author_userBuilder b)
           updates]) = _$GCommitsRefCommitData_history_nodes_author_user;
 
   static void _initializeBuilder(
           GCommitsRefCommitData_history_nodes_author_userBuilder b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1097,11 +1179,13 @@ abstract class GCommitsRefCommitData_history_nodes_author_user
   String get login;
   static Serializer<GCommitsRefCommitData_history_nodes_author_user>
       get serializer => _$gCommitsRefCommitDataHistoryNodesAuthorUserSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsRefCommitData_history_nodes_author_user.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefCommitData_history_nodes_author_user? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1118,12 +1202,13 @@ abstract class GCommitsRefCommitData_history_nodes_status
   GCommitsRefCommitData_history_nodes_status._();
 
   factory GCommitsRefCommitData_history_nodes_status(
-      [Function(GCommitsRefCommitData_history_nodes_statusBuilder b)
+      [void Function(GCommitsRefCommitData_history_nodes_statusBuilder b)
           updates]) = _$GCommitsRefCommitData_history_nodes_status;
 
   static void _initializeBuilder(
           GCommitsRefCommitData_history_nodes_statusBuilder b) =>
       b..G__typename = 'Status';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1131,11 +1216,13 @@ abstract class GCommitsRefCommitData_history_nodes_status
   _i3.GStatusState get state;
   static Serializer<GCommitsRefCommitData_history_nodes_status>
       get serializer => _$gCommitsRefCommitDataHistoryNodesStatusSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsRefCommitData_history_nodes_status.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefCommitData_history_nodes_status? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1178,7 +1265,7 @@ abstract class GCommitsRef_target__asCommit_history
   @override
   GCommitsRef_target__asCommit_history_pageInfo get pageInfo;
   @override
-  BuiltList<GCommitsRef_target__asCommit_history_nodes>? get nodes;
+  BuiltList<GCommitsRef_target__asCommit_history_nodes?>? get nodes;
   @override
   Map<String, dynamic> toJson();
 }
@@ -1251,11 +1338,12 @@ abstract class GCommitsRefData
     implements Built<GCommitsRefData, GCommitsRefDataBuilder>, GCommitsRef {
   GCommitsRefData._();
 
-  factory GCommitsRefData([Function(GCommitsRefDataBuilder b) updates]) =
+  factory GCommitsRefData([void Function(GCommitsRefDataBuilder b) updates]) =
       _$GCommitsRefData;
 
   static void _initializeBuilder(GCommitsRefDataBuilder b) =>
       b..G__typename = 'Ref';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1263,11 +1351,13 @@ abstract class GCommitsRefData
   GCommitsRefData_target? get target;
   static Serializer<GCommitsRefData> get serializer =>
       _$gCommitsRefDataSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsRefData.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCommitsRefData.serializer,
@@ -1285,10 +1375,12 @@ abstract class GCommitsRefData_target implements GCommitsRef_target {
         GCommitsRefData_target__base,
         {'Commit': GCommitsRefData_target__asCommit},
       );
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsRefData_target.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefData_target? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCommitsRefData_target.serializer,
@@ -1304,21 +1396,24 @@ abstract class GCommitsRefData_target__base
   GCommitsRefData_target__base._();
 
   factory GCommitsRefData_target__base(
-          [Function(GCommitsRefData_target__baseBuilder b) updates]) =
+          [void Function(GCommitsRefData_target__baseBuilder b) updates]) =
       _$GCommitsRefData_target__base;
 
   static void _initializeBuilder(GCommitsRefData_target__baseBuilder b) =>
       b..G__typename = 'GitObject';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   static Serializer<GCommitsRefData_target__base> get serializer =>
       _$gCommitsRefDataTargetBaseSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsRefData_target__base.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefData_target__base? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GCommitsRefData_target__base.serializer,
@@ -1335,11 +1430,12 @@ abstract class GCommitsRefData_target__asCommit
   GCommitsRefData_target__asCommit._();
 
   factory GCommitsRefData_target__asCommit(
-          [Function(GCommitsRefData_target__asCommitBuilder b) updates]) =
+          [void Function(GCommitsRefData_target__asCommitBuilder b) updates]) =
       _$GCommitsRefData_target__asCommit;
 
   static void _initializeBuilder(GCommitsRefData_target__asCommitBuilder b) =>
       b..G__typename = 'Commit';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1347,11 +1443,13 @@ abstract class GCommitsRefData_target__asCommit
   GCommitsRefData_target__asCommit_history get history;
   static Serializer<GCommitsRefData_target__asCommit> get serializer =>
       _$gCommitsRefDataTargetAsCommitSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsRefData_target__asCommit.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefData_target__asCommit? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1368,26 +1466,29 @@ abstract class GCommitsRefData_target__asCommit_history
   GCommitsRefData_target__asCommit_history._();
 
   factory GCommitsRefData_target__asCommit_history(
-      [Function(GCommitsRefData_target__asCommit_historyBuilder b)
+      [void Function(GCommitsRefData_target__asCommit_historyBuilder b)
           updates]) = _$GCommitsRefData_target__asCommit_history;
 
   static void _initializeBuilder(
           GCommitsRefData_target__asCommit_historyBuilder b) =>
       b..G__typename = 'CommitHistoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
   GCommitsRefData_target__asCommit_history_pageInfo get pageInfo;
   @override
-  BuiltList<GCommitsRefData_target__asCommit_history_nodes>? get nodes;
+  BuiltList<GCommitsRefData_target__asCommit_history_nodes?>? get nodes;
   static Serializer<GCommitsRefData_target__asCommit_history> get serializer =>
       _$gCommitsRefDataTargetAsCommitHistorySerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsRefData_target__asCommit_history.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefData_target__asCommit_history? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1404,12 +1505,13 @@ abstract class GCommitsRefData_target__asCommit_history_pageInfo
   GCommitsRefData_target__asCommit_history_pageInfo._();
 
   factory GCommitsRefData_target__asCommit_history_pageInfo(
-      [Function(GCommitsRefData_target__asCommit_history_pageInfoBuilder b)
+      [void Function(GCommitsRefData_target__asCommit_history_pageInfoBuilder b)
           updates]) = _$GCommitsRefData_target__asCommit_history_pageInfo;
 
   static void _initializeBuilder(
           GCommitsRefData_target__asCommit_history_pageInfoBuilder b) =>
       b..G__typename = 'PageInfo';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1420,11 +1522,13 @@ abstract class GCommitsRefData_target__asCommit_history_pageInfo
   static Serializer<GCommitsRefData_target__asCommit_history_pageInfo>
       get serializer =>
           _$gCommitsRefDataTargetAsCommitHistoryPageInfoSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsRefData_target__asCommit_history_pageInfo.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefData_target__asCommit_history_pageInfo? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1441,12 +1545,13 @@ abstract class GCommitsRefData_target__asCommit_history_nodes
   GCommitsRefData_target__asCommit_history_nodes._();
 
   factory GCommitsRefData_target__asCommit_history_nodes(
-      [Function(GCommitsRefData_target__asCommit_history_nodesBuilder b)
+      [void Function(GCommitsRefData_target__asCommit_history_nodesBuilder b)
           updates]) = _$GCommitsRefData_target__asCommit_history_nodes;
 
   static void _initializeBuilder(
           GCommitsRefData_target__asCommit_history_nodesBuilder b) =>
       b..G__typename = 'Commit';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1462,11 +1567,13 @@ abstract class GCommitsRefData_target__asCommit_history_nodes
   GCommitsRefData_target__asCommit_history_nodes_status? get status;
   static Serializer<GCommitsRefData_target__asCommit_history_nodes>
       get serializer => _$gCommitsRefDataTargetAsCommitHistoryNodesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsRefData_target__asCommit_history_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefData_target__asCommit_history_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1483,12 +1590,14 @@ abstract class GCommitsRefData_target__asCommit_history_nodes_author
   GCommitsRefData_target__asCommit_history_nodes_author._();
 
   factory GCommitsRefData_target__asCommit_history_nodes_author(
-      [Function(GCommitsRefData_target__asCommit_history_nodes_authorBuilder b)
+      [void Function(
+              GCommitsRefData_target__asCommit_history_nodes_authorBuilder b)
           updates]) = _$GCommitsRefData_target__asCommit_history_nodes_author;
 
   static void _initializeBuilder(
           GCommitsRefData_target__asCommit_history_nodes_authorBuilder b) =>
       b..G__typename = 'GitActor';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1501,11 +1610,13 @@ abstract class GCommitsRefData_target__asCommit_history_nodes_author
   static Serializer<GCommitsRefData_target__asCommit_history_nodes_author>
       get serializer =>
           _$gCommitsRefDataTargetAsCommitHistoryNodesAuthorSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsRefData_target__asCommit_history_nodes_author.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefData_target__asCommit_history_nodes_author? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1522,7 +1633,7 @@ abstract class GCommitsRefData_target__asCommit_history_nodes_author_user
   GCommitsRefData_target__asCommit_history_nodes_author_user._();
 
   factory GCommitsRefData_target__asCommit_history_nodes_author_user(
-      [Function(
+      [void Function(
               GCommitsRefData_target__asCommit_history_nodes_author_userBuilder
                   b)
           updates]) = _$GCommitsRefData_target__asCommit_history_nodes_author_user;
@@ -1531,6 +1642,7 @@ abstract class GCommitsRefData_target__asCommit_history_nodes_author_user
           GCommitsRefData_target__asCommit_history_nodes_author_userBuilder
               b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1539,11 +1651,13 @@ abstract class GCommitsRefData_target__asCommit_history_nodes_author_user
   static Serializer<GCommitsRefData_target__asCommit_history_nodes_author_user>
       get serializer =>
           _$gCommitsRefDataTargetAsCommitHistoryNodesAuthorUserSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsRefData_target__asCommit_history_nodes_author_user.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefData_target__asCommit_history_nodes_author_user? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1560,12 +1674,14 @@ abstract class GCommitsRefData_target__asCommit_history_nodes_status
   GCommitsRefData_target__asCommit_history_nodes_status._();
 
   factory GCommitsRefData_target__asCommit_history_nodes_status(
-      [Function(GCommitsRefData_target__asCommit_history_nodes_statusBuilder b)
+      [void Function(
+              GCommitsRefData_target__asCommit_history_nodes_statusBuilder b)
           updates]) = _$GCommitsRefData_target__asCommit_history_nodes_status;
 
   static void _initializeBuilder(
           GCommitsRefData_target__asCommit_history_nodes_statusBuilder b) =>
       b..G__typename = 'Status';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1574,11 +1690,13 @@ abstract class GCommitsRefData_target__asCommit_history_nodes_status
   static Serializer<GCommitsRefData_target__asCommit_history_nodes_status>
       get serializer =>
           _$gCommitsRefDataTargetAsCommitHistoryNodesStatusSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GCommitsRefData_target__asCommit_history_nodes_status.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefData_target__asCommit_history_nodes_status? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(

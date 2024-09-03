@@ -19,7 +19,8 @@ abstract class GIssuesReq
         _i1.OperationRequest<_i2.GIssuesData, _i3.GIssuesVars> {
   GIssuesReq._();
 
-  factory GIssuesReq([Function(GIssuesReqBuilder b) updates]) = _$GIssuesReq;
+  factory GIssuesReq([void Function(GIssuesReqBuilder b) updates]) =
+      _$GIssuesReq;
 
   static void _initializeBuilder(GIssuesReqBuilder b) => b
     ..operation = _i4.Operation(
@@ -27,6 +28,7 @@ abstract class GIssuesReq
       operationName: 'Issues',
     )
     ..executeOnListen = true;
+
   @override
   _i3.GIssuesVars get vars;
   @override
@@ -35,7 +37,9 @@ abstract class GIssuesReq
   _i4.Request get execRequest => _i4.Request(
         operation: operation,
         variables: vars.toJson(),
+        context: context ?? const _i4.Context(),
       );
+
   @override
   String? get requestId;
   @override
@@ -55,13 +59,30 @@ abstract class GIssuesReq
   @override
   bool get executeOnListen;
   @override
+  @BuiltValueField(serialize: false)
+  _i4.Context? get context;
+  @override
   _i2.GIssuesData? parseData(Map<String, dynamic> json) =>
       _i2.GIssuesData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GIssuesData data) => data.toJson();
+
+  @override
+  _i1.OperationRequest<_i2.GIssuesData, _i3.GIssuesVars> transformOperation(
+          _i4.Operation Function(_i4.Operation) transform) =>
+      this.rebuild((b) => b..operation = transform(operation));
+
   static Serializer<GIssuesReq> get serializer => _$gIssuesReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GIssuesReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GIssuesReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GIssuesReq.serializer,
@@ -75,7 +96,7 @@ abstract class GPullsReq
         _i1.OperationRequest<_i2.GPullsData, _i3.GPullsVars> {
   GPullsReq._();
 
-  factory GPullsReq([Function(GPullsReqBuilder b) updates]) = _$GPullsReq;
+  factory GPullsReq([void Function(GPullsReqBuilder b) updates]) = _$GPullsReq;
 
   static void _initializeBuilder(GPullsReqBuilder b) => b
     ..operation = _i4.Operation(
@@ -83,6 +104,7 @@ abstract class GPullsReq
       operationName: 'Pulls',
     )
     ..executeOnListen = true;
+
   @override
   _i3.GPullsVars get vars;
   @override
@@ -91,7 +113,9 @@ abstract class GPullsReq
   _i4.Request get execRequest => _i4.Request(
         operation: operation,
         variables: vars.toJson(),
+        context: context ?? const _i4.Context(),
       );
+
   @override
   String? get requestId;
   @override
@@ -111,13 +135,30 @@ abstract class GPullsReq
   @override
   bool get executeOnListen;
   @override
+  @BuiltValueField(serialize: false)
+  _i4.Context? get context;
+  @override
   _i2.GPullsData? parseData(Map<String, dynamic> json) =>
       _i2.GPullsData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GPullsData data) => data.toJson();
+
+  @override
+  _i1.OperationRequest<_i2.GPullsData, _i3.GPullsVars> transformOperation(
+          _i4.Operation Function(_i4.Operation) transform) =>
+      this.rebuild((b) => b..operation = transform(operation));
+
   static Serializer<GPullsReq> get serializer => _$gPullsReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GPullsReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GPullsReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GPullsReq.serializer,

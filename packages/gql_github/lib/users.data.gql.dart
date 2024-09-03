@@ -13,20 +13,23 @@ abstract class GFollowersData
     implements Built<GFollowersData, GFollowersDataBuilder> {
   GFollowersData._();
 
-  factory GFollowersData([Function(GFollowersDataBuilder b) updates]) =
+  factory GFollowersData([void Function(GFollowersDataBuilder b) updates]) =
       _$GFollowersData;
 
   static void _initializeBuilder(GFollowersDataBuilder b) =>
       b..G__typename = 'Query';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GFollowersData_user? get user;
   static Serializer<GFollowersData> get serializer =>
       _$gFollowersDataSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GFollowersData.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GFollowersData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GFollowersData.serializer,
@@ -39,19 +42,23 @@ abstract class GFollowersData_user
   GFollowersData_user._();
 
   factory GFollowersData_user(
-      [Function(GFollowersData_userBuilder b) updates]) = _$GFollowersData_user;
+          [void Function(GFollowersData_userBuilder b) updates]) =
+      _$GFollowersData_user;
 
   static void _initializeBuilder(GFollowersData_userBuilder b) =>
       b..G__typename = 'User';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GFollowersData_user_followers get followers;
   static Serializer<GFollowersData_user> get serializer =>
       _$gFollowersDataUserSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GFollowersData_user.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GFollowersData_user? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GFollowersData_user.serializer,
@@ -66,21 +73,24 @@ abstract class GFollowersData_user_followers
   GFollowersData_user_followers._();
 
   factory GFollowersData_user_followers(
-          [Function(GFollowersData_user_followersBuilder b) updates]) =
+          [void Function(GFollowersData_user_followersBuilder b) updates]) =
       _$GFollowersData_user_followers;
 
   static void _initializeBuilder(GFollowersData_user_followersBuilder b) =>
       b..G__typename = 'FollowerConnection';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GFollowersData_user_followers_pageInfo get pageInfo;
-  BuiltList<GFollowersData_user_followers_nodes>? get nodes;
+  BuiltList<GFollowersData_user_followers_nodes?>? get nodes;
   static Serializer<GFollowersData_user_followers> get serializer =>
       _$gFollowersDataUserFollowersSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GFollowersData_user_followers.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GFollowersData_user_followers? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GFollowersData_user_followers.serializer,
@@ -95,22 +105,25 @@ abstract class GFollowersData_user_followers_pageInfo
   GFollowersData_user_followers_pageInfo._();
 
   factory GFollowersData_user_followers_pageInfo(
-          [Function(GFollowersData_user_followers_pageInfoBuilder b) updates]) =
-      _$GFollowersData_user_followers_pageInfo;
+      [void Function(GFollowersData_user_followers_pageInfoBuilder b)
+          updates]) = _$GFollowersData_user_followers_pageInfo;
 
   static void _initializeBuilder(
           GFollowersData_user_followers_pageInfoBuilder b) =>
       b..G__typename = 'PageInfo';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   bool get hasNextPage;
   String? get endCursor;
   static Serializer<GFollowersData_user_followers_pageInfo> get serializer =>
       _$gFollowersDataUserFollowersPageInfoSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GFollowersData_user_followers_pageInfo.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GFollowersData_user_followers_pageInfo? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -127,12 +140,13 @@ abstract class GFollowersData_user_followers_nodes
   GFollowersData_user_followers_nodes._();
 
   factory GFollowersData_user_followers_nodes(
-          [Function(GFollowersData_user_followers_nodesBuilder b) updates]) =
-      _$GFollowersData_user_followers_nodes;
+      [void Function(GFollowersData_user_followers_nodesBuilder b)
+          updates]) = _$GFollowersData_user_followers_nodes;
 
   static void _initializeBuilder(
           GFollowersData_user_followers_nodesBuilder b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -148,11 +162,13 @@ abstract class GFollowersData_user_followers_nodes
   DateTime get createdAt;
   static Serializer<GFollowersData_user_followers_nodes> get serializer =>
       _$gFollowersDataUserFollowersNodesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GFollowersData_user_followers_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GFollowersData_user_followers_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -165,20 +181,23 @@ abstract class GFollowingData
     implements Built<GFollowingData, GFollowingDataBuilder> {
   GFollowingData._();
 
-  factory GFollowingData([Function(GFollowingDataBuilder b) updates]) =
+  factory GFollowingData([void Function(GFollowingDataBuilder b) updates]) =
       _$GFollowingData;
 
   static void _initializeBuilder(GFollowingDataBuilder b) =>
       b..G__typename = 'Query';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GFollowingData_user? get user;
   static Serializer<GFollowingData> get serializer =>
       _$gFollowingDataSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GFollowingData.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GFollowingData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GFollowingData.serializer,
@@ -191,19 +210,23 @@ abstract class GFollowingData_user
   GFollowingData_user._();
 
   factory GFollowingData_user(
-      [Function(GFollowingData_userBuilder b) updates]) = _$GFollowingData_user;
+          [void Function(GFollowingData_userBuilder b) updates]) =
+      _$GFollowingData_user;
 
   static void _initializeBuilder(GFollowingData_userBuilder b) =>
       b..G__typename = 'User';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GFollowingData_user_following get following;
   static Serializer<GFollowingData_user> get serializer =>
       _$gFollowingDataUserSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GFollowingData_user.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GFollowingData_user? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GFollowingData_user.serializer,
@@ -218,21 +241,24 @@ abstract class GFollowingData_user_following
   GFollowingData_user_following._();
 
   factory GFollowingData_user_following(
-          [Function(GFollowingData_user_followingBuilder b) updates]) =
+          [void Function(GFollowingData_user_followingBuilder b) updates]) =
       _$GFollowingData_user_following;
 
   static void _initializeBuilder(GFollowingData_user_followingBuilder b) =>
       b..G__typename = 'FollowingConnection';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GFollowingData_user_following_pageInfo get pageInfo;
-  BuiltList<GFollowingData_user_following_nodes>? get nodes;
+  BuiltList<GFollowingData_user_following_nodes?>? get nodes;
   static Serializer<GFollowingData_user_following> get serializer =>
       _$gFollowingDataUserFollowingSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GFollowingData_user_following.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GFollowingData_user_following? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GFollowingData_user_following.serializer,
@@ -247,22 +273,25 @@ abstract class GFollowingData_user_following_pageInfo
   GFollowingData_user_following_pageInfo._();
 
   factory GFollowingData_user_following_pageInfo(
-          [Function(GFollowingData_user_following_pageInfoBuilder b) updates]) =
-      _$GFollowingData_user_following_pageInfo;
+      [void Function(GFollowingData_user_following_pageInfoBuilder b)
+          updates]) = _$GFollowingData_user_following_pageInfo;
 
   static void _initializeBuilder(
           GFollowingData_user_following_pageInfoBuilder b) =>
       b..G__typename = 'PageInfo';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   bool get hasNextPage;
   String? get endCursor;
   static Serializer<GFollowingData_user_following_pageInfo> get serializer =>
       _$gFollowingDataUserFollowingPageInfoSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GFollowingData_user_following_pageInfo.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GFollowingData_user_following_pageInfo? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -279,12 +308,13 @@ abstract class GFollowingData_user_following_nodes
   GFollowingData_user_following_nodes._();
 
   factory GFollowingData_user_following_nodes(
-          [Function(GFollowingData_user_following_nodesBuilder b) updates]) =
-      _$GFollowingData_user_following_nodes;
+      [void Function(GFollowingData_user_following_nodesBuilder b)
+          updates]) = _$GFollowingData_user_following_nodes;
 
   static void _initializeBuilder(
           GFollowingData_user_following_nodesBuilder b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -300,11 +330,13 @@ abstract class GFollowingData_user_following_nodes
   DateTime get createdAt;
   static Serializer<GFollowingData_user_following_nodes> get serializer =>
       _$gFollowingDataUserFollowingNodesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GFollowingData_user_following_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GFollowingData_user_following_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -316,18 +348,21 @@ abstract class GFollowingData_user_following_nodes
 abstract class GOrgsData implements Built<GOrgsData, GOrgsDataBuilder> {
   GOrgsData._();
 
-  factory GOrgsData([Function(GOrgsDataBuilder b) updates]) = _$GOrgsData;
+  factory GOrgsData([void Function(GOrgsDataBuilder b) updates]) = _$GOrgsData;
 
   static void _initializeBuilder(GOrgsDataBuilder b) =>
       b..G__typename = 'Query';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GOrgsData_user? get user;
   static Serializer<GOrgsData> get serializer => _$gOrgsDataSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GOrgsData.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GOrgsData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GOrgsData.serializer,
@@ -339,19 +374,22 @@ abstract class GOrgsData_user
     implements Built<GOrgsData_user, GOrgsData_userBuilder> {
   GOrgsData_user._();
 
-  factory GOrgsData_user([Function(GOrgsData_userBuilder b) updates]) =
+  factory GOrgsData_user([void Function(GOrgsData_userBuilder b) updates]) =
       _$GOrgsData_user;
 
   static void _initializeBuilder(GOrgsData_userBuilder b) =>
       b..G__typename = 'User';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GOrgsData_user_organizations get organizations;
   static Serializer<GOrgsData_user> get serializer => _$gOrgsDataUserSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GOrgsData_user.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GOrgsData_user? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GOrgsData_user.serializer,
@@ -366,21 +404,24 @@ abstract class GOrgsData_user_organizations
   GOrgsData_user_organizations._();
 
   factory GOrgsData_user_organizations(
-          [Function(GOrgsData_user_organizationsBuilder b) updates]) =
+          [void Function(GOrgsData_user_organizationsBuilder b) updates]) =
       _$GOrgsData_user_organizations;
 
   static void _initializeBuilder(GOrgsData_user_organizationsBuilder b) =>
       b..G__typename = 'OrganizationConnection';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GOrgsData_user_organizations_pageInfo get pageInfo;
-  BuiltList<GOrgsData_user_organizations_nodes>? get nodes;
+  BuiltList<GOrgsData_user_organizations_nodes?>? get nodes;
   static Serializer<GOrgsData_user_organizations> get serializer =>
       _$gOrgsDataUserOrganizationsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GOrgsData_user_organizations.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GOrgsData_user_organizations? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GOrgsData_user_organizations.serializer,
@@ -395,22 +436,25 @@ abstract class GOrgsData_user_organizations_pageInfo
   GOrgsData_user_organizations_pageInfo._();
 
   factory GOrgsData_user_organizations_pageInfo(
-          [Function(GOrgsData_user_organizations_pageInfoBuilder b) updates]) =
-      _$GOrgsData_user_organizations_pageInfo;
+      [void Function(GOrgsData_user_organizations_pageInfoBuilder b)
+          updates]) = _$GOrgsData_user_organizations_pageInfo;
 
   static void _initializeBuilder(
           GOrgsData_user_organizations_pageInfoBuilder b) =>
       b..G__typename = 'PageInfo';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   bool get hasNextPage;
   String? get endCursor;
   static Serializer<GOrgsData_user_organizations_pageInfo> get serializer =>
       _$gOrgsDataUserOrganizationsPageInfoSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GOrgsData_user_organizations_pageInfo.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GOrgsData_user_organizations_pageInfo? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -427,11 +471,12 @@ abstract class GOrgsData_user_organizations_nodes
   GOrgsData_user_organizations_nodes._();
 
   factory GOrgsData_user_organizations_nodes(
-          [Function(GOrgsData_user_organizations_nodesBuilder b) updates]) =
-      _$GOrgsData_user_organizations_nodes;
+      [void Function(GOrgsData_user_organizations_nodesBuilder b)
+          updates]) = _$GOrgsData_user_organizations_nodes;
 
   static void _initializeBuilder(GOrgsData_user_organizations_nodesBuilder b) =>
       b..G__typename = 'Organization';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -447,11 +492,13 @@ abstract class GOrgsData_user_organizations_nodes
   DateTime get createdAt;
   static Serializer<GOrgsData_user_organizations_nodes> get serializer =>
       _$gOrgsDataUserOrganizationsNodesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GOrgsData_user_organizations_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GOrgsData_user_organizations_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -464,19 +511,22 @@ abstract class GMembersData
     implements Built<GMembersData, GMembersDataBuilder> {
   GMembersData._();
 
-  factory GMembersData([Function(GMembersDataBuilder b) updates]) =
+  factory GMembersData([void Function(GMembersDataBuilder b) updates]) =
       _$GMembersData;
 
   static void _initializeBuilder(GMembersDataBuilder b) =>
       b..G__typename = 'Query';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GMembersData_organization? get organization;
   static Serializer<GMembersData> get serializer => _$gMembersDataSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GMembersData.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GMembersData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GMembersData.serializer,
@@ -490,20 +540,23 @@ abstract class GMembersData_organization
   GMembersData_organization._();
 
   factory GMembersData_organization(
-          [Function(GMembersData_organizationBuilder b) updates]) =
+          [void Function(GMembersData_organizationBuilder b) updates]) =
       _$GMembersData_organization;
 
   static void _initializeBuilder(GMembersData_organizationBuilder b) =>
       b..G__typename = 'Organization';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GMembersData_organization_membersWithRole get membersWithRole;
   static Serializer<GMembersData_organization> get serializer =>
       _$gMembersDataOrganizationSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GMembersData_organization.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GMembersData_organization? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GMembersData_organization.serializer,
@@ -518,22 +571,25 @@ abstract class GMembersData_organization_membersWithRole
   GMembersData_organization_membersWithRole._();
 
   factory GMembersData_organization_membersWithRole(
-      [Function(GMembersData_organization_membersWithRoleBuilder b)
+      [void Function(GMembersData_organization_membersWithRoleBuilder b)
           updates]) = _$GMembersData_organization_membersWithRole;
 
   static void _initializeBuilder(
           GMembersData_organization_membersWithRoleBuilder b) =>
       b..G__typename = 'OrganizationMemberConnection';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GMembersData_organization_membersWithRole_pageInfo get pageInfo;
-  BuiltList<GMembersData_organization_membersWithRole_nodes>? get nodes;
+  BuiltList<GMembersData_organization_membersWithRole_nodes?>? get nodes;
   static Serializer<GMembersData_organization_membersWithRole> get serializer =>
       _$gMembersDataOrganizationMembersWithRoleSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GMembersData_organization_membersWithRole.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GMembersData_organization_membersWithRole? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -549,12 +605,14 @@ abstract class GMembersData_organization_membersWithRole_pageInfo
   GMembersData_organization_membersWithRole_pageInfo._();
 
   factory GMembersData_organization_membersWithRole_pageInfo(
-      [Function(GMembersData_organization_membersWithRole_pageInfoBuilder b)
+      [void Function(
+              GMembersData_organization_membersWithRole_pageInfoBuilder b)
           updates]) = _$GMembersData_organization_membersWithRole_pageInfo;
 
   static void _initializeBuilder(
           GMembersData_organization_membersWithRole_pageInfoBuilder b) =>
       b..G__typename = 'PageInfo';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   bool get hasNextPage;
@@ -562,10 +620,12 @@ abstract class GMembersData_organization_membersWithRole_pageInfo
   static Serializer<GMembersData_organization_membersWithRole_pageInfo>
       get serializer =>
           _$gMembersDataOrganizationMembersWithRolePageInfoSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GMembersData_organization_membersWithRole_pageInfo.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GMembersData_organization_membersWithRole_pageInfo? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -582,12 +642,13 @@ abstract class GMembersData_organization_membersWithRole_nodes
   GMembersData_organization_membersWithRole_nodes._();
 
   factory GMembersData_organization_membersWithRole_nodes(
-      [Function(GMembersData_organization_membersWithRole_nodesBuilder b)
+      [void Function(GMembersData_organization_membersWithRole_nodesBuilder b)
           updates]) = _$GMembersData_organization_membersWithRole_nodes;
 
   static void _initializeBuilder(
           GMembersData_organization_membersWithRole_nodesBuilder b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -604,11 +665,13 @@ abstract class GMembersData_organization_membersWithRole_nodes
   static Serializer<GMembersData_organization_membersWithRole_nodes>
       get serializer =>
           _$gMembersDataOrganizationMembersWithRoleNodesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GMembersData_organization_membersWithRole_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GMembersData_organization_membersWithRole_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -621,19 +684,22 @@ abstract class GWatchersData
     implements Built<GWatchersData, GWatchersDataBuilder> {
   GWatchersData._();
 
-  factory GWatchersData([Function(GWatchersDataBuilder b) updates]) =
+  factory GWatchersData([void Function(GWatchersDataBuilder b) updates]) =
       _$GWatchersData;
 
   static void _initializeBuilder(GWatchersDataBuilder b) =>
       b..G__typename = 'Query';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GWatchersData_repository? get repository;
   static Serializer<GWatchersData> get serializer => _$gWatchersDataSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GWatchersData.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GWatchersData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GWatchersData.serializer,
@@ -647,20 +713,23 @@ abstract class GWatchersData_repository
   GWatchersData_repository._();
 
   factory GWatchersData_repository(
-          [Function(GWatchersData_repositoryBuilder b) updates]) =
+          [void Function(GWatchersData_repositoryBuilder b) updates]) =
       _$GWatchersData_repository;
 
   static void _initializeBuilder(GWatchersData_repositoryBuilder b) =>
       b..G__typename = 'Repository';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GWatchersData_repository_watchers get watchers;
   static Serializer<GWatchersData_repository> get serializer =>
       _$gWatchersDataRepositorySerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GWatchersData_repository.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GWatchersData_repository? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GWatchersData_repository.serializer,
@@ -675,21 +744,24 @@ abstract class GWatchersData_repository_watchers
   GWatchersData_repository_watchers._();
 
   factory GWatchersData_repository_watchers(
-          [Function(GWatchersData_repository_watchersBuilder b) updates]) =
+          [void Function(GWatchersData_repository_watchersBuilder b) updates]) =
       _$GWatchersData_repository_watchers;
 
   static void _initializeBuilder(GWatchersData_repository_watchersBuilder b) =>
       b..G__typename = 'UserConnection';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GWatchersData_repository_watchers_pageInfo get pageInfo;
-  BuiltList<GWatchersData_repository_watchers_nodes>? get nodes;
+  BuiltList<GWatchersData_repository_watchers_nodes?>? get nodes;
   static Serializer<GWatchersData_repository_watchers> get serializer =>
       _$gWatchersDataRepositoryWatchersSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GWatchersData_repository_watchers.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GWatchersData_repository_watchers? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -705,22 +777,25 @@ abstract class GWatchersData_repository_watchers_pageInfo
   GWatchersData_repository_watchers_pageInfo._();
 
   factory GWatchersData_repository_watchers_pageInfo(
-      [Function(GWatchersData_repository_watchers_pageInfoBuilder b)
+      [void Function(GWatchersData_repository_watchers_pageInfoBuilder b)
           updates]) = _$GWatchersData_repository_watchers_pageInfo;
 
   static void _initializeBuilder(
           GWatchersData_repository_watchers_pageInfoBuilder b) =>
       b..G__typename = 'PageInfo';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   bool get hasNextPage;
   String? get endCursor;
   static Serializer<GWatchersData_repository_watchers_pageInfo>
       get serializer => _$gWatchersDataRepositoryWatchersPageInfoSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GWatchersData_repository_watchers_pageInfo.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GWatchersData_repository_watchers_pageInfo? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -737,12 +812,13 @@ abstract class GWatchersData_repository_watchers_nodes
   GWatchersData_repository_watchers_nodes._();
 
   factory GWatchersData_repository_watchers_nodes(
-      [Function(GWatchersData_repository_watchers_nodesBuilder b)
+      [void Function(GWatchersData_repository_watchers_nodesBuilder b)
           updates]) = _$GWatchersData_repository_watchers_nodes;
 
   static void _initializeBuilder(
           GWatchersData_repository_watchers_nodesBuilder b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -758,11 +834,13 @@ abstract class GWatchersData_repository_watchers_nodes
   DateTime get createdAt;
   static Serializer<GWatchersData_repository_watchers_nodes> get serializer =>
       _$gWatchersDataRepositoryWatchersNodesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GWatchersData_repository_watchers_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GWatchersData_repository_watchers_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -775,20 +853,23 @@ abstract class GStargazersData
     implements Built<GStargazersData, GStargazersDataBuilder> {
   GStargazersData._();
 
-  factory GStargazersData([Function(GStargazersDataBuilder b) updates]) =
+  factory GStargazersData([void Function(GStargazersDataBuilder b) updates]) =
       _$GStargazersData;
 
   static void _initializeBuilder(GStargazersDataBuilder b) =>
       b..G__typename = 'Query';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GStargazersData_repository? get repository;
   static Serializer<GStargazersData> get serializer =>
       _$gStargazersDataSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GStargazersData.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GStargazersData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GStargazersData.serializer,
@@ -802,20 +883,23 @@ abstract class GStargazersData_repository
   GStargazersData_repository._();
 
   factory GStargazersData_repository(
-          [Function(GStargazersData_repositoryBuilder b) updates]) =
+          [void Function(GStargazersData_repositoryBuilder b) updates]) =
       _$GStargazersData_repository;
 
   static void _initializeBuilder(GStargazersData_repositoryBuilder b) =>
       b..G__typename = 'Repository';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GStargazersData_repository_stargazers get stargazers;
   static Serializer<GStargazersData_repository> get serializer =>
       _$gStargazersDataRepositorySerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GStargazersData_repository.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GStargazersData_repository? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GStargazersData_repository.serializer,
@@ -830,22 +914,25 @@ abstract class GStargazersData_repository_stargazers
   GStargazersData_repository_stargazers._();
 
   factory GStargazersData_repository_stargazers(
-          [Function(GStargazersData_repository_stargazersBuilder b) updates]) =
-      _$GStargazersData_repository_stargazers;
+      [void Function(GStargazersData_repository_stargazersBuilder b)
+          updates]) = _$GStargazersData_repository_stargazers;
 
   static void _initializeBuilder(
           GStargazersData_repository_stargazersBuilder b) =>
       b..G__typename = 'StargazerConnection';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GStargazersData_repository_stargazers_pageInfo get pageInfo;
-  BuiltList<GStargazersData_repository_stargazers_nodes>? get nodes;
+  BuiltList<GStargazersData_repository_stargazers_nodes?>? get nodes;
   static Serializer<GStargazersData_repository_stargazers> get serializer =>
       _$gStargazersDataRepositoryStargazersSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GStargazersData_repository_stargazers.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GStargazersData_repository_stargazers? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -861,22 +948,25 @@ abstract class GStargazersData_repository_stargazers_pageInfo
   GStargazersData_repository_stargazers_pageInfo._();
 
   factory GStargazersData_repository_stargazers_pageInfo(
-      [Function(GStargazersData_repository_stargazers_pageInfoBuilder b)
+      [void Function(GStargazersData_repository_stargazers_pageInfoBuilder b)
           updates]) = _$GStargazersData_repository_stargazers_pageInfo;
 
   static void _initializeBuilder(
           GStargazersData_repository_stargazers_pageInfoBuilder b) =>
       b..G__typename = 'PageInfo';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   bool get hasNextPage;
   String? get endCursor;
   static Serializer<GStargazersData_repository_stargazers_pageInfo>
       get serializer => _$gStargazersDataRepositoryStargazersPageInfoSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GStargazersData_repository_stargazers_pageInfo.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GStargazersData_repository_stargazers_pageInfo? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -893,12 +983,13 @@ abstract class GStargazersData_repository_stargazers_nodes
   GStargazersData_repository_stargazers_nodes._();
 
   factory GStargazersData_repository_stargazers_nodes(
-      [Function(GStargazersData_repository_stargazers_nodesBuilder b)
+      [void Function(GStargazersData_repository_stargazers_nodesBuilder b)
           updates]) = _$GStargazersData_repository_stargazers_nodes;
 
   static void _initializeBuilder(
           GStargazersData_repository_stargazers_nodesBuilder b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -914,11 +1005,13 @@ abstract class GStargazersData_repository_stargazers_nodes
   DateTime get createdAt;
   static Serializer<GStargazersData_repository_stargazers_nodes>
       get serializer => _$gStargazersDataRepositoryStargazersNodesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GStargazersData_repository_stargazers_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GStargazersData_repository_stargazers_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -941,11 +1034,12 @@ abstract class GUserPartsData
     implements Built<GUserPartsData, GUserPartsDataBuilder>, GUserParts {
   GUserPartsData._();
 
-  factory GUserPartsData([Function(GUserPartsDataBuilder b) updates]) =
+  factory GUserPartsData([void Function(GUserPartsDataBuilder b) updates]) =
       _$GUserPartsData;
 
   static void _initializeBuilder(GUserPartsDataBuilder b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -961,11 +1055,13 @@ abstract class GUserPartsData
   DateTime get createdAt;
   static Serializer<GUserPartsData> get serializer =>
       _$gUserPartsDataSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserPartsData.serializer,
@@ -987,11 +1083,12 @@ abstract class GOrgPartsData
     implements Built<GOrgPartsData, GOrgPartsDataBuilder>, GOrgParts {
   GOrgPartsData._();
 
-  factory GOrgPartsData([Function(GOrgPartsDataBuilder b) updates]) =
+  factory GOrgPartsData([void Function(GOrgPartsDataBuilder b) updates]) =
       _$GOrgPartsData;
 
   static void _initializeBuilder(GOrgPartsDataBuilder b) =>
       b..G__typename = 'Organization';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1006,11 +1103,13 @@ abstract class GOrgPartsData
   @override
   DateTime get createdAt;
   static Serializer<GOrgPartsData> get serializer => _$gOrgPartsDataSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GOrgPartsData.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GOrgPartsData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GOrgPartsData.serializer,

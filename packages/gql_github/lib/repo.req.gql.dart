@@ -20,7 +20,7 @@ abstract class GRepoReq
         _i1.OperationRequest<_i2.GRepoData, _i3.GRepoVars> {
   GRepoReq._();
 
-  factory GRepoReq([Function(GRepoReqBuilder b) updates]) = _$GRepoReq;
+  factory GRepoReq([void Function(GRepoReqBuilder b) updates]) = _$GRepoReq;
 
   static void _initializeBuilder(GRepoReqBuilder b) => b
     ..operation = _i4.Operation(
@@ -28,6 +28,7 @@ abstract class GRepoReq
       operationName: 'Repo',
     )
     ..executeOnListen = true;
+
   @override
   _i3.GRepoVars get vars;
   @override
@@ -36,7 +37,9 @@ abstract class GRepoReq
   _i4.Request get execRequest => _i4.Request(
         operation: operation,
         variables: vars.toJson(),
+        context: context ?? const _i4.Context(),
       );
+
   @override
   String? get requestId;
   @override
@@ -56,13 +59,30 @@ abstract class GRepoReq
   @override
   bool get executeOnListen;
   @override
+  @BuiltValueField(serialize: false)
+  _i4.Context? get context;
+  @override
   _i2.GRepoData? parseData(Map<String, dynamic> json) =>
       _i2.GRepoData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GRepoData data) => data.toJson();
+
+  @override
+  _i1.OperationRequest<_i2.GRepoData, _i3.GRepoVars> transformOperation(
+          _i4.Operation Function(_i4.Operation) transform) =>
+      this.rebuild((b) => b..operation = transform(operation));
+
   static Serializer<GRepoReq> get serializer => _$gRepoReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GRepoReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRepoReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GRepoReq.serializer,
@@ -76,12 +96,13 @@ abstract class GCommitPartsReq
         _i1.FragmentRequest<_i2.GCommitPartsData, _i3.GCommitPartsVars> {
   GCommitPartsReq._();
 
-  factory GCommitPartsReq([Function(GCommitPartsReqBuilder b) updates]) =
+  factory GCommitPartsReq([void Function(GCommitPartsReqBuilder b) updates]) =
       _$GCommitPartsReq;
 
   static void _initializeBuilder(GCommitPartsReqBuilder b) => b
     ..document = _i5.document
     ..fragmentName = 'CommitParts';
+
   @override
   _i3.GCommitPartsVars get vars;
   @override
@@ -93,12 +114,21 @@ abstract class GCommitPartsReq
   @override
   _i2.GCommitPartsData? parseData(Map<String, dynamic> json) =>
       _i2.GCommitPartsData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GCommitPartsData data) => data.toJson();
+
   static Serializer<GCommitPartsReq> get serializer =>
       _$gCommitPartsReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GCommitPartsReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitPartsReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GCommitPartsReq.serializer,
@@ -112,12 +142,13 @@ abstract class GRefPartsReq
         _i1.FragmentRequest<_i2.GRefPartsData, _i3.GRefPartsVars> {
   GRefPartsReq._();
 
-  factory GRefPartsReq([Function(GRefPartsReqBuilder b) updates]) =
+  factory GRefPartsReq([void Function(GRefPartsReqBuilder b) updates]) =
       _$GRefPartsReq;
 
   static void _initializeBuilder(GRefPartsReqBuilder b) => b
     ..document = _i5.document
     ..fragmentName = 'RefParts';
+
   @override
   _i3.GRefPartsVars get vars;
   @override
@@ -129,11 +160,20 @@ abstract class GRefPartsReq
   @override
   _i2.GRefPartsData? parseData(Map<String, dynamic> json) =>
       _i2.GRefPartsData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GRefPartsData data) => data.toJson();
+
   static Serializer<GRefPartsReq> get serializer => _$gRefPartsReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GRefPartsReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRefPartsReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GRefPartsReq.serializer,

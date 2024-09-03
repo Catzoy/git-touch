@@ -5,7 +5,7 @@
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
-import 'package:gql_code_builder/src/serializers/inline_fragment_serializer.dart'
+import 'package:gql_code_builder_serializers/gql_code_builder_serializers.dart'
     as _i2;
 import 'package:gql_github/serializers.gql.dart' as _i1;
 
@@ -14,18 +14,22 @@ part 'user.data.gql.g.dart';
 abstract class GViewerData implements Built<GViewerData, GViewerDataBuilder> {
   GViewerData._();
 
-  factory GViewerData([Function(GViewerDataBuilder b) updates]) = _$GViewerData;
+  factory GViewerData([void Function(GViewerDataBuilder b) updates]) =
+      _$GViewerData;
 
   static void _initializeBuilder(GViewerDataBuilder b) =>
       b..G__typename = 'Query';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GViewerData_viewer get viewer;
   static Serializer<GViewerData> get serializer => _$gViewerDataSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GViewerData.serializer,
@@ -39,11 +43,13 @@ abstract class GViewerData_viewer
         GUserParts {
   GViewerData_viewer._();
 
-  factory GViewerData_viewer([Function(GViewerData_viewerBuilder b) updates]) =
+  factory GViewerData_viewer(
+          [void Function(GViewerData_viewerBuilder b) updates]) =
       _$GViewerData_viewer;
 
   static void _initializeBuilder(GViewerData_viewerBuilder b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -95,11 +101,13 @@ abstract class GViewerData_viewer
   GViewerData_viewer_pinnedItems get pinnedItems;
   static Serializer<GViewerData_viewer> get serializer =>
       _$gViewerDataViewerSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GViewerData_viewer.serializer,
@@ -115,11 +123,12 @@ abstract class GViewerData_viewer_followers
   GViewerData_viewer_followers._();
 
   factory GViewerData_viewer_followers(
-          [Function(GViewerData_viewer_followersBuilder b) updates]) =
+          [void Function(GViewerData_viewer_followersBuilder b) updates]) =
       _$GViewerData_viewer_followers;
 
   static void _initializeBuilder(GViewerData_viewer_followersBuilder b) =>
       b..G__typename = 'FollowerConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -127,11 +136,13 @@ abstract class GViewerData_viewer_followers
   int get totalCount;
   static Serializer<GViewerData_viewer_followers> get serializer =>
       _$gViewerDataViewerFollowersSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_followers.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_followers? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GViewerData_viewer_followers.serializer,
@@ -147,11 +158,12 @@ abstract class GViewerData_viewer_following
   GViewerData_viewer_following._();
 
   factory GViewerData_viewer_following(
-          [Function(GViewerData_viewer_followingBuilder b) updates]) =
+          [void Function(GViewerData_viewer_followingBuilder b) updates]) =
       _$GViewerData_viewer_following;
 
   static void _initializeBuilder(GViewerData_viewer_followingBuilder b) =>
       b..G__typename = 'FollowingConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -159,11 +171,13 @@ abstract class GViewerData_viewer_following
   int get totalCount;
   static Serializer<GViewerData_viewer_following> get serializer =>
       _$gViewerDataViewerFollowingSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_following.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_following? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GViewerData_viewer_following.serializer,
@@ -179,12 +193,13 @@ abstract class GViewerData_viewer_contributionsCollection
   GViewerData_viewer_contributionsCollection._();
 
   factory GViewerData_viewer_contributionsCollection(
-      [Function(GViewerData_viewer_contributionsCollectionBuilder b)
+      [void Function(GViewerData_viewer_contributionsCollectionBuilder b)
           updates]) = _$GViewerData_viewer_contributionsCollection;
 
   static void _initializeBuilder(
           GViewerData_viewer_contributionsCollectionBuilder b) =>
       b..G__typename = 'ContributionsCollection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -193,11 +208,13 @@ abstract class GViewerData_viewer_contributionsCollection
       get contributionCalendar;
   static Serializer<GViewerData_viewer_contributionsCollection>
       get serializer => _$gViewerDataViewerContributionsCollectionSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_contributionsCollection.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_contributionsCollection? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -214,7 +231,7 @@ abstract class GViewerData_viewer_contributionsCollection_contributionCalendar
   GViewerData_viewer_contributionsCollection_contributionCalendar._();
 
   factory GViewerData_viewer_contributionsCollection_contributionCalendar(
-          [Function(
+          [void Function(
                   GViewerData_viewer_contributionsCollection_contributionCalendarBuilder
                       b)
               updates]) =
@@ -224,6 +241,7 @@ abstract class GViewerData_viewer_contributionsCollection_contributionCalendar
           GViewerData_viewer_contributionsCollection_contributionCalendarBuilder
               b) =>
       b..G__typename = 'ContributionCalendar';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -235,12 +253,14 @@ abstract class GViewerData_viewer_contributionsCollection_contributionCalendar
           GViewerData_viewer_contributionsCollection_contributionCalendar>
       get serializer =>
           _$gViewerDataViewerContributionsCollectionContributionCalendarSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_contributionsCollection_contributionCalendar
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_contributionsCollection_contributionCalendar?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GViewerData_viewer_contributionsCollection_contributionCalendar
@@ -258,7 +278,7 @@ abstract class GViewerData_viewer_contributionsCollection_contributionCalendar_w
   GViewerData_viewer_contributionsCollection_contributionCalendar_weeks._();
 
   factory GViewerData_viewer_contributionsCollection_contributionCalendar_weeks(
-          [Function(
+          [void Function(
                   GViewerData_viewer_contributionsCollection_contributionCalendar_weeksBuilder
                       b)
               updates]) =
@@ -268,6 +288,7 @@ abstract class GViewerData_viewer_contributionsCollection_contributionCalendar_w
           GViewerData_viewer_contributionsCollection_contributionCalendar_weeksBuilder
               b) =>
       b..G__typename = 'ContributionCalendarWeek';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -279,12 +300,14 @@ abstract class GViewerData_viewer_contributionsCollection_contributionCalendar_w
           GViewerData_viewer_contributionsCollection_contributionCalendar_weeks>
       get serializer =>
           _$gViewerDataViewerContributionsCollectionContributionCalendarWeeksSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_contributionsCollection_contributionCalendar_weeks
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_contributionsCollection_contributionCalendar_weeks?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GViewerData_viewer_contributionsCollection_contributionCalendar_weeks
@@ -302,7 +325,7 @@ abstract class GViewerData_viewer_contributionsCollection_contributionCalendar_w
   GViewerData_viewer_contributionsCollection_contributionCalendar_weeks_contributionDays._();
 
   factory GViewerData_viewer_contributionsCollection_contributionCalendar_weeks_contributionDays(
-          [Function(
+          [void Function(
                   GViewerData_viewer_contributionsCollection_contributionCalendar_weeks_contributionDaysBuilder
                       b)
               updates]) =
@@ -312,6 +335,7 @@ abstract class GViewerData_viewer_contributionsCollection_contributionCalendar_w
           GViewerData_viewer_contributionsCollection_contributionCalendar_weeks_contributionDaysBuilder
               b) =>
       b..G__typename = 'ContributionCalendarDay';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -321,12 +345,14 @@ abstract class GViewerData_viewer_contributionsCollection_contributionCalendar_w
           GViewerData_viewer_contributionsCollection_contributionCalendar_weeks_contributionDays>
       get serializer =>
           _$gViewerDataViewerContributionsCollectionContributionCalendarWeeksContributionDaysSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_contributionsCollection_contributionCalendar_weeks_contributionDays
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_contributionsCollection_contributionCalendar_weeks_contributionDays?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GViewerData_viewer_contributionsCollection_contributionCalendar_weeks_contributionDays
@@ -344,25 +370,28 @@ abstract class GViewerData_viewer_sponsoring
   GViewerData_viewer_sponsoring._();
 
   factory GViewerData_viewer_sponsoring(
-          [Function(GViewerData_viewer_sponsoringBuilder b) updates]) =
+          [void Function(GViewerData_viewer_sponsoringBuilder b) updates]) =
       _$GViewerData_viewer_sponsoring;
 
   static void _initializeBuilder(GViewerData_viewer_sponsoringBuilder b) =>
       b..G__typename = 'SponsorConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
   int get totalCount;
   @override
-  BuiltList<GViewerData_viewer_sponsoring_nodes>? get nodes;
+  BuiltList<GViewerData_viewer_sponsoring_nodes?>? get nodes;
   static Serializer<GViewerData_viewer_sponsoring> get serializer =>
       _$gViewerDataViewerSponsoringSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_sponsoring.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_sponsoring? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GViewerData_viewer_sponsoring.serializer,
@@ -384,10 +413,12 @@ abstract class GViewerData_viewer_sponsoring_nodes
           'Organization': GViewerData_viewer_sponsoring_nodes__asOrganization,
         },
       );
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_sponsoring_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_sponsoring_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -404,22 +435,25 @@ abstract class GViewerData_viewer_sponsoring_nodes__base
   GViewerData_viewer_sponsoring_nodes__base._();
 
   factory GViewerData_viewer_sponsoring_nodes__base(
-      [Function(GViewerData_viewer_sponsoring_nodes__baseBuilder b)
+      [void Function(GViewerData_viewer_sponsoring_nodes__baseBuilder b)
           updates]) = _$GViewerData_viewer_sponsoring_nodes__base;
 
   static void _initializeBuilder(
           GViewerData_viewer_sponsoring_nodes__baseBuilder b) =>
       b..G__typename = 'Sponsor';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   static Serializer<GViewerData_viewer_sponsoring_nodes__base> get serializer =>
       _$gViewerDataViewerSponsoringNodesBaseSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_sponsoring_nodes__base.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_sponsoring_nodes__base? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -436,23 +470,26 @@ abstract class GViewerData_viewer_sponsoring_nodes__asUser
   GViewerData_viewer_sponsoring_nodes__asUser._();
 
   factory GViewerData_viewer_sponsoring_nodes__asUser(
-      [Function(GViewerData_viewer_sponsoring_nodes__asUserBuilder b)
+      [void Function(GViewerData_viewer_sponsoring_nodes__asUserBuilder b)
           updates]) = _$GViewerData_viewer_sponsoring_nodes__asUser;
 
   static void _initializeBuilder(
           GViewerData_viewer_sponsoring_nodes__asUserBuilder b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   String get avatarUrl;
   static Serializer<GViewerData_viewer_sponsoring_nodes__asUser>
       get serializer => _$gViewerDataViewerSponsoringNodesAsUserSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_sponsoring_nodes__asUser.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_sponsoring_nodes__asUser? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -469,12 +506,14 @@ abstract class GViewerData_viewer_sponsoring_nodes__asOrganization
   GViewerData_viewer_sponsoring_nodes__asOrganization._();
 
   factory GViewerData_viewer_sponsoring_nodes__asOrganization(
-      [Function(GViewerData_viewer_sponsoring_nodes__asOrganizationBuilder b)
+      [void Function(
+              GViewerData_viewer_sponsoring_nodes__asOrganizationBuilder b)
           updates]) = _$GViewerData_viewer_sponsoring_nodes__asOrganization;
 
   static void _initializeBuilder(
           GViewerData_viewer_sponsoring_nodes__asOrganizationBuilder b) =>
       b..G__typename = 'Organization';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -482,11 +521,13 @@ abstract class GViewerData_viewer_sponsoring_nodes__asOrganization
   static Serializer<GViewerData_viewer_sponsoring_nodes__asOrganization>
       get serializer =>
           _$gViewerDataViewerSponsoringNodesAsOrganizationSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_sponsoring_nodes__asOrganization.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_sponsoring_nodes__asOrganization? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -503,25 +544,28 @@ abstract class GViewerData_viewer_sponsors
   GViewerData_viewer_sponsors._();
 
   factory GViewerData_viewer_sponsors(
-          [Function(GViewerData_viewer_sponsorsBuilder b) updates]) =
+          [void Function(GViewerData_viewer_sponsorsBuilder b) updates]) =
       _$GViewerData_viewer_sponsors;
 
   static void _initializeBuilder(GViewerData_viewer_sponsorsBuilder b) =>
       b..G__typename = 'SponsorConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
   int get totalCount;
   @override
-  BuiltList<GViewerData_viewer_sponsors_nodes>? get nodes;
+  BuiltList<GViewerData_viewer_sponsors_nodes?>? get nodes;
   static Serializer<GViewerData_viewer_sponsors> get serializer =>
       _$gViewerDataViewerSponsorsSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_sponsors.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_sponsors? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GViewerData_viewer_sponsors.serializer,
@@ -543,10 +587,12 @@ abstract class GViewerData_viewer_sponsors_nodes
           'Organization': GViewerData_viewer_sponsors_nodes__asOrganization,
         },
       );
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_sponsors_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_sponsors_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -563,22 +609,25 @@ abstract class GViewerData_viewer_sponsors_nodes__base
   GViewerData_viewer_sponsors_nodes__base._();
 
   factory GViewerData_viewer_sponsors_nodes__base(
-      [Function(GViewerData_viewer_sponsors_nodes__baseBuilder b)
+      [void Function(GViewerData_viewer_sponsors_nodes__baseBuilder b)
           updates]) = _$GViewerData_viewer_sponsors_nodes__base;
 
   static void _initializeBuilder(
           GViewerData_viewer_sponsors_nodes__baseBuilder b) =>
       b..G__typename = 'Sponsor';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   static Serializer<GViewerData_viewer_sponsors_nodes__base> get serializer =>
       _$gViewerDataViewerSponsorsNodesBaseSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_sponsors_nodes__base.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_sponsors_nodes__base? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -595,23 +644,26 @@ abstract class GViewerData_viewer_sponsors_nodes__asUser
   GViewerData_viewer_sponsors_nodes__asUser._();
 
   factory GViewerData_viewer_sponsors_nodes__asUser(
-      [Function(GViewerData_viewer_sponsors_nodes__asUserBuilder b)
+      [void Function(GViewerData_viewer_sponsors_nodes__asUserBuilder b)
           updates]) = _$GViewerData_viewer_sponsors_nodes__asUser;
 
   static void _initializeBuilder(
           GViewerData_viewer_sponsors_nodes__asUserBuilder b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   String get avatarUrl;
   static Serializer<GViewerData_viewer_sponsors_nodes__asUser> get serializer =>
       _$gViewerDataViewerSponsorsNodesAsUserSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_sponsors_nodes__asUser.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_sponsors_nodes__asUser? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -628,12 +680,13 @@ abstract class GViewerData_viewer_sponsors_nodes__asOrganization
   GViewerData_viewer_sponsors_nodes__asOrganization._();
 
   factory GViewerData_viewer_sponsors_nodes__asOrganization(
-      [Function(GViewerData_viewer_sponsors_nodes__asOrganizationBuilder b)
+      [void Function(GViewerData_viewer_sponsors_nodes__asOrganizationBuilder b)
           updates]) = _$GViewerData_viewer_sponsors_nodes__asOrganization;
 
   static void _initializeBuilder(
           GViewerData_viewer_sponsors_nodes__asOrganizationBuilder b) =>
       b..G__typename = 'Organization';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -641,11 +694,13 @@ abstract class GViewerData_viewer_sponsors_nodes__asOrganization
   static Serializer<GViewerData_viewer_sponsors_nodes__asOrganization>
       get serializer =>
           _$gViewerDataViewerSponsorsNodesAsOrganizationSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_sponsors_nodes__asOrganization.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_sponsors_nodes__asOrganization? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -662,25 +717,28 @@ abstract class GViewerData_viewer_organizations
   GViewerData_viewer_organizations._();
 
   factory GViewerData_viewer_organizations(
-          [Function(GViewerData_viewer_organizationsBuilder b) updates]) =
+          [void Function(GViewerData_viewer_organizationsBuilder b) updates]) =
       _$GViewerData_viewer_organizations;
 
   static void _initializeBuilder(GViewerData_viewer_organizationsBuilder b) =>
       b..G__typename = 'OrganizationConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
   int get totalCount;
   @override
-  BuiltList<GViewerData_viewer_organizations_nodes>? get nodes;
+  BuiltList<GViewerData_viewer_organizations_nodes?>? get nodes;
   static Serializer<GViewerData_viewer_organizations> get serializer =>
       _$gViewerDataViewerOrganizationsSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_organizations.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_organizations? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -697,12 +755,13 @@ abstract class GViewerData_viewer_organizations_nodes
   GViewerData_viewer_organizations_nodes._();
 
   factory GViewerData_viewer_organizations_nodes(
-          [Function(GViewerData_viewer_organizations_nodesBuilder b) updates]) =
-      _$GViewerData_viewer_organizations_nodes;
+      [void Function(GViewerData_viewer_organizations_nodesBuilder b)
+          updates]) = _$GViewerData_viewer_organizations_nodes;
 
   static void _initializeBuilder(
           GViewerData_viewer_organizations_nodesBuilder b) =>
       b..G__typename = 'Organization';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -710,11 +769,13 @@ abstract class GViewerData_viewer_organizations_nodes
   String get avatarUrl;
   static Serializer<GViewerData_viewer_organizations_nodes> get serializer =>
       _$gViewerDataViewerOrganizationsNodesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_organizations_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_organizations_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -731,25 +792,28 @@ abstract class GViewerData_viewer_repositories
   GViewerData_viewer_repositories._();
 
   factory GViewerData_viewer_repositories(
-          [Function(GViewerData_viewer_repositoriesBuilder b) updates]) =
+          [void Function(GViewerData_viewer_repositoriesBuilder b) updates]) =
       _$GViewerData_viewer_repositories;
 
   static void _initializeBuilder(GViewerData_viewer_repositoriesBuilder b) =>
       b..G__typename = 'RepositoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
   int get totalCount;
   @override
-  BuiltList<GViewerData_viewer_repositories_nodes>? get nodes;
+  BuiltList<GViewerData_viewer_repositories_nodes?>? get nodes;
   static Serializer<GViewerData_viewer_repositories> get serializer =>
       _$gViewerDataViewerRepositoriesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_repositories.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_repositories? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GViewerData_viewer_repositories.serializer,
@@ -766,12 +830,13 @@ abstract class GViewerData_viewer_repositories_nodes
   GViewerData_viewer_repositories_nodes._();
 
   factory GViewerData_viewer_repositories_nodes(
-          [Function(GViewerData_viewer_repositories_nodesBuilder b) updates]) =
-      _$GViewerData_viewer_repositories_nodes;
+      [void Function(GViewerData_viewer_repositories_nodesBuilder b)
+          updates]) = _$GViewerData_viewer_repositories_nodes;
 
   static void _initializeBuilder(
           GViewerData_viewer_repositories_nodesBuilder b) =>
       b..G__typename = 'Repository';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -793,11 +858,13 @@ abstract class GViewerData_viewer_repositories_nodes
   GViewerData_viewer_repositories_nodes_primaryLanguage? get primaryLanguage;
   static Serializer<GViewerData_viewer_repositories_nodes> get serializer =>
       _$gViewerDataViewerRepositoriesNodesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_repositories_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_repositories_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -815,12 +882,13 @@ abstract class GViewerData_viewer_repositories_nodes_owner
   GViewerData_viewer_repositories_nodes_owner._();
 
   factory GViewerData_viewer_repositories_nodes_owner(
-      [Function(GViewerData_viewer_repositories_nodes_ownerBuilder b)
+      [void Function(GViewerData_viewer_repositories_nodes_ownerBuilder b)
           updates]) = _$GViewerData_viewer_repositories_nodes_owner;
 
   static void _initializeBuilder(
           GViewerData_viewer_repositories_nodes_ownerBuilder b) =>
       b..G__typename = 'RepositoryOwner';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -830,11 +898,13 @@ abstract class GViewerData_viewer_repositories_nodes_owner
   String get avatarUrl;
   static Serializer<GViewerData_viewer_repositories_nodes_owner>
       get serializer => _$gViewerDataViewerRepositoriesNodesOwnerSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_repositories_nodes_owner.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_repositories_nodes_owner? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -852,12 +922,13 @@ abstract class GViewerData_viewer_repositories_nodes_stargazers
   GViewerData_viewer_repositories_nodes_stargazers._();
 
   factory GViewerData_viewer_repositories_nodes_stargazers(
-      [Function(GViewerData_viewer_repositories_nodes_stargazersBuilder b)
+      [void Function(GViewerData_viewer_repositories_nodes_stargazersBuilder b)
           updates]) = _$GViewerData_viewer_repositories_nodes_stargazers;
 
   static void _initializeBuilder(
           GViewerData_viewer_repositories_nodes_stargazersBuilder b) =>
       b..G__typename = 'StargazerConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -866,11 +937,13 @@ abstract class GViewerData_viewer_repositories_nodes_stargazers
   static Serializer<GViewerData_viewer_repositories_nodes_stargazers>
       get serializer =>
           _$gViewerDataViewerRepositoriesNodesStargazersSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_repositories_nodes_stargazers.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_repositories_nodes_stargazers? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -888,12 +961,13 @@ abstract class GViewerData_viewer_repositories_nodes_forks
   GViewerData_viewer_repositories_nodes_forks._();
 
   factory GViewerData_viewer_repositories_nodes_forks(
-      [Function(GViewerData_viewer_repositories_nodes_forksBuilder b)
+      [void Function(GViewerData_viewer_repositories_nodes_forksBuilder b)
           updates]) = _$GViewerData_viewer_repositories_nodes_forks;
 
   static void _initializeBuilder(
           GViewerData_viewer_repositories_nodes_forksBuilder b) =>
       b..G__typename = 'RepositoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -901,11 +975,13 @@ abstract class GViewerData_viewer_repositories_nodes_forks
   int get totalCount;
   static Serializer<GViewerData_viewer_repositories_nodes_forks>
       get serializer => _$gViewerDataViewerRepositoriesNodesForksSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_repositories_nodes_forks.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_repositories_nodes_forks? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -923,12 +999,14 @@ abstract class GViewerData_viewer_repositories_nodes_primaryLanguage
   GViewerData_viewer_repositories_nodes_primaryLanguage._();
 
   factory GViewerData_viewer_repositories_nodes_primaryLanguage(
-      [Function(GViewerData_viewer_repositories_nodes_primaryLanguageBuilder b)
+      [void Function(
+              GViewerData_viewer_repositories_nodes_primaryLanguageBuilder b)
           updates]) = _$GViewerData_viewer_repositories_nodes_primaryLanguage;
 
   static void _initializeBuilder(
           GViewerData_viewer_repositories_nodes_primaryLanguageBuilder b) =>
       b..G__typename = 'Language';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -939,11 +1017,13 @@ abstract class GViewerData_viewer_repositories_nodes_primaryLanguage
   static Serializer<GViewerData_viewer_repositories_nodes_primaryLanguage>
       get serializer =>
           _$gViewerDataViewerRepositoriesNodesPrimaryLanguageSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_repositories_nodes_primaryLanguage.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_repositories_nodes_primaryLanguage? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -960,12 +1040,13 @@ abstract class GViewerData_viewer_starredRepositories
   GViewerData_viewer_starredRepositories._();
 
   factory GViewerData_viewer_starredRepositories(
-          [Function(GViewerData_viewer_starredRepositoriesBuilder b) updates]) =
-      _$GViewerData_viewer_starredRepositories;
+      [void Function(GViewerData_viewer_starredRepositoriesBuilder b)
+          updates]) = _$GViewerData_viewer_starredRepositories;
 
   static void _initializeBuilder(
           GViewerData_viewer_starredRepositoriesBuilder b) =>
       b..G__typename = 'StarredRepositoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -973,11 +1054,13 @@ abstract class GViewerData_viewer_starredRepositories
   int get totalCount;
   static Serializer<GViewerData_viewer_starredRepositories> get serializer =>
       _$gViewerDataViewerStarredRepositoriesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_starredRepositories.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_starredRepositories? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -993,11 +1076,12 @@ abstract class GViewerData_viewer_gists
   GViewerData_viewer_gists._();
 
   factory GViewerData_viewer_gists(
-          [Function(GViewerData_viewer_gistsBuilder b) updates]) =
+          [void Function(GViewerData_viewer_gistsBuilder b) updates]) =
       _$GViewerData_viewer_gists;
 
   static void _initializeBuilder(GViewerData_viewer_gistsBuilder b) =>
       b..G__typename = 'GistConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1005,11 +1089,13 @@ abstract class GViewerData_viewer_gists
   int get totalCount;
   static Serializer<GViewerData_viewer_gists> get serializer =>
       _$gViewerDataViewerGistsSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_gists.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_gists? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GViewerData_viewer_gists.serializer,
@@ -1025,23 +1111,26 @@ abstract class GViewerData_viewer_pinnedItems
   GViewerData_viewer_pinnedItems._();
 
   factory GViewerData_viewer_pinnedItems(
-          [Function(GViewerData_viewer_pinnedItemsBuilder b) updates]) =
+          [void Function(GViewerData_viewer_pinnedItemsBuilder b) updates]) =
       _$GViewerData_viewer_pinnedItems;
 
   static void _initializeBuilder(GViewerData_viewer_pinnedItemsBuilder b) =>
       b..G__typename = 'PinnableItemConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GViewerData_viewer_pinnedItems_nodes>? get nodes;
+  BuiltList<GViewerData_viewer_pinnedItems_nodes?>? get nodes;
   static Serializer<GViewerData_viewer_pinnedItems> get serializer =>
       _$gViewerDataViewerPinnedItemsSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_pinnedItems.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_pinnedItems? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GViewerData_viewer_pinnedItems.serializer,
@@ -1060,10 +1149,12 @@ abstract class GViewerData_viewer_pinnedItems_nodes
         GViewerData_viewer_pinnedItems_nodes__base,
         {'Repository': GViewerData_viewer_pinnedItems_nodes__asRepository},
       );
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_pinnedItems_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_pinnedItems_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1080,22 +1171,25 @@ abstract class GViewerData_viewer_pinnedItems_nodes__base
   GViewerData_viewer_pinnedItems_nodes__base._();
 
   factory GViewerData_viewer_pinnedItems_nodes__base(
-      [Function(GViewerData_viewer_pinnedItems_nodes__baseBuilder b)
+      [void Function(GViewerData_viewer_pinnedItems_nodes__baseBuilder b)
           updates]) = _$GViewerData_viewer_pinnedItems_nodes__base;
 
   static void _initializeBuilder(
           GViewerData_viewer_pinnedItems_nodes__baseBuilder b) =>
       b..G__typename = 'PinnableItem';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   static Serializer<GViewerData_viewer_pinnedItems_nodes__base>
       get serializer => _$gViewerDataViewerPinnedItemsNodesBaseSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_pinnedItems_nodes__base.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_pinnedItems_nodes__base? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1113,12 +1207,14 @@ abstract class GViewerData_viewer_pinnedItems_nodes__asRepository
   GViewerData_viewer_pinnedItems_nodes__asRepository._();
 
   factory GViewerData_viewer_pinnedItems_nodes__asRepository(
-      [Function(GViewerData_viewer_pinnedItems_nodes__asRepositoryBuilder b)
+      [void Function(
+              GViewerData_viewer_pinnedItems_nodes__asRepositoryBuilder b)
           updates]) = _$GViewerData_viewer_pinnedItems_nodes__asRepository;
 
   static void _initializeBuilder(
           GViewerData_viewer_pinnedItems_nodes__asRepositoryBuilder b) =>
       b..G__typename = 'Repository';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1142,11 +1238,13 @@ abstract class GViewerData_viewer_pinnedItems_nodes__asRepository
   static Serializer<GViewerData_viewer_pinnedItems_nodes__asRepository>
       get serializer =>
           _$gViewerDataViewerPinnedItemsNodesAsRepositorySerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_pinnedItems_nodes__asRepository.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_pinnedItems_nodes__asRepository? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1163,13 +1261,14 @@ abstract class GViewerData_viewer_pinnedItems_nodes__asRepository_owner
   GViewerData_viewer_pinnedItems_nodes__asRepository_owner._();
 
   factory GViewerData_viewer_pinnedItems_nodes__asRepository_owner(
-      [Function(
+      [void Function(
               GViewerData_viewer_pinnedItems_nodes__asRepository_ownerBuilder b)
           updates]) = _$GViewerData_viewer_pinnedItems_nodes__asRepository_owner;
 
   static void _initializeBuilder(
           GViewerData_viewer_pinnedItems_nodes__asRepository_ownerBuilder b) =>
       b..G__typename = 'RepositoryOwner';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1180,11 +1279,13 @@ abstract class GViewerData_viewer_pinnedItems_nodes__asRepository_owner
   static Serializer<GViewerData_viewer_pinnedItems_nodes__asRepository_owner>
       get serializer =>
           _$gViewerDataViewerPinnedItemsNodesAsRepositoryOwnerSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_pinnedItems_nodes__asRepository_owner.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_pinnedItems_nodes__asRepository_owner? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1201,7 +1302,7 @@ abstract class GViewerData_viewer_pinnedItems_nodes__asRepository_stargazers
   GViewerData_viewer_pinnedItems_nodes__asRepository_stargazers._();
 
   factory GViewerData_viewer_pinnedItems_nodes__asRepository_stargazers(
-          [Function(
+          [void Function(
                   GViewerData_viewer_pinnedItems_nodes__asRepository_stargazersBuilder
                       b)
               updates]) =
@@ -1211,6 +1312,7 @@ abstract class GViewerData_viewer_pinnedItems_nodes__asRepository_stargazers
           GViewerData_viewer_pinnedItems_nodes__asRepository_stargazersBuilder
               b) =>
       b..G__typename = 'StargazerConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1220,12 +1322,14 @@ abstract class GViewerData_viewer_pinnedItems_nodes__asRepository_stargazers
           GViewerData_viewer_pinnedItems_nodes__asRepository_stargazers>
       get serializer =>
           _$gViewerDataViewerPinnedItemsNodesAsRepositoryStargazersSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_pinnedItems_nodes__asRepository_stargazers
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_pinnedItems_nodes__asRepository_stargazers?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GViewerData_viewer_pinnedItems_nodes__asRepository_stargazers
@@ -1242,13 +1346,14 @@ abstract class GViewerData_viewer_pinnedItems_nodes__asRepository_forks
   GViewerData_viewer_pinnedItems_nodes__asRepository_forks._();
 
   factory GViewerData_viewer_pinnedItems_nodes__asRepository_forks(
-      [Function(
+      [void Function(
               GViewerData_viewer_pinnedItems_nodes__asRepository_forksBuilder b)
           updates]) = _$GViewerData_viewer_pinnedItems_nodes__asRepository_forks;
 
   static void _initializeBuilder(
           GViewerData_viewer_pinnedItems_nodes__asRepository_forksBuilder b) =>
       b..G__typename = 'RepositoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1257,11 +1362,13 @@ abstract class GViewerData_viewer_pinnedItems_nodes__asRepository_forks
   static Serializer<GViewerData_viewer_pinnedItems_nodes__asRepository_forks>
       get serializer =>
           _$gViewerDataViewerPinnedItemsNodesAsRepositoryForksSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_pinnedItems_nodes__asRepository_forks.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_pinnedItems_nodes__asRepository_forks? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1279,7 +1386,7 @@ abstract class GViewerData_viewer_pinnedItems_nodes__asRepository_primaryLanguag
   GViewerData_viewer_pinnedItems_nodes__asRepository_primaryLanguage._();
 
   factory GViewerData_viewer_pinnedItems_nodes__asRepository_primaryLanguage(
-          [Function(
+          [void Function(
                   GViewerData_viewer_pinnedItems_nodes__asRepository_primaryLanguageBuilder
                       b)
               updates]) =
@@ -1289,6 +1396,7 @@ abstract class GViewerData_viewer_pinnedItems_nodes__asRepository_primaryLanguag
           GViewerData_viewer_pinnedItems_nodes__asRepository_primaryLanguageBuilder
               b) =>
       b..G__typename = 'Language';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1300,12 +1408,14 @@ abstract class GViewerData_viewer_pinnedItems_nodes__asRepository_primaryLanguag
           GViewerData_viewer_pinnedItems_nodes__asRepository_primaryLanguage>
       get serializer =>
           _$gViewerDataViewerPinnedItemsNodesAsRepositoryPrimaryLanguageSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GViewerData_viewer_pinnedItems_nodes__asRepository_primaryLanguage
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GViewerData_viewer_pinnedItems_nodes__asRepository_primaryLanguage?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GViewerData_viewer_pinnedItems_nodes__asRepository_primaryLanguage
@@ -1317,19 +1427,22 @@ abstract class GViewerData_viewer_pinnedItems_nodes__asRepository_primaryLanguag
 abstract class GUserData implements Built<GUserData, GUserDataBuilder> {
   GUserData._();
 
-  factory GUserData([Function(GUserDataBuilder b) updates]) = _$GUserData;
+  factory GUserData([void Function(GUserDataBuilder b) updates]) = _$GUserData;
 
   static void _initializeBuilder(GUserDataBuilder b) =>
       b..G__typename = 'Query';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   GUserData_user? get user;
   GUserData_organization? get organization;
   static Serializer<GUserData> get serializer => _$gUserDataSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserData.serializer,
@@ -1341,11 +1454,12 @@ abstract class GUserData_user
     implements Built<GUserData_user, GUserData_userBuilder>, GUserParts {
   GUserData_user._();
 
-  factory GUserData_user([Function(GUserData_userBuilder b) updates]) =
+  factory GUserData_user([void Function(GUserData_userBuilder b) updates]) =
       _$GUserData_user;
 
   static void _initializeBuilder(GUserData_userBuilder b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1396,11 +1510,13 @@ abstract class GUserData_user
   @override
   GUserData_user_pinnedItems get pinnedItems;
   static Serializer<GUserData_user> get serializer => _$gUserDataUserSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserData_user.serializer,
@@ -1415,11 +1531,12 @@ abstract class GUserData_user_followers
   GUserData_user_followers._();
 
   factory GUserData_user_followers(
-          [Function(GUserData_user_followersBuilder b) updates]) =
+          [void Function(GUserData_user_followersBuilder b) updates]) =
       _$GUserData_user_followers;
 
   static void _initializeBuilder(GUserData_user_followersBuilder b) =>
       b..G__typename = 'FollowerConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1427,11 +1544,13 @@ abstract class GUserData_user_followers
   int get totalCount;
   static Serializer<GUserData_user_followers> get serializer =>
       _$gUserDataUserFollowersSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_followers.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_followers? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserData_user_followers.serializer,
@@ -1446,11 +1565,12 @@ abstract class GUserData_user_following
   GUserData_user_following._();
 
   factory GUserData_user_following(
-          [Function(GUserData_user_followingBuilder b) updates]) =
+          [void Function(GUserData_user_followingBuilder b) updates]) =
       _$GUserData_user_following;
 
   static void _initializeBuilder(GUserData_user_followingBuilder b) =>
       b..G__typename = 'FollowingConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1458,11 +1578,13 @@ abstract class GUserData_user_following
   int get totalCount;
   static Serializer<GUserData_user_following> get serializer =>
       _$gUserDataUserFollowingSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_following.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_following? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserData_user_following.serializer,
@@ -1478,12 +1600,13 @@ abstract class GUserData_user_contributionsCollection
   GUserData_user_contributionsCollection._();
 
   factory GUserData_user_contributionsCollection(
-          [Function(GUserData_user_contributionsCollectionBuilder b) updates]) =
-      _$GUserData_user_contributionsCollection;
+      [void Function(GUserData_user_contributionsCollectionBuilder b)
+          updates]) = _$GUserData_user_contributionsCollection;
 
   static void _initializeBuilder(
           GUserData_user_contributionsCollectionBuilder b) =>
       b..G__typename = 'ContributionsCollection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1492,11 +1615,13 @@ abstract class GUserData_user_contributionsCollection
       get contributionCalendar;
   static Serializer<GUserData_user_contributionsCollection> get serializer =>
       _$gUserDataUserContributionsCollectionSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_contributionsCollection.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_contributionsCollection? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1513,7 +1638,7 @@ abstract class GUserData_user_contributionsCollection_contributionCalendar
   GUserData_user_contributionsCollection_contributionCalendar._();
 
   factory GUserData_user_contributionsCollection_contributionCalendar(
-      [Function(
+      [void Function(
               GUserData_user_contributionsCollection_contributionCalendarBuilder
                   b)
           updates]) = _$GUserData_user_contributionsCollection_contributionCalendar;
@@ -1522,6 +1647,7 @@ abstract class GUserData_user_contributionsCollection_contributionCalendar
           GUserData_user_contributionsCollection_contributionCalendarBuilder
               b) =>
       b..G__typename = 'ContributionCalendar';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1531,11 +1657,13 @@ abstract class GUserData_user_contributionsCollection_contributionCalendar
   static Serializer<GUserData_user_contributionsCollection_contributionCalendar>
       get serializer =>
           _$gUserDataUserContributionsCollectionContributionCalendarSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_contributionsCollection_contributionCalendar.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_contributionsCollection_contributionCalendar? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1552,7 +1680,7 @@ abstract class GUserData_user_contributionsCollection_contributionCalendar_weeks
   GUserData_user_contributionsCollection_contributionCalendar_weeks._();
 
   factory GUserData_user_contributionsCollection_contributionCalendar_weeks(
-          [Function(
+          [void Function(
                   GUserData_user_contributionsCollection_contributionCalendar_weeksBuilder
                       b)
               updates]) =
@@ -1562,6 +1690,7 @@ abstract class GUserData_user_contributionsCollection_contributionCalendar_weeks
           GUserData_user_contributionsCollection_contributionCalendar_weeksBuilder
               b) =>
       b..G__typename = 'ContributionCalendarWeek';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1573,12 +1702,14 @@ abstract class GUserData_user_contributionsCollection_contributionCalendar_weeks
           GUserData_user_contributionsCollection_contributionCalendar_weeks>
       get serializer =>
           _$gUserDataUserContributionsCollectionContributionCalendarWeeksSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_contributionsCollection_contributionCalendar_weeks
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_contributionsCollection_contributionCalendar_weeks?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GUserData_user_contributionsCollection_contributionCalendar_weeks
@@ -1596,7 +1727,7 @@ abstract class GUserData_user_contributionsCollection_contributionCalendar_weeks
   GUserData_user_contributionsCollection_contributionCalendar_weeks_contributionDays._();
 
   factory GUserData_user_contributionsCollection_contributionCalendar_weeks_contributionDays(
-          [Function(
+          [void Function(
                   GUserData_user_contributionsCollection_contributionCalendar_weeks_contributionDaysBuilder
                       b)
               updates]) =
@@ -1606,6 +1737,7 @@ abstract class GUserData_user_contributionsCollection_contributionCalendar_weeks
           GUserData_user_contributionsCollection_contributionCalendar_weeks_contributionDaysBuilder
               b) =>
       b..G__typename = 'ContributionCalendarDay';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1615,12 +1747,14 @@ abstract class GUserData_user_contributionsCollection_contributionCalendar_weeks
           GUserData_user_contributionsCollection_contributionCalendar_weeks_contributionDays>
       get serializer =>
           _$gUserDataUserContributionsCollectionContributionCalendarWeeksContributionDaysSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_contributionsCollection_contributionCalendar_weeks_contributionDays
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_contributionsCollection_contributionCalendar_weeks_contributionDays?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GUserData_user_contributionsCollection_contributionCalendar_weeks_contributionDays
@@ -1637,25 +1771,28 @@ abstract class GUserData_user_sponsoring
   GUserData_user_sponsoring._();
 
   factory GUserData_user_sponsoring(
-          [Function(GUserData_user_sponsoringBuilder b) updates]) =
+          [void Function(GUserData_user_sponsoringBuilder b) updates]) =
       _$GUserData_user_sponsoring;
 
   static void _initializeBuilder(GUserData_user_sponsoringBuilder b) =>
       b..G__typename = 'SponsorConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
   int get totalCount;
   @override
-  BuiltList<GUserData_user_sponsoring_nodes>? get nodes;
+  BuiltList<GUserData_user_sponsoring_nodes?>? get nodes;
   static Serializer<GUserData_user_sponsoring> get serializer =>
       _$gUserDataUserSponsoringSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_sponsoring.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_sponsoring? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserData_user_sponsoring.serializer,
@@ -1677,10 +1814,12 @@ abstract class GUserData_user_sponsoring_nodes
           'Organization': GUserData_user_sponsoring_nodes__asOrganization,
         },
       );
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_sponsoring_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_sponsoring_nodes? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserData_user_sponsoring_nodes.serializer,
@@ -1696,22 +1835,25 @@ abstract class GUserData_user_sponsoring_nodes__base
   GUserData_user_sponsoring_nodes__base._();
 
   factory GUserData_user_sponsoring_nodes__base(
-          [Function(GUserData_user_sponsoring_nodes__baseBuilder b) updates]) =
-      _$GUserData_user_sponsoring_nodes__base;
+      [void Function(GUserData_user_sponsoring_nodes__baseBuilder b)
+          updates]) = _$GUserData_user_sponsoring_nodes__base;
 
   static void _initializeBuilder(
           GUserData_user_sponsoring_nodes__baseBuilder b) =>
       b..G__typename = 'Sponsor';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   static Serializer<GUserData_user_sponsoring_nodes__base> get serializer =>
       _$gUserDataUserSponsoringNodesBaseSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_sponsoring_nodes__base.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_sponsoring_nodes__base? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1728,23 +1870,26 @@ abstract class GUserData_user_sponsoring_nodes__asUser
   GUserData_user_sponsoring_nodes__asUser._();
 
   factory GUserData_user_sponsoring_nodes__asUser(
-      [Function(GUserData_user_sponsoring_nodes__asUserBuilder b)
+      [void Function(GUserData_user_sponsoring_nodes__asUserBuilder b)
           updates]) = _$GUserData_user_sponsoring_nodes__asUser;
 
   static void _initializeBuilder(
           GUserData_user_sponsoring_nodes__asUserBuilder b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   String get avatarUrl;
   static Serializer<GUserData_user_sponsoring_nodes__asUser> get serializer =>
       _$gUserDataUserSponsoringNodesAsUserSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_sponsoring_nodes__asUser.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_sponsoring_nodes__asUser? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1761,23 +1906,26 @@ abstract class GUserData_user_sponsoring_nodes__asOrganization
   GUserData_user_sponsoring_nodes__asOrganization._();
 
   factory GUserData_user_sponsoring_nodes__asOrganization(
-      [Function(GUserData_user_sponsoring_nodes__asOrganizationBuilder b)
+      [void Function(GUserData_user_sponsoring_nodes__asOrganizationBuilder b)
           updates]) = _$GUserData_user_sponsoring_nodes__asOrganization;
 
   static void _initializeBuilder(
           GUserData_user_sponsoring_nodes__asOrganizationBuilder b) =>
       b..G__typename = 'Organization';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   String get avatarUrl;
   static Serializer<GUserData_user_sponsoring_nodes__asOrganization>
       get serializer => _$gUserDataUserSponsoringNodesAsOrganizationSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_sponsoring_nodes__asOrganization.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_sponsoring_nodes__asOrganization? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1794,25 +1942,28 @@ abstract class GUserData_user_sponsors
   GUserData_user_sponsors._();
 
   factory GUserData_user_sponsors(
-          [Function(GUserData_user_sponsorsBuilder b) updates]) =
+          [void Function(GUserData_user_sponsorsBuilder b) updates]) =
       _$GUserData_user_sponsors;
 
   static void _initializeBuilder(GUserData_user_sponsorsBuilder b) =>
       b..G__typename = 'SponsorConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
   int get totalCount;
   @override
-  BuiltList<GUserData_user_sponsors_nodes>? get nodes;
+  BuiltList<GUserData_user_sponsors_nodes?>? get nodes;
   static Serializer<GUserData_user_sponsors> get serializer =>
       _$gUserDataUserSponsorsSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_sponsors.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_sponsors? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserData_user_sponsors.serializer,
@@ -1834,10 +1985,12 @@ abstract class GUserData_user_sponsors_nodes
           'Organization': GUserData_user_sponsors_nodes__asOrganization,
         },
       );
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_sponsors_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_sponsors_nodes? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserData_user_sponsors_nodes.serializer,
@@ -1853,22 +2006,25 @@ abstract class GUserData_user_sponsors_nodes__base
   GUserData_user_sponsors_nodes__base._();
 
   factory GUserData_user_sponsors_nodes__base(
-          [Function(GUserData_user_sponsors_nodes__baseBuilder b) updates]) =
-      _$GUserData_user_sponsors_nodes__base;
+      [void Function(GUserData_user_sponsors_nodes__baseBuilder b)
+          updates]) = _$GUserData_user_sponsors_nodes__base;
 
   static void _initializeBuilder(
           GUserData_user_sponsors_nodes__baseBuilder b) =>
       b..G__typename = 'Sponsor';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   static Serializer<GUserData_user_sponsors_nodes__base> get serializer =>
       _$gUserDataUserSponsorsNodesBaseSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_sponsors_nodes__base.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_sponsors_nodes__base? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1885,23 +2041,26 @@ abstract class GUserData_user_sponsors_nodes__asUser
   GUserData_user_sponsors_nodes__asUser._();
 
   factory GUserData_user_sponsors_nodes__asUser(
-          [Function(GUserData_user_sponsors_nodes__asUserBuilder b) updates]) =
-      _$GUserData_user_sponsors_nodes__asUser;
+      [void Function(GUserData_user_sponsors_nodes__asUserBuilder b)
+          updates]) = _$GUserData_user_sponsors_nodes__asUser;
 
   static void _initializeBuilder(
           GUserData_user_sponsors_nodes__asUserBuilder b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   String get avatarUrl;
   static Serializer<GUserData_user_sponsors_nodes__asUser> get serializer =>
       _$gUserDataUserSponsorsNodesAsUserSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_sponsors_nodes__asUser.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_sponsors_nodes__asUser? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1918,23 +2077,26 @@ abstract class GUserData_user_sponsors_nodes__asOrganization
   GUserData_user_sponsors_nodes__asOrganization._();
 
   factory GUserData_user_sponsors_nodes__asOrganization(
-      [Function(GUserData_user_sponsors_nodes__asOrganizationBuilder b)
+      [void Function(GUserData_user_sponsors_nodes__asOrganizationBuilder b)
           updates]) = _$GUserData_user_sponsors_nodes__asOrganization;
 
   static void _initializeBuilder(
           GUserData_user_sponsors_nodes__asOrganizationBuilder b) =>
       b..G__typename = 'Organization';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   String get avatarUrl;
   static Serializer<GUserData_user_sponsors_nodes__asOrganization>
       get serializer => _$gUserDataUserSponsorsNodesAsOrganizationSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_sponsors_nodes__asOrganization.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_sponsors_nodes__asOrganization? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -1951,25 +2113,28 @@ abstract class GUserData_user_organizations
   GUserData_user_organizations._();
 
   factory GUserData_user_organizations(
-          [Function(GUserData_user_organizationsBuilder b) updates]) =
+          [void Function(GUserData_user_organizationsBuilder b) updates]) =
       _$GUserData_user_organizations;
 
   static void _initializeBuilder(GUserData_user_organizationsBuilder b) =>
       b..G__typename = 'OrganizationConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
   int get totalCount;
   @override
-  BuiltList<GUserData_user_organizations_nodes>? get nodes;
+  BuiltList<GUserData_user_organizations_nodes?>? get nodes;
   static Serializer<GUserData_user_organizations> get serializer =>
       _$gUserDataUserOrganizationsSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_organizations.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_organizations? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserData_user_organizations.serializer,
@@ -1985,11 +2150,12 @@ abstract class GUserData_user_organizations_nodes
   GUserData_user_organizations_nodes._();
 
   factory GUserData_user_organizations_nodes(
-          [Function(GUserData_user_organizations_nodesBuilder b) updates]) =
-      _$GUserData_user_organizations_nodes;
+      [void Function(GUserData_user_organizations_nodesBuilder b)
+          updates]) = _$GUserData_user_organizations_nodes;
 
   static void _initializeBuilder(GUserData_user_organizations_nodesBuilder b) =>
       b..G__typename = 'Organization';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -1997,11 +2163,13 @@ abstract class GUserData_user_organizations_nodes
   String get avatarUrl;
   static Serializer<GUserData_user_organizations_nodes> get serializer =>
       _$gUserDataUserOrganizationsNodesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_organizations_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_organizations_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2017,25 +2185,28 @@ abstract class GUserData_user_repositories
   GUserData_user_repositories._();
 
   factory GUserData_user_repositories(
-          [Function(GUserData_user_repositoriesBuilder b) updates]) =
+          [void Function(GUserData_user_repositoriesBuilder b) updates]) =
       _$GUserData_user_repositories;
 
   static void _initializeBuilder(GUserData_user_repositoriesBuilder b) =>
       b..G__typename = 'RepositoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
   int get totalCount;
   @override
-  BuiltList<GUserData_user_repositories_nodes>? get nodes;
+  BuiltList<GUserData_user_repositories_nodes?>? get nodes;
   static Serializer<GUserData_user_repositories> get serializer =>
       _$gUserDataUserRepositoriesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_repositories.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_repositories? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserData_user_repositories.serializer,
@@ -2052,11 +2223,12 @@ abstract class GUserData_user_repositories_nodes
   GUserData_user_repositories_nodes._();
 
   factory GUserData_user_repositories_nodes(
-          [Function(GUserData_user_repositories_nodesBuilder b) updates]) =
+          [void Function(GUserData_user_repositories_nodesBuilder b) updates]) =
       _$GUserData_user_repositories_nodes;
 
   static void _initializeBuilder(GUserData_user_repositories_nodesBuilder b) =>
       b..G__typename = 'Repository';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -2078,11 +2250,13 @@ abstract class GUserData_user_repositories_nodes
   GUserData_user_repositories_nodes_primaryLanguage? get primaryLanguage;
   static Serializer<GUserData_user_repositories_nodes> get serializer =>
       _$gUserDataUserRepositoriesNodesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_repositories_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_repositories_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2100,12 +2274,13 @@ abstract class GUserData_user_repositories_nodes_owner
   GUserData_user_repositories_nodes_owner._();
 
   factory GUserData_user_repositories_nodes_owner(
-      [Function(GUserData_user_repositories_nodes_ownerBuilder b)
+      [void Function(GUserData_user_repositories_nodes_ownerBuilder b)
           updates]) = _$GUserData_user_repositories_nodes_owner;
 
   static void _initializeBuilder(
           GUserData_user_repositories_nodes_ownerBuilder b) =>
       b..G__typename = 'RepositoryOwner';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -2115,11 +2290,13 @@ abstract class GUserData_user_repositories_nodes_owner
   String get avatarUrl;
   static Serializer<GUserData_user_repositories_nodes_owner> get serializer =>
       _$gUserDataUserRepositoriesNodesOwnerSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_repositories_nodes_owner.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_repositories_nodes_owner? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2137,12 +2314,13 @@ abstract class GUserData_user_repositories_nodes_stargazers
   GUserData_user_repositories_nodes_stargazers._();
 
   factory GUserData_user_repositories_nodes_stargazers(
-      [Function(GUserData_user_repositories_nodes_stargazersBuilder b)
+      [void Function(GUserData_user_repositories_nodes_stargazersBuilder b)
           updates]) = _$GUserData_user_repositories_nodes_stargazers;
 
   static void _initializeBuilder(
           GUserData_user_repositories_nodes_stargazersBuilder b) =>
       b..G__typename = 'StargazerConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -2150,11 +2328,13 @@ abstract class GUserData_user_repositories_nodes_stargazers
   int get totalCount;
   static Serializer<GUserData_user_repositories_nodes_stargazers>
       get serializer => _$gUserDataUserRepositoriesNodesStargazersSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_repositories_nodes_stargazers.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_repositories_nodes_stargazers? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2172,12 +2352,13 @@ abstract class GUserData_user_repositories_nodes_forks
   GUserData_user_repositories_nodes_forks._();
 
   factory GUserData_user_repositories_nodes_forks(
-      [Function(GUserData_user_repositories_nodes_forksBuilder b)
+      [void Function(GUserData_user_repositories_nodes_forksBuilder b)
           updates]) = _$GUserData_user_repositories_nodes_forks;
 
   static void _initializeBuilder(
           GUserData_user_repositories_nodes_forksBuilder b) =>
       b..G__typename = 'RepositoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -2185,11 +2366,13 @@ abstract class GUserData_user_repositories_nodes_forks
   int get totalCount;
   static Serializer<GUserData_user_repositories_nodes_forks> get serializer =>
       _$gUserDataUserRepositoriesNodesForksSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_repositories_nodes_forks.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_repositories_nodes_forks? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2207,12 +2390,13 @@ abstract class GUserData_user_repositories_nodes_primaryLanguage
   GUserData_user_repositories_nodes_primaryLanguage._();
 
   factory GUserData_user_repositories_nodes_primaryLanguage(
-      [Function(GUserData_user_repositories_nodes_primaryLanguageBuilder b)
+      [void Function(GUserData_user_repositories_nodes_primaryLanguageBuilder b)
           updates]) = _$GUserData_user_repositories_nodes_primaryLanguage;
 
   static void _initializeBuilder(
           GUserData_user_repositories_nodes_primaryLanguageBuilder b) =>
       b..G__typename = 'Language';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -2223,11 +2407,13 @@ abstract class GUserData_user_repositories_nodes_primaryLanguage
   static Serializer<GUserData_user_repositories_nodes_primaryLanguage>
       get serializer =>
           _$gUserDataUserRepositoriesNodesPrimaryLanguageSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_repositories_nodes_primaryLanguage.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_repositories_nodes_primaryLanguage? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2244,11 +2430,12 @@ abstract class GUserData_user_starredRepositories
   GUserData_user_starredRepositories._();
 
   factory GUserData_user_starredRepositories(
-          [Function(GUserData_user_starredRepositoriesBuilder b) updates]) =
-      _$GUserData_user_starredRepositories;
+      [void Function(GUserData_user_starredRepositoriesBuilder b)
+          updates]) = _$GUserData_user_starredRepositories;
 
   static void _initializeBuilder(GUserData_user_starredRepositoriesBuilder b) =>
       b..G__typename = 'StarredRepositoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -2256,11 +2443,13 @@ abstract class GUserData_user_starredRepositories
   int get totalCount;
   static Serializer<GUserData_user_starredRepositories> get serializer =>
       _$gUserDataUserStarredRepositoriesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_starredRepositories.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_starredRepositories? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2276,11 +2465,12 @@ abstract class GUserData_user_gists
   GUserData_user_gists._();
 
   factory GUserData_user_gists(
-          [Function(GUserData_user_gistsBuilder b) updates]) =
+          [void Function(GUserData_user_gistsBuilder b) updates]) =
       _$GUserData_user_gists;
 
   static void _initializeBuilder(GUserData_user_gistsBuilder b) =>
       b..G__typename = 'GistConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -2288,11 +2478,13 @@ abstract class GUserData_user_gists
   int get totalCount;
   static Serializer<GUserData_user_gists> get serializer =>
       _$gUserDataUserGistsSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_gists.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_gists? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserData_user_gists.serializer,
@@ -2307,23 +2499,26 @@ abstract class GUserData_user_pinnedItems
   GUserData_user_pinnedItems._();
 
   factory GUserData_user_pinnedItems(
-          [Function(GUserData_user_pinnedItemsBuilder b) updates]) =
+          [void Function(GUserData_user_pinnedItemsBuilder b) updates]) =
       _$GUserData_user_pinnedItems;
 
   static void _initializeBuilder(GUserData_user_pinnedItemsBuilder b) =>
       b..G__typename = 'PinnableItemConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GUserData_user_pinnedItems_nodes>? get nodes;
+  BuiltList<GUserData_user_pinnedItems_nodes?>? get nodes;
   static Serializer<GUserData_user_pinnedItems> get serializer =>
       _$gUserDataUserPinnedItemsSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_pinnedItems.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_pinnedItems? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserData_user_pinnedItems.serializer,
@@ -2342,10 +2537,12 @@ abstract class GUserData_user_pinnedItems_nodes
         GUserData_user_pinnedItems_nodes__base,
         {'Repository': GUserData_user_pinnedItems_nodes__asRepository},
       );
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_pinnedItems_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_pinnedItems_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2362,22 +2559,25 @@ abstract class GUserData_user_pinnedItems_nodes__base
   GUserData_user_pinnedItems_nodes__base._();
 
   factory GUserData_user_pinnedItems_nodes__base(
-          [Function(GUserData_user_pinnedItems_nodes__baseBuilder b) updates]) =
-      _$GUserData_user_pinnedItems_nodes__base;
+      [void Function(GUserData_user_pinnedItems_nodes__baseBuilder b)
+          updates]) = _$GUserData_user_pinnedItems_nodes__base;
 
   static void _initializeBuilder(
           GUserData_user_pinnedItems_nodes__baseBuilder b) =>
       b..G__typename = 'PinnableItem';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   static Serializer<GUserData_user_pinnedItems_nodes__base> get serializer =>
       _$gUserDataUserPinnedItemsNodesBaseSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_pinnedItems_nodes__base.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_pinnedItems_nodes__base? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2395,12 +2595,13 @@ abstract class GUserData_user_pinnedItems_nodes__asRepository
   GUserData_user_pinnedItems_nodes__asRepository._();
 
   factory GUserData_user_pinnedItems_nodes__asRepository(
-      [Function(GUserData_user_pinnedItems_nodes__asRepositoryBuilder b)
+      [void Function(GUserData_user_pinnedItems_nodes__asRepositoryBuilder b)
           updates]) = _$GUserData_user_pinnedItems_nodes__asRepository;
 
   static void _initializeBuilder(
           GUserData_user_pinnedItems_nodes__asRepositoryBuilder b) =>
       b..G__typename = 'Repository';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -2423,11 +2624,13 @@ abstract class GUserData_user_pinnedItems_nodes__asRepository
       get primaryLanguage;
   static Serializer<GUserData_user_pinnedItems_nodes__asRepository>
       get serializer => _$gUserDataUserPinnedItemsNodesAsRepositorySerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_pinnedItems_nodes__asRepository.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_pinnedItems_nodes__asRepository? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2444,12 +2647,14 @@ abstract class GUserData_user_pinnedItems_nodes__asRepository_owner
   GUserData_user_pinnedItems_nodes__asRepository_owner._();
 
   factory GUserData_user_pinnedItems_nodes__asRepository_owner(
-      [Function(GUserData_user_pinnedItems_nodes__asRepository_ownerBuilder b)
+      [void Function(
+              GUserData_user_pinnedItems_nodes__asRepository_ownerBuilder b)
           updates]) = _$GUserData_user_pinnedItems_nodes__asRepository_owner;
 
   static void _initializeBuilder(
           GUserData_user_pinnedItems_nodes__asRepository_ownerBuilder b) =>
       b..G__typename = 'RepositoryOwner';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -2460,11 +2665,13 @@ abstract class GUserData_user_pinnedItems_nodes__asRepository_owner
   static Serializer<GUserData_user_pinnedItems_nodes__asRepository_owner>
       get serializer =>
           _$gUserDataUserPinnedItemsNodesAsRepositoryOwnerSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_pinnedItems_nodes__asRepository_owner.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_pinnedItems_nodes__asRepository_owner? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2481,7 +2688,7 @@ abstract class GUserData_user_pinnedItems_nodes__asRepository_stargazers
   GUserData_user_pinnedItems_nodes__asRepository_stargazers._();
 
   factory GUserData_user_pinnedItems_nodes__asRepository_stargazers(
-      [Function(
+      [void Function(
               GUserData_user_pinnedItems_nodes__asRepository_stargazersBuilder
                   b)
           updates]) = _$GUserData_user_pinnedItems_nodes__asRepository_stargazers;
@@ -2489,6 +2696,7 @@ abstract class GUserData_user_pinnedItems_nodes__asRepository_stargazers
   static void _initializeBuilder(
           GUserData_user_pinnedItems_nodes__asRepository_stargazersBuilder b) =>
       b..G__typename = 'StargazerConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -2497,11 +2705,13 @@ abstract class GUserData_user_pinnedItems_nodes__asRepository_stargazers
   static Serializer<GUserData_user_pinnedItems_nodes__asRepository_stargazers>
       get serializer =>
           _$gUserDataUserPinnedItemsNodesAsRepositoryStargazersSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_pinnedItems_nodes__asRepository_stargazers.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_pinnedItems_nodes__asRepository_stargazers? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2518,12 +2728,14 @@ abstract class GUserData_user_pinnedItems_nodes__asRepository_forks
   GUserData_user_pinnedItems_nodes__asRepository_forks._();
 
   factory GUserData_user_pinnedItems_nodes__asRepository_forks(
-      [Function(GUserData_user_pinnedItems_nodes__asRepository_forksBuilder b)
+      [void Function(
+              GUserData_user_pinnedItems_nodes__asRepository_forksBuilder b)
           updates]) = _$GUserData_user_pinnedItems_nodes__asRepository_forks;
 
   static void _initializeBuilder(
           GUserData_user_pinnedItems_nodes__asRepository_forksBuilder b) =>
       b..G__typename = 'RepositoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -2532,11 +2744,13 @@ abstract class GUserData_user_pinnedItems_nodes__asRepository_forks
   static Serializer<GUserData_user_pinnedItems_nodes__asRepository_forks>
       get serializer =>
           _$gUserDataUserPinnedItemsNodesAsRepositoryForksSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_pinnedItems_nodes__asRepository_forks.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_pinnedItems_nodes__asRepository_forks? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2553,7 +2767,7 @@ abstract class GUserData_user_pinnedItems_nodes__asRepository_primaryLanguage
   GUserData_user_pinnedItems_nodes__asRepository_primaryLanguage._();
 
   factory GUserData_user_pinnedItems_nodes__asRepository_primaryLanguage(
-          [Function(
+          [void Function(
                   GUserData_user_pinnedItems_nodes__asRepository_primaryLanguageBuilder
                       b)
               updates]) =
@@ -2563,6 +2777,7 @@ abstract class GUserData_user_pinnedItems_nodes__asRepository_primaryLanguage
           GUserData_user_pinnedItems_nodes__asRepository_primaryLanguageBuilder
               b) =>
       b..G__typename = 'Language';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -2574,12 +2789,14 @@ abstract class GUserData_user_pinnedItems_nodes__asRepository_primaryLanguage
           GUserData_user_pinnedItems_nodes__asRepository_primaryLanguage>
       get serializer =>
           _$gUserDataUserPinnedItemsNodesAsRepositoryPrimaryLanguageSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_user_pinnedItems_nodes__asRepository_primaryLanguage
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_user_pinnedItems_nodes__asRepository_primaryLanguage?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GUserData_user_pinnedItems_nodes__asRepository_primaryLanguage
@@ -2593,11 +2810,12 @@ abstract class GUserData_organization
   GUserData_organization._();
 
   factory GUserData_organization(
-          [Function(GUserData_organizationBuilder b) updates]) =
+          [void Function(GUserData_organizationBuilder b) updates]) =
       _$GUserData_organization;
 
   static void _initializeBuilder(GUserData_organizationBuilder b) =>
       b..G__typename = 'Organization';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   String get login;
@@ -2618,10 +2836,12 @@ abstract class GUserData_organization
   GUserData_organization_pinnableItems get pinnableItems;
   static Serializer<GUserData_organization> get serializer =>
       _$gUserDataOrganizationSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserData_organization.serializer,
@@ -2636,21 +2856,24 @@ abstract class GUserData_organization_membersWithRole
   GUserData_organization_membersWithRole._();
 
   factory GUserData_organization_membersWithRole(
-          [Function(GUserData_organization_membersWithRoleBuilder b) updates]) =
-      _$GUserData_organization_membersWithRole;
+      [void Function(GUserData_organization_membersWithRoleBuilder b)
+          updates]) = _$GUserData_organization_membersWithRole;
 
   static void _initializeBuilder(
           GUserData_organization_membersWithRoleBuilder b) =>
       b..G__typename = 'OrganizationMemberConnection';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   int get totalCount;
   static Serializer<GUserData_organization_membersWithRole> get serializer =>
       _$gUserDataOrganizationMembersWithRoleSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_membersWithRole.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_membersWithRole? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2667,25 +2890,28 @@ abstract class GUserData_organization_sponsoring
   GUserData_organization_sponsoring._();
 
   factory GUserData_organization_sponsoring(
-          [Function(GUserData_organization_sponsoringBuilder b) updates]) =
+          [void Function(GUserData_organization_sponsoringBuilder b) updates]) =
       _$GUserData_organization_sponsoring;
 
   static void _initializeBuilder(GUserData_organization_sponsoringBuilder b) =>
       b..G__typename = 'SponsorConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
   int get totalCount;
   @override
-  BuiltList<GUserData_organization_sponsoring_nodes>? get nodes;
+  BuiltList<GUserData_organization_sponsoring_nodes?>? get nodes;
   static Serializer<GUserData_organization_sponsoring> get serializer =>
       _$gUserDataOrganizationSponsoringSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_sponsoring.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_sponsoring? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2709,10 +2935,12 @@ abstract class GUserData_organization_sponsoring_nodes
               GUserData_organization_sponsoring_nodes__asOrganization,
         },
       );
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_sponsoring_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_sponsoring_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2729,22 +2957,25 @@ abstract class GUserData_organization_sponsoring_nodes__base
   GUserData_organization_sponsoring_nodes__base._();
 
   factory GUserData_organization_sponsoring_nodes__base(
-      [Function(GUserData_organization_sponsoring_nodes__baseBuilder b)
+      [void Function(GUserData_organization_sponsoring_nodes__baseBuilder b)
           updates]) = _$GUserData_organization_sponsoring_nodes__base;
 
   static void _initializeBuilder(
           GUserData_organization_sponsoring_nodes__baseBuilder b) =>
       b..G__typename = 'Sponsor';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   static Serializer<GUserData_organization_sponsoring_nodes__base>
       get serializer => _$gUserDataOrganizationSponsoringNodesBaseSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_sponsoring_nodes__base.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_sponsoring_nodes__base? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2761,23 +2992,26 @@ abstract class GUserData_organization_sponsoring_nodes__asUser
   GUserData_organization_sponsoring_nodes__asUser._();
 
   factory GUserData_organization_sponsoring_nodes__asUser(
-      [Function(GUserData_organization_sponsoring_nodes__asUserBuilder b)
+      [void Function(GUserData_organization_sponsoring_nodes__asUserBuilder b)
           updates]) = _$GUserData_organization_sponsoring_nodes__asUser;
 
   static void _initializeBuilder(
           GUserData_organization_sponsoring_nodes__asUserBuilder b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   String get avatarUrl;
   static Serializer<GUserData_organization_sponsoring_nodes__asUser>
       get serializer => _$gUserDataOrganizationSponsoringNodesAsUserSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_sponsoring_nodes__asUser.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_sponsoring_nodes__asUser? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2794,13 +3028,14 @@ abstract class GUserData_organization_sponsoring_nodes__asOrganization
   GUserData_organization_sponsoring_nodes__asOrganization._();
 
   factory GUserData_organization_sponsoring_nodes__asOrganization(
-      [Function(
+      [void Function(
               GUserData_organization_sponsoring_nodes__asOrganizationBuilder b)
           updates]) = _$GUserData_organization_sponsoring_nodes__asOrganization;
 
   static void _initializeBuilder(
           GUserData_organization_sponsoring_nodes__asOrganizationBuilder b) =>
       b..G__typename = 'Organization';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -2808,11 +3043,13 @@ abstract class GUserData_organization_sponsoring_nodes__asOrganization
   static Serializer<GUserData_organization_sponsoring_nodes__asOrganization>
       get serializer =>
           _$gUserDataOrganizationSponsoringNodesAsOrganizationSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_sponsoring_nodes__asOrganization.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_sponsoring_nodes__asOrganization? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2829,25 +3066,28 @@ abstract class GUserData_organization_sponsors
   GUserData_organization_sponsors._();
 
   factory GUserData_organization_sponsors(
-          [Function(GUserData_organization_sponsorsBuilder b) updates]) =
+          [void Function(GUserData_organization_sponsorsBuilder b) updates]) =
       _$GUserData_organization_sponsors;
 
   static void _initializeBuilder(GUserData_organization_sponsorsBuilder b) =>
       b..G__typename = 'SponsorConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
   int get totalCount;
   @override
-  BuiltList<GUserData_organization_sponsors_nodes>? get nodes;
+  BuiltList<GUserData_organization_sponsors_nodes?>? get nodes;
   static Serializer<GUserData_organization_sponsors> get serializer =>
       _$gUserDataOrganizationSponsorsSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_sponsors.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_sponsors? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserData_organization_sponsors.serializer,
@@ -2869,10 +3109,12 @@ abstract class GUserData_organization_sponsors_nodes
           'Organization': GUserData_organization_sponsors_nodes__asOrganization,
         },
       );
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_sponsors_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_sponsors_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2889,22 +3131,25 @@ abstract class GUserData_organization_sponsors_nodes__base
   GUserData_organization_sponsors_nodes__base._();
 
   factory GUserData_organization_sponsors_nodes__base(
-      [Function(GUserData_organization_sponsors_nodes__baseBuilder b)
+      [void Function(GUserData_organization_sponsors_nodes__baseBuilder b)
           updates]) = _$GUserData_organization_sponsors_nodes__base;
 
   static void _initializeBuilder(
           GUserData_organization_sponsors_nodes__baseBuilder b) =>
       b..G__typename = 'Sponsor';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   static Serializer<GUserData_organization_sponsors_nodes__base>
       get serializer => _$gUserDataOrganizationSponsorsNodesBaseSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_sponsors_nodes__base.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_sponsors_nodes__base? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2921,23 +3166,26 @@ abstract class GUserData_organization_sponsors_nodes__asUser
   GUserData_organization_sponsors_nodes__asUser._();
 
   factory GUserData_organization_sponsors_nodes__asUser(
-      [Function(GUserData_organization_sponsors_nodes__asUserBuilder b)
+      [void Function(GUserData_organization_sponsors_nodes__asUserBuilder b)
           updates]) = _$GUserData_organization_sponsors_nodes__asUser;
 
   static void _initializeBuilder(
           GUserData_organization_sponsors_nodes__asUserBuilder b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   String get avatarUrl;
   static Serializer<GUserData_organization_sponsors_nodes__asUser>
       get serializer => _$gUserDataOrganizationSponsorsNodesAsUserSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_sponsors_nodes__asUser.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_sponsors_nodes__asUser? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2954,12 +3202,14 @@ abstract class GUserData_organization_sponsors_nodes__asOrganization
   GUserData_organization_sponsors_nodes__asOrganization._();
 
   factory GUserData_organization_sponsors_nodes__asOrganization(
-      [Function(GUserData_organization_sponsors_nodes__asOrganizationBuilder b)
+      [void Function(
+              GUserData_organization_sponsors_nodes__asOrganizationBuilder b)
           updates]) = _$GUserData_organization_sponsors_nodes__asOrganization;
 
   static void _initializeBuilder(
           GUserData_organization_sponsors_nodes__asOrganizationBuilder b) =>
       b..G__typename = 'Organization';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -2967,11 +3217,13 @@ abstract class GUserData_organization_sponsors_nodes__asOrganization
   static Serializer<GUserData_organization_sponsors_nodes__asOrganization>
       get serializer =>
           _$gUserDataOrganizationSponsorsNodesAsOrganizationSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_sponsors_nodes__asOrganization.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_sponsors_nodes__asOrganization? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -2987,20 +3239,23 @@ abstract class GUserData_organization_pinnedItems
   GUserData_organization_pinnedItems._();
 
   factory GUserData_organization_pinnedItems(
-          [Function(GUserData_organization_pinnedItemsBuilder b) updates]) =
-      _$GUserData_organization_pinnedItems;
+      [void Function(GUserData_organization_pinnedItemsBuilder b)
+          updates]) = _$GUserData_organization_pinnedItems;
 
   static void _initializeBuilder(GUserData_organization_pinnedItemsBuilder b) =>
       b..G__typename = 'PinnableItemConnection';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
-  BuiltList<GUserData_organization_pinnedItems_nodes>? get nodes;
+  BuiltList<GUserData_organization_pinnedItems_nodes?>? get nodes;
   static Serializer<GUserData_organization_pinnedItems> get serializer =>
       _$gUserDataOrganizationPinnedItemsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_pinnedItems.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_pinnedItems? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -3018,10 +3273,12 @@ abstract class GUserData_organization_pinnedItems_nodes {
         GUserData_organization_pinnedItems_nodes__base,
         {'Repository': GUserData_organization_pinnedItems_nodes__asRepository},
       );
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_pinnedItems_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_pinnedItems_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -3038,22 +3295,25 @@ abstract class GUserData_organization_pinnedItems_nodes__base
   GUserData_organization_pinnedItems_nodes__base._();
 
   factory GUserData_organization_pinnedItems_nodes__base(
-      [Function(GUserData_organization_pinnedItems_nodes__baseBuilder b)
+      [void Function(GUserData_organization_pinnedItems_nodes__baseBuilder b)
           updates]) = _$GUserData_organization_pinnedItems_nodes__base;
 
   static void _initializeBuilder(
           GUserData_organization_pinnedItems_nodes__baseBuilder b) =>
       b..G__typename = 'PinnableItem';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   static Serializer<GUserData_organization_pinnedItems_nodes__base>
       get serializer => _$gUserDataOrganizationPinnedItemsNodesBaseSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_pinnedItems_nodes__base.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_pinnedItems_nodes__base? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -3071,12 +3331,14 @@ abstract class GUserData_organization_pinnedItems_nodes__asRepository
   GUserData_organization_pinnedItems_nodes__asRepository._();
 
   factory GUserData_organization_pinnedItems_nodes__asRepository(
-      [Function(GUserData_organization_pinnedItems_nodes__asRepositoryBuilder b)
+      [void Function(
+              GUserData_organization_pinnedItems_nodes__asRepositoryBuilder b)
           updates]) = _$GUserData_organization_pinnedItems_nodes__asRepository;
 
   static void _initializeBuilder(
           GUserData_organization_pinnedItems_nodes__asRepositoryBuilder b) =>
       b..G__typename = 'Repository';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -3101,11 +3363,13 @@ abstract class GUserData_organization_pinnedItems_nodes__asRepository
   static Serializer<GUserData_organization_pinnedItems_nodes__asRepository>
       get serializer =>
           _$gUserDataOrganizationPinnedItemsNodesAsRepositorySerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_pinnedItems_nodes__asRepository.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_pinnedItems_nodes__asRepository? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -3122,7 +3386,7 @@ abstract class GUserData_organization_pinnedItems_nodes__asRepository_owner
   GUserData_organization_pinnedItems_nodes__asRepository_owner._();
 
   factory GUserData_organization_pinnedItems_nodes__asRepository_owner(
-          [Function(
+          [void Function(
                   GUserData_organization_pinnedItems_nodes__asRepository_ownerBuilder
                       b)
               updates]) =
@@ -3132,6 +3396,7 @@ abstract class GUserData_organization_pinnedItems_nodes__asRepository_owner
           GUserData_organization_pinnedItems_nodes__asRepository_ownerBuilder
               b) =>
       b..G__typename = 'RepositoryOwner';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -3143,11 +3408,13 @@ abstract class GUserData_organization_pinnedItems_nodes__asRepository_owner
           GUserData_organization_pinnedItems_nodes__asRepository_owner>
       get serializer =>
           _$gUserDataOrganizationPinnedItemsNodesAsRepositoryOwnerSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_pinnedItems_nodes__asRepository_owner.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_pinnedItems_nodes__asRepository_owner? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -3164,7 +3431,7 @@ abstract class GUserData_organization_pinnedItems_nodes__asRepository_stargazers
   GUserData_organization_pinnedItems_nodes__asRepository_stargazers._();
 
   factory GUserData_organization_pinnedItems_nodes__asRepository_stargazers(
-          [Function(
+          [void Function(
                   GUserData_organization_pinnedItems_nodes__asRepository_stargazersBuilder
                       b)
               updates]) =
@@ -3174,6 +3441,7 @@ abstract class GUserData_organization_pinnedItems_nodes__asRepository_stargazers
           GUserData_organization_pinnedItems_nodes__asRepository_stargazersBuilder
               b) =>
       b..G__typename = 'StargazerConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -3183,12 +3451,14 @@ abstract class GUserData_organization_pinnedItems_nodes__asRepository_stargazers
           GUserData_organization_pinnedItems_nodes__asRepository_stargazers>
       get serializer =>
           _$gUserDataOrganizationPinnedItemsNodesAsRepositoryStargazersSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_pinnedItems_nodes__asRepository_stargazers
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_pinnedItems_nodes__asRepository_stargazers?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GUserData_organization_pinnedItems_nodes__asRepository_stargazers
@@ -3205,7 +3475,7 @@ abstract class GUserData_organization_pinnedItems_nodes__asRepository_forks
   GUserData_organization_pinnedItems_nodes__asRepository_forks._();
 
   factory GUserData_organization_pinnedItems_nodes__asRepository_forks(
-          [Function(
+          [void Function(
                   GUserData_organization_pinnedItems_nodes__asRepository_forksBuilder
                       b)
               updates]) =
@@ -3215,6 +3485,7 @@ abstract class GUserData_organization_pinnedItems_nodes__asRepository_forks
           GUserData_organization_pinnedItems_nodes__asRepository_forksBuilder
               b) =>
       b..G__typename = 'RepositoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -3224,11 +3495,13 @@ abstract class GUserData_organization_pinnedItems_nodes__asRepository_forks
           GUserData_organization_pinnedItems_nodes__asRepository_forks>
       get serializer =>
           _$gUserDataOrganizationPinnedItemsNodesAsRepositoryForksSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_pinnedItems_nodes__asRepository_forks.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_pinnedItems_nodes__asRepository_forks? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -3246,7 +3519,7 @@ abstract class GUserData_organization_pinnedItems_nodes__asRepository_primaryLan
   GUserData_organization_pinnedItems_nodes__asRepository_primaryLanguage._();
 
   factory GUserData_organization_pinnedItems_nodes__asRepository_primaryLanguage(
-          [Function(
+          [void Function(
                   GUserData_organization_pinnedItems_nodes__asRepository_primaryLanguageBuilder
                       b)
               updates]) =
@@ -3256,6 +3529,7 @@ abstract class GUserData_organization_pinnedItems_nodes__asRepository_primaryLan
           GUserData_organization_pinnedItems_nodes__asRepository_primaryLanguageBuilder
               b) =>
       b..G__typename = 'Language';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -3267,12 +3541,14 @@ abstract class GUserData_organization_pinnedItems_nodes__asRepository_primaryLan
           GUserData_organization_pinnedItems_nodes__asRepository_primaryLanguage>
       get serializer =>
           _$gUserDataOrganizationPinnedItemsNodesAsRepositoryPrimaryLanguageSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_pinnedItems_nodes__asRepository_primaryLanguage
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_pinnedItems_nodes__asRepository_primaryLanguage?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GUserData_organization_pinnedItems_nodes__asRepository_primaryLanguage
@@ -3288,22 +3564,25 @@ abstract class GUserData_organization_pinnableItems
   GUserData_organization_pinnableItems._();
 
   factory GUserData_organization_pinnableItems(
-          [Function(GUserData_organization_pinnableItemsBuilder b) updates]) =
-      _$GUserData_organization_pinnableItems;
+      [void Function(GUserData_organization_pinnableItemsBuilder b)
+          updates]) = _$GUserData_organization_pinnableItems;
 
   static void _initializeBuilder(
           GUserData_organization_pinnableItemsBuilder b) =>
       b..G__typename = 'PinnableItemConnection';
+
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   int get totalCount;
-  BuiltList<GUserData_organization_pinnableItems_nodes>? get nodes;
+  BuiltList<GUserData_organization_pinnableItems_nodes?>? get nodes;
   static Serializer<GUserData_organization_pinnableItems> get serializer =>
       _$gUserDataOrganizationPinnableItemsSerializer;
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_pinnableItems.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_pinnableItems? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -3325,10 +3604,12 @@ abstract class GUserData_organization_pinnableItems_nodes {
                   GUserData_organization_pinnableItems_nodes__asRepository
             },
           );
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_pinnableItems_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_pinnableItems_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -3345,22 +3626,25 @@ abstract class GUserData_organization_pinnableItems_nodes__base
   GUserData_organization_pinnableItems_nodes__base._();
 
   factory GUserData_organization_pinnableItems_nodes__base(
-      [Function(GUserData_organization_pinnableItems_nodes__baseBuilder b)
+      [void Function(GUserData_organization_pinnableItems_nodes__baseBuilder b)
           updates]) = _$GUserData_organization_pinnableItems_nodes__base;
 
   static void _initializeBuilder(
           GUserData_organization_pinnableItems_nodes__baseBuilder b) =>
       b..G__typename = 'PinnableItem';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   static Serializer<GUserData_organization_pinnableItems_nodes__base>
       get serializer => _$gUserDataOrganizationPinnableItemsNodesBaseSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_pinnableItems_nodes__base.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_pinnableItems_nodes__base? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -3378,13 +3662,14 @@ abstract class GUserData_organization_pinnableItems_nodes__asRepository
   GUserData_organization_pinnableItems_nodes__asRepository._();
 
   factory GUserData_organization_pinnableItems_nodes__asRepository(
-      [Function(
+      [void Function(
               GUserData_organization_pinnableItems_nodes__asRepositoryBuilder b)
           updates]) = _$GUserData_organization_pinnableItems_nodes__asRepository;
 
   static void _initializeBuilder(
           GUserData_organization_pinnableItems_nodes__asRepositoryBuilder b) =>
       b..G__typename = 'Repository';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -3409,11 +3694,13 @@ abstract class GUserData_organization_pinnableItems_nodes__asRepository
   static Serializer<GUserData_organization_pinnableItems_nodes__asRepository>
       get serializer =>
           _$gUserDataOrganizationPinnableItemsNodesAsRepositorySerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_pinnableItems_nodes__asRepository.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_pinnableItems_nodes__asRepository? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -3430,7 +3717,7 @@ abstract class GUserData_organization_pinnableItems_nodes__asRepository_owner
   GUserData_organization_pinnableItems_nodes__asRepository_owner._();
 
   factory GUserData_organization_pinnableItems_nodes__asRepository_owner(
-          [Function(
+          [void Function(
                   GUserData_organization_pinnableItems_nodes__asRepository_ownerBuilder
                       b)
               updates]) =
@@ -3440,6 +3727,7 @@ abstract class GUserData_organization_pinnableItems_nodes__asRepository_owner
           GUserData_organization_pinnableItems_nodes__asRepository_ownerBuilder
               b) =>
       b..G__typename = 'RepositoryOwner';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -3451,12 +3739,14 @@ abstract class GUserData_organization_pinnableItems_nodes__asRepository_owner
           GUserData_organization_pinnableItems_nodes__asRepository_owner>
       get serializer =>
           _$gUserDataOrganizationPinnableItemsNodesAsRepositoryOwnerSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_pinnableItems_nodes__asRepository_owner
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_pinnableItems_nodes__asRepository_owner?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GUserData_organization_pinnableItems_nodes__asRepository_owner
@@ -3474,7 +3764,7 @@ abstract class GUserData_organization_pinnableItems_nodes__asRepository_stargaze
   GUserData_organization_pinnableItems_nodes__asRepository_stargazers._();
 
   factory GUserData_organization_pinnableItems_nodes__asRepository_stargazers(
-          [Function(
+          [void Function(
                   GUserData_organization_pinnableItems_nodes__asRepository_stargazersBuilder
                       b)
               updates]) =
@@ -3484,6 +3774,7 @@ abstract class GUserData_organization_pinnableItems_nodes__asRepository_stargaze
           GUserData_organization_pinnableItems_nodes__asRepository_stargazersBuilder
               b) =>
       b..G__typename = 'StargazerConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -3493,12 +3784,14 @@ abstract class GUserData_organization_pinnableItems_nodes__asRepository_stargaze
           GUserData_organization_pinnableItems_nodes__asRepository_stargazers>
       get serializer =>
           _$gUserDataOrganizationPinnableItemsNodesAsRepositoryStargazersSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_pinnableItems_nodes__asRepository_stargazers
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_pinnableItems_nodes__asRepository_stargazers?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GUserData_organization_pinnableItems_nodes__asRepository_stargazers
@@ -3515,7 +3808,7 @@ abstract class GUserData_organization_pinnableItems_nodes__asRepository_forks
   GUserData_organization_pinnableItems_nodes__asRepository_forks._();
 
   factory GUserData_organization_pinnableItems_nodes__asRepository_forks(
-          [Function(
+          [void Function(
                   GUserData_organization_pinnableItems_nodes__asRepository_forksBuilder
                       b)
               updates]) =
@@ -3525,6 +3818,7 @@ abstract class GUserData_organization_pinnableItems_nodes__asRepository_forks
           GUserData_organization_pinnableItems_nodes__asRepository_forksBuilder
               b) =>
       b..G__typename = 'RepositoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -3534,12 +3828,14 @@ abstract class GUserData_organization_pinnableItems_nodes__asRepository_forks
           GUserData_organization_pinnableItems_nodes__asRepository_forks>
       get serializer =>
           _$gUserDataOrganizationPinnableItemsNodesAsRepositoryForksSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_pinnableItems_nodes__asRepository_forks
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_pinnableItems_nodes__asRepository_forks?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GUserData_organization_pinnableItems_nodes__asRepository_forks
@@ -3557,7 +3853,7 @@ abstract class GUserData_organization_pinnableItems_nodes__asRepository_primaryL
   GUserData_organization_pinnableItems_nodes__asRepository_primaryLanguage._();
 
   factory GUserData_organization_pinnableItems_nodes__asRepository_primaryLanguage(
-          [Function(
+          [void Function(
                   GUserData_organization_pinnableItems_nodes__asRepository_primaryLanguageBuilder
                       b)
               updates]) =
@@ -3567,6 +3863,7 @@ abstract class GUserData_organization_pinnableItems_nodes__asRepository_primaryL
           GUserData_organization_pinnableItems_nodes__asRepository_primaryLanguageBuilder
               b) =>
       b..G__typename = 'Language';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -3578,12 +3875,14 @@ abstract class GUserData_organization_pinnableItems_nodes__asRepository_primaryL
           GUserData_organization_pinnableItems_nodes__asRepository_primaryLanguage>
       get serializer =>
           _$gUserDataOrganizationPinnableItemsNodesAsRepositoryPrimaryLanguageSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserData_organization_pinnableItems_nodes__asRepository_primaryLanguage
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserData_organization_pinnableItems_nodes__asRepository_primaryLanguage?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GUserData_organization_pinnableItems_nodes__asRepository_primaryLanguage
@@ -3635,11 +3934,12 @@ abstract class GRepoPartsData
     implements Built<GRepoPartsData, GRepoPartsDataBuilder>, GRepoParts {
   GRepoPartsData._();
 
-  factory GRepoPartsData([Function(GRepoPartsDataBuilder b) updates]) =
+  factory GRepoPartsData([void Function(GRepoPartsDataBuilder b) updates]) =
       _$GRepoPartsData;
 
   static void _initializeBuilder(GRepoPartsDataBuilder b) =>
       b..G__typename = 'Repository';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -3661,11 +3961,13 @@ abstract class GRepoPartsData
   GRepoPartsData_primaryLanguage? get primaryLanguage;
   static Serializer<GRepoPartsData> get serializer =>
       _$gRepoPartsDataSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRepoPartsData.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRepoPartsData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRepoPartsData.serializer,
@@ -3680,11 +3982,12 @@ abstract class GRepoPartsData_owner
   GRepoPartsData_owner._();
 
   factory GRepoPartsData_owner(
-          [Function(GRepoPartsData_ownerBuilder b) updates]) =
+          [void Function(GRepoPartsData_ownerBuilder b) updates]) =
       _$GRepoPartsData_owner;
 
   static void _initializeBuilder(GRepoPartsData_ownerBuilder b) =>
       b..G__typename = 'RepositoryOwner';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -3694,11 +3997,13 @@ abstract class GRepoPartsData_owner
   String get avatarUrl;
   static Serializer<GRepoPartsData_owner> get serializer =>
       _$gRepoPartsDataOwnerSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRepoPartsData_owner.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRepoPartsData_owner? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRepoPartsData_owner.serializer,
@@ -3713,11 +4018,12 @@ abstract class GRepoPartsData_stargazers
   GRepoPartsData_stargazers._();
 
   factory GRepoPartsData_stargazers(
-          [Function(GRepoPartsData_stargazersBuilder b) updates]) =
+          [void Function(GRepoPartsData_stargazersBuilder b) updates]) =
       _$GRepoPartsData_stargazers;
 
   static void _initializeBuilder(GRepoPartsData_stargazersBuilder b) =>
       b..G__typename = 'StargazerConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -3725,11 +4031,13 @@ abstract class GRepoPartsData_stargazers
   int get totalCount;
   static Serializer<GRepoPartsData_stargazers> get serializer =>
       _$gRepoPartsDataStargazersSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRepoPartsData_stargazers.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRepoPartsData_stargazers? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRepoPartsData_stargazers.serializer,
@@ -3744,11 +4052,12 @@ abstract class GRepoPartsData_forks
   GRepoPartsData_forks._();
 
   factory GRepoPartsData_forks(
-          [Function(GRepoPartsData_forksBuilder b) updates]) =
+          [void Function(GRepoPartsData_forksBuilder b) updates]) =
       _$GRepoPartsData_forks;
 
   static void _initializeBuilder(GRepoPartsData_forksBuilder b) =>
       b..G__typename = 'RepositoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -3756,11 +4065,13 @@ abstract class GRepoPartsData_forks
   int get totalCount;
   static Serializer<GRepoPartsData_forks> get serializer =>
       _$gRepoPartsDataForksSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRepoPartsData_forks.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRepoPartsData_forks? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRepoPartsData_forks.serializer,
@@ -3776,11 +4087,12 @@ abstract class GRepoPartsData_primaryLanguage
   GRepoPartsData_primaryLanguage._();
 
   factory GRepoPartsData_primaryLanguage(
-          [Function(GRepoPartsData_primaryLanguageBuilder b) updates]) =
+          [void Function(GRepoPartsData_primaryLanguageBuilder b) updates]) =
       _$GRepoPartsData_primaryLanguage;
 
   static void _initializeBuilder(GRepoPartsData_primaryLanguageBuilder b) =>
       b..G__typename = 'Language';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -3790,11 +4102,13 @@ abstract class GRepoPartsData_primaryLanguage
   String get name;
   static Serializer<GRepoPartsData_primaryLanguage> get serializer =>
       _$gRepoPartsDataPrimaryLanguageSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GRepoPartsData_primaryLanguage.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRepoPartsData_primaryLanguage? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GRepoPartsData_primaryLanguage.serializer,
@@ -3805,7 +4119,7 @@ abstract class GRepoPartsData_primaryLanguage
 abstract class GSponsorConnectionParts {
   String get G__typename;
   int get totalCount;
-  BuiltList<GSponsorConnectionParts_nodes>? get nodes;
+  BuiltList<GSponsorConnectionParts_nodes?>? get nodes;
   Map<String, dynamic> toJson();
 }
 
@@ -3846,25 +4160,28 @@ abstract class GSponsorConnectionPartsData
   GSponsorConnectionPartsData._();
 
   factory GSponsorConnectionPartsData(
-          [Function(GSponsorConnectionPartsDataBuilder b) updates]) =
+          [void Function(GSponsorConnectionPartsDataBuilder b) updates]) =
       _$GSponsorConnectionPartsData;
 
   static void _initializeBuilder(GSponsorConnectionPartsDataBuilder b) =>
       b..G__typename = 'SponsorConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
   int get totalCount;
   @override
-  BuiltList<GSponsorConnectionPartsData_nodes>? get nodes;
+  BuiltList<GSponsorConnectionPartsData_nodes?>? get nodes;
   static Serializer<GSponsorConnectionPartsData> get serializer =>
       _$gSponsorConnectionPartsDataSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSponsorConnectionPartsData.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSponsorConnectionPartsData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GSponsorConnectionPartsData.serializer,
@@ -3886,10 +4203,12 @@ abstract class GSponsorConnectionPartsData_nodes
           'Organization': GSponsorConnectionPartsData_nodes__asOrganization,
         },
       );
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSponsorConnectionPartsData_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSponsorConnectionPartsData_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -3906,22 +4225,25 @@ abstract class GSponsorConnectionPartsData_nodes__base
   GSponsorConnectionPartsData_nodes__base._();
 
   factory GSponsorConnectionPartsData_nodes__base(
-      [Function(GSponsorConnectionPartsData_nodes__baseBuilder b)
+      [void Function(GSponsorConnectionPartsData_nodes__baseBuilder b)
           updates]) = _$GSponsorConnectionPartsData_nodes__base;
 
   static void _initializeBuilder(
           GSponsorConnectionPartsData_nodes__baseBuilder b) =>
       b..G__typename = 'Sponsor';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   static Serializer<GSponsorConnectionPartsData_nodes__base> get serializer =>
       _$gSponsorConnectionPartsDataNodesBaseSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSponsorConnectionPartsData_nodes__base.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSponsorConnectionPartsData_nodes__base? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -3938,23 +4260,26 @@ abstract class GSponsorConnectionPartsData_nodes__asUser
   GSponsorConnectionPartsData_nodes__asUser._();
 
   factory GSponsorConnectionPartsData_nodes__asUser(
-      [Function(GSponsorConnectionPartsData_nodes__asUserBuilder b)
+      [void Function(GSponsorConnectionPartsData_nodes__asUserBuilder b)
           updates]) = _$GSponsorConnectionPartsData_nodes__asUser;
 
   static void _initializeBuilder(
           GSponsorConnectionPartsData_nodes__asUserBuilder b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   String get avatarUrl;
   static Serializer<GSponsorConnectionPartsData_nodes__asUser> get serializer =>
       _$gSponsorConnectionPartsDataNodesAsUserSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSponsorConnectionPartsData_nodes__asUser.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSponsorConnectionPartsData_nodes__asUser? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -3971,12 +4296,13 @@ abstract class GSponsorConnectionPartsData_nodes__asOrganization
   GSponsorConnectionPartsData_nodes__asOrganization._();
 
   factory GSponsorConnectionPartsData_nodes__asOrganization(
-      [Function(GSponsorConnectionPartsData_nodes__asOrganizationBuilder b)
+      [void Function(GSponsorConnectionPartsData_nodes__asOrganizationBuilder b)
           updates]) = _$GSponsorConnectionPartsData_nodes__asOrganization;
 
   static void _initializeBuilder(
           GSponsorConnectionPartsData_nodes__asOrganizationBuilder b) =>
       b..G__typename = 'Organization';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -3984,11 +4310,13 @@ abstract class GSponsorConnectionPartsData_nodes__asOrganization
   static Serializer<GSponsorConnectionPartsData_nodes__asOrganization>
       get serializer =>
           _$gSponsorConnectionPartsDataNodesAsOrganizationSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GSponsorConnectionPartsData_nodes__asOrganization.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GSponsorConnectionPartsData_nodes__asOrganization? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -4071,7 +4399,7 @@ abstract class GUserParts_sponsoring implements GSponsorConnectionParts {
   @override
   int get totalCount;
   @override
-  BuiltList<GUserParts_sponsoring_nodes>? get nodes;
+  BuiltList<GUserParts_sponsoring_nodes?>? get nodes;
   @override
   Map<String, dynamic> toJson();
 }
@@ -4114,7 +4442,7 @@ abstract class GUserParts_sponsors implements GSponsorConnectionParts {
   @override
   int get totalCount;
   @override
-  BuiltList<GUserParts_sponsors_nodes>? get nodes;
+  BuiltList<GUserParts_sponsors_nodes?>? get nodes;
   @override
   Map<String, dynamic> toJson();
 }
@@ -4154,7 +4482,7 @@ abstract class GUserParts_sponsors_nodes__asOrganization
 abstract class GUserParts_organizations {
   String get G__typename;
   int get totalCount;
-  BuiltList<GUserParts_organizations_nodes>? get nodes;
+  BuiltList<GUserParts_organizations_nodes?>? get nodes;
   Map<String, dynamic> toJson();
 }
 
@@ -4167,7 +4495,7 @@ abstract class GUserParts_organizations_nodes {
 abstract class GUserParts_repositories {
   String get G__typename;
   int get totalCount;
-  BuiltList<GUserParts_repositories_nodes>? get nodes;
+  BuiltList<GUserParts_repositories_nodes?>? get nodes;
   Map<String, dynamic> toJson();
 }
 
@@ -4250,7 +4578,7 @@ abstract class GUserParts_gists {
 
 abstract class GUserParts_pinnedItems {
   String get G__typename;
-  BuiltList<GUserParts_pinnedItems_nodes>? get nodes;
+  BuiltList<GUserParts_pinnedItems_nodes?>? get nodes;
   Map<String, dynamic> toJson();
 }
 
@@ -4339,11 +4667,12 @@ abstract class GUserPartsData
     implements Built<GUserPartsData, GUserPartsDataBuilder>, GUserParts {
   GUserPartsData._();
 
-  factory GUserPartsData([Function(GUserPartsDataBuilder b) updates]) =
+  factory GUserPartsData([void Function(GUserPartsDataBuilder b) updates]) =
       _$GUserPartsData;
 
   static void _initializeBuilder(GUserPartsDataBuilder b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -4395,11 +4724,13 @@ abstract class GUserPartsData
   GUserPartsData_pinnedItems get pinnedItems;
   static Serializer<GUserPartsData> get serializer =>
       _$gUserPartsDataSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserPartsData.serializer,
@@ -4414,11 +4745,12 @@ abstract class GUserPartsData_followers
   GUserPartsData_followers._();
 
   factory GUserPartsData_followers(
-          [Function(GUserPartsData_followersBuilder b) updates]) =
+          [void Function(GUserPartsData_followersBuilder b) updates]) =
       _$GUserPartsData_followers;
 
   static void _initializeBuilder(GUserPartsData_followersBuilder b) =>
       b..G__typename = 'FollowerConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -4426,11 +4758,13 @@ abstract class GUserPartsData_followers
   int get totalCount;
   static Serializer<GUserPartsData_followers> get serializer =>
       _$gUserPartsDataFollowersSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_followers.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_followers? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserPartsData_followers.serializer,
@@ -4445,11 +4779,12 @@ abstract class GUserPartsData_following
   GUserPartsData_following._();
 
   factory GUserPartsData_following(
-          [Function(GUserPartsData_followingBuilder b) updates]) =
+          [void Function(GUserPartsData_followingBuilder b) updates]) =
       _$GUserPartsData_following;
 
   static void _initializeBuilder(GUserPartsData_followingBuilder b) =>
       b..G__typename = 'FollowingConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -4457,11 +4792,13 @@ abstract class GUserPartsData_following
   int get totalCount;
   static Serializer<GUserPartsData_following> get serializer =>
       _$gUserPartsDataFollowingSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_following.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_following? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserPartsData_following.serializer,
@@ -4477,12 +4814,13 @@ abstract class GUserPartsData_contributionsCollection
   GUserPartsData_contributionsCollection._();
 
   factory GUserPartsData_contributionsCollection(
-          [Function(GUserPartsData_contributionsCollectionBuilder b) updates]) =
-      _$GUserPartsData_contributionsCollection;
+      [void Function(GUserPartsData_contributionsCollectionBuilder b)
+          updates]) = _$GUserPartsData_contributionsCollection;
 
   static void _initializeBuilder(
           GUserPartsData_contributionsCollectionBuilder b) =>
       b..G__typename = 'ContributionsCollection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -4491,11 +4829,13 @@ abstract class GUserPartsData_contributionsCollection
       get contributionCalendar;
   static Serializer<GUserPartsData_contributionsCollection> get serializer =>
       _$gUserPartsDataContributionsCollectionSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_contributionsCollection.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_contributionsCollection? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -4512,7 +4852,7 @@ abstract class GUserPartsData_contributionsCollection_contributionCalendar
   GUserPartsData_contributionsCollection_contributionCalendar._();
 
   factory GUserPartsData_contributionsCollection_contributionCalendar(
-      [Function(
+      [void Function(
               GUserPartsData_contributionsCollection_contributionCalendarBuilder
                   b)
           updates]) = _$GUserPartsData_contributionsCollection_contributionCalendar;
@@ -4521,6 +4861,7 @@ abstract class GUserPartsData_contributionsCollection_contributionCalendar
           GUserPartsData_contributionsCollection_contributionCalendarBuilder
               b) =>
       b..G__typename = 'ContributionCalendar';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -4530,11 +4871,13 @@ abstract class GUserPartsData_contributionsCollection_contributionCalendar
   static Serializer<GUserPartsData_contributionsCollection_contributionCalendar>
       get serializer =>
           _$gUserPartsDataContributionsCollectionContributionCalendarSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_contributionsCollection_contributionCalendar.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_contributionsCollection_contributionCalendar? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -4551,7 +4894,7 @@ abstract class GUserPartsData_contributionsCollection_contributionCalendar_weeks
   GUserPartsData_contributionsCollection_contributionCalendar_weeks._();
 
   factory GUserPartsData_contributionsCollection_contributionCalendar_weeks(
-          [Function(
+          [void Function(
                   GUserPartsData_contributionsCollection_contributionCalendar_weeksBuilder
                       b)
               updates]) =
@@ -4561,6 +4904,7 @@ abstract class GUserPartsData_contributionsCollection_contributionCalendar_weeks
           GUserPartsData_contributionsCollection_contributionCalendar_weeksBuilder
               b) =>
       b..G__typename = 'ContributionCalendarWeek';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -4572,12 +4916,14 @@ abstract class GUserPartsData_contributionsCollection_contributionCalendar_weeks
           GUserPartsData_contributionsCollection_contributionCalendar_weeks>
       get serializer =>
           _$gUserPartsDataContributionsCollectionContributionCalendarWeeksSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_contributionsCollection_contributionCalendar_weeks
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_contributionsCollection_contributionCalendar_weeks?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GUserPartsData_contributionsCollection_contributionCalendar_weeks
@@ -4595,7 +4941,7 @@ abstract class GUserPartsData_contributionsCollection_contributionCalendar_weeks
   GUserPartsData_contributionsCollection_contributionCalendar_weeks_contributionDays._();
 
   factory GUserPartsData_contributionsCollection_contributionCalendar_weeks_contributionDays(
-          [Function(
+          [void Function(
                   GUserPartsData_contributionsCollection_contributionCalendar_weeks_contributionDaysBuilder
                       b)
               updates]) =
@@ -4605,6 +4951,7 @@ abstract class GUserPartsData_contributionsCollection_contributionCalendar_weeks
           GUserPartsData_contributionsCollection_contributionCalendar_weeks_contributionDaysBuilder
               b) =>
       b..G__typename = 'ContributionCalendarDay';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -4614,12 +4961,14 @@ abstract class GUserPartsData_contributionsCollection_contributionCalendar_weeks
           GUserPartsData_contributionsCollection_contributionCalendar_weeks_contributionDays>
       get serializer =>
           _$gUserPartsDataContributionsCollectionContributionCalendarWeeksContributionDaysSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_contributionsCollection_contributionCalendar_weeks_contributionDays
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_contributionsCollection_contributionCalendar_weeks_contributionDays?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GUserPartsData_contributionsCollection_contributionCalendar_weeks_contributionDays
@@ -4636,25 +4985,28 @@ abstract class GUserPartsData_sponsoring
   GUserPartsData_sponsoring._();
 
   factory GUserPartsData_sponsoring(
-          [Function(GUserPartsData_sponsoringBuilder b) updates]) =
+          [void Function(GUserPartsData_sponsoringBuilder b) updates]) =
       _$GUserPartsData_sponsoring;
 
   static void _initializeBuilder(GUserPartsData_sponsoringBuilder b) =>
       b..G__typename = 'SponsorConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
   int get totalCount;
   @override
-  BuiltList<GUserPartsData_sponsoring_nodes>? get nodes;
+  BuiltList<GUserPartsData_sponsoring_nodes?>? get nodes;
   static Serializer<GUserPartsData_sponsoring> get serializer =>
       _$gUserPartsDataSponsoringSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_sponsoring.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_sponsoring? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserPartsData_sponsoring.serializer,
@@ -4676,10 +5028,12 @@ abstract class GUserPartsData_sponsoring_nodes
           'Organization': GUserPartsData_sponsoring_nodes__asOrganization,
         },
       );
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_sponsoring_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_sponsoring_nodes? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserPartsData_sponsoring_nodes.serializer,
@@ -4695,22 +5049,25 @@ abstract class GUserPartsData_sponsoring_nodes__base
   GUserPartsData_sponsoring_nodes__base._();
 
   factory GUserPartsData_sponsoring_nodes__base(
-          [Function(GUserPartsData_sponsoring_nodes__baseBuilder b) updates]) =
-      _$GUserPartsData_sponsoring_nodes__base;
+      [void Function(GUserPartsData_sponsoring_nodes__baseBuilder b)
+          updates]) = _$GUserPartsData_sponsoring_nodes__base;
 
   static void _initializeBuilder(
           GUserPartsData_sponsoring_nodes__baseBuilder b) =>
       b..G__typename = 'Sponsor';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   static Serializer<GUserPartsData_sponsoring_nodes__base> get serializer =>
       _$gUserPartsDataSponsoringNodesBaseSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_sponsoring_nodes__base.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_sponsoring_nodes__base? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -4727,23 +5084,26 @@ abstract class GUserPartsData_sponsoring_nodes__asUser
   GUserPartsData_sponsoring_nodes__asUser._();
 
   factory GUserPartsData_sponsoring_nodes__asUser(
-      [Function(GUserPartsData_sponsoring_nodes__asUserBuilder b)
+      [void Function(GUserPartsData_sponsoring_nodes__asUserBuilder b)
           updates]) = _$GUserPartsData_sponsoring_nodes__asUser;
 
   static void _initializeBuilder(
           GUserPartsData_sponsoring_nodes__asUserBuilder b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   String get avatarUrl;
   static Serializer<GUserPartsData_sponsoring_nodes__asUser> get serializer =>
       _$gUserPartsDataSponsoringNodesAsUserSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_sponsoring_nodes__asUser.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_sponsoring_nodes__asUser? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -4760,23 +5120,26 @@ abstract class GUserPartsData_sponsoring_nodes__asOrganization
   GUserPartsData_sponsoring_nodes__asOrganization._();
 
   factory GUserPartsData_sponsoring_nodes__asOrganization(
-      [Function(GUserPartsData_sponsoring_nodes__asOrganizationBuilder b)
+      [void Function(GUserPartsData_sponsoring_nodes__asOrganizationBuilder b)
           updates]) = _$GUserPartsData_sponsoring_nodes__asOrganization;
 
   static void _initializeBuilder(
           GUserPartsData_sponsoring_nodes__asOrganizationBuilder b) =>
       b..G__typename = 'Organization';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   String get avatarUrl;
   static Serializer<GUserPartsData_sponsoring_nodes__asOrganization>
       get serializer => _$gUserPartsDataSponsoringNodesAsOrganizationSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_sponsoring_nodes__asOrganization.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_sponsoring_nodes__asOrganization? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -4793,25 +5156,28 @@ abstract class GUserPartsData_sponsors
   GUserPartsData_sponsors._();
 
   factory GUserPartsData_sponsors(
-          [Function(GUserPartsData_sponsorsBuilder b) updates]) =
+          [void Function(GUserPartsData_sponsorsBuilder b) updates]) =
       _$GUserPartsData_sponsors;
 
   static void _initializeBuilder(GUserPartsData_sponsorsBuilder b) =>
       b..G__typename = 'SponsorConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
   int get totalCount;
   @override
-  BuiltList<GUserPartsData_sponsors_nodes>? get nodes;
+  BuiltList<GUserPartsData_sponsors_nodes?>? get nodes;
   static Serializer<GUserPartsData_sponsors> get serializer =>
       _$gUserPartsDataSponsorsSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_sponsors.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_sponsors? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserPartsData_sponsors.serializer,
@@ -4833,10 +5199,12 @@ abstract class GUserPartsData_sponsors_nodes
           'Organization': GUserPartsData_sponsors_nodes__asOrganization,
         },
       );
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_sponsors_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_sponsors_nodes? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserPartsData_sponsors_nodes.serializer,
@@ -4852,22 +5220,25 @@ abstract class GUserPartsData_sponsors_nodes__base
   GUserPartsData_sponsors_nodes__base._();
 
   factory GUserPartsData_sponsors_nodes__base(
-          [Function(GUserPartsData_sponsors_nodes__baseBuilder b) updates]) =
-      _$GUserPartsData_sponsors_nodes__base;
+      [void Function(GUserPartsData_sponsors_nodes__baseBuilder b)
+          updates]) = _$GUserPartsData_sponsors_nodes__base;
 
   static void _initializeBuilder(
           GUserPartsData_sponsors_nodes__baseBuilder b) =>
       b..G__typename = 'Sponsor';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   static Serializer<GUserPartsData_sponsors_nodes__base> get serializer =>
       _$gUserPartsDataSponsorsNodesBaseSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_sponsors_nodes__base.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_sponsors_nodes__base? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -4884,23 +5255,26 @@ abstract class GUserPartsData_sponsors_nodes__asUser
   GUserPartsData_sponsors_nodes__asUser._();
 
   factory GUserPartsData_sponsors_nodes__asUser(
-          [Function(GUserPartsData_sponsors_nodes__asUserBuilder b) updates]) =
-      _$GUserPartsData_sponsors_nodes__asUser;
+      [void Function(GUserPartsData_sponsors_nodes__asUserBuilder b)
+          updates]) = _$GUserPartsData_sponsors_nodes__asUser;
 
   static void _initializeBuilder(
           GUserPartsData_sponsors_nodes__asUserBuilder b) =>
       b..G__typename = 'User';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   String get avatarUrl;
   static Serializer<GUserPartsData_sponsors_nodes__asUser> get serializer =>
       _$gUserPartsDataSponsorsNodesAsUserSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_sponsors_nodes__asUser.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_sponsors_nodes__asUser? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -4917,23 +5291,26 @@ abstract class GUserPartsData_sponsors_nodes__asOrganization
   GUserPartsData_sponsors_nodes__asOrganization._();
 
   factory GUserPartsData_sponsors_nodes__asOrganization(
-      [Function(GUserPartsData_sponsors_nodes__asOrganizationBuilder b)
+      [void Function(GUserPartsData_sponsors_nodes__asOrganizationBuilder b)
           updates]) = _$GUserPartsData_sponsors_nodes__asOrganization;
 
   static void _initializeBuilder(
           GUserPartsData_sponsors_nodes__asOrganizationBuilder b) =>
       b..G__typename = 'Organization';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   String get avatarUrl;
   static Serializer<GUserPartsData_sponsors_nodes__asOrganization>
       get serializer => _$gUserPartsDataSponsorsNodesAsOrganizationSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_sponsors_nodes__asOrganization.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_sponsors_nodes__asOrganization? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -4950,25 +5327,28 @@ abstract class GUserPartsData_organizations
   GUserPartsData_organizations._();
 
   factory GUserPartsData_organizations(
-          [Function(GUserPartsData_organizationsBuilder b) updates]) =
+          [void Function(GUserPartsData_organizationsBuilder b) updates]) =
       _$GUserPartsData_organizations;
 
   static void _initializeBuilder(GUserPartsData_organizationsBuilder b) =>
       b..G__typename = 'OrganizationConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
   int get totalCount;
   @override
-  BuiltList<GUserPartsData_organizations_nodes>? get nodes;
+  BuiltList<GUserPartsData_organizations_nodes?>? get nodes;
   static Serializer<GUserPartsData_organizations> get serializer =>
       _$gUserPartsDataOrganizationsSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_organizations.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_organizations? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserPartsData_organizations.serializer,
@@ -4984,11 +5364,12 @@ abstract class GUserPartsData_organizations_nodes
   GUserPartsData_organizations_nodes._();
 
   factory GUserPartsData_organizations_nodes(
-          [Function(GUserPartsData_organizations_nodesBuilder b) updates]) =
-      _$GUserPartsData_organizations_nodes;
+      [void Function(GUserPartsData_organizations_nodesBuilder b)
+          updates]) = _$GUserPartsData_organizations_nodes;
 
   static void _initializeBuilder(GUserPartsData_organizations_nodesBuilder b) =>
       b..G__typename = 'Organization';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -4996,11 +5377,13 @@ abstract class GUserPartsData_organizations_nodes
   String get avatarUrl;
   static Serializer<GUserPartsData_organizations_nodes> get serializer =>
       _$gUserPartsDataOrganizationsNodesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_organizations_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_organizations_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -5016,25 +5399,28 @@ abstract class GUserPartsData_repositories
   GUserPartsData_repositories._();
 
   factory GUserPartsData_repositories(
-          [Function(GUserPartsData_repositoriesBuilder b) updates]) =
+          [void Function(GUserPartsData_repositoriesBuilder b) updates]) =
       _$GUserPartsData_repositories;
 
   static void _initializeBuilder(GUserPartsData_repositoriesBuilder b) =>
       b..G__typename = 'RepositoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
   int get totalCount;
   @override
-  BuiltList<GUserPartsData_repositories_nodes>? get nodes;
+  BuiltList<GUserPartsData_repositories_nodes?>? get nodes;
   static Serializer<GUserPartsData_repositories> get serializer =>
       _$gUserPartsDataRepositoriesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_repositories.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_repositories? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserPartsData_repositories.serializer,
@@ -5051,11 +5437,12 @@ abstract class GUserPartsData_repositories_nodes
   GUserPartsData_repositories_nodes._();
 
   factory GUserPartsData_repositories_nodes(
-          [Function(GUserPartsData_repositories_nodesBuilder b) updates]) =
+          [void Function(GUserPartsData_repositories_nodesBuilder b) updates]) =
       _$GUserPartsData_repositories_nodes;
 
   static void _initializeBuilder(GUserPartsData_repositories_nodesBuilder b) =>
       b..G__typename = 'Repository';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -5077,11 +5464,13 @@ abstract class GUserPartsData_repositories_nodes
   GUserPartsData_repositories_nodes_primaryLanguage? get primaryLanguage;
   static Serializer<GUserPartsData_repositories_nodes> get serializer =>
       _$gUserPartsDataRepositoriesNodesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_repositories_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_repositories_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -5099,12 +5488,13 @@ abstract class GUserPartsData_repositories_nodes_owner
   GUserPartsData_repositories_nodes_owner._();
 
   factory GUserPartsData_repositories_nodes_owner(
-      [Function(GUserPartsData_repositories_nodes_ownerBuilder b)
+      [void Function(GUserPartsData_repositories_nodes_ownerBuilder b)
           updates]) = _$GUserPartsData_repositories_nodes_owner;
 
   static void _initializeBuilder(
           GUserPartsData_repositories_nodes_ownerBuilder b) =>
       b..G__typename = 'RepositoryOwner';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -5114,11 +5504,13 @@ abstract class GUserPartsData_repositories_nodes_owner
   String get avatarUrl;
   static Serializer<GUserPartsData_repositories_nodes_owner> get serializer =>
       _$gUserPartsDataRepositoriesNodesOwnerSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_repositories_nodes_owner.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_repositories_nodes_owner? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -5136,12 +5528,13 @@ abstract class GUserPartsData_repositories_nodes_stargazers
   GUserPartsData_repositories_nodes_stargazers._();
 
   factory GUserPartsData_repositories_nodes_stargazers(
-      [Function(GUserPartsData_repositories_nodes_stargazersBuilder b)
+      [void Function(GUserPartsData_repositories_nodes_stargazersBuilder b)
           updates]) = _$GUserPartsData_repositories_nodes_stargazers;
 
   static void _initializeBuilder(
           GUserPartsData_repositories_nodes_stargazersBuilder b) =>
       b..G__typename = 'StargazerConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -5149,11 +5542,13 @@ abstract class GUserPartsData_repositories_nodes_stargazers
   int get totalCount;
   static Serializer<GUserPartsData_repositories_nodes_stargazers>
       get serializer => _$gUserPartsDataRepositoriesNodesStargazersSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_repositories_nodes_stargazers.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_repositories_nodes_stargazers? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -5171,12 +5566,13 @@ abstract class GUserPartsData_repositories_nodes_forks
   GUserPartsData_repositories_nodes_forks._();
 
   factory GUserPartsData_repositories_nodes_forks(
-      [Function(GUserPartsData_repositories_nodes_forksBuilder b)
+      [void Function(GUserPartsData_repositories_nodes_forksBuilder b)
           updates]) = _$GUserPartsData_repositories_nodes_forks;
 
   static void _initializeBuilder(
           GUserPartsData_repositories_nodes_forksBuilder b) =>
       b..G__typename = 'RepositoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -5184,11 +5580,13 @@ abstract class GUserPartsData_repositories_nodes_forks
   int get totalCount;
   static Serializer<GUserPartsData_repositories_nodes_forks> get serializer =>
       _$gUserPartsDataRepositoriesNodesForksSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_repositories_nodes_forks.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_repositories_nodes_forks? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -5206,12 +5604,13 @@ abstract class GUserPartsData_repositories_nodes_primaryLanguage
   GUserPartsData_repositories_nodes_primaryLanguage._();
 
   factory GUserPartsData_repositories_nodes_primaryLanguage(
-      [Function(GUserPartsData_repositories_nodes_primaryLanguageBuilder b)
+      [void Function(GUserPartsData_repositories_nodes_primaryLanguageBuilder b)
           updates]) = _$GUserPartsData_repositories_nodes_primaryLanguage;
 
   static void _initializeBuilder(
           GUserPartsData_repositories_nodes_primaryLanguageBuilder b) =>
       b..G__typename = 'Language';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -5222,11 +5621,13 @@ abstract class GUserPartsData_repositories_nodes_primaryLanguage
   static Serializer<GUserPartsData_repositories_nodes_primaryLanguage>
       get serializer =>
           _$gUserPartsDataRepositoriesNodesPrimaryLanguageSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_repositories_nodes_primaryLanguage.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_repositories_nodes_primaryLanguage? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -5243,11 +5644,12 @@ abstract class GUserPartsData_starredRepositories
   GUserPartsData_starredRepositories._();
 
   factory GUserPartsData_starredRepositories(
-          [Function(GUserPartsData_starredRepositoriesBuilder b) updates]) =
-      _$GUserPartsData_starredRepositories;
+      [void Function(GUserPartsData_starredRepositoriesBuilder b)
+          updates]) = _$GUserPartsData_starredRepositories;
 
   static void _initializeBuilder(GUserPartsData_starredRepositoriesBuilder b) =>
       b..G__typename = 'StarredRepositoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -5255,11 +5657,13 @@ abstract class GUserPartsData_starredRepositories
   int get totalCount;
   static Serializer<GUserPartsData_starredRepositories> get serializer =>
       _$gUserPartsDataStarredRepositoriesSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_starredRepositories.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_starredRepositories? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -5275,11 +5679,12 @@ abstract class GUserPartsData_gists
   GUserPartsData_gists._();
 
   factory GUserPartsData_gists(
-          [Function(GUserPartsData_gistsBuilder b) updates]) =
+          [void Function(GUserPartsData_gistsBuilder b) updates]) =
       _$GUserPartsData_gists;
 
   static void _initializeBuilder(GUserPartsData_gistsBuilder b) =>
       b..G__typename = 'GistConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -5287,11 +5692,13 @@ abstract class GUserPartsData_gists
   int get totalCount;
   static Serializer<GUserPartsData_gists> get serializer =>
       _$gUserPartsDataGistsSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_gists.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_gists? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserPartsData_gists.serializer,
@@ -5306,23 +5713,26 @@ abstract class GUserPartsData_pinnedItems
   GUserPartsData_pinnedItems._();
 
   factory GUserPartsData_pinnedItems(
-          [Function(GUserPartsData_pinnedItemsBuilder b) updates]) =
+          [void Function(GUserPartsData_pinnedItemsBuilder b) updates]) =
       _$GUserPartsData_pinnedItems;
 
   static void _initializeBuilder(GUserPartsData_pinnedItemsBuilder b) =>
       b..G__typename = 'PinnableItemConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   @override
-  BuiltList<GUserPartsData_pinnedItems_nodes>? get nodes;
+  BuiltList<GUserPartsData_pinnedItems_nodes?>? get nodes;
   static Serializer<GUserPartsData_pinnedItems> get serializer =>
       _$gUserPartsDataPinnedItemsSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_pinnedItems.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_pinnedItems? fromJson(Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
         GUserPartsData_pinnedItems.serializer,
@@ -5341,10 +5751,12 @@ abstract class GUserPartsData_pinnedItems_nodes
         GUserPartsData_pinnedItems_nodes__base,
         {'Repository': GUserPartsData_pinnedItems_nodes__asRepository},
       );
+
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_pinnedItems_nodes.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_pinnedItems_nodes? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -5361,22 +5773,25 @@ abstract class GUserPartsData_pinnedItems_nodes__base
   GUserPartsData_pinnedItems_nodes__base._();
 
   factory GUserPartsData_pinnedItems_nodes__base(
-          [Function(GUserPartsData_pinnedItems_nodes__baseBuilder b) updates]) =
-      _$GUserPartsData_pinnedItems_nodes__base;
+      [void Function(GUserPartsData_pinnedItems_nodes__baseBuilder b)
+          updates]) = _$GUserPartsData_pinnedItems_nodes__base;
 
   static void _initializeBuilder(
           GUserPartsData_pinnedItems_nodes__baseBuilder b) =>
       b..G__typename = 'PinnableItem';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
   static Serializer<GUserPartsData_pinnedItems_nodes__base> get serializer =>
       _$gUserPartsDataPinnedItemsNodesBaseSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_pinnedItems_nodes__base.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_pinnedItems_nodes__base? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -5394,12 +5809,13 @@ abstract class GUserPartsData_pinnedItems_nodes__asRepository
   GUserPartsData_pinnedItems_nodes__asRepository._();
 
   factory GUserPartsData_pinnedItems_nodes__asRepository(
-      [Function(GUserPartsData_pinnedItems_nodes__asRepositoryBuilder b)
+      [void Function(GUserPartsData_pinnedItems_nodes__asRepositoryBuilder b)
           updates]) = _$GUserPartsData_pinnedItems_nodes__asRepository;
 
   static void _initializeBuilder(
           GUserPartsData_pinnedItems_nodes__asRepositoryBuilder b) =>
       b..G__typename = 'Repository';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -5422,11 +5838,13 @@ abstract class GUserPartsData_pinnedItems_nodes__asRepository
       get primaryLanguage;
   static Serializer<GUserPartsData_pinnedItems_nodes__asRepository>
       get serializer => _$gUserPartsDataPinnedItemsNodesAsRepositorySerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_pinnedItems_nodes__asRepository.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_pinnedItems_nodes__asRepository? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -5443,12 +5861,14 @@ abstract class GUserPartsData_pinnedItems_nodes__asRepository_owner
   GUserPartsData_pinnedItems_nodes__asRepository_owner._();
 
   factory GUserPartsData_pinnedItems_nodes__asRepository_owner(
-      [Function(GUserPartsData_pinnedItems_nodes__asRepository_ownerBuilder b)
+      [void Function(
+              GUserPartsData_pinnedItems_nodes__asRepository_ownerBuilder b)
           updates]) = _$GUserPartsData_pinnedItems_nodes__asRepository_owner;
 
   static void _initializeBuilder(
           GUserPartsData_pinnedItems_nodes__asRepository_ownerBuilder b) =>
       b..G__typename = 'RepositoryOwner';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -5459,11 +5879,13 @@ abstract class GUserPartsData_pinnedItems_nodes__asRepository_owner
   static Serializer<GUserPartsData_pinnedItems_nodes__asRepository_owner>
       get serializer =>
           _$gUserPartsDataPinnedItemsNodesAsRepositoryOwnerSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_pinnedItems_nodes__asRepository_owner.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_pinnedItems_nodes__asRepository_owner? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -5480,7 +5902,7 @@ abstract class GUserPartsData_pinnedItems_nodes__asRepository_stargazers
   GUserPartsData_pinnedItems_nodes__asRepository_stargazers._();
 
   factory GUserPartsData_pinnedItems_nodes__asRepository_stargazers(
-      [Function(
+      [void Function(
               GUserPartsData_pinnedItems_nodes__asRepository_stargazersBuilder
                   b)
           updates]) = _$GUserPartsData_pinnedItems_nodes__asRepository_stargazers;
@@ -5488,6 +5910,7 @@ abstract class GUserPartsData_pinnedItems_nodes__asRepository_stargazers
   static void _initializeBuilder(
           GUserPartsData_pinnedItems_nodes__asRepository_stargazersBuilder b) =>
       b..G__typename = 'StargazerConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -5496,11 +5919,13 @@ abstract class GUserPartsData_pinnedItems_nodes__asRepository_stargazers
   static Serializer<GUserPartsData_pinnedItems_nodes__asRepository_stargazers>
       get serializer =>
           _$gUserPartsDataPinnedItemsNodesAsRepositoryStargazersSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_pinnedItems_nodes__asRepository_stargazers.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_pinnedItems_nodes__asRepository_stargazers? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -5517,12 +5942,14 @@ abstract class GUserPartsData_pinnedItems_nodes__asRepository_forks
   GUserPartsData_pinnedItems_nodes__asRepository_forks._();
 
   factory GUserPartsData_pinnedItems_nodes__asRepository_forks(
-      [Function(GUserPartsData_pinnedItems_nodes__asRepository_forksBuilder b)
+      [void Function(
+              GUserPartsData_pinnedItems_nodes__asRepository_forksBuilder b)
           updates]) = _$GUserPartsData_pinnedItems_nodes__asRepository_forks;
 
   static void _initializeBuilder(
           GUserPartsData_pinnedItems_nodes__asRepository_forksBuilder b) =>
       b..G__typename = 'RepositoryConnection';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -5531,11 +5958,13 @@ abstract class GUserPartsData_pinnedItems_nodes__asRepository_forks
   static Serializer<GUserPartsData_pinnedItems_nodes__asRepository_forks>
       get serializer =>
           _$gUserPartsDataPinnedItemsNodesAsRepositoryForksSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_pinnedItems_nodes__asRepository_forks.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_pinnedItems_nodes__asRepository_forks? fromJson(
           Map<String, dynamic> json) =>
       _i1.serializers.deserializeWith(
@@ -5552,7 +5981,7 @@ abstract class GUserPartsData_pinnedItems_nodes__asRepository_primaryLanguage
   GUserPartsData_pinnedItems_nodes__asRepository_primaryLanguage._();
 
   factory GUserPartsData_pinnedItems_nodes__asRepository_primaryLanguage(
-          [Function(
+          [void Function(
                   GUserPartsData_pinnedItems_nodes__asRepository_primaryLanguageBuilder
                       b)
               updates]) =
@@ -5562,6 +5991,7 @@ abstract class GUserPartsData_pinnedItems_nodes__asRepository_primaryLanguage
           GUserPartsData_pinnedItems_nodes__asRepository_primaryLanguageBuilder
               b) =>
       b..G__typename = 'Language';
+
   @override
   @BuiltValueField(wireName: '__typename')
   String get G__typename;
@@ -5573,12 +6003,14 @@ abstract class GUserPartsData_pinnedItems_nodes__asRepository_primaryLanguage
           GUserPartsData_pinnedItems_nodes__asRepository_primaryLanguage>
       get serializer =>
           _$gUserPartsDataPinnedItemsNodesAsRepositoryPrimaryLanguageSerializer;
+
   @override
   Map<String, dynamic> toJson() => (_i1.serializers.serializeWith(
         GUserPartsData_pinnedItems_nodes__asRepository_primaryLanguage
             .serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GUserPartsData_pinnedItems_nodes__asRepository_primaryLanguage?
       fromJson(Map<String, dynamic> json) => _i1.serializers.deserializeWith(
             GUserPartsData_pinnedItems_nodes__asRepository_primaryLanguage

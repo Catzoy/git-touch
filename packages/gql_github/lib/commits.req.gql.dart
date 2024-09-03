@@ -20,7 +20,8 @@ abstract class GCommitsReq
         _i1.OperationRequest<_i2.GCommitsData, _i3.GCommitsVars> {
   GCommitsReq._();
 
-  factory GCommitsReq([Function(GCommitsReqBuilder b) updates]) = _$GCommitsReq;
+  factory GCommitsReq([void Function(GCommitsReqBuilder b) updates]) =
+      _$GCommitsReq;
 
   static void _initializeBuilder(GCommitsReqBuilder b) => b
     ..operation = _i4.Operation(
@@ -28,6 +29,7 @@ abstract class GCommitsReq
       operationName: 'Commits',
     )
     ..executeOnListen = true;
+
   @override
   _i3.GCommitsVars get vars;
   @override
@@ -36,7 +38,9 @@ abstract class GCommitsReq
   _i4.Request get execRequest => _i4.Request(
         operation: operation,
         variables: vars.toJson(),
+        context: context ?? const _i4.Context(),
       );
+
   @override
   String? get requestId;
   @override
@@ -56,13 +60,30 @@ abstract class GCommitsReq
   @override
   bool get executeOnListen;
   @override
+  @BuiltValueField(serialize: false)
+  _i4.Context? get context;
+  @override
   _i2.GCommitsData? parseData(Map<String, dynamic> json) =>
       _i2.GCommitsData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GCommitsData data) => data.toJson();
+
+  @override
+  _i1.OperationRequest<_i2.GCommitsData, _i3.GCommitsVars> transformOperation(
+          _i4.Operation Function(_i4.Operation) transform) =>
+      this.rebuild((b) => b..operation = transform(operation));
+
   static Serializer<GCommitsReq> get serializer => _$gCommitsReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GCommitsReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GCommitsReq.serializer,
@@ -73,17 +94,18 @@ abstract class GCommitsReq
 abstract class GCommitsRefCommitReq
     implements
         Built<GCommitsRefCommitReq, GCommitsRefCommitReqBuilder>,
-        _i1.FragmentRequest<_i2.GCommitsRefCommitData,
-            _i3.GCommitsRefCommitVars> {
+        _i1
+        .FragmentRequest<_i2.GCommitsRefCommitData, _i3.GCommitsRefCommitVars> {
   GCommitsRefCommitReq._();
 
   factory GCommitsRefCommitReq(
-          [Function(GCommitsRefCommitReqBuilder b) updates]) =
+          [void Function(GCommitsRefCommitReqBuilder b) updates]) =
       _$GCommitsRefCommitReq;
 
   static void _initializeBuilder(GCommitsRefCommitReqBuilder b) => b
     ..document = _i5.document
     ..fragmentName = 'CommitsRefCommit';
+
   @override
   _i3.GCommitsRefCommitVars get vars;
   @override
@@ -95,12 +117,22 @@ abstract class GCommitsRefCommitReq
   @override
   _i2.GCommitsRefCommitData? parseData(Map<String, dynamic> json) =>
       _i2.GCommitsRefCommitData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GCommitsRefCommitData data) =>
+      data.toJson();
+
   static Serializer<GCommitsRefCommitReq> get serializer =>
       _$gCommitsRefCommitReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GCommitsRefCommitReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefCommitReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GCommitsRefCommitReq.serializer,
@@ -114,12 +146,13 @@ abstract class GCommitsRefReq
         _i1.FragmentRequest<_i2.GCommitsRefData, _i3.GCommitsRefVars> {
   GCommitsRefReq._();
 
-  factory GCommitsRefReq([Function(GCommitsRefReqBuilder b) updates]) =
+  factory GCommitsRefReq([void Function(GCommitsRefReqBuilder b) updates]) =
       _$GCommitsRefReq;
 
   static void _initializeBuilder(GCommitsRefReqBuilder b) => b
     ..document = _i5.document
     ..fragmentName = 'CommitsRef';
+
   @override
   _i3.GCommitsRefVars get vars;
   @override
@@ -131,12 +164,21 @@ abstract class GCommitsRefReq
   @override
   _i2.GCommitsRefData? parseData(Map<String, dynamic> json) =>
       _i2.GCommitsRefData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GCommitsRefData data) => data.toJson();
+
   static Serializer<GCommitsRefReq> get serializer =>
       _$gCommitsRefReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GCommitsRefReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GCommitsRefReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GCommitsRefReq.serializer,

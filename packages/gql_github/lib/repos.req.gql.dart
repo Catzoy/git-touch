@@ -20,7 +20,7 @@ abstract class GReposReq
         _i1.OperationRequest<_i2.GReposData, _i3.GReposVars> {
   GReposReq._();
 
-  factory GReposReq([Function(GReposReqBuilder b) updates]) = _$GReposReq;
+  factory GReposReq([void Function(GReposReqBuilder b) updates]) = _$GReposReq;
 
   static void _initializeBuilder(GReposReqBuilder b) => b
     ..operation = _i4.Operation(
@@ -28,6 +28,7 @@ abstract class GReposReq
       operationName: 'Repos',
     )
     ..executeOnListen = true;
+
   @override
   _i3.GReposVars get vars;
   @override
@@ -36,7 +37,9 @@ abstract class GReposReq
   _i4.Request get execRequest => _i4.Request(
         operation: operation,
         variables: vars.toJson(),
+        context: context ?? const _i4.Context(),
       );
+
   @override
   String? get requestId;
   @override
@@ -56,13 +59,30 @@ abstract class GReposReq
   @override
   bool get executeOnListen;
   @override
+  @BuiltValueField(serialize: false)
+  _i4.Context? get context;
+  @override
   _i2.GReposData? parseData(Map<String, dynamic> json) =>
       _i2.GReposData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GReposData data) => data.toJson();
+
+  @override
+  _i1.OperationRequest<_i2.GReposData, _i3.GReposVars> transformOperation(
+          _i4.Operation Function(_i4.Operation) transform) =>
+      this.rebuild((b) => b..operation = transform(operation));
+
   static Serializer<GReposReq> get serializer => _$gReposReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GReposReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GReposReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GReposReq.serializer,
@@ -76,7 +96,7 @@ abstract class GStarsReq
         _i1.OperationRequest<_i2.GStarsData, _i3.GStarsVars> {
   GStarsReq._();
 
-  factory GStarsReq([Function(GStarsReqBuilder b) updates]) = _$GStarsReq;
+  factory GStarsReq([void Function(GStarsReqBuilder b) updates]) = _$GStarsReq;
 
   static void _initializeBuilder(GStarsReqBuilder b) => b
     ..operation = _i4.Operation(
@@ -84,6 +104,7 @@ abstract class GStarsReq
       operationName: 'Stars',
     )
     ..executeOnListen = true;
+
   @override
   _i3.GStarsVars get vars;
   @override
@@ -92,7 +113,9 @@ abstract class GStarsReq
   _i4.Request get execRequest => _i4.Request(
         operation: operation,
         variables: vars.toJson(),
+        context: context ?? const _i4.Context(),
       );
+
   @override
   String? get requestId;
   @override
@@ -112,13 +135,30 @@ abstract class GStarsReq
   @override
   bool get executeOnListen;
   @override
+  @BuiltValueField(serialize: false)
+  _i4.Context? get context;
+  @override
   _i2.GStarsData? parseData(Map<String, dynamic> json) =>
       _i2.GStarsData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GStarsData data) => data.toJson();
+
+  @override
+  _i1.OperationRequest<_i2.GStarsData, _i3.GStarsVars> transformOperation(
+          _i4.Operation Function(_i4.Operation) transform) =>
+      this.rebuild((b) => b..operation = transform(operation));
+
   static Serializer<GStarsReq> get serializer => _$gStarsReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GStarsReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GStarsReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GStarsReq.serializer,
@@ -132,12 +172,13 @@ abstract class GRepoPartsReq
         _i1.FragmentRequest<_i2.GRepoPartsData, _i3.GRepoPartsVars> {
   GRepoPartsReq._();
 
-  factory GRepoPartsReq([Function(GRepoPartsReqBuilder b) updates]) =
+  factory GRepoPartsReq([void Function(GRepoPartsReqBuilder b) updates]) =
       _$GRepoPartsReq;
 
   static void _initializeBuilder(GRepoPartsReqBuilder b) => b
     ..document = _i5.document
     ..fragmentName = 'RepoParts';
+
   @override
   _i3.GRepoPartsVars get vars;
   @override
@@ -149,11 +190,20 @@ abstract class GRepoPartsReq
   @override
   _i2.GRepoPartsData? parseData(Map<String, dynamic> json) =>
       _i2.GRepoPartsData.fromJson(json);
+
+  @override
+  Map<String, dynamic> varsToJson() => vars.toJson();
+
+  @override
+  Map<String, dynamic> dataToJson(_i2.GRepoPartsData data) => data.toJson();
+
   static Serializer<GRepoPartsReq> get serializer => _$gRepoPartsReqSerializer;
+
   Map<String, dynamic> toJson() => (_i6.serializers.serializeWith(
         GRepoPartsReq.serializer,
         this,
       ) as Map<String, dynamic>);
+
   static GRepoPartsReq? fromJson(Map<String, dynamic> json) =>
       _i6.serializers.deserializeWith(
         GRepoPartsReq.serializer,
