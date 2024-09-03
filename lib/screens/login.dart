@@ -1,7 +1,6 @@
 import 'package:antd_mobile/antd_mobile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:git_touch/models/auth.dart';
@@ -13,6 +12,7 @@ import 'package:git_touch/widgets/avatar.dart';
 import 'package:git_touch/widgets/loading.dart';
 import 'package:git_touch/widgets/login_add_account_tile.dart';
 import 'package:git_touch/widgets/text_field.dart';
+import 'package:git_touch/widgets/token_login_popup.dart';
 import 'package:provider/provider.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -121,31 +121,33 @@ class _LoginScreenState extends State<LoginScreen> {
                           ActionItem(
                             text: 'via Personal token',
                             onTap: (_) async {
-                              final result = await theme.showConfirm(
-                                context,
-                                _buildPopup(context, notes: [
-                                  Text(
-                                    AppLocalizations.of(context)!
-                                        .permissionRequiredMessage,
-                                    style: const TextStyle(
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.w400),
-                                  ),
-                                  const SizedBox(height: 8),
-                                  Text(
-                                    'user, repo, read:org, notifications',
-                                    style: TextStyle(
+                              final result =
+                                  await showCupertinoDialog<TokenLoginResult>(
+                                context: context,
+                                builder: (context) => TokenLoginPopup(
+                                  notes: [
+                                    Text(
+                                      AppLocalizations.of(context)!
+                                          .permissionRequiredMessage,
+                                      style: const TextStyle(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w400),
+                                    ),
+                                    const SizedBox(height: 8),
+                                    Text(
+                                      'user, repo, read:org, notifications',
+                                      style: TextStyle(
                                         fontSize: 16,
                                         color:
-                                            AntTheme.of(context).colorPrimary),
-                                  )
-                                ]),
+                                            AntTheme.of(context).colorPrimary,
+                                      ),
+                                    )
+                                  ],
+                                ),
                               );
-                              if (result == true) {
+                              if (result != null) {
                                 try {
-                                  await auth
-                                      .loginWithToken(_tokenController.text);
-                                  _tokenController.clear();
+                                  await auth.loginWithToken(result.token);
                                 } catch (err) {
                                   showError(err);
                                 }

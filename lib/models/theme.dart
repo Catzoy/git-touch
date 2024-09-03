@@ -29,6 +29,7 @@ class AppMarkdownType {
 
 class PickerItem<T> {
   PickerItem(this.value, {required this.text});
+
   final T value;
   final String? text;
 }
@@ -40,6 +41,7 @@ class PickerGroupItem<T> {
     this.onChange,
     this.onClose,
   });
+
   final T value;
   final List<PickerItem<T>> items;
   final Function(T value)? onChange;
@@ -48,6 +50,7 @@ class PickerGroupItem<T> {
 
 class SelectorItem<T> {
   SelectorItem({required this.value, required this.text});
+
   T value;
   String text;
 }
@@ -71,6 +74,7 @@ class ThemeModel with ChangeNotifier {
   String? markdownCss;
 
   Brightness systemBrightness = Brightness.light;
+
   void setSystemBrightness(Brightness v) {
     if (v != systemBrightness) {
       Future.microtask(() {
@@ -81,6 +85,7 @@ class ThemeModel with ChangeNotifier {
   }
 
   int? _brightnessValue = AppBrightnessType.followSystem;
+
   int? get brighnessValue => _brightnessValue;
 
   // could be null
@@ -105,7 +110,9 @@ class ThemeModel with ChangeNotifier {
 
   // markdown render engine
   int? _markdown;
+
   int? get markdown => _markdown;
+
   Future<void> setMarkdown(int v) async {
     _markdown = v;
     final prefs = await SharedPreferences.getInstance();
@@ -128,6 +135,7 @@ class ThemeModel with ChangeNotifier {
 
   // supported languages
   String? _locale;
+
   String? get locale => _locale;
 
   Future<void> setLocale(String? v) async {
