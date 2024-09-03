@@ -66,7 +66,7 @@ class AuthModel with ChangeNotifier {
   String get token => activeAccount!.token;
 
   _addAccount(Account account) async {
-    _accounts = [...accounts!, account];
+    _accounts = [...accounts, account];
     // Save
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(StorageKeys.accounts, json.encode(_accounts));

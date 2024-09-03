@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget _buildAccountItem(int index) {
     final auth = Provider.of<AuthModel>(context);
-    final account = auth.accounts![index];
+    final account = auth.accounts[index];
     return Dismissible(
       key: ValueKey(index),
       direction: DismissDirection.endToStart,
@@ -100,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 AntList(
                   children: [
-                    ...List.generate(auth.accounts!.length, _buildAccountItem),
+                    ...List.generate(auth.accounts.length, _buildAccountItem),
                     LoginAddAccountTile(
                       text: AppLocalizations.of(context)!.githubAccount,
                       brand: Ionicons.logo_github,
