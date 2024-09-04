@@ -19,6 +19,7 @@ import 'package:provider/provider.dart';
 part 'login_bb_popup.dart';
 part 'login_gh_popup.dart';
 part 'login_gl_popup.dart';
+part 'login_gt_popup.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -184,32 +185,15 @@ class _LoginScreenState extends State<LoginScreen> {
                       text: AppLocalizations.of(context)!.giteaAccount,
                       brand: Ionicons.git_branch_outline, // TODO: brand icon
                       onTap: () async {
-                        _domainController.text = 'https://gitea.com';
-                        final result = await theme.showConfirm(
-                            context,
-                            Column(
-                              children: [
-                                _buildPopup(context, showDomain: true),
-                                const Text.rich(TextSpan(children: [
-                                  TextSpan(
-                                    text:
-                                        'Note: To login with Codeberg change the domain name to: ',
-                                  ),
-                                ])),
-                                const SizedBox(height: 8),
-                                Text(
-                                  'https://codeberg.org',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      color: AntTheme.of(context).colorPrimary),
-                                ),
-                              ],
-                            ));
-                        if (result == true) {
+                        final result = await requestGiteaAuth(
+                          context: context,
+                        );
+                        if (result != null) {
                           try {
                             await auth.loginToGitea(
-                                _domainController.text, _tokenController.text);
-                            _tokenController.clear();
+                              result.domain,
+                              result.token,
+                            );
                           } catch (err) {
                             showError(err);
                           }
