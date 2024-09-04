@@ -7,9 +7,9 @@ import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/theme.dart';
 import 'package:git_touch/scaffolds/single.dart';
+import 'package:git_touch/screens/login_account_tile.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/action_button.dart';
-import 'package:git_touch/widgets/avatar.dart';
 import 'package:git_touch/widgets/confirm_popup.dart';
 import 'package:git_touch/widgets/loading.dart';
 import 'package:git_touch/widgets/login_add_account_tile.dart';
@@ -29,44 +29,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  Widget _buildAccountItem(int index) {
-    final auth = Provider.of<AuthModel>(context);
-    final account = auth.accounts[index];
-    return Dismissible(
-      key: ValueKey(index),
-      direction: DismissDirection.endToStart,
-      background: Container(
-        color: AntTheme.of(context).colorDanger,
-        padding: const EdgeInsets.only(right: 12),
-        child: Align(
-          alignment: Alignment.centerRight,
-          child: Text(
-            AppLocalizations.of(context)!.removeAccount,
-            style: TextStyle(
-              fontSize: 16,
-              color: AntTheme.of(context).colorBackground,
-            ),
-          ),
-        ),
-      ),
-      onDismissed: (_) {
-        auth.removeAccount(index);
-      },
-      child: AntListItem(
-        onClick: () {
-          auth.setActiveAccountAndReload(index);
-        },
-        arrow: null,
-        prefix: Avatar(url: account.avatarUrl),
-        extra: index == auth.activeAccountIndex
-            ? const Icon(Ionicons.checkmark)
-            : null,
-        description: Text(account.domain),
-        child: Text(account.login),
-      ),
-    );
-  }
-
   void showError(err) {
     context.read<ThemeModel>().showConfirm(context,
         Text('${AppLocalizations.of(context)!.somethingBadHappens}$err'));
@@ -84,7 +46,10 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 AntList(
                   children: [
-                    ...List.generate(auth.accounts.length, _buildAccountItem),
+                    for (final (index, _) in auth.accounts.indexed)
+                      LoginAccountTile(
+                        index: index,
+                      ),
                     LoginAddAccountTile(
                       text: AppLocalizations.of(context)!.githubAccount,
                       brand: Ionicons.logo_github,
