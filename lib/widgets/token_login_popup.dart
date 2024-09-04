@@ -8,16 +8,20 @@ typedef TokenLoginResult = ({String domain, String token});
 class TokenLoginPopup extends HookWidget {
   const TokenLoginPopup({
     super.key,
-    this.showDomain = false,
+    this.domain,
     this.notes,
   });
 
-  final bool showDomain;
+  final String? domain;
   final List<Widget>? notes;
 
   @override
   Widget build(BuildContext context) {
     final domainController = useTextEditingController();
+    useEffect(() {
+      domainController.text = domain ?? '';
+      return null;
+    }, [domain]);
     final tokenController = useTextEditingController();
     return ConfirmPopup(
       onConfirm: () =>
@@ -25,12 +29,13 @@ class TokenLoginPopup extends HookWidget {
       onCancel: () => null,
       child: Column(
         children: <Widget>[
-          if (showDomain)
+          if (domain != null) ...[
             MyTextField(
               controller: domainController,
               placeholder: 'Domain',
             ),
-          const SizedBox(height: 8),
+            const SizedBox(height: 8),
+          ],
           MyTextField(
             placeholder: 'Access token',
             controller: tokenController,

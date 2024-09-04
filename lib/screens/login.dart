@@ -161,12 +161,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       text: AppLocalizations.of(context)!.gitlabAccount,
                       brand: Ionicons.git_branch_outline,
                       onTap: () async {
-                        _domainController.text = 'https://gitlab.com';
-                        final result = await theme.showConfirm(
-                          context,
-                          _buildPopup(
-                            context,
-                            showDomain: true,
+                        final result =
+                            await showCupertinoDialog<TokenLoginResult>(
+                          context: context,
+                          builder: (context) => TokenLoginPopup(
+                            domain: 'https://gitlab.com',
                             notes: [
                               Text(
                                 AppLocalizations.of(context)!
@@ -184,11 +183,10 @@ class _LoginScreenState extends State<LoginScreen> {
                             ],
                           ),
                         );
-                        if (result == true) {
+                        if (result != null) {
                           try {
                             await auth.loginToGitlab(
-                                _domainController.text, _tokenController.text);
-                            _tokenController.clear();
+                                result.domain, result.token);
                           } catch (err) {
                             showError(err);
                           }
