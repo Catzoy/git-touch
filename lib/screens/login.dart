@@ -20,6 +20,7 @@ part 'login_bb_popup.dart';
 part 'login_ge_popup.dart';
 part 'login_gh_popup.dart';
 part 'login_gl_popup.dart';
+part 'login_go_popup.dart';
 part 'login_gt_popup.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -221,16 +222,15 @@ class _LoginScreenState extends State<LoginScreen> {
                       text: 'Gogs Account',
                       brand: Ionicons.git_branch_outline, // TODO: brand icon
                       onTap: () async {
-                        _domainController.text = 'https://gogs.com';
-                        final result = await theme.showConfirm(
-                          context,
-                          _buildPopup(context, showDomain: true),
+                        final result = await requestGogsToken(
+                          context: context,
                         );
-                        if (result == true) {
+                        if (result != null) {
                           try {
                             await auth.loginToGogs(
-                                _domainController.text, _tokenController.text);
-                            _tokenController.clear();
+                              result.domain,
+                              result.token,
+                            );
                           } catch (err) {
                             showError(err);
                           }
