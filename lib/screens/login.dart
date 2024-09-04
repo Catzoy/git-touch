@@ -23,21 +23,12 @@ part 'login_gl_popup.dart';
 part 'login_go_popup.dart';
 part 'login_gt_popup.dart';
 
-class LoginScreen extends StatefulWidget {
-  @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
-  void showError(err) {
-    context.read<ThemeModel>().showConfirm(context,
-        Text('${AppLocalizations.of(context)!.somethingBadHappens}$err'));
-  }
-
+class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final auth = Provider.of<AuthModel>(context);
     final theme = Provider.of<ThemeModel>(context);
+
     return SingleScaffold(
       title: Text(AppLocalizations.of(context)!.selectAccount),
       body: auth.loading
@@ -77,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 try {
                                   await auth.loginWithToken(token);
                                 } catch (err) {
-                                  showError(err);
+                                  context.showError(err);
                                 }
                               }
                             },
@@ -99,7 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               result.token,
                             );
                           } catch (err) {
-                            showError(err);
+                            context.showError(err);
                           }
                         }
                       },
@@ -119,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               result.password,
                             );
                           } catch (err) {
-                            showError(err);
+                            context.showError(err);
                           }
                         }
                       },
@@ -138,7 +129,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               result.token,
                             );
                           } catch (err) {
-                            showError(err);
+                            context.showError(err);
                           }
                         }
                       },
@@ -154,7 +145,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           try {
                             await auth.loginToGitee(token);
                           } catch (err) {
-                            showError(err);
+                            context.showError(err);
                           }
                         }
                       },
@@ -173,7 +164,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               result.token,
                             );
                           } catch (err) {
-                            showError(err);
+                            context.showError(err);
                           }
                         }
                       },
@@ -193,5 +184,12 @@ class _LoginScreenState extends State<LoginScreen> {
               ],
             ),
     );
+  }
+}
+
+extension on BuildContext {
+  void showError(err) {
+    final text = Text('${AppLocalizations.of(this)!.somethingBadHappens}$err');
+    read<ThemeModel>().showConfirm(this, text);
   }
 }
