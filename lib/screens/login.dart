@@ -51,147 +51,210 @@ class _LoginAuth extends StatelessWidget {
               LoginAccountTile(
                 index: index,
               ),
-            LoginAddAccountTile(
-              text: AppLocalizations.of(context)!.githubAccount,
-              brand: Ionicons.logo_github,
-              onTap: () async {
-                context.read<ThemeModel>().showActions(context, [
-                  ActionItem(
-                    text: 'via OAuth',
-                    onTap: (_) {
-                      auth.redirectToGithubOauth();
-                    },
-                  ),
-                  ActionItem(
-                    text: 'via OAuth (Public repos only)',
-                    onTap: (_) {
-                      auth.redirectToGithubOauth(true);
-                    },
-                  ),
-                  ActionItem(
-                    text: 'via Personal token',
-                    onTap: (_) async {
-                      final token = await requestGithubToken(
-                        context: context,
-                      );
-                      if (token != null) {
-                        try {
-                          await auth.loginWithToken(token);
-                        } catch (err) {
-                          context.showError(err);
-                        }
-                      }
-                    },
-                  ),
-                ]);
-              },
-            ),
-            LoginAddAccountTile(
-              text: AppLocalizations.of(context)!.gitlabAccount,
-              brand: Ionicons.git_branch_outline,
-              onTap: () async {
-                final result = await requestGitlabAuth(
-                  context: context,
-                );
-                if (result != null) {
-                  try {
-                    await auth.loginToGitlab(
-                      result.domain,
-                      result.token,
-                    );
-                  } catch (err) {
-                    context.showError(err);
-                  }
-                }
-              },
-            ),
-            LoginAddAccountTile(
-              text: AppLocalizations.of(context)!.bitbucketAccount,
-              brand: Ionicons.logo_bitbucket,
-              onTap: () async {
-                final result = await requestBitbucketAuth(
-                  context: context,
-                );
-                if (result != null) {
-                  try {
-                    await auth.loginToBb(
-                      result.domain,
-                      result.username,
-                      result.password,
-                    );
-                  } catch (err) {
-                    context.showError(err);
-                  }
-                }
-              },
-            ),
-            LoginAddAccountTile(
-              text: AppLocalizations.of(context)!.giteaAccount,
-              brand: Ionicons.git_branch_outline, // TODO: brand icon
-              onTap: () async {
-                final result = await requestGiteaAuth(
-                  context: context,
-                );
-                if (result != null) {
-                  try {
-                    await auth.loginToGitea(
-                      result.domain,
-                      result.token,
-                    );
-                  } catch (err) {
-                    context.showError(err);
-                  }
-                }
-              },
-            ),
-            LoginAddAccountTile(
-              text: '${AppLocalizations.of(context)!.giteeAccount}(码云)',
-              brand: Ionicons.git_branch_outline, // TODO: brand icon
-              onTap: () async {
-                final token = await requestGiteeToken(
-                  context: context,
-                );
-                if (token != null) {
-                  try {
-                    await auth.loginToGitee(token);
-                  } catch (err) {
-                    context.showError(err);
-                  }
-                }
-              },
-            ),
-            LoginAddAccountTile(
-              text: 'Gogs Account',
-              brand: Ionicons.git_branch_outline, // TODO: brand icon
-              onTap: () async {
-                final result = await requestGogsToken(
-                  context: context,
-                );
-                if (result != null) {
-                  try {
-                    await auth.loginToGogs(
-                      result.domain,
-                      result.token,
-                    );
-                  } catch (err) {
-                    context.showError(err);
-                  }
-                }
-              },
-            ),
+            const _AddGithubAccount(),
+            const _AddGitlabAccount(),
+            const _AddBitbucketAccount(),
+            const _AddGiteaAccount(),
+            const _AddGiteeAccount(),
+            const _AddGogsAccount(),
           ],
         ),
-        Container(
-          padding: CommonStyle.padding,
-          child: Text(
-            'Swipe to left to remove account',
-            style: TextStyle(
-              fontSize: 16,
-              color: AntTheme.of(context).colorTextSecondary,
-            ),
-          ),
-        )
+        const _SwipeToRemoveAccHint(),
       ],
+    );
+  }
+}
+
+class _AddGithubAccount extends StatelessWidget {
+  const _AddGithubAccount({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return LoginAddAccountTile(
+      text: AppLocalizations.of(context)!.githubAccount,
+      brand: Ionicons.logo_github,
+      onTap: () async {
+        context.read<ThemeModel>().showActions(context, [
+          ActionItem(
+            text: 'via OAuth',
+            onTap: (_) {
+              context.read<AuthModel>().redirectToGithubOauth();
+            },
+          ),
+          ActionItem(
+            text: 'via OAuth (Public repos only)',
+            onTap: (_) {
+              context.read<AuthModel>().redirectToGithubOauth(true);
+            },
+          ),
+          ActionItem(
+            text: 'via Personal token',
+            onTap: (_) async {
+              final token = await requestGithubToken(
+                context: context,
+              );
+              if (token != null) {
+                try {
+                  await context.read<AuthModel>().loginWithToken(token);
+                } catch (err) {
+                  context.showError(err);
+                }
+              }
+            },
+          ),
+        ]);
+      },
+    );
+  }
+}
+
+class _AddGitlabAccount extends StatelessWidget {
+  const _AddGitlabAccount({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return LoginAddAccountTile(
+      text: AppLocalizations.of(context)!.gitlabAccount,
+      brand: Ionicons.git_branch_outline,
+      onTap: () async {
+        final result = await requestGitlabAuth(
+          context: context,
+        );
+        if (result != null) {
+          try {
+            await context.read<AuthModel>().loginToGitlab(
+                  result.domain,
+                  result.token,
+                );
+          } catch (err) {
+            context.showError(err);
+          }
+        }
+      },
+    );
+  }
+}
+
+class _AddBitbucketAccount extends StatelessWidget {
+  const _AddBitbucketAccount({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return LoginAddAccountTile(
+      text: AppLocalizations.of(context)!.bitbucketAccount,
+      brand: Ionicons.logo_bitbucket,
+      onTap: () async {
+        final result = await requestBitbucketAuth(
+          context: context,
+        );
+        if (result != null) {
+          try {
+            await context.read<AuthModel>().loginToBb(
+                  result.domain,
+                  result.username,
+                  result.password,
+                );
+          } catch (err) {
+            context.showError(err);
+          }
+        }
+      },
+    );
+  }
+}
+
+class _AddGiteaAccount extends StatelessWidget {
+  const _AddGiteaAccount({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return LoginAddAccountTile(
+      text: AppLocalizations.of(context)!.giteaAccount,
+      brand: Ionicons.git_branch_outline, // TODO: brand icon
+      onTap: () async {
+        final result = await requestGiteaAuth(
+          context: context,
+        );
+        if (result != null) {
+          try {
+            await context.read<AuthModel>().loginToGitea(
+                  result.domain,
+                  result.token,
+                );
+          } catch (err) {
+            context.showError(err);
+          }
+        }
+      },
+    );
+  }
+}
+
+class _AddGiteeAccount extends StatelessWidget {
+  const _AddGiteeAccount({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return LoginAddAccountTile(
+      text: '${AppLocalizations.of(context)!.giteeAccount}(码云)',
+      brand: Ionicons.git_branch_outline, // TODO: brand icon
+      onTap: () async {
+        final token = await requestGiteeToken(
+          context: context,
+        );
+        if (token != null) {
+          try {
+            await context.read<AuthModel>().loginToGitee(token);
+          } catch (err) {
+            context.showError(err);
+          }
+        }
+      },
+    );
+  }
+}
+
+class _AddGogsAccount extends StatelessWidget {
+  const _AddGogsAccount({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return LoginAddAccountTile(
+      text: 'Gogs Account',
+      brand: Ionicons.git_branch_outline, // TODO: brand icon
+      onTap: () async {
+        final result = await requestGogsToken(
+          context: context,
+        );
+        if (result != null) {
+          try {
+            await context.read<AuthModel>().loginToGogs(
+                  result.domain,
+                  result.token,
+                );
+          } catch (err) {
+            context.showError(err);
+          }
+        }
+      },
+    );
+  }
+}
+
+class _SwipeToRemoveAccHint extends StatelessWidget {
+  const _SwipeToRemoveAccHint({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: CommonStyle.padding,
+      child: Text(
+        'Swipe to left to remove account',
+        style: TextStyle(
+          fontSize: 16,
+          color: AntTheme.of(context).colorTextSecondary,
+        ),
+      ),
     );
   }
 }
