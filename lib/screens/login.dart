@@ -89,18 +89,10 @@ class _AddGithubAccount extends StatelessWidget {
           ),
           ActionItem(
             text: 'via Personal token',
-            onTap: (_) async {
-              final auth = await requestGithubToken(
-                context: context,
-              );
-              if (auth != null) {
-                try {
-                  await context.read<AuthModel>().loginWithToken(auth);
-                } catch (err) {
-                  context.showError(err);
-                }
-              }
-            },
+            onTap: (_) => context.handleUserLogin(
+              request: () => requestGithubToken(context: context),
+              login: (model, auth) => model.loginWithToken(auth),
+            ),
           ),
         ]);
       },
@@ -116,18 +108,10 @@ class _AddGitlabAccount extends StatelessWidget {
     return LoginAddAccountTile(
       text: AppLocalizations.of(context)!.gitlabAccount,
       brand: Ionicons.git_branch_outline,
-      onTap: () async {
-        final auth = await requestGitlabAuth(
-          context: context,
-        );
-        if (auth != null) {
-          try {
-            await context.read<AuthModel>().loginToGitlab(auth);
-          } catch (err) {
-            context.showError(err);
-          }
-        }
-      },
+      onTap: () => context.handleUserLogin(
+        request: () => requestGitlabAuth(context: context),
+        login: (model, auth) => model.loginToGitlab(auth),
+      ),
     );
   }
 }
@@ -140,18 +124,10 @@ class _AddBitbucketAccount extends StatelessWidget {
     return LoginAddAccountTile(
       text: AppLocalizations.of(context)!.bitbucketAccount,
       brand: Ionicons.logo_bitbucket,
-      onTap: () async {
-        final auth = await requestBitbucketAuth(
-          context: context,
-        );
-        if (auth != null) {
-          try {
-            await context.read<AuthModel>().loginToBb(auth);
-          } catch (err) {
-            context.showError(err);
-          }
-        }
-      },
+      onTap: () => context.handleUserLogin(
+        request: () => requestBitbucketAuth(context: context),
+        login: (model, auth) => model.loginToBb(auth),
+      ),
     );
   }
 }
@@ -164,18 +140,10 @@ class _AddGiteaAccount extends StatelessWidget {
     return LoginAddAccountTile(
       text: AppLocalizations.of(context)!.giteaAccount,
       brand: Ionicons.git_branch_outline, // TODO: brand icon
-      onTap: () async {
-        final auth = await requestGiteaAuth(
-          context: context,
-        );
-        if (auth != null) {
-          try {
-            await context.read<AuthModel>().loginToGitea(auth);
-          } catch (err) {
-            context.showError(err);
-          }
-        }
-      },
+      onTap: () => context.handleUserLogin(
+        request: () => requestGiteaAuth(context: context),
+        login: (model, auth) => model.loginToGitea(auth),
+      ),
     );
   }
 }
@@ -188,18 +156,10 @@ class _AddGiteeAccount extends StatelessWidget {
     return LoginAddAccountTile(
       text: '${AppLocalizations.of(context)!.giteeAccount}(码云)',
       brand: Ionicons.git_branch_outline, // TODO: brand icon
-      onTap: () async {
-        final auth = await requestGiteeToken(
-          context: context,
-        );
-        if (auth != null) {
-          try {
-            await context.read<AuthModel>().loginToGitee(auth);
-          } catch (err) {
-            context.showError(err);
-          }
-        }
-      },
+      onTap: () => context.handleUserLogin(
+        request: () => requestGiteeToken(context: context),
+        login: (model, auth) => model.loginToGitee(auth),
+      ),
     );
   }
 }
@@ -212,18 +172,10 @@ class _AddGogsAccount extends StatelessWidget {
     return LoginAddAccountTile(
       text: 'Gogs Account',
       brand: Ionicons.git_branch_outline, // TODO: brand icon
-      onTap: () async {
-        final auth = await requestGogsToken(
-          context: context,
-        );
-        if (auth != null) {
-          try {
-            await context.read<AuthModel>().loginToGogs(auth);
-          } catch (err) {
-            context.showError(err);
-          }
-        }
-      },
+      onTap: () => context.handleUserLogin(
+        request: () => requestGogsToken(context: context),
+        login: (model, auth) => model.loginToGogs(auth),
+      ),
     );
   }
 }
@@ -250,5 +202,28 @@ extension on BuildContext {
   void showError(err) {
     final text = Text('${AppLocalizations.of(this)!.somethingBadHappens}$err');
     read<ThemeModel>().showConfirm(this, text);
+  }
+
+  void handleUserLogin<T>({
+    required Future<T?> Function() request,
+    required Future<void> Function(AuthModel model, T auth) login,
+  }) async {
+    try {
+      await read<AuthModel>().loginUserVia(request, login);
+    } catch (err) {
+      showError(err);
+    }
+  }
+}
+
+extension on AuthModel {
+  Future<void> loginUserVia<T>(
+    Future<T?> Function() request,
+    Future<void> Function(AuthModel model, T auth) login,
+  ) async {
+    final auth = await request();
+    if (auth != null) {
+      await login(this, auth);
+    }
   }
 }
