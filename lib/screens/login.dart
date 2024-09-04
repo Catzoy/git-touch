@@ -29,13 +29,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final _tokenController = TextEditingController();
-  final _domainController = TextEditingController();
-
-  // For Bitbucket
-  final _usernameController = TextEditingController();
-  final _passwordController = TextEditingController();
-
   Widget _buildAccountItem(int index) {
     final auth = Provider.of<AuthModel>(context);
     final account = auth.accounts[index];
@@ -71,23 +64,6 @@ class _LoginScreenState extends State<LoginScreen> {
         description: Text(account.domain),
         child: Text(account.login),
       ),
-    );
-  }
-
-  Widget _buildPopup(
-    BuildContext context, {
-    List<Widget>? notes,
-    bool showDomain = false,
-  }) {
-    return Column(
-      children: <Widget>[
-        if (showDomain)
-          MyTextField(controller: _domainController, placeholder: 'Domain'),
-        const SizedBox(height: 8),
-        MyTextField(placeholder: 'Access token', controller: _tokenController),
-        const SizedBox(height: 8),
-        if (notes != null) ...notes,
-      ],
     );
   }
 
