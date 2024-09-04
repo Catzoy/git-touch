@@ -16,6 +16,7 @@ import 'package:git_touch/widgets/login_add_account_tile.dart';
 import 'package:git_touch/widgets/text_field.dart';
 import 'package:provider/provider.dart';
 
+part 'login_bb_popup.dart';
 part 'login_gh_popup.dart';
 part 'login_gl_popup.dart';
 
@@ -163,66 +164,16 @@ class _LoginScreenState extends State<LoginScreen> {
                       text: AppLocalizations.of(context)!.bitbucketAccount,
                       brand: Ionicons.logo_bitbucket,
                       onTap: () async {
-                        _domainController.text = 'https://bitbucket.org';
-                        final result = await theme.showConfirm(
-                          context,
-                          Column(
-                            children: <Widget>[
-                              MyTextField(
-                                  controller: _domainController,
-                                  placeholder: 'Domain'),
-                              const SizedBox(height: 8),
-                              MyTextField(
-                                  placeholder: 'Username',
-                                  controller: _usernameController),
-                              const SizedBox(height: 8),
-                              MyTextField(
-                                  placeholder: 'App password',
-                                  controller: _passwordController),
-                              const SizedBox(height: 8),
-                              Text.rich(
-                                TextSpan(children: [
-                                  const TextSpan(
-                                    text:
-                                        'Note: App password is different with the password. Follow ',
-                                  ),
-                                  TextSpan(
-                                    text: 'this guide',
-                                    style: TextStyle(
-                                        color:
-                                            AntTheme.of(context).colorPrimary),
-                                    recognizer: TapGestureRecognizer()
-                                      ..onTap = () {
-                                        context.pushUrl(
-                                            'https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/');
-                                      },
-                                  ),
-                                  const TextSpan(text: ' to create one.')
-                                ]),
-                              ),
-                              const SizedBox(height: 8),
-                              Text(
-                                AppLocalizations.of(context)!
-                                    .permissionRequiredMessage,
-                                style: const TextStyle(
-                                    fontSize: 14, fontWeight: FontWeight.w400),
-                              ),
-                              const SizedBox(height: 8),
-                              Text(
-                                'Account: read\nTeam membership: read\nProjects: read\nRepositories: read\nPull requests: read\nIssues: read\nSnippets: read',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: AntTheme.of(context).colorPrimary),
-                              )
-                            ],
-                          ),
+                        final result = await requestBitbucketAuth(
+                          context: context,
                         );
-                        if (result == true) {
+                        if (result != null) {
                           try {
                             await auth.loginToBb(
-                                _domainController.text,
-                                _usernameController.text,
-                                _passwordController.text);
+                              result.domain,
+                              result.username,
+                              result.password,
+                            );
                           } catch (err) {
                             showError(err);
                           }

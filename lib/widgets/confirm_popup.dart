@@ -3,9 +3,9 @@ import 'package:flutter/cupertino.dart';
 class ConfirmPopup<T> extends StatelessWidget {
   const ConfirmPopup({
     super.key,
-    required this.child,
     required this.onConfirm,
     required this.onCancel,
+    required this.child,
   });
 
   final Widget child;
