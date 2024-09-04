@@ -1,13 +1,6 @@
 part of 'login.dart';
 
-typedef BitbucketAuthResult = ({
-  String domain,
-  String username,
-  String password
-});
-
-Future<BitbucketAuthResult?> requestBitbucketAuth(
-    {required BuildContext context}) {
+Future<BitbucketAuth?> requestBitbucketAuth({required BuildContext context}) {
   return showCupertinoDialog(
     context: context,
     builder: (context) => HookBuilder(

@@ -1,7 +1,5 @@
 part of 'login.dart';
 
-typedef GogsAuth = ({String domain, String token});
-
 Future<GogsAuth?> requestGogsToken({
   required BuildContext context,
 }) {

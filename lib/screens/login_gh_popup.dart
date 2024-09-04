@@ -1,15 +1,15 @@
 part of 'login.dart';
 
-Future<String?> requestGithubToken({
+Future<GithubAuthResult?> requestGithubToken({
   required BuildContext context,
 }) {
-  return showCupertinoDialog<String>(
+  return showCupertinoDialog<GithubAuthResult>(
     context: context,
     builder: (context) => HookBuilder(
       builder: (context) {
         final tokenController = useTextEditingController();
         return ConfirmPopup(
-          onConfirm: () => tokenController.text,
+          onConfirm: () => (token: tokenController.text),
           onCancel: () => null,
           child: Column(
             children: <Widget>[

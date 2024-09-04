@@ -1,7 +1,5 @@
 part of 'login.dart';
 
-typedef GitlabAuth = ({String domain, String token});
-
 Future<GitlabAuth?> requestGitlabAuth({required BuildContext context}) {
   return showCupertinoDialog<GitlabAuth>(
     context: context,

@@ -1,8 +1,6 @@
 part of 'login.dart';
 
-typedef GiteaAuthResult = ({String domain, String token});
-
-Future<GiteaAuthResult?> requestGiteaAuth({required BuildContext context}) {
+Future<GiteaAuth?> requestGiteaAuth({required BuildContext context}) {
   return showCupertinoDialog(
     context: context,
     builder: (context) => HookBuilder(

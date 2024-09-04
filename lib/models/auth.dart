@@ -40,11 +40,19 @@ class DataWithPage<T> {
     required this.hasMore,
     required this.total,
   });
+
   T data;
   int cursor;
   bool hasMore;
   int total;
 }
+
+typedef GithubAuthResult = ({String token});
+typedef GitlabAuth = ({String domain, String token});
+typedef BitbucketAuth = ({String domain, String username, String password});
+typedef GiteaAuth = ({String domain, String token});
+typedef GiteeAuth = ({String token});
+typedef GogsAuth = ({String domain, String token});
 
 class AuthModel with ChangeNotifier {
   static const _apiPrefix = 'https://api.github.com';
@@ -58,6 +66,7 @@ class AuthModel with ChangeNotifier {
   bool loading = false;
 
   List<Account> get accounts => _accounts;
+
   Account? get activeAccount {
     if (activeAccountIndex == null || _accounts.isEmpty) return null;
     return _accounts[activeAccountIndex!];
@@ -104,10 +113,10 @@ class AuthModel with ChangeNotifier {
       }),
     );
     final token = json.decode(res.body)['access_token'] as String;
-    await loginWithToken(token);
+    await loginWithToken((token: token));
   }
 
-  Future<void> loginWithToken(String t) async {
+  Future<void> loginWithToken(GithubAuthResult auth) async {
     try {
       final queryData = await query('''
 {
@@ -116,12 +125,12 @@ class AuthModel with ChangeNotifier {
     avatarUrl
   }
 }
-''', t);
+''', auth.token);
 
       await _addAccount(Account(
         platform: PlatformType.github,
         domain: 'https://github.com',
-        token: t,
+        token: auth.token,
         login: queryData['viewer']['login'] as String,
         avatarUrl: queryData['viewer']['avatarUrl'] as String,
       ));
@@ -131,9 +140,9 @@ class AuthModel with ChangeNotifier {
     }
   }
 
-  Future<void> loginToGitlab(String domain, String token) async {
-    domain = domain.trim();
-    token = token.trim();
+  Future<void> loginToGitlab(GitlabAuth auth) async {
+    final domain = auth.domain.trim();
+    final token = auth.token.trim();
     loading = true;
     notifyListeners();
     try {
@@ -204,9 +213,9 @@ class AuthModel with ChangeNotifier {
     );
   }
 
-  Future loginToGitea(String domain, String token) async {
-    domain = domain.trim();
-    token = token.trim();
+  Future loginToGitea(GiteaAuth auth) async {
+    final domain = auth.domain.trim();
+    final token = auth.token.trim();
     try {
       loading = true;
       notifyListeners();
@@ -307,9 +316,9 @@ class AuthModel with ChangeNotifier {
     );
   }
 
-  Future loginToGogs(String domain, String token) async {
-    domain = domain.trim();
-    token = token.trim();
+  Future loginToGogs(GogsAuth auth) async {
+    final domain = auth.domain.trim();
+    final token = auth.token.trim();
     try {
       loading = true;
       notifyListeners();
@@ -501,10 +510,10 @@ class AuthModel with ChangeNotifier {
     );
   }
 
-  Future loginToBb(String domain, String username, String appPassword) async {
-    domain = domain.trim();
-    username = username.trim();
-    appPassword = appPassword.trim();
+  Future loginToBb(BitbucketAuth auth) async {
+    final domain = auth.domain.trim();
+    final username = auth.username.trim();
+    final appPassword = auth.password.trim();
     try {
       loading = true;
       notifyListeners();
@@ -579,8 +588,8 @@ class AuthModel with ChangeNotifier {
     );
   }
 
-  Future loginToGitee(String token) async {
-    token = token.trim();
+  Future loginToGitee(GiteeAuth auth) async {
+    final token = auth.token.trim();
     try {
       loading = true;
       notifyListeners();
@@ -649,6 +658,7 @@ class AuthModel with ChangeNotifier {
   }
 
   var rootKey = UniqueKey();
+
   reloadApp() {
     rootKey = UniqueKey();
     notifyListeners();
@@ -682,15 +692,18 @@ class AuthModel with ChangeNotifier {
 
   // http timeout
   final _timeoutDuration = const Duration(seconds: 10);
+
   // var _timeoutDuration = Duration(seconds: 1);
 
   GitHub? _ghClient;
+
   GitHub get ghClient {
     _ghClient ??= GitHub(auth: Authentication.withToken(token));
     return _ghClient!;
   }
 
   Client? _ghGqlClient;
+
   Client get ghGqlClient {
     return _ghGqlClient ??= Client(
       link: HttpLink(
@@ -703,6 +716,7 @@ class AuthModel with ChangeNotifier {
   }
 
   Client? _glGqlClient;
+
   Client get glGqlClient {
     return _glGqlClient ??= Client(
       link: HttpLink(
@@ -739,6 +753,7 @@ class AuthModel with ChangeNotifier {
   }
 
   String? _oauthState;
+
   void redirectToGithubOauth([publicOnly = false]) {
     _oauthState = nanoid();
     final repoScope = publicOnly ? 'public_repo' : 'repo';
@@ -750,6 +765,7 @@ class AuthModel with ChangeNotifier {
   }
 
   int _activeTab = 0;
+
   int get activeTab => _activeTab;
 
   Future<void> setActiveTab(int v) async {

@@ -90,12 +90,12 @@ class _AddGithubAccount extends StatelessWidget {
           ActionItem(
             text: 'via Personal token',
             onTap: (_) async {
-              final token = await requestGithubToken(
+              final auth = await requestGithubToken(
                 context: context,
               );
-              if (token != null) {
+              if (auth != null) {
                 try {
-                  await context.read<AuthModel>().loginWithToken(token);
+                  await context.read<AuthModel>().loginWithToken(auth);
                 } catch (err) {
                   context.showError(err);
                 }
@@ -117,15 +117,12 @@ class _AddGitlabAccount extends StatelessWidget {
       text: AppLocalizations.of(context)!.gitlabAccount,
       brand: Ionicons.git_branch_outline,
       onTap: () async {
-        final result = await requestGitlabAuth(
+        final auth = await requestGitlabAuth(
           context: context,
         );
-        if (result != null) {
+        if (auth != null) {
           try {
-            await context.read<AuthModel>().loginToGitlab(
-                  result.domain,
-                  result.token,
-                );
+            await context.read<AuthModel>().loginToGitlab(auth);
           } catch (err) {
             context.showError(err);
           }
@@ -144,16 +141,12 @@ class _AddBitbucketAccount extends StatelessWidget {
       text: AppLocalizations.of(context)!.bitbucketAccount,
       brand: Ionicons.logo_bitbucket,
       onTap: () async {
-        final result = await requestBitbucketAuth(
+        final auth = await requestBitbucketAuth(
           context: context,
         );
-        if (result != null) {
+        if (auth != null) {
           try {
-            await context.read<AuthModel>().loginToBb(
-                  result.domain,
-                  result.username,
-                  result.password,
-                );
+            await context.read<AuthModel>().loginToBb(auth);
           } catch (err) {
             context.showError(err);
           }
@@ -172,15 +165,12 @@ class _AddGiteaAccount extends StatelessWidget {
       text: AppLocalizations.of(context)!.giteaAccount,
       brand: Ionicons.git_branch_outline, // TODO: brand icon
       onTap: () async {
-        final result = await requestGiteaAuth(
+        final auth = await requestGiteaAuth(
           context: context,
         );
-        if (result != null) {
+        if (auth != null) {
           try {
-            await context.read<AuthModel>().loginToGitea(
-                  result.domain,
-                  result.token,
-                );
+            await context.read<AuthModel>().loginToGitea(auth);
           } catch (err) {
             context.showError(err);
           }
@@ -199,12 +189,12 @@ class _AddGiteeAccount extends StatelessWidget {
       text: '${AppLocalizations.of(context)!.giteeAccount}(码云)',
       brand: Ionicons.git_branch_outline, // TODO: brand icon
       onTap: () async {
-        final token = await requestGiteeToken(
+        final auth = await requestGiteeToken(
           context: context,
         );
-        if (token != null) {
+        if (auth != null) {
           try {
-            await context.read<AuthModel>().loginToGitee(token);
+            await context.read<AuthModel>().loginToGitee(auth);
           } catch (err) {
             context.showError(err);
           }
@@ -223,15 +213,12 @@ class _AddGogsAccount extends StatelessWidget {
       text: 'Gogs Account',
       brand: Ionicons.git_branch_outline, // TODO: brand icon
       onTap: () async {
-        final result = await requestGogsToken(
+        final auth = await requestGogsToken(
           context: context,
         );
-        if (result != null) {
+        if (auth != null) {
           try {
-            await context.read<AuthModel>().loginToGogs(
-                  result.domain,
-                  result.token,
-                );
+            await context.read<AuthModel>().loginToGogs(auth);
           } catch (err) {
             context.showError(err);
           }
