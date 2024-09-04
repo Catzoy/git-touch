@@ -17,6 +17,7 @@ import 'package:git_touch/widgets/text_field.dart';
 import 'package:provider/provider.dart';
 
 part 'login_bb_popup.dart';
+part 'login_ge_popup.dart';
 part 'login_gh_popup.dart';
 part 'login_gl_popup.dart';
 part 'login_gt_popup.dart';
@@ -127,7 +128,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ActionItem(
                             text: 'via Personal token',
                             onTap: (_) async {
-                              final token = await requestLoginToken(
+                              final token = await requestGithubToken(
                                 context: context,
                               );
                               if (token != null) {
@@ -204,14 +205,12 @@ class _LoginScreenState extends State<LoginScreen> {
                       text: '${AppLocalizations.of(context)!.giteeAccount}(码云)',
                       brand: Ionicons.git_branch_outline, // TODO: brand icon
                       onTap: () async {
-                        final result = await theme.showConfirm(
-                          context,
-                          _buildPopup(context),
+                        final token = await requestGiteeToken(
+                          context: context,
                         );
-                        if (result == true) {
+                        if (token != null) {
                           try {
-                            await auth.loginToGitee(_tokenController.text);
-                            _tokenController.clear();
+                            await auth.loginToGitee(token);
                           } catch (err) {
                             showError(err);
                           }

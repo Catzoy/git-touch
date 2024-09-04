@@ -1,6 +1,6 @@
 part of 'login.dart';
 
-Future<String?> requestGithubToken({
+Future<String?> requestGiteeToken({
   required BuildContext context,
 }) {
   return showCupertinoDialog<String>(
@@ -18,21 +18,6 @@ Future<String?> requestGithubToken({
                 controller: tokenController,
               ),
               const SizedBox(height: 8),
-              Text(
-                AppLocalizations.of(context)!.permissionRequiredMessage,
-                style: const TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
-                ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                'user, repo, read:org, notifications',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: AntTheme.of(context).colorPrimary,
-                ),
-              )
             ],
           ),
         );
