@@ -2,6 +2,7 @@ import 'package:antd_mobile/antd_mobile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/theme.dart';
@@ -9,11 +10,14 @@ import 'package:git_touch/scaffolds/single.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/action_button.dart';
 import 'package:git_touch/widgets/avatar.dart';
+import 'package:git_touch/widgets/confirm_popup.dart';
 import 'package:git_touch/widgets/loading.dart';
 import 'package:git_touch/widgets/login_add_account_tile.dart';
 import 'package:git_touch/widgets/text_field.dart';
-import 'package:git_touch/widgets/token_login_popup.dart';
 import 'package:provider/provider.dart';
+
+part 'login_gh_popup.dart';
+part 'login_gl_popup.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -121,33 +125,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           ActionItem(
                             text: 'via Personal token',
                             onTap: (_) async {
-                              final result =
-                                  await showCupertinoDialog<TokenLoginResult>(
+                              final token = await requestLoginToken(
                                 context: context,
-                                builder: (context) => TokenLoginPopup(
-                                  notes: [
-                                    Text(
-                                      AppLocalizations.of(context)!
-                                          .permissionRequiredMessage,
-                                      style: const TextStyle(
-                                          fontSize: 14,
-                                          fontWeight: FontWeight.w400),
-                                    ),
-                                    const SizedBox(height: 8),
-                                    Text(
-                                      'user, repo, read:org, notifications',
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color:
-                                            AntTheme.of(context).colorPrimary,
-                                      ),
-                                    )
-                                  ],
-                                ),
                               );
-                              if (result != null) {
+                              if (token != null) {
                                 try {
-                                  await auth.loginWithToken(result.token);
+                                  await auth.loginWithToken(token);
                                 } catch (err) {
                                   showError(err);
                                 }
@@ -161,32 +144,15 @@ class _LoginScreenState extends State<LoginScreen> {
                       text: AppLocalizations.of(context)!.gitlabAccount,
                       brand: Ionicons.git_branch_outline,
                       onTap: () async {
-                        final result =
-                            await showCupertinoDialog<TokenLoginResult>(
+                        final result = await requestGitlabAuth(
                           context: context,
-                          builder: (context) => TokenLoginPopup(
-                            domain: 'https://gitlab.com',
-                            notes: [
-                              Text(
-                                AppLocalizations.of(context)!
-                                    .permissionRequiredMessage,
-                                style: const TextStyle(
-                                    fontSize: 14, fontWeight: FontWeight.w400),
-                              ),
-                              const SizedBox(height: 8),
-                              Text(
-                                'api, read_user, read_repository',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    color: AntTheme.of(context).colorPrimary),
-                              )
-                            ],
-                          ),
                         );
                         if (result != null) {
                           try {
                             await auth.loginToGitlab(
-                                result.domain, result.token);
+                              result.domain,
+                              result.token,
+                            );
                           } catch (err) {
                             showError(err);
                           }
