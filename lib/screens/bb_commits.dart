@@ -8,13 +8,16 @@ import 'package:provider/provider.dart';
 
 class BbCommitsScreen extends StatelessWidget {
   const BbCommitsScreen(this.owner, this.name, this.ref);
+
   final String owner;
   final String name;
   final String ref;
 
   @override
   Widget build(BuildContext context) {
-    final auth = Provider.of<AuthModel>(context);
+    final activeAccount = activeAccountState.value;
+    if (activeAccount == null) return const SizedBox();
+
     return ListStatefulScaffold<BbCommit, String?>(
       title: Text(AppLocalizations.of(context)!.commits),
       fetch: (nextUrl) async {
@@ -30,7 +33,7 @@ class BbCommitsScreen extends StatelessWidget {
       },
       itemBuilder: (v) {
         return CommitItem(
-          url: '${auth.activeAccount!.domain}/$owner/$name/commits/${v.hash}',
+          url: '${activeAccount.domain}/$owner/$name/commits/${v.hash}',
           avatarUrl: v.author!.user?.avatarUrl,
           avatarLink: null,
           author: v.author!.raw!.replaceFirst(RegExp(r' <.*>'), ''),

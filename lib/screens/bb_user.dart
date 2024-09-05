@@ -12,15 +12,19 @@ import 'package:tuple/tuple.dart';
 
 class BbUserScreen extends StatelessWidget {
   const BbUserScreen(this.login, {this.isTeam = false});
+
   final String? login;
   final bool isTeam;
+
   bool get isViewer => login == null;
 
   @override
   Widget build(BuildContext context) {
-    final auth = Provider.of<AuthModel>(context);
-    final accountId = auth.activeAccount!.accountId;
-    final finalLogin = login ?? auth.activeAccount!.login;
+    final activeAccount = activeAccountState.value;
+    if (activeAccount == null) return const SizedBox();
+
+    final accountId = activeAccount.accountId;
+    final finalLogin = login ?? activeAccount.login;
     return RefreshStatefulScaffold<Tuple2<BbUser, Iterable<BbRepo>>>(
       title: Text(isViewer
           ? 'Me'
@@ -29,10 +33,12 @@ class BbUserScreen extends StatelessWidget {
               : 'User'),
       fetch: () async {
         final res = await Future.wait([
-          auth
+          context
+              .read<AuthModel>()
               .fetchBbJson('/${isTeam ? 'teams' : 'users'}/$accountId')
               .then((value) => BbUser.fromJson(value)),
-          auth
+          context
+              .read<AuthModel>()
               .fetchBbWithPage('/repositories/$finalLogin')
               .then((value) => [for (var v in value.items) BbRepo.fromJson(v)]),
         ]);

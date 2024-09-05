@@ -9,13 +9,15 @@ import 'package:provider/provider.dart';
 
 class GlTreeScreen extends StatelessWidget {
   const GlTreeScreen(this.id, this.ref, {this.path});
+
   final int id;
   final String ref;
   final String? path;
 
   @override
   Widget build(BuildContext context) {
-    final auth = Provider.of<AuthModel>(context);
+    final activeAccount = activeAccountState.value;
+    if (activeAccount == null) return const SizedBox();
 
     return ListStatefulScaffold<GitlabTreeItem, int>(
       title: Text(path ?? AppLocalizations.of(context)!.files),
@@ -28,7 +30,8 @@ class GlTreeScreen extends StatelessWidget {
             ...(path == null ? {} : {'path': path})
           },
         );
-        final res = await auth.fetchGitlabWithPage(uri.toString());
+        final res =
+            await context.read<AuthModel>().fetchGitlabWithPage(uri.toString());
         return ListPayload(
           cursor: res.cursor,
           hasMore: res.hasMore,
@@ -40,7 +43,7 @@ class GlTreeScreen extends StatelessWidget {
           type: item.type,
           name: item.name,
           downloadUrl:
-              '${auth.activeAccount!.domain}/api/v4/projects/$id/repository/files/${item.path.urlencode}/raw?ref=master', // TODO:
+              '${activeAccount.domain}/api/v4/projects/$id/repository/files/${item.path.urlencode}/raw?ref=master', // TODO:
           url: item.type == 'tree'
               ? '/gitlab/projects/$id/tree/$ref?path=${item.path.urlencode}'
               : item.type == 'blob'

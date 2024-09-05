@@ -19,6 +19,7 @@ import 'package:tuple/tuple.dart';
 
 class GtRepoScreen extends StatelessWidget {
   const GtRepoScreen(this.owner, this.name);
+
   final String owner;
   final String name;
 
@@ -38,7 +39,9 @@ class GtRepoScreen extends StatelessWidget {
             });
         html() => md().then((v) async {
               final res = await http.post(
-                Uri.parse('${auth.activeAccount!.domain}/api/v1/markdown/raw'),
+                Uri.parse(
+                  '${activeAccountState.value!.domain}/api/v1/markdown/raw',
+                ),
                 headers: {'Authorization': 'token ${auth.token}'},
                 body: v,
               );

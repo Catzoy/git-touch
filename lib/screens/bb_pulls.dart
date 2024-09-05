@@ -8,12 +8,15 @@ import 'package:provider/provider.dart';
 
 class BbPullsScreen extends StatelessWidget {
   const BbPullsScreen(this.owner, this.name);
+
   final String owner;
   final String name;
 
   @override
   Widget build(BuildContext context) {
-    final auth = Provider.of<AuthModel>(context);
+    final activeAccount = activeAccountState.value;
+    if (activeAccount == null) return const SizedBox();
+
     return ListStatefulScaffold<BbPulls, String?>(
       title: Text(AppLocalizations.of(context)!.pullRequests),
       fetch: (nextUrl) async {
@@ -37,8 +40,7 @@ class BbPullsScreen extends StatelessWidget {
           subtitle: '#$pullNumber',
           commentCount: 0,
           updatedAt: v.createdOn,
-          url:
-              '${auth.activeAccount!.domain}/$owner/$name/pull-requests/$pullNumber',
+          url: '${activeAccount.domain}/$owner/$name/pull-requests/$pullNumber',
         );
       },
     );

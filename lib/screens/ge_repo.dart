@@ -21,12 +21,14 @@ import 'package:tuple/tuple.dart';
 
 class StatusPayload {
   StatusPayload(this.isWatching, this.isStarred);
+
   bool isWatching;
   bool isStarred;
 }
 
 class GeRepoScreen extends StatelessWidget {
   const GeRepoScreen(this.owner, this.name, {this.branch});
+
   final String owner;
   final String name;
   final String? branch;
@@ -47,7 +49,9 @@ class GeRepoScreen extends StatelessWidget {
             });
         html() => md().then((v) async {
               final res = await http.post(
-                Uri.parse('${auth.activeAccount!.domain}/api/v5/markdown'),
+                Uri.parse(
+                  '${activeAccountState.value!.domain}/api/v5/markdown',
+                ),
                 headers: {'Authorization': 'token ${auth.token}'},
                 body: {'text': v},
               );

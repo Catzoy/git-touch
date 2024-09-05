@@ -39,7 +39,7 @@ class GhNewsScreenState extends State<GhNewsScreen> {
       fetch: (page) async {
         page = page ?? 1;
         final auth = context.read<AuthModel>();
-        final login = auth.activeAccount!.login;
+        final login = activeAccountState.value!.login;
 
         final events = await auth.ghClient.getJSON(
           '/users/$login/received_events?page=$page&per_page=$kPageSize',

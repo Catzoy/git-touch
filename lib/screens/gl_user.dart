@@ -25,7 +25,7 @@ class GlUserScreen extends StatelessWidget {
           : AppLocalizations.of(context)!.user),
       fetch: () async {
         final auth = context.read<AuthModel>();
-        final finalId = id ?? auth.activeAccount!.gitlabId;
+        final finalId = id ?? activeAccountState.value!.gitlabId;
         final res = await Future.wait([
           auth.fetchGitlab('/users/$finalId'),
           auth.fetchGitlab('/users/$finalId/projects'),
