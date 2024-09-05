@@ -1,12 +1,12 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/release_item.dart';
 import 'package:gql_github/releases.data.gql.dart';
 import 'package:gql_github/releases.req.gql.dart';
-import 'package:provider/provider.dart';
+
+import '../networking/github.dart';
 
 class GhReleasesScreen extends StatelessWidget {
   const GhReleasesScreen(this.owner, this.name);
@@ -23,8 +23,7 @@ class GhReleasesScreen extends StatelessWidget {
           ..vars.owner = owner
           ..vars.name = name
           ..vars.cursor = page);
-        final res =
-            await context.read<AuthModel>().ghGqlClient.request(req).first;
+        final res = await githubQlClient().request(req).first;
         final releases = res.data!.repository!.releases;
         return ListPayload(
           cursor: releases.pageInfo.endCursor,

@@ -2,12 +2,11 @@ import 'package:collection/collection.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
-import 'package:git_touch/models/auth.dart';
+import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/gists_item.dart';
 import 'package:gql_github/gists.data.gql.dart';
 import 'package:gql_github/gists.req.gql.dart';
-import 'package:provider/provider.dart';
 
 class GhGistsScreen extends StatelessWidget {
   const GhGistsScreen(this.login);
@@ -22,8 +21,7 @@ class GhGistsScreen extends StatelessWidget {
         final req = GGistsReq((b) => b
           ..vars.login = login
           ..vars.after = page);
-        final res =
-            await context.read<AuthModel>().ghGqlClient.request(req).first;
+        final res = await githubQlClient().request(req).first;
         final gists = res.data!.user!.gists;
         return ListPayload(
           cursor: gists.pageInfo.endCursor,

@@ -2,17 +2,17 @@ import 'package:collection/collection.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:git_touch/models/auth.dart';
+import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/action_entry.dart';
 import 'package:git_touch/widgets/hex_color_tag.dart';
 import 'package:git_touch/widgets/issue_item.dart';
 import 'package:gql_github/issues.data.gql.dart';
 import 'package:gql_github/issues.req.gql.dart';
-import 'package:provider/provider.dart';
 
 class GhIssuesScreen extends StatelessWidget {
   const GhIssuesScreen(this.owner, this.name);
+
   final String owner;
   final String name;
 
@@ -30,8 +30,7 @@ class GhIssuesScreen extends StatelessWidget {
           b.vars.name = name;
           b.vars.cursor = cursor;
         });
-        final res =
-            await context.read<AuthModel>().ghGqlClient.request(req).first;
+        final res = await githubQlClient().request(req).first;
         final issues = res.data!.repository!.issues;
         return ListPayload(
           cursor: issues.pageInfo.endCursor,

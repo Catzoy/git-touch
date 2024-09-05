@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/utils/utils.dart';
@@ -22,7 +21,6 @@ import 'package:gql_github/user.data.gql.dart';
 import 'package:gql_github/user.req.gql.dart';
 import 'package:intl/intl.dart';
 import 'package:maps_launcher/maps_launcher.dart';
-import 'package:provider/provider.dart';
 
 class _SponsorItem extends StatelessWidget {
   const _SponsorItem({
@@ -286,11 +284,10 @@ class GhViewerScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final auth = Provider.of<AuthModel>(context);
     return RefreshStatefulScaffold<GUserParts?>(
       fetch: () async {
         final req = GViewerReq();
-        final res = await auth.ghGqlClient.request(req).first;
+        final res = await githubQlClient().request(req).first;
         return res.data?.viewer;
       },
       title: Text(AppLocalizations.of(context)!.me),
@@ -316,8 +313,7 @@ class GhUserScreen extends StatelessWidget {
     return RefreshStatefulScaffold<GUserData?>(
       fetch: () async {
         final req = GUserReq((b) => b..vars.login = login);
-        final res =
-            await context.read<AuthModel>().ghGqlClient.request(req).first;
+        final res = await githubQlClient().request(req).first;
         return res.data;
       },
       title: Text(login),

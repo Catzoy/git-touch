@@ -3,12 +3,11 @@ import 'package:collection/collection.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
-import 'package:git_touch/models/auth.dart';
+import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/widgets/object_tree.dart';
 import 'package:gql_github/gist.data.gql.dart';
 import 'package:gql_github/gist.req.gql.dart';
-import 'package:provider/provider.dart';
 
 class GhGistsFilesScreen extends StatelessWidget {
   const GhGistsFilesScreen(this.login, this.id);
@@ -24,8 +23,7 @@ class GhGistsFilesScreen extends StatelessWidget {
         final req = GGistReq((b) => b
           ..vars.login = login
           ..vars.name = id);
-        final res =
-            await context.read<AuthModel>().ghGqlClient.request(req).first;
+        final res = await githubQlClient().request(req).first;
         final gist = res.data!.user!.gist;
         return gist;
       },

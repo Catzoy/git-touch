@@ -1,11 +1,11 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/widgets.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/user_item.dart';
 import 'package:gql_github/users.data.gql.dart';
 import 'package:gql_github/users.req.gql.dart';
-import 'package:provider/provider.dart';
+
+import '../networking/github.dart';
 
 class GhFollowers extends StatelessWidget {
   const GhFollowers(this.login);
@@ -16,12 +16,11 @@ class GhFollowers extends StatelessWidget {
     return ListStatefulScaffold<GUserParts, String?>(
       title: const Text('Followers'),
       fetch: (cursor) async {
-        final auth = context.read<AuthModel>();
         final req = GFollowersReq((b) {
           b.vars.login = login;
           b.vars.after = cursor;
         });
-        final res = await auth.ghGqlClient.request(req).first;
+        final res = await githubQlClient().request(req).first;
         final p = res.data!.user!.followers;
         return ListPayload(
           cursor: p.pageInfo.endCursor,
@@ -45,12 +44,11 @@ class GhFollowing extends StatelessWidget {
     return ListStatefulScaffold<GUserParts, String?>(
       title: const Text('Following'),
       fetch: (cursor) async {
-        final auth = context.read<AuthModel>();
         final req = GFollowingReq((b) {
           b.vars.login = login;
           b.vars.after = cursor;
         });
-        final res = await auth.ghGqlClient.request(req).first;
+        final res = await githubQlClient().request(req).first;
         final p = res.data!.user!.following;
         return ListPayload(
           cursor: p.pageInfo.endCursor,
@@ -74,12 +72,11 @@ class GhOrgs extends StatelessWidget {
     return ListStatefulScaffold<GOrgParts, String?>(
       title: const Text('Organizations'),
       fetch: (cursor) async {
-        final auth = context.read<AuthModel>();
         final req = GOrgsReq((b) {
           b.vars.login = login;
           b.vars.after = cursor;
         });
-        final res = await auth.ghGqlClient.request(req).first;
+        final res = await githubQlClient().request(req).first;
         final p = res.data!.user!.organizations;
         return ListPayload(
           cursor: p.pageInfo.endCursor,
@@ -103,12 +100,11 @@ class GhMembers extends StatelessWidget {
     return ListStatefulScaffold<GUserParts, String?>(
       title: const Text('Members'),
       fetch: (cursor) async {
-        final auth = context.read<AuthModel>();
         final req = GMembersReq((b) {
           b.vars.login = login;
           b.vars.after = cursor;
         });
-        final res = await auth.ghGqlClient.request(req).first;
+        final res = await githubQlClient().request(req).first;
         final p = res.data!.organization!.membersWithRole;
         return ListPayload(
           cursor: p.pageInfo.endCursor,
@@ -133,13 +129,12 @@ class GhWatchers extends StatelessWidget {
     return ListStatefulScaffold<GUserParts, String?>(
       title: const Text('Watchers'),
       fetch: (cursor) async {
-        final auth = context.read<AuthModel>();
         final req = GWatchersReq((b) {
           b.vars.owner = owner;
           b.vars.name = name;
           b.vars.after = cursor;
         });
-        final res = await auth.ghGqlClient.request(req).first;
+        final res = await githubQlClient().request(req).first;
         final p = res.data!.repository!.watchers;
         return ListPayload(
           cursor: p.pageInfo.endCursor,
@@ -164,13 +159,12 @@ class GhStargazers extends StatelessWidget {
     return ListStatefulScaffold<GUserParts, String?>(
       title: const Text('Stargazers'),
       fetch: (cursor) async {
-        final auth = context.read<AuthModel>();
         final req = GStargazersReq((b) {
           b.vars.owner = owner;
           b.vars.name = name;
           b.vars.after = cursor;
         });
-        final res = await auth.ghGqlClient.request(req).first;
+        final res = await githubQlClient().request(req).first;
         final p = res.data!.repository!.stargazers;
         return ListPayload(
           cursor: p.pageInfo.endCursor,

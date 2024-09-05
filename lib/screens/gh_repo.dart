@@ -5,7 +5,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/theme.dart';
 import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
@@ -58,8 +57,7 @@ class GhRepoScreen extends StatelessWidget {
           ..vars.name = name
           ..vars.branchSpecified = branch != null
           ..vars.branch = branch ?? '');
-        final res =
-            await context.read<AuthModel>().ghGqlClient.request(req).first;
+        final res = await githubQlClient().request(req).first;
         final repo = res.data!.repository;
 
         final ghClient = githubClient();

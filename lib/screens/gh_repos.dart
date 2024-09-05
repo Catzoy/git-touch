@@ -1,12 +1,12 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/widgets.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/repo_item.dart';
 import 'package:gql_github/repos.data.gql.dart';
 import 'package:gql_github/repos.req.gql.dart';
-import 'package:provider/provider.dart';
 import 'package:timeago/timeago.dart' as timeago;
+
+import '../networking/github.dart';
 
 class GhRepos extends StatelessWidget {
   const GhRepos(this.login);
@@ -17,12 +17,11 @@ class GhRepos extends StatelessWidget {
     return ListStatefulScaffold<GRepoParts, String?>(
       title: const Text('Repositories'),
       fetch: (cursor) async {
-        final auth = context.read<AuthModel>();
         final req = GReposReq((b) {
           b.vars.login = login;
           b.vars.after = cursor;
         });
-        final res = await auth.ghGqlClient.request(req).first;
+        final res = await githubQlClient().request(req).first;
         final p = res.data!.repositoryOwner!.repositories;
         return ListPayload(
           cursor: p.pageInfo.endCursor,
@@ -46,12 +45,11 @@ class GhStars extends StatelessWidget {
     return ListStatefulScaffold<GRepoParts, String?>(
       title: const Text('Stars'),
       fetch: (cursor) async {
-        final auth = context.read<AuthModel>();
         final req = GStarsReq((b) {
           b.vars.login = login;
           b.vars.after = cursor;
         });
-        final res = await auth.ghGqlClient.request(req).first;
+        final res = await githubQlClient().request(req).first;
         final p = res.data!.user!.starredRepositories;
         return ListPayload(
           cursor: p.pageInfo.endCursor,

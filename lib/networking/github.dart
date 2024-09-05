@@ -1,18 +1,43 @@
 import 'dart:convert';
 
+import 'package:ferry/ferry.dart' as ferry;
 import 'package:git_touch/models/auth.dart';
-import 'package:github/github.dart';
-import 'package:http/http.dart';
+import 'package:github/github.dart' as gh;
+import 'package:gql_http_link/gql_http_link.dart';
+import 'package:http/http.dart' as http;
 import 'package:signals/signals.dart';
 import 'package:universal_io/io.dart';
 
-final rawGraphQlGithubClientFactory = readonlySignalContainer<Client, String>(
-  (_) => signal(Client()),
+const _apiPrefix = 'https://api.github.com';
+
+final rawGraphQlGithubClientFactory =
+    readonlySignalContainer<http.Client, String>(
+  (_) => signal(http.Client()),
   cache: true,
 );
 
-final graphQlGithubClientFactory = readonlySignalContainer<GitHub, String>(
-  (token) => signal(GitHub(auth: Authentication.withToken(token))),
+final githubClientFactory = readonlySignalContainer<gh.GitHub, String>(
+  (token) => signal(gh.GitHub(auth: gh.Authentication.withToken(token))),
+  cache: true,
+);
+
+final graphQlGithubClientFactory =
+    readonlySignalContainer<ferry.Client, String>(
+  (token) {
+    final graphQlClient = ferry.Client(
+      link: HttpLink(
+        '$_apiPrefix/graphql',
+        defaultHeaders: {
+          HttpHeaders.authorizationHeader: 'token $token',
+        },
+      ),
+      // https://ferrygraphql.com/docs/fetch-policies#default-fetchpolicies
+      defaultFetchPolicies: {
+        ferry.OperationType.query: ferry.FetchPolicy.NetworkOnly,
+      },
+    );
+    return signal(graphQlClient);
+  },
   cache: true,
 );
 
@@ -42,7 +67,13 @@ Future<dynamic> rawQueryGithub({
   return data['data'];
 }
 
-GitHub githubClient() {
+gh.GitHub githubClient() {
+  return githubClientFactory(
+    activeAccountState.value!.token,
+  ).value;
+}
+
+ferry.Client githubQlClient() {
   return graphQlGithubClientFactory(
     activeAccountState.value!.token,
   ).value;

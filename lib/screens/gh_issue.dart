@@ -1,7 +1,6 @@
 import 'package:antd_mobile/antd_mobile.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/scaffolds/long_list.dart';
 import 'package:git_touch/utils/utils.dart';
@@ -14,7 +13,6 @@ import 'package:github/github.dart' as github;
 import 'package:gql_github/issue.data.gql.dart';
 import 'package:gql_github/issue.req.gql.dart';
 import 'package:primer/primer.dart';
-import 'package:provider/provider.dart';
 
 class GhIssueScreen extends StatelessWidget {
   const GhIssueScreen(this.owner, this.name, this.number);
@@ -94,7 +92,7 @@ class GhIssueScreen extends StatelessWidget {
       b.vars.number = number;
       b.vars.cursor = cursor;
     });
-    final res = await context.read<AuthModel>().ghGqlClient.request(req).first;
+    final res = await githubQlClient().request(req).first;
     return res.data!.repository!;
   }
 

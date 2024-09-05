@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:collection/collection.dart';
-import 'package:ferry/ferry.dart';
 import 'package:fimber/fimber.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
@@ -14,8 +13,6 @@ import 'package:git_touch/models/gitlab.dart';
 import 'package:git_touch/models/gogs.dart';
 import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/utils/utils.dart';
-import 'package:github/github.dart';
-import 'package:gql_http_link/gql_http_link.dart';
 import 'package:http/http.dart' as http;
 import 'package:nanoid/nanoid.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -95,8 +92,6 @@ _addAccount(Account account) async {
 final activeTabState = signal<int>(0);
 
 class AuthModel with ChangeNotifier {
-  static const _apiPrefix = 'https://api.github.com';
-
   // static final inAppReview = InAppReview.instance;
   var hasRequestedReview = false;
 
@@ -718,9 +713,6 @@ class AuthModel with ChangeNotifier {
     // https://stackoverflow.com/a/50116077
     rootKey = UniqueKey();
     activeAccountIndexState.value = index;
-    _ghClient = null;
-    _ghGqlClient = null;
-    _glGqlClient = null;
     notifyListeners();
 
     // TODO: strategy
@@ -733,34 +725,6 @@ class AuthModel with ChangeNotifier {
     //     }
     //   });
     // }
-  }
-
-  Client? _ghGqlClient;
-
-  Client get ghGqlClient {
-    return _ghGqlClient ??= Client(
-      link: HttpLink(
-        '$_apiPrefix/graphql',
-        defaultHeaders: {HttpHeaders.authorizationHeader: 'token $token'},
-      ),
-      // https://ferrygraphql.com/docs/fetch-policies#default-fetchpolicies
-      defaultFetchPolicies: {OperationType.query: FetchPolicy.NetworkOnly},
-    );
-  }
-
-  Client? _glGqlClient;
-
-  Client get glGqlClient {
-    return _glGqlClient ??= Client(
-      link: HttpLink(
-        Uri.parse(activeAccount!.domain)
-            .replace(path: '/api/graphql')
-            .toString(),
-        defaultHeaders: {'Private-Token': token},
-      ),
-      // https://ferrygraphql.com/docs/fetch-policies#default-fetchpolicies
-      defaultFetchPolicies: {OperationType.query: FetchPolicy.NetworkOnly},
-    );
   }
 
   String? _oauthState;
