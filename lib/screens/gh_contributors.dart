@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/github.dart';
+import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/contributor_item.dart';
-import 'package:provider/provider.dart';
 
 class GhContributorsScreen extends StatelessWidget {
   const GhContributorsScreen(this.owner, this.name);
+
   final String owner;
   final String name;
 
@@ -18,14 +18,13 @@ class GhContributorsScreen extends StatelessWidget {
       title: Text(AppLocalizations.of(context)!.contributors),
       fetch: (page) async {
         page = page ?? 1;
-        final res = await context
-            .read<AuthModel>()
-            .ghClient
-            .getJSON<List, List<GithubContributorItem>>(
-              '/repos/$owner/$name/contributors?page=$page',
-              convert: (vs) =>
-                  [for (var v in vs) GithubContributorItem.fromJson(v)],
-            );
+        final res =
+            await githubClient().getJSON<List, List<GithubContributorItem>>(
+          '/repos/$owner/$name/contributors?page=$page',
+          convert: (vs) => [
+            for (var v in vs) GithubContributorItem.fromJson(v),
+          ],
+        );
         return ListPayload(
           cursor: page + 1,
           items: res,

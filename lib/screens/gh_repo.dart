@@ -7,6 +7,7 @@ import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/theme.dart';
+import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/action_button.dart';
@@ -61,7 +62,7 @@ class GhRepoScreen extends StatelessWidget {
             await context.read<AuthModel>().ghGqlClient.request(req).first;
         final repo = res.data!.repository;
 
-        final ghClient = context.read<AuthModel>().ghClient;
+        final ghClient = githubClient();
         final countFuture = ghClient
             .getJSON('/repos/$owner/$name/stats/contributors')
             .then((v) => (v as List).length);
@@ -127,8 +128,7 @@ class GhRepoScreen extends StatelessWidget {
                             ActionItem(
                               text: _buildWatchState(v),
                               onTap: (_) async {
-                                final activityApi =
-                                    context.read<AuthModel>().ghClient.activity;
+                                final activityApi = githubClient().activity;
                                 switch (v) {
                                   case GSubscriptionState.SUBSCRIBED:
                                   case GSubscriptionState.IGNORED:
@@ -165,8 +165,7 @@ class GhRepoScreen extends StatelessWidget {
                       active: repo.viewerHasStarred,
                       text: repo.viewerHasStarred ? 'Unstar' : 'Star',
                       onTap: () async {
-                        final activityApi =
-                            context.read<AuthModel>().ghClient.activity;
+                        final activityApi = githubClient().activity;
                         if (repo.viewerHasStarred) {
                           await activityApi.unstar(
                               RepositorySlug(repo.owner.login, repo.name));

@@ -1,12 +1,11 @@
 import 'package:antd_mobile/antd_mobile.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/github.dart';
+import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/issue_icon.dart';
 import 'package:git_touch/widgets/link.dart';
-import 'package:provider/provider.dart';
 
 class NotificationItem extends StatefulWidget {
   const NotificationItem({
@@ -79,11 +78,7 @@ class _NotificationItemState extends State<NotificationItem> {
         loading = true;
       });
       try {
-        await context
-            .read<AuthModel>()
-            .ghClient
-            .activity
-            .markThreadRead(payload.id!);
+        await githubClient().activity.markThreadRead(payload.id!);
         widget.markAsRead();
       } finally {
         if (mounted) {

@@ -1,14 +1,14 @@
 import 'package:antd_mobile/antd_mobile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
-import 'package:git_touch/models/auth.dart';
+import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/scaffolds/common.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:github/github.dart';
-import 'package:provider/provider.dart';
 
 class GhIssueFormScreen extends StatefulWidget {
   const GhIssueFormScreen(this.owner, this.name);
+
   final String owner;
   final String name;
 
@@ -56,9 +56,7 @@ class _GhIssueFormScreenState extends State<GhIssueFormScreen> {
             child: Text(AppLocalizations.of(context)!.submit),
             onClick: () async {
               final slug = RepositorySlug(widget.owner, widget.name);
-              final res = await context
-                  .read<AuthModel>()
-                  .ghClient
+              final res = await githubClient()
                   .issues
                   .create(slug, IssueRequest(title: _title, body: _body));
               await AntToast.show(

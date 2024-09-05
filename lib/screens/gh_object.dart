@@ -2,17 +2,17 @@ import 'package:antd_mobile/antd_mobile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:git_touch/models/auth.dart';
+import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/action_entry.dart';
 import 'package:git_touch/widgets/blob_view.dart';
 import 'package:git_touch/widgets/object_tree.dart';
 import 'package:github/github.dart';
-import 'package:provider/provider.dart';
 
 class GhObjectScreen extends StatelessWidget {
   const GhObjectScreen(this.owner, this.name, this.ref, {this.path, this.raw});
+
   final String owner;
   final String name;
   final String ref;
@@ -35,9 +35,7 @@ class GhObjectScreen extends StatelessWidget {
         }
 
         final suffix = path == null ? '' : '/$path';
-        final res = await context
-            .read<AuthModel>()
-            .ghClient
+        final res = await githubClient()
             .repositories
             .getContents(RepositorySlug(owner, name), suffix, ref: ref);
         if (res.isDirectory) {

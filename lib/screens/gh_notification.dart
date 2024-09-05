@@ -21,11 +21,11 @@ class GhNotificationScreen extends StatefulWidget {
 
 class GhNotificationScreenState extends State<GhNotificationScreen> {
   Future<Map<String, NotificationGroup>> fetchNotifications(int index) async {
-    final ns = await context.read<AuthModel>().ghClient.getJSON(
-          '/notifications?all=${index == 2}&participating=${index == 1}',
-          convert: (dynamic vs) =>
-              [for (var v in vs) GithubNotificationItem.fromJson(v)],
-        );
+    final ns = await githubClient().getJSON(
+      '/notifications?all=${index == 2}&participating=${index == 1}',
+      convert: (dynamic vs) =>
+          [for (var v in vs) GithubNotificationItem.fromJson(v)],
+    );
     if (index == 0) {
       context.read<NotificationModel>().setCount(ns.length);
     }
@@ -123,12 +123,8 @@ ${item.key}: pullRequest(number: ${item.subject!.number}) {
           ),
           GestureDetector(
             onTap: () async {
-              await context
-                  .read<AuthModel>()
-                  .ghClient
-                  .activity
-                  .markRepositoryNotificationsRead(
-                      RepositorySlug.full(group.fullName!));
+              await githubClient().activity.markRepositoryNotificationsRead(
+                  RepositorySlug.full(group.fullName!));
               // await _onSwitchTab(); // TODO:
             },
             child: Icon(

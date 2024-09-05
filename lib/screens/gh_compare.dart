@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/github.dart';
+import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/widgets/action_button.dart';
 import 'package:git_touch/widgets/files_item.dart';
-import 'package:provider/provider.dart';
 
 class GhComparisonScreen extends StatelessWidget {
   const GhComparisonScreen(this.owner, this.name, this.before, this.head);
+
   final String owner;
   final String name;
   final String before;
@@ -20,9 +20,10 @@ class GhComparisonScreen extends StatelessWidget {
     return RefreshStatefulScaffold(
       title: Text(AppLocalizations.of(context)!.files),
       fetch: () async {
-        final res = await context.read<AuthModel>().ghClient.getJSON(
-            '/repos/$owner/$name/compare/$before...$head',
-            convert: (dynamic vs) => GithubComparisonItem.fromJson(vs));
+        final res = await githubClient().getJSON(
+          '/repos/$owner/$name/compare/$before...$head',
+          convert: GithubComparisonItem.fromJson,
+        );
         return res.files;
       },
       actionBuilder: (dynamic v, _) {

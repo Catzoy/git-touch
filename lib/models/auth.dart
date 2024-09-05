@@ -735,13 +735,6 @@ class AuthModel with ChangeNotifier {
     // }
   }
 
-  GitHub? _ghClient;
-
-  GitHub get ghClient {
-    _ghClient ??= GitHub(auth: Authentication.withToken(token));
-    return _ghClient!;
-  }
-
   Client? _ghGqlClient;
 
   Client get ghGqlClient {

@@ -2,6 +2,7 @@ import 'package:antd_mobile/antd_mobile.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:git_touch/models/auth.dart';
+import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/scaffolds/long_list.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/action_button.dart';
@@ -17,6 +18,7 @@ import 'package:provider/provider.dart';
 
 class GhIssueScreen extends StatelessWidget {
   const GhIssueScreen(this.owner, this.name, this.number);
+
   final String owner;
   final String name;
   final int number;
@@ -111,11 +113,13 @@ class GhIssueScreen extends StatelessWidget {
                 ActionItem(
                   text: d.closed ? 'Reopen issue' : 'Close issue',
                   onTap: (_) async {
-                    await context.read<AuthModel>().ghClient.issues.edit(
-                        github.RepositorySlug(owner, name),
-                        number,
-                        github.IssueRequest(
-                            state: d.closed ? 'open' : 'closed'));
+                    await githubClient().issues.edit(
+                          github.RepositorySlug(owner, name),
+                          number,
+                          github.IssueRequest(
+                            state: d.closed ? 'open' : 'closed',
+                          ),
+                        );
                   },
                 ),
               ...ActionItem.getUrlActions(d.url),

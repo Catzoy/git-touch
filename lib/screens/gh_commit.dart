@@ -1,7 +1,7 @@
 import 'package:antd_mobile/antd_mobile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
-import 'package:git_touch/models/auth.dart';
+import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/action_button.dart';
@@ -9,10 +9,10 @@ import 'package:git_touch/widgets/avatar.dart';
 import 'package:git_touch/widgets/files_item.dart';
 import 'package:git_touch/widgets/link.dart';
 import 'package:github/github.dart';
-import 'package:provider/provider.dart';
 
 class GhCommit extends StatelessWidget {
   const GhCommit(this.owner, this.name, this.sha);
+
   final String owner;
   final String name;
   final String sha;
@@ -24,9 +24,7 @@ class GhCommit extends StatelessWidget {
           '${AppLocalizations.of(context)!.commit} ${sha.substring(0, 8)}'),
       fetch: () async {
         // TODO: change to graphql when files diff is available via graphql
-        final res = await context
-            .read<AuthModel>()
-            .ghClient
+        final res = await githubClient()
             .repositories
             .getCommit(RepositorySlug(owner, name), sha);
         return res;

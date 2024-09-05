@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/github.dart';
+import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/action_button.dart';
 import 'package:git_touch/widgets/files_item.dart';
-import 'package:provider/provider.dart';
 
 class GhFilesScreen extends StatelessWidget {
   const GhFilesScreen(this.owner, this.name, this.pullNumber);
+
   final String owner;
   final String name;
   final int pullNumber;
@@ -29,13 +29,10 @@ class GhFilesScreen extends StatelessWidget {
       },
       fetch: (page) async {
         page = page ?? 1;
-        final res = await context
-            .read<AuthModel>()
-            .ghClient
-            .getJSON<List, List<GithubFilesItem>>(
-              '/repos/$owner/$name/pulls/$pullNumber/files?page=$page',
-              convert: (vs) => [for (var v in vs) GithubFilesItem.fromJson(v)],
-            );
+        final res = await githubClient().getJSON<List, List<GithubFilesItem>>(
+          '/repos/$owner/$name/pulls/$pullNumber/files?page=$page',
+          convert: (vs) => [for (var v in vs) GithubFilesItem.fromJson(v)],
+        );
         return ListPayload(
           cursor: page + 1,
           items: res,

@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:git_touch/models/auth.dart';
+import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/action_button.dart';
@@ -312,11 +313,11 @@ class GhUserScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final auth = Provider.of<AuthModel>(context);
     return RefreshStatefulScaffold<GUserData?>(
       fetch: () async {
         final req = GUserReq((b) => b..vars.login = login);
-        final res = await auth.ghGqlClient.request(req).first;
+        final res =
+            await context.read<AuthModel>().ghGqlClient.request(req).first;
         return res.data;
       },
       title: Text(login),
@@ -343,9 +344,9 @@ class GhUserScreen extends StatelessWidget {
                       : AppLocalizations.of(context)!.follow,
                   onTap: () async {
                     if (p.viewerIsFollowing) {
-                      await auth.ghClient.users.unfollowUser(p.login);
+                      await githubClient().users.unfollowUser(p.login);
                     } else {
-                      await auth.ghClient.users.followUser(p.login);
+                      await githubClient().users.followUser(p.login);
                     }
                     setData(data.rebuild((b) {
                       b.user.viewerIsFollowing = !b.user.viewerIsFollowing!;
@@ -375,9 +376,9 @@ class GhUserScreen extends StatelessWidget {
                         : AppLocalizations.of(context)!.follow,
                     onTap: () async {
                       if (p.viewerIsFollowing) {
-                        await auth.ghClient.users.unfollowUser(p.login);
+                        await githubClient().users.unfollowUser(p.login);
                       } else {
-                        await auth.ghClient.users.followUser(p.login);
+                        await githubClient().users.followUser(p.login);
                       }
                       setData(data.rebuild((b) {
                         b.organization.viewerIsFollowing =
