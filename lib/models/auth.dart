@@ -12,6 +12,7 @@ import 'package:git_touch/models/gitea.dart';
 import 'package:git_touch/models/gitee.dart';
 import 'package:git_touch/models/gitlab.dart';
 import 'package:git_touch/models/gogs.dart';
+import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:github/github.dart';
 import 'package:gql_http_link/gql_http_link.dart';
@@ -134,22 +135,26 @@ class AuthModel with ChangeNotifier {
 
   Future<void> loginWithToken(GithubAuthResult auth) async {
     try {
-      final queryData = await query('''
+      final queryData = await rawQueryGithub(
+        token: auth.token,
+        query: '''
 {
   viewer {
     login
     avatarUrl
   }
 }
-''', auth.token);
+''',
+      );
 
-      await _addAccount(Account(
+      final account = Account(
         platform: PlatformType.github,
         domain: 'https://github.com',
         token: auth.token,
         login: queryData['viewer']['login'] as String,
         avatarUrl: queryData['viewer']['avatarUrl'] as String,
-      ));
+      );
+      await _addAccount(account);
     } finally {
       loading = false;
       notifyListeners();
@@ -682,11 +687,12 @@ class AuthModel with ChangeNotifier {
     effect(() async {
       final activeAcc = activeAccountState.value;
       if (activeAcc == null ||
-          activeAccountIndexState.value != activeAccountIndexState.peek())
+          activeAccountIndexState.value != activeAccountIndexState.peek()) {
         return;
+      }
 
       final activeTab = activeTabState.value;
-      if (activeTab == null || activeTabState.peek() == activeTab) return;
+      if (activeTabState.peek() == activeTab) return;
 
       final tabKey = StorageKeys.getDefaultStartTabKey(activeAcc.platform);
       await prefs.setInt(tabKey, activeTab);
@@ -729,11 +735,6 @@ class AuthModel with ChangeNotifier {
     // }
   }
 
-  // http timeout
-  final _timeoutDuration = const Duration(seconds: 10);
-
-  // var _timeoutDuration = Duration(seconds: 1);
-
   GitHub? _ghClient;
 
   GitHub get ghClient {
@@ -767,28 +768,6 @@ class AuthModel with ChangeNotifier {
       // https://ferrygraphql.com/docs/fetch-policies#default-fetchpolicies
       defaultFetchPolicies: {OperationType.query: FetchPolicy.NetworkOnly},
     );
-  }
-
-  Future<dynamic> query(String query, [String? t]) async {
-    t ??= token;
-
-    final res = await http
-        .post(Uri.parse('$_apiPrefix/graphql'),
-            headers: {
-              HttpHeaders.authorizationHeader: 'token $t',
-              HttpHeaders.contentTypeHeader: 'application/json'
-            },
-            body: json.encode({'query': query}))
-        .timeout(_timeoutDuration);
-
-    // Fimber.d(res.body);
-    final data = json.decode(res.body);
-
-    if (data['errors'] != null) {
-      throw data['errors'][0]['message'];
-    }
-
-    return data['data'];
   }
 
   String? _oauthState;

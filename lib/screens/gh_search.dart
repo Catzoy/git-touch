@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:git_touch/models/auth.dart';
+import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/scaffolds/common.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/issue_item.dart';
@@ -10,7 +11,6 @@ import 'package:git_touch/widgets/loading.dart';
 import 'package:git_touch/widgets/repo_item.dart';
 import 'package:git_touch/widgets/user_item.dart';
 import 'package:primer/primer.dart';
-import 'package:provider/provider.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
 class GhSearchScreen extends StatefulWidget {
@@ -47,8 +47,9 @@ class _GhSearchScreenState extends State<GhSearchScreen> {
       _loading = true;
     });
     try {
-      final auth = context.read<AuthModel>();
-      final data = await auth.query('''
+      final data = await rawQueryGithub(
+        token: activeAccountState.value!.token,
+        query: '''
 {
   repository: search(first: $kPageSize, type: REPOSITORY, query: "$keyword") {
     nodes {
@@ -102,7 +103,8 @@ class _GhSearchScreenState extends State<GhSearchScreen> {
     }
   }
 }
-        ''');
+        ''',
+      );
       _payloads[0] = data['repository']['nodes'];
       _payloads[1] = data['user']['nodes'];
       _payloads[2] = data['issue']['nodes'];

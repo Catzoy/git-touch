@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/theme.dart';
+import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/action_button.dart';
 import 'package:git_touch/widgets/avatar.dart';
@@ -23,6 +24,7 @@ class EmojiPayload {
     required this.count,
     required this.reacted,
   });
+
   GReactionContent key;
   String text;
   int count;
@@ -86,6 +88,7 @@ class GhEmojiAction extends StatefulWidget {
   final String? id;
   final Iterable<EmojiPayload> items;
   final EmojiUpdateCallaback onReaction;
+
   @override
   State<GhEmojiAction> createState() => _GhEmojiActionState();
 }
@@ -94,13 +97,16 @@ class _GhEmojiActionState extends State<GhEmojiAction> {
   _onReaction(EmojiPayload item) async {
     final op = item.reacted ? 'remove' : 'add';
 
-    await context.read<AuthModel>().query('''
+    rawQueryGithub(
+      token: activeAccountState.value!.token,
+      query: '''
 mutation {
   ${op}Reaction(input: {subjectId: "${widget.id}", content: ${item.key.name}}) {
     clientMutationId
   }
 }
-    ''');
+    ''',
+    );
     setState(() {
       item.reacted = !item.reacted;
       if (item.reacted) {

@@ -6,6 +6,7 @@ import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/github.dart';
 import 'package:git_touch/models/notification.dart';
+import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/scaffolds/tab_stateful.dart';
 import 'package:git_touch/widgets/empty.dart';
 import 'package:git_touch/widgets/list_group.dart';
@@ -81,7 +82,10 @@ ${item.key}: pullRequest(number: ${item.subject!.number}) {
       if (schema == '{}') return groupMap;
 
       // Fimber.d(schema);
-      final data = await context.read<AuthModel>().query(schema);
+      final data = await rawQueryGithub(
+        token: activeAccountState.value!.token,
+        query: schema,
+      );
       groupMap.forEach((repo, group) {
         for (final item in group.items) {
           final groupData = data[group.key];
