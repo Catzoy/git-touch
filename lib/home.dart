@@ -2,6 +2,7 @@ import 'package:antd_mobile/antd_mobile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+import 'package:git_touch/models/account.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/notification.dart';
 import 'package:git_touch/models/theme.dart';
@@ -30,6 +31,7 @@ import 'package:launch_review/launch_review.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
 import 'package:pub_semver/pub_semver.dart';
+import 'package:signals/signals_flutter.dart';
 import 'package:universal_io/io.dart';
 
 class Home extends StatefulWidget {
@@ -71,7 +73,7 @@ class _HomeState extends State<Home> {
     });
   }
 
-  _buildScreen(int index) {
+  _buildScreen(Account activeAccount, int index) {
     // print(Localizations.localeOf(context).toString());
     // return GlProjectScreen(32221);
     // return GhIssuesScreen('flutter', 'flutter', isPullRequest: true);
@@ -79,8 +81,7 @@ class _HomeState extends State<Home> {
     // return GhIssueScreen('reactjs', 'rfcs', 68);
     // return Image.asset('images/spinner.webp', width: 32, height: 32);
     // return GhRepoScreen('shreyas1599', 'test');
-    final auth = Provider.of<AuthModel>(context);
-    switch (auth.activeAccount!.platform) {
+    switch (activeAccount.platform) {
       case PlatformType.github:
         switch (index) {
           case 0:
@@ -122,7 +123,7 @@ class _HomeState extends State<Home> {
           case 0:
             return const GtOrgsScreen();
           case 1:
-            return GtUserScreen(auth.activeAccount!.login, isViewer: true);
+            return GtUserScreen(activeAccount.login, isViewer: true);
         }
         break;
       case PlatformType.gitee:
@@ -130,7 +131,7 @@ class _HomeState extends State<Home> {
           case 0:
             return GeSearchScreen();
           case 1:
-            return GeUserScreen(auth.activeAccount!.login, isViewer: true);
+            return GeUserScreen(activeAccount.login, isViewer: true);
         }
         break;
       case PlatformType.gogs:
@@ -138,7 +139,7 @@ class _HomeState extends State<Home> {
           case 0:
             return GoSearchScreen();
           case 1:
-            return GoUserScreen(auth.activeAccount!.login, isViewer: true);
+            return GoUserScreen(activeAccount.login, isViewer: true);
         }
     }
   }
@@ -239,43 +240,46 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    final auth = Provider.of<AuthModel>(context);
+    return Watch.builder(builder: (context) {
+      final activeAccount = activeAccountState.value;
 
-    if (auth.activeAccount == null) {
-      return LoginScreen();
-    }
+      if (activeAccount == null) {
+        return LoginScreen();
+      }
 
-    final navigationItems = _buildNavigationItems(auth.activeAccount!.platform);
+      final navigationItems = _buildNavigationItems(activeAccount.platform);
+      final activeTab = activeTabState.value;
 
-    return WillPopScope(
-      onWillPop: () async {
-        return !(await getNavigatorKey(auth.activeTab)
-            .currentState
-            ?.maybePop())!;
-      },
-      child: CupertinoTabScaffold(
-        tabBuilder: (context, index) {
-          return CupertinoTabView(
-            navigatorKey: getNavigatorKey(index),
-            builder: (context) {
-              return _buildScreen(index);
-            },
-          );
+      return PopScope(
+        canPop: false,
+        onPopInvoked: (didPop) async {
+          if (didPop) return;
+          await getNavigatorKey(activeTab).currentState?.maybePop();
         },
-        tabBar: CupertinoTabBar(
-          items: navigationItems,
-          currentIndex: auth.activeTab,
-          onTap: (index) {
-            if (auth.activeTab == index) {
-              getNavigatorKey(index)
-                  .currentState
-                  ?.popUntil((route) => route.isFirst);
-            } else {
-              auth.setActiveTab(index);
-            }
+        child: CupertinoTabScaffold(
+          tabBuilder: (context, index) {
+            return CupertinoTabView(
+              navigatorKey: getNavigatorKey(index),
+              builder: (context) {
+                return _buildScreen(activeAccount, index);
+              },
+            );
           },
+          tabBar: CupertinoTabBar(
+            items: navigationItems,
+            currentIndex: activeTab,
+            onTap: (index) {
+              if (activeTab == index) {
+                getNavigatorKey(index)
+                    .currentState
+                    ?.popUntil((route) => route.isFirst);
+              } else {
+                activeTabState.value = index;
+              }
+            },
+          ),
         ),
-      ),
-    );
+      );
+    });
   }
 }

@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:collection/collection.dart';
 import 'package:ferry/ferry.dart';
 import 'package:fimber/fimber.dart';
 import 'package:flutter/cupertino.dart';
@@ -17,6 +18,9 @@ import 'package:gql_http_link/gql_http_link.dart';
 import 'package:http/http.dart' as http;
 import 'package:nanoid/nanoid.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:signals/signals.dart';
+import 'package:signals/signals_core.dart';
+import 'package:signals/signals_flutter.dart';
 import 'package:uni_links/uni_links.dart';
 // import 'package:in_app_review/in_app_review.dart';
 import 'package:universal_io/io.dart';
@@ -54,43 +58,55 @@ typedef GiteaAuth = ({String domain, String token});
 typedef GiteeAuth = ({String token});
 typedef GogsAuth = ({String domain, String token});
 
+final accountsState = asyncSignal<List<Account>>(AsyncState.loading());
+final activeAccountIndexState = signal<int?>(null);
+final activeAccountState = computed(
+  () {
+    final index = activeAccountIndexState.value;
+    if (index == null) return null;
+
+    final accounts = accountsState.value.value;
+    if (accounts == null) return null;
+
+    return accounts.elementAtOrNull(index);
+  },
+);
+
+removeAccount(int index) async {
+  accountsState.value = switch (accountsState.value) {
+    AsyncData<List<Account>>(value: final accounts) => AsyncData(
+        [...accounts.whereNotIndexed((i, _) => i == index)],
+      ),
+    AsyncError<List<Account>>() ||
+    AsyncLoading<List<Account>>() =>
+      accountsState.value,
+  };
+}
+
+_addAccount(Account account) async {
+  final prev = switch (accountsState.value) {
+    AsyncData<List<Account>>(value: final accounts) => accounts,
+    AsyncError<List<Account>>() || AsyncLoading<List<Account>>() => const [],
+  };
+  accountsState.value = AsyncData([...prev, account]);
+}
+
+final activeTabState = signal<int>(0);
+
 class AuthModel with ChangeNotifier {
   static const _apiPrefix = 'https://api.github.com';
 
   // static final inAppReview = InAppReview.instance;
   var hasRequestedReview = false;
 
-  List<Account> _accounts = [];
-  int? activeAccountIndex;
   late StreamSubscription<Uri?> _sub;
   bool loading = false;
 
-  List<Account> get accounts => _accounts;
-
   Account? get activeAccount {
-    if (activeAccountIndex == null || _accounts.isEmpty) return null;
-    return _accounts[activeAccountIndex!];
+    return activeAccountState.value;
   }
 
   String get token => activeAccount!.token;
-
-  _addAccount(Account account) async {
-    _accounts = [...accounts, account];
-    // Save
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setString(StorageKeys.accounts, json.encode(_accounts));
-  }
-
-  removeAccount(int index) async {
-    if (activeAccountIndex == index) {
-      activeAccountIndex = null;
-    }
-    _accounts.removeAt(index);
-    // Save
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setString(StorageKeys.accounts, json.encode(_accounts));
-    notifyListeners();
-  }
 
   // https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/#web-application-flow
   Future<void> _onSchemeDetected(Uri? uri) async {
@@ -624,22 +640,57 @@ class AuthModel with ChangeNotifier {
 
     // Read accounts
     try {
-      final str = prefs.getString(StorageKeys.accounts);
-      // Fimber.d('read accounts: $str');
-      _accounts = (json.decode(str ?? '[]') as List)
+      final str = prefs.getString(StorageKeys.accounts) ?? '[]';
+      final accounts = (json.decode(str) as List)
           .map((item) => Account.fromJson(item))
           .toList();
-      activeAccountIndex = prefs.getInt(StorageKeys.iDefaultAccount);
+      accountsState.value = AsyncData(accounts);
+      activeAccountIndexState.value = prefs.getInt(StorageKeys.iDefaultAccount);
 
-      if (activeAccount != null) {
-        _activeTab = prefs.getInt(
-                StorageKeys.getDefaultStartTabKey(activeAccount!.platform)) ??
-            0;
+      final activeAcc = activeAccountState.value;
+      if (activeAcc != null) {
+        final tabKey = StorageKeys.getDefaultStartTabKey(activeAcc.platform);
+        activeTabState.value = prefs.getInt(tabKey) ?? 0;
       }
     } catch (err) {
       Fimber.e('prefs getAccount failed', ex: err);
-      _accounts = [];
+      accountsState.value = const AsyncData([]);
     }
+
+    effect(() async {
+      final accounts = accountsState.value.value;
+      if (accounts != null) {
+        await prefs.setString(StorageKeys.accounts, json.encode(accounts));
+      }
+    });
+
+    effect(() async {
+      final index = activeAccountIndexState.value;
+      if (index != null) {
+        await prefs.setInt(StorageKeys.iDefaultAccount, index);
+      }
+    });
+
+    effect(() async {
+      final activeAcc = activeAccountState.value;
+      if (activeAcc == null) return;
+
+      final tabKey = StorageKeys.getDefaultStartTabKey(activeAcc.platform);
+      activeTabState.value = prefs.getInt(tabKey) ?? 0;
+    });
+
+    effect(() async {
+      final activeAcc = activeAccountState.value;
+      if (activeAcc == null ||
+          activeAccountIndexState.value != activeAccountIndexState.peek())
+        return;
+
+      final activeTab = activeTabState.value;
+      if (activeTab == null || activeTabState.peek() == activeTab) return;
+
+      final tabKey = StorageKeys.getDefaultStartTabKey(activeAcc.platform);
+      await prefs.setInt(tabKey, activeTab);
+    });
 
     notifyListeners();
   }
@@ -648,13 +699,6 @@ class AuthModel with ChangeNotifier {
   void dispose() {
     _sub.cancel();
     super.dispose();
-  }
-
-  Future<void> setDefaultAccount(int v) async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setInt(StorageKeys.iDefaultAccount, v);
-    Fimber.d('write default account: $v');
-    notifyListeners();
   }
 
   var rootKey = UniqueKey();
@@ -667,12 +711,7 @@ class AuthModel with ChangeNotifier {
   setActiveAccountAndReload(int index) async {
     // https://stackoverflow.com/a/50116077
     rootKey = UniqueKey();
-    activeAccountIndex = index;
-    setDefaultAccount(activeAccountIndex!);
-    final prefs = await SharedPreferences.getInstance();
-    _activeTab = prefs.getInt(
-            StorageKeys.getDefaultStartTabKey(activeAccount!.platform)) ??
-        0;
+    activeAccountIndexState.value = index;
     _ghClient = null;
     _ghGqlClient = null;
     _glGqlClient = null;
@@ -762,18 +801,5 @@ class AuthModel with ChangeNotifier {
     launchStringUrl(
       'https://github.com/login/oauth/authorize?client_id=$clientId&redirect_uri=gittouch://login&scope=$scope&state=$_oauthState',
     );
-  }
-
-  int _activeTab = 0;
-
-  int get activeTab => _activeTab;
-
-  Future<void> setActiveTab(int v) async {
-    _activeTab = v;
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setInt(
-        StorageKeys.getDefaultStartTabKey(activeAccount!.platform), v);
-    Fimber.d('write default start tab for ${activeAccount!.platform}: $v');
-    notifyListeners();
   }
 }

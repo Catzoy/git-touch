@@ -4,6 +4,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+import 'package:git_touch/models/account.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/theme.dart';
 import 'package:git_touch/scaffolds/single.dart';
@@ -15,6 +16,7 @@ import 'package:git_touch/widgets/loading.dart';
 import 'package:git_touch/widgets/login_add_account_tile.dart';
 import 'package:git_touch/widgets/text_field.dart';
 import 'package:provider/provider.dart';
+import 'package:signals/signals_flutter.dart';
 
 part 'login_bb_popup.dart';
 part 'login_ge_popup.dart';
@@ -38,30 +40,35 @@ class _LoginAuth extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final auth = Provider.of<AuthModel>(context);
-    if (auth.loading) {
-      return const Center(child: Loading());
-    }
+    return Watch.builder(builder: (context) {
+      final asyncAccounts = accountsState.value;
 
-    return Column(
-      children: [
-        AntList(
-          children: [
-            for (final (index, _) in auth.accounts.indexed)
-              LoginAccountTile(
-                index: index,
+      return switch (asyncAccounts) {
+        AsyncError<List<Account>>() ||
+        AsyncLoading<List<Account>>() =>
+          const Center(child: Loading()),
+        AsyncData<List<Account>>(value: final accounts) => Column(
+            children: [
+              AntList(
+                children: [
+                  for (final (index, account) in accounts.indexed)
+                    LoginAccountTile(
+                      account: account,
+                      index: index,
+                    ),
+                  const _AddGithubAccount(),
+                  const _AddGitlabAccount(),
+                  const _AddBitbucketAccount(),
+                  const _AddGiteaAccount(),
+                  const _AddGiteeAccount(),
+                  const _AddGogsAccount(),
+                ],
               ),
-            const _AddGithubAccount(),
-            const _AddGitlabAccount(),
-            const _AddBitbucketAccount(),
-            const _AddGiteaAccount(),
-            const _AddGiteeAccount(),
-            const _AddGogsAccount(),
-          ],
-        ),
-        const _SwipeToRemoveAccHint(),
-      ],
-    );
+              const _SwipeToRemoveAccHint(),
+            ],
+          ),
+      };
+    });
   }
 }
 
