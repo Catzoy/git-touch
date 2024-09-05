@@ -7,6 +7,7 @@ import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitlab.dart';
 import 'package:git_touch/models/theme.dart';
+import 'package:git_touch/networking/gitlab.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/action_button.dart';
@@ -32,46 +33,41 @@ class GlProjectScreen extends StatelessWidget {
             MarkdownViewData?, List<GitlabBranch>>>(
       title: Text(AppLocalizations.of(context)!.project),
       fetch: () async {
-        final auth = context.read<AuthModel>();
-        final p =
-            await auth.fetchGitlab('/projects/$id?statistics=1').then((res) {
+        final p = await fetchGitlab('/projects/$id?statistics=1').then((res) {
           return GitlabProject.fromJson(res);
         });
 
-        final langFuture =
-            auth.fetchGitlab('/projects/$id/languages').then((v) {
+        final langFuture = fetchGitlab('/projects/$id/languages').then((v) {
           return Map<String, double>.from(v);
         });
         // auth.fetchGitlab('/projects/$id/badges') // badges
-        final memberCountFuture = auth
-            .fetchGitlabWithPage('/projects/$id/members?per_page=1')
-            .then((v) => v.total);
+        final memberCountFuture =
+            fetchGitlabWithPage('/projects/$id/members?per_page=1')
+                .then((v) => v.total);
 
         MarkdownViewData? readmeData;
         if (p.readmeUrl != null) {
-          md() => auth.fetchWithGitlabToken(
-              p.readmeUrl!.replaceFirst(r'/blob/', '/raw/'));
+          md() => fetchWithGitlabToken(
+                p.readmeUrl!.replaceFirst(r'/blob/', '/raw/'),
+              );
           readmeData = MarkdownViewData(
             context,
             md: md,
             html: () => md().then((md) async {
               // we should get the markdown content, then render it
               // https://gitlab.com/gitlab-org/gitlab/-/issues/16335
-              final res = await auth.fetchGitlab('/markdown',
-                  isPost: true,
-                  body: {
-                    'text': md,
-                    'gfm': true,
-                    'project': '${p.namespace!.name}/${p.name}'
-                  });
+              final res = await fetchGitlab('/markdown', body: {
+                'text': md,
+                'gfm': true,
+                'project': '${p.namespace!.name}/${p.name}'
+              });
               return (res['html'] as String).normalizedHtml;
             }),
           );
         }
 
-        final branches = await auth
-            .fetchGitlab('/projects/$id/repository/branches')
-            .then((v) {
+        final branches =
+            await fetchGitlab('/projects/$id/repository/branches').then((v) {
           return [for (var branch in v) GitlabBranch.fromJson(branch)];
         });
 

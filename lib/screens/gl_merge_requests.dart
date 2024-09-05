@@ -1,14 +1,14 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitlab.dart';
+import 'package:git_touch/networking/gitlab.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/hex_color_tag.dart';
 import 'package:git_touch/widgets/issue_item.dart';
-import 'package:provider/provider.dart';
 
 class GlMergeRequestsScreen extends StatelessWidget {
   const GlMergeRequestsScreen(this.id, {this.prefix});
+
   final String id;
   final String? prefix;
 
@@ -18,8 +18,9 @@ class GlMergeRequestsScreen extends StatelessWidget {
       title: Text(AppLocalizations.of(context)!.mergeRequests),
       fetch: (page) async {
         page = page ?? 1;
-        final res = await context.read<AuthModel>().fetchGitlabWithPage(
-            '/projects/$id/merge_requests?state=opened&page=$page');
+        final res = await fetchGitlabWithPage(
+          '/projects/$id/merge_requests?state=opened&page=$page',
+        );
         return ListPayload(
           cursor: res.cursor,
           hasMore: res.hasMore,

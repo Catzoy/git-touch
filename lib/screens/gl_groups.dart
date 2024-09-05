@@ -1,10 +1,9 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitlab.dart';
+import 'package:git_touch/networking/gitlab.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/user_item.dart';
-import 'package:provider/provider.dart';
 
 class GlGroupsScreenn extends StatelessWidget {
   @override
@@ -13,8 +12,9 @@ class GlGroupsScreenn extends StatelessWidget {
       title: Text(AppLocalizations.of(context)!.groups),
       fetch: (page) async {
         page = page ?? 1;
-        final auth = context.read<AuthModel>();
-        final res = await auth.fetchGitlabWithPage('/groups?page=$page');
+        final res = await fetchGitlabWithPage(
+          '/groups?page=$page',
+        );
         return ListPayload(
           cursor: res.cursor,
           hasMore: res.hasMore,

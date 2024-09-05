@@ -6,6 +6,7 @@ import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/code.dart';
 import 'package:git_touch/models/theme.dart';
+import 'package:git_touch/networking/gitlab.dart';
 import 'package:git_touch/scaffolds/single.dart';
 import 'package:git_touch/utils/locale.dart';
 import 'package:git_touch/utils/utils.dart';
@@ -63,10 +64,7 @@ class SettingsScreen extends StatelessWidget {
                       launchStringUrl('${activeAccount.domain}/help');
                     },
                     extra: FutureBuilder<String>(
-                      future: context
-                          .read<AuthModel>()
-                          .fetchGitlab('/version')
-                          .then((v) => v['version']),
+                      future: fetchGitlab('/version').then((v) => v['version']),
                       builder: (context, snapshot) {
                         return Text(snapshot.data ?? '');
                       },

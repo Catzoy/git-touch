@@ -3,9 +3,9 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitlab.dart';
+import 'package:git_touch/networking/gitlab.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/object_tree.dart';
-import 'package:provider/provider.dart';
 
 class GlTreeScreen extends StatelessWidget {
   const GlTreeScreen(this.id, this.ref, {this.path});
@@ -30,8 +30,7 @@ class GlTreeScreen extends StatelessWidget {
             ...(path == null ? {} : {'path': path})
           },
         );
-        final res =
-            await context.read<AuthModel>().fetchGitlabWithPage(uri.toString());
+        final res = await fetchGitlabWithPage(uri.toString());
         return ListPayload(
           cursor: res.cursor,
           hasMore: res.hasMore,

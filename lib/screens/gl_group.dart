@@ -2,12 +2,12 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitlab.dart';
+import 'package:git_touch/networking/gitlab.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/entry_item.dart';
 import 'package:git_touch/widgets/repo_item.dart';
 import 'package:git_touch/widgets/user_header.dart';
-import 'package:provider/provider.dart';
 import 'package:timeago/timeago.dart' as timeago;
 import 'package:tuple/tuple.dart';
 
@@ -20,10 +20,9 @@ class GlGroupScreen extends StatelessWidget {
     return RefreshStatefulScaffold<Tuple2<GitlabGroup, int>>(
       title: Text(AppLocalizations.of(context)!.group),
       fetch: () async {
-        final auth = context.read<AuthModel>();
         final res = await Future.wait([
-          auth.fetchGitlab('/groups/$id'),
-          auth.fetchGitlabWithPage('/groups/$id/members?per_page=1')
+          fetchGitlab('/groups/$id'),
+          fetchGitlabWithPage('/groups/$id/members?per_page=1')
         ]);
         return Tuple2(
           GitlabGroup.fromJson(res[0]),

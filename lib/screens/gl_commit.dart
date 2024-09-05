@@ -3,10 +3,10 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:flutter_highlight/flutter_highlight.dart';
 import 'package:flutter_highlight/theme_map.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/code.dart';
 import 'package:git_touch/models/gitlab.dart';
 import 'package:git_touch/models/theme.dart';
+import 'package:git_touch/networking/gitlab.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:provider/provider.dart';
@@ -14,13 +14,14 @@ import 'package:provider/provider.dart';
 // TODO:
 class GlCommitScreen extends StatelessWidget {
   const GlCommitScreen(this.id, {this.sha});
+
   final String id;
   final String? sha;
 
   Future<List<GitlabDiff>> _query(BuildContext context) async {
-    final auth = context.read<AuthModel>();
-    final res = await auth
-        .fetchGitlabWithPage('/projects/$id/repository/commits/$sha/diff');
+    final res = await fetchGitlabWithPage(
+      '/projects/$id/repository/commits/$sha/diff',
+    );
     return (res.data as List).map((v) => GitlabDiff.fromJson(v)).toList();
   }
 

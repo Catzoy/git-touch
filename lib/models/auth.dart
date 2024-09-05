@@ -9,9 +9,9 @@ import 'package:git_touch/models/account.dart';
 import 'package:git_touch/models/bitbucket.dart';
 import 'package:git_touch/models/gitea.dart';
 import 'package:git_touch/models/gitee.dart';
-import 'package:git_touch/models/gitlab.dart';
 import 'package:git_touch/models/gogs.dart';
 import 'package:git_touch/networking/github.dart';
+import 'package:git_touch/networking/gitlab.dart' as gl;
 import 'package:git_touch/utils/utils.dart';
 import 'package:http/http.dart' as http;
 import 'package:nanoid/nanoid.dart';
@@ -157,76 +157,16 @@ class AuthModel with ChangeNotifier {
   }
 
   Future<void> loginToGitlab(GitlabAuth auth) async {
-    final domain = auth.domain.trim();
-    final token = auth.token.trim();
     loading = true;
     notifyListeners();
     try {
-      final res = await http.get(Uri.parse('$domain/api/v4/user'),
-          headers: {'Private-Token': token});
-      final info = json.decode(res.body);
-      if (info['message'] != null) {
-        throw info['message'];
-      }
-      if (info['error'] != null) {
-        throw info['error'] + '. ' + (info['error_description'] ?? '');
-      }
-      final user = GitlabUser.fromJson(info);
-      await _addAccount(Account(
-        platform: PlatformType.gitlab,
-        domain: domain,
-        token: token,
-        login: user.username!,
-        avatarUrl: user.avatarUrl!,
-        gitlabId: user.id,
-      ));
+      await _addAccount(
+        await gl.login(auth),
+      );
     } finally {
       loading = false;
       notifyListeners();
     }
-  }
-
-  Future<String> fetchWithGitlabToken(String p) async {
-    final res = await http.get(Uri.parse(p), headers: {'Private-Token': token});
-    return res.body;
-  }
-
-  Future fetchGitlab(String p,
-      {isPost = false, Map<String, dynamic> body = const {}}) async {
-    http.Response res;
-    if (isPost) {
-      res = await http.post(
-        Uri.parse('${activeAccount!.domain}/api/v4$p'),
-        headers: {
-          'Private-Token': token,
-          HttpHeaders.contentTypeHeader: 'application/json'
-        },
-        body: jsonEncode(body),
-      );
-    } else {
-      res = await http.get(Uri.parse('${activeAccount!.domain}/api/v4$p'),
-          headers: {'Private-Token': token});
-    }
-    final info = json.decode(utf8.decode(res.bodyBytes));
-    if (info is Map && info['message'] != null) throw info['message'];
-    return info;
-  }
-
-  Future<DataWithPage> fetchGitlabWithPage(String p) async {
-    final res = await http.get(Uri.parse('${activeAccount!.domain}/api/v4$p'),
-        headers: {'Private-Token': token});
-    final next = int.tryParse(
-        res.headers['X-Next-Pages'] ?? res.headers['x-next-page'] ?? '');
-    final info = json.decode(utf8.decode(res.bodyBytes));
-    if (info is Map && info['message'] != null) throw info['message'];
-    return DataWithPage(
-      data: info,
-      cursor: next ?? 1,
-      hasMore: next != null,
-      total: int.tryParse(
-              res.headers['X-Total'] ?? res.headers['x-total'] ?? '') ??
-          kTotalCountFallback,
-    );
   }
 
   Future loginToGitea(GiteaAuth auth) async {

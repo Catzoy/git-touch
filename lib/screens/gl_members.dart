@@ -1,13 +1,13 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitlab.dart';
+import 'package:git_touch/networking/gitlab.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/user_item.dart';
-import 'package:provider/provider.dart';
 
 class GlMembersScreen extends StatelessWidget {
   const GlMembersScreen(this.id, this.type);
+
   final int id;
   final String type;
 
@@ -26,9 +26,9 @@ class GlMembersScreen extends StatelessWidget {
       title: Text(AppLocalizations.of(context)!.members),
       fetch: (page) async {
         page = page ?? 1;
-        final auth = context.read<AuthModel>();
-        final res =
-            await auth.fetchGitlabWithPage('/$type/$id/members?page=$page');
+        final res = await fetchGitlabWithPage(
+          '/$type/$id/members?page=$page',
+        );
         return ListPayload(
           cursor: res.cursor,
           hasMore: res.hasMore,

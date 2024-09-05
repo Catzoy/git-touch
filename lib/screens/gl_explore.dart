@@ -1,10 +1,9 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitlab.dart';
+import 'package:git_touch/networking/gitlab.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/repo_item.dart';
-import 'package:provider/provider.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
 class GlExploreScreen extends StatelessWidget {
@@ -14,9 +13,9 @@ class GlExploreScreen extends StatelessWidget {
       title: Text(AppLocalizations.of(context)!.explore),
       fetch: (page) async {
         page = page ?? 1;
-        final auth = context.read<AuthModel>();
-        final res = await auth.fetchGitlabWithPage(
-            '/projects?order_by=last_activity_at&page=$page');
+        final res = await fetchGitlabWithPage(
+          '/projects?order_by=last_activity_at&page=$page',
+        );
         return ListPayload(
           cursor: res.cursor,
           hasMore: res.hasMore,

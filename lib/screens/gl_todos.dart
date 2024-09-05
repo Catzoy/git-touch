@@ -1,12 +1,11 @@
 import 'package:antd_mobile/antd_mobile.dart';
 import 'package:flutter/widgets.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitlab.dart';
+import 'package:git_touch/networking/gitlab.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/avatar.dart';
 import 'package:git_touch/widgets/link.dart';
-import 'package:provider/provider.dart';
 
 class GlTodosScreen extends StatelessWidget {
   InlineSpan _buildActor(BuildContext context, GitlabTodo p) {
@@ -60,7 +59,7 @@ class GlTodosScreen extends StatelessWidget {
     return RefreshStatefulScaffold<Iterable<GitlabTodo>>(
       title: const Text('Todos'),
       fetch: () async {
-        final vs = await context.read<AuthModel>().fetchGitlab('/todos');
+        final vs = await fetchGitlab('/todos');
         return (vs as List).map((v) => GitlabTodo.fromJson(v));
       },
       bodyBuilder: (data, _) {

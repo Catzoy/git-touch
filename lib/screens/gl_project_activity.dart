@@ -1,12 +1,11 @@
 import 'package:antd_mobile/antd_mobile.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitlab.dart';
+import 'package:git_touch/networking/gitlab.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/avatar.dart';
 import 'package:git_touch/widgets/link.dart';
-import 'package:provider/provider.dart';
 
 class GlProjectActivityScreen extends StatelessWidget {
   const GlProjectActivityScreen(this.id);
@@ -18,8 +17,7 @@ class GlProjectActivityScreen extends StatelessWidget {
       title: Text(AppLocalizations.of(context)!.activity),
       fetch: (page) async {
         page = page ?? 1;
-        final auth = context.read<AuthModel>();
-        final vs = await auth.fetchGitlab('/projects/$id/events');
+        final vs = await fetchGitlab('/projects/$id/events');
         final events =
             (vs as List).map((v) => GitlabEvent.fromJson(v)).toList();
         return ListPayload(cursor: page, items: events, hasMore: false);

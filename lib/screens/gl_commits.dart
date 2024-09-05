@@ -1,13 +1,13 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitlab.dart';
+import 'package:git_touch/networking/gitlab.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/commit_item.dart';
-import 'package:provider/provider.dart';
 
 class GlCommitsScreen extends StatelessWidget {
   const GlCommitsScreen(this.id, {this.prefix, this.branch});
+
   final String id;
   final String? prefix;
   final String? branch;
@@ -18,9 +18,9 @@ class GlCommitsScreen extends StatelessWidget {
       title: Text(AppLocalizations.of(context)!.commits),
       fetch: (page) async {
         page = page ?? 1;
-        final auth = context.read<AuthModel>();
-        final res = await auth.fetchGitlabWithPage(
-            '/projects/$id/repository/commits?ref_name=$branch&page=$page');
+        final res = await fetchGitlabWithPage(
+          '/projects/$id/repository/commits?ref_name=$branch&page=$page',
+        );
         return ListPayload(
           cursor: res.cursor,
           hasMore: res.hasMore,
