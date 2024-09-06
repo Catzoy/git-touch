@@ -1,11 +1,10 @@
 import 'package:antd_mobile/antd_mobile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitee.dart';
+import 'package:git_touch/networking/gitee.dart';
 import 'package:git_touch/scaffolds/common.dart';
 import 'package:git_touch/utils/utils.dart';
-import 'package:provider/provider.dart';
 
 class GeIssueFormScreen extends StatefulWidget {
   const GeIssueFormScreen(this.owner, this.name);
@@ -22,7 +21,6 @@ class _GeIssueFormScreenState extends State<GeIssueFormScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final auth = Provider.of<AuthModel>(context);
     return CommonScaffold(
       title: Text(AppLocalizations.of(context)!.submitAnIssue),
       body: Column(
@@ -55,7 +53,7 @@ class _GeIssueFormScreenState extends State<GeIssueFormScreen> {
           CupertinoButton.filled(
             child: Text(AppLocalizations.of(context)!.submit),
             onPressed: () async {
-              final res = await auth.fetchGitee(
+              final res = await fetchGitee(
                 '/repos/${widget.owner}/issues',
                 requestType: 'POST',
                 body: {'body': _body, 'title': _title, 'repo': widget.name},

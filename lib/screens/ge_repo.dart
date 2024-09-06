@@ -8,6 +8,7 @@ import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitee.dart';
 import 'package:git_touch/models/theme.dart';
+import 'package:git_touch/networking/gitee.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/entry_item.dart';
@@ -15,7 +16,6 @@ import 'package:git_touch/widgets/markdown_view.dart';
 import 'package:git_touch/widgets/mutation_button.dart';
 import 'package:git_touch/widgets/repo_header.dart';
 import 'package:go_router/go_router.dart';
-import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
 import 'package:tuple/tuple.dart';
 
@@ -39,36 +39,35 @@ class GeRepoScreen extends StatelessWidget {
         Tuple4<GiteeRepo, MarkdownViewData, List<GiteeBranch>, StatusPayload>>(
       title: Text(AppLocalizations.of(context)!.repository),
       fetch: () async {
-        final auth = context.read<AuthModel>();
-        final repo = await auth.fetchGitee('/repos/$owner/$name').then((v) {
+        final repo = await fetchGitee('/repos/$owner/$name').then((v) {
           return GiteeRepo.fromJson(v);
         });
 
-        md() => auth.fetchGitee('/repos/$owner/$name/readme').then((v) {
+        md() => fetchGitee('/repos/$owner/$name/readme').then((v) {
               return (v['content'] as String?)?.base64ToUtf8 ?? '';
             });
         html() => md().then((v) async {
-              final res = await http.post(
-                Uri.parse(
-                  '${activeAccountState.value!.domain}/api/v5/markdown',
-                ),
-                headers: {'Authorization': 'token ${auth.token}'},
+              final res = await fetchGitee(
+                '/markdown',
                 body: {'text': v},
               );
               return utf8.decode(res.bodyBytes).normalizedHtml;
             });
         final readmeData = MarkdownViewData(context, md: md, html: html);
         final branches =
-            await auth.fetchGitee('/repos/$owner/$name/branches').then((v) {
+            await fetchGitee('/repos/$owner/$name/branches').then((v) {
           return [for (var branch in v) GiteeBranch.fromJson(branch)];
         });
-        final isStarred = await auth
-            .fetchGitee('/user/starred/$owner/$name', requestType: 'NO CONTENT')
-            .then((v) => v.statusCode == HttpStatus.noContent);
-        final isWatching = await auth
-            .fetchGitee('/user/subscriptions/$owner/$name',
-                requestType: 'NO CONTENT')
-            .then((v) => v.statusCode == HttpStatus.noContent);
+        final isStarred = await giteeFetch(
+          url:
+              '${activeAccountState.value!.domain}/api/v5/user/starred/$owner/$name',
+          method: 'GET',
+        ).then((v) => v.statusCode == HttpStatus.noContent);
+        final isWatching = await giteeFetch(
+          url:
+              '${activeAccountState.value!.domain}/api/v5/user/subscriptions/$owner/$name',
+          method: 'GET',
+        ).then((v) => v.statusCode == HttpStatus.noContent);
         final statusPayload = StatusPayload(isWatching, isStarred);
         return Tuple4(repo, readmeData, branches, statusPayload);
       },
@@ -94,9 +93,10 @@ class GeRepoScreen extends StatelessWidget {
                       onTap: () async {
                         final watchType =
                             t.item4.isWatching ? 'ignoring' : 'watching';
-                        await context.read<AuthModel>().fetchGitee(
-                            '/user/subscriptions/$owner/$name?watch_type=$watchType',
-                            requestType: t.item4.isWatching ? 'DELETE' : 'PUT');
+                        await fetchGitee(
+                          '/user/subscriptions/$owner/$name?watch_type=$watchType',
+                          requestType: t.item4.isWatching ? 'DELETE' : 'PUT',
+                        );
 
                         t.item4.isWatching = !t.item4.isWatching;
                         setData(t);
@@ -107,9 +107,10 @@ class GeRepoScreen extends StatelessWidget {
                       active: t.item4.isStarred,
                       text: t.item4.isStarred ? 'Unstar' : 'Star',
                       onTap: () async {
-                        await context.read<AuthModel>().fetchGitee(
-                            '/user/starred/$owner/$name',
-                            requestType: t.item4.isStarred ? 'DELETE' : 'PUT');
+                        await fetchGitee(
+                          '/user/starred/$owner/$name',
+                          requestType: t.item4.isStarred ? 'DELETE' : 'PUT',
+                        );
 
                         t.item4.isStarred = !t.item4.isStarred;
                         setData(t);

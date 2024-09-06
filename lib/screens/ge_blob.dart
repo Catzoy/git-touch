@@ -1,12 +1,11 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitee.dart';
+import 'package:git_touch/networking/gitee.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/widgets/action_entry.dart';
 import 'package:git_touch/widgets/blob_view.dart';
-import 'package:provider/provider.dart';
 
 class GeBlobScreen extends StatelessWidget {
   const GeBlobScreen(this.owner, this.name, this.sha, this.path);
@@ -20,8 +19,7 @@ class GeBlobScreen extends StatelessWidget {
     return RefreshStatefulScaffold<String?>(
       title: Text(AppLocalizations.of(context)!.file),
       fetch: () async {
-        final auth = context.read<AuthModel>();
-        final res = await auth.fetchGitee('/repos/$owner/$name/git/blobs/$sha');
+        final res = await fetchGitee('/repos/$owner/$name/git/blobs/$sha');
         return GiteeBlob.fromJson(res).content;
       },
       action:

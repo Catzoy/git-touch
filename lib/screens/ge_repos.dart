@@ -1,9 +1,8 @@
 import 'package:flutter/widgets.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitee.dart';
+import 'package:git_touch/networking/gitee.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/repo_item.dart';
-import 'package:provider/provider.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
 class GeReposScreen extends StatelessWidget {
@@ -24,8 +23,7 @@ class GeReposScreen extends StatelessWidget {
     return ListStatefulScaffold<GiteeRepo, int>(
       title: Text(title),
       fetch: (page) async {
-        final res =
-            await context.read<AuthModel>().fetchGiteeWithPage(api, page: page);
+        final res = await fetchGiteeWithPage(api, page: page);
         return ListPayload(
           cursor: res.cursor,
           hasMore: res.hasMore,

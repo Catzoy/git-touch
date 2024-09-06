@@ -1,14 +1,13 @@
 import 'package:antd_mobile/antd_mobile.dart';
 import 'package:flutter/widgets.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitee.dart';
+import 'package:git_touch/networking/gitee.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/action_button.dart';
 import 'package:git_touch/widgets/avatar.dart';
 import 'package:git_touch/widgets/files_item.dart';
 import 'package:git_touch/widgets/link.dart';
-import 'package:provider/provider.dart';
 
 class GeCommitScreen extends StatelessWidget {
   const GeCommitScreen(this.owner, this.name, this.sha);
@@ -21,8 +20,7 @@ class GeCommitScreen extends StatelessWidget {
     return RefreshStatefulScaffold<GiteeCommit>(
       title: Text('Commit: ${sha.substring(0, 7)}'),
       fetch: () async {
-        final auth = context.read<AuthModel>();
-        final items = await auth.fetchGitee('/repos/$owner/$name/commits/$sha');
+        final items = await fetchGitee('/repos/$owner/$name/commits/$sha');
         return GiteeCommit.fromJson(items);
       },
       actionBuilder: (data, _) => ActionButton(

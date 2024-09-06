@@ -1,13 +1,13 @@
 import 'package:flutter/widgets.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitee.dart';
+import 'package:git_touch/networking/gitee.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/hex_color_tag.dart';
 import 'package:git_touch/widgets/issue_item.dart';
-import 'package:provider/provider.dart';
 
 class GePullsScreen extends StatelessWidget {
   const GePullsScreen(this.owner, this.name, {this.isPr = false});
+
   final String owner;
   final String name;
   final bool isPr;
@@ -17,9 +17,10 @@ class GePullsScreen extends StatelessWidget {
     return ListStatefulScaffold<GiteePull, int>(
       title: Text(isPr ? 'Pull Requests' : 'Issues'),
       fetch: (page) async {
-        final res = await context
-            .read<AuthModel>()
-            .fetchGiteeWithPage('/repos/$owner/$name/pulls', page: page);
+        final res = await fetchGiteeWithPage(
+          '/repos/$owner/$name/pulls',
+          page: page,
+        );
         return ListPayload(
           cursor: res.cursor,
           hasMore: res.hasMore,
@@ -29,7 +30,8 @@ class GePullsScreen extends StatelessWidget {
       itemBuilder: (p) => IssueItem(
         author: p.user!.login,
         avatarUrl: p.user!.avatarUrl,
-        commentCount: 0, // fix this
+        commentCount: 0,
+        // fix this
         subtitle: '#${p.number}',
         title: p.title,
         updatedAt: DateTime.parse(p.updatedAt!),

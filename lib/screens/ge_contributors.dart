@@ -2,10 +2,9 @@ import 'package:antd_mobile/antd_mobile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitee.dart';
+import 'package:git_touch/networking/gitee.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
-import 'package:provider/provider.dart';
 
 class GeContributorsScreen extends StatelessWidget {
   const GeContributorsScreen(this.owner, this.name);
@@ -17,10 +16,8 @@ class GeContributorsScreen extends StatelessWidget {
     return ListStatefulScaffold<GiteeContributor, int>(
       title: Text(AppLocalizations.of(context)!.contributors),
       fetch: (page) async {
-        page = page ?? 1;
-        final res = await context
-            .read<AuthModel>()
-            .fetchGiteeWithPage('/repos/$owner/$name/contributors')
+        page ??= 1;
+        final res = await fetchGiteeWithPage('/repos/$owner/$name/contributors')
             .then((v) {
           return [
             for (var contributor in v.data)

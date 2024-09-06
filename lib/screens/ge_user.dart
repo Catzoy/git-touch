@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitee.dart';
+import 'package:git_touch/networking/gitee.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/action_button.dart';
@@ -10,7 +10,6 @@ import 'package:git_touch/widgets/action_entry.dart';
 import 'package:git_touch/widgets/entry_item.dart';
 import 'package:git_touch/widgets/repo_item.dart';
 import 'package:git_touch/widgets/user_header.dart';
-import 'package:provider/provider.dart';
 import 'package:timeago/timeago.dart' as timeago;
 import 'package:tuple/tuple.dart';
 
@@ -21,12 +20,11 @@ class GeUserScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final auth = Provider.of<AuthModel>(context);
     return RefreshStatefulScaffold<Tuple2<GiteeUser, List<GiteeRepo>>>(
       fetch: () async {
         final res = await Future.wait([
-          auth.fetchGitee('/users/$login'),
-          auth.fetchGitee('/users/$login/repos?per_page=6'),
+          fetchGitee('/users/$login'),
+          fetchGitee('/users/$login/repos?per_page=6'),
         ]);
         return Tuple2(
           GiteeUser.fromJson(res[0]),

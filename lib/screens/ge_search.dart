@@ -2,15 +2,14 @@ import 'package:antd_mobile/antd_mobile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitee.dart';
+import 'package:git_touch/networking/gitee.dart';
 import 'package:git_touch/scaffolds/common.dart';
 import 'package:git_touch/widgets/issue_item.dart';
 import 'package:git_touch/widgets/loading.dart';
 import 'package:git_touch/widgets/repo_item.dart';
 import 'package:git_touch/widgets/user_item.dart';
 import 'package:primer/primer.dart';
-import 'package:provider/provider.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
 class GeSearchScreen extends StatefulWidget {
@@ -46,17 +45,16 @@ class _GeSearchScreenState extends State<GeSearchScreen> {
       _loading = true;
     });
     try {
-      final auth = context.read<AuthModel>();
       final searchRepositories =
-          await auth.fetchGitee('/search/repositories?q=$keyword').then((v) {
+          await fetchGitee('/search/repositories?q=$keyword').then((v) {
         return [for (var repo in v) GiteeRepo.fromJson(repo)];
       });
       final searchUsers =
-          await auth.fetchGitee('/search/users?q=$keyword').then((v) {
+          await fetchGitee('/search/users?q=$keyword').then((v) {
         return [for (var user in v) GiteeUser.fromJson(user)];
       });
       final searchIssues =
-          await auth.fetchGitee('/search/issues?q=$keyword').then((v) {
+          await fetchGitee('/search/issues?q=$keyword').then((v) {
         return [for (var issue in v) GiteeIssue.fromJson(issue)];
       });
 

@@ -1,15 +1,15 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitee.dart';
+import 'package:git_touch/networking/gitee.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/action_entry.dart';
 import 'package:git_touch/widgets/hex_color_tag.dart';
 import 'package:git_touch/widgets/issue_item.dart';
-import 'package:provider/provider.dart';
 
 class GeIssuesScreen extends StatelessWidget {
   const GeIssuesScreen(this.owner, this.name, {this.isPr = false});
+
   final String owner;
   final String name;
   final bool isPr;
@@ -19,9 +19,10 @@ class GeIssuesScreen extends StatelessWidget {
     return ListStatefulScaffold<GiteeIssue, int>(
       title: Text(isPr ? 'Pull Requests' : 'Issues'),
       fetch: (page) async {
-        final res = await context
-            .read<AuthModel>()
-            .fetchGiteeWithPage('/repos/$owner/$name/issues', page: page);
+        final res = await fetchGiteeWithPage(
+          '/repos/$owner/$name/issues',
+          page: page,
+        );
         return ListPayload(
           cursor: res.cursor,
           hasMore: res.hasMore,

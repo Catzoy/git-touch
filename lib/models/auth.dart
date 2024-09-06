@@ -7,8 +7,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:git_touch/models/account.dart';
 import 'package:git_touch/models/bitbucket.dart';
-import 'package:git_touch/models/gitee.dart';
 import 'package:git_touch/networking/gitea.dart' as gt;
+import 'package:git_touch/networking/gitee.dart' as ge;
 import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/networking/gitlab.dart' as gl;
 import 'package:git_touch/networking/gogs.dart' as go;
@@ -197,96 +197,6 @@ class AuthModel with ChangeNotifier {
     }
   }
 
-  Future fetchGitee(
-    String p, {
-    requestType = 'GET',
-    Map<String, dynamic> body = const {},
-  }) async {
-    http.Response res;
-    final headers = <String, String>{
-      'Authorization': 'token $token',
-      HttpHeaders.contentTypeHeader: 'application/json'
-    };
-    switch (requestType) {
-      case 'DELETE':
-        {
-          await http.delete(
-            Uri.parse('${activeAccount!.domain}/api/v5$p'),
-            headers: headers,
-          );
-          return;
-        }
-      case 'PUT':
-        {
-          await http.put(
-            Uri.parse('${activeAccount!.domain}/api/v5$p'),
-            headers: headers,
-          );
-          return;
-        }
-      case 'POST':
-        {
-          res = await http.post(
-            Uri.parse('${activeAccount!.domain}/api/v5$p'),
-            headers: headers,
-            body: jsonEncode(body),
-          );
-          break;
-        }
-      case 'PATCH':
-        {
-          res = await http.patch(
-            Uri.parse('${activeAccount!.domain}/api/v5$p'),
-            headers: headers,
-            body: jsonEncode(body),
-          );
-          break;
-        }
-      case 'NO CONTENT':
-        {
-          res = await http.get(Uri.parse('${activeAccount!.domain}/api/v5$p'),
-              headers: headers);
-          return res;
-        }
-      default:
-        {
-          res = await http.get(Uri.parse('${activeAccount!.domain}/api/v5$p'),
-              headers: headers);
-          break;
-        }
-    }
-    final info = json.decode(utf8.decode(res.bodyBytes));
-    return info;
-  }
-
-  Future<DataWithPage> fetchGiteeWithPage(String path,
-      {int? page, int? limit}) async {
-    page = page ?? 1;
-    limit = limit ?? kPageSize;
-
-    var uri = Uri.parse('${activeAccount!.domain}/api/v5$path');
-    uri = uri.replace(
-      queryParameters: {
-        'page': page.toString(),
-        'per_page': limit.toString(),
-        ...uri.queryParameters,
-      },
-    );
-    final res = await http.get(uri, headers: {'Authorization': 'token $token'});
-    final info = json.decode(utf8.decode(res.bodyBytes));
-
-    final totalPage = int.tryParse(res.headers['total_page'] ?? '');
-    final totalCount =
-        int.tryParse(res.headers['total_count'] ?? '') ?? kTotalCountFallback;
-
-    return DataWithPage(
-      data: info,
-      cursor: page + 1,
-      hasMore: totalPage == null ? info.length > limit : totalPage > page,
-      total: totalCount,
-    );
-  }
-
   Future loginToBb(BitbucketAuth auth) async {
     final domain = auth.domain.trim();
     final username = auth.username.trim();
@@ -366,25 +276,13 @@ class AuthModel with ChangeNotifier {
   }
 
   Future loginToGitee(GiteeAuth auth) async {
-    final token = auth.token.trim();
     try {
       loading = true;
       notifyListeners();
-      final res = await http.get(Uri.parse('https://gitee.com/api/v5/user'),
-          headers: {'Authorization': 'token $token'});
-      final info = json.decode(res.body);
-      if (info['message'] != null) {
-        throw info['message'];
-      }
-      final user = GiteeUser.fromJson(info);
 
-      await _addAccount(Account(
-        platform: PlatformType.gitee,
-        domain: 'https://gitee.com',
-        token: token,
-        login: user.login!,
-        avatarUrl: user.avatarUrl!,
-      ));
+      await _addAccount(
+        await ge.login(auth),
+      );
     } finally {
       loading = false;
       notifyListeners();

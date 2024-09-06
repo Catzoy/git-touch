@@ -1,8 +1,8 @@
 import 'package:antd_mobile/antd_mobile.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitee.dart';
+import 'package:git_touch/networking/gitee.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/action_button.dart';
@@ -11,7 +11,6 @@ import 'package:git_touch/widgets/avatar.dart';
 import 'package:git_touch/widgets/comment_item.dart';
 import 'package:git_touch/widgets/link.dart';
 import 'package:primer/primer.dart';
-import 'package:provider/provider.dart';
 import 'package:tuple/tuple.dart';
 
 class GeIssueScreen extends StatelessWidget {
@@ -23,7 +22,6 @@ class GeIssueScreen extends StatelessWidget {
 
   List<ActionItem> _buildCommentActionItem(
       BuildContext context, GiteeComment comment) {
-    final auth = context.read<AuthModel>();
     return [
       ActionItem(
         text: 'Edit',
@@ -41,8 +39,7 @@ class GeIssueScreen extends StatelessWidget {
       ActionItem(
         text: 'Delete',
         onTap: (_) async {
-          await auth.fetchGitee(
-              '/repos/$owner/$name/issues/comments/${comment.id}',
+          await fetchGitee('/repos/$owner/$name/issues/comments/${comment.id}',
               requestType: 'DELETE');
           await context.pushUrl('/gitee/$owner/$name/issues/$number',
               replace: true);
@@ -56,10 +53,9 @@ class GeIssueScreen extends StatelessWidget {
     return RefreshStatefulScaffold<Tuple2<GiteeIssue, List<GiteeComment>>>(
       title: Text('Issue: #$number'),
       fetch: () async {
-        final auth = context.read<AuthModel>();
         final items = await Future.wait([
-          auth.fetchGitee('/repos/$owner/$name/issues/$number'),
-          auth.fetchGitee('/repos/$owner/$name/issues/$number/comments')
+          fetchGitee('/repos/$owner/$name/issues/$number'),
+          fetchGitee('/repos/$owner/$name/issues/$number/comments')
         ]);
         return Tuple2(GiteeIssue.fromJson(items[0]),
             [for (var v in items[1]) GiteeComment.fromJson(v)]);
