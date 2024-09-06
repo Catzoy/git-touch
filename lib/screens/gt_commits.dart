@@ -1,14 +1,14 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitea.dart';
+import 'package:git_touch/networking/gitea.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/commit_item.dart';
-import 'package:provider/provider.dart';
 
 class GtCommitsScreen extends StatelessWidget {
   // final String branch; // TODO:
   const GtCommitsScreen(this.owner, this.name);
+
   final String owner;
   final String name;
 
@@ -17,9 +17,10 @@ class GtCommitsScreen extends StatelessWidget {
     return ListStatefulScaffold<GiteaCommit, int>(
       title: Text(AppLocalizations.of(context)!.commits),
       fetch: (page) async {
-        final res = await context
-            .read<AuthModel>()
-            .fetchGiteaWithPage('/repos/$owner/$name/commits', page: page);
+        final res = await fetchGiteaWithPage(
+          '/repos/$owner/$name/commits',
+          page: page,
+        );
         return ListPayload(
           cursor: res.cursor,
           hasMore: res.hasMore,

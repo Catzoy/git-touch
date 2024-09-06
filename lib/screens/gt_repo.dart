@@ -5,16 +5,14 @@ import 'package:filesize/filesize.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitea.dart';
+import 'package:git_touch/networking/gitea.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/entry_item.dart';
 import 'package:git_touch/widgets/markdown_view.dart';
 import 'package:git_touch/widgets/repo_header.dart';
 import 'package:go_router/go_router.dart';
-import 'package:http/http.dart' as http;
-import 'package:provider/provider.dart';
 import 'package:tuple/tuple.dart';
 
 class GtRepoScreen extends StatelessWidget {
@@ -28,21 +26,17 @@ class GtRepoScreen extends StatelessWidget {
     return RefreshStatefulScaffold<Tuple2<GiteaRepository, MarkdownViewData>>(
       title: Text(AppLocalizations.of(context)!.repository),
       fetch: () async {
-        final auth = context.read<AuthModel>();
-        final repo = await auth.fetchGitea('/repos/$owner/$name').then((v) {
+        final repo = await fetchGitea('/repos/$owner/$name').then((v) {
           return GiteaRepository.fromJson(v);
         });
 
-        md() =>
-            auth.fetchGitea('/repos/$owner/$name/contents/README.md').then((v) {
+        md() => fetchGitea('/repos/$owner/$name/contents/README.md').then((v) {
               return (v['content'] as String?)?.base64ToUtf8 ?? '';
             });
         html() => md().then((v) async {
-              final res = await http.post(
-                Uri.parse(
-                  '${activeAccountState.value!.domain}/api/v1/markdown/raw',
-                ),
-                headers: {'Authorization': 'token ${auth.token}'},
+              final res = await fetchGitea(
+                '/markdown/raw',
+                requestType: 'POST',
                 body: v,
               );
               return utf8.decode(res.bodyBytes).normalizedHtml;

@@ -1,10 +1,9 @@
 import 'package:antd_mobile/antd_mobile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
-import 'package:git_touch/models/auth.dart';
+import 'package:git_touch/networking/gitea.dart';
 import 'package:git_touch/scaffolds/common.dart';
 import 'package:git_touch/utils/utils.dart';
-import 'package:provider/provider.dart';
 
 class GtIssueCommentScreen extends StatefulWidget {
   const GtIssueCommentScreen(this.owner, this.name, this.number,
@@ -35,7 +34,6 @@ class _GtIssueCommentScreenState extends State<GtIssueCommentScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final auth = Provider.of<AuthModel>(context);
     return CommonScaffold(
       title: Text(isEdit ? 'Update Comment' : 'New Comment'),
       body: Column(
@@ -54,13 +52,13 @@ class _GtIssueCommentScreenState extends State<GtIssueCommentScreen> {
             child: const Text('Comment'),
             onClick: () async {
               if (!isEdit) {
-                await auth.fetchGitea(
+                await fetchGitea(
                   '/repos/${widget.owner}/${widget.name}/${widget.isPr ? 'pulls' : 'issues'}/${widget.number}/comments',
                   requestType: 'POST',
                   body: {'body': _controller.text, 'repo': widget.name},
                 );
               } else {
-                await auth.fetchGitea(
+                await fetchGitea(
                   '/repos/${widget.owner}/${widget.name}/${widget.isPr ? 'pulls' : 'issues'}/comments/${int.parse(widget.id)}',
                   requestType: 'PATCH',
                   body: {'body': _controller.text, 'repo': widget.name},

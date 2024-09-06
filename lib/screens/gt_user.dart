@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitea.dart';
+import 'package:git_touch/networking/gitea.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/action_entry.dart';
@@ -11,7 +12,6 @@ import 'package:git_touch/widgets/entry_item.dart';
 import 'package:git_touch/widgets/repo_item.dart';
 import 'package:git_touch/widgets/user_header.dart';
 import 'package:go_router/go_router.dart';
-import 'package:provider/provider.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
 class GtUserScreenPayload {
@@ -26,6 +26,7 @@ class GtUserScreenPayload {
 
 class GtUserScreen extends StatelessWidget {
   const GtUserScreen(this.login, {this.isViewer = false});
+
   final String login;
   final bool isViewer;
 
@@ -57,15 +58,15 @@ class GtUserScreen extends StatelessWidget {
     return RefreshStatefulScaffold<GtUserScreenPayload>(
       title: Text(isViewer ? 'Me' : login),
       fetch: () async {
-        final auth = context.read<AuthModel>();
         final res = await Future.wait([
-          auth.fetchGitea('/orgs/$login'),
-          auth.fetchGiteaWithPage('/orgs/$login/repos', limit: 6),
-          auth.fetchGitea(isViewer ? '/user' : '/users/$login'),
-          auth.fetchGiteaWithPage(
-              isViewer ? '/user/repos' : '/users/$login/repos',
-              limit: 6),
-          auth.fetchGitea('/users/$login/heatmap'),
+          fetchGitea('/orgs/$login'),
+          fetchGiteaWithPage('/orgs/$login/repos', limit: 6),
+          fetchGitea(isViewer ? '/user' : '/users/$login'),
+          fetchGiteaWithPage(
+            isViewer ? '/user/repos' : '/users/$login/repos',
+            limit: 6,
+          ),
+          fetchGitea('/users/$login/heatmap'),
         ]);
         final org = res[0];
 

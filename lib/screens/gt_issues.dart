@@ -1,16 +1,16 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitea.dart';
+import 'package:git_touch/networking/gitea.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/action_entry.dart';
 import 'package:git_touch/widgets/hex_color_tag.dart';
 import 'package:git_touch/widgets/issue_item.dart';
-import 'package:provider/provider.dart';
 
 class GtIssuesScreen extends StatelessWidget {
   const GtIssuesScreen(this.owner, this.name, {this.isPr = false});
+
   final String owner;
   final String name;
   final bool isPr;
@@ -23,9 +23,10 @@ class GtIssuesScreen extends StatelessWidget {
           : AppLocalizations.of(context)!.issues),
       fetch: (page) async {
         final type = isPr ? 'pulls' : 'issues';
-        final res = await context.read<AuthModel>().fetchGiteaWithPage(
-            '/repos/$owner/$name/issues?state=open&type=$type',
-            page: page);
+        final res = await fetchGiteaWithPage(
+          '/repos/$owner/$name/issues?state=open&type=$type',
+          page: page,
+        );
         return ListPayload(
           cursor: res.cursor,
           hasMore: res.hasMore,

@@ -2,17 +2,17 @@ import 'package:antd_mobile/antd_mobile.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gitea.dart';
+import 'package:git_touch/networking/gitea.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/action_entry.dart';
 import 'package:git_touch/widgets/blob_view.dart';
 import 'package:git_touch/widgets/object_tree.dart';
-import 'package:provider/provider.dart';
 
 class GtObjectScreen extends StatelessWidget {
   const GtObjectScreen(this.owner, this.name, {this.path});
+
   final String owner;
   final String name;
   final String? path;
@@ -23,9 +23,7 @@ class GtObjectScreen extends StatelessWidget {
       title: Text(path ?? AppLocalizations.of(context)!.files),
       fetch: () async {
         final suffix = path == null ? '' : '/$path';
-        final res = await context
-            .read<AuthModel>()
-            .fetchGitea('/repos/$owner/$name/contents$suffix');
+        final res = await fetchGitea('/repos/$owner/$name/contents$suffix');
         return res;
       },
       actionBuilder: (dynamic p, _) {

@@ -7,9 +7,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:git_touch/models/account.dart';
 import 'package:git_touch/models/bitbucket.dart';
-import 'package:git_touch/models/gitea.dart';
 import 'package:git_touch/models/gitee.dart';
 import 'package:git_touch/models/gogs.dart';
+import 'package:git_touch/networking/gitea.dart' as gt;
 import 'package:git_touch/networking/github.dart';
 import 'package:git_touch/networking/gitlab.dart' as gl;
 import 'package:git_touch/utils/utils.dart';
@@ -170,106 +170,17 @@ class AuthModel with ChangeNotifier {
   }
 
   Future loginToGitea(GiteaAuth auth) async {
-    final domain = auth.domain.trim();
-    final token = auth.token.trim();
     try {
       loading = true;
       notifyListeners();
-      final res = await http.get(Uri.parse('$domain/api/v1/user'),
-          headers: {'Authorization': 'token $token'});
-      final info = json.decode(res.body);
-      if (info['message'] != null) {
-        throw info['message'];
-      }
-      final user = GiteaUser.fromJson(info);
 
-      await _addAccount(Account(
-        platform: PlatformType.gitea,
-        domain: domain,
-        token: token,
-        login: user.login!,
-        avatarUrl: user.avatarUrl!,
-      ));
+      await _addAccount(
+        await gt.login(auth),
+      );
     } finally {
       loading = false;
       notifyListeners();
     }
-  }
-
-  Future fetchGitea(
-    String p, {
-    requestType = 'GET',
-    Map<String, dynamic> body = const {},
-  }) async {
-    late http.Response res;
-    final headers = <String, String>{
-      'Authorization': 'token $token',
-      HttpHeaders.contentTypeHeader: 'application/json'
-    };
-    switch (requestType) {
-      case 'DELETE':
-        {
-          await http.delete(
-            Uri.parse('${activeAccount!.domain}/api/v1$p'),
-            headers: headers,
-          );
-          break;
-        }
-      case 'POST':
-        {
-          res = await http.post(
-            Uri.parse('${activeAccount!.domain}/api/v1$p'),
-            headers: headers,
-            body: jsonEncode(body),
-          );
-          break;
-        }
-      case 'PATCH':
-        {
-          res = await http.patch(
-            Uri.parse('${activeAccount!.domain}/api/v1$p'),
-            headers: headers,
-            body: jsonEncode(body),
-          );
-          break;
-        }
-      default:
-        {
-          res = await http.get(Uri.parse('${activeAccount!.domain}/api/v1$p'),
-              headers: headers);
-          break;
-        }
-    }
-    if (requestType != 'DELETE') {
-      final info = json.decode(utf8.decode(res.bodyBytes));
-      return info;
-    }
-    return;
-  }
-
-  Future<DataWithPage> fetchGiteaWithPage(String path,
-      {int? page, int? limit}) async {
-    page = page ?? 1;
-    limit = limit ?? kPageSize;
-
-    var uri = Uri.parse('${activeAccount!.domain}/api/v1$path');
-    uri = uri.replace(
-      queryParameters: {
-        'page': page.toString(),
-        'limit': limit.toString(),
-        ...uri.queryParameters,
-      },
-    );
-    final res = await http.get(uri, headers: {'Authorization': 'token $token'});
-    final info = json.decode(utf8.decode(res.bodyBytes));
-
-    return DataWithPage(
-      data: info,
-      cursor: page + 1,
-      hasMore: info is List && info.isNotEmpty,
-      total: int.tryParse(res.headers['x-total-count'] ?? '') ??
-          kTotalCountFallback,
-    );
   }
 
   Future loginToGogs(GogsAuth auth) async {
