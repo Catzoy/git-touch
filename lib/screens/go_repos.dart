@@ -1,14 +1,14 @@
 import 'package:flutter/widgets.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gogs.dart';
+import 'package:git_touch/networking/gogs.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/repo_item.dart';
-import 'package:provider/provider.dart';
 
 class GoReposScreen extends StatelessWidget {
   const GoReposScreen(String owner, {this.isViewer = false})
       : api = isViewer ? '/users/$owner/repos' : '/user/repos',
         title = 'Repositories';
+
   const GoReposScreen.org(String owner)
       : api = '/orgs/$owner/repos',
         title = 'Repositories',
@@ -22,8 +22,7 @@ class GoReposScreen extends StatelessWidget {
     return ListStatefulScaffold<GogsRepository, int>(
       title: Text(title),
       fetch: (page) async {
-        final res =
-            await context.read<AuthModel>().fetchGogsWithPage(api, page: page);
+        final res = await fetchGogsWithPage(api, page: page);
         return ListPayload(
           cursor: res.cursor,
           hasMore: res.hasMore,

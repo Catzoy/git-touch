@@ -1,13 +1,13 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gogs.dart';
+import 'package:git_touch/networking/gogs.dart';
 import 'package:git_touch/scaffolds/list_stateful.dart';
 import 'package:git_touch/widgets/commit_item.dart';
-import 'package:provider/provider.dart';
 
 class GoCommitsScreen extends StatelessWidget {
   const GoCommitsScreen(this.owner, this.name, {this.branch = 'master'});
+
   final String owner;
   final String name;
   final String? branch;
@@ -18,9 +18,10 @@ class GoCommitsScreen extends StatelessWidget {
     return ListStatefulScaffold<GogsCommit, int>(
       title: Text(AppLocalizations.of(context)!.commits),
       fetch: (page) async {
-        final res = await context.read<AuthModel>().fetchGogsWithPage(
-            '/repos/$owner/$name/commits/$branch',
-            page: page);
+        final res = await fetchGogsWithPage(
+          '/repos/$owner/$name/commits/$branch',
+          page: page,
+        );
         return ListPayload(
           cursor: res.cursor,
           hasMore: res.hasMore,

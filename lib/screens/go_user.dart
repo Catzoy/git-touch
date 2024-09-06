@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gogs.dart';
+import 'package:git_touch/networking/gogs.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/action_entry.dart';
@@ -10,11 +11,11 @@ import 'package:git_touch/widgets/entry_item.dart';
 import 'package:git_touch/widgets/repo_item.dart';
 import 'package:git_touch/widgets/user_header.dart';
 import 'package:go_router/go_router.dart';
-import 'package:provider/provider.dart';
 import 'package:tuple/tuple.dart';
 
 class GoUserScreen extends StatelessWidget {
   const GoUserScreen(this.login, {this.isViewer = false});
+
   final String login;
   final bool isViewer;
 
@@ -23,12 +24,12 @@ class GoUserScreen extends StatelessWidget {
     return RefreshStatefulScaffold<Tuple2<GogsUser, List<GogsRepository>>>(
       title: Text(isViewer ? 'Me' : login),
       fetch: () async {
-        final auth = context.read<AuthModel>();
         final res = await Future.wait([
-          auth.fetchGogs(isViewer ? '/user' : '/users/$login'),
-          auth.fetchGogsWithPage(
-              isViewer ? '/user/repos' : '/users/$login/repos',
-              limit: 6),
+          fetchGogs(isViewer ? '/user' : '/users/$login'),
+          fetchGogsWithPage(
+            isViewer ? '/user/repos' : '/users/$login/repos',
+            limit: 6,
+          ),
         ]);
 
         return Tuple2(GogsUser.fromJson(res[0]), [
@@ -51,8 +52,8 @@ class GoUserScreen extends StatelessWidget {
               login: user.username,
               avatarUrl: user.avatarUrl,
               name: user.fullName,
-              createdAt:
-                  null, // TODO: API response does not have this attribute
+              createdAt: null,
+              // TODO: API response does not have this attribute
               isViewer: isViewer,
               bio: null, // TODO: API response does not have this attribute
             ),

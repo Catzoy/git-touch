@@ -4,16 +4,15 @@ import 'package:antd_mobile/antd_mobile.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_gen/gen_l10n/S.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:git_touch/models/auth.dart';
 import 'package:git_touch/models/gogs.dart';
 import 'package:git_touch/models/theme.dart';
+import 'package:git_touch/networking/gogs.dart';
 import 'package:git_touch/scaffolds/refresh_stateful.dart';
 import 'package:git_touch/utils/utils.dart';
 import 'package:git_touch/widgets/entry_item.dart';
 import 'package:git_touch/widgets/markdown_view.dart';
 import 'package:git_touch/widgets/repo_header.dart';
 import 'package:go_router/go_router.dart';
-import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
 import 'package:tuple/tuple.dart';
 
@@ -30,27 +29,23 @@ class GoRepoScreen extends StatelessWidget {
         Tuple3<GogsRepository, MarkdownViewData, List<GogsBranch>>>(
       title: Text(AppLocalizations.of(context)!.repository),
       fetch: () async {
-        final auth = context.read<AuthModel>();
-        final repo = await auth.fetchGogs('/repos/$owner/$name').then((v) {
+        final repo = await fetchGogs('/repos/$owner/$name').then((v) {
           return GogsRepository.fromJson(v);
         });
 
-        md() =>
-            auth.fetchGogs('/repos/$owner/$name/contents/README.md').then((v) {
+        md() => fetchGogs('/repos/$owner/$name/contents/README.md').then((v) {
               return (v['content'] as String?)?.base64ToUtf8 ?? '';
             });
         html() => md().then((v) async {
-              final activeAccount = activeAccountState.value;
-              final res = await http.post(
-                Uri.parse('${activeAccount!.domain}/api/v1/markdown/raw'),
-                headers: {'Authorization': 'token ${auth.token}'},
+              final res = await fetchGogs(
+                '/markdown/raw',
                 body: v,
               );
               return utf8.decode(res.bodyBytes).normalizedHtml;
             });
         final readmeData = MarkdownViewData(context, md: md, html: html);
         final branches =
-            await auth.fetchGogs('/repos/$owner/$name/branches').then((v) {
+            await fetchGogs('/repos/$owner/$name/branches').then((v) {
           return [
             for (var branch in (v is List ? v : [])) GogsBranch.fromJson(branch)
           ]; // Valid API Response only returned if repo contains >= 2 branches
